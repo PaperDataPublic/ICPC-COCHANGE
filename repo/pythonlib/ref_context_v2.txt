@@ -1,0 +1,2158 @@
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+4984428
+597476
+5967500
+16042647
+5631078
+6611563
+12941416
+13305290
+7484454
+4020539
+42980201
+1230669
+12821961
+3365740
+128573
+38987
+17532929
+917431
+1063770
+37926516
+=================
+616645
+count:1
+See
+
+- https://stackoverflow.com/questions/616645/how-do-i-duplicate-sys-stdout-to-a-log-file-in-python
+- https://stackoverflow.com/questions/24931/how-to-capture-python-interpreters-and-or-cmd-exes-output-from-a-python-script
+- https://www.python.org/dev/peps/pep-0343/
+
+=================
+24931
+count:1
+
+- https://stackoverflow.com/questions/616645/how-do-i-duplicate-sys-stdout-to-a-log-file-in-python
+- https://stackoverflow.com/questions/24931/how-to-capture-python-interpreters-and-or-cmd-exes-output-from-a-python-script
+- https://www.python.org/dev/peps/pep-0343/
+
+- https://stackoverflow.com/questions/4675728/redirect-stdout-to-a-file-in-python
+=================
+4675728
+count:1
+- https://www.python.org/dev/peps/pep-0343/
+
+- https://stackoverflow.com/questions/4675728/redirect-stdout-to-a-file-in-python
+- https://eli.thegreenplace.net/2015/redirecting-all-kinds-of-stdout-in-python/ 
+
+- https://stackoverflow.com/questions/2996887/how-to-replicate-tee-behavior-in-python-when-using-subprocess
+=================
+2996887
+count:1
+- https://eli.thegreenplace.net/2015/redirecting-all-kinds-of-stdout-in-python/ 
+
+- https://stackoverflow.com/questions/2996887/how-to-replicate-tee-behavior-in-python-when-using-subprocess
+
+- https://stackoverflow.com/questions/4984428/python-subprocess-get-childrens-output-to-file-and-terminal/4985080#4985080
+
+=================
+4985080
+count:1
+- https://stackoverflow.com/questions/2996887/how-to-replicate-tee-behavior-in-python-when-using-subprocess
+
+- https://stackoverflow.com/questions/4984428/python-subprocess-get-childrens-output-to-file-and-terminal/4985080#4985080
+
+"""  # noqa
+
+=================
+4984428
+count:1
+
+    From 
+    https://stackoverflow.com/questions/4984428/python-subprocess-get-childrens-output-to-file-and-terminal
+
+    A note on text versus binary IO:
+
+=================
+4984428
+count:1
+
+    A variation on:
+    https://stackoverflow.com/questions/4984428/python-subprocess-get-childrens-output-to-file-and-terminal
+
+    Args:
+        cmd_args: arguments for the command to run
+=================
+27921629
+count:1
+     
+    Modified from
+    http://stackoverflow.com/questions/27921629/python-using-getpass-with-argparse 
+    """  # noqa
+    # noinspection PyShadowingBuiltins
+    def __init__(self,
+=================
+538666
+count:1
+
+    Modified from
+    https://stackoverflow.com/questions/538666/python-format-timedelta-to-string
+    """  # noqa
+
+    # Convert tdelta to integer seconds.
+=================
+787287
+count:1
+# xhtml2pdf (2013-04-11) supports PNG, but not SVG.
+# You can convert SVG to PNG for embedding:
+# http://stackoverflow.com/questions/787287
+# You could make a PDF and append it, though that would (without further
+# effort) lack the patient headers.
+
+=================
+3899980
+count:1
+    """
+    font = {
+        # http://stackoverflow.com/questions/3899980
+        # http://matplotlib.org/users/customizing.html
+        'family': 'sans-serif',
+        # ... serif, sans-serif, cursive, fantasy, monospace
+=================
+7125009
+count:1
+    matplotlib.rc('font', **font)
+    legend = {
+        # http://stackoverflow.com/questions/7125009
+        'fontsize': fontsize
+    }
+    # noinspection PyUnresolvedReferences
+=================
+952914
+count:1
+        
+    As per
+    http://stackoverflow.com/questions/952914/making-a-flat-list-out-of-list-of-lists-in-python
+
+    """  # noqa
+    return [item for sublist in x for item in sublist]
+=================
+480214
+count:1
+
+    As per
+    http://stackoverflow.com/questions/480214/how-do-you-remove-duplicates-from-a-list-in-whilst-preserving-order
+
+    """  # noqa
+    seen = set()
+=================
+8897593
+count:1
+        See
+
+        - https://stackoverflow.com/questions/8897593/similarity-between-two-text-documents
+        - https://stackoverflow.com/questions/2380394/simple-implementation-of-n-gram-tf-idf-and-cosine-similarity-in-python
+        - https://spacy.io/usage/vectors-similarity -- data not included
+        - https://radimrehurek.com/gensim/index.html
+=================
+2380394
+count:1
+
+        - https://stackoverflow.com/questions/8897593/similarity-between-two-text-documents
+        - https://stackoverflow.com/questions/2380394/simple-implementation-of-n-gram-tf-idf-and-cosine-similarity-in-python
+        - https://spacy.io/usage/vectors-similarity -- data not included
+        - https://radimrehurek.com/gensim/index.html
+        - https://radimrehurek.com/gensim/tut3.html
+=================
+597476
+count:1
+# Class to store last match of compiled regex
+# =============================================================================
+# Based on http://stackoverflow.com/questions/597476/how-to-concisely-cascade-through-multiple-regex-statements-in-python  # noqa
+
+class CompiledRegexMemory(object):
+    """
+=================
+597476
+count:1
+    
+    Based on
+    http://stackoverflow.com/questions/597476/how-to-concisely-cascade-through-multiple-regex-statements-in-python.
+    """  # noqa
+    def __init__(self) -> None:
+        self.last_match = None  # type: Optional[Match]
+=================
+4832357
+count:1
+    def __init__(self, body: str, **kwargs) -> None:
+        # application/xml versus text/xml:
+        # https://stackoverflow.com/questions/4832357
+        super().__init__(
+            content_type=MimeType.XML,
+            body=body,
+=================
+1395151
+count:1
+        # For ZIP, "inline" and "attachment" dispositions are equivalent, since
+        # browsers don't display ZIP files inline.
+        # https://stackoverflow.com/questions/1395151
+        super().__init__(
+            content_type=MimeType.ZIP,
+            filename=filename,
+=================
+5967500
+count:1
+# Natural sorting, e.g. for COM ports
+# =============================================================================
+# http://stackoverflow.com/questions/5967500/how-to-correctly-sort-a-string-with-a-number-inside  # noqa
+
+def atoi(text: str) -> Union[int, str]:
+    """
+=================
+5967500
+count:1
+    Sort key function.
+    Returns text split into string/number parts, for natural sorting; as per
+    http://stackoverflow.com/questions/5967500/how-to-correctly-sort-a-string-with-a-number-inside
+    
+    Example (as per the source above):
+        
+=================
+13299550
+count:1
+    # proc = Popen(args, stdin=None, stdout=PIPE, stderr=STDOUT)
+    # proc = Popen(args, stdin=None, stdout=PIPE, stderr=PIPE)
+    # Can't preserve colour: http://stackoverflow.com/questions/13299550/preserve-colored-output-from-python-os-popen  # noqa
+    processes.append(proc)
+    proc_args_list.append(args)
+    return proc
+=================
+16042647
+count:1
+    #     WSGI should follow the HTTP request headers.
+    # [6] Protocols (i.e. http versus https):
+    #     https://stackoverflow.com/questions/16042647/whats-the-de-facto-standard-for-a-reverse-proxy-to-tell-the-backend-ssl-is-used  # noqa
+=================
+7835030
+count:1
+        query_string = environ.get(WsgiEnvVar.QUERY_STRING, "")
+        try:
+            # https://stackoverflow.com/questions/7835030/obtaining-client-ip-address-from-a-wsgi-app-using-eventlet  # noqa
+            # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For  # noqa
+            forwarded_for = " [forwarded for {}]".format(
+                environ[WsgiEnvVar.HTTP_X_FORWARDED_FOR])
+=================
+49547
+count:1
+# DisableClientSideCachingMiddleware
+# =============================================================================
+# http://stackoverflow.com/questions/49547/making-sure-a-web-page-is-not-cached-across-all-browsers  # noqa
+# http://stackoverflow.com/questions/3859097/how-to-add-http-headers-in-wsgi-middleware  # noqa
+
+def add_never_cache_headers(headers: TYPE_WSGI_RESPONSE_HEADERS) -> None:
+=================
+3859097
+count:1
+# =============================================================================
+# http://stackoverflow.com/questions/49547/making-sure-a-web-page-is-not-cached-across-all-browsers  # noqa
+# http://stackoverflow.com/questions/3859097/how-to-add-http-headers-in-wsgi-middleware  # noqa
+
+def add_never_cache_headers(headers: TYPE_WSGI_RESPONSE_HEADERS) -> None:
+    """
+=================
+16042647
+count:1
+
+            # (d) Tell the proxied application that we are using HTTPS:
+            # ... https://stackoverflow.com/questions/16042647
+            # Enable mod_headers (e.g. "sudo a2enmod headers") and:
+        RequestHeader set X-Forwarded-Proto https
+        RequestHeader set X-Script-Name /camcops
+=================
+2297403
+count:1
+        HTTP_HOST versus SERVER_NAME
+        -----------------------------------------------------------------------
+        https://stackoverflow.com/questions/2297403/what-is-the-difference-between-http-host-and-server-name-in-php  # noqa
+
+        -----------------------------------------------------------------------
+        REWRITING THE PROTOCOL
+=================
+8506897
+count:1
+      writes the header.
+    - So the work in the most popular answer here is unnecessary:
+      https://stackoverflow.com/questions/8506897/how-do-i-gzip-compress-a-string-in-python
+    - All we need is conversion of the string to bytes (via the appropriate
+      encoding) and then :func:`gzip.compress`.
+    - The requestor should also set HTTP ``Accept-Encoding`` if it wants 
+=================
+5649407
+count:1
+    - SQLite uses this notation: https://sqlite.org/lang_expr.html
+    - Strip off the start and end and convert it to a byte array:
+      http://stackoverflow.com/questions/5649407
+    """
+    if len(s) < 3 or not s.startswith("X'") or not s.endswith("'"):
+        return None
+=================
+475074
+count:1
+      ``64'cGxlYXN1cmUu'`` is a base-64-encoded BLOB (the ``64'...'`` bit is my
+      representation).
+    - regex from http://stackoverflow.com/questions/475074
+    - better one from http://www.perlmonks.org/?node_id=775820
+
+    """
+=================
+5228158
+count:1
+    """
+    See
+    https://stackoverflow.com/questions/5228158/cartesian-product-of-a-dictionary-of-lists.
+
+    Takes keyword arguments, and yields dictionaries containing every
+    combination of possibilities for each keyword.
+=================
+33019698
+count:1
+    Note that round() implements "banker's rounding", which is never what
+    we want:
+    - https://stackoverflow.com/questions/33019698/how-to-properly-round-up-half-float-numbers-in-python  # noqa
+    """
+    if not math.isfinite(x):
+        return x
+=================
+3410976
+count:1
+    As per http://code.activestate.com/lists/python-tutor/70739/, linked to
+    from
+    https://stackoverflow.com/questions/3410976/how-to-round-a-number-to-significant-figures-in-python
+
+    Args:
+        x: quantity to round
+=================
+33560364
+count:1
+    """
+    As per
+    https://stackoverflow.com/questions/33560364/python-windows-parsing-command-lines-with-shlex.
+
+    Multi-platform variant of ``shlex.split()`` for command-line splitting.
+    For use with ``subprocess``, for ``argv`` injection etc. Using fast REGEX.
+=================
+32404
+count:1
+*Details*
+
+- http://stackoverflow.com/questions/32404
+- http://www.chrisumbel.com/article/windows_services_in_python
+- http://code.activestate.com/recipes/551780-win-services-helper/
+- http://docs.activestate.com/activepython/2.4/pywin32/PyWin32.HTML
+=================
+34696815
+count:1
+        
+  - So how, in the normal situation, does PythonService.exe find our script?
+  - At this point, see also http://stackoverflow.com/questions/34696815
+  - Source code is: 
+    https://github.com/tjguk/pywin32/blob/master/win32/src/PythonService.cpp
+    
+=================
+7085604
+count:1
+See in particular
+
+- http://stackoverflow.com/questions/7085604/sending-c-to-python-subprocess-objects-on-windows
+- http://stackoverflow.com/questions/140111/sending-an-arbitrary-signal-in-windows
+
+Python bug?
+=================
+140111
+count:1
+
+- http://stackoverflow.com/questions/7085604/sending-c-to-python-subprocess-objects-on-windows
+- http://stackoverflow.com/questions/140111/sending-an-arbitrary-signal-in-windows
+
+Python bug?
+
+=================
+20561990
+count:1
+*"The specified service is marked for deletion"*
+
+- http://stackoverflow.com/questions/20561990
+
+"""  # noqa
+
+=================
+18682681
+count:1
+        callname = " ".join(args)
+        retcode = subprocess.call(args)
+        # http://stackoverflow.com/questions/18682681/what-are-exit-codes-from-the-taskkill-utility  # noqa
+        # noinspection PyUnresolvedReferences
+        if retcode == winerror.ERROR_SUCCESS:  # 0
+            self.info("Killed with " + repr(callname))
+=================
+1230669
+count:1
+          under Windows.
+        - SOLUTION: see
+          https://stackoverflow.com/questions/1230669/subprocess-deleting-child-processes-in-windows,
+          which uses ``psutil``.
+
+        """  # noqa
+=================
+16333054
+count:1
+        """
+
+        # https://stackoverflow.com/questions/16333054
+        def cleanup():
+            self.debug("atexit function called: cleaning up")
+            for pmgr_ in self.process_managers:
+=================
+6783921
+count:1
+    - Binary:
+
+      - https://stackoverflow.com/questions/6783921/which-mime-type-to-use-for-a-binary-file-thats-specific-to-my-program
+
+    - CSV
+    
+=================
+264256
+count:1
+    - CSV
+    
+      - http://stackoverflow.com/questions/264256/what-is-the-best-mime-type-and-extension-to-use-when-exporting-tab-delimited
+      - http://www.iana.org/assignments/media-types/text/tab-separated-values
+    
+    - ZIP
+=================
+4411757
+count:1
+    - ZIP
+    
+      - http://stackoverflow.com/questions/4411757/zip-mime-types-when-to-pick-which-one
+      
+    - Microsoft Office
+    
+=================
+31489757
+count:1
+    
+      - https://www.openoffice.org/framework/documentation/mimetypes/mimetypes.html
+      - https://stackoverflow.com/questions/31489757/what-is-correct-mimetype-with-apache-openoffice-files-like-odt-ods-odp
+
+    """  # noqa
+    BINARY = "application/octet-stream"
+=================
+32214614
+count:1
+
+    See
+    http://stackoverflow.com/questions/32214614/automatically-setting-an-enum-members-value-to-its-name/32215467
+    and then inherit from :class:`StrEnum` rather than :class:`Enum`.
+
+    """  # noqa
+=================
+36932
+count:1
+
+# def enum(**enums: Any) -> Enum:
+#     """Enum support, as at http://stackoverflow.com/questions/36932"""
+#     return type('Enum', (), enums)
+
+
+=================
+4984647
+count:1
+    """
+    Dictionary with attribute access; see
+    http://stackoverflow.com/questions/4984647
+    """
+    def __init__(self, *args, **kwargs) -> None:
+        super(AttrDict, self).__init__(*args, **kwargs)
+=================
+455059
+count:1
+class OrderedNamespace(object):
+    """
+    As per http://stackoverflow.com/questions/455059, modified for
+    ``__init__``.
+    """
+    def __init__(self, *args):
+=================
+3310584
+count:1
+            memfile.seek(0)
+            return memfile.read()
+            # http://stackoverflow.com/questions/3310584
+
+    elif processor == Processors.WEASYPRINT:
+
+=================
+15169101
+count:1
+
+        # Temporary files that a subprocess can read:
+        #   http://stackoverflow.com/questions/15169101
+        # wkhtmltopdf requires its HTML files to have ".html" extensions:
+        #   http://stackoverflow.com/questions/5776125
+        h_filename = None
+=================
+5776125
+count:1
+        #   http://stackoverflow.com/questions/15169101
+        # wkhtmltopdf requires its HTML files to have ".html" extensions:
+        #   http://stackoverflow.com/questions/5776125
+        h_filename = None
+        f_filename = None
+        try:
+=================
+312230
+count:1
+    See:
+
+    - http://stackoverflow.com/questions/312230/proper-mime-type-for-pdf-files
+    - http://www.askapache.com/htaccess/pdf-cookies-headers-rewrites.html
+    - http://stackoverflow.com/questions/2374427
+
+=================
+2374427
+count:1
+    - http://stackoverflow.com/questions/312230/proper-mime-type-for-pdf-files
+    - http://www.askapache.com/htaccess/pdf-cookies-headers-rewrites.html
+    - http://stackoverflow.com/questions/2374427
+
+    """
+    # print("Content-type: text/plain\n")  # for debugging
+=================
+908331
+count:1
+    # print("Content-type: text/plain\n")  # for debugging
+    print("Content-Type: application/pdf\n")
+    # https://stackoverflow.com/questions/908331/how-to-write-binary-data-to-stdout-in-python-3  # noqa
+    sys.stdout.buffer.write(pdf)
+
+
+=================
+7543452
+count:1
+#     This may be more memory-efficient.
+#     However, there can be problems:
+#       http://stackoverflow.com/questions/7543452/how-to-launch-a-pdftk-subprocess-while-in-wsgi  # noqa
+# Others' examples:
+#   https://gist.github.com/zyegfryed/918403
+#   https://gist.github.com/grantmcconnaughey/ce90a689050c07c61c96
+=================
+3582414
+count:1
+#   https://gist.github.com/zyegfryed/918403
+#   https://gist.github.com/grantmcconnaughey/ce90a689050c07c61c96
+#   http://stackoverflow.com/questions/3582414/removing-tmp-file-after-return-httpresponse-in-django  # noqa
+
+# def append_disk_pdf_to_writer(filename, writer):
+#     """Appends a PDF from disk to a pyPDF writer."""
+=================
+17104926
+count:1
+
+    """
+    # http://stackoverflow.com/questions/17104926/pypdf-merging-multiple-pdf-files-into-one-pdf  # noqa
+    # https://en.wikipedia.org/wiki/Recto_and_verso
+    if start_recto:
+        writer = PdfFileWriter()
+=================
+2203424
+count:1
+    to read the class's name. It returns ``None`` otherwise.
+    """
+    # http://stackoverflow.com/questions/2203424/python-how-to-retrieve-class-information-from-a-frame-object  # noqa
+    args, _, _, value_dict = inspect.getargvalues(fr)
+    # we check the first parameter for the frame function is named 'self'
+    if len(args) and args[0] == 'self':
+=================
+5067604
+count:1
+
+    """
+    # http://stackoverflow.com/questions/5067604/determine-function-name-from-within-that-function-without-using-traceback  # noqa
+    try:
+        # noinspection PyProtectedMember
+        frame = sys._getframe(back + 2)
+=================
+123558
+count:2
+
+    See
+    https://stackoverflow.com/questions/123558/sql-server-2005-t-sql-to-temporarily-disable-a-trigger
+    """  # noqa
+    engine = get_engine_from_session(session)
+    if is_sqlserver(engine):
+=================
+2537471
+count:1
+    - make a nice ``repr()`` default, maintaining field order
+
+    See http://stackoverflow.com/questions/2537471 and in particular
+    http://stackoverflow.com/questions/2441796.
+    """
+
+=================
+2441796
+count:1
+
+    See http://stackoverflow.com/questions/2537471 and in particular
+    http://stackoverflow.com/questions/2441796.
+    """
+
+    def get_attrdict(self) -> OrderedNamespace:
+=================
+19175311
+count:1
+             get_safe_url_from_engine(engine),
+             " (omitting constraints)" if without_constraints else "")
+    # https://stackoverflow.com/questions/19175311/how-to-create-only-one-table-with-sqlalchemy  # noqa
+    if without_constraints:
+        include_foreign_key_constraints = []
+    else:
+=================
+24622170
+count:1
+# Alembic revision/migration system
+# =============================================================================
+# http://stackoverflow.com/questions/24622170/using-alembic-api-from-inside-application-code  # noqa
+
+def get_head_revision_from_alembic(
+        alembic_config_filename: str,
+=================
+870925
+count:1
+    """
+    # http://docs.sqlalchemy.org/en/rel_0_8/faq.html#how-can-i-get-the-create-table-drop-table-output-as-a-string  # noqa
+    # http://stackoverflow.com/questions/870925/how-to-generate-a-file-with-ddl-in-the-engines-sql-dialect-in-sqlalchemy  # noqa
+    # https://github.com/plq/scripts/blob/master/pg_dump.py
+    # noinspection PyUnusedLocal
+    def dump(querysql, *multiparams, **params):
+=================
+5631078
+count:1
+    Teach SQLAlchemy how to literalize various things.
+    See
+    http://stackoverflow.com/questions/5631078/sqlalchemy-print-the-actual-query
+    """
+    def literal_processor(self,
+                          dialect: DefaultDialect) -> Callable[[Any], str]:
+=================
+5631078
+count:1
+    # noinspection PyClassHasNoInit,PyAbstractClass
+    class LiteralDialect(DialectClass):
+        # http://stackoverflow.com/questions/5631078/sqlalchemy-print-the-actual-query  # noqa
+        colspecs = {
+            # prevent various encoding explosions
+            String: StringLiteral,
+=================
+5631078
+count:1
+        strings.
+        """
+        # http://stackoverflow.com/questions/5631078/sqlalchemy-print-the-actual-query  # noqa
+        if isinstance(statement, Query):
+            statement = statement.statement
+        return statement.compile(
+=================
+5631078
+count:1
+    
+    As per
+    http://stackoverflow.com/questions/5631078/sqlalchemy-print-the-actual-query
+    
+    Notes:
+    - for debugging purposes *only*
+=================
+5631078
+count:1
+        multirow: write multi-row ``INSERT`` statements
+    """
+    # http://stackoverflow.com/questions/5631078/sqlalchemy-print-the-actual-query  # noqa
+    # http://docs.sqlalchemy.org/en/latest/faq/sqlexpressions.html
+    # http://www.tylerlesmann.com/2009/apr/27/copying-databases-across-platforms-sqlalchemy/  # noqa
+    # https://github.com/plq/scripts/blob/master/pg_dump.py
+=================
+5014700
+count:1
+    - MySQL/InnoDB doesn't wait to the end of a transaction to check FK
+      integrity (which it should):
+      http://stackoverflow.com/questions/5014700/in-mysql-can-i-defer-referential-integrity-checks-until-commit  # noqa
+    - PostgreSQL can.
+    - Anyway, slightly ugly hacks...
+      https://dev.mysql.com/doc/refman/5.5/en/optimizing-innodb-bulk-data-loading.html
+=================
+6611563
+count:1
+  ... modified
+- http://docs.sqlalchemy.org/en/rel_1_0/core/compiler.html
+- http://stackoverflow.com/questions/6611563/sqlalchemy-on-duplicate-key-update
+- http://dev.mysql.com/doc/refman/5.7/en/insert-on-duplicate.html
+
+Once implemented, you can do
+=================
+6611563
+count:1
+      but, like that, it will get outdated.
+    - We could use a hack-in-by-hand method
+      (http://stackoverflow.com/questions/6611563/sqlalchemy-on-duplicate-key-update)
+      ... but a little automation would be nice.
+    - So, regex to the rescue.
+    - NOTE THAT COLUMNS ARE ALREADY QUOTED by this stage; no need to repeat.
+=================
+12941416
+count:1
+# SELECT COUNT(*) (SQLAlchemy Core)
+# =============================================================================
+# http://stackoverflow.com/questions/12941416
+
+def count_star(session: Union[Session, Engine, Connection],
+               tablename: str,
+=================
+15381604
+count:1
+# SELECT EXISTS (SQLAlchemy Core)
+# =============================================================================
+# http://stackoverflow.com/questions/15381604
+# http://docs.sqlalchemy.org/en/latest/orm/query.html
+
+def exists_in_table(session: Session, table_: Table, *criteria: Any) -> bool:
+=================
+14636192
+count:1
+                # blanking primary keys.
+
+                # https://stackoverflow.com/questions/14636192/sqlalchemy-modification-of-detached-object  # noqa
+                src_session.expunge(instance)
+                make_transient(instance)
+                if wipe_pk:
+=================
+1323455
+count:1
+
+    - If you use mixins, they go AFTER :class:`unittest.TestCase`; see
+      https://stackoverflow.com/questions/1323455/python-unit-test-with-base-and-sub-class
+
+    """  # noqa
+    def setUp(self) -> None:
+=================
+6455560
+count:1
+
+    """
+    # https://stackoverflow.com/questions/6455560/how-to-get-column-names-from-sqlalchemy-result-declarative-syntax  # noqa
+    # No! Returns e.g. "User" for session.Query(User)...
+    # fieldnames = [cd['name'] for cd in query.column_descriptions]
+    result = session.execute(query)  # type: ResultProxy
+=================
+2546207
+count:1
+        a tuple ``(instance, newly_created)``
+
+    See http://stackoverflow.com/questions/2546207 (this function is a
+    composite of several suggestions).
+    """
+    instance = session.query(model).filter_by(**kwargs).first()
+=================
+12941416
+count:1
+
+        See
+        https://stackoverflow.com/questions/12941416/how-to-count-rows-with-select-count-with-sqlalchemy
+
+        Example use:
+
+=================
+87747
+count:1
+        ORDER BY table_name;
+
+      ... http://stackoverflow.com/questions/87747
+
+    - Also:
+
+=================
+2937229
+count:1
+            f"SQLAlchemy doesn't support non-PK autoincrement fields yet for "
+            f"dialect {dialect.name!r}")
+        # see http://stackoverflow.com/questions/2937229
+
+
+def column_creation_ddl(sqla_column: Column, dialect: Dialect) -> str:
+=================
+10262426
+count:1
+        # You cannot write explicitly to a TIMESTAMP field in SQL Server; it's
+        # used for autogenerated values only.
+        # - http://stackoverflow.com/questions/10262426/sql-server-cannot-insert-an-explicit-value-into-a-timestamp-column  # noqa
+        # - https://social.msdn.microsoft.com/Forums/sqlserver/en-US/5167204b-ef32-4662-8e01-00c9f0f362c2/how-to-tranfer-a-column-with-timestamp-datatype?forum=transactsql  # noqa
+        #   ... suggesting BINARY(8) to store the value.
+        # MySQL is more helpful:
+=================
+409286
+count:1
+        #   ... suggesting BINARY(8) to store the value.
+        # MySQL is more helpful:
+        # - http://stackoverflow.com/questions/409286/should-i-use-field-datetime-or-timestamp  # noqa
+        return mssql.base.BINARY(8)
+
+    # -------------------------------------------------------------------------
+=================
+32917867
+count:1
+    log.debug("Adding type 'xml' to SQLAlchemy reflection for dialect 'mssql'")
+    mssql.base.ischema_names['xml'] = mssql.base.TEXT
+    # http://stackoverflow.com/questions/32917867/sqlalchemy-making-schema-reflection-find-use-a-custom-type-for-all-instances  # noqa
+
+    # print(repr(mssql.base.ischema_names.keys()))
+    # print(repr(mssql.base.ischema_names))
+=================
+34787794
+count:1
+    versions of them).
+    
+    See http://stackoverflow.com/questions/34787794/sqlalchemy-column-type-comparison.
+    
+    IMPERFECT. 
+    """  # noqa
+=================
+1675181
+count:1
+    - https://mail.python.org/pipermail/python-list/2003-April/236940.html --
+      won't deal with repr() using triple-quotes
+    - https://stackoverflow.com/questions/1675181/get-str-repr-with-double-quotes-python
+      -- probably the right general approach
+
+    Test code:
+=================
+3055477
+count:1
+    """  # noqa
+    # For efficiency, we use a list:
+    # https://stackoverflow.com/questions/3055477/how-slow-is-pythons-string-concatenation-vs-str-join  # noqa
+    # https://waymoot.org/home/python_string/
+    dquote = '"'
+    ret = [dquote]  # type: List[str]
+=================
+169070
+count:1
+        assert os.getcwd() == "/home"
+    """
+    # http://stackoverflow.com/questions/169070/python-how-do-i-write-a-decorator-that-restores-the-cwd  # noqa
+    def decorator(*args_, **kwargs) -> Any:
+        cwd = os.getcwd()
+        result = func(*args_, **kwargs)
+=================
+12041525
+count:1
+    Returns the system root directory.
+    """
+    # http://stackoverflow.com/questions/12041525
+    return os.path.abspath(os.sep)
+
+
+=================
+2656322
+count:1
+    
+    See
+    https://stackoverflow.com/questions/2656322/shutil-rmtree-fails-on-windows-with-access-is-denied
+    """  # noqa
+    if not os.access(path, os.W_OK):
+        # Is the error an access error ?
+=================
+2853723
+count:1
+        group: group name or ID
+
+    As per http://stackoverflow.com/questions/2853723
+    """
+    for root, dirs, files in os.walk(path):
+        for x in dirs:
+=================
+1392413
+count:1
+
+    See
+    https://stackoverflow.com/questions/1392413/calculating-a-directorys-size-using-python.
+
+    Args:
+        directory: directory to check
+=================
+43878953
+count:1
+
+    As per
+    https://stackoverflow.com/questions/43878953/how-does-one-detect-if-one-is-running-within-a-docker-container-within-python
+    """  # noqa
+    path = '/proc/self/cgroup'
+    return (
+=================
+51264355
+count:1
+    Type hint for the result of ``csv.writer()``
+
+    See https://stackoverflow.com/questions/51264355/how-to-type-annotate-object-returned-by-csv-writer
+    """  # noqa
+
+    @abstractmethod
+=================
+35344209
+count:1
+        See https://www.python.org/dev/peps/pep-0249/#cursor-objects
+        """
+        # https://stackoverflow.com/questions/35344209/python-abstract-property-setter-with-concrete-getter
+        pass
+
+    @abstractmethod
+=================
+7585435
+count:1
+    See
+    
+    - http://stackoverflow.com/questions/7585435/best-way-to-convert-string-to-bytes-in-python-3
+    - http://stackoverflow.com/questions/10459067/how-to-convert-my-bytearrayb-x9e-x18k-x9a-to-something-like-this-x9e-x1
+    """  # noqa
+    if isinstance(data, int):
+=================
+10459067
+count:1
+    
+    - http://stackoverflow.com/questions/7585435/best-way-to-convert-string-to-bytes-in-python-3
+    - http://stackoverflow.com/questions/10459067/how-to-convert-my-bytearrayb-x9e-x18k-x9a-to-something-like-this-x9e-x1
+    """  # noqa
+    if isinstance(data, int):
+        return bytearray([data])
+=================
+1604464
+count:1
+        signed integer
+
+    See http://stackoverflow.com/questions/1604464/twos-complement-in-python
+
+    """
+    assert n_bits % 8 == 0, "Must specify a whole number of bytes"
+=================
+13305290
+count:1
+    """
+    Pure 32-bit Python implementation of MurmurHash3; see
+    http://stackoverflow.com/questions/13305290/is-there-a-pure-python-implementation-of-murmurhash.
+     
+    Args:
+        data: data to hash 
+=================
+13305290
+count:1
+    """
+    Pure 64-bit Python implementation of MurmurHash3; see
+    http://stackoverflow.com/questions/13305290/is-there-a-pure-python-implementation-of-murmurhash
+    (plus RNC bugfixes).
+     
+    Args:
+=================
+1094841
+count:1
+    """
+    Formats a number of bytes in a human-readable binary format (e.g. ``2048``
+    becomes ``'2 KiB'``); from http://stackoverflow.com/questions/1094841.
+    """
+    for unit in ('', 'Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi'):
+        if abs(num) < 1024.0:
+=================
+125222
+count:1
+- Word
+
+  - http://stackoverflow.com/questions/125222
+  - http://stackoverflow.com/questions/42482
+
+- PDF
+=================
+42482
+count:1
+
+  - http://stackoverflow.com/questions/125222
+  - http://stackoverflow.com/questions/42482
+
+- PDF
+
+=================
+25665
+count:1
+- PDF
+
+  - http://stackoverflow.com/questions/25665
+  - https://pypi.python.org/pypi/slate
+  - http://stackoverflow.com/questions/5725278
+
+=================
+5725278
+count:1
+  - http://stackoverflow.com/questions/25665
+  - https://pypi.python.org/pypi/slate
+  - http://stackoverflow.com/questions/5725278
+
+- RTF
+
+=================
+13857856
+count:1
+    # METHOD 2: faster with large files
+    # http://chardet.readthedocs.io/en/latest/
+    # http://stackoverflow.com/questions/13857856/split-byte-string-into-lines
+
+    # noinspection PyCallingNonCallable
+    detector = UniversalDetector()
+=================
+25228106
+count:1
+      - https://pypi.python.org/pypi/python-docx
+      - https://python-docx.readthedocs.org/en/latest/
+      - http://stackoverflow.com/questions/25228106
+
+      However, it uses ``lxml``, which has C dependencies, so it doesn't always
+      install properly on e.g. bare Windows machines.
+=================
+653368
+count:1
+        print(f"register_for_json: kwargs = {kwargs!r}")
+
+    # http://stackoverflow.com/questions/653368/how-to-create-a-python-decorator-that-can-be-used-either-with-or-without-paramet  # noqa
+    # In brief,
+    #   @decorator
+    #   x
+=================
+510357
+count:1
+# Read single character, waiting for it
+# =============================================================================
+# http://stackoverflow.com/questions/510357/python-read-a-single-character-from-the-user  # noqa
+# http://home.wlu.edu/~levys/software/kbhit.py
+# ... modified a little
+
+=================
+2408560
+count:1
+# =============================================================================
+# http://code.activestate.com/recipes/572182-how-to-implement-kbhit-on-linux/
+# http://stackoverflow.com/questions/2408560/python-nonblocking-console-input
+
+def _kbhit_windows() -> bool:
+    """
+=================
+12296214
+count:1
+    log.addHandler(logging.NullHandler())
+    # ... which only needs to be done in the __init__.py for the package
+    #     http://stackoverflow.com/questions/12296214
+
+    # LIBRARY CODE SHOULD NOT ADD ANY OTHER HANDLERS; see above.
+
+=================
+7484454
+count:1
+    """
+    if remove_existing:
+        logger.handlers = []  # http://stackoverflow.com/questions/7484454
+    handler = get_colour_handler(extranames,
+                                 with_process_id=with_process_id,
+                                 with_thread_id=with_thread_id)
+=================
+7484454
+count:1
+    for name, obj in logging.Logger.manager.loggerDict.items():
+        if remove_existing:
+            obj.handlers = []  # http://stackoverflow.com/questions/7484454
+        obj.addHandler(handler)
+
+
+=================
+13131400
+count:1
+
+# - https://docs.python.org/3/howto/logging-cookbook.html#use-of-alternative-formatting-styles  # noqa
+# - https://stackoverflow.com/questions/13131400/logging-variable-data-with-new-format-string  # noqa
+# - https://stackoverflow.com/questions/13131400/logging-variable-data-with-new-format-string/24683360#24683360  # noqa
+# ... plus modifications to use inspect.signature() not inspect.getargspec()
+# ... plus a performance tweak so we're not calling signature() every time
+=================
+24683360
+count:1
+# - https://docs.python.org/3/howto/logging-cookbook.html#use-of-alternative-formatting-styles  # noqa
+# - https://stackoverflow.com/questions/13131400/logging-variable-data-with-new-format-string  # noqa
+# - https://stackoverflow.com/questions/13131400/logging-variable-data-with-new-format-string/24683360#24683360  # noqa
+# ... plus modifications to use inspect.signature() not inspect.getargspec()
+# ... plus a performance tweak so we're not calling signature() every time
+# See also:
+=================
+31992424
+count:1
+        # This version uses args and kwargs, not *args and **kwargs, for
+        # performance reasons:
+        # https://stackoverflow.com/questions/31992424/performance-implications-of-unpacking-dictionaries-in-python  # noqa
+        # ... and since we control creation entirely, we may as well go fast
+        self.fmt = fmt
+        self.args = args
+=================
+1987919
+count:2
+
+        # Decorator order is critical here:
+        # https://stackoverflow.com/questions/1987919/why-can-decorator-not-decorate-a-staticmethod-or-a-classmethod  # noqa
+        @classmethod
+        @mycache.cache_on_arguments(function_key_generator=plain_fkg)
+        def classy(cls) -> str:
+=================
+4020539
+count:1
+    Reverses :func:`escape_newlines`.
+    """
+    # See also http://stackoverflow.com/questions/4020539
+    if not s:
+        return s
+    d = ""  # the destination string
+=================
+4020539
+count:1
+    Reverses :func:`escape_tabs_newlines`.
+
+    See also http://stackoverflow.com/questions/4020539.
+    """
+    if not s:
+        return s
+=================
+13233076
+count:1
+
+
+# https://stackoverflow.com/questions/13233076/determine-if-a-unicode-character-is-alphanumeric-without-using-a-regular-express  # noqa
+_UNICODE_CATEGORY_SRC = {
+    # From https://github.com/slevithan/xregexp/blob/master/tools/scripts/property-regex.py  # noqa
+    'ASCII': ['0000-007F'],
+=================
+1214496
+count:1
+    will be used by default.)
+
+    From https://stackoverflow.com/questions/1214496/how-to-get-environment-from-a-subprocess-in-python,
+    with decoding bug fixed for Python 3.
+
+    PURPOSE: under Windows, ``VCVARSALL.BAT`` sets up a lot of environment
+=================
+34124636
+count:1
+    Under Windows, if an ampersand is in a path and is not quoted, it'll break
+    lots of things.
+    See https://stackoverflow.com/questions/34124636.
+    Simple example:
+
+    .. code-block:: bat
+=================
+2953462
+count:1
+- For Linux, it's therefore best to use the system ``ping``.
+
+http://stackoverflow.com/questions/2953462/pinging-servers-in-python
+http://stackoverflow.com/questions/316866/ping-a-site-in-python
+
+- Note that if you want a sub-second timeout, things get trickier.
+=================
+316866
+count:1
+
+http://stackoverflow.com/questions/2953462/pinging-servers-in-python
+http://stackoverflow.com/questions/316866/ping-a-site-in-python
+
+- Note that if you want a sub-second timeout, things get trickier.
+  One option is ``fping``.
+=================
+27804710
+count:1
+    # ... due to this certificate root problem (probably because OpenSSL
+    #     [used by Python] doesn't play entirely by the same rules as others?):
+    # https://stackoverflow.com/questions/27804710
+    # So:
+
+    ctx = ssl.create_default_context()  # type: ssl.SSLContext
+=================
+530526
+count:1
+    Returns a :class:`cgi.FieldStorage` object from the WSGI environment.
+    """
+    # http://stackoverflow.com/questions/530526/accessing-post-data-from-wsgi
+    post_env = env.copy()
+    if not include_query_string:
+        post_env['QUERY_STRING'] = ''
+=================
+151079
+count:1
+
+# Also, filenames:
+#   http://stackoverflow.com/questions/151079
+#   http://greenbytes.de/tech/tc2231/#inlwithasciifilenamepdf
+
+def pdf_result(pdf_binary: bytes,
+=================
+1061697
+count:1
+    """
+    return html.escape(value).encode('ascii', 'xmlcharrefreplace')
+    # http://stackoverflow.com/questions/1061697
+
+
+def replace_nl_with_html_br(string: str) -> str:
+=================
+1071191
+count:1
+    See
+
+    - http://stackoverflow.com/questions/1071191
+
+      - ... except that double-replaces everything; e.g. try with
+        ``text = "me@somewhere.com me@somewhere.com"``
+=================
+10397968
+count:1
+    find_email = re.compile(r'([.\w\-]+@(\w[\w\-]+\.)+[\w\-]+)')
+    # '.' doesn't need escaping inside square brackets
+    # https://stackoverflow.com/questions/10397968/escape-dot-in-a-regex-range
+    replace_email = r'<a href="mailto:\1">\1</a>'
+    text = re.sub(find_url, replace_url, text)
+    text = re.sub(find_email, replace_email, text)
+=================
+1883980
+count:1
+      
+    As per
+    https://stackoverflow.com/questions/1883980/find-the-nth-occurrence-of-substring-in-a-string 
+    """  # noqa
+    length_of_fragment = 1 if overlap else len(x)
+    i = -length_of_fragment
+=================
+9475241
+count:1
+    Split string into chunks of length n
+    """
+    # https://stackoverflow.com/questions/9475241/split-string-every-nth-character  # noqa
+    return [x[i:i+n] for i in range(0, len(x), n)]
+
+
+=================
+6116978
+count:1
+
+    As per
+    http://stackoverflow.com/questions/6116978/python-replace-multiple-strings.
+    """
+    rep = dict((re.escape(k), v) for k, v in rep.items())
+    pattern = re.compile("|".join(rep.keys()))
+=================
+1207457
+count:1
+    Mangle unicode to ASCII, losing accents etc. in the process.
+    """
+    # http://stackoverflow.com/questions/1207457
+    if s is None:
+        return ""
+    if not isinstance(s, str):
+=================
+30254739
+count:1
+      ... NB has initialization default argument bug
+    - https://pypi.python.org/pypi/rangedict/0.1.5
+    - http://stackoverflow.com/questions/30254739/is-there-a-library-implemented-rangedict-in-python
+    """  # noqa
+    INVALID_MSG_TYPE = "Key must be an iterable with length 2"
+    INVALID_MSG_VALUE = "First element of key must be less than second element"
+=================
+42980201
+count:1
+
+    See
+    https://stackoverflow.com/questions/42980201/logarithm-of-zero-in-python.
+
+    For speed, use ``from math import log as math_log``, etc.:
+
+=================
+42980201
+count:1
+
+    See
+    https://stackoverflow.com/questions/42980201/logarithm-of-zero-in-python.
+    """
+    return math_log10(x) if x != 0 else MINUS_INFINITY
+
+=================
+9157210
+count:1
+    
+    See
+    http://stackoverflow.com/questions/9157210/how-do-i-raise-the-same-exception-with-a-custom-message-in-python
+    
+    Args:
+        err: the exception to be modified
+=================
+9555133
+count:1
+
+    See
+    http://stackoverflow.com/questions/9555133/e-printstacktrace-equivalent-in-python.
+
+    Test code:
+    
+=================
+22094852
+count:2
+            # ... but it waits for the process to complete! That's no help.
+            # log.critical("next")
+            # ... https://stackoverflow.com/questions/22094852/how-to-catch-exceptions-in-workers-in-multiprocessing  # noqa
+        pool.close()
+        pool.join()
+
+=================
+19924104
+count:1
+        raise
+        # See also good advice, not implemented here, at
+        # https://stackoverflow.com/questions/19924104/python-multiprocessing-handling-child-errors-in-parent  # noqa
+        # https://stackoverflow.com/questions/6126007/python-getting-a-traceback-from-a-multiprocessing-process/26096355#26096355  # noqa
+    # log.critical("process_file: end")
+
+=================
+26096355
+count:1
+        # See also good advice, not implemented here, at
+        # https://stackoverflow.com/questions/19924104/python-multiprocessing-handling-child-errors-in-parent  # noqa
+        # https://stackoverflow.com/questions/6126007/python-getting-a-traceback-from-a-multiprocessing-process/26096355#26096355  # noqa
+    # log.critical("process_file: end")
+
+
+=================
+1230669
+count:1
+    """
+    Kills a tree of processes, starting with the parent. Slightly modified from
+    https://stackoverflow.com/questions/1230669/subprocess-deleting-child-processes-in-windows.
+    
+    Args:
+        pid: process ID of the parent
+=================
+34458583
+count:1
+    
+    Modified from
+    https://stackoverflow.com/questions/34458583/python-subprocess-call-doesnt-handle-signal-correctly
+    """  # noqa
+    with subprocess.Popen(*popenargs, **kwargs) as p:
+        try:
+=================
+17602878
+count:1
+    ``sys.stdin`` is used for reading and ``sys.stdout`` is used for writing.
+    """
+    # https://stackoverflow.com/questions/17602878/how-to-handle-both-with-open-and-sys-stdout-nicely  # noqa
+    # https://stackoverflow.com/questions/1744989/read-from-file-or-stdin/29824059#29824059  # noqa
+    if filename == '-':
+        if mode is None or mode == '' or 'r' in mode:
+=================
+29824059
+count:1
+    """
+    # https://stackoverflow.com/questions/17602878/how-to-handle-both-with-open-and-sys-stdout-nicely  # noqa
+    # https://stackoverflow.com/questions/1744989/read-from-file-or-stdin/29824059#29824059  # noqa
+    if filename == '-':
+        if mode is None or mode == '' or 'r' in mode:
+            fh = sys.stdin
+=================
+13730107
+count:1
+
+    (Since :func:`fileobj.writelines` doesn't add newlines...
+    http://stackoverflow.com/questions/13730107/writelines-writes-lines-without-newline-just-fills-the-file)
+    """  # noqa
+    fileobj.write('\n'.join(lines) + '\n')
+
+=================
+25728472
+count:1
+    files, or it complains:
+    - https://lintian.debian.org/tags/package-contains-timestamped-gzip.html
+    - See http://stackoverflow.com/questions/25728472/python-gzip-omit-the-original-filename-and-timestamp
+    """  # noqa
+    zipfilename = basefilename + '.gz'
+    compresslevel = 9
+=================
+12821961
+count:1
+            ``False``, extracts them in memory and yields file-like objects to
+            those memory files (which will not be seekable; e.g.
+            https://stackoverflow.com/questions/12821961/)
+
+    Yields:
+        file-like object for each inner file matching ``filespec``; may be
+=================
+12821961
+count:1
+                else:
+                    # Will not be seekable; e.g.
+                    # https://stackoverflow.com/questions/12821961/
+                    with zf.open(zipinfo.filename) as subfile:
+                        yield subfile
+
+=================
+12771480
+count:1
+    """
+    # RST: make part of word bold/italic:
+    # https://stackoverflow.com/questions/12771480/part-of-a-word-bold-in-restructuredtext  # noqa
+    for iterable in iterables:
+        yield iterable[part_index]
+
+=================
+3647692
+count:1
+    # beware: "0 is False" evaluates to False -- AVOID "is False"!
+    # ... but "0 == False" evaluates to True
+    # http://stackoverflow.com/questions/3647692/
+    # ... but comparisons to booleans with "==" fail PEP8:
+    # http://legacy.python.org/dev/peps/pep-0008/
+    # ... so use e.g. "bool(x)" or "x" or "not x"
+=================
+3365740
+count:1
+
+    """
+    # http://stackoverflow.com/questions/3365740/how-to-import-all-submodules
+    if isinstance(package, str):
+        package = importlib.import_module(package,
+                                          base_package_for_relative_import)
+=================
+20339053
+count:1
+    """
+    Modified from
+    https://stackoverflow.com/questions/20339053/in-python-how-can-one-tell-if-a-module-comes-from-a-c-extension.
+    
+    ``True`` only if the passed module is a C extension implemented as a
+    dynamically linked shared library specific to the current platform.
+=================
+3365740
+count:1
+        # Otherwise, for things like Django, we need to recurse in a different
+        # way to scan everything.
+        # See https://stackoverflow.com/questions/3365740/how-to-import-all-submodules.  # noqa
+        log.debug("Walking path: {!r}", top_path)
+        # noinspection PyBroadException
+        try:
+=================
+20638040
+count:1
+        See also:
+
+        - https://stackoverflow.com/questions/20638040/glob-exclude-pattern
+
+        """
+        # Quick check on basename-only matching
+=================
+1776994
+count:1
+
+"""
+http://stackoverflow.com/questions/1776994
+https://docs.python.org/3/library/inspect.html
+https://github.com/edoburu/django-fluent-contents/issues/43
+https://bytes.com/topic/python/answers/843424-python-2-6-3-0-determining-if-method-inherited  # noqa
+=================
+3862310
+count:1
+# Subclasses
+# =============================================================================
+# https://stackoverflow.com/questions/3862310/how-can-i-find-all-subclasses-of-a-class-given-its-name  # noqa
+
+def gen_all_subclasses(cls: Type) -> Generator[Type, None, None]:
+    """
+=================
+128573
+count:1
+
+    See
+    https://stackoverflow.com/questions/128573/using-property-on-classmethods.
+
+    However, in practice we use :class:`classproperty`, a slightly different
+    version.
+=================
+128573
+count:1
+    version.
+    """
+    # https://stackoverflow.com/questions/128573/using-property-on-classmethods
+    # noinspection PyMethodOverriding
+    def __get__(self, cls, owner):
+        # noinspection PyUnresolvedReferences
+=================
+128573
+count:1
+
+    See
+    https://stackoverflow.com/questions/128573/using-property-on-classmethods
+    """
+    def __init__(self, fget):
+        self.fget = fget
+=================
+27803059
+count:1
+    Hence this.
+
+    - https://stackoverflow.com/questions/27803059/conditional-with-statement-in-python
+    - See also
+      https://stackoverflow.com/questions/893333/multiple-variables-in-a-with-statement
+    """  # noqa
+=================
+893333
+count:1
+    - https://stackoverflow.com/questions/27803059/conditional-with-statement-in-python
+    - See also
+      https://stackoverflow.com/questions/893333/multiple-variables-in-a-with-statement
+    """  # noqa
+=================
+38987
+count:1
+    Precedence goes to key/value pairs in dicts that are later in the list.
+
+    See http://stackoverflow.com/questions/38987.
+    """
+    result = {}
+    for dictionary in dict_args:
+=================
+38987
+count:1
+        z = {**x, **y}
+
+    See http://stackoverflow.com/questions/38987.
+    """
+    z = x.copy()
+    z.update(y)
+=================
+4406501
+count:1
+        
+    See
+    https://stackoverflow.com/questions/4406501/change-the-name-of-a-key-in-dictionary.
+    """  # noqa
+    for old_key, new_key in renames.items():
+        if new_key == old_key:
+=================
+6777485
+count:1
+    # DO NOT add/delete values to/from a dictionary during iteration, but it
+    # is OK to modify existing keys:
+    #       https://stackoverflow.com/questions/6777485
+    #       https://stackoverflow.com/questions/2315520
+    #       https://docs.python.org/3/library/stdtypes.html#dict-views
+    for k, v in d.items():
+=================
+2315520
+count:1
+    # is OK to modify existing keys:
+    #       https://stackoverflow.com/questions/6777485
+    #       https://stackoverflow.com/questions/2315520
+    #       https://docs.python.org/3/library/stdtypes.html#dict-views
+    for k, v in d.items():
+        if v in null_literals:
+=================
+17532929
+count:1
+    
+    See
+    https://stackoverflow.com/questions/17532929/how-to-implement-a-lazy-setdefault.
+    
+    The ``*args``/``**kwargs`` parts are useful, but we don't want to have to
+    name 'thunk' explicitly.
+=================
+17532929
+count:1
+
+    See
+    https://stackoverflow.com/questions/17532929/how-to-implement-a-lazy-setdefault.
+
+    Compared to the StackOverflow version: no obvious need to have a default
+    returning ``None``, when we're implementing this as a special function.
+=================
+1151658
+count:1
+    A dictionary that can be hashed.
+
+    See https://stackoverflow.com/questions/1151658/python-hashable-dicts.
+    """
+    def __hash__(self) -> int:
+        return hash(tuple(sorted(self.items())))
+=================
+32888599
+count:1
+    """
+    A case-insensitive dictionary, as per
+    https://stackoverflow.com/questions/2082152/case-insensitive-dictionary/32888599#32888599,
+    with updates for Python 3 and type hinting.
+    
+    See also
+=================
+16041232
+count:1
+# =============================================================================
+
+# http://stackoverflow.com/questions/16041232/django-delete-filefield
+# These two auto-delete files from filesystem when they are unneeded:
+# ... with a bit of modification to make them generic (RNC)
+# Attach them with signals; see e.g. Study model.
+=================
+1156246
+count:1
+            ``None``
+    """
+    # http://stackoverflow.com/questions/1156246/having-django-serve-downloadable-files  # noqa
+    # https://docs.djangoproject.com/en/dev/ref/request-response/#telling-the-browser-to-treat-the-response-as-a-file-attachment  # noqa
+    # https://djangosnippets.org/snippets/365/
+    if offered_filename is None:
+=================
+4460661
+count:1
+    # GET request that's then marked 'canceled' in the Network tab of the
+    # developer console); this is normal:
+    #   http://stackoverflow.com/questions/4460661/what-to-do-with-chrome-sending-extra-requests  # noqa
+
+
+def serve_buffer(
+=================
+29303902
+count:1
+    Django ``forms.Field`` to capture multiple integers.
+    """
+    # See also http://stackoverflow.com/questions/29303902/django-form-with-list-of-integers  # noqa
+    widget = forms.Textarea
+
+    def clean(self, value) -> List[int]:
+=================
+13990846
+count:1
+# Disable boolean icons for a ModelAdmin field
+# =============================================================================
+# http://stackoverflow.com/questions/13990846/disable-on-off-icon-for-boolean-field-in-django  # noqa
+# ... extended to use closures
+
+def disable_bool_icon(
+=================
+2472422
+count:1
+    - https://djangosnippets.org/snippets/2206/
+    - https://docs.djangoproject.com/en/1.8/ref/files/uploads/
+    - https://stackoverflow.com/questions/2472422/django-file-upload-size-limit
+    """
+    def __init__(self, *args, **kwargs) -> None:
+        self.content_types = kwargs.pop("content_types", None)
+=================
+14368290
+count:1
+            2015-11-11 22:21:37.123456
+
+        ... http://stackoverflow.com/questions/14368290/django-datetimefield-and-timezone-now
+
+        ... so a direct comparison with ``DATETIME`` works only if the
+        microsecond component is zero (or you coerce it to zero via
+=================
+6578986
+count:1
+  https://docs.djangoproject.com/en/1.10/ref/models/fields/
+
+- http://stackoverflow.com/questions/6578986/how-to-convert-json-data-into-a-python-object
+- http://stackoverflow.com/questions/31235771/is-parsing-a-json-naively-into-a-python-class-or-struct-secure
+- http://stackoverflow.com/questions/16405969/how-to-change-json-encoding-behaviour-for-serializable-python-object/16406798#16406798
+- http://stackoverflow.com/questions/3768895/how-to-make-a-class-json-serializable
+=================
+31235771
+count:1
+
+- http://stackoverflow.com/questions/6578986/how-to-convert-json-data-into-a-python-object
+- http://stackoverflow.com/questions/31235771/is-parsing-a-json-naively-into-a-python-class-or-struct-secure
+- http://stackoverflow.com/questions/16405969/how-to-change-json-encoding-behaviour-for-serializable-python-object/16406798#16406798
+- http://stackoverflow.com/questions/3768895/how-to-make-a-class-json-serializable
+
+=================
+16406798
+count:1
+- http://stackoverflow.com/questions/6578986/how-to-convert-json-data-into-a-python-object
+- http://stackoverflow.com/questions/31235771/is-parsing-a-json-naively-into-a-python-class-or-struct-secure
+- http://stackoverflow.com/questions/16405969/how-to-change-json-encoding-behaviour-for-serializable-python-object/16406798#16406798
+- http://stackoverflow.com/questions/3768895/how-to-make-a-class-json-serializable
+
+e.g.:
+=================
+3768895
+count:1
+- http://stackoverflow.com/questions/31235771/is-parsing-a-json-naively-into-a-python-class-or-struct-secure
+- http://stackoverflow.com/questions/16405969/how-to-change-json-encoding-behaviour-for-serializable-python-object/16406798#16406798
+- http://stackoverflow.com/questions/3768895/how-to-make-a-class-json-serializable
+
+e.g.:
+
+=================
+3151469
+count:1
+"""
+
+# http://stackoverflow.com/questions/3151469/per-request-cache-in-django
+
+from threading import currentThread
+
+=================
+3214589
+count:1
+# 2. Alternative!
+# -----------------------------------------------------------------------------
+# http://stackoverflow.com/questions/3214589/
+
+# class LoginRequiredMiddleware(object):
+#     """
+=================
+2095520
+count:1
+# DisableClientSideCachingMiddleware
+# =============================================================================
+# http://stackoverflow.com/questions/2095520/fighting-client-side-caching-in-django  # noqa
+
+class DisableClientSideCachingMiddleware(MiddlewareMixin):
+    """
+=================
+1386291
+count:1
+                  "reset", "--hard", commit])
+        # Using a Git repository that's not in the working directory:
+        # https://stackoverflow.com/questions/1386291/git-git-dir-not-working-as-expected  # noqa
+    return True
+
+
+=================
+2082152
+count:1
+    """
+    Case-insensitive dictionary for strings; see
+    https://stackoverflow.com/questions/2082152/case-insensitive-dictionary
+    """
+    def __setitem__(self, key: str, value: str) -> None:
+        # https://docs.python.org/3/reference/datamodel.html#object.__setitem__
+=================
+64505
+count:1
+    - https://tools.ietf.org/html/rfc5322
+    - http://segfault.in/2010/12/sending-gmail-from-python/
+    - http://stackoverflow.com/questions/64505
+    - http://stackoverflow.com/questions/3362600
+
+    Re security:
+=================
+3362600
+count:1
+    - http://segfault.in/2010/12/sending-gmail-from-python/
+    - http://stackoverflow.com/questions/64505
+    - http://stackoverflow.com/questions/3362600
+
+    Re security:
+
+=================
+19237878
+count:1
+
+- 200 test patients; baseline about 7.65-8.57 seconds (25 Hz).
+- From https://stackoverflow.com/questions/19237878/ to
+  https://stackoverflow.com/questions/17071871/select-rows-from-a-dataframe-based-on-values-in-a-column-in-pandas  # noqa
+- Change from parallel to single-threading: down to 4.38 s (!).
+- Avoid a couple of slices: down to 3.85 s for 200 patients.
+=================
+17071871
+count:1
+- 200 test patients; baseline about 7.65-8.57 seconds (25 Hz).
+- From https://stackoverflow.com/questions/19237878/ to
+  https://stackoverflow.com/questions/17071871/select-rows-from-a-dataframe-based-on-values-in-a-column-in-pandas  # noqa
+- Change from parallel to single-threading: down to 4.38 s (!).
+- Avoid a couple of slices: down to 3.85 s for 200 patients.
+- Add test patient E; up to 4.63 s for 250 patients (54 Hz).
+=================
+28757389
+count:1
+- These two are very helpful:
+
+  - https://stackoverflow.com/questions/28757389/loc-vs-iloc-vs-ix-vs-at-vs-iat
+  - https://medium.com/dunder-data/selecting-subsets-of-data-in-pandas-39e811c81a0c
+  
+- Switching from tp.loc[conditions] to tp[conditions] didn't make much 
+=================
+30086936
+count:1
+# ... getting this right is surprisingly tricky!
+# ... https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.dtypes.html
+# ... https://stackoverflow.com/questions/30086936/what-is-the-difference-between-the-types-type-numpy-string-and-type-str  # noqa
+# ... https://stackoverflow.com/questions/49127844/python-convert-python-string-to-numpy-unicode-string  # noqa
+DTYPE_DATE = "datetime64[D]"  # D for day resolution, ns for nanoseconds, etc.
+# ... https://docs.scipy.org/doc/numpy/reference/arrays.datetime.html
+=================
+49127844
+count:1
+# ... https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.dtypes.html
+# ... https://stackoverflow.com/questions/30086936/what-is-the-difference-between-the-types-type-numpy-string-and-type-str  # noqa
+# ... https://stackoverflow.com/questions/49127844/python-convert-python-string-to-numpy-unicode-string  # noqa
+DTYPE_DATE = "datetime64[D]"  # D for day resolution, ns for nanoseconds, etc.
+# ... https://docs.scipy.org/doc/numpy/reference/arrays.datetime.html
+
+=================
+15943769
+count:1
+    # log.critical("{!r}", tp)
+
+    nrows_all = len(tp)  # https://stackoverflow.com/questions/15943769/
+    if nrows_all < 4:  # need A, A, B, B; so minimum #rows is 4
+        return None
+    end_date = tp.iat[nrows_all - 1, sourcecolnum_date]  # date of last row
+=================
+19365513
+count:1
+        # Add it to the results.
+        # ---------------------------------------------------------------------
+        # https://stackoverflow.com/questions/19365513/how-to-add-an-extra-row-to-a-pandas-dataframe/19368360  # noqa
+        # http://pandas.pydata.org/pandas-docs/stable/indexing.html#setting-with-enlargement  # noqa
+
+        expect_response_by_date = (
+=================
+20094215
+count:1
+    shows help for all subparsers. As per
+
+    https://stackoverflow.com/questions/20094215/argparse-subparser-monolithic-help-output
+    """  # noqa
+
+    def __call__(self,
+=================
+15008758
+count:1
+     
+    From
+    https://stackoverflow.com/questions/15008758/parsing-boolean-values-with-argparse
+
+    Specimen usage:
+    
+=================
+6557407
+count:1
+
+    Code from:
+    https://stackoverflow.com/questions/6557407/triple-inheritance-causes-metaclass-conflict-sometimes.
+
+    See also:
+    http://code.activestate.com/recipes/204197-solving-the-metaclass-conflict/.
+=================
+201282
+count:1
+            ORDER BY MSysObjects.Name
+        """)
+        # http://stackoverflow.com/questions/201282
+
+    @classmethod
+    def get_all_table_details(cls, db: DATABASE_SUPPORTER_FWD_REF) \
+=================
+2221250
+count:1
+                           table: str) -> List[str]:
+        # not possible in SQL:
+        #   http://stackoverflow.com/questions/2221250
+        # can do this:
+        #   http://stackoverflow.com/questions/3343922/get-column-names
+        # or can use pyodbc:
+=================
+3343922
+count:1
+        #   http://stackoverflow.com/questions/2221250
+        # can do this:
+        #   http://stackoverflow.com/questions/3343922/get-column-names
+        # or can use pyodbc:
+        db.ensure_db_open()
+        cursor = db.db.cursor()
+=================
+6568098
+count:1
+        # restricted to current database (in full:
+        #   databasename.information_schema.tables)
+        # http://stackoverflow.com/questions/6568098
+
+    @classmethod
+    def describe_table(cls,
+=================
+917431
+count:1
+        # SQL Server carries a warning but the warning may be incorrect:
+        # https://msdn.microsoft.com/en-us/library/ms188348.aspx
+        # http://stackoverflow.com/questions/917431
+        # http://sqlblog.com/blogs/aaron_bertrand/archive/2011/11/03/the-case-against-information-schema-views.aspx  # noqa
+        return db.fetchvalue(
+            "SELECT data_type FROM information_schema.columns "
+=================
+917431
+count:1
+        # SQL Server carries a warning but the warning may be incorrect:
+        # https://msdn.microsoft.com/en-us/library/ms188348.aspx
+        # http://stackoverflow.com/questions/917431
+        # http://sqlblog.com/blogs/aaron_bertrand/archive/2011/11/03/the-case-against-information-schema-views.aspx  # noqa
+        sql = """
+            SELECT {}
+=================
+4205181
+count:1
+    """Returns ?-marked SQL for an INSERT-or-if-duplicate-key-UPDATE statement.
+    """
+    # http://stackoverflow.com/questions/4205181
+    return """
+        INSERT INTO {table} ({fields})
+        VALUES ({placeholders})
+=================
+10263956
+count:1
+    #   ValueError: year=1850 is before 1900; the datetime strftime() methods
+    #   require year >= 1900
+    # http://stackoverflow.com/questions/10263956
+    dt = d.isoformat(" ")
+    # noinspection PyArgumentList,PyUnresolvedReferences
+    return _mysql.string_literal(dt, c)
+=================
+5088671
+count:1
+def _convert_java_binary(rs, col: int) -> Optional[bytes]:
+    # https://github.com/originell/jpype/issues/71
+    # http://stackoverflow.com/questions/5088671
+    # https://github.com/baztian/jaydebeapi/blob/master/jaydebeapi/__init__.py
+    # https://msdn.microsoft.com/en-us/library/ms378813(v=sql.110).aspx
+    # http://stackoverflow.com/questions/2920364/checking-for-a-null-int-value-from-a-java-resultset  # noqa
+=================
+2920364
+count:1
+    # https://github.com/baztian/jaydebeapi/blob/master/jaydebeapi/__init__.py
+    # https://msdn.microsoft.com/en-us/library/ms378813(v=sql.110).aspx
+    # http://stackoverflow.com/questions/2920364/checking-for-a-null-int-value-from-a-java-resultset  # noqa
+    v = None
+    log.debug("_convert_java_binary: converting...")
+    time1 = time.time()
+=================
+26899595
+count:1
+
+def _convert_java_bigint(rs, col: int) -> Optional[int]:
+    # http://stackoverflow.com/questions/26899595
+    # https://github.com/baztian/jaydebeapi/issues/6
+    # https://github.com/baztian/jaydebeapi/blob/master/jaydebeapi/__init__.py
+    # https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html
+=================
+6777810
+count:1
+    # In particular, note that DATETIME is not one of them!
+    # The equivalent is TIMESTAMP.
+    #       http://stackoverflow.com/questions/6777810
+    try:
+        if hasattr(jaydebeapi, "_DEFAULT_CONVERTERS"):
+            # Recent version of jaydebeapi, e.g. 0.2.0
+=================
+2901453
+count:1
+        self.schema = None
+        self.autocommit = None
+        # http://stackoverflow.com/questions/2901453
+        # http://stackoverflow.com/questions/7311990
+
+    # -------------------------------------------------------------------------
+=================
+7311990
+count:1
+        self.autocommit = None
+        # http://stackoverflow.com/questions/2901453
+        # http://stackoverflow.com/questions/7311990
+
+    # -------------------------------------------------------------------------
+    # Generic connection method
+=================
+11053941
+count:1
+            converters[datetimetype] = datetime2literal_rnc
+            # See also:
+            #   http://stackoverflow.com/questions/11053941
+            log.info(
+                "{i} connect: host={h}, port={p}, user={u}, "
+                "database={d}".format(
+=================
+6001104
+count:1
+            # Python talking to MySQL in Unicode:
+            # http://www.harelmalka.com/?p=81
+            # http://stackoverflow.com/questions/6001104
+
+        elif engine == ENGINE_MYSQL and interface == INTERFACE_ODBC:
+            log.info(
+=================
+1063770
+count:1
+            self.db = pyodbc.connect(dsn)
+            self.db.autocommit = autocommit
+            # http://stackoverflow.com/questions/1063770
+
+        elif engine == ENGINE_MYSQL and interface == INTERFACE_JDBC:
+            # https://help.ubuntu.com/community/JDBCAndMySQL
+=================
+1063770
+count:1
+            self.db = pyodbc.connect(connectstring, unicode_results=True)
+            self.db.autocommit = autocommit
+            # http://stackoverflow.com/questions/1063770
+
+        elif engine == ENGINE_SQLSERVER and interface == INTERFACE_JDBC:
+            # jar tvf sqljdbc41.jar
+=================
+1063770
+count:1
+            self.db = pyodbc.connect(dsn)
+            self.db.autocommit = autocommit
+            # http://stackoverflow.com/questions/1063770
+
+        else:
+            raise ValueError(
+=================
+9337134
+count:1
+        # If you get this wrong, you may see "not all arguments converted
+        # during string formatting";
+        # http://stackoverflow.com/questions/9337134
+        if self.db_pythonlib in [PYTHONLIB_PYMYSQL, PYTHONLIB_MYSQLDB]:
+            # These engines use %, so we need to convert ? to %, without
+            # breaking literal % values.
+=================
+6202726
+count:1
+        #     query = query.encode(charset)
+        # Don't get them double-encoded:
+        #   http://stackoverflow.com/questions/6202726/writing-utf-8-string-to-mysql-with-python  # noqa
+        if args is not None:
+            query = query % self.db.literal(args)
+        return query
+=================
+8859353
+count:1
+               drop_pk_if_exists +
+               " ADD PRIMARY KEY(" + fieldlist + ")")
+        # http://stackoverflow.com/questions/8859353
+        return self.db_exec(sql)
+
+    # =========================================================================
+=================
+1903041
+count:1
+
+    def java_garbage_collect(self) -> None:
+        # http://stackoverflow.com/questions/1903041
+        # http://docs.oracle.com/javase/7/docs/api/java/lang/Runtime.html
+        if not jaydebeapi:
+            return
+=================
+8562136
+count:1
+#
+# don't think so: BINARY; http://gilfster.blogspot.co.uk/2005/08/case-sensitivity-in-mysql.html  # noqa
+# DISTINCTROW: no; http://stackoverflow.com/questions/8562136/distinctrow-equivalent-in-sql-server  # noqa
+# DIV/MOD: not in SQL Server; use / and % respectively; https://msdn.microsoft.com/en-us/library/ms190279.aspx  # noqa
+# PARTITION: not in SELECT? - https://msdn.microsoft.com/en-us/library/ms187802.aspx  # noqa
+# XOR: use ^ instead; http://stackoverflow.com/questions/5411619/t-sql-xor-operator  # noqa
+=================
+5411619
+count:1
+# DIV/MOD: not in SQL Server; use / and % respectively; https://msdn.microsoft.com/en-us/library/ms190279.aspx  # noqa
+# PARTITION: not in SELECT? - https://msdn.microsoft.com/en-us/library/ms187802.aspx  # noqa
+# XOR: use ^ instead; http://stackoverflow.com/questions/5411619/t-sql-xor-operator  # noqa
+
+# Definitely part of SQL Server:
+CHECKSUM_AGG = sql_keyword("CHECKSUM_AGG")
+=================
+285775
+count:1
+    # I'm unsure if SQL Server allows keywords in the parts after dots, like
+    # MySQL does.
+    # - http://stackoverflow.com/questions/285775/how-to-deal-with-sql-column-names-that-look-like-sql-keywords  # noqa
+
+    bind_parameter = Literal('?')
+
+=================
+11016935
+count:1
+
+    # Not supported: index hints
+    # ... http://stackoverflow.com/questions/11016935/how-can-i-force-a-query-to-not-use-a-index-on-a-given-table  # noqa
+
+    # -----------------------------------------------------------------------------
+    # CASE
+=================
+1345039
+count:1
+  - How to do arithmetic recursive parsing:
+  
+    http://stackoverflow.com/questions/1345039
+
+  - Somebody else's MySQL parser:
+  
+=================
+37926516
+count:1
+               suppress_delim: bool = False):
+    # A better version of delimitedList
+    # BUT SEE ALSO ALTERNATIVE: http://stackoverflow.com/questions/37926516
+    name = str(expr_) + " [" + str(delim) + " " + str(expr_) + "]..."
+    if combine:
+        return Combine(expr_ + ZeroOrMore(delim + expr_),
+=================
+4214173
+count:1
+WORD_BOUNDARY = r"\b"
+# The meaning of \b:
+# http://stackoverflow.com/questions/4213800/is-there-something-like-a-counter-variable-in-regular-expression-replace/4214173#4214173  # noqa
+
+
+def word_regex_element(word: str) -> str:
+=================
+37926516
+count:1
+    )
+    # ... we don't care about sub-parsing the argument list, so use combine=True
+    # or setParseAction: http://stackoverflow.com/questions/37926516
+    function_call = Combine(function_name + LPAR) + argument_list + RPAR
+
+    # http://dev.mysql.com/doc/refman/5.7/en/partitioning-selection.html
+=================
+5599254
+count:1
+
+autoclass_content = 'both'
+# https://stackoverflow.com/questions/5599254/how-to-use-sphinxs-autodoc-to-document-a-classs-init-self-method  # noqa
+
+
+# =============================================================================
+=================
+36228537
+count:1
+# For Django
+# =============================================================================
+# https://stackoverflow.com/questions/36228537/django-settings-module-not-defined-when-building-sphinx-documentation
+
+# But in practice:
+if django:

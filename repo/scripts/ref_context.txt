@@ -1,0 +1,773 @@
+[1, 1, 9, 1, 9, 9, 9, 4, 4, 8, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 3, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1]
+4534480
+=================
+20726010
+count:1
+W = A T (weak bonds)
+B = G T C (all but A)
+D = G A T (all but C)
+H = A C T (all but G)
+V = G C A (all but T)
+N = A G C T (any)
+badset = set(R,Y,K,M,S,W,B,D,H,V,N)
+'''
+
+#http://stackoverflow.com/questions/20726010/how-to-check-if-a-string-contains-only-characters-from-a-given-set-in-python
+def replace_bad_nucleotides(pattern):
+    good_set = set('ATGC')
+    bad_set = set('RYKMSWBDHVN')
+    if set(pattern) <= good_set:
+        pass
+    else:
+        for i in pattern:
+            if i in bad_set:
+                pattern = pattern.replace(i, '.')
+    #print pattern
+=================
+24662006
+count:1
+    node_categ_dict = identify_node_categ(node_module_dict)
+    for node in samModG.nodes():
+        samModG.add_node(node, category = node_categ_dict[node])
+
+    # reduce length of label for easier visualization
+    new_labels = create_pretty_node_labels(G)
+
+    # plot edges as per modules
+
+    #http://stackoverflow.com/questions/24662006/python-networkx-graph-different-colored-nodes-using-two-lists
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+
+    #http://stackoverflow.com/questions/22992009/legend-in-python-networkx
+    # create legend
+
+    f = plt.figure(1)
+    ax = f.add_subplot(1,1,1)
+    for label in attrib_color_map:
+        if label in node_module_dict.values():# only show legend for values that are in my data
+                ax.plot([],[],'o',color=attrib_color_map[label],label=label)
+=================
+22992009
+count:9
+
+    # reduce length of label for easier visualization
+    new_labels = create_pretty_node_labels(G)
+
+    # plot edges as per modules
+
+    #http://stackoverflow.com/questions/24662006/python-networkx-graph-different-colored-nodes-using-two-lists
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+
+    #http://stackoverflow.com/questions/22992009/legend-in-python-networkx
+    # create legend
+
+    f = plt.figure(1)
+    ax = f.add_subplot(1,1,1)
+    for label in attrib_color_map:
+        if label in node_module_dict.values():# only show legend for values that are in my data
+                ax.plot([],[],'o',color=attrib_color_map[label],label=label)
+    for label in edge_color_map: # 0, 1, -1 correlation values
+        if edge_color_map[label] in Gcolors:# colors,  only show legend for values that are in my data
+                ax.plot([],[],color=edge_color_map[label],label=label)
+=================
+7125009
+count:1
+    for label in edge_color_map: # 0, 1, -1 correlation values
+        if edge_color_map[label] in samModGcolors:# colors,  only show legend for values that are in my data
+                ax.plot([],[],color=edge_color_map[label],label=label)
+
+    plt.title('OTUs colored as per Phylum. Intermodule edges NOT allowed.')
+    # other layout algos: dot, neato, fdp, twopi, circo
+    algo = 'circo'
+    pos = nx.graphviz_layout(samModG, prog=algo)
+    nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, with_labels = True)
+    #http://stackoverflow.com/questions/7125009/how-to-change-legend-size-with-matplotlib-pyplot 
+    #http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend
+    #plt.legend(loc=3,prop={'size':6}) 
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+    plt.savefig(outfilestring + "-same-module-edge-node-color-phyla." + img_frmt, dpi = img_qual)
+    plt.close()
+
+
+def draw_plots_wout_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map,edge_color_map):
+    G = nx.Graph()
+    # edges
+=================
+24662006
+count:9
+    node_categ_dict = identify_node_categ(node_module_dict)
+    for node in samModG.nodes():
+        samModG.add_node(node, category = node_categ_dict[node])
+
+    # reduce length of label for easier visualization
+    new_labels = create_pretty_node_labels(G)
+
+    # plot edges as per modules
+
+    #http://stackoverflow.com/questions/24662006/python-networkx-graph-different-colored-nodes-using-two-lists
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+
+    #http://stackoverflow.com/questions/22992009/legend-in-python-networkx
+    # create legend
+
+    f = plt.figure(1)
+    ax = f.add_subplot(1,1,1)
+    for label in attrib_color_map:
+        if label in node_module_dict.values():# only show legend for values that are in my data
+                ax.plot([0],[0],color=attrib_color_map[label],label=label)
+=================
+22992009
+count:9
+
+    # reduce length of label for easier visualization
+    new_labels = create_pretty_node_labels(G)
+
+    # plot edges as per modules
+
+    #http://stackoverflow.com/questions/24662006/python-networkx-graph-different-colored-nodes-using-two-lists
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+
+    #http://stackoverflow.com/questions/22992009/legend-in-python-networkx
+    # create legend
+
+    f = plt.figure(1)
+    ax = f.add_subplot(1,1,1)
+    for label in attrib_color_map:
+        if label in node_module_dict.values():# only show legend for values that are in my data
+                ax.plot([0],[0],color=attrib_color_map[label],label=label)
+
+    plt.title('OTUs colored as per modules. Intermodule edges allowed.')
+    nx.draw(G, node_color = nodeColor, with_labels = False)
+=================
+7125009
+count:9
+    for label in categ_color_map:
+        if label in node_categ_dict.values():# only show legend for values that are in my data
+            ax.plot([0],[0],color=categ_color_map[label],label=label)
+
+    plt.title('OTUs colored as per Phylum. Intermodule edges NOT allowed.')
+    # other layout algos: dot, neato, fdp, twopi, circo
+    algo = 'circo'
+    pos = nx.graphviz_layout(samModG, prog=algo)
+    nx.draw(samModG, pos=pos, node_color = nodeColor, labels = new_labels, with_labels = True)
+    #http://stackoverflow.com/questions/7125009/how-to-change-legend-size-with-matplotlib-pyplot 
+    #http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend
+    #plt.legend(loc=3,prop={'size':6}) 
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+    plt.savefig(outfilestring + "-same-module-edge-node-color-phyla." + img_frmt, dpi = img_qual)
+    plt.close()
+
+
+if __name__=='__main__':
+    datetime = strftime("%a, %d %b %Y %I:%M:%S %p", localtime())
+    cmd = 'echo ' + datetime 
+=================
+18821795
+count:4
+    
+    '''
+    fontpath = '/usr/local/share/fonts/Arial.ttf'
+    prop = font_manager.FontProperties(fname=fontpath)
+    matplotlib.rcParams['font.family'] = prop.get_name()
+    '''
+    #/usr/share/fonts/truetype/msttcorefonts/
+    text_font = 'Arial' # 'Times' 'Helvetica'
+    '''
+    #http://stackoverflow.com/questions/18821795/how-can-i-get-list-of-font-familyor-name-of-font-in-matplotlib
+    '''
+
+
+    nx.draw(samModG, edgelist=edges_list, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, with_labels = True, node_size=samModGnode_sizes_list, font_size=8, font_family=text_font)
+    #http://stackoverflow.com/questions/7125009/how-to-change-legend-size-with-matplotlib-pyplot 
+    #http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend
+    #plt.legend(loc=3,prop={'size':6}) 
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+    plt.savefig(outfilestring + "-edge-node-color-phyla." + img_frmt, dpi = img_qual)
+    plt.close()
+=================
+7125009
+count:4
+    '''
+    #/usr/share/fonts/truetype/msttcorefonts/
+    text_font = 'Arial' # 'Times' 'Helvetica'
+    '''
+    #http://stackoverflow.com/questions/18821795/how-can-i-get-list-of-font-familyor-name-of-font-in-matplotlib
+    '''
+
+
+    nx.draw(samModG, edgelist=edges_list, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, with_labels = True, node_size=samModGnode_sizes_list, font_size=8, font_family=text_font)
+    #http://stackoverflow.com/questions/7125009/how-to-change-legend-size-with-matplotlib-pyplot 
+    #http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend
+    #plt.legend(loc=3,prop={'size':6}) 
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+    plt.savefig(outfilestring + "-edge-node-color-phyla." + img_frmt, dpi = img_qual)
+    plt.close()
+
+
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+    G = nx.Graph()
+    # edges
+=================
+24662006
+count:8
+
+    samModGnode_sizes_list = [node_sizes_dict[i] for i in samModG.nodes()]
+    #print samModGnode_sizes_list
+
+    # reduce length of label for easier visualization
+    new_labels = create_pretty_node_labels(G)
+
+    # plot edges as per modules
+
+    #http://stackoverflow.com/questions/24662006/python-networkx-graph-different-colored-nodes-using-two-lists
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+
+    #http://stackoverflow.com/questions/22992009/legend-in-python-networkx
+    # create legend
+
+    f = plt.figure(1)
+    ax = f.add_subplot(1,1,1)
+    for label in attrib_color_map:
+        if label in node_module_dict.values():# only show legend for values that are in my data
+                ax.plot([],[],'o',color=attrib_color_map[label],label=label)
+=================
+18821795
+count:2
+                ax.plot([],[],color=edge_color_map[label],label=label)
+
+    plt.title('OTUs colored as per Phylum. Intermodule edges NOT allowed.')
+    # other layout algos: dot, neato, fdp, twopi, circo
+    algo = 'circo'
+    pos = nx.graphviz_layout(samModG, prog=algo)
+
+    text_font = 'Arial' # 'Times' 'Helvetica'
+    '''
+    #http://stackoverflow.com/questions/18821795/how-can-i-get-list-of-font-familyor-name-of-font-in-matplotlib
+    '''
+
+
+    nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, with_labels = True, node_size=samModGnode_sizes_list, font_size=8, font_family=text_font)
+    #nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, font_size=8, with_labels = True)
+    #http://stackoverflow.com/questions/7125009/how-to-change-legend-size-with-matplotlib-pyplot 
+    #http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend
+    #plt.legend(loc=3,prop={'size':6}) 
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+    plt.savefig(outfilestring + "-same-module-edge-node-color-phyla." + img_frmt, dpi = img_qual)
+=================
+7125009
+count:2
+
+    text_font = 'Arial' # 'Times' 'Helvetica'
+    '''
+    #http://stackoverflow.com/questions/18821795/how-can-i-get-list-of-font-familyor-name-of-font-in-matplotlib
+    '''
+
+
+    nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, with_labels = True, node_size=samModGnode_sizes_list, font_size=8, font_family=text_font)
+    #nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, font_size=8, with_labels = True)
+    #http://stackoverflow.com/questions/7125009/how-to-change-legend-size-with-matplotlib-pyplot 
+    #http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend
+    #plt.legend(loc=3,prop={'size':6}) 
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+    plt.savefig(outfilestring + "-same-module-edge-node-color-phyla." + img_frmt, dpi = img_qual)
+    plt.close()
+
+
+def draw_plots_wout_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map,edge_color_map):
+    G = nx.Graph()
+    # edges
+=================
+7125009
+count:1
+    for label in edge_color_map: # 0, 1, -1 correlation values
+        if edge_color_map[label] in samModGcolors:# colors,  only show legend for values that are in my data
+                ax.plot([],[],color=edge_color_map[label],label=label)
+
+    plt.title('OTUs colored as per Phylum.')
+    # other layout algos: dot, neato, fdp, twopi, circo
+    algo = 'circo'
+    pos = nx.graphviz_layout(samModG, prog=algo)
+    nx.draw(samModG, edgelist=edges_list, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, with_labels = True, node_size=samModGnode_sizes_list, font_size=5)
+    #http://stackoverflow.com/questions/7125009/how-to-change-legend-size-with-matplotlib-pyplot 
+    #http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend
+    #plt.legend(loc=3,prop={'size':6}) 
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+    plt.savefig(outfilestring + "-edge-node-color-phyla." + img_frmt, dpi = img_qual)
+    plt.close()
+
+
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+    G = nx.Graph()
+    # edges
+=================
+18821795
+count:1
+            ax.plot([],[],'o',color=categ_color_map[label],label=label)
+    for label in edge_color_map: # 0, 1, -1 correlation values
+        if edge_color_map[label] in samModGcolors:# colors,  only show legend for values that are in my data
+                ax.plot([],[],color=edge_color_map[label],label=label)
+
+    plt.title('OTUs colored as per Phylum. Intermodule edges NOT allowed.')
+    # other layout algos: dot, neato, fdp, twopi, circo
+    algo = 'circo'
+    pos = nx.graphviz_layout(samModG, prog=algo)
+    #http://stackoverflow.com/questions/18821795/how-can-i-get-list-of-font-familyor-name-of-font-in-matplotlib  #don't think the font family and font size works though
+    nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, with_labels = True, node_size=samModGnode_sizes_list, font_size=10, font_family='Times')
+    #nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, font_size=8, with_labels = True)
+    #http://stackoverflow.com/questions/7125009/how-to-change-legend-size-with-matplotlib-pyplot 
+    #http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend
+    #plt.legend(loc=3,prop={'size':6}) 
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+    plt.savefig(outfilestring + "-same-module-edge-node-color-phyla." + img_frmt, dpi = img_qual)
+    plt.close()
+
+
+=================
+7125009
+count:1
+                ax.plot([],[],color=edge_color_map[label],label=label)
+
+    plt.title('OTUs colored as per Phylum. Intermodule edges NOT allowed.')
+    # other layout algos: dot, neato, fdp, twopi, circo
+    algo = 'circo'
+    pos = nx.graphviz_layout(samModG, prog=algo)
+    #http://stackoverflow.com/questions/18821795/how-can-i-get-list-of-font-familyor-name-of-font-in-matplotlib  #don't think the font family and font size works though
+    nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, with_labels = True, node_size=samModGnode_sizes_list, font_size=10, font_family='Times')
+    #nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, font_size=8, with_labels = True)
+    #http://stackoverflow.com/questions/7125009/how-to-change-legend-size-with-matplotlib-pyplot 
+    #http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend
+    #plt.legend(loc=3,prop={'size':6}) 
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+    plt.savefig(outfilestring + "-same-module-edge-node-color-phyla." + img_frmt, dpi = img_qual)
+    plt.close()
+
+
+def draw_plots_wout_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map,edge_color_map):
+    G = nx.Graph()
+    # edges
+=================
+8122079
+count:1
+    for line in f:
+        #counter = counter + 1
+        #if counter == 10000:
+        #    break
+        
+        line=line.strip()
+        #print line
+        
+        if line.startswith(">"):
+            if any(substring in line for substring in seed_entries): #https://stackoverflow.com/questions/8122079/python-how-to-check-a-string-for-substrings-from-a-list
+                outfile.append(line)
+                print(line)
+                flag = 1
+            else:
+                flag = 0
+            
+            strs = [seq[i:i+n] for i in range(0, len(seq), n)]
+            # do not add empty lines
+            if len(strs) > 0:
+                outfile.extend(strs)
+=================
+716477
+count:1
+        diff = [val for val in seed_entries if val not in tmp]
+
+sys.exit(0)
+'''
+
+# count which taxa contains how many seeds:
+
+
+def sort_taxa_occurence(somelistoflists, outfile):
+    # merges list of list into one list # https://stackoverflow.com/questions/716477/join-list-of-lists-in-python
+    one_list = list(itertools.chain.from_iterable(somelistoflists)) 
+    # https://stackoverflow.com/questions/46580499/count-occurrences-of-an-element-in-list
+    taxa_occurences =  Counter(one_list)
+    #writeDICT_to_file(taxa_occurences , outfile)
+
+    # reverse sorted as per occurrences # https://stackoverflow.com/questions/613183/how-to-sort-a-dictionary-by-value
+    sorted_x = sorted(taxa_occurences.items(), key=operator.itemgetter(1), reverse=True)
+    #print sorted_x
+
+    #https://stackoverflow.com/questions/3820312/python-write-a-list-of-tuples-to-a-file
+=================
+46580499
+count:1
+sys.exit(0)
+'''
+
+# count which taxa contains how many seeds:
+
+
+def sort_taxa_occurence(somelistoflists, outfile):
+    # merges list of list into one list # https://stackoverflow.com/questions/716477/join-list-of-lists-in-python
+    one_list = list(itertools.chain.from_iterable(somelistoflists)) 
+    # https://stackoverflow.com/questions/46580499/count-occurrences-of-an-element-in-list
+    taxa_occurences =  Counter(one_list)
+    #writeDICT_to_file(taxa_occurences , outfile)
+
+    # reverse sorted as per occurrences # https://stackoverflow.com/questions/613183/how-to-sort-a-dictionary-by-value
+    sorted_x = sorted(taxa_occurences.items(), key=operator.itemgetter(1), reverse=True)
+    #print sorted_x
+
+    #https://stackoverflow.com/questions/3820312/python-write-a-list-of-tuples-to-a-file
+    with open(outfile, 'w') as fp:
+        fp.write('\n'.join('%s\t%s' % x for x in sorted_x))
+=================
+613183
+count:2
+
+
+def sort_taxa_occurence(somelistoflists, outfile):
+    # merges list of list into one list # https://stackoverflow.com/questions/716477/join-list-of-lists-in-python
+    one_list = list(itertools.chain.from_iterable(somelistoflists)) 
+    # https://stackoverflow.com/questions/46580499/count-occurrences-of-an-element-in-list
+    taxa_occurences =  Counter(one_list)
+    #writeDICT_to_file(taxa_occurences , outfile)
+
+    # reverse sorted as per occurrences # https://stackoverflow.com/questions/613183/how-to-sort-a-dictionary-by-value
+    sorted_x = sorted(taxa_occurences.items(), key=operator.itemgetter(1), reverse=True)
+    #print sorted_x
+
+    #https://stackoverflow.com/questions/3820312/python-write-a-list-of-tuples-to-a-file
+    with open(outfile, 'w') as fp:
+        fp.write('\n'.join('%s\t%s' % x for x in sorted_x))
+
+
+
+# each taxa occurence indicates one seed. so the score indicates number of seeds covered by taxa
+=================
+3820312
+count:2
+    one_list = list(itertools.chain.from_iterable(somelistoflists)) 
+    # https://stackoverflow.com/questions/46580499/count-occurrences-of-an-element-in-list
+    taxa_occurences =  Counter(one_list)
+    #writeDICT_to_file(taxa_occurences , outfile)
+
+    # reverse sorted as per occurrences # https://stackoverflow.com/questions/613183/how-to-sort-a-dictionary-by-value
+    sorted_x = sorted(taxa_occurences.items(), key=operator.itemgetter(1), reverse=True)
+    #print sorted_x
+
+    #https://stackoverflow.com/questions/3820312/python-write-a-list-of-tuples-to-a-file
+    with open(outfile, 'w') as fp:
+        fp.write('\n'.join('%s\t%s' % x for x in sorted_x))
+
+
+
+# each taxa occurence indicates one seed. so the score indicates number of seeds covered by taxa
+sort_taxa_occurence(seed_utaxa_dict.values(), 'uniq-taxa-covering-seeds.txt')
+
+
+# taxa can occur multiple times per seed. so the score can be greater than number of seeds entries for this code
+=================
+4534480
+count:2
+    plt.ylabel('Cumulative relative abundance')
+    plt.xlabel(c)
+    plt.title('Taxonomic summary')
+    plt.xticks(ind+width/2., tuple(category_labels) )
+    #plt.legend( tuple(legend_bar), tuple(legend_text) )
+    figname = outpfile + '_' + c + '.' + f_type
+    plt.savefig(figname, close=True)
+
+    # Klaus se at stackexchange
+    #http://stackoverflow.com/questions/4534480/get-legend-as-a-seperate-picture-in-matplotlib
+    legend_fig = pylab.figure()
+    legend = pylab.figlegend( tuple(legend_bar), tuple(legend_text), loc = 'center' )
+    legend_fig.canvas.draw()
+    legend_figname = 'legend_' + figname 
+    legend_fig.savefig(legend_figname, bbox_inches=legend.get_window_extent().transformed(legend_fig.dpi_scale_trans.inverted()))
+    pylab.close()
+
+
+
+if __name__=='__main__':
+=================
+1217251
+count:1
+                seq = l
+                if seq in seq_header_freq_dict: # increment freq of occurance of seq
+                     seq_header_freq_dict[seq][1] += 1
+                else: # observed the seq for the first time
+                    seq_header_freq_dict[seq] = [header, 1]
+    f.close()
+    #print len(seq_header_freq_dict)
+    
+    # desc. order the dict as per the freq., dict[seq] = [header, freq]
+    # http://stackoverflow.com/questions/1217251/python-sorting-a-dictionary-of-lists
+    # descending (default) sort as per the last column
+    sorted_seq_header_freq_dict = ''
+    if asc_sort:
+        sorted_seq_header_freq_dict = sorted(seq_header_freq_dict.items(), key=lambda k:k[1][1])
+    else:
+        sorted_seq_header_freq_dict = sorted(seq_header_freq_dict.items(), key=lambda k:k[1][1], reverse=True)
+    
+    f = open(outpfile, 'w')
+    s = open(singletonsfile, 'w')
+    for seq , value in sorted_seq_header_freq_dict:
+=================
+7125009
+count:3
+        if edge_color_map[label] in samModGcolors:# colors,  only show legend for values that are in my data
+                ax.plot([],[],color=edge_color_map[label],label=label)
+
+    plt.title('OTUs colored as per Phylum. Intermodule edges NOT allowed.')
+    # other layout algos: dot, neato, fdp, twopi, circo
+    algo = 'circo'
+    pos = nx.graphviz_layout(samModG, prog=algo)
+    nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, with_labels = True, node_size=samModGnode_sizes_list, font_size=5)
+    #nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, font_size=8, with_labels = True)
+    #http://stackoverflow.com/questions/7125009/how-to-change-legend-size-with-matplotlib-pyplot 
+    #http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend
+    #plt.legend(loc=3,prop={'size':6}) 
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+    plt.savefig(outfilestring + "-same-module-edge-node-color-phyla." + img_frmt, dpi = img_qual)
+    plt.close()
+
+
+def draw_plots_wout_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map,edge_color_map):
+    G = nx.Graph()
+    # edges
+=================
+33195384
+count:1
+        else:
+            print l
+            sys.exit("D")       
+
+    # sorts dict as per value, returns a list of tuples (key, value)
+    # for cases where values are same for multiple keys, the keys stay the same as in their original order (not the best)
+    #sorted_temp_dict1 = sorted(file1_otusum_dict.iteritems(), key=operator.itemgetter(1), reverse=True)
+    #sorted_temp_dict2 = sorted(file2_otusum_dict.iteritems(), key=operator.itemgetter(1), reverse=True)
+
+    #http://stackoverflow.com/questions/33195384/python-sorting-a-dictionary-based-on-values-and-order-based-on-key-if-values-ar
+
+    ListA = list()
+    ListB = list()
+
+    out = open(args.infile1+".sorted.txt", 'w')
+    for l in file1_headers_list:
+        out.write ('%s\n' %(l))
+
+    #for i in sorted_temp_dict1:
+    #    k = i[0]
+=================
+33001490
+count:1
+  #print line1
+  conts = line1.split(delim)
+  #print conts
+  
+  # output dict needs a list for new column ordering
+  # move the first column id to last
+  fieldnames = conts[1:] + conts[:1]
+  #print fieldnames
+  
+  #https://stackoverflow.com/questions/33001490/python-re-ordering-columns-in-a-csv
+  import csv
+  sanfile = 'reordered-' + file1
+  if os.path.exists(sanfile):
+      sys.exit("reordered file exists! Delete before proceeding")
+  with open(file1, 'r') as infile, open(sanfile, 'a') as outfile:
+    writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+    # reorder the header first
+    writer.writeheader()
+    for row in csv.DictReader(infile):
+        # writes the reordered rows to the new file
+=================
+20983498
+count:1
+reslist.append("pattern\tseqs")
+
+seqlist = list()
+
+for p in patterns:
+    p = p.strip()
+    cmd = 'grep -c ' + p + ' seqs_v35.fna'
+    #print cmd
+    res = '0'
+    # https://stackoverflow.com/questions/20983498/subprocess-check-output-with-grep-command-fails-when-grep-finds-no-matches
+    try:
+        res = subprocess.check_output(cmd, shell=True)
+        res = res.strip()
+    except subprocess.CalledProcessError as e:
+        if e.returncode > 1:
+            raise
+    #print res
+    out = p + '\t' + res
+    print out
+    reslist.append(out)
+=================
+6602881
+count:1
+res = OrderedDict()
+for v, k in node_module_dict1.items(): # k is module, v is OTU
+    if k in res:
+        res[k].append(v)
+    else:
+        res[k] = [v]
+writeDICT_to_file(res, sys.argv[2])
+
+
+=================
+7125009
+count:2
+                ax.plot([],[],color=edge_color_map[label],label=label)
+
+    plt.title('OTUs colored as per Phylum. Intermodule edges NOT allowed.')
+    # other layout algos: dot, neato, fdp, twopi, circo
+    algo = 'circo'
+    pos = nx.graphviz_layout(samModG, prog=algo)
+
+    nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, with_labels = True, node_size=samModGnode_sizes_list, font_size=6)
+    #nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, font_size=8, with_labels = True)
+    #http://stackoverflow.com/questions/7125009/how-to-change-legend-size-with-matplotlib-pyplot 
+    #http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend
+    #plt.legend(loc=3,prop={'size':6}) 
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+    plt.savefig(outfilestring + "-same-module-edge-node-color-phyla." + img_frmt, dpi = img_qual)
+    plt.close()
+
+
+def draw_plots_wout_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map,edge_color_map):
+    G = nx.Graph()
+    # edges
+=================
+25748683
+count:1
+    #    df = df.drop(df.index[[0,1,2,3,4]])
+    ###
+
+    # create an empty df with the required row and column names
+    df_ = pd.DataFrame(index=list(df.index), columns=headers)
+    df_ = df_.fillna('NaN')
+    #print df_.head()
+
+    # sum the specific columns of the data frame
+    # https://stackoverflow.com/questions/25748683/pandas-sum-dataframe-rows-for-given-columns
+    for key in headers:
+        value = sample_lanes_dict[key]
+        print key, value
+        df_[key] = df[value].sum(axis=1)
+    print df_.head()
+
+    df_.to_csv(outfile, sep=delim, index_label=header_line.split(delim)[0])
+
+    # print the column names
+    print "Check the order of samples" 
+=================
+8122079
+count:1
+    for line in f:
+        #counter = counter + 1
+        #if counter == 10000:
+        #    break
+        
+        line=line.strip()
+        #print line
+        
+        if line.startswith(">"):
+            if any(substring in line for substring in santized_can_find_seeds): #https://stackoverflow.com/questions/8122079/python-how-to-check-a-string-for-substrings-from-a-list
+                outfile.append(line)
+                #print(line)
+                flag = 1
+            else:
+                flag = 0
+            
+            strs = [seq[i:i+n] for i in range(0, len(seq), n)]
+            # do not add empty lines
+            if len(strs) > 0:
+                outfile.extend(strs)
+=================
+716477
+count:1
+
+
+
+
+
+# count which taxa contains how many seeds:
+
+
+def sort_taxa_occurence(somelistoflists, outfile):
+    # merges list of list into one list # https://stackoverflow.com/questions/716477/join-list-of-lists-in-python
+    one_list = list(itertools.chain.from_iterable(somelistoflists)) 
+    # https://stackoverflow.com/questions/46580499/count-occurrences-of-an-element-in-list
+    taxa_occurences =  Counter(one_list)
+    #writeDICT_to_file(taxa_occurences , outfile)
+
+    # reverse sorted as per occurrences # https://stackoverflow.com/questions/613183/how-to-sort-a-dictionary-by-value
+    sorted_x = sorted(taxa_occurences.items(), key=operator.itemgetter(1), reverse=True)
+    #print sorted_x
+
+    #https://stackoverflow.com/questions/3820312/python-write-a-list-of-tuples-to-a-file
+=================
+46580499
+count:1
+
+
+
+# count which taxa contains how many seeds:
+
+
+def sort_taxa_occurence(somelistoflists, outfile):
+    # merges list of list into one list # https://stackoverflow.com/questions/716477/join-list-of-lists-in-python
+    one_list = list(itertools.chain.from_iterable(somelistoflists)) 
+    # https://stackoverflow.com/questions/46580499/count-occurrences-of-an-element-in-list
+    taxa_occurences =  Counter(one_list)
+    #writeDICT_to_file(taxa_occurences , outfile)
+
+    # reverse sorted as per occurrences # https://stackoverflow.com/questions/613183/how-to-sort-a-dictionary-by-value
+    sorted_x = sorted(taxa_occurences.items(), key=operator.itemgetter(1), reverse=True)
+    #print sorted_x
+
+    #https://stackoverflow.com/questions/3820312/python-write-a-list-of-tuples-to-a-file
+    with open(outfile, 'w') as fp:
+        fp.write('\n'.join('%s\t%s' % x for x in sorted_x))
+=================
+33195384
+count:1
+            file2_otusum_dict[key] = sum(value)
+            value.append(contents[taxonomy_col_file2]) # add taxonomy to the list
+            file2_dict[key] = value
+        else:
+            print l
+            sys.exit("D")       
+
+    
+    
+    #http://stackoverflow.com/questions/33195384/python-sorting-a-dictionary-based-on-values-and-order-based-on-key-if-values-ar
+
+    ListA = list()
+    ListB = list()
+
+    sorted_outpfile1 = args.infile1+suffix
+
+    out = open(sorted_outpfile1, 'w')
+    for l in file1_headers_list:
+        out.write ('%s\n' %(l))
+
+=================
+4534480
+count:1
+    plt.ylabel('Cumulative relative abundance')
+    plt.xlabel(c)
+    plt.title('Taxonomic summary')
+    plt.xticks(ind+width/2., tuple(category_labels) )
+    #plt.legend( tuple(legend_bar), tuple(legend_text) )
+    figname = outpfile + '_' + c + '.' + f_type
+    plt.savefig(figname, close=True)
+
+    # Klaus se at stackexchange
+    #http://stackoverflow.com/questions/4534480/get-legend-as-a-seperate-picture-in-matplotlib
+    legend_fig = pylab.figure()
+    # print in legend (top to bottom), the taxons in decreasing order of average abundance across groups.
+    #legend = pylab.figlegend( tuple(legend_bar), tuple(legend_text), loc = 'center' )
+    #print in legend (bottom to top), the taxons in decreasing order of average abundance across groups.
+    rev_legend_bar = list(reversed(legend_bar))
+    rev_legend_text = list(reversed(legend_text))
+    legend = pylab.figlegend( tuple(rev_legend_bar), tuple(rev_legend_text), loc = 'center' )
+    legend_fig.canvas.draw()
+    legend_figname = 'legend_' + figname 
+    legend_fig.savefig(legend_figname, bbox_inches=legend.get_window_extent().transformed(legend_fig.dpi_scale_trans.inverted()))

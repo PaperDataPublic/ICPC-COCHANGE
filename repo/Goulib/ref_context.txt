@@ -1,0 +1,1307 @@
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]
+=================
+12007820
+count:1
+        assert_false(all((1,2,3,4),lambda x:x<4))
+
+class TestNo:
+    def test_no(self):
+        assert_true(no((1,2,3,4),lambda x:x<1))
+        assert_false(no((1,2,3,4),lambda x:x<2))
+
+class TestTakenth:
+    def test_takenth(self):
+        #http://stackoverflow.com/questions/12007820/better-ways-to-get-nth-element-from-an-unsubscriptable-iterable
+        from itertools import permutations
+        assert_equal(nth(1000,permutations(range(10), 10)),
+            (0, 1, 2, 4, 6, 5, 8, 9, 3, 7)
+        )
+
+class TestIcross:
+    def test_icross(self):
+        assert_equal(icross([1,2,5],[2,3]),
+            [(1,2),(1,3),(2,2),(2,3),(5,2),(5,3)]
+        )
+=================
+12093364
+count:1
+class TestProduct:
+    def test_product(self):
+        #test compatibility with itertools.product
+        assert_equal(itertools2.product(),itertools.product())
+        assert_equal(itertools2.product([]),itertools.product([]))
+        assert_equal(itertools2.product('ABCD', 'xy'),itertools.product('ABCD', 'xy'))
+        # assert_equal(itertools2.product('AB', 'wxyz'),itertools.product('AB', 'wxyz'))
+        assert_equal(itertools2.product(range(2), repeat=3),itertools.product(range(2), repeat=3))
+
+        #test case from http://stackoverflow.com/questions/12093364/cartesian-product-of-large-iterators-itertools
+
+        g = product(itertools.permutations(range(100)),repeat=2)
+
+        assert_equal(next(g),(range(100),range(100)))
+
+class TestCombinationsWithReplacement:
+    def test_combinations_with_replacement(self):
+        assert_equal(combinations_with_replacement('ABC', 2),
+            ['AA','AB','BB','AC','BC','CC'])
+        assert_equal(combinations_with_replacement('AB', 4),
+=================
+969709
+count:1
+        raise SkipTest # implement your test here
+
+class TestIscallable:
+    def test_iscallable(self):
+        # assert_equal(expected, iscallable(f))
+        raise SkipTest # implement your test here
+
+class TestIntersect:
+    def test_intersect(self):
+        # http://stackoverflow.com/questions/969709/joining-a-set-of-ordered-integer-yielding-python-iterators
+        postings = [[1,   100, 142, 322, 12312],
+            [2,   100, 101, 322, 1221],
+            [100, 142, 322, 956, 1222]]
+
+        assert_equal(intersect(*postings),[100, 322])
+
+class TestKeep:
+    @classmethod
+    def setup_class(self):
+        l=[1,2,3,4,5,6,7,8,9]
+=================
+1019040
+count:1
+     "output_type": "stream",
+     "text": [
+      "A000004 (0,0,0,0,0,0,0,0,0,0,... ...) The zero sequence\n",
+      "A000005 (1,2,2,3,2,4,2,4,3,4,... ...) d(n) (also called tau(n) or sigma_0(n)), the number of divisors of n.\n",
+      "A000006 (1,1,2,2,3,3,4,4,4,5,... ...) Integer part of square root of n-th prime.\n",
+      "A000007 (1,0,0,0,0,0,0,0,0,0,... ...) The characteristic function of 0: a(n) = 0^n.\n",
+      "A000009 (1,1,1,2,2,3,4,5,6,8,... ...) Expansion of Product_{m >= 1} (1 + x^m);     number of partitions of n into distinct parts;     number of partitions of n into odd parts (if n > 0). \n",
+      "A000010 (1,1,2,2,4,2,6,4,6,4,... ...) Euler totient function\n",
+      "\n",
+      "    :see: http://stackoverflow.com/questions/1019040/how-many-numbers-below-n-are-coprimes-to-n\n",
+      "    \n",
+      "A000027 (1,2,3,4,5,6,7,8,9,10,... ...) The positive integers.\n",
+      "A000040 (2,3,5,7,11,13,17,19,23,29,... ...) The prime numbers\n",
+      "A000041 (1,1,2,3,5,7,11,15,22,30,... ...) number of partitions of n (the partition numbers)\n",
+      "A000043 (2,3,5,7,13,17,19,31,61,89,... ...) Mersenne exponents: primes p such that 2^p - 1 is prime.\n",
+      "A000045 (0,1,1,2,3,5,8,13,21,34,... ...) Fibonacci numbers: F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1\n",
+      "A000079 (1,2,4,8,16,32,64,128,256,512,... ...) Powers of 2: a(n) = 2^n.\n",
+      "A000108 (1,1,2,5,14,42,132,429,1430,4862,... ...) Catalan numbers: C(n) = binomial(2n,n)/(n+1) = (2n)!/(n!(n+1)!).\n",
+      "    \n",
+      "A000110 (1,1,2,5,15,52,203,877,4140,21147,... ...) \n",
+=================
+807863
+count:1
+        elif _DEBUG:
+            logging.info('%s timeout after %d loops' % (name, i))
+    finally:
+        f.timeout = timeout  # restore Sequence's timeout
+
+
+def data(s):
+    s2 = s[1:]
+
+    # http://stackoverflow.com/questions/807863/how-to-output-list-of-floats-to-a-binary-file-in-python
+    try:
+        return database[s]
+    except IndexError:
+        pass
+
+    from urllib.request import urlopen
+    try:  # is there a local, patched file ?
+        file = open('b%s.txt' % s2, 'r')
+        logging.warning('reading b%s.txt' % s2)
+    # FileNotFoundError (not defined in Py2.7) download the B-file from OEIS
+=================
+32899
+count:1
+
+    @classmethod
+    def teardown_class(cls):
+        global slow
+        print('slower Sequences:')
+        slow.sort()
+        for (i, name, desc) in slow:
+            print(i, name, desc)
+
+    # http://stackoverflow.com/questions/32899/how-to-generate-dynamic-parametrized-unit-tests-in-python
+    # http://nose.readthedocs.org/en/latest/writing_tests.html
+    # this is ABSOLUTELY FANTASTIC !
+    def test_generator(self):
+        for name in sorted(oeis.keys()):  # test in sorted order to spot slows faster
+            logging.info(name)
+            time_limit = 0.1  # second
+            from functools import partial
+            f = partial(assert_generator, oeis[name], data(
+                name), name, time_limit)
+            f.description = str(oeis[name]) + '\n'
+=================
+41115661
+count:1
+
+
+def friedman(num):
+    for e in gen(num):
+        try:
+            # cope with potential rounding problems
+            n = math2.int_or_float(e())
+            if n == num and str(e) != str(num):  # concat is too easy ...
+                yield (num, e)
+        except GeneratorExit:  # https://stackoverflow.com/a/41115661/1395973
+            return
+        except:
+            pass
+
+
+if __name__ == "__main__":
+    n=list(range(1,30,2))
+    for e in seq(n,[],'+',False):
+        print(e)
+        
+=================
+40309602
+count:1
+onesecond = timedelta(seconds=1)
+oneminute = timedelta(minutes=1)
+onehour = timedelta(hours=1)
+oneday = timedelta(days=1)
+oneweek = timedelta(weeks=1)
+datemin = date(year=dt.MINYEAR, month=1, day=1)
+midnight = time()
+
+# regexes
+# https://stackoverflow.com/a/40309602/1395973
+# https://regex101.com/r/NUZS1Z/2
+rdatesep = '[^\w\d\r\n:]'
+ryear = '(\d{4}|\d{2})'
+rmonth = '(0?[1-9]|1[0-2])'
+rday = '(0?[1-9]|[12]\d|30|31)'
+rdateany = '(\b'+rday+rdatesep+rmonth+rdatesep+ryear + \
+    '\b)|(\b'+rmonth+rdatesep+rday+rdatesep+ryear+'\b)'
+
+
+def datetimef(d, t=None, fmt='%Y-%m-%d'):
+=================
+21074460
+count:1
+    * or a string in timedelta str() output format
+    """
+    if isinstance(t, timedelta):
+        return t
+    if isinstance(t, time):
+        return time_sub(t, midnight)
+    elif isinstance(t, (int, float)):
+        return timedelta(days=t)
+
+    # https://stackoverflow.com/a/21074460/1395973
+    if fmt is None:
+        fmt = '(%D day[s]?[,]? )?%H:%M:%S*'
+    m = re.match(fmt2regex(fmt), t)
+    if m is None:
+        raise ValueError('"%s" does not match fmt=%s' % (t, fmt))
+    m = m.groupdict()
+    d = {key: float(value) for key, value in m.items() if value is not None}
+    td = timedelta(**d)
+    return td
+
+=================
+333995
+count:1
+import os
+import io
+import sys
+import logging
+import base64
+import matplotlib
+
+if os.getenv('TRAVIS'):  # are we running https://travis-ci.org/ automated tests ?
+    matplotlib.use('Agg')  # Force matplotlib  not to use any Xwindows backend
+elif sys.gettrace():  # http://stackoverflow.com/questions/333995/how-to-detect-that-python-code-is-being-executed-through-the-debugger
+    matplotlib.use('Agg')  # because 'QtAgg' crashes python while debugging
+else:
+    pass
+    # matplotlib.use('pdf') #for high quality pdf, but doesn't work for png, svg ...
+
+logging.info('matplotlib backend is %s' % matplotlib.get_backend())
+
+
+class Plot(object):
+    """base class for plotable rich object display on IPython notebooks
+=================
+3721249
+count:1
+
+def in_interval(interval, x, closed=True):
+    """:return: bool True if x is in interval [a,b] or [b,a] (tuple)"""
+    a, b = _order(interval)
+    return (a <= x <= b) if closed else (a <= x < b)
+
+
+def intersect(t1, t2):
+    """:return: bool True if intervals [t1[ [t2[ intersect"""
+    '''http://stackoverflow.com/questions/3721249/python-date-interval-intersection'''
+    t1start, t1end = _order(t1)
+    t2start, t2end = _order(t2)
+    return (t1start <= t2start < t1end) or (t2start <= t1start < t2end)
+
+
+def intersection(t1, t2):
+    """:return: tuple intersection between 2 intervals (tuples), 
+    or None if intervals don't intersect"""
+    t1start, t1end = _order(t1)
+    t2start, t2end = _order(t2)
+=================
+5928725
+count:1
+
+from math import pi, sin, cos, atan2, sqrt, hypot, copysign
+from Goulib import math2, itertools2
+
+rel_tol = 1e-6  # relative tolerance used in isclose comparisons
+
+
+def _hash(v):
+    """hash function for vectors"""
+    # http://stackoverflow.com/questions/5928725/hashing-2d-3d-and-nd-vectors
+    primes = [73856093, 19349663, 83492791]
+    res = 0
+    for x, p in zip(v, primes):
+        res = res ^ int(x*p)  # ^ is xor
+    return res
+
+
+copy = copier.deepcopy
+
+# Geometry
+=================
+3349125
+count:1
+    return [p1, p2]
+
+
+def _intersect_circle_circle(c1, c2):
+    """Circle/Circle intersection
+    :param c1: Line2 (or derived class)
+    :param c2: Circle (or derived class)
+    :return: None, single Point2, [Point2,Point2] or smallest Circle if inscribed
+    """
+    # http://stackoverflow.com/questions/3349125/circle-circle-intersection-points
+
+    v = c2.c-c1.c  # vector between centers
+
+    d = v.mag()
+    if d > (c1.r+c2.r):  # disjoint
+        return None
+
+    if d <= abs(c1.r-c2.r):  # one circle is inside the other.
+        return c1 if c1.r <= c2.r else c2
+
+=================
+849211
+count:1
+    p = c1.c+x*v
+    if math2.isclose(y, 0):
+        return p
+
+    v = v.cross()
+    return [p+y*v, p-y*v]
+
+
+def _connect_point2_line2(P, L):
+    # http://stackoverflow.com/questions/849211/shortest-distance-between-a-point-and-a-line-segment
+    d = L.v.mag2()
+    if d == 0:  # L is degenerate to a point
+        return Segment2(P, L.p)
+    u = (L.v.dot(P-L.p))/d
+    if not L._u_in(u):
+        u = math2.sat(u, 0, 1)
+    return Segment2(P, L.point(u))
+
+
+def _connect_point2_circle(P, C):
+=================
+27673463
+count:1
+    return x, y
+
+
+def circle_from_3_points(a, b, c):
+    """
+    constructs Circle passing through 3 distinct points
+    :param a,b,c: Point2 
+    :return: the unique Circle through the three points a, b, c 
+    """
+    # future generalization : http://stackoverflow.com/questions/27673463/smallest-enclosing-circle-in-python-error-in-the-code
+    x, y = _center_of_circle_from_3_points(a, b, c)
+    return Circle((x, y), hypot(x - a.x, y - a.y))
+
+
+def arc_from_3_points(a, b, c):
+    """
+    constructs Arc2 starting in a, going through b and ending in c
+    :param a,b,c: Point2 
+    :return: the unique Arc2 starting in a, going through b and ending in c
+    """
+=================
+1336663
+count:1
+
+    def bbox(self):
+        """
+        :return: :class:`BBox` bounding box of Entity"""
+        if isinstance(self, Point2):
+            return BBox(self, self)
+        elif isinstance(self, Segment2):
+            return BBox(self.start, self.end)
+        elif isinstance(self, Arc2):
+            # http://stackoverflow.com/questions/1336663/2d-bounding-box-of-a-sector
+            res = BBox(self.p, self.p2)
+            p = self.c + Vector2(self.r, 0)
+            if p in self:
+                res += p
+            p = self.c + Vector2(-self.r, 0)
+            if p in self:
+                res += p
+            p = self.c + Vector2(0, self.r)
+            if p in self:
+                res += p
+=================
+15857818
+count:1
+        for page in PDFPage.create_pages(document):
+            interpreter.process_page(page)
+            break  # handle one page only
+        return
+
+    def read_svg(self, content, **kwargs):
+        """appends svg content to drawing
+        :param content: string, either filename or svg content
+        """
+        # from http://stackoverflow.com/questions/15857818/python-svg-parser
+        from svg.path import parse_path
+        import tinycss
+        from xml.dom import minidom
+        try:
+            doc = minidom.parse(content)  # parseString also exists
+        except IOError:
+            doc = minidom.parseString(content.encode('utf-8'))
+
+        styles = {}
+
+=================
+5491708
+count:1
+import operator
+
+from itertools import count, tee, islice, chain
+from Goulib import itertools2, decorators, tests
+
+
+class Record(OrderedDict):
+    """mimics a Pascal record or a C struct"""
+
+    # https://stackoverflow.com/a/5491708/1395973
+    def __init__(self, *args, **kwargs):
+        super(Record, self).__init__(*args, **kwargs)
+        self._initialized = True
+
+    def __getattr__(self, name):
+        try:
+            return self[name]
+        except KeyError:
+            raise AttributeError(name)
+
+=================
+4187185
+count:1
+        if not isclose(x, y, rel_tol=rel_tol, abs_tol=abs_tol):
+            return False
+    return True
+
+# basic useful functions
+
+
+def is_number(x):
+    ''':return: True if x is a number of any type, including Complex'''
+    # http://stackoverflow.com/questions/4187185/how-can-i-check-if-my-python-object-is-a-number
+    return isinstance(x, numbers.Number)
+
+
+def is_complex(x):
+    return isinstance(x, complex)
+
+
+def is_real(x):
+    return is_number(x) and not is_complex(x)
+
+=================
+40190849
+count:1
+    also known as the reduced totient function or the least universal exponent function.
+    '''
+    coprimes = [x for x in range(1, n) if gcd(x, n) == 1]
+    k = 1
+    while not all(pow(x, k, n) == 1 for x in coprimes):
+        k += 1
+    return k
+
+# https://en.wikipedia.org/wiki/Primitive_root_modulo_n
+# code decomposed from http://stackoverflow.com/questions/40190849/efficient-finding-primitive-roots-modulo-n-using-python
+
+
+def is_primitive_root(x, m, s={}):
+    '''returns True if x is a primitive root of m
+
+    :param s: set of coprimes to m, if already known
+    '''
+    if not s:
+        s = {n for n in range(1, m) if coprime(n, m)}
+    return {pow(x, p, m) for p in range(1, m)} == s
+=================
+15390807
+count:1
+        return cmath.sqrt(n)
+    return math.sqrt(n)
+
+
+def isqrt(n):
+    '''integer square root
+
+    :return: largest int x for which x * x <= n
+    '''
+    # http://stackoverflow.com/questions/15390807/integer-square-root-in-python
+    # https://projecteuler.net/thread=549#235536
+    n = int(n)
+    x = n
+    y = (x + 1) // 2
+    while y < x:
+        x = y
+        y = (x + n // x) // 2
+    return x
+
+
+=================
+11316539
+count:1
+
+
+def hamming(s1, s2):
+    '''Calculate the Hamming distance between two iterables'''
+    return sum(c1 != c2 for c1, c2 in zip(s1, s2))
+
+
+def sets_dist(a, b):
+    '''
+    :see: http://stackoverflow.com/questions/11316539/calculating-the-distance-between-two-unordered-sets
+    '''
+    c = a.intersection(b)
+    return sqrt(len(a - c) * 2 + len(b - c) * 2)
+
+
+def sets_levenshtein(a, b):
+    '''levenshtein distance on sets
+
+    :see: http://en.wikipedia.org/wiki/Levenshtein_distance
+    '''
+=================
+28549402
+count:1
+
+
+def kfibonacci(k, mod=0):
+    ''' k-fibonacci series n-th element
+
+    :param k: int number of consecutive terms to add
+    :param mod: int optional modulo
+    :return: function(n) returning the n-th element
+    '''
+    # http://stackoverflow.com/a/28549402/1395973
+    # uses http://mathworld.wolfram.com/FibonacciQ-Matrix.html
+    mat = identity(k - 1)
+    for row in mat:
+        row.append(0)
+    mat.insert(0, [1] * k)
+    return lambda n: mod_matpow(mat, n, mod)[0][k - 1]
+
+
+def fibonacci(n, mod=0):
+    ''' fibonacci series n-th element
+=================
+1019040
+count:1
+        if q > 1:
+            return 0
+        res = -res
+    return res
+
+
+def euler_phi(n):
+    '''Euler totient function
+
+    :see: http://stackoverflow.com/questions/1019040/how-many-numbers-below-n-are-coprimes-to-n
+    '''
+    if n <= 1:
+        return n
+    return int(mul((1 - 1.0 / p for p, _ in factorize(n)), n))
+
+
+totient = euler_phi  # alias. totient is available in sympy
+
+
+def kempner(n):
+=================
+36531120
+count:1
+    :return: nth repunit
+    '''
+    if n == 0:
+        return 0
+    if digit == 1:
+        return (base ** n - 1) // (base - 1)
+    return int(str(digit) * n, base)
+
+# repeating decimals https://en.wikipedia.org/wiki/Repeating_decimal
+# https://stackoverflow.com/a/36531120/1395973
+
+
+def rational_form(numerator, denominator):
+    '''information about the decimal representation of a rational number.
+
+    :return: 5 integer : integer, decimal, shift, repeat, cycle
+
+    * shift is the len of decimal with leading zeroes if any
+    * cycle is the len of repeat with leading zeroes if any
+    '''
+=================
+28548457
+count:1
+    '''
+    # http://l34rn-p14y.blogspot.it/2013/11/baby-step-giant-step-algorithm-python.html
+    s = int(math.ceil(math.sqrt(n)))
+    A = [y * pow(a, r, n) % n for r in range(s)]
+    for t in range(1, s + 1):
+        value = pow(a, t * s, n)
+        if value in A:
+            return (t * s - A.index(value)) % n
+
+# inspired from http://stackoverflow.com/questions/28548457/nth-fibonacci-number-for-n-as-big-as-1019
+
+
+def mod_matmul(A, B, mod=0):
+    if not mod:
+        return dot_mm(A, B)
+    return [[sum(a * b for a, b in zip(A_row, B_col)) % mod for B_col in zip(*B)] for A_row in A]
+
+
+def mod_matpow(M, power, mod=0):
+    if power < 0:
+=================
+22281524
+count:1
+
+
+def lucky_gen():
+    '''
+    generates lucky numbers
+    :see: https://en.wikipedia.org/wiki/Lucky_number
+    :see: https://oeis.org/A000959
+    '''
+
+    # https://stackoverflow.com/a/22281524/1395973
+
+    def _idx_after_removal(removed_indices, value):
+        for removed in removed_indices:
+            value -= value // removed
+        return value
+
+    def _should_be_excluded(removed_indices, value):
+        for j in range(len(removed_indices) - 1):
+            value_idx = _idx_after_removal(removed_indices[:j + 1], value)
+            if value_idx % removed_indices[j + 1] == 0:
+=================
+1055360
+count:1
+def identity(x):
+    """Do nothing and return the variable untouched"""
+    return x
+
+
+def isiterable(obj):
+    """
+    :result: bool True if obj is iterable (but not a string)
+    """
+    # http://stackoverflow.com/questions/1055360/how-to-tell-a-variable-is-iterable-but-not-a-string
+    if isinstance(obj, str):
+        return False  # required since Python 3.5
+    return isinstance(obj, collections.Iterable)
+
+
+def iscallable(f):
+    return isinstance(f, collections.Callable)
+
+
+def any(seq, pred=bool):
+=================
+2158395
+count:1
+
+
+def flatten(l, donotrecursein=str):
+    """iterator to flatten (depth-first) structure
+
+    :param l: iterable structure
+    :param donotrecursein: iterable types in which algo doesn't recurse
+                           string type by default
+    """
+    # http://stackoverflow.com/questions/2158395/flatten-an-irregular-list-of-lists-in-python
+    if isinstance(l, dict):
+        l = l.values()
+    for el in l:
+        if not isinstance(el, collections.Iterable):
+            yield el
+        elif isinstance(el, donotrecursein):
+            yield el
+        else:
+            for sub in flatten(el, donotrecursein):
+                yield sub
+=================
+15099647
+count:1
+    # https://docs.python.org/2/library/html#recipes
+    return next(itertools.islice(iterable, n, n + 1), default)
+
+
+nth = takenth
+
+
+def icross(*sequences):
+    """Cartesian product of sequences (recursive version)"""
+    # http://stackoverflow.com/questions/15099647/cross-product-of-sets-using-recursion
+    if sequences:
+        for x in sequences[0]:
+            for y in icross(*sequences[1:]):
+                yield (x,) + y
+    else:
+        yield ()
+
+
+def quantify(iterable, pred=bool):
+    """
+=================
+7946798
+count:1
+    return sum(map(pred, iterable), 0)
+
+
+def interleave(l1, l2):
+    """
+    :param l1: iterable
+    :param l2: iterable of same length, or 1 less than l1
+    :result: iterable interleaving elements from l1 and l2, starting by l1[0]
+    """
+    # http://stackoverflow.com/questions/7946798/interleaving-two-lists-in-python-2-2
+    res = l1 + l2
+    res[::2] = l1
+    res[1::2] = l2
+    return res
+
+
+def shuffle(ary):
+    """
+    :param: array to shuffle by Fisher-Yates algorithm
+    :result: shuffled array (IN PLACE!)
+=================
+6422700
+count:1
+            if i > n:
+                break  # end
+            yield x
+
+
+def sort_indexes(iterable, key=identity, reverse=False):
+    """
+    :return: iterator over indexes of iterable that correspond to the sorted iterable
+    """
+    # http://stackoverflow.com/questions/6422700/how-to-get-indices-of-a-sorted-array-in-python
+    return [i[0] for i in sorted(enumerate(iterable), key=lambda x:key(x[1]))]
+
+# WARNING : filter2 has been renamed from "split" at v.1.7.0 for coherency
+
+
+def filter2(iterable, condition):
+    """ like `python.filter` but returns 2 lists :
+    - list of elements in iterable that satisfy condition
+    - list of those that don't
+    """
+=================
+5352649
+count:1
+    def __iter__(self):
+        return self
+
+
+def subdict(d, keys):
+    """extract "sub-dictionary"
+    :param d: dict
+    :param keys: container of keys to extract:
+    :result: dict:
+    :see: http://stackoverflow.com/questions/5352546/best-way-to-extract-subset-of-key-value-pairs-from-python-dictionary-object/5352649#5352649
+    """
+    return dict([(i, d[i]) for i in keys if i in d])
+
+
+class SortingError(Exception):
+    pass
+
+
+def ensure_sorted(iterable, key=None):
+    """ makes sure iterable is sorted according to key
+=================
+969709
+count:1
+
+merge = heapq.merge
+
+
+def intersect(*iterables):
+    """ generates itersection of N iterables
+
+    :param iterables: any number of SORTED iterables
+    :yields: elements that belong to all iterables
+    :see: http://stackoverflow.com/questions/969709/joining-a-set-of-ordered-integer-yielding-python-iterators
+    """
+
+    for key, values in itertools.groupby(heapq.merge(*iterables)):
+        if len(list(values)) == len(iterables):
+            yield key
+
+
+def product(*iterables, **kwargs):
+    """ Cartesian product of (infinite) input iterables.
+
+=================
+12093364
+count:1
+        if len(list(values)) == len(iterables):
+            yield key
+
+
+def product(*iterables, **kwargs):
+    """ Cartesian product of (infinite) input iterables.
+
+    :param iterables: any number of iterables
+    :param repeat: integer optional number of repetitions
+    :see: http://stackoverflow.com/questions/12093364/cartesian-product-of-large-iterators-itertools
+    """
+    # https://github.com/enricobacis/infinite/blob/master/infinite/product.py
+    # is not general enough
+
+    def empty():
+        yield ()
+
+    if len(iterables) == 0:
+        return empty()
+
+=================
+9819602
+count:1
+
+        v = self.data
+        f = self.fmt
+
+        style = args.get('style', {})
+        if isinstance(style, str):
+            style = markup.style_str2dict(style)
+
+        # create style dict by merging default Cell style + parameters
+        # http://stackoverflow.com/questions/9819602/union-of-dict-objects-in-python
+        style = dict(self.style, **style)
+
+        if hasattr(v, '_repr_html_'):
+            try:
+                v = v._repr_html_()
+            except Exception as e:
+                v = 'ERROR : %s _repr_html_ failed : %s' % (v, e)
+
+        elif 'text-align' not in style:  # HTML 4 and before
+            a = args.pop('align', self.align)
+=================
+3124155
+count:1
+    def assertEqual(self, first, second, places=7, msg=None, delta=None, reltol=None):
+        """automatically calls assertAlmostEqual when needed
+        :param first, second: objects to compare for (quasi) equality
+        :param places: int number of digits to consider in float comparisons.
+                        If None, forces strict equality
+        :param msg: optional string error message to display in case of failure
+        :param delta: optional float absolute tolerance value
+        :param reltol: optional float relative tolerance value
+        """
+        # inspired from http://stackoverflow.com/a/3124155/190597 (KennyTM)
+        import collections
+
+        if delta is None:
+            if places is None or (isinstance(first, self.base_types) and isinstance(second, self.base_types)):
+                return super(TestCase, self).assertEqual(first, second, msg=msg)
+
+        else:
+            places = None
+
+        if (isinstance(first, collections.Iterable) and isinstance(second, collections.Iterable)):
+=================
+15411967
+count:1
+    return display(HTML(tag('h3',html(args))))
+
+def h4(*args):
+    return display(HTML(tag('h4',html(args))))
+
+def h(*args):
+    return display(HTML(html(args)))
+
+#redefine "print" for notebooks ...
+try: #http://stackoverflow.com/questions/15411967/how-can-i-check-if-code-is-executed-in-the-ipython-notebook
+    get_ipython #is defined from within IPython (notebook)
+except:
+    pass
+else:
+    pass #for pythoscope
+    # print = h # this is ok in Python 3, but not before
+
+def hinfo(*args):
+    return display(HTML(tag('div',html(args),style="background-color:#337ab7;color:#ffffff")))
+def hsuccess(*args):
+=================
+3403973
+count:1
+            im = self.convert('P', colors=maxcolors)
+        count = np.bincount(im.array.flatten())
+        return zip(count, im.palette)  # return palette KEYS
+
+    def replace(self, pairs):
+        """replace a color by another
+        currently works only for indexed color images
+        :param pairs: iterable of (from,to) ints
+        """
+        # http://stackoverflow.com/questions/3403973/fast-replacement-of-values-in-a-numpy-array
+        assert (self.mode == 'P')  # TODO: support other modes
+        a = np.copy(self.array)
+        for c in pairs:
+            self.array[a == c[0]] = c[1]
+        return self
+
+    def optimize(self, maxcolors=256):
+        """remove unused colors from the palette
+        """
+        assert (self.mode == 'P')
+=================
+9829578
+count:1
+        def h(im):
+            return [im.average_hash, im.perceptual_hash][method](hash_size)
+        
+        h1 = h(self)
+
+        def diff(im):
+            h2 = h(im)
+            if h1 == h2:
+                return 0
+            # http://stackoverflow.com/questions/9829578/fast-way-of-counting-non-zero-bits-in-python
+            d = bin(h1 ^ h2).count("1")  # ^is XOR
+            return 2 * d / (hash_size * hash_size)
+        
+        d=diff(other)
+
+        if d==0 or not symmetries:
+            return d
+
+        other = other.thumb  # generated at _hash_prepare above
+
+=================
+7422204
+count:1
+        if method is None:
+            method = FLOYDSTEINBERG
+        a = dither(self.array, method, N=n)
+        if n == 2:
+            return Image(a, '1')
+        else:
+            return Image(a / (n - 1), 'F')
+
+    def normalize(self, newmax=None, newmin=None):
+        # http://stackoverflow.com/questions/7422204/intensity-normalization-of-image-using-pythonpil-speed-issues
+        # warning : this normalizes each channel independently, so we don't use @adapt_rgb here
+        newmax = newmax or modes[self.mode].max
+        newmin = newmin or modes[self.mode].min
+        arr = normalize(self.array, newmax, newmin)
+        return Image(arr)
+
+    @adapt_rgb
+    def filter(self, f):
+        try:  # scikit-image filter or similar ?
+            a = f(self.array)
+=================
+9166400
+count:1
+                return Image(a * d1 + b * d2, mode)
+            else:
+                return Image(a * d1, mode)
+        else:
+            return Image(b * d2, mode)
+
+    def add(self, other, pos=(0, 0), alpha=1, mode=None):
+        """ simply adds other image at px,py (subbixel) coordinates
+        """
+        # TOD: use http://stackoverflow.com/questions/9166400/convert-rgba-png-to-rgb-with-pil
+        if self.npixels == 0:
+            return Image(other * alpha)
+        px, py = pos
+        assert px >= 0 and py >= 0
+        im1, im2 = self, other
+        size = (max(im1.size[0], int(im2.size[0] + py + 0.999)),
+                max(im1.size[1], int(im2.size[1] + px + 0.999)))
+        if not im1.mode:  # empty image
+            im1.mode = im2.mode
+        im1 = im1.expand(size, 0, 0)
+=================
+9166671
+count:1
+    def __div__(self, f):
+        return self * (1 / f)
+
+    __truediv__ = __div__
+
+
+def alpha_composite(front, back):
+    """Alpha composite two RGBA images.
+
+    Source: http://stackoverflow.com/a/9166671/284318
+
+    Keyword Arguments:
+    front -- PIL RGBA Image object
+    back -- PIL RGBA Image object
+
+    The algorithm comes from http://en.wikipedia.org/wiki/Alpha_compositing
+
+    """
+    front = np.asarray(front)
+    back = np.asarray(back)
+=================
+9168169
+count:1
+
+
+def pure_pil_alpha_to_color_v1(image, color=(255, 255, 255)):
+    """Alpha composite an RGBA Image with a specified color.
+
+    NOTE: This version is much slower than the
+    alpha_composite_with_color solution. Use it only if
+    numpy is not available.
+
+    Source: http://stackoverflow.com/a/9168169/284318
+
+    Keyword Arguments:
+    image -- PIL RGBA Image object
+    color -- Tuple r, g, b (default 255, 255, 255)
+
+    """
+
+    def blend_value(back, front, a):
+        return (front * a + back * (255 - a)) / 255
+
+=================
+9459208
+count:1
+
+    return im
+
+
+def pure_pil_alpha_to_color_v2(image, color=(255, 255, 255)):
+    """Alpha composite an RGBA Image with a specified color.
+
+    Simpler, faster version than the solutions above.
+
+    Source: http://stackoverflow.com/a/9459208/284318
+
+    Keyword Arguments:
+    image -- PIL RGBA Image object
+    color -- Tuple r, g, b (default 255, 255, 255)
+
+    """
+    image.load()  # needed for split()
+    background = Image.new('RGB', image.size, color)
+    background.paste(image, mask=image.split()[3])  # 3 is the alpha channel
+    return background
+=================
+7422204
+count:1
+    """mimics the Matlab image toolbox fspecial function
+    http://www.mathworks.com/help/images/ref/fspecial.html?refresh=true
+    """
+    if name == 'disk':
+        return disk(kwargs.get('radius', 5))  # 5 is default in Matlab
+    raise NotImplementedError()
+
+
+def normalize(a, newmax=255, newmin=0):
+    # http://stackoverflow.com/questions/7422204/intensity-normalization-of-image-using-pythonpil-speed-issues
+    # warning : don't use @adapt_rgb here as it would normalize each channel independently
+    array = np.array(a)
+    t = array.dtype
+    if len(array.shape) == 2:  # single channel
+        n = 1
+        minval = array.min()
+        maxval = array.max()
+        array += newmin - minval
+        if maxval is not None and minval != maxval:
+            array = array.astype(np.float)
+=================
+10818546
+count:1
+    return kmeans(im, ncolors)[0]
+
+
+def lab2ind(im, colors=256):
+    """convert a Lab image to indexed colors
+    :param a: nparray (x,y,n) containing image
+    :param colors: int number of colors or predefined Palette
+    :ref: http://scikit-learn.org/stable/auto_examples/cluster/plot_color_quantization.html
+    """
+    # http://stackoverflow.com/questions/10818546/finding-index-of-nearest-point-in-numpy-arrays-of-x-and-y-coordinates
+    if isinstance(colors, int):
+        p = palette(im, colors)  #
+        pal = [Gcolors.Color(c, 'lab') for c in p]
+    else:
+        pal = colors
+        p = [c.lab for c in flatten(pal)]
+    w, h, d = im.shape
+    s = w * h  # number of pixels
+    flat = np.reshape(im, (s, d))
+    from scipy.spatial import cKDTree as KDTree  # compiled is MUCH faster
+=================
+2371436
+count:1
+simple symbolic math expressions
+'''
+
+__author__ = "Philippe Guglielmetti, J.F. Sebastian, Geoff Reedy"
+__copyright__ = "Copyright 2013, Philippe Guglielmetti"
+__credits__ = [
+    'http://stackoverflow.com/questions/2371436/evaluating-a-mathematical-expression-in-a-string',
+    'http://stackoverflow.com/questions/3867028/converting-a-python-numeric-expression-to-latex',
+]
+__license__ = "LGPL"
+
+import logging
+import copy
+import collections
+import inspect
+import re
+import ast
+=================
+3867028
+count:1
+simple symbolic math expressions
+'''
+
+__author__ = "Philippe Guglielmetti, J.F. Sebastian, Geoff Reedy"
+__copyright__ = "Copyright 2013, Philippe Guglielmetti"
+__credits__ = [
+    'http://stackoverflow.com/questions/2371436/evaluating-a-mathematical-expression-in-a-string',
+    'http://stackoverflow.com/questions/3867028/converting-a-python-numeric-expression-to-latex',
+]
+__license__ = "LGPL"
+
+import logging
+import copy
+import collections
+import inspect
+import re
+import ast
+import math
+=================
+2371436
+count:1
+import re
+import ast
+import math
+import operator as op
+from sortedcollections import SortedDict
+
+from Goulib import plot  # sets matplotlib backend
+from Goulib import itertools2, math2
+
+# http://stackoverflow.com/questions/2371436/evaluating-a-mathematical-expression-in-a-string
+# https://github.com/erwanp/pytexit
+
+# indexes in _operators, _ functions and _constants to use for corresponding symbols
+_dialect_str = 2
+_dialect_python = 3
+_dialect_latex = 4
+
+
+class Context:
+    constants = {  # constants in this dict are recognized in output
+=================
+3867028
+count:1
+            try:
+                res += _node_complexity(node.right)
+            except AttributeError:
+                pass
+            return res
+
+        return _node_complexity(self.body)
+
+
+# http://stackoverflow.com/questions/3867028/converting-a-python-numeric-expression-to-latex
+
+class TextVisitor(ast.NodeVisitor):
+
+    def __init__(self, dialect, context=default_context):
+        ''':param dialect: int index in _operators of symbols to use
+        '''
+        self.dialect = dialect
+        self.context = context
+
+    def prec(self, op):
+=================
+14088375
+count:1
+def hex2rgb(c, illuminant='ignore'):
+    return mplcolors.hex2color(c)
+
+
+def rgb2cmyk(rgb, **kwargs):
+    """
+    :param rgb: 3-tuple of floats of red,green,blue in [0..1] range
+    :return: 4-tuple of floats (cyan, magenta, yellow, black) in [0..1] range
+    """
+    # http://stackoverflow.com/questions/14088375/how-can-i-convert-rgb-to-cmyk-and-vice-versa-in-python
+
+    r, g, b = rgb
+
+    c = 1 - r
+    m = 1 - g
+    y = 1 - b
+
+    k = min(c, m, y)
+    if k == 1:
+        return (0, 0, 0, 1)
+=================
+11174702
+count:1
+                return True
+        # difference not perceptible to human eye
+        return self.isclose(other, 1)
+
+
+class Palette(OrderedDict):
+    """dict of Colors indexed by anything"""
+
+    def __init__(self, data=[], keys=256):
+        # mandatory http://stackoverflow.com/questions/11174702/how-to-subclass-an-ordereddict
+        super(Palette, self).__init__()
+        if data:
+            self.update(data, keys)
+
+    def update(self, data, keys=256):
+        """updates the dictionary with new colors
+        :param data: colors to add
+        :param keys: keys to use in dict, or int to discretize the Colormap
+        """
+        if isinstance(data, mplcolors.Colormap):
+=================
+8031418
+count:1
+        res = []
+        for c in self.values():
+            r, g, b = c.rgb
+            res.append(math2.rint(r * 255))
+            res.append(math2.rint(g * 255))
+            res.append(math2.rint(b * 255))
+        return res
+
+    def sorted(self, key=lambda c: c[1].lab[0]):
+        # http://stackoverflow.com/questions/8031418/how-to-sort-ordereddict-of-ordereddict-python
+        return Palette(dict(sorted(self.items(), key=key)))
+
+
+def ColorTable(colors, key=None, width=10):
+
+    def tooltip(c):
+        return '\n'.join('%s = %s' % (k, v) for k, v in c._values.items())
+
+    labels = (color['black'], color['white'])  # possible colors for labels
+    t = []
+=================
+876853
+count:1
+    :return: nearest Color of x in  l
+    """
+    if not isinstance(c, Color):
+        c = Color(c)
+    l = l or color
+    if isinstance(l, dict):
+        l = l.values()
+    return opt(l, key=lambda c2: comp(c, c2))
+
+# http://stackoverflow.com/questions/876853/generating-color-ranges-in-python
+
+
+def color_range(n, start, end, space='hsv'):
+    """:param n: int number of colors to generate
+    :param start: string hex color or color name
+    :param end: string hex color or color name
+    :result: list of n Color interpolated between start and end, included
+    """
+
+    start = Color(start).convert(space)
+=================
+1114465
+count:2
+       "                // console.log(\"Handling '\" + msg_type + \"' message: \", msg);\n",
+       "                callback(fig, msg);\n",
+       "            } catch (e) {\n",
+       "                console.log(\"Exception inside the 'handler_\" + msg_type + \"' callback:\", e, e.stack, msg);\n",
+       "            }\n",
+       "        }\n",
+       "    };\n",
+       "}\n",
+       "\n",
+       "// from http://stackoverflow.com/questions/1114465/getting-mouse-location-in-canvas\n",
+       "mpl.findpos = function(e) {\n",
+       "    //this section is from http://www.quirksmode.org/js/events_properties.html\n",
+       "    var targ;\n",
+       "    if (!e)\n",
+       "        e = window.event;\n",
+       "    if (e.target)\n",
+       "        targ = e.target;\n",
+       "    else if (e.srcElement)\n",
+       "        targ = e.srcElement;\n",
+       "    if (targ.nodeType == 3) // defeat Safari bug\n",
+=================
+24161582
+count:2
+       "    var x = e.pageX - $(targ).offset().left;\n",
+       "    var y = e.pageY - $(targ).offset().top;\n",
+       "\n",
+       "    return {\"x\": x, \"y\": y};\n",
+       "};\n",
+       "\n",
+       "/*\n",
+       " * return a copy of an object with only non-object keys\n",
+       " * we need this to avoid circular references\n",
+       " * http://stackoverflow.com/a/24161582/3208463\n",
+       " */\n",
+       "function simpleKeys (original) {\n",
+       "  return Object.keys(original).reduce(function (obj, key) {\n",
+       "    if (typeof original[key] !== 'object')\n",
+       "        obj[key] = original[key]\n",
+       "    return obj;\n",
+       "  }, {});\n",
+       "}\n",
+       "\n",
+       "mpl.figure.prototype.mouse_event = function(event, name) {\n",

@@ -1,0 +1,173 @@
+[554, 401, 20, 34, 55, 212, 17, 1, 1, 1, 3, 2, 2, 8, 1, 1, 1, 1, 2]
+3579568
+=================
+3579568
+count:554
+   ],
+   "source": [
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "from Tkinter import Tk\n",
+    "from tkFileDialog import askopenfilename\n",
+    "\n",
+=================
+3579568
+count:401
+   ],
+   "source": [
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing\n",
+    "filename = askopenfilename() # show an \"Open\" dialog box and return the path to the selected file\n",
+    "print(filename)"
+=================
+3579568
+count:20
+   "outputs": [],
+   "source": [
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing\n",
+    "filename = askopenfilename() # show an \"Open\" dialog box and return the path to the selected file\n",
+    "print(filename)"
+=================
+3579568
+count:34
+     "collapsed": false,
+     "input": [
+      "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+      "from Tkinter import Tk\n",
+      "from tkFileDialog import askopenfilename\n",
+      "\n",
+=================
+3579568
+count:55
+   ],
+   "source": [
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing\n",
+    "filename = askopenfilename() # show an \"Open\" dialog box and return the path to the selected file\n",
+    "print(filename)\n",
+=================
+3579568
+count:212
+   ],
+   "source": [
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing\n",
+    "filename2 = askopenfilename() # show an \"Open\" dialog box and return the path to the selected file\n",
+    "print(filename2)"
+=================
+3579568
+count:17
+   "outputs": [],
+   "source": [
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "from Tkinter import Tk\n",
+    "from tkFileDialog import askopenfilename\n",
+    "\n",
+=================
+3579568
+count:1
+   "outputs": [],
+   "source": [
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "\n",
+    "Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing\n",
+    "filename2 = askopenfilename() # show an \"Open\" dialog box and return the path to the selected file\n",
+=================
+3579568
+count:1
+   ],
+   "source": [
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "\n",
+    "Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing\n",
+    "filename2 = askopenfilename() # show an \"Open\" dialog box and return the path to the selected file\n",
+=================
+3579568
+count:1
+    "Xk=Ua['Xk']\n",
+    "\n",
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "from Tkinter import Tk\n",
+    "from tkFileDialog import askopenfilename\n",
+    "\n",
+=================
+3579568
+count:3
+     "collapsed": false,
+     "input": [
+      "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+      "Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing\n",
+      "filename = askopenfilename() # show an \"Open\" dialog box and return the path to the selected file\n",
+      "print(filename)"
+=================
+3579568
+count:2
+     "collapsed": false,
+     "input": [
+      "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+      "Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing\n",
+      "filename = askopenfilename() # show an \"Open\" dialog box and return the path to the selected file\n",
+      "print(filename)\n",
+=================
+3579568
+count:2
+     "collapsed": false,
+     "input": [
+      "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+      "Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing\n",
+      "filename2 = askopenfilename() # show an \"Open\" dialog box and return the path to the selected file\n",
+      "print(filename2)"
+=================
+27928275
+count:8
+     "metadata": {},
+     "source": [
+      "Extend linearregression class to get p values for the betas (from http://stackoverflow.com/questions/27928275/find-p-value-significance-in-scikit-learn-linearregression)"
+     ]
+    },
+    {
+=================
+3579568
+count:1
+   "outputs": [],
+   "source": [
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing\n",
+    "filename = askopenfilename() # show an \"Open\" dialog box and return the path to the selected file\n",
+    "print(filename)\n",
+=================
+3579568
+count:1
+   ],
+   "source": [
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing\n",
+    "filename3 = askopenfilename() # show an \"Open\" dialog box and return the path to the selected file\n",
+    "print(filename3)"
+=================
+3579568
+count:1
+   "outputs": [],
+   "source": [
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing\n",
+    "filename = askopenfilename() # show an \"Open\" dialog box and return the path to the selected file\n"
+   ]
+=================
+3579568
+count:1
+   "outputs": [],
+   "source": [
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing\n",
+    "filename2 = askopenfilename() # show an \"Open\" dialog box and return the path to the selected file\n",
+    "print(filename2)"
+=================
+3579568
+count:2
+    "from scipy import stats\n",
+    "import pylab\n",
+    "# from http://stackoverflow.com/questions/3579568/choosing-a-file-in-python-with-simple-dialog\n",
+    "from Tkinter import Tk\n",
+    "from tkFileDialog import askopenfilename\n",
+    "\n",

@@ -1,0 +1,520 @@
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2]
+1019040
+969709
+12093364
+7422204
+2371436
+3867028
+=================
+12007820
+count:1
+class TestTakenth:
+    def test_takenth(self):
+        #http://stackoverflow.com/questions/12007820/better-ways-to-get-nth-element-from-an-unsubscriptable-iterable
+        from itertools import permutations
+        assert_equal(nth(1000,permutations(range(10), 10)),
+            (0, 1, 2, 4, 6, 5, 8, 9, 3, 7)
+=================
+12093364
+count:1
+        assert_equal(itertools2.product(range(2), repeat=3),itertools.product(range(2), repeat=3))
+
+        #test case from http://stackoverflow.com/questions/12093364/cartesian-product-of-large-iterators-itertools
+
+        g = product(itertools.permutations(range(100)),repeat=2)
+
+=================
+969709
+count:1
+class TestIntersect:
+    def test_intersect(self):
+        # http://stackoverflow.com/questions/969709/joining-a-set-of-ordered-integer-yielding-python-iterators
+        postings = [[1,   100, 142, 322, 12312],
+            [2,   100, 101, 322, 1221],
+            [100, 142, 322, 956, 1222]]
+=================
+1019040
+count:1
+      "A000010 (1,1,2,2,4,2,6,4,6,4,... ...) Euler totient function\n",
+      "\n",
+      "    :see: http://stackoverflow.com/questions/1019040/how-many-numbers-below-n-are-coprimes-to-n\n",
+      "    \n",
+      "A000027 (1,2,3,4,5,6,7,8,9,10,... ...) The positive integers.\n",
+      "A000040 (2,3,5,7,11,13,17,19,23,29,... ...) The prime numbers\n",
+=================
+807863
+count:1
+    s2 = s[1:]
+
+    # http://stackoverflow.com/questions/807863/how-to-output-list-of-floats-to-a-binary-file-in-python
+    try:
+        return database[s]
+    except IndexError:
+=================
+32899
+count:1
+            print(i, name, desc)
+
+    # http://stackoverflow.com/questions/32899/how-to-generate-dynamic-parametrized-unit-tests-in-python
+    # http://nose.readthedocs.org/en/latest/writing_tests.html
+    # this is ABSOLUTELY FANTASTIC !
+    def test_generator(self):
+=================
+41115661
+count:1
+            if n == num and str(e) != str(num):  # concat is too easy ...
+                yield (num, e)
+        except GeneratorExit:  # https://stackoverflow.com/a/41115661/1395973
+            return
+        except:
+            pass
+=================
+40309602
+count:1
+
+# regexes
+# https://stackoverflow.com/a/40309602/1395973
+# https://regex101.com/r/NUZS1Z/2
+rdatesep = '[^\w\d\r\n:]'
+ryear = '(\d{4}|\d{2})'
+=================
+21074460
+count:1
+        return timedelta(days=t)
+
+    # https://stackoverflow.com/a/21074460/1395973
+    if fmt is None:
+        fmt = '(%D day[s]?[,]? )?%H:%M:%S*'
+    m = re.match(fmt2regex(fmt), t)
+=================
+333995
+count:1
+if os.getenv('TRAVIS'):  # are we running https://travis-ci.org/ automated tests ?
+    matplotlib.use('Agg')  # Force matplotlib  not to use any Xwindows backend
+elif sys.gettrace():  # http://stackoverflow.com/questions/333995/how-to-detect-that-python-code-is-being-executed-through-the-debugger
+    matplotlib.use('Agg')  # because 'QtAgg' crashes python while debugging
+else:
+    pass
+=================
+3721249
+count:1
+def intersect(t1, t2):
+    """:return: bool True if intervals [t1[ [t2[ intersect"""
+    '''http://stackoverflow.com/questions/3721249/python-date-interval-intersection'''
+    t1start, t1end = _order(t1)
+    t2start, t2end = _order(t2)
+    return (t1start <= t2start < t1end) or (t2start <= t1start < t2end)
+=================
+5928725
+count:1
+def _hash(v):
+    """hash function for vectors"""
+    # http://stackoverflow.com/questions/5928725/hashing-2d-3d-and-nd-vectors
+    primes = [73856093, 19349663, 83492791]
+    res = 0
+    for x, p in zip(v, primes):
+=================
+3349125
+count:1
+    :return: None, single Point2, [Point2,Point2] or smallest Circle if inscribed
+    """
+    # http://stackoverflow.com/questions/3349125/circle-circle-intersection-points
+
+    v = c2.c-c1.c  # vector between centers
+
+=================
+849211
+count:1
+
+def _connect_point2_line2(P, L):
+    # http://stackoverflow.com/questions/849211/shortest-distance-between-a-point-and-a-line-segment
+    d = L.v.mag2()
+    if d == 0:  # L is degenerate to a point
+        return Segment2(P, L.p)
+=================
+27673463
+count:1
+    :return: the unique Circle through the three points a, b, c 
+    """
+    # future generalization : http://stackoverflow.com/questions/27673463/smallest-enclosing-circle-in-python-error-in-the-code
+    x, y = _center_of_circle_from_3_points(a, b, c)
+    return Circle((x, y), hypot(x - a.x, y - a.y))
+
+=================
+1336663
+count:1
+            return BBox(self.start, self.end)
+        elif isinstance(self, Arc2):
+            # http://stackoverflow.com/questions/1336663/2d-bounding-box-of-a-sector
+            res = BBox(self.p, self.p2)
+            p = self.c + Vector2(self.r, 0)
+            if p in self:
+=================
+15857818
+count:1
+        :param content: string, either filename or svg content
+        """
+        # from http://stackoverflow.com/questions/15857818/python-svg-parser
+        from svg.path import parse_path
+        import tinycss
+        from xml.dom import minidom
+=================
+5491708
+count:1
+    """mimics a Pascal record or a C struct"""
+
+    # https://stackoverflow.com/a/5491708/1395973
+    def __init__(self, *args, **kwargs):
+        super(Record, self).__init__(*args, **kwargs)
+        self._initialized = True
+=================
+4187185
+count:1
+def is_number(x):
+    ''':return: True if x is a number of any type, including Complex'''
+    # http://stackoverflow.com/questions/4187185/how-can-i-check-if-my-python-object-is-a-number
+    return isinstance(x, numbers.Number)
+
+
+=================
+40190849
+count:1
+
+# https://en.wikipedia.org/wiki/Primitive_root_modulo_n
+# code decomposed from http://stackoverflow.com/questions/40190849/efficient-finding-primitive-roots-modulo-n-using-python
+
+
+def is_primitive_root(x, m, s={}):
+=================
+15390807
+count:1
+    :return: largest int x for which x * x <= n
+    '''
+    # http://stackoverflow.com/questions/15390807/integer-square-root-in-python
+    # https://projecteuler.net/thread=549#235536
+    n = int(n)
+    x = n
+=================
+11316539
+count:1
+def sets_dist(a, b):
+    '''
+    :see: http://stackoverflow.com/questions/11316539/calculating-the-distance-between-two-unordered-sets
+    '''
+    c = a.intersection(b)
+    return sqrt(len(a - c) * 2 + len(b - c) * 2)
+=================
+28549402
+count:1
+    :return: function(n) returning the n-th element
+    '''
+    # http://stackoverflow.com/a/28549402/1395973
+    # uses http://mathworld.wolfram.com/FibonacciQ-Matrix.html
+    mat = identity(k - 1)
+    for row in mat:
+=================
+1019040
+count:1
+    '''Euler totient function
+
+    :see: http://stackoverflow.com/questions/1019040/how-many-numbers-below-n-are-coprimes-to-n
+    '''
+    if n <= 1:
+        return n
+=================
+36531120
+count:1
+
+# repeating decimals https://en.wikipedia.org/wiki/Repeating_decimal
+# https://stackoverflow.com/a/36531120/1395973
+
+
+def rational_form(numerator, denominator):
+=================
+28548457
+count:1
+            return (t * s - A.index(value)) % n
+
+# inspired from http://stackoverflow.com/questions/28548457/nth-fibonacci-number-for-n-as-big-as-1019
+
+
+def mod_matmul(A, B, mod=0):
+=================
+22281524
+count:1
+    '''
+
+    # https://stackoverflow.com/a/22281524/1395973
+
+    def _idx_after_removal(removed_indices, value):
+        for removed in removed_indices:
+=================
+1055360
+count:1
+    :result: bool True if obj is iterable (but not a string)
+    """
+    # http://stackoverflow.com/questions/1055360/how-to-tell-a-variable-is-iterable-but-not-a-string
+    if isinstance(obj, str):
+        return False  # required since Python 3.5
+    return isinstance(obj, collections.Iterable)
+=================
+2158395
+count:1
+                           string type by default
+    """
+    # http://stackoverflow.com/questions/2158395/flatten-an-irregular-list-of-lists-in-python
+    if isinstance(l, dict):
+        l = l.values()
+    for el in l:
+=================
+15099647
+count:1
+def icross(*sequences):
+    """Cartesian product of sequences (recursive version)"""
+    # http://stackoverflow.com/questions/15099647/cross-product-of-sets-using-recursion
+    if sequences:
+        for x in sequences[0]:
+            for y in icross(*sequences[1:]):
+=================
+7946798
+count:1
+    :result: iterable interleaving elements from l1 and l2, starting by l1[0]
+    """
+    # http://stackoverflow.com/questions/7946798/interleaving-two-lists-in-python-2-2
+    res = l1 + l2
+    res[::2] = l1
+    res[1::2] = l2
+=================
+6422700
+count:1
+    :return: iterator over indexes of iterable that correspond to the sorted iterable
+    """
+    # http://stackoverflow.com/questions/6422700/how-to-get-indices-of-a-sorted-array-in-python
+    return [i[0] for i in sorted(enumerate(iterable), key=lambda x:key(x[1]))]
+
+# WARNING : filter2 has been renamed from "split" at v.1.7.0 for coherency
+=================
+5352649
+count:1
+    :param keys: container of keys to extract:
+    :result: dict:
+    :see: http://stackoverflow.com/questions/5352546/best-way-to-extract-subset-of-key-value-pairs-from-python-dictionary-object/5352649#5352649
+    """
+    return dict([(i, d[i]) for i in keys if i in d])
+
+=================
+969709
+count:1
+    :param iterables: any number of SORTED iterables
+    :yields: elements that belong to all iterables
+    :see: http://stackoverflow.com/questions/969709/joining-a-set-of-ordered-integer-yielding-python-iterators
+    """
+
+    for key, values in itertools.groupby(heapq.merge(*iterables)):
+=================
+12093364
+count:1
+    :param iterables: any number of iterables
+    :param repeat: integer optional number of repetitions
+    :see: http://stackoverflow.com/questions/12093364/cartesian-product-of-large-iterators-itertools
+    """
+    # https://github.com/enricobacis/infinite/blob/master/infinite/product.py
+    # is not general enough
+=================
+9819602
+count:1
+
+        # create style dict by merging default Cell style + parameters
+        # http://stackoverflow.com/questions/9819602/union-of-dict-objects-in-python
+        style = dict(self.style, **style)
+
+        if hasattr(v, '_repr_html_'):
+=================
+3124155
+count:1
+        :param reltol: optional float relative tolerance value
+        """
+        # inspired from http://stackoverflow.com/a/3124155/190597 (KennyTM)
+        import collections
+
+        if delta is None:
+=================
+15411967
+count:1
+
+#redefine "print" for notebooks ...
+try: #http://stackoverflow.com/questions/15411967/how-can-i-check-if-code-is-executed-in-the-ipython-notebook
+    get_ipython #is defined from within IPython (notebook)
+except:
+    pass
+=================
+3403973
+count:1
+        :param pairs: iterable of (from,to) ints
+        """
+        # http://stackoverflow.com/questions/3403973/fast-replacement-of-values-in-a-numpy-array
+        assert (self.mode == 'P')  # TODO: support other modes
+        a = np.copy(self.array)
+        for c in pairs:
+=================
+9829578
+count:1
+            if h1 == h2:
+                return 0
+            # http://stackoverflow.com/questions/9829578/fast-way-of-counting-non-zero-bits-in-python
+            d = bin(h1 ^ h2).count("1")  # ^is XOR
+            return 2 * d / (hash_size * hash_size)
+        
+=================
+7422204
+count:1
+
+    def normalize(self, newmax=None, newmin=None):
+        # http://stackoverflow.com/questions/7422204/intensity-normalization-of-image-using-pythonpil-speed-issues
+        # warning : this normalizes each channel independently, so we don't use @adapt_rgb here
+        newmax = newmax or modes[self.mode].max
+        newmin = newmin or modes[self.mode].min
+=================
+9166400
+count:1
+        """ simply adds other image at px,py (subbixel) coordinates
+        """
+        # TOD: use http://stackoverflow.com/questions/9166400/convert-rgba-png-to-rgb-with-pil
+        if self.npixels == 0:
+            return Image(other * alpha)
+        px, py = pos
+=================
+9166671
+count:1
+    """Alpha composite two RGBA images.
+
+    Source: http://stackoverflow.com/a/9166671/284318
+
+    Keyword Arguments:
+    front -- PIL RGBA Image object
+=================
+9168169
+count:1
+    numpy is not available.
+
+    Source: http://stackoverflow.com/a/9168169/284318
+
+    Keyword Arguments:
+    image -- PIL RGBA Image object
+=================
+9459208
+count:1
+    Simpler, faster version than the solutions above.
+
+    Source: http://stackoverflow.com/a/9459208/284318
+
+    Keyword Arguments:
+    image -- PIL RGBA Image object
+=================
+7422204
+count:1
+
+def normalize(a, newmax=255, newmin=0):
+    # http://stackoverflow.com/questions/7422204/intensity-normalization-of-image-using-pythonpil-speed-issues
+    # warning : don't use @adapt_rgb here as it would normalize each channel independently
+    array = np.array(a)
+    t = array.dtype
+=================
+10818546
+count:1
+    :ref: http://scikit-learn.org/stable/auto_examples/cluster/plot_color_quantization.html
+    """
+    # http://stackoverflow.com/questions/10818546/finding-index-of-nearest-point-in-numpy-arrays-of-x-and-y-coordinates
+    if isinstance(colors, int):
+        p = palette(im, colors)  #
+        pal = [Gcolors.Color(c, 'lab') for c in p]
+=================
+2371436
+count:1
+__copyright__ = "Copyright 2013, Philippe Guglielmetti"
+__credits__ = [
+    'http://stackoverflow.com/questions/2371436/evaluating-a-mathematical-expression-in-a-string',
+    'http://stackoverflow.com/questions/3867028/converting-a-python-numeric-expression-to-latex',
+]
+__license__ = "LGPL"
+=================
+3867028
+count:1
+__credits__ = [
+    'http://stackoverflow.com/questions/2371436/evaluating-a-mathematical-expression-in-a-string',
+    'http://stackoverflow.com/questions/3867028/converting-a-python-numeric-expression-to-latex',
+]
+__license__ = "LGPL"
+
+=================
+2371436
+count:1
+from Goulib import itertools2, math2
+
+# http://stackoverflow.com/questions/2371436/evaluating-a-mathematical-expression-in-a-string
+# https://github.com/erwanp/pytexit
+
+# indexes in _operators, _ functions and _constants to use for corresponding symbols
+=================
+3867028
+count:1
+
+
+# http://stackoverflow.com/questions/3867028/converting-a-python-numeric-expression-to-latex
+
+class TextVisitor(ast.NodeVisitor):
+
+=================
+14088375
+count:1
+    :return: 4-tuple of floats (cyan, magenta, yellow, black) in [0..1] range
+    """
+    # http://stackoverflow.com/questions/14088375/how-can-i-convert-rgb-to-cmyk-and-vice-versa-in-python
+
+    r, g, b = rgb
+
+=================
+11174702
+count:1
+
+    def __init__(self, data=[], keys=256):
+        # mandatory http://stackoverflow.com/questions/11174702/how-to-subclass-an-ordereddict
+        super(Palette, self).__init__()
+        if data:
+            self.update(data, keys)
+=================
+8031418
+count:1
+
+    def sorted(self, key=lambda c: c[1].lab[0]):
+        # http://stackoverflow.com/questions/8031418/how-to-sort-ordereddict-of-ordereddict-python
+        return Palette(dict(sorted(self.items(), key=key)))
+
+
+=================
+876853
+count:1
+    return opt(l, key=lambda c2: comp(c, c2))
+
+# http://stackoverflow.com/questions/876853/generating-color-ranges-in-python
+
+
+def color_range(n, start, end, space='hsv'):
+=================
+1114465
+count:2
+       "}\n",
+       "\n",
+       "// from http://stackoverflow.com/questions/1114465/getting-mouse-location-in-canvas\n",
+       "mpl.findpos = function(e) {\n",
+       "    //this section is from http://www.quirksmode.org/js/events_properties.html\n",
+       "    var targ;\n",
+=================
+24161582
+count:2
+       " * return a copy of an object with only non-object keys\n",
+       " * we need this to avoid circular references\n",
+       " * http://stackoverflow.com/a/24161582/3208463\n",
+       " */\n",
+       "function simpleKeys (original) {\n",
+       "  return Object.keys(original).reduce(function (obj, key) {\n",

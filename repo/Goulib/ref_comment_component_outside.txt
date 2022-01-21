@@ -1,0 +1,35 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/datetime2.py
+40309602, 57
+------------------
+rdatesep = '[^\w\d\r\n:]'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/plot.py
+333995, 20
+------------------
+elif sys.gettrace():  # http://stackoverflow.com/questions/333995/how-to-detect-that-python-code-is-being-executed-through-the-debugger
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py
+40190849, 272
+------------------
+def is_primitive_root(x, m, s={}):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py
+36531120, 1703
+------------------
+def rational_form(numerator, denominator):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py
+28548457, 2475
+------------------
+def mod_matmul(A, B, mod=0):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/notebook.py
+15411967, 60
+------------------
+try: #http://stackoverflow.com/questions/15411967/how-can-i-check-if-code-is-executed-in-the-ipython-notebook
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/colors.py
+876853, 587
+------------------
+def color_range(n, start, end, space='hsv'):

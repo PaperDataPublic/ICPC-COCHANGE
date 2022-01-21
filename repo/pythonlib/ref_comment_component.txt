@@ -1,0 +1,1876 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py
+616645, 50
+--------down------
+62
+from contextlib import contextmanager
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py
+24931, 51
+--------down------
+62
+from contextlib import contextmanager
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py
+4675728, 54
+--------down------
+62
+from contextlib import contextmanager
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py
+2996887, 57
+--------down------
+62
+from contextlib import contextmanager
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py
+4985080, 59
+--------down------
+58
+- https://stackoverflow.com/questions/4984428/python-subprocess-get-childrens-output-to-file-and-terminal/4985080#4985080
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py
+4984428, 91
+---------up-------
+81
+def tee(infile: IO, *files: IO) -> Thread:
+--------down------
+134
+    def fanout(_infile: IO, *_files: IO):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tools/convert_mdb_to_mysql.py
+27921629, 134
+---------up-------
+120
+class PasswordPromptAction(argparse.Action):
+--------down------
+136
+    def __init__(self,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/datetimefunc.py
+538666, 252
+---------up-------
+217
+def strfdelta(tdelta: Union[datetime.timedelta, int, float, str],
+--------down------
+255
+    if inputtype == 'timedelta':
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/plot.py
+787287, 47
+--------down------
+50
+def png_img_html_from_pyplot_figure(fig: "Figure",
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/plot.py
+3899980, 100
+---------up-------
+90
+def set_matplotlib_fontsize(matplotlib: ModuleType,
+    font = {
+--------down------
+101
+        'family': 'sans-serif',
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/plot.py
+7125009, 114
+---------up-------
+90
+def set_matplotlib_fontsize(matplotlib: ModuleType,
+    legend = {
+--------down------
+114
+        'fontsize': fontsize
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/lists.py
+952914, 114
+---------up-------
+103
+def flatten_list(x: List[Any]) -> List[Any]:
+--------down------
+116
+    return [item for sublist in x for item in sublist]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/lists.py
+480214, 131
+---------up-------
+120
+def unique_list(seq: Iterable[Any]) -> List[Any]:
+--------down------
+133
+    seen = set()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/athena_ohdsi.py
+8897593, 193
+---------up-------
+79
+class AthenaConceptRow(object):
+    def match_tuple(self, target: "AthenaConceptRow") -> Tuple[float, float]:
+--------down------
+202
+        self_words = set(x.lower() for x in self.concept_name.split())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/athena_ohdsi.py
+2380394, 194
+---------up-------
+79
+class AthenaConceptRow(object):
+    def match_tuple(self, target: "AthenaConceptRow") -> Tuple[float, float]:
+--------down------
+202
+        self_words = set(x.lower() for x in self.concept_name.split())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/regexfunc.py
+597476, 34
+--------down------
+35
+class CompiledRegexMemory(object):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pyramid/responses.py
+4832357, 165
+---------up-------
+159
+class XmlResponse(Response):
+    def __init__(self, body: str, **kwargs) -> None:
+--------down------
+165
+        super().__init__(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pyramid/responses.py
+1395151, 180
+---------up-------
+173
+class ZipResponse(BinaryResponse):
+    def __init__(self, body: bytes, filename: str, **kwargs) -> None:
+--------down------
+180
+        super().__init__(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sort.py
+5967500, 36
+--------down------
+37
+def atoi(text: str) -> Union[int, str]:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/subproc.py
+13299550, 142
+---------up-------
+116
+def start_process(args: List[str],
+--------down------
+142
+    processes.append(proc)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/constants.py
+16042647, 119
+---------up-------
+66
+class WsgiEnvVar(object):
+--------down------
+119
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/request_logging_mw.py
+7835030, 103
+---------up-------
+49
+class RequestLoggingMiddleware(object):
+    def __call__(self,
+        try:
+--------down------
+104
+            forwarded_for = " [forwarded for {}]".format(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/cache_mw.py
+49547, 47
+--------down------
+49
+def add_never_cache_headers(headers: TYPE_WSGI_RESPONSE_HEADERS) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/cache_mw.py
+3859097, 48
+--------down------
+49
+def add_never_cache_headers(headers: TYPE_WSGI_RESPONSE_HEADERS) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/reverse_proxied_mw.py
+16042647, 149
+---------up-------
+98
+EXAMPLE_APACHE_REVERSE_PROXY_CONFIG = """
+    <Location /camcops>
+        Require all granted
+--------down------
+150
+        RequestHeader set X-Forwarded-Proto https
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/reverse_proxied_mw.py
+2297403, 451
+---------up-------
+257
+class ReverseProxiedMiddleware(object):
+    def __call__(self,
+--------down------
+450
+        https://stackoverflow.com/questions/2297403/what-is-the-difference-between-http-host-and-server-name-in-php  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/compression.py
+8506897, 52
+---------up-------
+35
+def gzip_string(text: str, encoding: str = "utf-8") -> bytes:
+--------down------
+89
+    data = text.encode(encoding)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/convert.py
+5649407, 187
+---------up-------
+170
+def hex_xformat_decode(s: str) -> Optional[bytes]:
+--------down------
+188
+    if len(s) < 3 or not s.startswith("X'") or not s.endswith("'"):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/convert.py
+475074, 220
+---------up-------
+211
+def base64_64format_decode(s: str) -> Optional[bytes]:
+--------down------
+223
+    if len(s) < 4 or not s.startswith("64'") or not s.endswith("'"):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/iterhelp.py
+5228158, 35
+---------up-------
+32
+def product_dict(**kwargs: Iterable) -> Iterable[Dict]:
+--------down------
+52
+    keys = kwargs.keys()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/maths_py.py
+33019698, 114
+---------up-------
+93
+def normal_round_float(x: float, dp: int = 0) -> float:
+--------down------
+113
+    - https://stackoverflow.com/questions/33019698/how-to-properly-round-up-half-float-numbers-in-python  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/maths_py.py
+3410976, 148
+---------up-------
+142
+def round_sf(x: float, n: int = 2) -> float:
+--------down------
+170
+    y = abs(x)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/cmdline.py
+33560364, 38
+---------up-------
+35
+def cmdline_split(s: str, platform: Union[int, str] = 'this') -> List[str]:
+--------down------
+51
+    if platform == 'this':
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py
+32404, 30
+--------down------
+247
+import atexit
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py
+34696815, 89
+---------up-------
+1
+# cardinal_pythonlib/winservice.py
+--------down------
+247
+import atexit
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py
+7085604, 222
+--------down------
+247
+import atexit
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py
+140111, 223
+--------down------
+247
+import atexit
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py
+20561990, 244
+--------down------
+247
+import atexit
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py
+18682681, 655
+---------up-------
+328
+class ProcessManager(object):
+    def _taskkill(self, force: bool = False) -> int:
+--------down------
+656
+        if retcode == winerror.ERROR_SUCCESS:  # 0
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py
+1230669, 688
+---------up-------
+328
+class ProcessManager(object):
+    def _kill(self) -> None:
+--------down------
+691
+        self.warning("Using a recursive hard kill; will assume it worked")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py
+16333054, 944
+---------up-------
+738
+class WindowsService(ServiceFramework):
+    def run_processes(self,
+--------down------
+944
+        def cleanup():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/httpconst.py
+6783921, 68
+---------up-------
+54
+class MimeType(object):
+--------down------
+88
+    BINARY = "application/octet-stream"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/httpconst.py
+264256, 72
+---------up-------
+54
+class MimeType(object):
+--------down------
+88
+    BINARY = "application/octet-stream"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/httpconst.py
+4411757, 77
+---------up-------
+54
+class MimeType(object):
+--------down------
+88
+    BINARY = "application/octet-stream"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/httpconst.py
+31489757, 86
+---------up-------
+54
+class MimeType(object):
+--------down------
+88
+    BINARY = "application/octet-stream"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/enumlike.py
+32214614, 184
+---------up-------
+164
+class AutoStrEnum(str,
+--------down------
+187
+    pass
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/enumlike.py
+36932, 408
+--------down------
+415
+class AttrDict(dict):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/enumlike.py
+4984647, 419
+---------up-------
+416
+class AttrDict(dict):
+--------down------
+420
+    def __init__(self, *args, **kwargs) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/enumlike.py
+455059, 433
+---------up-------
+431
+class OrderedNamespace(object):
+--------down------
+435
+    def __init__(self, *args):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py
+3310584, 328
+---------up-------
+232
+def make_pdf_from_html(
+    if processor == Processors.XHTML2PDF:
+        else:
+--------down------
+329
+    elif processor == Processors.WEASYPRINT:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py
+15169101, 360
+---------up-------
+232
+def make_pdf_from_html(
+    elif processor == Processors.PDFKIT:
+--------down------
+362
+        h_filename = None
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py
+5776125, 362
+---------up-------
+232
+def make_pdf_from_html(
+    elif processor == Processors.PDFKIT:
+--------down------
+362
+        h_filename = None
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py
+312230, 529
+---------up-------
+520
+def serve_pdf_to_stdout(pdf: bytes) -> None:
+--------down------
+534
+    print("Content-Type: application/pdf\n")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py
+2374427, 531
+---------up-------
+520
+def serve_pdf_to_stdout(pdf: bytes) -> None:
+--------down------
+534
+    print("Content-Type: application/pdf\n")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py
+908331, 536
+---------up-------
+520
+def serve_pdf_to_stdout(pdf: bytes) -> None:
+--------down------
+536
+    sys.stdout.buffer.write(pdf)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py
+7543452, 586
+--------down------
+602
+def get_concatenated_pdf_from_disk(filenames: Iterable[str],
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py
+3582414, 590
+--------down------
+602
+def get_concatenated_pdf_from_disk(filenames: Iterable[str],
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py
+17104926, 616
+---------up-------
+603
+def get_concatenated_pdf_from_disk(filenames: Iterable[str],
+--------down------
+617
+    if start_recto:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/debugging.py
+2203424, 81
+---------up-------
+73
+def get_class_name_from_frame(fr: FrameType) -> Optional[str]:
+--------down------
+81
+    args, _, _, value_dict = inspect.getargvalues(fr)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/debugging.py
+5067604, 139
+---------up-------
+97
+def get_caller_name(back: int = 0) -> str:
+--------down------
+139
+    try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/sqlserver.py
+123558, 53
+---------up-------
+42
+def if_sqlserver_disable_constraints(session: SqlASession,
+--------down------
+54
+    engine = get_engine_from_session(session)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/orm_inspect.py
+2537471, 103
+---------up-------
+95
+class SqlAlchemyAttrDictMixin(object):
+--------down------
+106
+    def get_attrdict(self) -> OrderedNamespace:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/orm_inspect.py
+2441796, 104
+---------up-------
+95
+class SqlAlchemyAttrDictMixin(object):
+--------down------
+106
+    def get_attrdict(self) -> OrderedNamespace:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/orm_schema.py
+19175311, 63
+---------up-------
+46
+def create_table_from_orm_class(engine: Engine,
+--------down------
+63
+    if without_constraints:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/alembic_func.py
+24622170, 68
+--------down------
+69
+def get_head_revision_from_alembic(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/dump.py
+870925, 94
+---------up-------
+78
+def dump_ddl(metadata: MetaData,
+--------down------
+96
+    def dump(querysql, *multiparams, **params):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/dump.py
+5631078, 139
+---------up-------
+135
+class StringLiteral(String):
+--------down------
+140
+    def literal_processor(self,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/dump.py
+5014700, 496
+---------up-------
+480
+def dump_orm_tree_as_insert_sql(engine: Engine,
+    - MySQL/InnoDB doesn't wait to the end of a transaction to check FK
+--------down------
+495
+      http://stackoverflow.com/questions/5014700/in-mysql-can-i-defer-referential-integrity-checks-until-commit  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/insert_on_duplicate.py
+6611563, 30
+--------down------
+46
+import re
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/core_query.py
+12941416, 75
+--------down------
+76
+def count_star(session: Union[Session, Engine, Connection],
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/core_query.py
+15381604, 135
+--------down------
+137
+def exists_in_table(session: Session, table_: Table, *criteria: Any) -> bool:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/merge_db.py
+14636192, 893
+---------up-------
+543
+def merge_db(base_class: Type,
+    for table in ordered_tables:
+        for instance in query.all():
+            if tdc.standalone:
+--------down------
+893
+                src_session.expunge(instance)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/merge_db.py
+1323455, 1027
+---------up-------
+1005
+class MergeTestPlain(MergeTestMixin, unittest.TestCase):
+--------down------
+1029
+    def setUp(self) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/orm_query.py
+6455560, 65
+---------up-------
+49
+def get_rows_fieldnames_from_query(
+--------down------
+67
+    result = session.execute(query)  # type: ResultProxy
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/orm_query.py
+2546207, 162
+---------up-------
+145
+def get_or_create(session: Session,
+--------down------
+164
+    instance = session.query(model).filter_by(**kwargs).first()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/orm_query.py
+12941416, 188
+---------up-------
+182
+class CountStarSpecializedQuery(Query):
+    def __init__(self, *args, **kwargs) -> None:
+--------down------
+198
+        super().__init__(*args, **kwargs)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/schema.py
+87747, 242
+---------up-------
+222
+def get_single_int_autoincrement_colname(table_: Table) -> Optional[str]:
+--------down------
+252
+    n_autoinc = 0
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/schema.py
+2937229, 552
+---------up-------
+536
+def make_bigint_autoincrement_column(column_name: str,
+    else:
+--------down------
+554
+def column_creation_ddl(sqla_column: Column, dialect: Dialect) -> str:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/schema.py
+10262426, 916
+---------up-------
+828
+def convert_sqla_type_for_dialect(
+    if is_mssql_timestamp and to_mssql and convert_mssql_timestamp:
+--------down------
+920
+        return mssql.base.BINARY(8)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/schema.py
+409286, 920
+---------up-------
+828
+def convert_sqla_type_for_dialect(
+    if is_mssql_timestamp and to_mssql and convert_mssql_timestamp:
+--------down------
+920
+        return mssql.base.BINARY(8)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/schema.py
+32917867, 1085
+---------up-------
+1069
+def hack_in_mssql_xml_type():
+--------down------
+1094
+def column_types_equal(a_coltype: TypeEngine, b_coltype: TypeEngine) -> bool:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/schema.py
+34787794, 1100
+---------up-------
+1095
+def column_types_equal(a_coltype: TypeEngine, b_coltype: TypeEngine) -> bool:
+--------down------
+1103
+    return str(a_coltype) == str(b_coltype)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/snomed.py
+1675181, 161
+---------up-------
+146
+def double_quoted(s: str) -> str:
+--------down------
+181
+    dquote = '"'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/snomed.py
+3055477, 180
+---------up-------
+146
+def double_quoted(s: str) -> str:
+--------down------
+181
+    dquote = '"'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/fileops.py
+169070, 149
+---------up-------
+132
+def preserve_cwd(func: Callable) -> Callable:
+--------down------
+149
+    def decorator(*args_, **kwargs) -> Any:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/fileops.py
+12041525, 162
+---------up-------
+158
+def root_path() -> str:
+--------down------
+162
+    return os.path.abspath(os.sep)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/fileops.py
+2656322, 339
+---------up-------
+325
+def shutil_rmtree_onerror(func: Callable[[str], None],
+--------down------
+340
+    if not os.access(path, os.W_OK):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/fileops.py
+2853723, 371
+---------up-------
+362
+def chown_r(path: str, user: str, group: str) -> None:
+--------down------
+372
+    for root, dirs, files in os.walk(path):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/fileops.py
+1392413, 513
+---------up-------
+508
+def get_directory_contents_size(directory: str = ".") -> int:
+--------down------
+520
+    total_size = 0
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/docker.py
+43878953, 35
+---------up-------
+30
+def running_under_docker() -> bool:
+--------down------
+36
+    path = '/proc/self/cgroup'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/typing_helpers.py
+51264355, 41
+---------up-------
+37
+class CSVWriterType(object):
+--------down------
+44
+    def writerow(self, row: List[str]) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/typing_helpers.py
+35344209, 272
+---------up-------
+118
+class Pep249DatabaseCursorType(object):
+    def arraysize(self, val: int) -> None:
+--------down------
+272
+        pass
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/hash.py
+7585435, 305
+---------up-------
+299
+def to_bytes(data: Any) -> bytearray:
+--------down------
+307
+    if isinstance(data, int):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/hash.py
+10459067, 306
+---------up-------
+299
+def to_bytes(data: Any) -> bytearray:
+--------down------
+307
+    if isinstance(data, int):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/hash.py
+1604464, 332
+---------up-------
+320
+def twos_comp_to_signed(val: int, n_bits: int) -> int:
+--------down------
+334
+    assert n_bits % 8 == 0, "Must specify a whole number of bytes"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/hash.py
+13305290, 386
+---------up-------
+383
+def murmur3_x86_32(data: Union[bytes, bytearray], seed: int = 0) -> int:
+--------down------
+395
+    c1 = 0xcc9e2d51
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sizeformatter.py
+1094841, 31
+---------up-------
+28
+def sizeof_fmt(num: float, suffix: str = 'B') -> str:
+--------down------
+32
+    for unit in ('', 'Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi'):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/extract_text.py
+125222, 42
+---------up-------
+1
+# cardinal_pythonlib/extract_text.py
+--------down------
+71
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/extract_text.py
+42482, 43
+---------up-------
+1
+# cardinal_pythonlib/extract_text.py
+--------down------
+71
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/extract_text.py
+25665, 47
+---------up-------
+1
+# cardinal_pythonlib/extract_text.py
+--------down------
+71
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/extract_text.py
+5725278, 49
+---------up-------
+1
+# cardinal_pythonlib/extract_text.py
+--------down------
+71
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/extract_text.py
+13857856, 435
+---------up-------
+419
+def get_chardet_encoding(binary_contents: bytes) -> Optional[str]:
+--------down------
+437
+    detector = UniversalDetector()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/extract_text.py
+25228106, 1111
+---------up-------
+1074
+def convert_docx_to_text(
+--------down------
+1151
+    text = ''
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/json/serialize.py
+653368, 479
+---------up-------
+437
+def register_for_json(*args, **kwargs) -> Any:
+--------down------
+493
+    if len(args) == 1 and len(kwargs) == 0 and callable(args[0]):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/getch.py
+510357, 48
+--------down------
+51
+def _getch_windows() -> str:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/getch.py
+2408560, 73
+--------down------
+74
+def _kbhit_windows() -> bool:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/logs.py
+12296214, 69
+---------up-------
+61
+.. code-block:: python
+--------down------
+72
+DO NOT call this module "logging"! Many things may get confused.
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/logs.py
+7484454, 199
+---------up-------
+178
+def configure_logger_for_colour(logger: logging.Logger,
+    if remove_existing:
+--------down------
+198
+        logger.handlers = []  # http://stackoverflow.com/questions/7484454
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/logs.py
+13131400, 580
+--------down------
+586
+class BraceMessage(object):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/logs.py
+24683360, 581
+--------down------
+586
+class BraceMessage(object):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/logs.py
+31992424, 599
+---------up-------
+587
+class BraceMessage(object):
+    def __init__(self,
+--------down------
+600
+        self.fmt = fmt
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dogpile_cache.py
+1987919, 456
+---------up-------
+354
+def unit_test_cache() -> None:
+    class TestClass(object):
+--------down------
+458
+        def classy(cls) -> str:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/text.py
+4020539, 61
+---------up-------
+57
+def unescape_newlines(s: str) -> str:
+--------down------
+61
+    if not s:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/text.py
+13233076, 156
+--------down------
+156
+_UNICODE_CATEGORY_SRC = {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/platformfunc.py
+1214496, 213
+---------up-------
+200
+def windows_get_environment_from_batch_command(
+--------down------
+230
+    if not isinstance(env_cmd, (list, tuple)):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/platformfunc.py
+34124636, 312
+---------up-------
+308
+def contains_unquoted_ampersand_dangerous_to_windows(x: str) -> bool:
+--------down------
+341
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/network.py
+2953462, 33
+--------down------
+40
+import os
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/network.py
+316866, 34
+--------down------
+40
+import os
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/network.py
+27804710, 116
+---------up-------
+98
+def download(url: str, filename: str,
+--------down------
+118
+    ctx = ssl.create_default_context()  # type: ssl.SSLContext
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_web.py
+530526, 375
+---------up-------
+369
+def get_cgi_fieldstorage_from_wsgi_env(
+--------down------
+375
+    post_env = env.copy()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_web.py
+151079, 423
+--------down------
+425
+def pdf_result(pdf_binary: bytes,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_web.py
+1061697, 616
+---------up-------
+611
+def websafe(value: str) -> str:
+--------down------
+618
+def replace_nl_with_html_br(string: str) -> str:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_web.py
+1071191, 641
+---------up-------
+635
+def make_urls_hyperlinks(text: str) -> str:
+--------down------
+647
+    find_url = r'''
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_web.py
+10397968, 662
+---------up-------
+635
+def make_urls_hyperlinks(text: str) -> str:
+--------down------
+662
+    replace_email = r'<a href="mailto:\1">\1</a>'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/stringfunc.py
+1883980, 45
+---------up-------
+34
+def find_nth(s: str, x: str, n: int = 0, overlap: bool = False) -> int:
+--------down------
+46
+    length_of_fragment = 1 if overlap else len(x)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/stringfunc.py
+9475241, 64
+---------up-------
+60
+def split_string(x: str, n: int) -> List[str]:
+--------down------
+64
+    return [x[i:i+n] for i in range(0, len(x), n)]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/stringfunc.py
+6116978, 78
+---------up-------
+72
+def multiple_replace(text: str, rep: Dict[str, str]) -> str:
+--------down------
+79
+    rep = dict((re.escape(k), v) for k, v in rep.items())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/stringfunc.py
+1207457, 113
+---------up-------
+109
+def mangle_unicode_to_ascii(s: Any) -> str:
+--------down------
+113
+    if s is None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/betweendict.py
+30254739, 71
+---------up-------
+35
+class BetweenDict(dict):
+--------down------
+72
+    INVALID_MSG_TYPE = "Key must be an iterable with length 2"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/probability.py
+42980201, 56
+---------up-------
+44
+def ln(x: float) -> float:
+--------down------
+78
+    return math_ln(x) if x != 0 else MINUS_INFINITY
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/exceptions.py
+9157210, 46
+---------up-------
+41
+def add_info_to_exception(err: Exception, info: Dict) -> None:
+--------down------
+51
+    if not err.args:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/exceptions.py
+9555133, 77
+---------up-------
+70
+def die(exc: Exception = None, exit_code: int = 1) -> None:
+--------down------
+107
+    if exc:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/openxml/find_bad_openxml.py
+22094852, 286
+---------up-------
+182
+ones.
+    while True:
+        for filename in generator:
+--------down------
+286
+        pool.close()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/openxml/find_recovered_openxml.py
+19924104, 333
+---------up-------
+292
+def process_file(filename: str,
+    except Exception as e:
+--------down------
+337
+def main() -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/openxml/find_recovered_openxml.py
+26096355, 334
+---------up-------
+292
+def process_file(filename: str,
+    except Exception as e:
+--------down------
+337
+def main() -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/openxml/find_recovered_openxml.py
+22094852, 512
+---------up-------
+392
+- As an additional and VERY DANGEROUS operation, you can elect to delete files
+  with this.)
+    while True:
+        for filename in gen_filenames(starting_filenames=args.filename,
+--------down------
+512
+        pool.close()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/process.py
+1230669, 149
+---------up-------
+143
+def kill_proc_tree(pid: int,
+--------down------
+160
+    parent = psutil.Process(pid)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/process.py
+34458583, 182
+---------up-------
+175
+def nice_call(*popenargs, timeout: float = None,
+--------down------
+183
+    with subprocess.Popen(*popenargs, **kwargs) as p:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/file_io.py
+17602878, 64
+---------up-------
+56
+def smart_open(filename: str, mode: str = 'Ur', buffering: int = -1,
+--------down------
+65
+    if filename == '-':
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/file_io.py
+29824059, 65
+---------up-------
+56
+def smart_open(filename: str, mode: str = 'Ur', buffering: int = -1,
+--------down------
+65
+    if filename == '-':
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/file_io.py
+13730107, 101
+---------up-------
+96
+def writelines_nl(fileobj: TextIO, lines: Iterable[str]) -> None:
+--------down------
+102
+    fileobj.write('\n'.join(lines) + '\n')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/file_io.py
+25728472, 123
+---------up-------
+114
+def write_gzipped_text(basefilename: str, text: str) -> None:
+--------down------
+124
+    zipfilename = basefilename + '.gz'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/file_io.py
+12821961, 275
+---------up-------
+261
+def gen_files_from_zipfiles(
+        on_disk: bool = False) -> Generator[BinaryIO, None, None]:
+--------down------
+281
+    for zipfilename_or_file in zipfilenames_or_files:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/file_io.py
+12771480, 337
+---------up-------
+323
+def gen_part_from_iterables(iterables: Iterable[Any],
+--------down------
+337
+    for iterable in iterables:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/typetests.py
+3647692, 67
+---------up-------
+61
+def is_false(x: Any) -> bool:
+--------down------
+71
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/modules.py
+3365740, 62
+---------up-------
+47
+def import_submodules(package: Union[str, ModuleType],
+--------down------
+62
+    if isinstance(package, str):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/modules.py
+20339053, 104
+---------up-------
+101
+def is_c_extension(module: ModuleType) -> bool:
+--------down------
+131
+    assert inspect.ismodule(module), f'"{module}" not a module.'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sphinxtools.py
+20638040, 753
+---------up-------
+446
+class AutodocIndex(object):
+    def filename_matches_glob(filename: str, globtext: str) -> bool:
+--------down------
+756
+        if fnmatch(filename, globtext):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/classes.py
+1776994, 36
+--------down------
+67
+T1 = TypeVar('T1')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/classes.py
+3862310, 107
+--------down------
+108
+def gen_all_subclasses(cls: Type) -> Generator[Type, None, None]:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/classes.py
+128573, 151
+---------up-------
+145
+class ClassProperty(property):
+--------down------
+157
+    def __get__(self, cls, owner):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/contexts.py
+27803059, 37
+---------up-------
+32
+def dummy_context_mgr():
+--------down------
+40
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/contexts.py
+893333, 39
+---------up-------
+32
+def dummy_context_mgr():
+--------down------
+40
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py
+38987, 51
+---------up-------
+46
+def merge_dicts(*dict_args: Dict) -> Dict:
+--------down------
+52
+    result = {}
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py
+4406501, 120
+---------up-------
+110
+def rename_keys_in_dict(d: Dict[str, Any], renames: Dict[str, str]) -> None:
+--------down------
+121
+    for old_key, new_key in renames.items():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py
+6777485, 161
+---------up-------
+151
+def set_null_values_in_dict(d: Dict[str, Any],
+--------down------
+163
+    for k, v in d.items():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py
+2315520, 162
+---------up-------
+151
+def set_null_values_in_dict(d: Dict[str, Any],
+--------down------
+163
+    for k, v in d.items():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py
+17532929, 247
+---------up-------
+241
+class LazyDict(dict):
+--------down------
+251
+    def get(self, key: Hashable, thunk: Any = None,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py
+1151658, 307
+---------up-------
+303
+class HashableDict(dict):
+--------down------
+308
+    def __hash__(self) -> int:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py
+32888599, 320
+---------up-------
+317
+class CaseInsensitiveDict(dict):
+--------down------
+319
+    https://stackoverflow.com/questions/2082152/case-insensitive-dictionary/32888599#32888599,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/files.py
+16041232, 36
+--------down------
+39
+def auto_delete_files_on_instance_delete(instance: Any,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/serve.py
+1156246, 153
+---------up-------
+118
+def serve_file(path_to_file: str,
+--------down------
+155
+    if offered_filename is None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/serve.py
+4460661, 177
+---------up-------
+118
+def serve_file(path_to_file: str,
+--------down------
+179
+def serve_buffer(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/forms.py
+29303902, 69
+---------up-------
+65
+class MultipleIntAreaField(forms.Field):
+--------down------
+69
+    widget = forms.Textarea
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/admin.py
+13990846, 41
+--------down------
+43
+def disable_bool_icon(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/restrictedcontentfile.py
+2472422, 72
+---------up-------
+48
+class ContentTypeRestrictedFileField(models.FileField):
+--------down------
+73
+    def __init__(self, *args, **kwargs) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/isodatetimetz.py
+14368290, 138
+---------up-------
+93
+class IsoDateTimeTzField(models.CharField):
+--------down------
+186
+    description = "ISO-8601 date/time field with timezone, stored as text"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/jsonclassfield.py
+6578986, 47
+--------down------
+126
+from django.core.exceptions import ValidationError
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/jsonclassfield.py
+31235771, 48
+--------down------
+126
+from django.core.exceptions import ValidationError
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/jsonclassfield.py
+16406798, 49
+--------down------
+48
+- http://stackoverflow.com/questions/16405969/how-to-change-json-encoding-behaviour-for-serializable-python-object/16406798#16406798
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/jsonclassfield.py
+3768895, 50
+--------down------
+126
+from django.core.exceptions import ValidationError
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/request_cache.py
+3151469, 28
+--------down------
+29
+from threading import currentThread
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/middleware.py
+3214589, 135
+--------down------
+157
+EXEMPT_URLS = [compile(settings.LOGIN_URL.lstrip('/'))]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/middleware.py
+2095520, 224
+--------down------
+225
+class DisableClientSideCachingMiddleware(MiddlewareMixin):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/buildfunc.py
+1386291, 131
+---------up-------
+87
+def git_clone(prettyname: str, url: str, directory: str,
+    if commit:
+--------down------
+131
+    return True
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/chebi.py
+2082152, 523
+---------up-------
+520
+class CaseInsensitiveDict(dict):
+--------down------
+524
+    def __setitem__(self, key: str, value: str) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/email/sendmail.py
+64505, 382
+---------up-------
+323
+def send_email(from_addr: str,
+--------down------
+408
+    if isinstance(to, str):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/email/sendmail.py
+3362600, 383
+---------up-------
+323
+def send_email(from_addr: str,
+--------down------
+408
+    if isinstance(to, str):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py
+19237878, 30
+--------down------
+58
+import cProfile
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py
+17071871, 31
+---------up-------
+30
+- From https://stackoverflow.com/questions/19237878/ to
+--------down------
+30
+  https://stackoverflow.com/questions/17071871/select-rows-from-a-dataframe-based-on-values-in-a-column-in-pandas  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py
+28757389, 42
+---------up-------
+1
+# cardinal_pythonlib/psychiatry/treatment_resistant_depression.py
+--------down------
+58
+import cProfile
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py
+30086936, 82
+--------down------
+83
+DTYPE_DATE = "datetime64[D]"  # D for day resolution, ns for nanoseconds, etc.
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py
+49127844, 83
+--------down------
+83
+DTYPE_DATE = "datetime64[D]"  # D for day resolution, ns for nanoseconds, etc.
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py
+15943769, 211
+---------up-------
+170
+def two_antidepressant_episodes_single_patient(
+--------down------
+210
+    nrows_all = len(tp)  # https://stackoverflow.com/questions/15943769/
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py
+19365513, 336
+---------up-------
+170
+def two_antidepressant_episodes_single_patient(
+    for first_b_rownum in range(1, nrows_all):
+--------down------
+338
+        expect_response_by_date = (
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/argparse_func.py
+20094215, 50
+---------up-------
+45
+class ShowAllSubparserHelpAction(_HelpAction):
+--------down------
+52
+    def __call__(self,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/argparse_func.py
+15008758, 112
+---------up-------
+100
+def str2bool(v: str) -> bool:
+--------down------
+124
+    lv = v.lower()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/metaclasses.py
+6557407, 45
+---------up-------
+31
+class CooperativeMeta(type):
+--------down------
+55
+    def __new__(mcs: Type,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+201282, 416
+---------up-------
+397
+class Access(Flavour):
+    def get_all_table_names(cls, db: DATABASE_SUPPORTER_FWD_REF) -> List[str]:
+--------down------
+418
+    def get_all_table_details(cls, db: DATABASE_SUPPORTER_FWD_REF) \
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+2221250, 443
+---------up-------
+397
+class Access(Flavour):
+    def fetch_column_names(cls,
+--------down------
+446
+        db.ensure_db_open()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+3343922, 445
+---------up-------
+397
+class Access(Flavour):
+    def fetch_column_names(cls,
+--------down------
+446
+        db.ensure_db_open()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+6568098, 795
+---------up-------
+741
+class SQLServer(Flavour):
+    def get_all_table_details(cls, db: DATABASE_SUPPORTER_FWD_REF) \
+--------down------
+797
+    def describe_table(cls,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+917431, 822
+---------up-------
+741
+class SQLServer(Flavour):
+    def get_datatype(cls,
+--------down------
+823
+        return db.fetchvalue(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+4205181, 943
+---------up-------
+938
+def get_sql_insert_or_update(table: str,
+--------down------
+943
+    return """
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+10263956, 1001
+---------up-------
+995
+def datetime2literal_rnc(d: datetime.datetime, c: Optional[Dict]) -> str:
+--------down------
+1001
+    dt = d.isoformat(" ")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+5088671, 1109
+---------up-------
+1107
+def _convert_java_binary(rs, col: int) -> Optional[bytes]:
+--------down------
+1112
+    v = None
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+2920364, 1112
+---------up-------
+1107
+def _convert_java_binary(rs, col: int) -> Optional[bytes]:
+--------down------
+1112
+    v = None
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+26899595, 1167
+---------up-------
+1166
+def _convert_java_bigint(rs, col: int) -> Optional[int]:
+--------down------
+1171
+    java_val = rs.getObject(col)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+6777810, 1203
+---------up-------
+1191
+def reconfigure_jaydebeapi() -> None:
+--------down------
+1203
+    try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+2901453, 1452
+---------up-------
+1443
+class DatabaseSupporter:
+    def __init__(self):
+--------down------
+1459
+    def reraise_connection_exception(e: Exception) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+7311990, 1453
+---------up-------
+1443
+class DatabaseSupporter:
+    def __init__(self):
+--------down------
+1459
+    def reraise_connection_exception(e: Exception) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+11053941, 1613
+---------up-------
+1443
+class DatabaseSupporter:
+    def _connect(self,
+        if engine == ENGINE_MYSQL and interface == INTERFACE_MYSQL:
+--------down------
+1613
+            log.info(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+6001104, 1648
+---------up-------
+1443
+class DatabaseSupporter:
+    def _connect(self,
+        if engine == ENGINE_MYSQL and interface == INTERFACE_MYSQL:
+--------down------
+1649
+        elif engine == ENGINE_MYSQL and interface == INTERFACE_ODBC:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+1063770, 1664
+---------up-------
+1443
+class DatabaseSupporter:
+    def _connect(self,
+        elif engine == ENGINE_MYSQL and interface == INTERFACE_ODBC:
+--------down------
+1665
+        elif engine == ENGINE_MYSQL and interface == INTERFACE_JDBC:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+9337134, 1897
+---------up-------
+1443
+class DatabaseSupporter:
+    def localize_sql(self, sql: str) -> str:
+--------down------
+1897
+        if self.db_pythonlib in [PYTHONLIB_PYMYSQL, PYTHONLIB_MYSQLDB]:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+6202726, 2092
+---------up-------
+1443
+class DatabaseSupporter:
+    def get_literal_sql_with_arguments(self, query: str, *args) -> str:
+--------down------
+2092
+        if args is not None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+8859353, 2790
+---------up-------
+1443
+class DatabaseSupporter:
+    def create_or_replace_primary_key(self,
+--------down------
+2790
+        return self.db_exec(sql)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py
+1903041, 2843
+---------up-------
+1443
+class DatabaseSupporter:
+    def java_garbage_collect(self) -> None:
+--------down------
+2844
+        if not jaydebeapi:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar_mssql.py
+8562136, 121
+--------down------
+126
+CHECKSUM_AGG = sql_keyword("CHECKSUM_AGG")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar_mssql.py
+5411619, 124
+--------down------
+126
+CHECKSUM_AGG = sql_keyword("CHECKSUM_AGG")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar_mssql.py
+285775, 291
+---------up-------
+234
+SOUNDEX
+--------down------
+292
+    bind_parameter = Literal('?')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar_mssql.py
+11016935, 303
+---------up-------
+234
+SOUNDEX
+--------down------
+307
+    case_expr = (
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar.py
+1345039, 48
+---------up-------
+1
+# cardinal_pythonlib/sql/sql_grammar.py
+--------down------
+63
+import re
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar.py
+37926516, 101
+---------up-------
+95
+def delim_list(expr_: Token,
+--------down------
+101
+    name = str(expr_) + " [" + str(delim) + " " + str(expr_) + "]..."
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar.py
+4214173, 115
+--------down------
+117
+def word_regex_element(word: str) -> str:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar_mysql.py
+37926516, 371
+---------up-------
+295
+YEAR
+--------down------
+371
+    function_call = Combine(function_name + LPAR) + argument_list + RPAR
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/docs/source/conf.py
+5599254, 186
+--------down------
+194
+if django:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/docs/source/conf.py
+36228537, 192
+--------down------
+194
+if django:

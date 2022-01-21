@@ -1,0 +1,778 @@
+[1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 4, 2, 1, 1, 1, 1, 2, 1, 1, 16, 3, 4, 4, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 3, 2, 2, 1, 3, 3, 1, 1, 1, 2, 2, 1, 1, 4, 1, 2, 10, 4, 3, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1]
+2557110
+802134
+7243750
+938429
+19693782
+8691655
+25480853
+3177231
+1236540
+4765242
+8482588
+29175093
+8480223
+29055475
+17535563
+17631703
+=================
+2557110
+count:1
+Here is the description of the module.
+See PEP 257 (http://legacy.python.org/dev/peps/pep-0257/) for more details.
+See also http://stackoverflow.com/questions/2557110/what-to-put-in-a-python-module-docstring.
+"""
+
+def main():
+=================
+220525
+count:1
+This module show how to ensure a single instance of an application in Linux.
+
+See http://stackoverflow.com/questions/220525/ensure-a-single-instance-of-an-application-in-linux
+    https://docs.python.org/3.5/library/fcntl.html
+"""
+
+=================
+12409714
+count:1
+Contains snippet about class members.
+
+See http://stackoverflow.com/questions/12409714/python-class-members
+"""
+
+class Foo(object):
+=================
+2557110
+count:1
+Here is the description of the module.
+See PEP 257 (http://legacy.python.org/dev/peps/pep-0257/) for more details.
+See also http://stackoverflow.com/questions/2557110/what-to-put-in-a-python-module-docstring.
+
+See also PEP 8 (http://legacy.python.org/dev/peps/pep-0008/) for Python's good practices.
+"""
+=================
+20760589
+count:1
+print()
+
+# See https://stackoverflow.com/q/20760589
+for i in range(p.get_device_count()):
+=================
+728356
+count:2
+# See the following links for more information:
+# - http://effbot.org/zone/tkinter-callbacks.htm
+# - http://stackoverflow.com/questions/728356/dynamically-creating-a-menu-in-tkinter-lambda-expressions
+# - http://stackoverflow.com/questions/938429/scope-of-python-lambda-functions-and-their-parameters
+# - http://stackoverflow.com/questions/19693782/callback-function-tkinter-button-with-variable-parameter
+
+=================
+938429
+count:1
+# - http://effbot.org/zone/tkinter-callbacks.htm
+# - http://stackoverflow.com/questions/728356/dynamically-creating-a-menu-in-tkinter-lambda-expressions
+# - http://stackoverflow.com/questions/938429/scope-of-python-lambda-functions-and-their-parameters
+# - http://stackoverflow.com/questions/19693782/callback-function-tkinter-button-with-variable-parameter
+
+def callback(arg):
+=================
+19693782
+count:1
+# - http://stackoverflow.com/questions/728356/dynamically-creating-a-menu-in-tkinter-lambda-expressions
+# - http://stackoverflow.com/questions/938429/scope-of-python-lambda-functions-and-their-parameters
+# - http://stackoverflow.com/questions/19693782/callback-function-tkinter-button-with-variable-parameter
+
+def callback(arg):
+    print(arg)
+=================
+22772968
+count:1
+This is the simplest Python GTK+3 snippet.
+
+See: http://stackoverflow.com/questions/22772968/python-pygtk-how-to-put-a-window-on-a-specific-display-monitor
+"""
+
+from gi.repository import Gtk as gtk
+=================
+19072161
+count:1
+This is the simplest Python GTK+3 snippet.
+
+See: http://stackoverflow.com/questions/19072161/preventing-multiple-instances-of-a-gtk-application
+     https://developer.gnome.org/gnome-devel-demos/stable/GtkApplicationWindow.py.html.en
+     https://git.gnome.org/browse/gnome-music/tree/gnomemusic/application.py
+     https://git.gnome.org/browse/pitivi/tree/pitivi/application.py
+=================
+9682297
+count:2
+         this snippet.
+
+SEE: http://stackoverflow.com/questions/9682297/displaying-pdf-files-with-python3
+"""
+
+import gi
+=================
+17109634
+count:1
+
+# The TreeView's double click callback
+# See: http://stackoverflow.com/questions/17109634/hyperlink-in-cellrenderertext-markup
+def double_click_cb(tree_view, tree_path, tree_view_column):
+    model = tree_view.get_model()
+    print("You selected", model[tree_path][0], "[double click]")
+=================
+24788003
+count:1
+# -*- coding: utf-8 -*-
+
+# https://stackoverflow.com/questions/24788003/how-do-you-resize-an-image-in-python-using-pyglet
+
+import pyglet
+
+=================
+24226781
+count:4
+# Online documentation:
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen
+# - http://stackoverflow.com/questions/802134/changing-user-agent-on-urllib2-urlopen
+
+import argparse
+=================
+802134
+count:2
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen
+# - http://stackoverflow.com/questions/802134/changing-user-agent-on-urllib2-urlopen
+
+import argparse
+import gzip
+=================
+802134
+count:1
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen
+# - http://stackoverflow.com/questions/802134/changing-user-agent-on-urllib2-urlopen
+
+import argparse
+import shutil
+=================
+7243750
+count:1
+
+    # HTTP REQUEST ############################################################
+    # See http://stackoverflow.com/questions/7243750/download-file-from-web-in-python-3
+
+    http_request = urllib.request.Request(url, data=None, headers=HTTP_HEADERS)
+
+=================
+802134
+count:1
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen
+# - http://stackoverflow.com/questions/802134/changing-user-agent-on-urllib2-urlopen
+
+import argparse
+import urllib.request
+=================
+9718541
+count:1
+# Online documentation:
+# - https://docs.python.org/3.0/library/urllib.parse.html
+# - http://stackoverflow.com/questions/9718541/reconstructing-absolute-urls-from-relative-urls-on-a-page
+
+from urllib.parse import urljoin
+
+=================
+9626535
+count:2
+# Online documentation:
+# - https://docs.python.org/3.0/library/urllib.parse.html
+# - http://stackoverflow.com/questions/9626535/get-domain-name-from-url
+
+from urllib.parse import urlparse
+
+=================
+7243750
+count:1
+# Online documentation:
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/7243750/download-file-from-web-in-python-3
+# - http://stackoverflow.com/questions/22676/how-do-i-download-a-file-over-http-using-python
+
+import urllib.request
+=================
+22676
+count:1
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/7243750/download-file-from-web-in-python-3
+# - http://stackoverflow.com/questions/22676/how-do-i-download-a-file-over-http-using-python
+
+import urllib.request
+
+=================
+18675266
+count:16
+# See: http://matplotlib.sourceforge.net/examples/user_interfaces/embedding_in_tk.html
+#      http://matplotlib.sourceforge.net/examples/user_interfaces/embedding_in_tk2.html
+#      http://stackoverflow.com/questions/18675266/how-to-make-matplotlibpyplot-resizeable-with-the-tkinter-window-in-python
+
+import matplotlib
+matplotlib.use('TkAgg')
+=================
+4065783
+count:3
+
+def resize_callback(event):
+    # http://stackoverflow.com/questions/4065783/how-do-i-get-a-windows-current-size-using-tkinter
+    widget_current_width = label.winfo_width()      # Current label width (this work for every widgets!)
+    widget_current_height = label.winfo_height()    # Current label height (this work for every widgets!)
+
+=================
+3177231
+count:4
+# WARNING:
+# A Tk window MUST be created before you can call PhotoImage!
+# See: http://stackoverflow.com/questions/3177231/python-pil-imagetk-photoimage-is-giving-me-a-bus-error
+#      http://stackoverflow.com/questions/1236540/how-do-i-use-pil-with-tkinter
+
+root = tk.Tk()
+=================
+1236540
+count:4
+# A Tk window MUST be created before you can call PhotoImage!
+# See: http://stackoverflow.com/questions/3177231/python-pil-imagetk-photoimage-is-giving-me-a-bus-error
+#      http://stackoverflow.com/questions/1236540/how-do-i-use-pil-with-tkinter
+
+root = tk.Tk()
+
+=================
+25480853
+count:1
+# THE SOFTWARE.
+
+# SEE: http://stackoverflow.com/questions/25480853/cairo-with-tkinter
+#      http://effbot.org/tkinterbook/photoimage.htm#patterns
+
+# Required Debian package (Debian 8.1 Jessie): python3-pil.imagetk
+=================
+5886280
+count:1
+# THE SOFTWARE.
+
+# See: http://stackoverflow.com/questions/5886280/python-tkinter-overrideredirect-cannot-receive-keystrokes-linux
+#      http://stackoverflow.com/questions/7966119/display-fullscreen-mode-on-tkinter
+#      http://effbot.org/tkinterbook/wm.htm
+
+=================
+7966119
+count:1
+
+# See: http://stackoverflow.com/questions/5886280/python-tkinter-overrideredirect-cannot-receive-keystrokes-linux
+#      http://stackoverflow.com/questions/7966119/display-fullscreen-mode-on-tkinter
+#      http://effbot.org/tkinterbook/wm.htm
+
+import tkinter as tk
+=================
+3962247
+count:2
+
+def del_label():
+    # See http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+    #     http://stackoverflow.com/questions/12364981/how-to-delete-tkinter-widgets-from-a-window
+    try:
+        label = label_stack.pop()
+=================
+12364981
+count:2
+def del_label():
+    # See http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+    #     http://stackoverflow.com/questions/12364981/how-to-delete-tkinter-widgets-from-a-window
+    try:
+        label = label_stack.pop()
+        label.pack_forget()
+=================
+938429
+count:1
+# - http://effbot.org/zone/tkinter-callbacks.htm
+# - http://stackoverflow.com/questions/728356/dynamically-creating-a-menu-in-tkinter-lambda-expressions
+# - http://stackoverflow.com/questions/938429/scope-of-python-lambda-functions-and-their-parameters
+# - http://stackoverflow.com/questions/19693782/callback-function-tkinter-button-with-variable-parameter
+
+import tkinter as tk
+=================
+19693782
+count:1
+# - http://stackoverflow.com/questions/728356/dynamically-creating-a-menu-in-tkinter-lambda-expressions
+# - http://stackoverflow.com/questions/938429/scope-of-python-lambda-functions-and-their-parameters
+# - http://stackoverflow.com/questions/19693782/callback-function-tkinter-button-with-variable-parameter
+
+import tkinter as tk
+
+=================
+8691655
+count:1
+# THE SOFTWARE.
+
+# See http://stackoverflow.com/questions/8691655/how-to-put-a-tkinter-window-on-top-of-the-others
+#     http://stackoverflow.com/questions/1892339/how-to-make-a-window-jump-to-the-front
+
+import tkinter as tk
+=================
+1892339
+count:1
+
+# See http://stackoverflow.com/questions/8691655/how-to-put-a-tkinter-window-on-top-of-the-others
+#     http://stackoverflow.com/questions/1892339/how-to-make-a-window-jump-to-the-front
+
+import tkinter as tk
+
+=================
+8691655
+count:1
+# THE SOFTWARE.
+
+# See http://stackoverflow.com/questions/8691655/how-to-put-a-tkinter-window-on-top-of-the-others
+
+import tkinter as tk
+
+=================
+25480853
+count:1
+# THE SOFTWARE.
+
+# SEE: http://stackoverflow.com/questions/25480853/cairo-with-tkinter
+#      http://effbot.org/tkinterbook/photoimage.htm#patterns
+
+# Required Debian package (Debian 8.1 Jessie): python-pil.imagetk
+=================
+3177231
+count:1
+    # WARNING:
+    # A Tk window MUST be created before you can call PhotoImage!
+    # See: http://stackoverflow.com/questions/3177231/python-pil-imagetk-photoimage-is-giving-me-a-bus-error
+    #      http://stackoverflow.com/questions/1236540/how-do-i-use-pil-with-tkinter
+
+    root = tk.Tk()
+=================
+1236540
+count:1
+    # A Tk window MUST be created before you can call PhotoImage!
+    # See: http://stackoverflow.com/questions/3177231/python-pil-imagetk-photoimage-is-giving-me-a-bus-error
+    #      http://stackoverflow.com/questions/1236540/how-do-i-use-pil-with-tkinter
+
+    root = tk.Tk()
+
+=================
+11373192
+count:2
+# -*- coding: utf-8 -*-
+            
+# see http://stackoverflow.com/questions/11373192/generating-discrete-random-variables-with-specified-weights-using-scipy-or-numpy
+
+import numpy as np
+from scipy.stats import rv_discrete  
+=================
+16621351
+count:1
+
+# See https://docs.scipy.org/doc/numpy/user/basics.rec.html
+#     http://stackoverflow.com/questions/16621351/how-to-use-python-numpy-savetxt-to-write-strings-and-float-number-to-an-ascii-fi
+
+import numpy as np
+
+=================
+7370801
+count:2
+
+# See: https://docs.python.org/3/library/time.html#time.process_time
+#      http://stackoverflow.com/questions/7370801/measure-time-elapsed-in-python
+
+import time
+
+=================
+4765242
+count:1
+
+
+# See http://stackoverflow.com/questions/4764932/in-python-how-do-i-read-the-exif-data-for-an-image/4765242#4765242
+
+import Image
+
+=================
+3908063
+count:1
+# subprocess.Popen.kill() function will only kill that sub-process (so if there
+# are any "grandchild" processes, they won't be terminated.).
+# See: http://stackoverflow.com/questions/3908063/python-subprocess-with-shell-true-redirections-and-platform-independent-subproc
+#
+# The solution is to use preexec_fn to cause the subprocess to acquire it's own
+# session group (then a signal is sent to all processes in that session group).
+=================
+3876886
+count:1
+# The solution is to use preexec_fn to cause the subprocess to acquire it's own
+# session group (then a signal is sent to all processes in that session group).
+# See: http://stackoverflow.com/questions/3876886/timeout-a-subprocess
+
+def execute(args):
+    try:
+=================
+4765242
+count:1
+
+
+# See http://stackoverflow.com/questions/4764932/in-python-how-do-i-read-the-exif-data-for-an-image/4765242#4765242
+
+import PIL.Image as pil_img           # PIL.Image is a module not a class...
+import PIL.ExifTags as pil_exif_tags  # PIL.ExifTags is a module not a class...
+=================
+16311562
+count:2
+
+with lzma.open("test.json.xz", "wt") as fd:
+    # https://stackoverflow.com/questions/16311562/python-json-without-whitespaces
+    # https://docs.python.org/3/library/json.html#json.dump
+=================
+10556479
+count:1
+WARNING: Tkinter doesn't work if it's run outside the main thread!
+
+    See: http://stackoverflow.com/questions/10556479/running-a-tkinter-form-in-a-separate-thread
+    "Tkinter isn't thread safe, and the general consensus is that Tkinter
+    doesn't work in a non-main thread. If you rewrite your code so that Tkinter
+    runs in the main thread, you can have your workers run in other threads."
+=================
+28521783
+count:1
+     http://txt.arboreus.com/2014/10/21/remove-circles-from-an-image-in-python.html
+     http://wiki.elphel.com/index.php?title=OpenCV_Tennis_balls_recognizing_tutorial
+     http://stackoverflow.com/questions/28521783/python-opencv-houghcircles-not-giving-good-results
+     http://computer-vision-talks.com/articles/how-to-detect-circles-in-noisy-image/
+     http://www.pyimagesearch.com/2014/07/21/detecting-circles-images-using-opencv-hough-circles/
+"""
+=================
+27156381
+count:3
+hist, xedges, yedges = np.histogram2d(x, y, bins=(xbins, ybins))
+
+# See http://stackoverflow.com/questions/27156381/python-creating-a-2d-histogram-from-a-numpy-matrix
+
+xidx = np.clip(np.digitize(x, xedges), 0, hist.shape[0]-1)
+yidx = np.clip(np.digitize(y, yedges), 0, hist.shape[1]-1)
+=================
+8482588
+count:2
+See:
+
+- https://stackoverflow.com/questions/8482588/putting-text-in-top-left-corner-of-matplotlib-plot
+"""
+
+import numpy as np
+=================
+8482588
+count:2
+                                                                                             samples.std())
+
+    # https://stackoverflow.com/questions/8482588/putting-text-in-top-left-corner-of-matplotlib-plot
+    ax.text(0.95, 0.95, sig_info,
+            horizontalalignment='right',
+            verticalalignment='top',
+=================
+11874767
+count:1
+Realtime animation
+
+See http://stackoverflow.com/questions/11874767/real-time-plotting-in-while-loop-with-matplotlib
+"""
+
+import numpy as np
+=================
+33371917
+count:3
+
+See:
+- https://stackoverflow.com/questions/33371917/how-to-plot-result-of-np-histogram-with-matplotlib-analog-to-plt-his
+- https://stackoverflow.com/questions/5328556/histogram-matplotlib
+"""
+
+=================
+5328556
+count:3
+See:
+- https://stackoverflow.com/questions/33371917/how-to-plot-result-of-np-histogram-with-matplotlib-analog-to-plt-his
+- https://stackoverflow.com/questions/5328556/histogram-matplotlib
+"""
+
+import numpy as np
+=================
+29175093
+count:1
+See:
+
+- http://stackoverflow.com/questions/29175093/creating-a-log-linear-plot-in-matplotlib-using-hist2d
+"""
+
+import numpy as np
+=================
+29175093
+count:1
+
+## The following line doesn't actually work...
+## See http://stackoverflow.com/questions/29175093/creating-a-log-linear-plot-in-matplotlib-using-hist2d
+#H = ax2.hist2d(x, y, bins=[xbins, ybins])
+#fig.colorbar(H[3], ax=ax2)
+
+=================
+8248467
+count:1
+plt.tight_layout()
+
+# http://stackoverflow.com/questions/8248467/matplotlib-tight-layout-doesnt-take-into-account-figure-suptitle
+plt.subplots_adjust(top=0.9)
+
+# Save file and plot ########
+=================
+4285103
+count:2
+
+    - https://matplotlib.org/users/transforms_tutorial.html
+    - https://stackoverflow.com/questions/4285103/matplotlib-rotating-a-patch
+"""
+
+import numpy as np
+=================
+6855710
+count:2
+See:
+
+- http://stackoverflow.com/questions/6855710/how-to-have-logarithmic-bins-in-a-python-histogram
+"""
+
+import numpy as np
+=================
+22445217
+count:1
+# See:
+# - https://docs.python.org/3.7/library/webbrowser.html
+# - https://stackoverflow.com/questions/22445217/python-webbrowser-open-to-open-chrome-browser
+# - https://stackoverflow.com/questions/31715119/how-can-i-open-a-website-in-my-web-browser-using-python
+
+import webbrowser
+=================
+31715119
+count:1
+# - https://docs.python.org/3.7/library/webbrowser.html
+# - https://stackoverflow.com/questions/22445217/python-webbrowser-open-to-open-chrome-browser
+# - https://stackoverflow.com/questions/31715119/how-can-i-open-a-website-in-my-web-browser-using-python
+
+import webbrowser
+
+=================
+10562945
+count:4
+# - python-poppler-qt4  (not python-poppler)
+
+# See: http://stackoverflow.com/questions/10562945/how-to-display-pdf-with-python-poppler-qt4
+#      http://web.archive.org/web/20120417095851/http://www.rkblog.rk.edu.pl/w/p/rendering-pdf-files-pyqt4-pypoppler-qt4/
+#      http://bazaar.launchpad.net/~j-corwin/openlp/pdf/annotate/head:/openlp/plugins/presentations/lib/pdfcontroller.py
+
+=================
+13670333
+count:1
+# - http://students.mimuw.edu.pl/~pbechler/scipy_doc/tutorial/optimize.html
+# - https://people.duke.edu/~ccc14/sta-663/BlackBoxOptimization.html
+# - http://stackoverflow.com/questions/13670333/multiple-variables-in-scipys-optimize-minimize
+
+
+# DEFINE THE OBJECTIVE FUNCTION ###############################################
+=================
+6854947
+count:2
+
+
+# See: http://stackoverflow.com/questions/6854947/how-to-display-a-window-on-a-secondary-display-in-pyqt
+#      http://pyqt.sourceforge.net/Docs/PyQt4/qdesktopwidget.html#details
+
+
+=================
+8480223
+count:10
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+            # See https://stackoverflow.com/a/8480223
+            return self._data.get_data(index.row(), index.column())
+        return QVariant()
+
+=================
+11606946
+count:4
+# - http://doc.qt.io/qt-5/model-view-programming.html#proxy-models
+# - http://doc.qt.io/qt-5/qsortfilterproxymodel.html#sorting
+# - https://stackoverflow.com/a/11606946
+# - http://doc.qt.io/qt-5/qtwidgets-itemviews-basicsortfiltermodel-example.html
+# - http://doc.qt.io/qt-5/qtwidgets-itemviews-customsortfiltermodel-example.html
+
+=================
+29055475
+count:3
+# This class replace the deprecated QWebView (based on QtWebKit).
+# See:
+# - https://stackoverflow.com/questions/29055475/qwebview-or-qwebengineview
+# - https://wiki.qt.io/QtWebEngine/Porting_from_QtWebKit
+
+HTML = r'''<!DOCTYPE html>
+=================
+8480223
+count:1
+
+# TODO:
+# - [x] Keep the current value while editing a cell -> see https://stackoverflow.com/a/8480223
+#
+# - [x] Remove selected lines instead of the last one TODO: check the possible (but very unlikely bug) when reomving non-contiguous rows
+# - [x] Remove using the "Suppr" key instead of a button -> simply call the remove_rows callback when the suppr key is pressed...
+=================
+11606259
+count:1
+# - [x] Remove using the "Suppr" key instead of a button -> simply call the remove_rows callback when the suppr key is pressed...
+# - [x] Add a keyboard shortcut to add a row
+# - [x] Sort by datetime or by value. See http://doc.qt.io/qt-5/model-view-programming.html#sorting , http://doc.qt.io/qt-5/qsortfilterproxymodel.html#sorting and https://stackoverflow.com/questions/11606259/how-to-sort-a-qtableview-by-a-column#11606946
+#
+# - [x] Use Qt delegate example
+# - [x] Don't show all Model's columns (+ add a description column in the model but don't show it in the view): "table_view.setColumnHidden(column_num, True)"
+=================
+3448959
+count:1
+#
+# - [x] Add Tabs widgets + add a matplotlib plot of values
+# - [ ] Add "undo" and "redo" actions (search "(python) design pattern for undo redo actions") -> Command pattern and Memento pattern (https://stackoverflow.com/a/3448959)
+#       - http://doc.qt.io/qt-5/qundoview.html#details
+#       - http://doc.qt.io/qt-5/qundostack.html#details
+#       - http://doc.qt.io/qt-5/qundocommand.html#details
+=================
+17535563
+count:1
+        self.table_view.setColumnWidth(0, 200)                       # TODO: automatically get the best width
+
+        self.table_view.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)    # https://stackoverflow.com/q/17535563
+
+        self.table_view.setColumnHidden(COMMENT_COLUMN_INDEX, True)
+
+=================
+17631703
+count:1
+        # Set key shortcut ################################
+
+        # see https://stackoverflow.com/a/17631703  and  http://doc.qt.io/qt-5/qaction.html#details
+
+        # Add row action
+
+=================
+29055475
+count:1
+# (That's why it is not available on Anaconda !)                             #
+# See:                                                                       #
+# - https://stackoverflow.com/questions/29055475/qwebview-or-qwebengineview  #
+# - https://wiki.qt.io/QtWebEngine/Porting_from_QtWebKit                     #
+##############################################################################
+
+=================
+17535563
+count:1
+    table_view.setModel(my_model)
+
+    table_view.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)    # <- https://stackoverflow.com/q/17535563
+
+    table_view.show()
+
+=================
+36555153
+count:2
+
+# See http://doc.qt.io/qt-5/qpushbutton.html#details
+#     https://stackoverflow.com/questions/36555153/pyqt5-closing-terminating-application
+
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
+=================
+50830399
+count:1
+# See:
+# - https://developers.google.com/chart/interactive/docs/gallery/ganttchart
+# - https://stackoverflow.com/questions/50830399/how-to-add-a-horizontal-scroll-bar-to-google-gantt-chart
+
+HTML = r'''<!DOCTYPE html>
+<html>
+=================
+8480223
+count:2
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:           # <--
+            # See https://stackoverflow.com/a/8480223
+            return self._data.get_data(index.row(), index.column())
+        return QVariant()
+
+=================
+40580749
+count:1
+grid.addWidget(btn4, 1, 3, 2, 1)
+
+btn4.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)  # http://doc.qt.io/qt-5/qsizepolicy.html ; https://stackoverflow.com/questions/40580749/why-do-some-widgets-not-stretch-to-fill-the-maximum-space-in-a-layout
+
+grid.setContentsMargins(0, 0, 0, 0)  # set the spacing around the layout (in pixels)
+grid.setSpacing(0)                   # set the spacing between elements (in pixels)
+=================
+29055475
+count:1
+# This class replace the deprecated QWebView (based on QtWebKit).
+# See:
+# - https://stackoverflow.com/questions/29055475/qwebview-or-qwebengineview
+# - https://wiki.qt.io/QtWebEngine/Porting_from_QtWebKit
+
+# The next two lines are a workaround to fix an issue with QWebEngineView (see https://github.com/ContinuumIO/anaconda-issues/issues/9199#issuecomment-383842265)
+=================
+17631703
+count:1
+        super().__init__()
+
+        # see https://stackoverflow.com/a/17631703  and  http://doc.qt.io/qt-5/qaction.html#details
+
+        action = QAction(self)
+        action.setShortcut(Qt.Key_F)
+=================
+17834835
+count:1
+
+    def fullscreen_toggle_key_callback(self):
+        if self.windowState() & Qt.WindowFullScreen:         # https://stackoverflow.com/questions/17834835/test-if-qquickview-qwindow-is-full-screen-in-qt-5-0-x
+            self.showNormal()                                # <- NORMAL SCREEN
+        else:
+            self.showFullScreen()                            # <- FULL SCREEN
+=================
+28660287
+count:1
+# -*- coding: utf-8 -*-
+
+# Ref: https://stackoverflow.com/questions/28660287/sort-qtableview-in-pyqt5
+
+import numpy as np
+import pandas as pd
+=================
+17631703
+count:2
+
+
+# see https://stackoverflow.com/a/17631703  and  http://doc.qt.io/qt-5/qaction.html#details
+
+action = QAction(window)                   # <-
+action.setShortcut(Qt.Key_P | Qt.CTRL)     # <-
+=================
+8480223
+count:1
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+            # See https://stackoverflow.com/a/8480223
+            return self._data[index.row()]
+        return QVariant()
+

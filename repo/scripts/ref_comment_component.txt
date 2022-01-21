@@ -1,0 +1,475 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/check_barcodes_pyroseq.py
+20726010, 255
+--------down------
+255
+def replace_bad_nucleotides(pattern):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-june-22-backup.py
+24662006, 183
+---------up-------
+133
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map):
+--------down------
+183
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-june-22-backup.py
+22992009, 186
+---------up-------
+133
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map):
+--------down------
+188
+    f = plt.figure(1)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-june-22-backup.py
+7125009, 228
+---------up-------
+133
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map):
+--------down------
+230
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph.py
+18821795, 307
+---------up-------
+238
+def draw_plots_with_edge_attributes_no_node_module_file(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list, dynamic):
+--------down------
+307
+    '''
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph.py
+7125009, 312
+---------up-------
+238
+def draw_plots_with_edge_attributes_no_node_module_file(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list, dynamic):
+--------down------
+314
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph.py
+24662006, 381
+---------up-------
+320
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+381
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph.py
+22992009, 384
+---------up-------
+320
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+386
+    f = plt.figure(1)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-oct-20-backup.py
+7125009, 276
+---------up-------
+221
+def draw_plots_with_edge_attributes_no_node_module_file(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+278
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-oct-20-backup.py
+24662006, 345
+---------up-------
+284
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+345
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-oct-20-backup.py
+22992009, 348
+---------up-------
+284
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+350
+    f = plt.figure(1)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-oct-20-backup.py
+18821795, 387
+---------up-------
+284
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+387
+    nx.draw(samModG, edgelist=edges_between_nodes_from_same_module, edge_color = samModGcolors, pos=pos, node_color = nodeColor, labels = new_labels, with_labels = True, node_size=samModGnode_sizes_list, font_size=10, font_family='Times')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/parse-seed-for-genome-id.py
+8122079, 64
+---------up-------
+54
+with open(refseedfile) as f:
+    for line in f:
+        if line.startswith(">"):
+--------down------
+63
+            if any(substring in line for substring in seed_entries): #https://stackoverflow.com/questions/8122079/python-how-to-check-a-string-for-substrings-from-a-list
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/parse-seed-for-genome-id.py
+716477, 168
+---------up-------
+167
+def sort_taxa_occurence(somelistoflists, outfile):
+--------down------
+168
+    one_list = list(itertools.chain.from_iterable(somelistoflists)) 
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/parse-seed-for-genome-id.py
+46580499, 170
+---------up-------
+167
+def sort_taxa_occurence(somelistoflists, outfile):
+--------down------
+170
+    taxa_occurences =  Counter(one_list)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/parse-seed-for-genome-id.py
+613183, 174
+---------up-------
+167
+def sort_taxa_occurence(somelistoflists, outfile):
+--------down------
+174
+    sorted_x = sorted(taxa_occurences.items(), key=operator.itemgetter(1), reverse=True)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/parse-seed-for-genome-id.py
+3820312, 178
+---------up-------
+167
+def sort_taxa_occurence(somelistoflists, outfile):
+--------down------
+178
+    with open(outfile, 'w') as fp:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/taxon_bar_graphs_w_err_bar-aug-7-2015-backup.py
+4534480, 231
+---------up-------
+187
+def draw_stacked_bar_w_err_bar(c, means_d, stderr_d, category_labels, outpfile, f_type):
+--------down------
+231
+    legend_fig = pylab.figure()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/dereplication_sorting_uparse.py
+1217251, 77
+---------up-------
+55
+TACGGGGGGGGCAAGCGTTGTTCGGAATTACTGGGCGTAAAGGGCGCGTAGGCGGTTCGCTAAGTTGAATGTGAAAACTCTGGGCTTAACCCAGAGCCTGCATTCAATACTGGCGGGCTAGAGTTCTGGAGGGGATAGCGGAATTCCTGGTGTAGCGGTGAAATGCGTAGATATCAGGAGGAACACCGGTGGCGAAGGCGGCTATCTGGACAGACTCTGACGCTGAGGCGCGAAAGCTAGGGGAGCGANCAGG
+--------down------
+78
+    sorted_seq_header_freq_dict = ''
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-aug4-2015-backup.py
+24662006, 273
+---------up-------
+212
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+273
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-aug4-2015-backup.py
+22992009, 276
+---------up-------
+212
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+278
+    f = plt.figure(1)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-aug4-2015-backup.py
+7125009, 317
+---------up-------
+212
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+319
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/intersection_plotter.py
+33195384, 113
+---------up-------
+16
+def main(args):
+--------down------
+114
+    ListA = list()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/map-uniqid-to-symbol-brb.py
+33001490, 43
+---------up-------
+31
+def sanitize_net_file(file1):
+--------down------
+43
+  import csv
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/taxon_bar_graphs_w_err_bar_backup.py
+4534480, 222
+---------up-------
+178
+def draw_stacked_bar_w_err_bar(c, means_d, stderr_d, category_labels, outpfile, f_type):
+--------down------
+222
+    legend_fig = pylab.figure()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/search-seqs-hmp-data.py
+20983498, 20
+---------up-------
+15
+for p in patterns:
+--------down------
+20
+    try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/convert_to_qgraph_format.py
+6602881, 17
+--------down------
+16
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-june-26-backup.py
+24662006, 222
+---------up-------
+163
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file):
+--------down------
+222
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-june-26-backup.py
+22992009, 225
+---------up-------
+163
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file):
+--------down------
+227
+    f = plt.figure(1)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-june-26-backup.py
+7125009, 266
+---------up-------
+163
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file):
+--------down------
+268
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-july8-2015-backup.py
+24662006, 249
+---------up-------
+190
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+249
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-july8-2015-backup.py
+22992009, 252
+---------up-------
+190
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+254
+    f = plt.figure(1)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-july8-2015-backup.py
+7125009, 293
+---------up-------
+190
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+295
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-nov-17-backup.py
+18821795, 293
+---------up-------
+224
+def draw_plots_with_edge_attributes_no_node_module_file(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list, dynamic):
+--------down------
+293
+    '''
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-nov-17-backup.py
+7125009, 298
+---------up-------
+224
+def draw_plots_with_edge_attributes_no_node_module_file(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list, dynamic):
+--------down------
+300
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-nov-17-backup.py
+24662006, 367
+---------up-------
+306
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+367
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-nov-17-backup.py
+22992009, 370
+---------up-------
+306
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+372
+    f = plt.figure(1)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/sum_data_from_lanes_per_sample.py
+25748683, 97
+---------up-------
+24
+def main(args):
+--------down------
+97
+    for key in headers:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/parse-seed-for-genome-id-updated.py
+8122079, 164
+---------up-------
+154
+with open(refseedfile) as f:
+    for line in f:
+        if line.startswith(">"):
+--------down------
+163
+            if any(substring in line for substring in santized_can_find_seeds): #https://stackoverflow.com/questions/8122079/python-how-to-check-a-string-for-substrings-from-a-list
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/parse-seed-for-genome-id-updated.py
+716477, 252
+---------up-------
+251
+def sort_taxa_occurence(somelistoflists, outfile):
+--------down------
+252
+    one_list = list(itertools.chain.from_iterable(somelistoflists)) 
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/parse-seed-for-genome-id-updated.py
+46580499, 254
+---------up-------
+251
+def sort_taxa_occurence(somelistoflists, outfile):
+--------down------
+254
+    taxa_occurences =  Counter(one_list)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/parse-seed-for-genome-id-updated.py
+613183, 258
+---------up-------
+251
+def sort_taxa_occurence(somelistoflists, outfile):
+--------down------
+258
+    sorted_x = sorted(taxa_occurences.items(), key=operator.itemgetter(1), reverse=True)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/parse-seed-for-genome-id-updated.py
+3820312, 262
+---------up-------
+251
+def sort_taxa_occurence(somelistoflists, outfile):
+--------down------
+262
+    with open(outfile, 'w') as fp:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-feb28-2016-backup.py
+18821795, 293
+---------up-------
+224
+def draw_plots_with_edge_attributes_no_node_module_file(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list, dynamic):
+--------down------
+293
+    '''
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-feb28-2016-backup.py
+7125009, 298
+---------up-------
+224
+def draw_plots_with_edge_attributes_no_node_module_file(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list, dynamic):
+--------down------
+300
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-feb28-2016-backup.py
+24662006, 367
+---------up-------
+306
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+367
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-feb28-2016-backup.py
+22992009, 370
+---------up-------
+306
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+372
+    f = plt.figure(1)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-oct-23-backup.py
+18821795, 289
+---------up-------
+221
+def draw_plots_with_edge_attributes_no_node_module_file(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+289
+    '''
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-oct-23-backup.py
+7125009, 294
+---------up-------
+221
+def draw_plots_with_edge_attributes_no_node_module_file(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+296
+    plt.legend(bbox_to_anchor=(0.15, 0.93), loc=0, borderaxespad=0.,prop={'size':6}) #, title = "Legend"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-oct-23-backup.py
+24662006, 363
+---------up-------
+302
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+363
+    nodeColor = [attrib_color_map[G.node[node]['moduleNumb']] for node in G if node != 'Name']
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/plot-network-graph-oct-23-backup.py
+22992009, 366
+---------up-------
+302
+def draw_plots_with_edge_attributes(infile, node_attrib_file, outfilestring, img_qual, img_frmt, delim, attrib_color_map, categ_color_map, edge_color_map, node_abund_file, common_edge_list, common_edge_diff_correl_list):
+--------down------
+368
+    f = plt.figure(1)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/intersection_plotter_overlap_selector.py
+33195384, 183
+---------up-------
+66
+def main(args):
+--------down------
+184
+    ListA = list()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/taxon_bar_graphs_w_err_bar.py
+4534480, 238
+---------up-------
+194
+def draw_stacked_bar_w_err_bar(c, means_d, stderr_d, category_labels, outpfile, f_type):
+--------down------
+238
+    legend_fig = pylab.figure()

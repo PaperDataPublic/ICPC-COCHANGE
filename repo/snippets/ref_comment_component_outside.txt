@@ -1,0 +1,435 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/hello_python2/hello.py
+2557110, 28
+------------------
+def main():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/flock_single_app_instance.py
+220525, 26
+------------------
+import fcntl
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/class_attributes.py
+12409714, 26
+------------------
+class Foo(object):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/hello_python3/hello.py
+2557110, 28
+------------------
+import sys, os
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyaudio/list_devices.py
+20760589, 12
+------------------
+for i in range(p.get_device_count()):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/lambda_arguments_and_scope_mistakes.py
+728356, 39
+------------------
+def callback(arg):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/lambda_arguments_and_scope_mistakes.py
+938429, 40
+------------------
+def callback(arg):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/lambda_arguments_and_scope_mistakes.py
+19693782, 41
+------------------
+def callback(arg):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pygtk/python_gtk3_pygobject/dualscreen.py
+22772968, 8
+------------------
+from gi.repository import Gtk as gtk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pygtk/python_gtk3_pygobject/application_prevent_multiple_instances.py
+19072161, 8
+------------------
+from gi.repository import Gtk as gtk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pygtk/python_gtk3_pygobject/poppler_pdf.py
+9682297, 11
+------------------
+import gi
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pygtk/python_gtk3_pygobject/tree_view_selection_double_click.py
+17109634, 34
+------------------
+def double_click_cb(tree_view, tree_path, tree_view_column):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyglet/image_resized.py
+24788003, 3
+------------------
+import pyglet
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/set_user_agent.py
+24226781, 34
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/set_user_agent.py
+802134, 35
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/get_html_setup_http_headers_basic_shutil_version.py
+24226781, 34
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/get_html_setup_http_headers_basic_shutil_version.py
+802134, 35
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/get_html_setup_http_headers_basic_version.py
+24226781, 34
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/get_html_setup_http_headers_basic_version.py
+802134, 35
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/get_absolute_urls_from_relative_urls_on_a_page.py
+9718541, 16
+------------------
+from urllib.parse import urljoin
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/parse_url.py
+9626535, 16
+------------------
+from urllib.parse import urlparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/download_binary_file_on_http.py
+7243750, 34
+------------------
+import urllib.request
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/download_binary_file_on_http.py
+22676, 35
+------------------
+import urllib.request
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/parse_domain_name_from_url.py
+9626535, 16
+------------------
+from urllib.parse import urlparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas_with_navigation_toolbar.py
+18675266, 25
+------------------
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas_using_class_and_toolbar.py
+18675266, 25
+------------------
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas.py
+18675266, 25
+------------------
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas_with_widgets_interactions.py
+18675266, 25
+------------------
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas_using_class_and_toolbar_and_keyboard_events.py
+18675266, 25
+------------------
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas_without_navigation_toolbar.py
+18675266, 25
+------------------
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/image_pil.py
+3177231, 42
+------------------
+root = tk.Tk()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/image_pil.py
+1236540, 43
+------------------
+root = tk.Tk()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/cairo_with_pil.py
+25480853, 23
+------------------
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/cairo_with_pil.py
+3177231, 61
+------------------
+root = tk.Tk()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/cairo_with_pil.py
+1236540, 62
+------------------
+root = tk.Tk()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/fullscreen.py
+5886280, 23
+------------------
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/fullscreen.py
+7966119, 24
+------------------
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/callback_with_arguments.py
+728356, 41
+------------------
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/callback_with_arguments.py
+938429, 42
+------------------
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/callback_with_arguments.py
+19693782, 43
+------------------
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/macosx_startup_focus_workaround_v2.py
+8691655, 23
+------------------
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/macosx_startup_focus_workaround_v2.py
+1892339, 24
+------------------
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas_with_animation.py
+18675266, 25
+------------------
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python2/cairo_with_pil.py
+25480853, 23
+------------------
+import Tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/numpy/random/discrete_random_with_distribution.py
+11373192, 3
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/numpy/multiple_type_array.py
+16621351, 3
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/time/process_time.py
+7370801, 6
+------------------
+import time
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pil/python2_pil/get_exif.py
+4765242, 24
+------------------
+import Image
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/subprocess/subprocess_production_test.py
+3908063, 14
+------------------
+def execute(args):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/subprocess/subprocess_production_test.py
+3876886, 18
+------------------
+def execute(args):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pillow/exif_get_all_tags_values.py
+4765242, 24
+------------------
+import PIL.Image as pil_img           # PIL.Image is a module not a class...
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist2d_scatter_plot.py
+27156381, 30
+------------------
+xidx = np.clip(np.digitize(x, xedges), 0, hist.shape[0]-1)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_with_stats_summary_text_box.py
+8482588, 8
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/animation_workaround_manual_loop.py
+11874767, 6
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_big_data.py
+33371917, 9
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_big_data.py
+5328556, 10
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist2d_logscale_xy.py
+29175093, 8
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/subplots_full_example.py
+8248467, 87
+------------------
+plt.subplots_adjust(top=0.9)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_big_data_log_log.py
+33371917, 9
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_big_data_log_log.py
+5328556, 10
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_logscale_x.py
+6855710, 8
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_logscale_xy.py
+6855710, 8
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist2d_scatter_plot_logscale_xy.py
+27156381, 30
+------------------
+xidx = np.clip(np.digitize(x, xedges), 0, hist.shape[0]-1)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_big_data_log_log_with_generic_generator.py
+33371917, 10
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_big_data_log_log_with_generic_generator.py
+5328556, 11
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/webbrowser/open_web_page.py
+22445217, 5
+------------------
+import webbrowser
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/webbrowser/open_web_page.py
+31715119, 6
+------------------
+import webbrowser
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/poppler/poppler_keyboard_pdf.py
+10562945, 26
+------------------
+import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/poppler/poppler_pdf.py
+10562945, 26
+------------------
+import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/scipy/optimize/minimize_2d.py
+13670333, 14
+------------------
+def f(x):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt4/dual_head.py
+6854947, 24
+------------------
+import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt4/dual_head_fullscreen.py
+6854947, 24
+------------------
+import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_proxy_model.py
+11606946, 7
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QWebEngineView_with_mathjax_offline.py
+29055475, 7
+------------------
+HTML = r'''<!DOCTYPE html>
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/app_skeleton_logger.py
+8480223, 8
+------------------
+import copy
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/app_skeleton_logger.py
+11606259, 13
+------------------
+import copy
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/app_skeleton_logger.py
+3448959, 20
+------------------
+import copy
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QWebView.py
+29055475, 9
+------------------
+import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_filter_columns_using_proxy_model_with_line_edit.py
+11606946, 7
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_filter_columns_using_proxy_model.py
+11606946, 7
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/exit_app.py
+36555153, 4
+------------------
+import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QWebEngineView_with_google_charts_gantt.py
+50830399, 5
+------------------
+HTML = r'''<!DOCTYPE html>
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/layout_QGridLayout.py
+40580749, 29
+------------------
+btn4.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)  # http://doc.qt.io/qt-5/qsizepolicy.html ; https://stackoverflow.com/questions/40580749/why-do-some-widgets-not-stretch-to-fill-the-maximum-space-in-a-layout
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QWebEngineView_with_html_from_string.py
+29055475, 7
+------------------
+HTML = r'''<!DOCTYPE html>
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_for_pandas_dataframes.py
+28660287, 3
+------------------
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/keyboard_event.py
+17631703, 52
+------------------
+action = QAction(window)                   # <-
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QWebEngineView_with_mathjax_online.py
+29055475, 7
+------------------
+HTML = r'''<!DOCTYPE html>

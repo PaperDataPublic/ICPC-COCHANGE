@@ -1,0 +1,163 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/get_html_setup_http_headers_basic_shutil_version.py
+7243750, 63
+------------------
+def main():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/get_widget_size.py
+4065783, 31
+------------------
+def resize_callback(event):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/add_and_remove_widgets.py
+3962247, 33
+------------------
+def del_label():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/add_and_remove_widgets.py
+12364981, 34
+------------------
+def del_label():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python2/cairo_with_pil.py
+3177231, 55
+------------------
+def main():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python2/cairo_with_pil.py
+1236540, 56
+------------------
+def main():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/json/write_compressed_json.py
+16311562, 37
+------------------
+with lzma.open("test.json.xz", "wt") as fd:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/opencv/opencv_2/gui/opencv_with_tkinter.py
+10556479, 14
+------------------
+WARNING: Tkinter doesn't work if it's run outside the main thread!
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/opencv/opencv_2/image_processing/hough_circle_transform_using_color_extraction.py
+28521783, 16
+------------------
+See: https://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_imgproc/py_houghcircles/py_houghcircles.html#hough-circles
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/patches.py
+4285103, 31
+------------------
+- Transform:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_dateedit_widget.py
+8480223, 58
+------------------
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_spinbox_widget.py
+8480223, 54
+------------------
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QDataWidgetMapper_using_selection_signal.py
+8480223, 49
+------------------
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_doublespinbox_widget.py
+8480223, 55
+------------------
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/app_skeleton_logger.py
+17535563, 402
+------------------
+class MainWindow(QMainWindow):
+    def __init__(self, data):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/app_skeleton_logger.py
+17631703, 411
+------------------
+class MainWindow(QMainWindow):
+    def __init__(self, data):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_stretch.py
+17535563, 34
+------------------
+if __name__ == '__main__':
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_edit_using_former_value_as_default.py
+8480223, 47
+------------------
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:           # <--
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_timeedit_widget.py
+8480223, 57
+------------------
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_combobox_widget.py
+8480223, 56
+------------------
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_edit_using_different_types_in_model.py
+8480223, 49
+------------------
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:           # <--
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_slider_widget.py
+8480223, 55
+------------------
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QDataWidgetMapper.py
+8480223, 49
+------------------
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/fullscreen_window_toggle_with_keyboard_event.py
+17631703, 16
+------------------
+class MainWindow(QWidget):
+    def __init__(self):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/fullscreen_window_toggle_with_keyboard_event.py
+17834835, 26
+------------------
+class MainWindow(QWidget):
+    def fullscreen_toggle_key_callback(self):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_using_spinbox_widget.py
+8480223, 41
+------------------
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_dial_widget.py
+8480223, 55
+------------------
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:

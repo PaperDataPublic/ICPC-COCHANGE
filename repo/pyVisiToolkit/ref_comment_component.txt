@@ -1,0 +1,1549 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/Notepad++_extensions/Plugin_Python_Script/mini-helpers/CartesianProduct.py
+17485382, 13
+---------up-------
+11
+def evaluate(event):
+--------down------
+15
+	set1 = set(entry1.get('1.0', 'end-1c').splitlines())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/Notepad++_extensions/Plugin_Python_Script/mini-helpers/generate_Truthtable_Inputs.py
+6336424, 5
+--------down------
+6
+from Tkinter import *
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/Notepad++_extensions/Plugin_Python_Script/extractDMS_PLC-IOs_fromOpenedDMS_v0.1.2.py
+35526466, 258
+---------up-------
+254
+def main(argv=None):
+--------down------
+285
+	answer = notepad.messageBox('You should manually do this for correct interpretation of german Umlaut:\n"Kodierung"->"Zeichensatz"->"Westeuropäisch"->"Windows-1252"\n\nDo you want to continue?', 'Hint for usage', MESSAGEBOXFLAGS.YESNO)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/Notepad++_extensions/Plugin_Python_Script/Truthtable_generator_and_checker.py
+6336424, 21
+--------down------
+23
+import itertools
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/py2exe_scripts/setup_py2exe_DMS_tracer.py
+5811960, 23
+--------down------
+25
+options = {'py2exe': {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/py2exe_scripts/setup_py2exe_DMS_Controlfunction.py
+5811960, 22
+--------down------
+25
+Mydata_files = [('configfile', ['tools\DMS_Controlfunction.yml'])]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/py2exe_scripts/setup_py2exe_DMS_Value_Changer.py
+5811960, 25
+--------down------
+27
+options = {'py2exe': {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/py2exe_scripts/setup_py2exe_Renumber_tool.py
+5811960, 24
+--------down------
+26
+options = {'py2exe': {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/py2exe_scripts/setup_py2exe_TCP_Relay.py
+5811960, 22
+--------down------
+24
+options = {'py2exe': {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Blinkenlights_Emulator.py
+9226516, 75
+---------up-------
+70
+def get_encoding():
+--------down------
+76
+	global ENCODING_STDOUT2
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Blinkenlights_Emulator.py
+3224268, 107
+---------up-------
+87
+def my_print(line):
+--------down------
+107
+	try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Blinkenlights_Emulator.py
+8928240, 129
+---------up-------
+115
+class BlmFrame(object):
+	def append_row(self, row_str):
+--------down------
+129
+		self.row_list.append(int(row_str, 2))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Blinkenlights_Emulator.py
+13180941, 279
+---------up-------
+183
+class Blinkenlights_Emulator(object):
+	def play_moviefile(self):
+--------down------
+279
+		try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Visi_Snake.py
+9226516, 61
+---------up-------
+56
+def get_encoding():
+--------down------
+62
+	global ENCODING_STDOUT2
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Visi_Snake.py
+3224268, 93
+---------up-------
+73
+def my_print(line):
+--------down------
+93
+	try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/BlinkenlightsRGB_Emulator.py
+9226516, 100
+---------up-------
+95
+def get_encoding():
+--------down------
+101
+	global ENCODING_STDOUT2
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/BlinkenlightsRGB_Emulator.py
+3224268, 132
+---------up-------
+112
+def my_print(line):
+--------down------
+132
+	try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/visi_binaries.py
+3429250, 24
+---------up-------
+22
+def _search_tasklist():
+--------down------
+29
+	cmd = 'WMIC PROCESS get ExecutablePath'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/visi_binaries.py
+2422798, 46
+---------up-------
+39
+def _search_usual_locations():
+	for directory in DIRECTORIES:
+--------down------
+46
+		filename = os.path.join(directory, BIN_FOLDER, DMS_FILENAME)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Curses_emulator.py
+14973963, 29
+--------down------
+47
+import dms.dmspipe
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Curses_emulator.py
+9226516, 72
+---------up-------
+67
+def get_encoding():
+--------down------
+73
+	global ENCODING_STDOUT2
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Curses_emulator.py
+3224268, 106
+---------up-------
+86
+def my_print(line):
+--------down------
+106
+	try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Curses_emulator.py
+1319615, 116
+---------up-------
+114
+class Error(Exception):
+--------down------
+116
+	def __init__(self, message):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Animation.py
+9226516, 43
+---------up-------
+38
+def get_encoding():
+--------down------
+44
+	global ENCODING_STDOUT2
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Animation.py
+3224268, 75
+---------up-------
+55
+def my_print(line):
+--------down------
+75
+	try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Animation.py
+13180941, 133
+---------up-------
+88
+def main(argv=None):
+	if is_valid:
+--------down------
+133
+		try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Animation.py
+699866, 175
+---------up-------
+88
+def main(argv=None):
+	if is_valid:
+		try:
+			while True:
+--------down------
+175
+				my_print('drawn road "' + "{0:b}".format(new_value).zfill(NOF_COLUMNS))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Display3b.py
+16396141, 74
+---------up-------
+54
+class Display(object):
+	def __init__(self, dms_ws):
+--------down------
+75
+		self._buffer = np.zeros((Display.SCREEN_HEIGHT, Display.SCREEN_WIDTH), dtype='uint8')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Display3b.py
+9252373, 155
+---------up-------
+54
+class Display(object):
+	def update(self):
+--------down------
+159
+		row_idx_list = range(Display.SCREEN_HEIGHT)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Display3b.py
+5218895, 211
+---------up-------
+175
+def main(dms_server, dms_port):
+	with dms.DMSClient(whois_str=u'pyVisiToolkit',
+--------down------
+211
+		main.pause = True
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Display3.py
+9252373, 160
+---------up-------
+53
+class Display(object):
+	def update(self):
+--------down------
+164
+		row_idx_list = range(Display.SCREEN_HEIGHT)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Display2.py
+9252373, 150
+---------up-------
+52
+class Display(object):
+	def update(self):
+--------down------
+152
+		row_idx_list = range(Display.SCREEN_HEIGHT)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/clipboard.py
+3400495, 31
+---------up-------
+28
+def cp_PROMOS_factory(curr_size):
+--------down------
+32
+	class CP_PROMOS(ctypes.Structure):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/clipboard.py
+7015487, 32
+---------up-------
+28
+def cp_PROMOS_factory(curr_size):
+--------down------
+32
+	class CP_PROMOS(ctypes.Structure):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/clipboard.py
+579687, 119
+--------down------
+119
+class Clipboard(object):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/clipboard.py
+22075754, 280
+---------up-------
+120
+class Clipboard(object):
+	def paste_c(self):
+		if handle != 0:
+--------down------
+281
+			buf_size = Clipboard.GlobalSize(handle)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/EventSystem.py
+20598791, 224
+---------up-------
+217
+class _Async_Executor_thread(threading.Thread):
+	def __init__(self, target_q):
+--------down------
+224
+		self.daemon = False
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_to_ALM_Mapper.py
+6018340, 129
+---------up-------
+106
+class PSC_Analyzer(object):
+	def analyze(self):
+		for fullpath in self._filelist_generator(self._psc_path):
+			with open(fullpath, mode='r') as f:
+--------down------
+130
+				patterns = [re.compile(r'LIB;[\w\s]+\.plb;\w+;([\w:]+);BMO:.+'),                    # BMO instances
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_to_ALM_Mapper.py
+8899905, 175
+---------up-------
+106
+class PSC_Analyzer(object):
+	def get_psc_filename(self, bmo_instance):
+		try:
+			else:
+--------down------
+187
+				def _sorting_key_function(fullpath):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_to_ALM_Mapper.py
+3013449, 180
+---------up-------
+106
+class PSC_Analyzer(object):
+	def get_psc_filename(self, bmo_instance):
+		try:
+			else:
+--------down------
+187
+				def _sorting_key_function(fullpath):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_to_ALM_Mapper.py
+5212870, 191
+---------up-------
+106
+class PSC_Analyzer(object):
+	def get_psc_filename(self, bmo_instance):
+		try:
+			else:
+				def _sorting_key_function(fullpath):
+--------down------
+196
+					isLogik = '_LG' in fullpath or '_LOGIK' in fullpath.upper() or '-LOGIK' in fullpath.upper()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_to_ALM_Mapper.py
+26660654, 313
+---------up-------
+213
+class ALM_datapoint(object):
+	def write_ALM_screen(self, psc_analyzer, only_dryrun=False):
+		else:
+			if len(unwritten_screens_dict):
+--------down------
+313
+				for alm, screen in unwritten_screens_dict.iteritems():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_tracer.py
+415511, 66
+---------up-------
+65
+def print_with_timestamp(line_str):
+--------down------
+66
+	time_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_tracer.py
+13180941, 88
+---------up-------
+71
+def main(dms_node_str, pause_secs, section_sep_str):
+--------down------
+88
+	try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_tracer.py
+8259001, 151
+---------up-------
+147
+if __name__ == '__main__':
+--------down------
+151
+	parser.add_argument('-l', '--linear', action='store_true', help='suppress additional newlines between differences (default is building sections for better readability)')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_tracer.py
+4480075, 157
+---------up-------
+147
+if __name__ == '__main__':
+--------down------
+157
+	parser.add_argument('DMS_NODE', default='BMO', nargs='?', help='DMS node and all subnodes to trace (e.g. MSR01:H01, default is BMO)')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Trenddata_Plausibility.py
+26744366, 100
+---------up-------
+59
+class Param_Frame(Tkinter.Frame):
+	def _draw_gui(self):
+--------down------
+100
+		options = Param_Frame.INTERVALS.keys()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Trenddata_Plausibility.py
+16522380, 350
+---------up-------
+236
+class MyGUI(Tkinter.Tk):
+	def _cb_btn_grab_data(self):
+		try:
+			if self._datatype in ("int", "double", "bool"):
+				if one_resp.code == 'ok':
+--------down------
+352
+				else:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Trenddata_Plausibility.py
+10856106, 376
+---------up-------
+236
+class MyGUI(Tkinter.Tk):
+	def _histData_as_timeseries(self, histdata):
+		if histdata:
+--------down------
+376
+			tstamps = []
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Ping_Trend.py
+4896288, 55
+---------up-------
+52
+class AsyncProcess(threading.Thread):
+--------down------
+55
+	def __init__(self, cmd, stdout_queue):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Ping_Trend.py
+4084322, 73
+---------up-------
+52
+class AsyncProcess(threading.Thread):
+	def stop(self):
+--------down------
+73
+		logger.debug('AsyncProcess.stop(): killing background subprocess...')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Ping_Trend.py
+13180941, 243
+---------up-------
+229
+def main(dms_server, dms_port, target_list, only_dryrun):
+	with dms.DMSClient(whois_str=u'pyVisiToolkit',
+		if not only_dryrun:
+--------down------
+244
+			try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Ping_Trend.py
+8259001, 268
+---------up-------
+265
+if __name__ == '__main__':
+--------down------
+271
+	requiredArg = parser.add_argument_group('required (ping target)')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Ping_Trend.py
+24180527, 271
+---------up-------
+265
+if __name__ == '__main__':
+--------down------
+271
+	requiredArg = parser.add_argument_group('required (ping target)')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_Controlfunction.py
+1641280, 37
+--------down------
+44
+logger = logging.getLogger('tools.DMS_Controlfunction')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_Controlfunction.py
+1396668, 38
+--------down------
+44
+logger = logging.getLogger('tools.DMS_Controlfunction')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_Controlfunction.py
+6190776, 108
+---------up-------
+90
+class DMSDatapoint_Result(DMSDatapoint):
+	def write_to_dms(self, newval):
+		if self.is_available():
+			if newval != self._value:
+				except Exception as ex:
+--------down------
+108
+					raise ex
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_Controlfunction.py
+10220599, 239
+---------up-------
+218
+class Controlfunction(object):
+	def _get_cached_result(expr_str, locals_dict):
+--------down------
+239
+		key_tuple = (expr_str, ) + tuple(sorted(locals_dict.items()))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_Controlfunction.py
+13180941, 431
+---------up-------
+417
+def main(dms_server, dms_port, only_check, only_dryrun, configfile):
+	with dms.DMSClient(whois_str=u'pyVisiToolkit',
+		if not only_check:
+--------down------
+431
+			try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_Controlfunction.py
+2844516, 474
+---------up-------
+417
+def main(dms_server, dms_port, only_check, only_dryrun, configfile):
+	with dms.DMSClient(whois_str=u'pyVisiToolkit',
+		if not only_check:
+			try:
+				while True:
+--------down------
+480
+			except KeyboardInterrupt:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_Controlfunction.py
+8259001, 491
+---------up-------
+488
+if __name__ == '__main__':
+--------down------
+492
+	parser.add_argument('--check', '-c', action='store_true', dest='only_check', default=False, help='only check configurationfile and exit (default: False)')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/TCP_Relay.py
+19143091, 36
+---------up-------
+28
+def main(local_ip, local_port, remote_host, remote_port):
+--------down------
+36
+	sock_srv.bind((str(local_ip), local_port))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/TCP_Relay.py
+25447803, 60
+---------up-------
+28
+def main(local_ip, local_port, remote_host, remote_port):
+	try:
+		while 1:
+--------down------
+60
+			if client_conn in ready_to_read:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+9226516, 59
+---------up-------
+54
+def get_encoding():
+--------down------
+60
+	global ENCODING_STDOUT2
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+3224268, 91
+---------up-------
+71
+def my_print(line):
+--------down------
+91
+	try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+39359245, 128
+---------up-------
+100
+class PscFile(object):
+	def get_metadata(self):
+--------down------
+132
+		self._read_metadata()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+6591931, 129
+---------up-------
+100
+class PscFile(object):
+	def get_metadata(self):
+--------down------
+132
+		self._read_metadata()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+455612, 131
+---------up-------
+100
+class PscFile(object):
+	def get_metadata(self):
+--------down------
+132
+		self._read_metadata()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+311627, 132
+---------up-------
+100
+class PscFile(object):
+	def get_metadata(self):
+--------down------
+132
+		self._read_metadata()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+8036499, 187
+---------up-------
+162
+class Dirlister(object):
+	def _to_unicode(self, text, encoding):
+--------down------
+187
+		try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+10695139, 231
+---------up-------
+162
+class Dirlister(object):
+	def get_listing(self, sort_item=0, reversed=False):
+--------down------
+231
+		return sorted(detail_list, key=itemgetter(sort_item), reverse=reversed)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+4072150, 379
+---------up-------
+236
+class FileSelectorGUI(Tkinter.Tk):
+	def __init__(self, curr_DMS, curr_image_dp, curr_src_path, curr_clipboard):
+--------down------
+379
+		usage_label = Tkinter.Label(self, text=USAGE_HINT_TEXT, font="-weight bold")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+8830507, 439
+---------up-------
+236
+class FileSelectorGUI(Tkinter.Tk):
+	def populate_tree(self):
+		if self.tree:
+--------down------
+439
+			children = self.tree.get_children()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+3794268, 459
+---------up-------
+236
+class FileSelectorGUI(Tkinter.Tk):
+	def _get_clicked_filename(self, event=None):
+		if event:
+--------down------
+459
+			curr_item = self.tree.identify('item', event.x, event.y)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+31584415, 503
+---------up-------
+236
+class FileSelectorGUI(Tkinter.Tk):
+	def singleclick_handler(self, event):
+--------down------
+505
+		region = self.tree.identify("region", event.x, event.y)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+12014210, 524
+---------up-------
+236
+class FileSelectorGUI(Tkinter.Tk):
+	def rightclick_handler(self, event):
+--------down------
+525
+		try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+281888, 554
+---------up-------
+236
+class FileSelectorGUI(Tkinter.Tk):
+	def _cb_open_windows_explorer(self):
+--------down------
+554
+		subprocess.Popen(r'explorer /select,"' + self._get_clicked_fullpath() + '"')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/PSC_file_selector.py
+13588908, 588
+---------up-------
+236
+class FileSelectorGUI(Tkinter.Tk):
+	def _cb_entry_filepattern(self, *args):
+		except:
+--------down------
+588
+			self.file_regex_entrybox.configure(bg="red")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Generate_BMO_Link_Graph.py
+25734244, 184
+---------up-------
+56
+def main(argv=None):
+	with open(export_fname, 'w') as f:
+		for plc in sorted(used_plc_list, reverse=True):
+--------down------
+184
+			mynodes = '"; "'.join(hardware_bmo_list)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_Value_Changer.py
+26348989, 337
+---------up-------
+271
+class _Button_Frame(tk.Frame):
+	def _cb_btn_read(self):
+--------down------
+337
+		for area in ['key', 'metadata', 'oldval', 'newval']:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_Value_Changer.py
+32038701, 469
+---------up-------
+393
+class _Text_Frame(tk.Frame):
+	def _yscrollbar_set(self, *kargs, **kwargs):
+--------down------
+469
+		self._scrollbar_command('moveto', kargs[0])
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_Value_Changer.py
+715417, 486
+---------up-------
+485
+def parse_boolean(curr_str):
+--------down------
+487
+	return curr_str.upper() in ['TRUE', '1']
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Search_BMO_Instances.py
+3962247, 115
+---------up-------
+27
+class SearchBmoGui(tk.Tk):
+	def _cb_button_search_bmo(self):
+		if self.textarea_frame != None:
+--------down------
+115
+			self.textarea_frame.grid_forget()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Search_BMO_Instances.py
+17657212, 140
+---------up-------
+131
+class _Text_area(tk.Frame):
+	def _show_text(self):
+--------down------
+140
+		xscrollbar = tk.Scrollbar(self)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/BMO_tie_point.py
+3962247, 158
+---------up-------
+126
+class TiepointGui(tk.Tk):
+	def _cb_draw_clipframe(self):
+		if self.clip_frm != None:
+--------down------
+158
+			self.clip_frm.pack_forget()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/BMO_tie_point.py
+3085696, 282
+---------up-------
+272
+class _Dp_frame(tk.Frame):
+	def __init__(self, tiepoint, displayfilter, clipboard, *kargs, **kwargs):
+--------down------
+282
+		self.canvas = tk.Canvas(self, borderwidth=0, background="gray", width=800, height=500)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/BMO_tie_point.py
+6920302, 390
+---------up-------
+272
+class _Dp_frame(tk.Frame):
+	def _draw_structure(self):
+		for child in sorted(self.tiepoint.dp_dict):
+			if curr_dp_property.issuperset(self.displayfilter):
+--------down------
+390
+				myfunc = functools.partial(self._cb_button_to_clipboard_normal, child)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/BMO_tie_point.py
+17657212, 560
+---------up-------
+551
+class _Popup_text(tk.Toplevel):
+	def _show_text(self):
+--------down------
+560
+		xscrollbar = tk.Scrollbar(self)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Renumber_tool.py
+13954841, 77
+---------up-------
+46
+class Plc(object):
+	def renumber_resources(self):
+--------down------
+80
+		Digital_resource.reset_addr_generator()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Renumber_tool.py
+11047803, 583
+---------up-------
+546
+class _SdriverFrame(tk.Frame):
+	def _draw_table(self):
+		if len(self.channel_dict_of_dicts) > 0:
+--------down------
+583
+			lab = tk.Label(master=self, text='name', relief=tk.RIDGE)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Renumber_tool.py
+6920302, 621
+---------up-------
+546
+class _SdriverFrame(tk.Frame):
+	def _draw_table(self):
+		if len(self.channel_dict_of_dicts) > 0:
+			for channel in self.channel_dict_of_dicts:
+--------down------
+621
+				myfunc = functools.partial(self._cb_button_activate, channel)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/Renumber_tool.py
+459083, 629
+---------up-------
+546
+class _SdriverFrame(tk.Frame):
+	def _draw_table(self):
+		if len(self.channel_dict_of_dicts) > 0:
+--------down------
+629
+			self.rootwindow.after(self.BGTASKINTERVAL, self._update_status)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendExpression.py
+10695139, 96
+---------up-------
+58
+class Expression(object):
+	def _get_timestamps_generator(self, start_datetime=None, stop_datetime=None):
+		while tstamp_generator_list:
+--------down------
+97
+			key_func = lambda tstamp_iter_source: tstamp_iter_source.head_elem.tstamp_dt
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/dbdata.py
+3789372, 145
+---------up-------
+117
+class Statusbit_Meaning(object):
+	def get_curr_statusbits_set(self, curr_status):
+--------down------
+147
+		if curr_status in Statusbit_Meaning.statusvalue_meaning_dict:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/dbdata.py
+1444159, 173
+---------up-------
+168
+class DBData(ctypes.Structure):
+--------down------
+173
+	_fields_ = [
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/dbdata.py
+390250, 279
+---------up-------
+210
+class HighLevelDBData(DBData):
+--------down------
+281
+	def __hash__(self):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/pdbs.py
+1444159, 86
+---------up-------
+26
+class Pdbs(object):
+	def pyPdbsGetData(self, dmsname_str, start_time_int, end_time_int, count_int):
+--------down------
+90
+		self.pmospipe.PdbsGetData.argtypes = [ctypes.c_int, ctypes.c_char_p, ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.POINTER(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/pdbs.py
+16704408, 90
+---------up-------
+26
+class Pdbs(object):
+	def pyPdbsGetData(self, dmsname_str, start_time_int, end_time_int, count_int):
+--------down------
+90
+		self.pmospipe.PdbsGetData.argtypes = [ctypes.c_int, ctypes.c_char_p, ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.POINTER(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+18536182, 86
+---------up-------
+59
+def get_trendfile_structure_obj(file_fullpath):
+	class Trendfile_structure(ctypes.LittleEndianStructure):
+--------down------
+86
+		_fields_ = [
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+231767, 127
+---------up-------
+99
+class RawTrendfile(object):
+	def get_dbdata_elements_generator(self, start_datetime=None, end_datetime=None):
+--------down------
+130
+		for elem in self._trendstruct.dbdata:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+10576548, 276
+---------up-------
+261
+class IndexedTrendfile(RawTrendfile):
+	def __init__(self, fileFullpath):
+--------down------
+276
+		self.minValue = -float("inf")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+39359245, 419
+---------up-------
+395
+class _Cached_Trendfile(object):
+	def get_metadata(self):
+--------down------
+423
+		self._read_metadata()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+6591931, 420
+---------up-------
+395
+class _Cached_Trendfile(object):
+	def get_metadata(self):
+--------down------
+423
+		self._read_metadata()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+455612, 422
+---------up-------
+395
+class _Cached_Trendfile(object):
+	def get_metadata(self):
+--------down------
+423
+		self._read_metadata()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+311627, 423
+---------up-------
+395
+class _Cached_Trendfile(object):
+	def get_metadata(self):
+--------down------
+423
+		self._read_metadata()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+295135, 508
+---------up-------
+472
+class MetaTrendfile(object):
+	def _get_trend_filename(self):
+--------down------
+509
+		valid_chars = set(string.ascii_letters) ^ set(string.digits)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+42950, 697
+---------up-------
+472
+class MetaTrendfile(object):
+	def get_DBData_Timestamp_Search_Result(self, timestamp_datetime):
+		try:
+			if bak_searching_future:
+				for year, month in sorted(self.backup_subdirs_dict.keys(), reverse=False):
+--------down------
+697
+					last_day_of_month = calendar.monthrange(int(year), int(month))[1]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+15114023, 831
+---------up-------
+472
+class MetaTrendfile(object):
+	def get_dbdata_lists_generator(self, start_datetime=None, end_datetime=None):
+		class _deque_wrapper(object):
+			def __len__(self):
+--------down------
+833
+				return len(self._deque_obj)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+7816363, 832
+---------up-------
+472
+class MetaTrendfile(object):
+	def get_dbdata_lists_generator(self, start_datetime=None, end_datetime=None):
+		class _deque_wrapper(object):
+			def __len__(self):
+--------down------
+833
+				return len(self._deque_obj)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+15004772, 959
+---------up-------
+472
+class MetaTrendfile(object):
+	def get_dbdata_timestamps_generator(self, start_datetime=None, stop_datetime=None):
+--------down------
+959
+		def generate_backup_iterators():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+10695139, 988
+---------up-------
+472
+class MetaTrendfile(object):
+	def get_dbdata_timestamps_generator(self, start_datetime=None, stop_datetime=None):
+		while tstamp_generator_list:
+--------down------
+989
+			tstamp_generator_list = sorted(tstamp_generator_list, key=itemgetter(0))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/datasource/trendfile.py
+4741243, 1018
+---------up-------
+1006
+def main(argv=None):
+--------down------
+1047
+	print('######################################################################')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/hdb2csv.py
+7588511, 50
+---------up-------
+29
+class Converter(object):
+	def convert(self):
+		with open(self._csv_filename, "w") as f:
+			for item in curr_trf.get_dbdata_elements_generator():
+--------down------
+51
+				timestamp_str = item.get_datetime().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/hdb2csv.py
+12400256, 54
+---------up-------
+29
+class Converter(object):
+	def convert(self):
+		with open(self._csv_filename, "w") as f:
+			for item in curr_trf.get_dbdata_elements_generator():
+--------down------
+58
+				value_str = str(item.getValue())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/trend/Vergleich-Trenddaten_File_vs_PDBS.py
+5214578, 40
+---------up-------
+29
+def main(argv=None):
+--------down------
+43
+	print('\n*** getting Trenddata from Visi.Plus PDBS-service ***')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/Change_line_colors.py
+3224268, 48
+---------up-------
+32
+def my_print(line):
+--------down------
+48
+	print(unicode_line.encode(ENCODING_STDOUT, errors='replace'))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/Analyzer.py
+3224268, 49
+---------up-------
+33
+def my_print(line):
+--------down------
+49
+	print(unicode_line.encode(ENCODING_STDOUT, errors='replace'))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/Analyzer.py
+12550929, 62
+---------up-------
+53
+def pretty_print(line1, line2):
+--------down------
+62
+	for curr_parts_list in [parts1, parts2]:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/BMO_Link_Tool.py
+3977570, 235
+---------up-------
+150
+class BMO_Linkcache(threading.Thread):
+	def update_bmo_instances(self, bmo_instances_list):
+		for inst in removed_instances:
+--------down------
+235
+			self._dbcur.execute("DELETE FROM instances WHERE instance_id=?", (inst_id,))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/BMO_Link_Tool.py
+39087139, 543
+---------up-------
+452
+class PSC_Elements_Handler(object):
+	def draw_elements(self, canvas_visu, bmo_check_func):
+		for instance, metadata in self._bmo_instances.items():
+--------down------
+543
+			x, y = metadata.get_center_coords()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/BMO_Link_Tool.py
+3962247, 692
+---------up-------
+629
+class MyGUI(Tkinter.Frame):
+	def _buildCanvasVisu(self, parent):
+		if self._canvas_visu:
+--------down------
+692
+			self._canvas_visu.grid_forget()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/BMO_Link_Tool.py
+44887576, 704
+---------up-------
+629
+class MyGUI(Tkinter.Frame):
+	def _buildCanvasVisu(self, parent):
+--------down------
+708
+		self._canvas_visu.grid(row=0, column=0, padx=10, pady=10, sticky='nsew')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/BMO_Link_Tool.py
+15466469, 705
+---------up-------
+629
+class MyGUI(Tkinter.Frame):
+	def _buildCanvasVisu(self, parent):
+--------down------
+708
+		self._canvas_visu.grid(row=0, column=0, padx=10, pady=10, sticky='nsew')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/BMO_Link_Tool.py
+33121545, 712
+---------up-------
+629
+class MyGUI(Tkinter.Frame):
+	def _buildCanvasVisu(self, parent):
+--------down------
+712
+		self._canvas_visu.tag_bind(MyGUI.BMO_EXISTS_TAG, '<Motion>', self._on_mouseover)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/BMO_Link_Tool.py
+35111894, 718
+---------up-------
+629
+class MyGUI(Tkinter.Frame):
+	def _buildCanvasVisu(self, parent):
+--------down------
+718
+		self._canvas_visu.tag_bind(MyGUI.BMO_EXISTS_TAG, '<Leave>', self._on_mouse_leave)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/BMO_Link_Tool.py
+6789351, 726
+---------up-------
+629
+class MyGUI(Tkinter.Frame):
+	def _buildCanvasVisu(self, parent):
+--------down------
+727
+		self._drag_data = {"x": 0, "y": 0, "source_item": None}
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/BMO_Link_Tool.py
+13114953, 738
+---------up-------
+629
+class MyGUI(Tkinter.Frame):
+	def _on_mouseover(self, event):
+--------down------
+739
+		canvas = event.widget
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/ParserConfig.py
+3224268, 50
+---------up-------
+34
+def my_print(line):
+--------down------
+50
+	print(unicode_line.encode(ENCODING_STDOUT, errors='replace'))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/ParserConfig.py
+10174211, 100
+---------up-------
+90
+class ParserConfig(object):
+	def __init__(self, fname):
+--------down------
+100
+		self._filename = os.path.join(os.path.dirname(__file__), fname)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/ParserConfig.py
+15159854, 254
+---------up-------
+196
+class Mapping(object):
+	def is_property_obj_valid(self, obj):
+--------down------
+254
+		prop_obj = Mapping.obj_dict[self._property_obj_str]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/ParserConfig.py
+510972, 265
+---------up-------
+196
+class Mapping(object):
+	def is_property_obj_valid(self, obj):
+		else:
+--------down------
+266
+			if DEBUGGING:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/Parser.py
+3224268, 53
+---------up-------
+35
+def my_print(line):
+--------down------
+53
+	print(unicode_line.encode(ENCODING_STDOUT, errors='replace'))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/Parser.py
+8009882, 80
+---------up-------
+66
+class PscFile(object):
+	def parse_file(self):
+--------down------
+81
+		with codecs.open(self._filename, encoding=ENCODING_FILES_PSC, mode=u'r') as f:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/Parser.py
+3277503, 81
+---------up-------
+66
+class PscFile(object):
+	def parse_file(self):
+--------down------
+81
+		with codecs.open(self._filename, encoding=ENCODING_FILES_PSC, mode=u'r') as f:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/Parser.py
+390250, 291
+---------up-------
+147
+class PscCommon(object):
+	def set_property(self, prop_str, new_val, new_key=False):
+		if new_val != None:
+			else:
+				else:
+					for curr_mapping_obj in curr_mapping_obj_list:
+--------down------
+291
+						assert repr(new_val) == repr(my_prop), u'ERROR: storing and reloading property failed! new_val=' + repr(new_val) + u', my_prop=' + repr(my_prop)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/Preview_Accessrights.py
+3224268, 54
+---------up-------
+36
+def my_print(line):
+--------down------
+54
+	print(unicode_line.encode(ENCODING_STDOUT, errors='replace'))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/Preview_Accessrights.py
+3962247, 257
+---------up-------
+181
+class myGUI(Tkinter.Frame):
+	def _buildCanvasVisu(self, parent):
+		if self._canvas_visu:
+--------down------
+257
+			self._canvas_visu.grid_forget()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/Change_Accessrights.py
+3224268, 51
+---------up-------
+33
+def my_print(line):
+--------down------
+51
+	print(unicode_line.encode(ENCODING_STDOUT, errors='replace'))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/ParserVars.py
+390250, 27
+---------up-------
+15
+class PscVariable(object):
+--------down------
+27
+	def __eq__(self, other):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/ParserVars.py
+455612, 126
+---------up-------
+116
+class PscVar_float(PscVariable):
+	def get_serialized(self):
+--------down------
+126
+		return u'{0:.2f}'.format(self._value)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/ParserVars.py
+4647050, 272
+---------up-------
+261
+class PscVar_value_rgb_pairs(PscVariable):
+	def __init__(self, elem_list=[]):
+--------down------
+272
+		for elem_tuple in zip(elem_list[0::2], elem_list[1::2]):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/visu/psc/ParserVars.py
+5676646, 467
+---------up-------
+403
+class PscVar_RGB(PscVariable):
+	def get_html(self):
+--------down------
+467
+		hex_string_parts = []
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket.py
+19775685, 139
+---------up-------
+135
+class _Mydict(collections.Mapping):
+--------down------
+142
+	def __init__(self, **kwargs):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket.py
+2405590, 158
+---------up-------
+135
+class _Mydict(collections.Mapping):
+	def __getattr__(self, name):
+--------down------
+158
+		try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket.py
+5624912, 370
+---------up-------
+364
+class _CmdGet(object):
+	def __init__(self, msghandler, path, **kwargs):
+--------down------
+372
+		self.path = u'' + path
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket.py
+5384914, 372
+---------up-------
+364
+class _CmdGet(object):
+	def __init__(self, msghandler, path, **kwargs):
+--------down------
+372
+		self.path = u'' + path
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket.py
+969285, 765
+---------up-------
+748
+class HistData_detail(_Mylist):
+	def __init__(self, histobj_list):
+		for histobj in histobj_list:
+			for field in HistData_detail._fields:
+				if field == u'stamp':
+--------down------
+765
+					try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket.py
+8487673, 1391
+---------up-------
+1378
+class _MessageHandler(object):
+	def __init__(self, dmsclient_obj, whois_str, user_str, subES_queue):
+--------down------
+1394
+		self._pending_response_dict = {}
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket.py
+5191830, 1619
+---------up-------
+1378
+class _MessageHandler(object):
+	def handle(self, msg):
+		except Exception as ex:
+--------down------
+1619
+			logger.exception("exception occurred in _MessageHandler.handle()")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmspipe.py
+5082753, 33
+---------up-------
+32
+class DMS_STRING(ctypes.Structure):
+--------down------
+36
+	MAXLENGTH = 81  #  (max. string length in DMS: 80 characters + NULL character)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmspipe.py
+10007443, 34
+---------up-------
+32
+class DMS_STRING(ctypes.Structure):
+--------down------
+36
+	MAXLENGTH = 81  #  (max. string length in DMS: 80 characters + NULL character)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket_test2.py
+31078728, 30
+--------down------
+41
+from autobahn.twisted.websocket import WebSocketClientProtocol
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket_test2.py
+5624912, 129
+---------up-------
+123
+class _DMSCmdGet(object):
+	def __init__(self, dmsclient, path, **kwargs):
+--------down------
+130
+		self.dmsclient = dmsclient
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket_test2.py
+3249524, 424
+---------up-------
+413
+if __name__ == '__main__':
+	for x in range(3):
+--------down------
+424
+		print '.',
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/datapoint.py
+21025959, 180
+---------up-------
+179
+class Dms_dp_Factory(object):
+--------down------
+180
+	dp_types_dict = { 'NONE':   Dp_NONE,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket_test4.py
+5624912, 106
+---------up-------
+100
+class _DMSCmdGet(object):
+	def __init__(self, dmsclient, path, **kwargs):
+--------down------
+107
+		self.dmsclient = dmsclient
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket_test1.py
+31078728, 26
+--------down------
+37
+from autobahn.twisted.websocket import WebSocketClientProtocol
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket_test1.py
+6526923, 86
+---------up-------
+55
+class MyClientProtocol(WebSocketClientProtocol):
+	def onMessage(self, payload, isBinary):
+--------down------
+86
+		reactor.callFromThread(reactor.stop)

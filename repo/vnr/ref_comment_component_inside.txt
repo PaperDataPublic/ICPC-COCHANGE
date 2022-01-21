@@ -1,0 +1,177 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/lingoes/lingoesdb.py
+842059, 166
+------------------
+if __name__ == '__main__':
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/google/googletrans.py
+10334358, 145
+------------------
+class GoogleJsonTranslator(GoogleTranslator):
+  def translate(self, t, to='auto', fr='auto', align=None):
+    try:
+      r = self.session.post(self.api, headers=self.headers, data={
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/getchu/soft.py
+2802168, 313
+------------------
+class SoftApi(object):
+  def _parseprice(self, h):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/gameengine/gamedebugger.py
+6187699, 158
+------------------
+class GameDebugger(object):
+  def search_memory_long(self, pattern, *args, **kwargs):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/qtgesture/gesturefilter.py
+17418108, 265
+------------------
+def _subtract((x1,y1), (x2,y2)):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/winmirror/mirrorwidgets.py
+15306866, 105
+------------------
+class MirroredWindow(QWidget):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/winmirror/mirrorwidgets.py
+1823762, 159
+------------------
+class MirroredWindow(QWidget):
+  def keyPressEvent(self, event):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/winmirror/mirrorwidgets.py
+2086017, 209
+------------------
+class MirroredWindow(QWidget):
+  def mouseMoveEvent_disabled(self, event):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/winmirror/mirrorwidgets.py
+7259847, 307
+------------------
+class MirroredWindow(QWidget):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/sktypes.py
+354038, 29
+------------------
+def is_float(v):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skpaths.py
+122327, 73
+------------------
+def get_python_site():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skhash.py
+7169845, 189
+------------------
+def md5sumpath(path):
+  try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwin.py
+9920452, 115
+------------------
+if skos.WIN:
+  def kill_my_process(ret=0):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwin.py
+1100605, 411
+------------------
+if skos.WIN:
+  def set_window_text(hwnd, text):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwin.py
+6381198, 506
+------------------
+if skos.WIN:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwin.py
+10085381, 619
+------------------
+if skos.WIN:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwin.py
+19508268, 1083
+------------------
+if skos.WIN:
+  def open_cpl(path): # unicode -> bool
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwin.py
+397125, 1149
+------------------
+if skos.WIN:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skproc.py
+13592219, 33
+------------------
+def detachgui(args):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/sknetwork.py
+1969232, 19
+------------------
+class SkNetworkCookieJar(QNetworkCookieJar):
+  def __init__(self, parent=None):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skos.py
+9920452, 37
+------------------
+def kill_my_process():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/initrc.py
+196930, 163
+------------------
+def initenv():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/managers/_trman.py
+1006289, 514
+------------------
+class MachineTranslator(Translator):
+  def _splitTranslate_par(self, text, tr, to, fr, async, keepsNewLine,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/managers/dataman.py
+2068344, 3677
+------------------
+class TrailersItem(object):
+  def iterVideoIdsWithImage(self, cache=True):
+    if self.videos:
+      for it in self.videos:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/app.py
+19195935, 64
+------------------
+class Application(QApplication):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/sysinfo.py
+12015170, 16
+------------------
+def timestamp_jst_diff():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/dialogs/chart.py
+5548121, 183
+------------------
+class _ChartDialog(object):
+  def _plotStackAxes(ax, info):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/windows.py
+3282328, 152
+------------------
+# EOF
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/__main__.py
+380870, 74
+------------------
+def main():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/__main__.py
+1551605, 90
+------------------
+def main():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/__main__.py
+10115126, 338
+------------------
+def main():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/browser/core/network.py
+8362506, 172
+------------------
+class _WbNetworkAccessManager:

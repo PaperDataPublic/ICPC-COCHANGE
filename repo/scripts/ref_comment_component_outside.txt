@@ -1,0 +1,10 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/check_barcodes_pyroseq.py
+20726010, 255
+------------------
+def replace_bad_nucleotides(pattern):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/scripts/python/convert_to_qgraph_format.py
+6602881, 17
+------------------
+"end of file"

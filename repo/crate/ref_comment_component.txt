@@ -1,0 +1,1200 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/tools/make_favicon.py
+6599172, 93
+---------up-------
+81
+def make_favicon() -> None:
+    with TemporaryDirectory() as tmpdirname:
+--------down------
+95
+        svg2png(url=source, write_to=big_png_filename)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/tools/make_favicon.py
+45507, 109
+---------up-------
+81
+def make_favicon() -> None:
+    with TemporaryDirectory() as tmpdirname:
+        for favicon_filename in FAVICON_TARGETS:
+--------down------
+111
+            img.save(favicon_filename)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/tools/install_wkhtmltopdf.py
+13876875, 97
+---------up-------
+92
+elif LINUX_DIST in ('fedora', 'rhel', 'centos'):
+--------down------
+97
+    extension = 'rpm'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/tools/make_package.py
+2806897, 181
+--------down------
+182
+if os.geteuid() == 0:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/tools/make_package.py
+10376206, 294
+---------up-------
+289
+with open(join(DEB_DIR, 'preinst'), 'w') as outfile:
+--------down------
+294
+    print(f"""#!/bin/bash
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/tools/make_package.py
+10653590, 550
+--------down------
+589
+print("Creating " + INSTRUCTIONS)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/docs/source/conf.py
+18969093, 164
+--------down------
+164
+html_sidebars = {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/docs/source/conf.py
+23462494, 238
+--------down------
+239
+def setup(app: Sphinx) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/docs/source/conf.py
+36228537, 248
+--------down------
+249
+autodoc_mock_imports = [
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/docs/source/conf.py
+5599254, 269
+--------down------
+269
+autoclass_content = "both"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/docs/source/nlp/nlprp_test_client.py
+388595, 102
+---------up-------
+48
+def get_response(url: str,
+--------down------
+102
+    log.debug(f"Reply has status_code={r.status_code}, headers={r.headers!r}, "
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/tools/launch_celery.py
+21666229, 45
+--------down------
+48
+def inner_main() -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_webserver/models.py
+5033547, 194
+---------up-------
+176
+class DocProcRequest(Base):
+    document_id = Column(
+--------down------
+195
+        nullable=False,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/preprocess/preprocess_rio.py
+909155, 411
+---------up-------
+402
+.. code-block:: none
+    - AuditTrail
+        RowID -- row number -- how does that work?
+--------down------
+410
+            http://stackoverflow.com/questions/909155/equivalent-of-oracles-rowid-in-sql-server  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/preprocess/rio_view_func.py
+2043259, 240
+---------up-------
+216
+def lookup_from_fragment_first_row_outer_apply(lookup_fields: Iterable[str],
+--------down------
+242
+    return (
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/preprocess/rio_view_func.py
+9275132, 241
+---------up-------
+216
+def lookup_from_fragment_first_row_outer_apply(lookup_fields: Iterable[str],
+--------down------
+242
+    return (
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/preprocess/rio_views.py
+7778444, 2209
+---------up-------
+103
+RIO_VIEWS = OrderedDict([
+    ('Inpatient_Movement', {
+        'add': [
+            {
+                'kwargs': {
+--------down------
+2209
+                    'expr': 'CAST((MovementTypeFlag & 1) AS BIT)',
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/common/memsize.py
+449560, 28
+--------down------
+31
+from gc import get_referents
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/common/extendedconfigparser.py
+1611799, 139
+---------up-------
+122
+class ExtendedConfigParser(configparser.ConfigParser):
+    def __init__(self, *args, case_sensitive: bool = False, **kwargs) -> None:
+        if case_sensitive:
+--------down------
+139
+            self.optionxform = str
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/common/extendedconfigparser.py
+1835018, 371
+---------up-------
+122
+class ExtendedConfigParser(configparser.ConfigParser):
+    def get_pyvalue_list(self,
+--------down------
+371
+        if not isinstance(pyvalue, list):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/common/stringfunc.py
+14630288, 106
+---------up-------
+91
+def uprint(*objects: Any,
+--------down------
+113
+    enc = file.encoding.lower()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/common/sql.py
+11618277, 182
+---------up-------
+163
+class SchemaId(object):
+--------down------
+184
+    def __init__(self, db: str = '', schema: str = '') -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/common/sql.py
+2523676, 985
+---------up-------
+956
+def add_columns(engine: Engine, table: Table, columns: List[Column]) -> None:
+--------down------
+991
+    existing_column_names = get_column_names(engine, tablename=table.name,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/common/sql.py
+18534919, 1266
+---------up-------
+1248
+def create_view(engine: Engine,
+    else:
+--------down------
+1266
+        drop_view(engine, viewname, quiet=True)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/common/sql.py
+2000045, 1718
+---------up-------
+1695
+def sql_fragment_cast_to_int(expr: str,
+--------down------
+1788
+    inttype = "BIGINT" if big else "INTEGER"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/common/sql.py
+14719760, 1719
+---------up-------
+1695
+def sql_fragment_cast_to_int(expr: str,
+--------down------
+1788
+    inttype = "BIGINT" if big else "INTEGER"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/common/sql.py
+14692131, 1720
+---------up-------
+1695
+def sql_fragment_cast_to_int(expr: str,
+--------down------
+1788
+    inttype = "BIGINT" if big else "INTEGER"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/common/sql.py
+29206404, 1731
+---------up-------
+1695
+def sql_fragment_cast_to_int(expr: str,
+--------down------
+1788
+    inttype = "BIGINT" if big else "INTEGER"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/common/sql.py
+712580, 1771
+---------up-------
+1695
+def sql_fragment_cast_to_int(expr: str,
+--------down------
+1788
+    inttype = "BIGINT" if big else "INTEGER"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/models.py
+5601590, 169
+---------up-------
+165
+if getattr(
+--------down------
+169
+    hack_django_pyodbc_azure_cursorwrapper()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/models.py
+1455126, 588
+---------up-------
+540
+class Query(QueryBase):
+    def save(self, *args, **kwargs) -> None:
+--------down------
+588
+        if self.active:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/models.py
+12158463, 1249
+---------up-------
+1216
+class PidLookup(models.Model):
+--------down------
+1249
+    def save(self, *args, **kwargs) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/models.py
+49925, 1393
+---------up-------
+1377
+class PatientMultiQuery(object):
+--------down------
+1468
+    def __init__(self,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/models.py
+1869753, 1452
+---------up-------
+1377
+class PatientMultiQuery(object):
+--------down------
+1468
+    def __init__(self,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/models.py
+16335011, 1453
+---------up-------
+1377
+class PatientMultiQuery(object):
+--------down------
+1468
+    def __init__(self,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/models.py
+96553, 1454
+---------up-------
+1377
+class PatientMultiQuery(object):
+--------down------
+1468
+    def __init__(self,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/models.py
+13197574, 2295
+---------up-------
+2041
+class PatientExplorer(models.Model):
+    def get_xlsx_binary(self) -> bytes:
+--------down------
+2299
+        wb = Workbook()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/models.py
+812925, 2468
+---------up-------
+2457
+class ArchiveTemplateAudit(models.Model):
+--------down------
+2469
+    def __str__(self) -> str:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/archive_backend.py
+9692665, 280
+---------up-------
+270
+def add_file_timestamp_to_url_query(filepath: str,
+--------down------
+286
+    if not isfile(filepath):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/forms.py
+866272, 570
+---------up-------
+510
+class QueryBuilderForm(forms.Form):
+    def clean(self) -> None:
+        if 'submit_select' in self.data or 'submit_select_star' in self.data:
+--------down------
+570
+            return
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/research_db_info.py
+16280918, 505
+---------up-------
+183
+class SingleResearchDatabase(object):
+    def _schema_query_microsoft(
+--------down------
+510
+        if not schema_names:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/research_db_info.py
+10335561, 712
+---------up-------
+674
+) AS d  /* "Every derived table must have its own alias" */
+    def _schema_query_postgres(cls,
+--------down------
+726
+        if not schema_names:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/research_db_info.py
+14713774, 714
+---------up-------
+674
+) AS d  /* "Every derived table must have its own alias" */
+    def _schema_query_postgres(cls,
+--------down------
+726
+        if not schema_names:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/research_db_info.py
+907806, 865
+---------up-------
+776
+) AS d
+    def get_schema_infodictlist(self,
+--------down------
+869
+class ResearchDatabaseInfo(object):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/views.py
+3151469, 224
+---------up-------
+207
+def query_context(request: HttpRequest) -> Dict[str, Any]:
+--------down------
+226
+    query_id = Query.get_active_query_id_or_none(request)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/views.py
+13090907, 616
+---------up-------
+532
+def get_identical_queries(request: HttpRequest, sql: str,
+--------down------
+626
+    identical_queries = all_queries.filter(sql_hash=hash64(sql))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/views.py
+5440657, 1506
+---------up-------
+1446
+def resultset_html_table(fieldnames: List[str],
+--------down------
+1506
+    nlptable = False
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/views.py
+3297048, 2266
+---------up-------
+2231
+def render_lookup(request: HttpRequest,
+--------down------
+2266
+    trids = [] if trids is None else trids
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/research/views.py
+12881294, 3549
+---------up-------
+3535
+def pe_tsv_zip(request: HttpRequest, pe_id: str) -> HttpResponse:
+--------down------
+3549
+    pe = get_object_or_404(PatientExplorer, id=pe_id)  # type: PatientExplorer
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/auth_views.py
+16750464, 52
+---------up-------
+45
+def login_view(request: HttpRequest) -> HttpResponse:
+--------down------
+55
+    nextpage = request.GET.get(UrlKeys.NEXT, reverse(UrlNames.HOME))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/context_processors.py
+3151469, 59
+---------up-------
+39
+def common_context(request: HttpRequest) -> Dict[str, Any]:
+--------down------
+59
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/admin.py
+2805701, 374
+---------up-------
+355
+class EmailDevAdmin(ReadOnlyModelAdmin):
+--------down------
+381
+    def get_view_msg_html(self, obj: Email) -> str:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/admin.py
+991926, 1236
+---------up-------
+1216
+class LetterDevAdmin(ReadOnlyModelAdmin):
+--------down------
+1236
+    actions = ['mark_sent']
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/admin.py
+4938491, 1386
+--------down------
+1388
+class MgrAdminSite(admin.AdminSite):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/admin.py
+3400641, 1387
+--------down------
+1388
+class MgrAdminSite(admin.AdminSite):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/admin.py
+1929707, 1496
+--------down------
+1495
+- http://stackoverflow.com/questions/1929707/django-admin-not-seeing-any-app-permission-problem  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/utils.py
+43893853, 153
+---------up-------
+129
+def url_with_querystring(path: str,
+--------down------
+157
+    pr = urllib.parse.urlparse(path)  # type: urllib.parse.ParseResult
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/utils.py
+26221669, 182
+---------up-------
+129
+def url_with_querystring(path: str,
+--------down------
+184
+    components = list(pr)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/utils.py
+4150258, 212
+---------up-------
+192
+def site_absolute_url(path: str) -> str:
+--------down------
+235
+    url = settings.DJANGO_SITE_ROOT_ABSOLUTE_URL + path
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/utils.py
+32340806, 220
+---------up-------
+192
+def site_absolute_url(path: str) -> str:
+--------down------
+235
+    url = settings.DJANGO_SITE_ROOT_ABSOLUTE_URL + path
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/config/settings.py
+2636536, 60
+--------down------
+60
+try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/config/urls.py
+6791911, 73
+--------down------
+74
+from crate_anon.crateweb.research.research_db_info import research_database_info  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/config/urls.py
+32111203, 369
+---------up-------
+366
+if settings.DEBUG:
+--------down------
+369
+    urlpatterns += [
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/lookup_rio.py
+11206884, 808
+---------up-------
+202
+def lookup_cpft_rio_generic(lookup: PatientLookup,
+    if current_clinicians:
+--------down------
+811
+        contactable_curr_clin.sort(key=attrgetter('start_date'), reverse=True)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/tasks.py
+17313532, 59
+--------down------
+101
+import logging
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/tasks.py
+26862942, 84
+--------down------
+101
+import logging
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/models.py
+8609192, 230
+---------up-------
+170
+class Study(models.Model):
+--------down------
+230
+    AUTODELETE_OLD_FILE_FIELDS = ['study_details_pdf',
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/models.py
+12822847, 1258
+---------up-------
+1244
+class ConsentMode(Decision):
+--------down------
+1259
+    SOURCE_USER_ENTRY = "crate_user_entry"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/models.py
+1455126, 1320
+---------up-------
+1244
+class ConsentMode(Decision):
+    def save(self, *args, **kwargs) -> None:
+--------down------
+1321
+        if self.current:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/models.py
+11721818, 1514
+---------up-------
+1244
+class ConsentMode(Decision):
+    def get_confirm_traffic_to_patient_letter_html(self) -> str:
+--------down------
+1518
+        return render_pdf_html_to_string('letter_patient_confirm_traffic.html',
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/models.py
+7908349, 3565
+---------up-------
+3551
+def make_dummy_objects(request: HttpRequest) -> DummyObjectCollection:
+--------down------
+3564
+    - http://stackoverflow.com/questions/7908349/django-making-relationships-in-memory-without-saving-to-db  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/models.py
+23372786, 3567
+---------up-------
+3551
+def make_dummy_objects(request: HttpRequest) -> DummyObjectCollection:
+--------down------
+3566
+    - http://stackoverflow.com/questions/23372786/django-models-assigning-foreignkey-object-without-saving-to-database  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/models.py
+7121341, 3568
+---------up-------
+3551
+def make_dummy_objects(request: HttpRequest) -> DummyObjectCollection:
+--------down------
+3567
+    - http://stackoverflow.com/questions/7121341/django-adding-objects-to-a-related-set-without-saving-to-db  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/forms.py
+5329586, 133
+---------up-------
+104
+class ResearcherSubmitContactRequestForm(AbstractContactRequestForm):
+    def __init__(self,
+--------down------
+133
+        rids.label = f"{dbinfo.rid_field} ({dbinfo.rid_description}) (RID)"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/utils.py
+2049502, 250
+---------up-------
+219
+def make_forename_surname_email_address(forename: str,
+--------down------
+251
+    attempt = f"{forename}.{surname}@{domain}"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/celery.py
+24519559, 180
+--------down------
+213
+import os
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/celery.py
+20309954, 205
+--------down------
+213
+import os
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/extra/admin.py
+3068843, 76
+---------up-------
+62
+class ReadOnlyModelAdmin(ModelAdmin):
+--------down------
+82
+    actions = None
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/extra/admin.py
+6680631, 77
+---------up-------
+62
+class ReadOnlyModelAdmin(ModelAdmin):
+--------down------
+82
+    actions = None
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/extra/admin.py
+7860612, 148
+---------up-------
+125
+class AddOnlyModelAdmin(ModelAdmin):
+--------down------
+148
+    def get_readonly_fields(self, request: HttpRequest, obj=None) -> List[str]:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/userprofile/models.py
+14345303, 67
+---------up-------
+54
+class UserProfile(models.Model):
+--------down------
+72
+    N_PAGE_CHOICES = (
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/anonymise.py
+19406859, 963
+---------up-------
+901
+def gen_rows(dbname: str,
+    for row in result:
+--------down------
+963
+        config.rows_inserted_per_table[db_table_tuple] += 1
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/config.py
+7443366, 68
+---------up-------
+0
+#!/usr/bin/env python
+--------down------
+75
+import fnmatch
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/models.py
+5424942, 32
+--------down------
+39
+import logging
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/models.py
+2580543, 33
+--------down------
+32
+- http://stackoverflow.com/questions/2580497/database-on-the-fly-with-scripting-languages/2580543#2580543
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/models.py
+2575016, 37
+--------down------
+36
+- http://stackoverflow.com/questions/2574105/sqlalchemy-dynamic-mapping/2575016#2575016
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/models.py
+12297156, 303
+---------up-------
+263
+class OptOutPid(AdminBase):
+    def add(cls, session: Session, pid: Union[int, str]) -> None:
+--------down------
+305
+class OptOutMpid(AdminBase):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/fetch_wordlists.py
+1803628, 31
+--------down------
+46
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/patient.py
+13243766, 70
+---------up-------
+48
+def gen_all_values_for_patient(
+    if not cfg.ddgen_per_table_pid_field:
+--------down------
+70
+    log.debug(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+356100, 30
+--------down------
+43
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+1644856, 31
+--------down------
+43
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+8903239, 32
+--------down------
+43
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+1951506, 33
+--------down------
+43
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+59895, 35
+--------down------
+43
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+23611396, 39
+--------down------
+43
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+320232, 40
+--------down------
+43
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+641420, 41
+--------down------
+43
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/constants.py
+287757, 642
+--------down------
+641
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/altermethod.py
+9662346, 369
+---------up-------
+70
+class AlterMethod(object):
+    def _html_untag_func(text: str) -> str:
+--------down------
+377
+        return HTML_TAG_RE.sub('', text)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/altermethod.py
+753052, 372
+---------up-------
+70
+class AlterMethod(object):
+    def _html_untag_func(text: str) -> str:
+--------down------
+377
+        return HTML_TAG_RE.sub('', text)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/altermethod.py
+3662142, 377
+---------up-------
+70
+class AlterMethod(object):
+    def _html_untag_func(text: str) -> str:
+--------down------
+377
+        return HTML_TAG_RE.sub('', text)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/scrub.py
+2831212, 189
+---------up-------
+131
+class WordList(ScrubberBase):
+    def __init__(self,
+--------down------
+190
+        for f in filenames:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/ddr.py
+10017147, 1173
+---------up-------
+88
+class DataDictionaryRow(object):
+    def set_from_src_db_info(self,
+--------down------
+1173
+        self.dest_table = table
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/anonregex.py
+3512471, 199
+---------up-------
+177
+def get_date_regex_elements(
+--------down------
+200
+    day = "0*" + str(dt.day) + "(?:st|nd|rd|th)?"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/anonregex.py
+15099150, 305
+---------up-------
+226
+def get_code_regex_elements(
+    else:
+        if at_numeric_boundaries_only:
+--------down------
+305
+            return [NOT_DIGIT_LOOKBEHIND + s + NOT_DIGIT_LOOKAHEAD]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/anonregex.py
+164979, 372
+---------up-------
+353
+def get_uk_postcode_regex_elements(
+--------down------
+396
+    e = r"[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/parse_medex.py
+361975, 386
+---------up-------
+0
+#!/usr/bin/env python
+--------down------
+392
+import logging
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/parse_medex.py
+834788, 466
+--------down------
+466
+MEDEX_MAX_FORM_LENGTH = 255  # guess; "Powder For Oral Suspension" (26) is one
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/input_field_config.py
+179085, 288
+---------up-------
+95
+class InputFieldConfig(object):
+    def get_core_indexes_for_dest() -> List[Index]:
+--------down------
+289
+        return [
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/input_field_config.py
+11436469, 554
+---------up-------
+95
+class InputFieldConfig(object):
+    def get_progress_record(self,
+        query = (
+--------down------
+554
+        )
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/models.py
+2292662, 77
+---------up-------
+58
+class NlpRecord(ProgressBase):
+    __table_args__ = (
+        Index(
+--------down------
+84
+            unique=True
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/models.py
+767657, 87
+---------up-------
+58
+class NlpRecord(ProgressBase):
+    __table_args__ = (
+        Index(
+--------down------
+88
+        ),
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/models.py
+6626810, 92
+---------up-------
+58
+class NlpRecord(ProgressBase):
+--------down------
+94
+    pk = Column(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/nlp_manager.py
+7356108, 215
+---------up-------
+170
+def delete_where_no_source(nlpdef: NlpDefinition,
+    - delete where pairs don't match -- is that portable SQL?
+--------down------
+214
+      http://stackoverflow.com/questions/7356108/sql-query-for-deleting-rows-with-not-in-using-2-columns  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/nlp_manager.py
+14600619, 239
+---------up-------
+170
+def delete_where_no_source(nlpdef: NlpDefinition,
+--------down------
+264
+    def insert(records_: List[Dict[str, Any]]) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/nlp_manager.py
+21668606, 245
+---------up-------
+170
+def delete_where_no_source(nlpdef: NlpDefinition,
+--------down------
+264
+    def insert(records_: List[Dict[str, Any]]) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/all_processors.py
+35655257, 111
+---------up-------
+100
+def get_all_subclasses(cls: ClassType) -> List[ClassType]:
+--------down------
+112
+    all_subclasses = []  # List[ClassType]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/all_processors.py
+3862310, 112
+---------up-------
+100
+def get_all_subclasses(cls: ClassType) -> List[ClassType]:
+--------down------
+112
+    all_subclasses = []  # List[ClassType]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/base_nlp_parser.py
+2020014, 173
+---------up-------
+109
+class TableMaker(ABC):
+    def fully_qualified_classname(cls) -> str:
+--------down------
+174
+        return ".".join([cls.__module__,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/base_nlp_parser.py
+27387415, 777
+---------up-------
+625
+class BaseNlpParser(TableMaker):
+    def describe_sqla_col(column: Column, sql_dialect: str = None) \
+--------down------
+777
+        return {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/base_nlp_parser.py
+2077897, 867
+---------up-------
+625
+class BaseNlpParser(TableMaker):
+    def nlprp_description(cls) -> str:
+--------down------
+867
+        return " ".join(docstring.split())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/regex_numbers.py
+5917082, 69
+--------down------
+75
+PLAIN_INTEGER_W_THOUSAND_COMMAS = r"(?: (?: \d{1,3} (?:,\d{3})+ ) | \d+ )"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/nlp_definition.py
+1056323, 556
+---------up-------
+551
+{NlpOutputConfigKeys.DESTFIELDS} =
+--------down------
+559
+    rule            VARCHAR(100)  Rule yielding this drug. Not in XML but is present in a subset: e.g. "weanOff"; max length unclear
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+356100, 32
+--------down------
+44
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+1644856, 33
+--------down------
+44
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+8903239, 34
+--------down------
+44
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+1951506, 35
+--------down------
+44
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+59895, 37
+--------down------
+44
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+23611396, 41
+--------down------
+44
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+320232, 42
+--------down------
+44
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+641420, 43
+--------down------
+44
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/regex_parser.py
+546433, 112
+--------down------
+115
+"""
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/regex_parser.py
+7898310, 113
+--------down------
+115
+"""
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/parse_gate.py
+2715847, 72
+--------down------
+77
+class Gate(BaseNlpParser):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/parse_gate.py
+286614, 98
+---------up-------
+78
+class Gate(BaseNlpParser):
+--------down------
+110
+    def __init__(self,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/linkage/fuzzy_id_match.py
+82831, 253
+---------up-------
+239
+def cache_load(filename: str) -> Any:
+--------down------
+255
+    assert filename
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/linkage/fuzzy_id_match.py
+12992165, 986
+---------up-------
+921
+class NameFrequencyInfo(object):
+    def __init__(self,
+        except FileNotFoundError:
+            with open(csv_filename, "rt") as f:
+                for row in csvreader:
+--------down------
+986
+                    metaphone_freq[metaphone_key] = (
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/linkage/fuzzy_id_match.py
+18671528, 3258
+---------up-------
+3206
+def compare_probands_to_sample(
+--------down------
+3289
+    def process_result(r: MatchResult) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/linkage/fuzzy_id_match.py
+19087189, 3505
+---------up-------
+3491
+def selftest(cfg: MatchConfig, set_breakpoint: bool = False,
+--------down------
+3505
+    suite = unittest.defaultTestLoader.loadTestsFromTestCase(TestTemporalIdentifier)  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/linkage/fuzzy_id_match.py
+1958219, 4464
+---------up-------
+4399
+def validate_2_fetch_rio(cfg: MatchConfig,
+--------down------
+4470
+    log.critical("validate_2_fetch_rio: needs to be checked")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/linkage/fuzzy_id_match.py
+2759756, 4468
+---------up-------
+4399
+def validate_2_fetch_rio(cfg: MatchConfig,
+--------down------
+4470
+    log.critical("validate_2_fetch_rio: needs to be checked")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/setup.py
+7522250, 373
+---------up-------
+318
+setup(
+--------down------
+374
+    install_requires=INSTALL_REQUIRES,

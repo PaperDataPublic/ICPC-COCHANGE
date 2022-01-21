@@ -1,0 +1,400 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mqtt/clpi.py
+31775450, 4
+------------------
+message = 'ON'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/04-retain-qos0-fresh.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/08-ssl-connect-no-auth-wrong-ca.py
+279237, 15
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/08-ssl-connect-cert-auth-crl.py
+279237, 13
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/09-plugin-auth-unpwd-success.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/03-publish-b2c-timeout-qos2-helper.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/02-unsubscribe-qos0.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/02-subpub-qos2.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/08-ssl-connect-no-identity.py
+279237, 14
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/03-publish-b2c-disconnect-qos1.py
+279237, 8
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/03-publish-b2c-timeout-qos2.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/04-retain-qos1-qos0.py
+279237, 11
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/05-clean-session-qos1.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/02-unsubscribe-qos1.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/07-will-qos0.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/06-bridge-br2b-disconnect-qos1-helper.py
+279237, 7
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/08-ssl-connect-cert-auth-without.py
+279237, 17
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/03-pattern-matching-helper.py
+279237, 7
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/01-connect-uname-password-success-no-tls.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/05-clean-session-qos1-helper.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/03-pattern-matching.py
+279237, 7
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/06-bridge-reconnect-local-out.py
+279237, 11
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/01-connect-invalid-id-0-311.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/03-publish-c2b-disconnect-qos2.py
+279237, 8
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/08-tls-psk-bridge.py
+279237, 18
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/07-will-null.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/06-bridge-br2b-disconnect-qos1.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/03-publish-c2b-timeout-qos2.py
+279237, 11
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/08-ssl-bridge.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/01-connect-invalid-protonum.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/07-will-qos0-helper.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/06-bridge-b2br-disconnect-qos1.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/04-retain-qos0-clear.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/04-retain-qos0-repeated.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/04-retain-qos0.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/08-ssl-connect-cert-auth-revoked.py
+279237, 13
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/01-connect-invalid-id-missing.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/01-connect-anon-denied.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/06-bridge-b2br-disconnect-qos2.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/08-ssl-bridge-helper.py
+279237, 7
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/08-ssl-connect-cert-auth-expired.py
+279237, 16
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/02-subscribe-qos0.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/08-ssl-connect-no-auth.py
+279237, 15
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/06-bridge-br2b-disconnect-qos2.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/03-publish-qos2.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/03-publish-b2c-timeout-qos1.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/06-bridge-reconnect-local-out-helper.py
+279237, 7
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/10-listener-mount-point.py
+279237, 8
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/01-connect-uname-no-password-denied.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/06-bridge-br2b-disconnect-qos2-helper.py
+279237, 7
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/07-will-null-topic.py
+279237, 8
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/08-tls-psk-pub.py
+279237, 18
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/01-connect-success.py
+279237, 11
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/09-plugin-auth-unpwd-fail.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/07-will-null-helper.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/02-subpub-qos1.py
+279237, 9
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/broker/03-publish-b2c-disconnect-qos2.py
+279237, 8
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/03-publish-c2b-qos1-timeout.py
+279237, 25
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/01-unpwd-set.py
+279237, 14
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/03-publish-qos0-no-payload.py
+279237, 19
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/02-unsubscribe.py
+279237, 11
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/01-will-unpwd-set.py
+279237, 16
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/03-publish-c2b-qos2.py
+279237, 29
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/09-util-topic-matching.py
+279237, 8
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/01-will-set.py
+279237, 16
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/01-keepalive-pingreq.py
+279237, 16
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/03-publish-b2c-qos2.py
+279237, 25
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/08-ssl-fake-cacert.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/03-publish-c2b-qos2-disconnect.py
+279237, 11
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/03-publish-c2b-qos1-disconnect.py
+279237, 11
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/02-subscribe-qos2.py
+279237, 21
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/04-retain-qos0.py
+279237, 11
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/09-util-topic-tokenise.py
+279237, 8
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/01-con-discon-success.py
+279237, 17
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/08-ssl-bad-cacert.py
+279237, 10
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/03-publish-b2c-qos1.py
+279237, 20
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/08-ssl-connect-no-auth.py
+279237, 19
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/08-ssl-connect-cert-auth.py
+279237, 20
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/ref_code/mosquitto-1.4.7/test/lib/03-publish-c2b-qos2-timeout.py
+279237, 29
+------------------
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/noo-ebs/src/server/mon_nooebs.py
+31775450, 13
+------------------
+message = 'ON'

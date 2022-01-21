@@ -1,0 +1,39 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/fileutil.py
+1035340, 154
+------------------
+def get_md5(filename, block_size=1024*1024):
+    with open(filename, 'rb') as fp:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/fileutil.py
+4566498, 156
+------------------
+def get_md5(filename, block_size=1024*1024):
+    with open(filename, 'rb') as fp:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/notes/itertools_notes.py
+5234090, 25
+------------------
+def get_the_n_next_values_of_a_generator():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/notes/itertools_notes.py
+4152376, 26
+------------------
+def get_the_n_next_values_of_a_generator():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/notes/builtins_notes.py
+1561214, 11
+------------------
+def reverse_a_generator():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/GridFS_test.py
+1035340, 29
+------------------
+def get_file_md5(file_name, size = 1024 * 1024, upper = False):
+    with open(file_name, 'rb') as fp:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/GridFS_test.py
+4566498, 31
+------------------
+def get_file_md5(file_name, size = 1024 * 1024, upper = False):
+    with open(file_name, 'rb') as fp:

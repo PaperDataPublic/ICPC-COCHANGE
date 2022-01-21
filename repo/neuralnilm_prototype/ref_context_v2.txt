@@ -1,0 +1,10 @@
+[157]
+=================
+1114465
+count:157
+        "}\n",
+        "\n",
+        "// from http://stackoverflow.com/questions/1114465/getting-mouse-location-in-canvas\n",
+        "mpl.findpos = function(e) {\n",
+        "    //this section is from http://www.quirksmode.org/js/events_properties.html\n",
+        "    var targ;\n",

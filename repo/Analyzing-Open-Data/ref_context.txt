@@ -1,0 +1,1656 @@
+[1, 1, 1, 2, 1, 1, 1, 2, 2, 2, 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+4700614
+=================
+4700614
+count:1
+
+# stacked horizontal bars
+pWhite = ax.barh(y_race, p_white, color='b')
+pLatino = ax.barh(y_race, p_latino, color='g', left=p_white)
+pBlack = ax.barh(y_race, p_black, color='r', left=p_white+p_latino)
+pAsian = ax.barh(y_race, p_asian, color='c', left=p_white+p_latino+p_black)
+
+plt.yticks(y_race, cities)
+
+# legend foo https://stackoverflow.com/questions/4700614/how-to-put-the-legend-out-of-the-plot
+# Shink current axis's height by 10% on the bottom
+box = ax.get_position()
+ax.set_position([box.x0, box.y0 + box.height * 0.1,
+                 box.width, box.height * 0.85])
+
+# Put a legend below current axis
+ax.legend((pWhite, pLatino, pBlack, pAsian, pDiversity), ('White', 'Latino', 'Black', 'Asian', 'Diversity'),
+          loc='upper center', bbox_to_anchor=(0.5, -0.05),
+          fancybox=True, shadow=True, ncol=5)
+
+=================
+231855
+count:1
+     "source": [
+      "**To practice using generators to yield geographical entities of various types.**  \n",
+      "\n",
+      "Generators are a bit complicated, and I won't try to explain all the intricacies here.  I will show you how to use `yield` in a function definition to return a generator.  From [Definition of a generator](http://docs.python.org/2/glossary.html#term-generator):\n",
+      "\n",
+      "<blockquote>A function which returns an iterator. It looks like a normal function except that it contains yield statements for producing a series a values usable in a for-loop or that can be retrieved one at a time with the next() function. Each yield temporarily suspends processing, remembering the location execution state (including local variables and pending try-statements). When the generator resumes, it picks-up where it left-off (in contrast to functions which start fresh on every invocation)</blockquote>\n",
+      "\n",
+      "For some background on Python generators:\n",
+      "\n",
+      "* [iterator - The Python yield keyword explained - Stack Overflow](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained/231855#231855)\n",
+      "* [Improve Your Python: 'yield' and Generators Explained](http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/) \n",
+      "\n",
+      "Why use generators: http://stackoverflow.com/a/102632/7782\n",
+      "\n",
+      "<blockquote>Generators are good for calculating large sets of results (in particular calculations involving loops themselves) where you don't know if you are going to need all results, or where you don't want to allocate the memory for all results at the same time. </blockquote>\n",
+      "\n",
+      "Also, let's also practice using [itertools.islice](http://www.python.org/doc//current/library/itertools.html#itertools.islice) and [enumerate](http://docs.python.org/2/library/functions.html#enumerate) -- two of my favorite constructions in Python\n"
+     ]
+    },
+    {
+=================
+102632
+count:1
+      "Generators are a bit complicated, and I won't try to explain all the intricacies here.  I will show you how to use `yield` in a function definition to return a generator.  From [Definition of a generator](http://docs.python.org/2/glossary.html#term-generator):\n",
+      "\n",
+      "<blockquote>A function which returns an iterator. It looks like a normal function except that it contains yield statements for producing a series a values usable in a for-loop or that can be retrieved one at a time with the next() function. Each yield temporarily suspends processing, remembering the location execution state (including local variables and pending try-statements). When the generator resumes, it picks-up where it left-off (in contrast to functions which start fresh on every invocation)</blockquote>\n",
+      "\n",
+      "For some background on Python generators:\n",
+      "\n",
+      "* [iterator - The Python yield keyword explained - Stack Overflow](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained/231855#231855)\n",
+      "* [Improve Your Python: 'yield' and Generators Explained](http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/) \n",
+      "\n",
+      "Why use generators: http://stackoverflow.com/a/102632/7782\n",
+      "\n",
+      "<blockquote>Generators are good for calculating large sets of results (in particular calculations involving loops themselves) where you don't know if you are going to need all results, or where you don't want to allocate the memory for all results at the same time. </blockquote>\n",
+      "\n",
+      "Also, let's also practice using [itertools.islice](http://www.python.org/doc//current/library/itertools.html#itertools.islice) and [enumerate](http://docs.python.org/2/library/functions.html#enumerate) -- two of my favorite constructions in Python\n"
+     ]
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+=================
+3437130
+count:2
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "You can filter Puerto Rico (PR) in a number of ways -- use the way you're most comfortable with. \n",
+      "\n",
+      "Optional fun: filter PR in the following way\n",
+      "\n",
+      "* calculate a `np.array` holding the the fips of the states\n",
+      "* then use [numpy.in1d](http://docs.scipy.org/doc/numpy/reference/generated/numpy.in1d.html), which is a analogous to the [in](http://stackoverflow.com/a/3437130/7782) operator to test membership in a list"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "us.states.STATES\n",
+      "states_fips = np.array([state.fips for state in us.states.STATES])\n",
+      "#states_fips\n",
+      "\n"
+=================
+14734627
+count:1
+for name, group in islice(df.groupby('first_letter'),1):
+    print(name)
+    print type(group) # yes -- a DataFrame
+    print group.index
+    print(group),
+
+# <codecell>
+
+# how about accessing group 'C'?
+# http://stackoverflow.com/a/14734627/7782
+# http://stackoverflow.com/questions/19804282/in-pandas-is-there-something-like-a-groupby-get-group-but-with-an-optional-defa
+# http://pandas.pydata.org/pandas-docs/dev/generated/pandas.core.groupby.GroupBy.get_group.html
+
+grouped = df.groupby('first_letter')
+grouped.get_group('C')
+
+# <codecell>
+
+# total population of states starting with 'C'
+
+=================
+19804282
+count:1
+    print(name)
+    print type(group) # yes -- a DataFrame
+    print group.index
+    print(group),
+
+# <codecell>
+
+# how about accessing group 'C'?
+# http://stackoverflow.com/a/14734627/7782
+# http://stackoverflow.com/questions/19804282/in-pandas-is-there-something-like-a-groupby-get-group-but-with-an-optional-defa
+# http://pandas.pydata.org/pandas-docs/dev/generated/pandas.core.groupby.GroupBy.get_group.html
+
+grouped = df.groupby('first_letter')
+grouped.get_group('C')
+
+# <codecell>
+
+# total population of states starting with 'C'
+
+grouped.get_group('C').P0010001.sum()
+=================
+19530568
+count:1
+# <codecell>
+
+# let's try this again and try to do this in a more idiomatic Pandas fashion
+# ideally, generate a DataFrame with a NAME column that is a list of all states with the same first letter
+
+# It turns out that apply can come to the rescue
+# here' calculate the list of NAMEs
+
+# http://pandas.pydata.org/pandas-docs/dev/groupby.html#flexible-apply
+# http://stackoverflow.com/questions/19530568/can-pandas-groupby-aggregate-into-a-list-rather-than-sum-mean-etc
+
+df.groupby("first_letter").apply(lambda x: list(x['NAME']))
+
+# <codecell>
+
+# apply can be used to add up the populations by group
+
+df.groupby("first_letter").apply(lambda x: np.sum(x['P0010001']))
+
+# <codecell>
+=================
+24377
+count:2
+      "\n",
+      "**Let's verify this result in a number of ways.  Take some time now to write some code to add up 1 to 100.**\n",
+      "\n",
+      "Specifically:\n",
+      "\n",
+      "* make use of [range](http://docs.python.org/2/library/functions.html#range)\n",
+      "* try [xrange](http://docs.python.org/2/library/functions.html#xrange)\n",
+      "* try an explicit loop vs `sum`\n",
+      "* bonus:  try [itertool.count](http://docs.python.org/2/library/itertools.html#itertools.count) and [itertool.islice](http://docs.python.org/2/library/itertools.html#itertools.islice) -- these functions are Python *iterators*. \n",
+      "* See [Build a Basic Python Iterator](http://stackoverflow.com/a/24377/7782) and \n",
+      "[The Python yield keyword explained](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained)\n",
+      "\n",
+      "\n",
+      "**Beware:  in ipython w/ pylab mode, `sum` might be overwritten by numpy's sum -- use `__builtin__.sum` if you want http://docs.python.org/2/library/functions.html#sum as opposed to http://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html** \n"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+=================
+231767
+count:2
+      "**Let's verify this result in a number of ways.  Take some time now to write some code to add up 1 to 100.**\n",
+      "\n",
+      "Specifically:\n",
+      "\n",
+      "* make use of [range](http://docs.python.org/2/library/functions.html#range)\n",
+      "* try [xrange](http://docs.python.org/2/library/functions.html#xrange)\n",
+      "* try an explicit loop vs `sum`\n",
+      "* bonus:  try [itertool.count](http://docs.python.org/2/library/itertools.html#itertools.count) and [itertool.islice](http://docs.python.org/2/library/itertools.html#itertools.islice) -- these functions are Python *iterators*. \n",
+      "* See [Build a Basic Python Iterator](http://stackoverflow.com/a/24377/7782) and \n",
+      "[The Python yield keyword explained](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained)\n",
+      "\n",
+      "\n",
+      "**Beware:  in ipython w/ pylab mode, `sum` might be overwritten by numpy's sum -- use `__builtin__.sum` if you want http://docs.python.org/2/library/functions.html#sum as opposed to http://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html** \n"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "# using loop and xrange\n",
+=================
+509295
+count:2
+     "metadata": {},
+     "source": [
+      "Slicing/Indexing Review"
+     ]
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "http://stackoverflow.com/a/509295/7782\n",
+      "\n",
+      "Use on any of the **sequence** types ([python docs on sequence types](http://docs.python.org/2/library/stdtypes.html#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange)):\n",
+      "\n",
+      "> There are seven sequence types: strings, Unicode strings, lists, tuples, bytearrays, buffers, and xrange objects.\n",
+      "\n",
+      "The use of square brackets are for accessing *slices* of sequence."
+     ]
+    },
+    {
+     "cell_type": "markdown",
+=================
+6771620
+count:1
+     "source": [
+      "sorting"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "# reverse sort -- best way?\n",
+      "#http://stackoverflow.com/a/6771620/7782\n",
+      "\n",
+      "np.sort(np.arange(100))[::-1]"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "metadata": {},
+       "output_type": "pyout",
+       "prompt_number": 24,
+=================
+2254663
+count:2
+       ]
+      }
+     ],
+     "prompt_number": 82
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "Now I thought I'd be able to use a `n0.__eq__(5)` but nope -- it's complicated -- see http://stackoverflow.com/questions/2281222/why-when-in-python-does-x-y-call-y-eq-x#comment2254663_2282795"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "try:\n",
+      "    n0.__eq__(5)\n",
+      "except Exception as e:\n",
+      "    print e"
+=================
+15889203
+count:1
+     "collapsed": false,
+     "input": [
+      "# This solution is a bit \"fancy\" and can certainly be better commented.\n",
+      "\n",
+      "import bisect\n",
+      "import random\n",
+      "from itertools import repeat, islice\n",
+      "from collections import Counter\n",
+      "\n",
+      "# http://stackoverflow.com/a/15889203/7782\n",
+      "def cumsum(lis):\n",
+      "    total = 0\n",
+      "    for x in lis:\n",
+      "        total += x\n",
+      "        yield total\n",
+      "\n",
+      "# depends on pop_list above\n",
+      "        \n",
+      "world_pop = sum([r[2] for r in pop_list])\n",
+      "cum_pop = list(cumsum((r[2] for r in pop_list)))\n",
+=================
+1779324
+count:1
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "# http://lxml.de/lxmlhtml.html\n",
+      "import requests\n",
+      "from lxml.html import fromstring, parse\n",
+      "from itertools import islice\n",
+      "\n",
+      "# http://stackoverflow.com/a/1779324/7782\n",
+      "import locale\n",
+      "locale.setlocale( locale.LC_ALL, 'en_US.UTF-8' ) \n",
+      "\n",
+      "url = \"https://en.wikipedia.org/w/index.php?title=List_of_countries_by_population_(United_Nations)&oldid=590438477\"\n",
+      "page = requests.get(url).content.decode(\"UTF-8\")\n",
+      "\n",
+      "doc = fromstring(page)\n",
+      "\n",
+      "def parse_rank(col):\n",
+      "    try:\n",
+=================
+15889203
+count:1
+       ]
+      }
+     ],
+     "prompt_number": 4
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "# http://stackoverflow.com/a/15889203/7782\n",
+      "def cumsum(lis):\n",
+      "    total = 0\n",
+      "    for x in lis:\n",
+      "        total += x\n",
+      "        yield total\n"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [],
+     "prompt_number": 5
+=================
+3584933
+count:2
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "# http://en.wikipedia.org/wiki/Human_sex_ratio\n",
+      "# make an agg figure\n",
+      "fig = figure()\n",
+      "\n",
+      "# meaning of 111: http://stackoverflow.com/a/3584933/7782\n",
+      "ax = fig.add_subplot(111)\n",
+      "ax.set_title('Ratio of M to F births')\n",
+      "\n",
+      "cum_ratio_by_sex = total_births.M.cumsum() / total_births.F.cumsum()\n",
+      "cum_ratio_by_sex.plot(ax=ax, label=\"cumulative\", color=\"red\")\n",
+      "\n",
+      "# add instantaneous ratio\n",
+      "\n",
+      "annual_ratio_by_sex = total_births.M / total_births.F\n",
+      "annual_ratio_by_sex.plot(ax=ax, label=\"annual\", color=\"green\")\n",
+=================
+3584933
+count:2
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "# first attempt to calculate entropy of names\n",
+      "\n",
+      "fig = figure()\n",
+      "\n",
+      "# meaning of 111: http://stackoverflow.com/a/3584933/7782\n",
+      "ax = fig.add_subplot(111)\n",
+      "ax.set_title('Entropy of names')\n",
+      "\n",
+      "S_male = names[names.sex=='M'].groupby('year').prop.agg(lambda x: sum([-j*np.log(j) for j in x])) # apply(lambda x: -x*log(x))\n",
+      "S_male.plot(ax=ax, label=\"M\", color=\"blue\")\n",
+      "\n",
+      "S_female = names[names.sex=='F'].groupby('year').prop.agg(lambda x: sum([-j*np.log(j) for j in x])) # apply(lambda x: -x*log(x))\n",
+      "S_female.plot(ax=ax, label=\"F\", color=\"red\")\n",
+      "\n",
+      "ax.legend(loc='best')\n",
+=================
+13130357
+count:1
+       ]
+      }
+     ],
+     "prompt_number": 20
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "#http://stackoverflow.com/a/13130357/7782\n",
+      "count,division = np.histogram(df['P0010001'])\n",
+      "df['P0010001'].hist(bins=division)"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "metadata": {},
+       "output_type": "pyout",
+       "prompt_number": 21,
+=================
+17295128
+count:1
+# in my case, I had been adding other notebooks
+ls ../pydata-book/
+
+# <headingcell level=1>
+
+# Calculate PFDA_PATH (for RY's relative dir setup) or set it manually
+
+# <codecell>
+
+#http://stackoverflow.com/a/17295128/7782
+import os
+PFDA_PATH  = os.path.abspath(os.path.join(os.getcwd(), 
+                                          os.path.join(os.path.pardir, "pydata-book")
+                                        ))
+PFDA_PATH
+
+# <codecell>
+
+assert os.path.exists(PFDA_PATH)
+
+=================
+10233141
+count:1
+def add_census_key(url, api_key=settings.CENSUS_KEY):
+    """Take an input example Census API call and a key parameter"""
+
+    pr = urlparse.urlparse(url)
+    
+    # we're going to modify the query, which is the 5th element in the tuple (index 4)
+    pr1 = list(pr)
+    
+    # convert pr.query from string to dict
+    # see http://stackoverflow.com/a/10233141/7782 for meaning of doseq
+    pr_query = urlparse.parse_qs(pr.query)
+    pr_query["key"]= api_key
+
+    pr1[4] = urllib.urlencode(pr_query, doseq=True)
+    
+    return urlparse.urlunparse(pr1)
+
+
+def c_url (url, title=None, api_key=settings.CENSUS_KEY):
+    url_with_key = add_census_key(url, api_key)
+=================
+15074386
+count:1
+            ["""<a href="{url_with_key}">{url}</a>""".format(
+                url=url, 
+                url_with_key=add_census_key(url)
+                ) for url in example_urls_col
+            ])
+        
+        yield new_row
+        
+def parse_urls_col(col):
+    # http://stackoverflow.com/a/15074386/7782
+    return [child for child in col.itertext()]
+
+def parse_census_examples():
+
+    url = "http://api.census.gov/data/2010/sf1/geo.html"
+    doc = parse(url)
+
+    rows = doc.xpath("//table/tr")
+
+    # first row is the header
+=================
+22185527
+count:1
+# <nbformat>3.0</nbformat>
+
+# <codecell>
+
+# http://stackoverflow.com/questions/22185527/how-can-i-successfully-load-dimple-js-when-require-js-is-present
+
+# Answer: https://github.com/PMSI-AlignAlytics/dimple/pull/56#issuecomment-37480189
+
+# <codecell>
+
+%%html
+<style type="text/css">
+ /* https://github.com/PMSI-AlignAlytics/dimple/pull/56#issuecomment-37480189 */
+ .tooltip {
+  opacity: 1 !Important;
+=================
+17295128
+count:2
+     "metadata": {},
+     "source": [
+      "Calculate PFDA_PATH (for RY's relative dir setup) or set it manually"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "#http://stackoverflow.com/a/17295128/7782\n",
+      "import os\n",
+      "PFDA_PATH  = os.path.abspath(os.path.join(os.getcwd(), \n",
+      "                                          os.path.join(os.path.pardir, \"pydata-book\")\n",
+      "                                        ))\n",
+      "PFDA_PATH"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+=================
+3437130
+count:1
+df.head()
+
+# <markdowncell>
+
+# You can filter Puerto Rico (PR) in a number of ways -- use the way you're most comfortable with. 
+# 
+# Optional fun: filter PR in the following way
+# 
+# * calculate a `np.array` holding the the fips of the states
+# * then use [numpy.in1d](http://docs.scipy.org/doc/numpy/reference/generated/numpy.in1d.html), which is a analogous to the [in](http://stackoverflow.com/a/3437130/7782) operator to test membership in a list
+
+# <codecell>
+
+us.states.STATES
+states_fips = np.array([state.fips for state in us.states.STATES])
+#states_fips
+
+
+# <codecell>
+
+=================
+9519673
+count:2
+     "prompt_number": 2
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "[[IPython-User] using Google Charts in IPython](http://lists.ipython.scipy.org/pipermail/ipython-user/2013-May/012694.html):\n",
+      "\n",
+      "> google.load blanks the page unless you give it a\n",
+      "callback<http://stackoverflow.com/questions/9519673/why-does-google-load-cause-my-page-to-go-blank>\n",
+      ".\n"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "%%javascript\n",
+      "\n",
+      "var drawRegionsMap = function() {\n",
+=================
+9519673
+count:1
+     "prompt_number": 10
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "[[IPython-User] using Google Charts in IPython](http://lists.ipython.scipy.org/pipermail/ipython-user/2013-May/012694.html):\n",
+      "\n",
+      "> google.load blanks the page unless you give it a\n",
+      "callback <http://stackoverflow.com/questions/9519673/why-does-google-load-cause-my-page-to-go-blank>\n",
+      ".\n",
+      "\n",
+      "Also: [javascript - Google Maps API v3 - TypeError: Result of expression 'google.maps.LatLng' undefined] is not a constructor - Stack Overflow](http://stackoverflow.com/questions/6577404/google-maps-api-v3-typeerror-result-of-expression-google-maps-latlng-undef/8361021#8361021)\n"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [],
+     "language": "python",
+=================
+8361021
+count:1
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "[[IPython-User] using Google Charts in IPython](http://lists.ipython.scipy.org/pipermail/ipython-user/2013-May/012694.html):\n",
+      "\n",
+      "> google.load blanks the page unless you give it a\n",
+      "callback <http://stackoverflow.com/questions/9519673/why-does-google-load-cause-my-page-to-go-blank>\n",
+      ".\n",
+      "\n",
+      "Also: [javascript - Google Maps API v3 - TypeError: Result of expression 'google.maps.LatLng' undefined] is not a constructor - Stack Overflow](http://stackoverflow.com/questions/6577404/google-maps-api-v3-typeerror-result-of-expression-google-maps-latlng-undef/8361021#8361021)\n"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [],
+     "language": "python",
+     "metadata": {},
+     "outputs": [],
+     "prompt_number": 10
+=================
+14603398
+count:1
+     "metadata": {},
+     "source": [
+      "[Leaflet - a JavaScript library for mobile-friendly maps](http://leafletjs.com/)"
+     ]
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "I have a question:  can you use requirejs to deal with non-AMD JavaScript files?  According to http://stackoverflow.com/a/14603398/7782: maybe.  Seems to be affirmed by [Requirement #9:  Load any script](http://requirejs.org/docs/requirements.html#9)."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "from IPython.display import HTML, display, clear_output\n",
+      "import uuid\n",
+      "\n",
+      "import jinja2\n",
+=================
+4724676
+count:1
+      "CSS_URL = \"http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css\"\n",
+      "LEAFLET_JS_URL = \"http://cdn.leafletjs.com/leaflet-0.7.2/leaflet\"\n",
+      "\n",
+      "div_id = 'i' + str(uuid.uuid4())\n",
+      "\n",
+      "JS = u\"\"\"\n",
+      "<script type=\"text/javascript\">\n",
+      "\n",
+      "\n",
+      "    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782\n",
+      "    function loadcss(url) {\n",
+      "        if (!$(\"link[href='\" + url + \"']\").length)\n",
+      "            $('<link href=\"' + url + '\" rel=\"stylesheet\">').appendTo(\"head\");\n",
+      "    }\n",
+      "    \n",
+      "    function add_map(id, map) {\n",
+      "\n",
+      "\n",
+      "        if ('_my_maps' in window && window._my_maps !== undefined) {\n",
+      "            window._my_maps[id] = map;\n",
+=================
+4724676
+count:1
+       "html": [
+        "\n",
+        "<style type=\"text/css\">\n",
+        "    #id0bbeb91-c3b0-4185-b792-6b977a9805bf { height: 200px; }\n",
+        "</style>\n",
+        "\n",
+        "<script type=\"text/javascript\">\n",
+        "\n",
+        "\n",
+        "    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782\n",
+        "    function loadcss(url) {\n",
+        "        if (!$(\"link[href='\" + url + \"']\").length)\n",
+        "            $('<link href=\"' + url + '\" rel=\"stylesheet\">').appendTo(\"head\");\n",
+        "    }\n",
+        "    \n",
+        "    function add_map(id, map) {\n",
+        "\n",
+        "\n",
+        "        if ('_my_maps' in window && window._my_maps !== undefined) {\n",
+        "            window._my_maps[id] = map;\n",
+=================
+4724676
+count:1
+      "CSS_URL = \"http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css\"\n",
+      "LEAFLET_JS_URL = \"http://cdn.leafletjs.com/leaflet-0.7.2/leaflet\"\n",
+      "\n",
+      "div_id = 'i' + str(uuid.uuid4())\n",
+      "\n",
+      "JS = u\"\"\"\n",
+      "<script type=\"text/javascript\">\n",
+      "\n",
+      "\n",
+      "    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782\n",
+      "    function loadcss(url) {\n",
+      "        if (!$(\"link[href='\" + url + \"']\").length)\n",
+      "            $('<link href=\"' + url + '\" rel=\"stylesheet\">').appendTo(\"head\");\n",
+      "    }\n",
+      "\n",
+      "    function add_map(id, map) {\n",
+      "\n",
+      "        if ('_my_maps' in window && window._my_maps !== undefined) {\n",
+      "            window._my_maps[id] = map;\n",
+      "        } else {\n",
+=================
+4724676
+count:1
+       "html": [
+        "\n",
+        "<style type=\"text/css\">\n",
+        "    #i2a05f71d-28e3-42fd-8547-a50972196b3f { height: 200px; }\n",
+        "</style>\n",
+        "\n",
+        "<script type=\"text/javascript\">\n",
+        "\n",
+        "\n",
+        "    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782\n",
+        "    function loadcss(url) {\n",
+        "        if (!$(\"link[href='\" + url + \"']\").length)\n",
+        "            $('<link href=\"' + url + '\" rel=\"stylesheet\">').appendTo(\"head\");\n",
+        "    }\n",
+        "\n",
+        "    function add_map(id, map) {\n",
+        "\n",
+        "        if ('_my_maps' in window && window._my_maps !== undefined) {\n",
+        "            window._my_maps[id] = map;\n",
+        "        } else {\n",
+=================
+4724676
+count:1
+      "from settings import LEAFLET_KEY\n",
+      "\n",
+      "CSS_URL = \"http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css\"\n",
+      "LEAFLET_JS_URL = \"http://cdn.leafletjs.com/leaflet-0.7.2/leaflet\"\n",
+      "\n",
+      "\n",
+      "JS = u\"\"\"\n",
+      "<script type=\"text/javascript\">\n",
+      "\n",
+      "    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782\n",
+      "    function loadcss(url) {\n",
+      "        if (!$(\"link[href='\" + url + \"']\").length)\n",
+      "            $('<link href=\"' + url + '\" rel=\"stylesheet\">').appendTo(\"head\");\n",
+      "            \n",
+      "    }\n",
+      "    \n",
+      "    function add_map(id, map) {\n",
+      "\n",
+      "        if ('_my_maps' in window && window._my_maps !== undefined) {\n",
+      "            window._my_maps[id] = map;\n",
+=================
+4724676
+count:1
+       "html": [
+        "\n",
+        "<style type=\"text/css\">\n",
+        "    #i99db9486-4a8c-4bf5-b71b-11cee54bc07e { height: 300px; }\n",
+        "    #i99db9486-4a8c-4bf5-b71b-11cee54bc07e *+img{margin-top:0em}\n",
+        "</style>\n",
+        "\n",
+        "<script type=\"text/javascript\">\n",
+        "\n",
+        "    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782\n",
+        "    function loadcss(url) {\n",
+        "        if (!$(\"link[href='\" + url + \"']\").length)\n",
+        "            $('<link href=\"' + url + '\" rel=\"stylesheet\">').appendTo(\"head\");\n",
+        "            \n",
+        "    }\n",
+        "    \n",
+        "    function add_map(id, map) {\n",
+        "\n",
+        "        if ('_my_maps' in window && window._my_maps !== undefined) {\n",
+        "            window._my_maps[id] = map;\n",
+=================
+4724676
+count:1
+       "html": [
+        "\n",
+        "<style type=\"text/css\">\n",
+        "    #i4178fb59-340b-499f-b6ea-27c559fa1944 { height: 500px; }\n",
+        "    #i4178fb59-340b-499f-b6ea-27c559fa1944 *+img{margin-top:0em}\n",
+        "</style>\n",
+        "\n",
+        "<script type=\"text/javascript\">\n",
+        "\n",
+        "    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782\n",
+        "    function loadcss(url) {\n",
+        "        if (!$(\"link[href='\" + url + \"']\").length)\n",
+        "            $('<link href=\"' + url + '\" rel=\"stylesheet\">').appendTo(\"head\");\n",
+        "            \n",
+        "    }\n",
+        "    \n",
+        "    function add_map(id, map) {\n",
+        "\n",
+        "        if ('_my_maps' in window && window._my_maps !== undefined) {\n",
+        "            window._my_maps[id] = map;\n",
+=================
+3584933
+count:1
+
+total_births.plot(title='Total births by sex and year')
+
+# <codecell>
+
+# http://en.wikipedia.org/wiki/Human_sex_ratio
+# make an agg figure
+fig = figure()
+
+# meaning of 111: http://stackoverflow.com/a/3584933/7782
+ax = fig.add_subplot(111)
+ax.set_title('Ratio of M to F births')
+
+cum_ratio_by_sex = total_births.M.cumsum() / total_births.F.cumsum()
+cum_ratio_by_sex.plot(ax=ax, label="cumulative", color="red")
+
+# add instantaneous ratio
+
+annual_ratio_by_sex = total_births.M / total_births.F
+annual_ratio_by_sex.plot(ax=ax, label="annual", color="green")
+=================
+3584933
+count:1
+
+names.groupby('year').count()[['name']].plot()
+
+# <codecell>
+
+# first attempt to calculate entropy of names
+
+fig = figure()
+
+# meaning of 111: http://stackoverflow.com/a/3584933/7782
+ax = fig.add_subplot(111)
+ax.set_title('Entropy of names')
+
+S_male = names[names.sex=='M'].groupby('year').prop.agg(lambda x: sum([-j*np.log(j) for j in x])) # apply(lambda x: -x*log(x))
+S_male.plot(ax=ax, label="M", color="blue")
+
+S_female = names[names.sex=='F'].groupby('year').prop.agg(lambda x: sum([-j*np.log(j) for j in x])) # apply(lambda x: -x*log(x))
+S_female.plot(ax=ax, label="F", color="red")
+
+ax.legend(loc='best')
+=================
+10233141
+count:1
+      "def add_census_key(url, api_key=settings.CENSUS_KEY):\n",
+      "    \"\"\"Take an input example Census API call and a key parameter\"\"\"\n",
+      "\n",
+      "    pr = urlparse.urlparse(url)\n",
+      "    \n",
+      "    # we're going to modify the query, which is the 5th element in the tuple (index 4)\n",
+      "    pr1 = list(pr)\n",
+      "    \n",
+      "    # convert pr.query from string to dict\n",
+      "    # see http://stackoverflow.com/a/10233141/7782 for meaning of doseq\n",
+      "    pr_query = urlparse.parse_qs(pr.query)\n",
+      "    pr_query[\"key\"]= api_key\n",
+      "\n",
+      "    pr1[4] = urllib.urlencode(pr_query, doseq=True)\n",
+      "    \n",
+      "    return urlparse.urlunparse(pr1)\n",
+      "\n",
+      "\n",
+      "def c_url (url, title=None, api_key=settings.CENSUS_KEY):\n",
+      "    url_with_key = add_census_key(url, api_key)\n",
+=================
+15074386
+count:1
+      "            [\"\"\"<a href=\"{url_with_key}\">{url}</a>\"\"\".format(\n",
+      "                url=url, \n",
+      "                url_with_key=add_census_key(url)\n",
+      "                ) for url in example_urls_col\n",
+      "            ])\n",
+      "        \n",
+      "        yield new_row\n",
+      "        \n",
+      "def parse_urls_col(col):\n",
+      "    # http://stackoverflow.com/a/15074386/7782\n",
+      "    return [child for child in col.itertext()]\n",
+      "\n",
+      "def parse_census_examples():\n",
+      "\n",
+      "    url = \"http://api.census.gov/data/2010/sf1/geo.html\"\n",
+      "    doc = parse(url)\n",
+      "\n",
+      "    rows = doc.xpath(\"//table/tr\")\n",
+      "\n",
+      "    # first row is the header\n",
+=================
+22185527
+count:1
+ "nbformat": 3,
+ "nbformat_minor": 0,
+ "worksheets": [
+  {
+   "cells": [
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "# http://stackoverflow.com/questions/22185527/how-can-i-successfully-load-dimple-js-when-require-js-is-present\n",
+      "\n",
+      "# Answer: https://github.com/PMSI-AlignAlytics/dimple/pull/56#issuecomment-37480189"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [],
+     "prompt_number": 1
+    },
+    {
+     "cell_type": "code",
+=================
+5724453
+count:1
+result
+
+# <headingcell level=1>
+
+# Paging through results
+
+# <codecell>
+
+# try again
+# http://stackoverflow.com/a/5724453/7782
+# http://excess.org/article/2013/02/itergen1/
+
+
+class my_g(object):
+    def __init__(self,max_count):
+        self._remaining = range(max_count)
+        self._len = max_count
+    def __iter__(self):
+        return self
+    def __len__(self):
+=================
+17690738
+count:1
+
+df[~df.calc_date.isnull()].sort_index(by='calc_date').calc_date
+
+# <codecell>
+
+pd.to_datetime(df.fsmDateCreated.dropna().apply(lambda s:s[0]).astype('str'), coerce=True).dropna()
+
+# <codecell>
+
+# http://stackoverflow.com/questions/17690738/in-pandas-how-do-i-convert-a-string-of-date-strings-to-datetime-objects-and-put
+date_stngs = ('2008-12-20','2008-12-21','2008-12-22','2008-12-23','Nov. 9, 1964', 'junk')
+pd.to_datetime(pd.Series(date_stngs),coerce=True)
+
+# <headingcell level=1>
+
+# Types of Resources
+
+# <codecell>
+
+def f(x):
+=================
+24377
+count:1
+# 
+# **Let's verify this result in a number of ways.  Take some time now to write some code to add up 1 to 100.**
+# 
+# Specifically:
+# 
+# * make use of [range](http://docs.python.org/2/library/functions.html#range)
+# * try [xrange](http://docs.python.org/2/library/functions.html#xrange)
+# * try an explicit loop vs `sum`
+# * bonus:  try [itertool.count](http://docs.python.org/2/library/itertools.html#itertools.count) and [itertool.islice](http://docs.python.org/2/library/itertools.html#itertools.islice) -- these functions are Python *iterators*. 
+# * See [Build a Basic Python Iterator](http://stackoverflow.com/a/24377/7782) and 
+# [The Python yield keyword explained](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained)
+# 
+# 
+# **Beware:  in ipython w/ pylab mode, `sum` might be overwritten by numpy's sum -- use `__builtin__.sum` if you want http://docs.python.org/2/library/functions.html#sum as opposed to http://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html** 
+
+# <codecell>
+
+# using loop and xrange
+
+n = 100
+=================
+231767
+count:1
+# **Let's verify this result in a number of ways.  Take some time now to write some code to add up 1 to 100.**
+# 
+# Specifically:
+# 
+# * make use of [range](http://docs.python.org/2/library/functions.html#range)
+# * try [xrange](http://docs.python.org/2/library/functions.html#xrange)
+# * try an explicit loop vs `sum`
+# * bonus:  try [itertool.count](http://docs.python.org/2/library/itertools.html#itertools.count) and [itertool.islice](http://docs.python.org/2/library/itertools.html#itertools.islice) -- these functions are Python *iterators*. 
+# * See [Build a Basic Python Iterator](http://stackoverflow.com/a/24377/7782) and 
+# [The Python yield keyword explained](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained)
+# 
+# 
+# **Beware:  in ipython w/ pylab mode, `sum` might be overwritten by numpy's sum -- use `__builtin__.sum` if you want http://docs.python.org/2/library/functions.html#sum as opposed to http://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html** 
+
+# <codecell>
+
+# using loop and xrange
+
+n = 100
+
+=================
+509295
+count:1
+
+pow(2,64) -1
+
+# <headingcell level=1>
+
+# Slicing/Indexing Review
+
+# <markdowncell>
+
+# http://stackoverflow.com/a/509295/7782
+# 
+# Use on any of the **sequence** types ([python docs on sequence types](http://docs.python.org/2/library/stdtypes.html#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange)):
+# 
+# > There are seven sequence types: strings, Unicode strings, lists, tuples, bytearrays, buffers, and xrange objects.
+# 
+# The use of square brackets are for accessing *slices* of sequence.
+
+# <markdowncell>
+
+# Let's remind ourselves of how to use slices
+=================
+6771620
+count:1
+a3+2
+
+# <headingcell level=2>
+
+# sorting
+
+# <codecell>
+
+# reverse sort -- best way?
+#http://stackoverflow.com/a/6771620/7782
+
+np.sort(np.arange(100))[::-1]
+
+# <headingcell level=2>
+
+# Boolean slice:  important novel type of slicing
+
+# <markdowncell>
+
+# **This stuff is a bit tricky** (see PfDA, pp. 89-92)
+=================
+2254663
+count:1
+# Advanced: Operator Overloading
+
+# <codecell>
+
+n0 = 5
+n0 == 5
+
+# <markdowncell>
+
+# Now I thought I'd be able to use a `n0.__eq__(5)` but nope -- it's complicated -- see http://stackoverflow.com/questions/2281222/why-when-in-python-does-x-y-call-y-eq-x#comment2254663_2282795
+
+# <codecell>
+
+try:
+    n0.__eq__(5)
+except Exception as e:
+    print e
+
+# <markdowncell>
+
+=================
+9519673
+count:1
+    cityCircle = new google.maps.Circle(populationOptions);
+  }
+
+
+# <markdowncell>
+
+# [[IPython-User] using Google Charts in IPython](http://lists.ipython.scipy.org/pipermail/ipython-user/2013-May/012694.html):
+# 
+# > google.load blanks the page unless you give it a
+# callback <http://stackoverflow.com/questions/9519673/why-does-google-load-cause-my-page-to-go-blank>
+# .
+# 
+# Also: [javascript - Google Maps API v3 - TypeError: Result of expression 'google.maps.LatLng' undefined] is not a constructor - Stack Overflow](http://stackoverflow.com/questions/6577404/google-maps-api-v3-typeerror-result-of-expression-google-maps-latlng-undef/8361021#8361021)
+
+# <codecell>
+
+=================
+8361021
+count:1
+
+# <markdowncell>
+
+# [[IPython-User] using Google Charts in IPython](http://lists.ipython.scipy.org/pipermail/ipython-user/2013-May/012694.html):
+# 
+# > google.load blanks the page unless you give it a
+# callback <http://stackoverflow.com/questions/9519673/why-does-google-load-cause-my-page-to-go-blank>
+# .
+# 
+# Also: [javascript - Google Maps API v3 - TypeError: Result of expression 'google.maps.LatLng' undefined] is not a constructor - Stack Overflow](http://stackoverflow.com/questions/6577404/google-maps-api-v3-typeerror-result-of-expression-google-maps-latlng-undef/8361021#8361021)
+
+# <codecell>
+
+=================
+9519673
+count:1
+
+%%html
+<div id="chart_div"></div>
+
+# <markdowncell>
+
+# [[IPython-User] using Google Charts in IPython](http://lists.ipython.scipy.org/pipermail/ipython-user/2013-May/012694.html):
+# 
+# > google.load blanks the page unless you give it a
+# callback<http://stackoverflow.com/questions/9519673/why-does-google-load-cause-my-page-to-go-blank>
+# .
+
+# <codecell>
+
+%%javascript
+
+var drawRegionsMap = function() {
+    var data = google.visualization.arrayToDataTable([
+      ['Country', 'Popularity'],
+      ['Germany', 200],
+=================
+3437130
+count:1
+df.head()
+
+# <markdowncell>
+
+# You can filter Puerto Rico (PR) in a number of ways -- use the way you're most comfortable with. 
+# 
+# Optional fun: filter PR in the following way
+# 
+# * calculate a `np.array` holding the the fips of the states
+# * then use [numpy.in1d](http://docs.scipy.org/doc/numpy/reference/generated/numpy.in1d.html), which is a analogous to the [in](http://stackoverflow.com/a/3437130/7782) operator to test membership in a list
+
+# <codecell>
+
+## FILL IN
+## calculate states_fips so that PR not included
+
+
+
+
+
+=================
+14603398
+count:1
+# <nbformat>3.0</nbformat>
+
+# <markdowncell>
+
+# [Leaflet - a JavaScript library for mobile-friendly maps](http://leafletjs.com/)
+
+# <markdowncell>
+
+# I have a question:  can you use requirejs to deal with non-AMD JavaScript files?  According to http://stackoverflow.com/a/14603398/7782: maybe.  Seems to be affirmed by [Requirement #9:  Load any script](http://requirejs.org/docs/requirements.html#9).
+
+# <codecell>
+
+from IPython.display import HTML, display, clear_output
+import uuid
+
+import jinja2
+from jinja2 import Template
+
+from settings import LEAFLET_KEY
+=================
+4724676
+count:1
+CSS_URL = "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css"
+LEAFLET_JS_URL = "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet"
+
+div_id = 'i' + str(uuid.uuid4())
+
+JS = u"""
+<script type="text/javascript">
+
+
+    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782
+    function loadcss(url) {
+        if (!$("link[href='" + url + "']").length)
+            $('<link href="' + url + '" rel="stylesheet">').appendTo("head");
+    }
+    
+    function add_map(id, map) {
+
+
+        if ('_my_maps' in window && window._my_maps !== undefined) {
+            window._my_maps[id] = map;
+=================
+4724676
+count:1
+CSS_URL = "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css"
+LEAFLET_JS_URL = "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet"
+
+div_id = 'i' + str(uuid.uuid4())
+
+JS = u"""
+<script type="text/javascript">
+
+
+    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782
+    function loadcss(url) {
+        if (!$("link[href='" + url + "']").length)
+            $('<link href="' + url + '" rel="stylesheet">').appendTo("head");
+    }
+
+    function add_map(id, map) {
+
+        if ('_my_maps' in window && window._my_maps !== undefined) {
+            window._my_maps[id] = map;
+        } else {
+=================
+4724676
+count:1
+from settings import LEAFLET_KEY
+
+CSS_URL = "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css"
+LEAFLET_JS_URL = "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet"
+
+
+JS = u"""
+<script type="text/javascript">
+
+    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782
+    function loadcss(url) {
+        if (!$("link[href='" + url + "']").length)
+            $('<link href="' + url + '" rel="stylesheet">').appendTo("head");
+            
+    }
+    
+    function add_map(id, map) {
+
+        if ('_my_maps' in window && window._my_maps !== undefined) {
+            window._my_maps[id] = map;
+=================
+22185527
+count:1
+ "nbformat": 3,
+ "nbformat_minor": 0,
+ "worksheets": [
+  {
+   "cells": [
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "# http://stackoverflow.com/questions/22185527/how-can-i-successfully-load-dimple-js-when-require-js-is-present\n",
+      "\n",
+      "# Answer: https://github.com/PMSI-AlignAlytics/dimple/pull/56#issuecomment-37480189"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+=================
+32647365
+count:2
+      "Initial unsuccessful attempt at rendering choropleth map in notebook"
+     ]
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "It turned out that the hard part of doing the translation to IPython Notebook was figuring out how to load the required JavaScript libraries.  Being an off-and-on JavaScript programmer who is ramping up on the way to writing JavaScript properly in 2014, I was still living in the world of adding a `<script>` to load libraries. The problem of such an approach is the possibility of a lot of name collisions.   I knew that the IPython developers had moved to using [RequireJS](http://requirejs.org/), but I really couldn't figure out how to use it by reading the documentation for RequireJS.  \n",
+      "\n",
+      "It was only when I read [Something wrong with the d3js.org/d3.v3.min.js package - Issue #1693 - mbostock/d3](https://github.com/mbostock/d3/issues/1693), which I found via [d3.js - how to integrate d3 with require.js - Stack Overflow](http://stackoverflow.com/questions/13157704/how-to-integrate-d3-with-require-js#comment32647365_13171592) that I knew what to do.  Here's the very helpful incantion I was looking for:"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "%%javascript\n",
+      "// https://github.com/mbostock/d3/issues/1693\n",
+      "\n",
+      "// loads d3 using require \n",
+=================
+5724453
+count:1
+     "source": [
+      "Paging through results"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "# try again\n",
+      "# http://stackoverflow.com/a/5724453/7782\n",
+      "# http://excess.org/article/2013/02/itergen1/\n",
+      "\n",
+      "\n",
+      "class my_g(object):\n",
+      "    def __init__(self,max_count):\n",
+      "        self._remaining = range(max_count)\n",
+      "        self._len = max_count\n",
+      "    def __iter__(self):\n",
+      "        return self\n",
+      "    def __len__(self):\n",
+=================
+17690738
+count:1
+       ]
+      }
+     ],
+     "prompt_number": 44
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "# http://stackoverflow.com/questions/17690738/in-pandas-how-do-i-convert-a-string-of-date-strings-to-datetime-objects-and-put\n",
+      "date_stngs = ('2008-12-20','2008-12-21','2008-12-22','2008-12-23','Nov. 9, 1964', 'junk')\n",
+      "pd.to_datetime(pd.Series(date_stngs),coerce=True)"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "metadata": {},
+       "output_type": "pyout",
+       "prompt_number": 45,
+=================
+6771620
+count:1
+     "source": [
+      "sorting"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "# reverse sort -- best way?\n",
+      "#http://stackoverflow.com/a/6771620/7782\n",
+      "\n",
+      "np.sort(np.arange(100))[::-1]"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "metadata": {},
+       "output_type": "pyout",
+       "prompt_number": 43,
+=================
+13130357
+count:1
+       ]
+      }
+     ],
+     "prompt_number": 19
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "#http://stackoverflow.com/a/13130357/7782\n",
+      "count,division = np.histogram(df['P0010001'])\n",
+      "df['P0010001'].hist(bins=division)"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "metadata": {},
+       "output_type": "pyout",
+       "prompt_number": 20,
+=================
+3437130
+count:3
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "You can filter Puerto Rico (PR) in a number of ways -- use the way you're most comfortable with. \n",
+      "\n",
+      "Optional fun: filter PR in the following way\n",
+      "\n",
+      "* calculate a `np.array` holding the the fips of the states\n",
+      "* then use [numpy.in1d](http://docs.scipy.org/doc/numpy/reference/generated/numpy.in1d.html), which is a analogous to the [in](http://stackoverflow.com/a/3437130/7782) operator to test membership in a list"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "## FILL IN\n",
+      "## calculate states_fips so that PR not included\n",
+      "\n",
+      "\n",
+=================
+9519673
+count:1
+     "prompt_number": 19
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "[[IPython-User] using Google Charts in IPython](http://lists.ipython.scipy.org/pipermail/ipython-user/2013-May/012694.html):\n",
+      "\n",
+      "> google.load blanks the page unless you give it a\n",
+      "callback <http://stackoverflow.com/questions/9519673/why-does-google-load-cause-my-page-to-go-blank>\n",
+      ".\n",
+      "\n",
+      "Also: [javascript - Google Maps API v3 - TypeError: Result of expression 'google.maps.LatLng' undefined] is not a constructor - Stack Overflow](http://stackoverflow.com/questions/6577404/google-maps-api-v3-typeerror-result-of-expression-google-maps-latlng-undef/8361021#8361021)\n"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [],
+     "language": "python",
+=================
+8361021
+count:1
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "[[IPython-User] using Google Charts in IPython](http://lists.ipython.scipy.org/pipermail/ipython-user/2013-May/012694.html):\n",
+      "\n",
+      "> google.load blanks the page unless you give it a\n",
+      "callback <http://stackoverflow.com/questions/9519673/why-does-google-load-cause-my-page-to-go-blank>\n",
+      ".\n",
+      "\n",
+      "Also: [javascript - Google Maps API v3 - TypeError: Result of expression 'google.maps.LatLng' undefined] is not a constructor - Stack Overflow](http://stackoverflow.com/questions/6577404/google-maps-api-v3-typeerror-result-of-expression-google-maps-latlng-undef/8361021#8361021)\n"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    }
+=================
+15889203
+count:1
+# <codecell>
+
+# This solution is a bit "fancy" and can certainly be better commented.
+
+import bisect
+import random
+from itertools import repeat, islice
+from collections import Counter
+
+# http://stackoverflow.com/a/15889203/7782
+def cumsum(lis):
+    total = 0
+    for x in lis:
+        total += x
+        yield total
+
+# depends on pop_list above
+        
+world_pop = sum([r[2] for r in pop_list])
+cum_pop = list(cumsum((r[2] for r in pop_list)))
+=================
+231855
+count:1
+
+# **To practice using generators to yield geographical entities of various types.**  
+# 
+# Generators are a bit complicated, and I won't try to explain all the intricacies here.  I will show you how to use `yield` in a function definition to return a generator.  From [Definition of a generator](http://docs.python.org/2/glossary.html#term-generator):
+# 
+# <blockquote>A function which returns an iterator. It looks like a normal function except that it contains yield statements for producing a series a values usable in a for-loop or that can be retrieved one at a time with the next() function. Each yield temporarily suspends processing, remembering the location execution state (including local variables and pending try-statements). When the generator resumes, it picks-up where it left-off (in contrast to functions which start fresh on every invocation)</blockquote>
+# 
+# For some background on Python generators:
+# 
+# * [iterator - The Python yield keyword explained - Stack Overflow](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained/231855#231855)
+# * [Improve Your Python: 'yield' and Generators Explained](http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/) 
+# 
+# Why use generators: http://stackoverflow.com/a/102632/7782
+# 
+# <blockquote>Generators are good for calculating large sets of results (in particular calculations involving loops themselves) where you don't know if you are going to need all results, or where you don't want to allocate the memory for all results at the same time. </blockquote>
+# 
+# Also, let's also practice using [itertools.islice](http://www.python.org/doc//current/library/itertools.html#itertools.islice) and [enumerate](http://docs.python.org/2/library/functions.html#enumerate) -- two of my favorite constructions in Python
+
+# <markdowncell>
+
+=================
+102632
+count:1
+# Generators are a bit complicated, and I won't try to explain all the intricacies here.  I will show you how to use `yield` in a function definition to return a generator.  From [Definition of a generator](http://docs.python.org/2/glossary.html#term-generator):
+# 
+# <blockquote>A function which returns an iterator. It looks like a normal function except that it contains yield statements for producing a series a values usable in a for-loop or that can be retrieved one at a time with the next() function. Each yield temporarily suspends processing, remembering the location execution state (including local variables and pending try-statements). When the generator resumes, it picks-up where it left-off (in contrast to functions which start fresh on every invocation)</blockquote>
+# 
+# For some background on Python generators:
+# 
+# * [iterator - The Python yield keyword explained - Stack Overflow](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained/231855#231855)
+# * [Improve Your Python: 'yield' and Generators Explained](http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/) 
+# 
+# Why use generators: http://stackoverflow.com/a/102632/7782
+# 
+# <blockquote>Generators are good for calculating large sets of results (in particular calculations involving loops themselves) where you don't know if you are going to need all results, or where you don't want to allocate the memory for all results at the same time. </blockquote>
+# 
+# Also, let's also practice using [itertools.islice](http://www.python.org/doc//current/library/itertools.html#itertools.islice) and [enumerate](http://docs.python.org/2/library/functions.html#enumerate) -- two of my favorite constructions in Python
+
+# <markdowncell>
+
+# From http://api.census.gov/data/2010/sf1/geo.html, geographic entities we are specifically interested in this exercise:
+# 
+# * state-county
+=================
+14734627
+count:1
+      }
+     ],
+     "prompt_number": 12
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "# how about accessing group 'C'?\n",
+      "# http://stackoverflow.com/a/14734627/7782\n",
+      "# http://stackoverflow.com/questions/19804282/in-pandas-is-there-something-like-a-groupby-get-group-but-with-an-optional-defa\n",
+      "# http://pandas.pydata.org/pandas-docs/dev/generated/pandas.core.groupby.GroupBy.get_group.html\n",
+      "\n",
+      "grouped = df.groupby('first_letter')\n",
+      "grouped.get_group('C')"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+=================
+19804282
+count:1
+     ],
+     "prompt_number": 12
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "# how about accessing group 'C'?\n",
+      "# http://stackoverflow.com/a/14734627/7782\n",
+      "# http://stackoverflow.com/questions/19804282/in-pandas-is-there-something-like-a-groupby-get-group-but-with-an-optional-defa\n",
+      "# http://pandas.pydata.org/pandas-docs/dev/generated/pandas.core.groupby.GroupBy.get_group.html\n",
+      "\n",
+      "grouped = df.groupby('first_letter')\n",
+      "grouped.get_group('C')"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "html": [
+=================
+19530568
+count:1
+     "collapsed": false,
+     "input": [
+      "# let's try this again and try to do this in a more idiomatic Pandas fashion\n",
+      "# ideally, generate a DataFrame with a NAME column that is a list of all states with the same first letter\n",
+      "\n",
+      "# It turns out that apply can come to the rescue\n",
+      "# here' calculate the list of NAMEs\n",
+      "\n",
+      "# http://pandas.pydata.org/pandas-docs/dev/groupby.html#flexible-apply\n",
+      "# http://stackoverflow.com/questions/19530568/can-pandas-groupby-aggregate-into-a-list-rather-than-sum-mean-etc\n",
+      "\n",
+      "df.groupby(\"first_letter\").apply(lambda x: list(x['NAME']))"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "metadata": {},
+       "output_type": "pyout",
+       "prompt_number": 19,
+=================
+32647365
+count:1
+
+# <headingcell level=1>
+
+# Initial unsuccessful attempt at rendering choropleth map in notebook
+
+# <markdowncell>
+
+# It turned out that the hard part of doing the translation to IPython Notebook was figuring out how to load the required JavaScript libraries.  Being an off-and-on JavaScript programmer who is ramping up on the way to writing JavaScript properly in 2014, I was still living in the world of adding a `<script>` to load libraries. The problem of such an approach is the possibility of a lot of name collisions.   I knew that the IPython developers had moved to using [RequireJS](http://requirejs.org/), but I really couldn't figure out how to use it by reading the documentation for RequireJS.  
+# 
+# It was only when I read [Something wrong with the d3js.org/d3.v3.min.js package - Issue #1693 - mbostock/d3](https://github.com/mbostock/d3/issues/1693), which I found via [d3.js - how to integrate d3 with require.js - Stack Overflow](http://stackoverflow.com/questions/13157704/how-to-integrate-d3-with-require-js#comment32647365_13171592) that I knew what to do.  Here's the very helpful incantion I was looking for:
+
+# <codecell>
+
+%%javascript
+// https://github.com/mbostock/d3/issues/1693
+
+// loads d3 using require 
+
+require.config({
+  paths: {
+=================
+13130357
+count:1
+
+# create a DataFrame, convert the 'P0010001' column
+# show by descending population
+df = DataFrame(ca_counties)
+df['P0010001'] = df['P0010001'].astype('int')
+df.sort_index(by='P0010001', ascending=False)
+
+# <codecell>
+
+#http://stackoverflow.com/a/13130357/7782
+count,division = np.histogram(df['P0010001'])
+df['P0010001'].hist(bins=division)
+=================
+4700614
+count:1
+      "\n",
+      "# stacked horizontal bars\n",
+      "pWhite = ax.barh(y_race, p_white, color='b')\n",
+      "pLatino = ax.barh(y_race, p_latino, color='g', left=p_white)\n",
+      "pBlack = ax.barh(y_race, p_black, color='r', left=p_white+p_latino)\n",
+      "pAsian = ax.barh(y_race, p_asian, color='c', left=p_white+p_latino+p_black)\n",
+      "\n",
+      "plt.yticks(y_race, cities)\n",
+      "\n",
+      "# legend foo https://stackoverflow.com/questions/4700614/how-to-put-the-legend-out-of-the-plot\n",
+      "# Shink current axis's height by 10% on the bottom\n",
+      "box = ax.get_position()\n",
+      "ax.set_position([box.x0, box.y0 + box.height * 0.1,\n",
+      "                 box.width, box.height * 0.85])\n",
+      "\n",
+      "# Put a legend below current axis\n",
+      "ax.legend((pWhite, pLatino, pBlack, pAsian, pDiversity), ('White', 'Latino', 'Black', 'Asian', 'Diversity'),\n",
+      "          loc='upper center', bbox_to_anchor=(0.5, -0.05),\n",
+      "          fancybox=True, shadow=True, ncol=5)\n",
+      "\n",

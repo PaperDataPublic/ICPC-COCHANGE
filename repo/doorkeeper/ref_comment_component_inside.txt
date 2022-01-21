@@ -1,0 +1,616 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_class.py
+1015307, 471
+------------------
+def inject_func_as_method(self, func, method_name=None, class_=None,
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_class.py
+13850114, 530
+------------------
+def inject_func_as_property(self, func, method_name=None, class_=None):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_class.py
+8122734, 587
+------------------
+def test_reloading_metaclass():
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dbg.py
+27914204, 348
+------------------
+def _wip_embed(parent_locals=None, parent_globals=None, exec_lines=None,
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dbg.py
+15167200, 349
+------------------
+def _wip_embed(parent_locals=None, parent_globals=None, exec_lines=None,
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dbg.py
+15411967, 635
+------------------
+def in_jupyter_notebook():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_num.py
+2663612, 40
+------------------
+def sigfig_str(number, sigfig):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_time.py
+8906926, 847
+------------------
+def get_timedelta_str(timedelta, exclude_zeros=False):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_iter.py
+434287, 366
+------------------
+def ichunks(iterable, chunksize, bordermode=None):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/_internal/meta_util_six.py
+12561063, 135
+------------------
+def ensure_unicode(str_):
+    else:
+        except UnicodeDecodeError:
+            if str_.startswith(codecs.BOM_UTF8):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_grabdata.py
+24873302, 257
+------------------
+def get_prefered_browser(pref_list=[], fallback=True):
+    if ut.WIN32:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_grabdata.py
+15644964, 297
+------------------
+def download_url(url, filename=None, spoof=False, iri_fallback=True,
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_grabdata.py
+16694907, 298
+------------------
+def download_url(url, filename=None, spoof=False, iri_fallback=True,
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_grabdata.py
+1112343, 432
+------------------
+def experiment_download_multiple_urls(url_list):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_inspect.py
+23149218, 1125
+------------------
+def is_bateries_included(item):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_inspect.py
+7456933, 1387
+------------------
+def special_parse_process_python_code(sourcecode):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_inspect.py
+20445733, 1593
+------------------
+def parse_import_names(sourcecode, top_level=True, fpath=None, branch=False):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_inspect.py
+23576681, 1795
+------------------
+def is_valid_python(code, reraise=True, ipy_magic_workaround=False):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_gridsearch.py
+4801403, 428
+------------------
+def parse_nestings2(string, nesters=['()', '[]', '<>', "''", '""'], escape='\\'):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_list.py
+16945518, 1674
+------------------
+def argmax(input_, multi=False):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_list.py
+7352684, 2269
+------------------
+def group_consecutives(data, stepsize=1):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_list.py
+9457832, 2934
+------------------
+def list_roll(list_, n):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_alg.py
+15047116, 993
+------------------
+def fibonacci_iterative(n):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_alg.py
+141779, 1153
+------------------
+def knapsack(items, maxweight, method='recursive'):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_alg.py
+3433486, 2789
+------------------
+def expensive_task_gen(num=8700):
+    Example:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_alg.py
+6800193, 2820
+------------------
+def factors(n):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_web.py
+7436801, 15
+------------------
+def is_local_port_open(port):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_inject.py
+14775916, 107
+------------------
+def colored_pygments_excepthook(type_, value, tb):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_inject.py
+18007995, 535
+------------------
+def split_python_text_into_lines(text):
+    def parentesis_are_balanced(line):
+        References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_git.py
+1526794, 809
+------------------
+class Repo(util_dev.NiceRepr):
+    def rename_branch(repo, old_branch_name, new_branch_name, remote='origin'):
+        References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_git.py
+9524933, 810
+------------------
+class Repo(util_dev.NiceRepr):
+    def rename_branch(repo, old_branch_name, new_branch_name, remote='origin'):
+        References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_git.py
+8226278, 908
+------------------
+def git_sequence_editor_squash(fpath):
+    Ignore:
+        def squash_consecutive_commits_with_same_message():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_const.py
+41048643, 18
+------------------
+class _NoParamType(object):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_resources.py
+938733, 25
+------------------
+try:
+    def peak_memory():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_resources.py
+1331471, 232
+------------------
+def get_python_datastructure_sizes():
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_decor.py
+1697501, 948
+------------------
+class classproperty(property):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_ipynb.py
+24207353, 281
+------------------
+def make_notebook(cell_list):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_latex.py
+16259923, 375
+------------------
+def escape_latex(text):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_latex.py
+2892931, 882
+------------------
+def long_substr(strlist):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_str.py
+2247205, 1788
+------------------
+def utf8_len(str_):
+    Returns:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_str.py
+14693701, 2107
+------------------
+def align_lines(line_list, character='=', replchar=None, pos=0):
+    if handle_ansi:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_str.py
+1175208, 2634
+------------------
+def to_underscore_case(camelcase_str):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_tests.py
+427472, 1940
+------------------
+def main_function_tester(module, ignore_prefix=[], ignore_suffix=[],
+    if ut.get_argflag('--update-bashcomplete'):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+11063458, 102
+------------------
+def copy_text_to_clipboard(text):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+579687, 103
+------------------
+def copy_text_to_clipboard(text):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+1335507, 206
+------------------
+def input_timeout(msg='Waiting for input...', timeout=30):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+3911560, 208
+------------------
+def input_timeout(msg='Waiting for input...', timeout=30):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+141351, 521
+------------------
+def memory_dump():
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+2629680, 1574
+------------------
+def _memory_profile(with_gc=False):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+33024215, 3247
+------------------
+class PriorityQueue(NiceRepr):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_hash.py
+5884066, 79
+------------------
+def make_hash(o):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_hash.py
+3431825, 843
+------------------
+def get_file_hash(fpath, blocksize=65536, hasher=None, stride=1,
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_hash.py
+5001893, 844
+------------------
+def get_file_hash(fpath, blocksize=65536, hasher=None, stride=1,
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_hash.py
+23565889, 989
+------------------
+def image_uuid(pil_img):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_logging.py
+21071448, 9
+------------------
+References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_logging.py
+7168790, 444
+------------------
+def start_logging(log_fpath=None, mode='a', appname='default', log_dir=None):
+    if __UTOOL_ROOT_LOGGER__ is None and __IN_MAIN_PROCESS__ and not __inside_doctest():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_set.py
+1653970, 26
+------------------
+class OrderedSet(collections.MutableSet):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_sysreq.py
+7335992, 20
+------------------
+def in_virtual_env():
+    Notes:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_sysreq.py
+1871549, 23
+------------------
+def in_virtual_env():
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_sysreq.py
+5721529, 109
+------------------
+def is_running_as_root():
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_sysreq.py
+2806897, 110
+------------------
+def is_running_as_root():
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+22472124, 81
+------------------
+def in_pyinstaller_package():
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+7674790, 82
+------------------
+def in_pyinstaller_package():
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+51658, 113
+------------------
+def get_free_diskbytes(dir_):
+    References::
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+15607903, 168
+------------------
+def chmod_add_executable(fpath, group=True, user=True):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+1392413, 244
+------------------
+def get_disk_space(start_path='.'):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+2692873, 468
+------------------
+def startfile(fpath, detatch=True, quote=False, verbose=False, quiet=True):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+1405913, 1122
+------------------
+def is64bit_python():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+8850484, 1276
+------------------
+def change_term_title(title):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+14788036, 1311
+------------------
+def send_keyboard_input(text=None, key_list=None):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+437589, 1456
+------------------
+def unload_module(modname):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+15974100, 1509
+------------------
+def pip_install(package):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_scripts/ensure_python3_compatible.py
+18737863, 132
+------------------
+def change_doctestcommand_to_use_dashm_flag():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_parallel.py
+2046603, 808
+------------------
+def spawn_background_process(func, *args, **kwargs):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_parallel.py
+1196074, 809
+------------------
+def spawn_background_process(func, *args, **kwargs):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_parallel.py
+15063963, 810
+------------------
+def spawn_background_process(func, *args, **kwargs):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_sqlite.py
+17717829, 93
+------------------
+def get_table_columninfo_list(cur, tablename):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_numpy.py
+44313620, 33
+------------------
+def _npstate_to_pystate(npstate):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_import.py
+1707709, 196
+------------------
+def package_contents(package, with_pkg=False, with_mod=True, ignore_prefix=[],
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_import.py
+14050281, 284
+------------------
+def check_module_installed(modname):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_io.py
+41720952, 360
+------------------
+def _python2_load_cpkl(fpath):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_io.py
+8843062, 656
+------------------
+def save_pytables(fpath, data, verbose=False):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dict.py
+651794, 159
+------------------
+class AutoVivification(dict):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dict.py
+5884066, 236
+------------------
+def get_dict_hashid(dict_):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dict.py
+1151658, 288
+------------------
+class hashdict(dict):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dict.py
+38987, 1331
+------------------
+def merge_dicts(*args):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dict.py
+10193235, 1644
+------------------
+def hierarchical_group_items(item_list, groupids_list):
+    Reference:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dict.py
+22663966, 1826
+------------------
+def move_odict_item(odict, key, newpos):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cache.py
+8230315, 427
+------------------
+def make_utool_json_encoder(allow_pickle=False):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cache.py
+11561932, 428
+------------------
+def make_utool_json_encoder(allow_pickle=False):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cache.py
+24369666, 430
+------------------
+def make_utool_json_encoder(allow_pickle=False):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cache.py
+30469575, 431
+------------------
+def make_utool_json_encoder(allow_pickle=False):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cache.py
+7489732, 924
+------------------
+def shelf_open(fpath):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_path.py
+1158076, 690
+------------------
+def touch(fpath, times=None, verbose=True):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_path.py
+19859840, 1047
+------------------
+def iglob(dpath, pattern=None, recursive=False, with_files=True, with_dirs=True,
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_path.py
+23598461, 2133
+------------------
+def get_win32_short_path_name(long_name):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_path.py
+23598289, 2134
+------------------
+def get_win32_short_path_name(long_name):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_path.py
+1447575, 2546
+------------------
+def win_shortcut(source, link_name):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_path.py
+20794, 2672
+------------------
+def remove_broken_links(dpath, verbose=True):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_graph.py
+17078696, 79
+------------------
+def nx_transitive_reduction(G, mode=1):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_graph.py
+16150557, 1589
+------------------
+def subgraph_from_edges(G, edge_list, ref_back=True):
+    References:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_graph.py
+33332462, 2137
+------------------
+def nx_mincut_edges_weighted(G, s, t, capacity='weight'):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/_broken/_grave.py
+11125212, 49
+------------------
+def roundrobin(*iterables):

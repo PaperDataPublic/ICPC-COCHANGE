@@ -1,0 +1,400 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/deque_list_benchmarks.py
+23487307, 11
+------------------
+import collections
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/deque_list_benchmarks.py
+1296511, 12
+------------------
+import collections
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/deque_list_benchmarks.py
+1436020, 17
+------------------
+import collections
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/cppimport/cii_atom_hashing_distribution/cii_atom_hashing_distribution.py
+22676, 56
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/mupdf_4839427ab0_hotfix.py
+22905316, 9
+------------------
+import os
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/mupdf_4839427ab0_hotfix.py
+13673060, 111
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/numutil.py
+1094717, 104
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/numutil.py
+209513, 105
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/numutil.py
+1837874, 106
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/numutil.py
+379906, 107
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/SetPEVersion.py
+4568580, 189
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/imgutils.py
+22351254, 12
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/SymPy/folium_of_Descartes.py
+35390187, 27
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/SymPy/folium_of_Descartes.py
+25791425, 28
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/uriutils.py
+9535732, 36
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/uriutils.py
+802134, 38
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/return_in_generator.py
+1995418, 96
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/return_in_generator.py
+16780002, 97
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/return_in_generator.py
+231767, 98
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/argument_test.py
+1419046, 26
+------------------
+def complex_2(**kwargs):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/argument_test.py
+13687043, 27
+------------------
+def complex_2(**kwargs):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/RegKey.py
+16672856, 54
+------------------
+def EnumSubKey(key, sub_key = None, recursive = False):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/MoviesScreenshotsMgr.py
+825678, 34
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/MoviesScreenshotsMgr.py
+4657974, 35
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/fileutil.py
+2404430, 267
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/fileutil.py
+1834556, 268
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/fileutil.py
+1984325, 269
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/fileutil.py
+1832528, 270
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/fileutil.py
+283707, 272
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/extract_columns.py
+13415400, 152
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/extract_columns.py
+7387744, 153
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/extract_columns.py
+15753701, 154
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/extract_columns.py
+11847491, 155
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/extract_columns.py
+541390, 156
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/extract_columns.py
+2197451, 157
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/soundex_test.py
+369755, 52
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/notes/netifaces_notes.py
+24196932, 21
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/dat2dcm.py
+6608535, 382
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/dat2dcm.py
+1434918, 384
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/int_to_bytes.py
+21017698, 19
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/int_to_bytes.py
+6187699, 20
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/SciPy/filter_demo.py
+37571622, 24
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/re_overlapping_match.py
+11430863, 16
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/re_overlapping_match.py
+15799332, 17
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/re_overlapping_match.py
+5616822, 18
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/rescrawler.py
+273192, 196
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/rescrawler.py
+8357098, 197
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/rescrawler.py
+37748105, 199
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/rescrawler.py
+4533304, 202
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/rescrawler.py
+2021519, 203
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/fetch_page.py
+696047, 111
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/PatientInfoProvider.py
+1047580, 293
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/python/PatientInfoProvider.py
+1611799, 295
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/hashing/atom_hashing_distribution/cii_atom_hashing_dist.py
+22676, 88
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/math/KahanSummation.py
+2386772, 7
+------------------
+def KahanSum(iterable):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_unittests.py
+5495492, 83
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+28941133, 154
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+20950612, 155
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+26277322, 156
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+33813272, 157
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+46171507, 158
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+16676739, 159
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+1546355, 160
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+1615813, 163
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+6221001, 164
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+18679264, 165
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+1363163, 166
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+15377338, 167
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+24912065, 168
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+54357920, 169
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/coding/base64/base64_c.py
+1825715, 170
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/dsp/FindPeaks/PyFindPeaksTest.py
+952914, 55
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/dsp/FindPeaks/PyFindPeaksEx.py
+42950256, 37
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/dsp/CUSUM/pycumsum_test.py
+41709257, 39
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/algorithm/dsp/CUSUM/pycumsum_test.py
+8409095, 40
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/cpp/CMake/encoding_test/generate_build_run.py
+25150955, 181
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/cpp/CMake/encoding_test/generate_build_run.py
+18239373, 182
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/cpp/CMake/encoding_test/generate_build_run.py
+22459020, 183
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/cpp/CMake/encoding_test/generate_build_run.py
+2492077, 184
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Ongoing-Study/cpp/CMake/encoding_test/generate_build_run.py
+2849010, 186
+------------------
+"end of file"

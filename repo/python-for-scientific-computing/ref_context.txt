@@ -1,0 +1,47 @@
+[88, 1]
+=================
+1114465
+count:88
+        "                // console.log(\"Handling '\" + msg_type + \"' message: \", msg);\n",
+        "                callback(fig, msg);\n",
+        "            } catch (e) {\n",
+        "                console.log(\"Exception inside the 'handler_\" + msg_type + \"' callback:\", e, e.stack, msg);\n",
+        "            }\n",
+        "        }\n",
+        "    };\n",
+        "}\n",
+        "\n",
+        "// from http://stackoverflow.com/questions/1114465/getting-mouse-location-in-canvas\n",
+        "mpl.findpos = function(e) {\n",
+        "    //this section is from http://www.quirksmode.org/js/events_properties.html\n",
+        "    var targ;\n",
+        "    if (!e)\n",
+        "        e = window.event;\n",
+        "    if (e.target)\n",
+        "        targ = e.target;\n",
+        "    else if (e.srcElement)\n",
+        "        targ = e.srcElement;\n",
+        "    if (targ.nodeType == 3) // defeat Safari bug\n",
+=================
+231855
+count:1
+     "metadata": {},
+     "outputs": [],
+     "prompt_number": 8
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "Very nice explanation of the `yield` keyword is available at\n",
+      "http://stackoverflow.com/a/231855/4205267.\n",
+      "Basically, anim returns a \"generator\", a function that will act like a list that can only be traversed once (conceptually a queue).\n",
+      "What happens in practice is that the `while` loop is executed once for each frame, and that's what we care about."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "initial_condition = np.zeros(nparticles*6, dtype = np.float)\n",
+      "initial_condition[3*nparticles:] = np.random.randn(nparticles*3)\n",

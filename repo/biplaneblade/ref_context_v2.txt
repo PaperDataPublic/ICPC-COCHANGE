@@ -1,0 +1,47 @@
+[1, 1, 51, 51, 1]
+1109536
+=================
+1109536
+count:1
+https://pypi.python.org/pypi/descartes/
+http://toblerity.org/shapely/manual.html#object.buffer
+http://stackoverflow.com/questions/1109536/an-algorithm-for-inflating-deflating-offsetting-buffering-polygons
+
+Author: Toblerity, Perry Roth-Johnson
+Last modified: August 29, 2013
+=================
+1109536
+count:1
+https://pypi.python.org/pypi/descartes/
+http://toblerity.org/shapely/manual.html#object.buffer
+http://stackoverflow.com/questions/1109536/an-algorithm-for-inflating-deflating-offsetting-buffering-polygons
+
+Author: Toblerity, Perry Roth-Johnson
+Last modified: October 7, 2013
+=================
+3366569
+count:51
+
+References:
+http://stackoverflow.com/questions/3365171/calculating-the-angle-between-two-lines-without-having-to-calculate-the-slope/3366569#3366569
+http://stackoverflow.com/questions/19295725/angle-less-than-180-between-two-segments-lines
+
+"""
+=================
+19295725
+count:51
+References:
+http://stackoverflow.com/questions/3365171/calculating-the-angle-between-two-lines-without-having-to-calculate-the-slope/3366569#3366569
+http://stackoverflow.com/questions/19295725/angle-less-than-180-between-two-segments-lines
+
+"""
+
+=================
+2745329
+count:1
+
+def extrap1d(interpolator):
+    # copied from http://stackoverflow.com/questions/2745329/how-to-make-scipy-interpolate-give-a-an-extrapolated-result-beyond-the-input-ran
+    xs = interpolator.x
+    ys = interpolator.y
+    def pointwise(x):

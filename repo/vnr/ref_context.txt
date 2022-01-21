@@ -1,0 +1,2123 @@
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+8362506
+=================
+38987
+count:1
+if __name__ == '__main__': # DEBUG
+  import sys
+  sys.path.append("..")
+
+import re
+from restful.online import DataParser
+from sakurakit.skdebug import dwarn
+from sakurakit.skstr import unescapehtml
+
+# http://stackoverflow.com/questions/38987/how-can-i-merge-union-two-python-dictionaries-in-a-single-expression
+def _mergedictwith(x, y):
+  """
+  @param[inout]  x  dict
+  @param[in]  y  dict
+  """
+  for k,v in y.iteritems():
+    if not x.get(k): #== None:
+      x[k] = v
+
+class SoftApi(DataParser):
+=================
+842059
+count:1
+  #dic = location + 'New Japanese-Chinese Dictionary.ld2'
+
+  #HOME = os.path.expanduser('~')
+  #if os.name == 'nt':
+  #  from sakurakit import skpaths
+  #  APPDATA = skpaths.APPDATA
+  #else: # mac
+  #  import getpass
+  #  HOME = os.path.expanduser('~')
+  #  USER = getpass.getuser() # http://stackoverflow.com/questions/842059/is-there-a-portable-way-to-get-the-current-username-in-python
+  #  APPDATA = os.path.join(os., '.wine/drive_c/users/' + USER + '/Application Data')
+  PWD = os.getcwd()
+  dbpath = os.path.join(PWD, '../../../../../../Caches/Dictionaries/Lingoes')
+  #dbpath = os.path.join(dbpath, 'ja-zh.db')
+  dbpath = os.path.join(dbpath, 'ja-zh-gbk.db')
+  #dbpath += 'ja-ko.db'
+  #dbpath += 'ja-vi.db'
+
+  ld = LingoesDb(dbpath)
+
+=================
+7380629
+count:1
+class Compare:
+  def __init__(self, value):
+    self.value = value
+
+  def __gt__(self, other): # unicode, pair -> bool
+    """@reimp"""
+    return self.value > other[0] # only compare the first element
+
+# Only works for right search
+# http://stackoverflow.com/questions/7380629/perform-a-binary-search-for-a-string-prefix-in-python
+class PrefixCompare:
+  def __init__(self, value):
+    self.value = value
+
+  def __lt__(self, other): # unicode, pair -> bool
+    """@reimp"""
+    return self.lt(other[0]) # only compare the first element
+
+  def lt(self, other): # unicode, unicode -> bool
+    if len(self.value) < len(other):
+=================
+3785294
+count:1
+# dbutil.py
+# 4/5/2015
+
+# http://stackoverflow.com/questions/3785294/best-way-to-iterate-through-all-rows-in-a-db-table
+def fetchsome(cursor, some):
+  """
+  @param  cursor
+  @param  some  int
+  @raise
+  """
+  fetch = cursor.fetchmany
+  while True:
+    rows = fetch(some)
+    if not rows:
+=================
+13934994
+count:1
+  return False
+
+def create_surface_tables(cur): # cursor -> bool
+  """
+  @param  cursor
+  @return  bool
+  @raise
+  """
+# Forign key is not enabled, which will make sqlite slightly slower
+# http://stackoverflow.com/questions/13934994/sqlite-foreign-key-examples
+#FOREIGN KEY(entry_id) REFERENCES entry(id),
+  cur.execute('''\
+CREATE TABLE surface(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+text TEXT NOT NULL,
+entry_id INTEGER)
+''').execute('''\
+CREATE INDEX idx_surface ON surface(text ASC)
+''')
+  return True
+=================
+3785294
+count:1
+  elif wordlike:
+    sql += ' where word like ?'
+    params.append(wordlike)
+  if limit:
+    sql += ' limit ?'
+    params.append(limit)
+  cur.execute(sql, params)
+  return cur.fetchall()
+
+# http://stackoverflow.com/questions/3785294/best-way-to-iterate-through-all-rows-in-a-db-table
+def iterentries(cur, select=SELECT_WORD_CONTENT, chunk=100):
+  """
+  @param  cursor
+  @yield  unicode word, unicode content
+  @raise
+  """
+  sql = "SELECT %s FROM entry" % select
+  cur.execute(sql)
+  return dbutil.fetchsome(cur, chunk)
+
+=================
+10299807
+count:1
+def getenvrc(path): # -> unicode
+  return os.environ.get('MECABRC')
+
+def delenvrc():
+  try: del os.environ['MECABRC']
+  except: pass
+
+# Helper functions
+
+# http://stackoverflow.com/questions/10299807/mecab-path-parameters-doesnot-accept-whitespace
+def normalizepath(path):
+  """
+  @param  path  unicode
+  @return  str not unicode
+  """
+  if not path:
+    return ''
+  path = path.encode('utf8', errors='ignore') # must be ascii
+  #if not os.path.exists(path):
+  #  return ''
+=================
+444591
+count:1
+
+#def signedord(c):
+#  """Return signed char value of the character
+#  @param  c  char
+#  @return  int[-128,127]
+#  """
+#  ret = ord(c)
+#  return ret if ret < 128 else ret - 256
+
+# http://stackoverflow.com/questions/444591/convert-a-string-of-bytes-into-an-int-python
+def unpackuint(s): #
+  """
+  @param  s  str|bytearray|QByteArray
+  @return  int
+  """
+  #return sum(ord(c) << (i * 8) for i,c in enumerate(s[::-1])) # reverse sign does not work for QByteArray
+  size = len(s)
+  return sum((ord(c) << (8 * (size - i - 1))) for i,c in enumerate(s))
+
+def unpackuint32(s, i=0): #
+=================
+3465704
+count:1
+  app = QCoreApplication(sys.argv)
+  QTimer.singleShot(0, test)
+  app.exec_()
+
+# EOF
+
+#import urllib, urllib2
+#url = createUrl(text, to=INFOSEEK_LCODE[to], fr=INFOSEEK_LCODE[fr])
+#try:
+#  # See: http://stackoverflow.com/questions/3465704/python-urllib2-urlerror-http-status-code
+#  response = urllib2.urlopen(url)
+#  ret = response.read()
+#except urllib2.HTTPError, e:
+#  dwarn("http error code =", e.code)
+#  return ""
+#except urllib2.URLError, e:
+#  dwarn("url error args =", e.args)
+#  return ""
+#finally:
+#  try: response.close()
+=================
+5253854
+count:1
+# texthook.py
+# 10/6/2012 jichi
+# Windows only
+# See: http://stackoverflow.com/questions/5253854/python-import-dll
+
+__all__ = 'TextHook',
+
+#from ctypes import c_longlong
+from PySide.QtCore import Signal, QObject, Qt
+from sakurakit import skos
+from sakurakit.skclass import Q_Q, memoized
+from sakurakit.skdebug import dprint, dwarn
+
+ENABLE_GAMEENGINE = True
+=================
+10334358
+count:1
+      # http://translate.google.com/translate_a/t?client=t&text=かわいい女の子&sl=ja&tl=en
+
+      r = self.session.post(self.api, headers=self.headers, data={
+        'tl': googledef.lang2locale(to),
+        'sl': googledef.lang2locale(fr),
+        'text': t,
+        #'ie':'UTF-8',
+        #'oe':'UTF-8',
+
+        # http://stackoverflow.com/questions/10334358/how-to-get-and-parse-json-answer-from-google-translate
+        #'client': 't', # This will return a Javascript object that can be evaluated using new Function
+        #'client': 'p', # return JSON
+        'client': 'p' if client_json else 't',
+
+        # 2/28/2016
+        'tk':'259734.384347', # this is the app token ID
+        #'hl':'ja',
+        #'dt':'at',
+        #'dt':'bd',
+        #'dt':'ex',
+=================
+13128995
+count:1
+# - Binary v3: http://blog.naver.com/waltherp38/220267098421
+# - Tutorial: http://blog.naver.com/waltherp38/220286266694
+#
+# Test Ehnd
+# - Input: まあね♪スカートとはおさらばだし。ハーフパンツなんて久しぶり♪
+# - ezTrans without ehnd: 그냥♪스커트와는 안녕히이고. 하프 팬츠는 오래간만♪
+# - With ehnd 3.1 and 201504 script: 글쎄♪스커트와는 안녕히이고. 하프 팬츠 같은거 오래간만♪
+#
+# About unloading DLL:
+# - Use FreeLibrary to unload: http://stackoverflow.com/questions/13128995/ctypes-unload-dll
+# - Use GetModuleHandleA to check: http://stackoverflow.com/questions/11939290/how-do-i-find-out-if-my-program-has-a-certain-dll-already-loaded
+
+if __name__ == '__main__': # DEBUG
+  import sys
+  sys.path.append("..")
+
+import ctypes, os
+#from sakurakit import msvcrt
+from sakurakit.skdebug import dprint, dwarn
+
+=================
+11939290
+count:1
+# - Tutorial: http://blog.naver.com/waltherp38/220286266694
+#
+# Test Ehnd
+# - Input: まあね♪スカートとはおさらばだし。ハーフパンツなんて久しぶり♪
+# - ezTrans without ehnd: 그냥♪스커트와는 안녕히이고. 하프 팬츠는 오래간만♪
+# - With ehnd 3.1 and 201504 script: 글쎄♪스커트와는 안녕히이고. 하프 팬츠 같은거 오래간만♪
+#
+# About unloading DLL:
+# - Use FreeLibrary to unload: http://stackoverflow.com/questions/13128995/ctypes-unload-dll
+# - Use GetModuleHandleA to check: http://stackoverflow.com/questions/11939290/how-do-i-find-out-if-my-program-has-a-certain-dll-already-loaded
+
+if __name__ == '__main__': # DEBUG
+  import sys
+  sys.path.append("..")
+
+import ctypes, os
+#from sakurakit import msvcrt
+from sakurakit.skdebug import dprint, dwarn
+
+# Import windows functions
+=================
+2802168
+count:1
+  # Example: 価格：	￥7,140 (税抜￥6,800)
+  #_rx_price = re.compile(ur'￥([0-9,]+?) \(税抜')
+  # ￥7,500 (税込￥8,100)
+  _rx_price = re.compile(ur'税込￥([0-9,]+)')
+  def _parseprice(self, h):
+    """
+    @param  h  unicode  html
+    @return  unicode or None
+    """
+    # http://stackoverflow.com/questions/2802168/find-last-match-with-python-regular-expression
+    m = self._rx_price.search(h)
+    if m:
+      try: return int(m.group(1).replace(',',''))
+      except (ValueError, TypeError): pass
+
+  #_rx_title = re.compile(ur'タイトル：([^"]+?)[,"]')
+  #def _parsetitle(self, h):
+  #  """
+  #  @param  h  unicode  html
+  #  @return  unicode or None
+=================
+2802168
+count:1
+      try: return int(m.group(1).replace(',',''))
+      except (ValueError, TypeError): pass
+
+  #_rx_title = re.compile(ur'タイトル：([^"]+?)[,"]')
+  #def _parsetitle(self, h):
+  #  """
+  #  @param  h  unicode  html
+  #  @return  unicode or None
+  #  """
+  #  # http://stackoverflow.com/questions/2802168/find-last-match-with-python-regular-expression
+  #  m = self._rx_title.search(h)
+  #  if m:
+  #    return unescapehtml(m.group(1).strip())
+
+  #_rx_sample = re.compile(r'SAMPLE([0-9]+)')
+  #def _parseimagecount(self, h):
+  #  """
+  #  @param  h  unicode  html
+  #  @return  int not None
+  #  """
+=================
+2802168
+count:1
+  #  if m:
+  #    return unescapehtml(m.group(1).strip())
+
+  #_rx_sample = re.compile(r'SAMPLE([0-9]+)')
+  #def _parseimagecount(self, h):
+  #  """
+  #  @param  h  unicode  html
+  #  @return  int not None
+  #  """
+  #  # http://stackoverflow.com/questions/2802168/find-last-match-with-python-regular-expression
+  #  m = None
+  #  for m in self._rx_sample.finditer(h): pass
+  #  return int(m.group(1)) if m else 0
+
+  _rx_video = re.compile(r"(?<=www\.youtube\.com/v/)[a-zA-Z0-9_-]+")
+  def _iterparsevideos(self, h):
+    """
+    @param  h  unicode  html
+    @yield  str
+    """
+=================
+2802168
+count:1
+      vid = m.group()
+      yield vid
+
+  _rx_sampleimage = re.compile(r'brandnew/[^"]*?sample([0-9]+).jpg')
+  def _iterparsesampleimages(self, h):
+    """
+    @param  h  unicode  html
+    @yield  str
+    """
+    # http://stackoverflow.com/questions/2802168/find-last-match-with-python-regular-expression
+    for m in self._rx_sampleimage.finditer(h):
+      yield self.HOST + m.group()
+
+  def __maketablerx(name):
+    """
+    @param  name  unicode
+    @return  re
+    """
+    return re.compile(
+        #r'<div class="tabletitle">&nbsp;%s</div>.*?<BR clear="all"></div>' % name,
+=================
+23889620
+count:1
+# colorconv.py
+# 9/14/2014 jichi
+#
+# References:
+# - HSL/HSV: https://en.wikipedia.org/wiki/HSL_and_HSV
+#   https://hg.python.org/cpython/file/2.7/Lib/colorsys.py
+# - HSI: http://www.had2know.com/technology/hsi-rgb-color-converter-equations.html
+#   http://stackoverflow.com/questions/23889620/is-there-any-other-way-to-convert-rgb-to-hsi
+#
+# Others:
+# - https://github.com/scikit-image/scikit-image/blob/master/skimage/color/colorconv.py
+# - colorsys in Python2
+
+import math
+
+def pix2rgb(p): # int -> (int r, int g, int b)
+  return p >> 16 & 0xff, p >> 8 & 0xff,  p & 0xff
+
+=================
+23889620
+count:1
+#
+# Online verification: http://www.picturetopeople.org/color_converter.html
+# Formulation: https://mail.python.org/pipermail/image-sig/2005-March/003236.html
+#
+#   I = 1/3 * (R+G+B)
+#   S = 1 - (3/(R+G+B))*(min(R,G,B))
+#   H = cos^-1 ( (((R-G)+(R-B))/2)/ (sqrt((R-G)^2 + (R-B)*(G-B) )))
+#
+# See: http://www.had2know.com/technology/hsi-rgb-color-converter-equations.html
+# See: http://stackoverflow.com/questions/23889620/is-there-any-other-way-to-convert-rgb-to-hsi
+def rgb2hsi(r, g, b): # int, int, int -> float rad or None, float, float
+  s,i = rgb2hsi_si(r, g, b)
+  h = rgb2hsi_h(r, g, b)
+  return h,s,i
+
+def rgb2hsi_h(r, g, b): # int, int, int -> float or None
+  if r or g or b:
+    dRG = r - g
+    dRB = r - b
+    dGB = g - b
+=================
+10299807
+count:1
+# 11/9/2013 jichi
+
+if __name__ == '__main__': # DEBUG
+  import sys
+  sys.path.append("..")
+
+import os
+from sakurakit.skdebug import dprint, dwarn
+
+# http://stackoverflow.com/questions/10299807/mecab-path-parameters-doesnot-accept-whitespace
+def normalizepath(path):
+  """
+  @param  path  unicode
+  @return  str not unicode
+  """
+  if not path:
+    return ''
+  path = path.encode('utf8', errors='ignore')
+  #if not os.path.exists(path):
+  #  return ''
+=================
+6187699
+count:1
+    #else:
+    #  dwarn("invalid pattern type: %s" % type(pattern))
+    #  return -1
+
+  def search_memory_long(self, pattern, *args, **kwargs):
+    """Search memory
+    @param  pattern  int
+    @return  long  addr
+    """
+    # http://stackoverflow.com/questions/6187699/how-to-convert-integer-value-to-array-of-four-bytes-in-python
+    r = xrange(int(math.log(pattern, 2)/8) * 8, -1, -8)
+    s = (pattern >> i & 0xff for i in r)
+    return self.search_memory_list(s, *args, **kwargs)
+
+  def search_memory_list(self, pattern, *args, **kwargs):
+    """Search memory
+    @param  pattern  [int]
+    @return  long  addr
+    """
+    pattern = ''.join(imap(chr, pattern))
+=================
+17418108
+count:1
+    """
+    return sum(fabs(x)+fabs(y) for x,y in positions) # pos.manhattanLength()
+
+
+# Helpers
+
+def _subtract((x1,y1), (x2,y2)):
+  """
+  A replacement of numpy.subtract
+  See: http://stackoverflow.com/questions/17418108/elegant-way-to-perform-tuple-arithmetic
+  """
+  return x1 - x2, y1 - y2
+
+=================
+15306866
+count:1
+  #def winEvent(self, message, result):
+  #  """@reimp
+  #  """
+  #  if 'HitTestCode' in message.__str__():
+  #    #HTNOWHERE
+  #    return True
+  #  return super(MirroredWindow, self).winEvent(message, result)
+
+  # TODO: Update QIcon from HICON got from GetWindowLong
+  # http://stackoverflow.com/questions/15306866/hicon-hbitmap-to-qicon-qpixmap-qimage-anything-with-a-q-in-it
+
+  def start(self): self.__d.repaintTimer.start(); self.repaint()
+  def stop(self): self.__d.repaintTimer.stop()
+
+  ## Events ##
+
+  def setVisible(self, v):
+    """@reimp
+    @param  v  bool
+    """
+=================
+1823762
+count:1
+    )
+    sz = ctypes.sizeof(inp)
+    skwinapi.SendInput(1, inp, sz)
+    #inp.ki.dwFlags = win32con.KEYEVENTF_KEYUP
+    #skwinapi.SendInput(1, inp, sz)
+
+
+    #QTimer.singleShot(500, partial(f, vk))
+
+    # http://stackoverflow.com/questions/1823762/sendkeys-for-python-3-1-on-windows
+    #win32gui.SetFocus((hwnd)
+    #def f(vk):
+    #  inp = skwinapi.INPUT(
+    #    type = win32con.INPUT_MOUSE,
+    #    ki = skwinapi.KEYBDINPUT(
+    #      wVk = vk,
+    #    ),
+    #  )
+    #  sz = ctypes.sizeof(inp)
+    #  skwinapi.SendInput(1, inp, sz)
+=================
+2086017
+count:1
+    if w <= 0 or h <= 0:
+      return
+
+    x, y = event.x(), event.y()
+
+    x0 = left + w0 * x / w
+    y0 = top + WINDOW_TITLEBAR_HEIGHT + h0 * y / h
+    print x0, y0
+
+    # http://stackoverflow.com/questions/2086017/how-to-simulate-mousemove-event-from-one-window-to-another
+    #pos = event.globalPos()
+    #skwin.post_mouse_move(x0 - pos.x(), y0 - pos.y())
+    #skwin.post_mouse_click()
+    #skwin.post_mouse_move(pos.x() - x0, pos.y() - y0)
+    #import functools
+    #QTimer.singleShot(0, functools.partial(skwin.post_mouse_move,
+    #  - x0 + pos.x(), - y0 + pos.y(), relative=True))
+    #skwin.post_mouse_move(event.x(), event.y())
+
+    #win32api.SendMessage(hwnd, win32con.WM_NCHITTEST, 0, win32api.MAKELONG(x0, y0))
+=================
+2086017
+count:1
+    if w <= 0 or h <= 0:
+      return
+
+    x, y = event.x(), event.y()
+
+    x0 = left + w0 * x / w
+    y0 = top + WINDOW_TITLEBAR_HEIGHT + h0 * y / h
+    print x0, y0
+
+    # http://stackoverflow.com/questions/2086017/how-to-simulate-mousemove-event-from-one-window-to-another
+    import win32api, win32con, win32gui
+    #pos = event.globalPos()
+    #skwin.post_mouse_move(x0 - pos.x(), y0 - pos.y())
+    #skwin.post_mouse_click()
+    #skwin.post_mouse_move(pos.x() - x0, pos.y() - y0)
+    #import functools
+    #QTimer.singleShot(0, functools.partial(skwin.post_mouse_move,
+    #  - x0 + pos.x(), - y0 + pos.y(), relative=True))
+    #skwin.post_mouse_move(event.x(), event.y())
+
+=================
+7259847
+count:1
+    #  type = win32con.INPUT_MOUSE,
+    #  mi = skwinapi.MOUSEINPUT(
+    #    dx = pos.x(),
+    #    dy = pos.y(),
+    #    dwFlags = win32con.MOUSEEVENTF_ABSOLUTE | win32con.MOUSEEVENTF_MOVE,
+    #  ),
+    #)
+    #skwinapi.SendInput(1, inp, sz)
+
+  # http://stackoverflow.com/questions/7259847/forcing-an-aspect-ratio-when-resizing-a-main-window
+  def resizeEvent(self, event) :
+    """@reimp
+    @param  event  QResizeEvent
+    """
+    self.__d.resizeTimer.start()
+
+  def paintEvent(self, event):
+    """@reimp
+    @param  event  QPaintEvent
+    """
+=================
+2775864
+count:1
+def current_unixtime():
+  """Unix time in seconds
+  @return  long  seconds
+  """
+  return long(time.time())
+
+NOW = datetime.now()
+CURRENT_UNIXTIME = current_unixtime()
+
+# See: http://stackoverflow.com/questions/2775864/python-datetime-to-unix-timestamp
+def datetime2timestamp(date):
+  """Unix time in seconds
+  @param  datetime  datetime.datetime not None
+  @return  long  seconds
+  @throw  when datetime is not valid or less than unixtime 0
+  """
+  return int(time.mktime(date.timetuple()))
+
+date2timestamp = datetime2timestamp
+
+=================
+11875770
+count:1
+# skjson.py
+# 7/4/2014 jichi
+
+from datetime import datetime
+
+# http://stackoverflow.com/questions/11875770/how-to-overcome-datetime-datetime-not-json-serializable-in-python
+def default_datetime(obj):
+  """
+  @param  obj  any
+  @return  any
+  """
+  if isinstance(obj, datetime):
+    serial = obj.isoformat()
+    return serial
+
+if __name__ == '__main__':
+=================
+354038
+count:1
+def uint64(u):  return u & 18446744073709551615
+
+## Type-checking ##
+
+def is_float(v):
+  """
+  @param  v  any
+  @return  bool
+  """
+  # http://stackoverflow.com/questions/354038/how-do-i-check-if-a-string-is-a-number-in-python
+  # This method is not slow
+  try: float(v); return True
+  except (TypeError, ValueError): return False
+
+#def is_int(v):
+#  """
+#  @param  v  any
+#  @return  bool
+#  """
+#  if isinstance(v, basestring):
+=================
+16694907
+count:1
+  #  dwarn("socket error", e.args)
+  #except requests.ConnectionError, e:
+  #  dwarn("connection error", e.args)
+  #except requests.HTTPError, e:
+  #  dwarn("http error", e.args)
+
+  #try: dwarn(r.url)
+  #except: pass
+
+# Stream with requests: http://stackoverflow.com/questions/16694907/how-to-download-large-file-in-python-with-requests-py
+def itergetdata(url, chunksize=1024, **kwargs):
+  """
+  @param  url  str
+  @param  path  str
+  @param  mode  str  'w' or 'wb'
+  @return  iter(str) or None
+  """
+  try:
+    res = _getres(url, stream=True, **kwargs)
+    if res:
+=================
+480214
+count:1
+# skcontainer.py
+# 8/27/2013 jichi
+
+# http://stackoverflow.com/questions/480214/how-do-you-remove-duplicates-from-a-list-in-python-whilst-preserving-order
+def uniquelist(seq):
+  """
+  @param[in]  seq  iterable
+  @return  list
+  """
+  seen = set()
+  seen_add = seen.add
+  return [it for it in seq if it not in seen and not seen_add(it)]
+
+def mergedicts(x, y):
+=================
+122327
+count:1
+    if skos.WIN:
+      if gui:
+        ret = ret.replace('python.exe', 'pythonw.exe')
+      else:
+        ret = ret.replace('pythonw.exe', 'python.exe')
+  return ret
+
+# Get path to Lib/site-packages
+def get_python_site():
+  # http://stackoverflow.com/questions/122327/how-do-i-find-the-location-of-my-python-site-packages-directory
+  #import site
+  #return site.getsitepackages()[-1]
+  from distutils import sysconfig
+  return sysconfig.get_python_lib()
+
+=================
+20352794
+count:1
+# skyaml
+# 12/16/2014 jichi
+# See: http://stackoverflow.com/questions/20352794/pyyaml-is-producing-undesired-python-unicode-output
+
+from sakurakit.skdebug import dwarn
+import yaml
+
+# default_flow_style: Disable default flow style to make it more readable
+def dump(data, f, default_flow_style=False, encoding='utf-8', allow_unicode=True):
+  try:
+    yaml.safe_dump(data, f,
+      default_flow_style=default_flow_style,
+      encoding=encoding,
+=================
+1131220
+count:1
+def loselose_ull(L, rehash=0):
+  return reduce(lambda h,c: ullong(ord(c) + h), L, rehash or 0)
+
+def loselose_64(L, rehash=0):
+  rehash = numpy.int64(rehash or 0)
+  return reduce(lambda h,c: ord(c) + h, L, rehash or 0)
+
+## File hashing algorithms ##
+
+# See: http://stackoverflow.com/questions/1131220/get-md5-hash-of-a-files-without-open-it-in-python
+def md5sumpath(path):
+  """Return the MD5 digest of the file
+  @param  path  str  input file path
+  @return  str  md5 in lowercase hex string
+  """
+  try:
+    # Change to UNC path: http://stackoverflow.com/questions/7169845/using-python-how-can-i-access-a-shared-folder-on-windows-network
+    if path.startswith('/') and not path.startswith('//'):
+      path = '/' + path
+    md5 = hashlib.md5()
+=================
+7169845
+count:1
+## File hashing algorithms ##
+
+# See: http://stackoverflow.com/questions/1131220/get-md5-hash-of-a-files-without-open-it-in-python
+def md5sumpath(path):
+  """Return the MD5 digest of the file
+  @param  path  str  input file path
+  @return  str  md5 in lowercase hex string
+  """
+  try:
+    # Change to UNC path: http://stackoverflow.com/questions/7169845/using-python-how-can-i-access-a-shared-folder-on-windows-network
+    if path.startswith('/') and not path.startswith('//'):
+      path = '/' + path
+    md5 = hashlib.md5()
+    with open(path,'rb') as f:
+      chunk_size =128 * md5.block_size
+      for chunk in iter(lambda: f.read(chunk_size), b''):
+        md5.update(chunk)
+    return md5.hexdigest()
+  #except IOError: return ""
+  except: return ""
+=================
+1551605
+count:1
+try:
+  ChangeWindowMessageFilter = user32.ChangeWindowMessageFilter
+  ChangeWindowMessageFilter.restype = BOOL
+  ChangeWindowMessageFilter.argtypes = UINT, DWORD
+except AttributeError:
+  #def ChangeWindowMessageFilter(message, dwFlags): return False
+  ChangeWindowMessageFilter = None
+
+
+# See: http://stackoverflow.com/questions/1551605/how-to-set-applications-taskbar-icon-in-windows-7
+try:
+  SetCurrentProcessExplicitAppUserModelID = shell32.SetCurrentProcessExplicitAppUserModelID
+  SetCurrentProcessExplicitAppUserModelID.restype = HRESULT
+  SetCurrentProcessExplicitAppUserModelID.argtype = LPCWSTR
+except AttributeError:
+  def SetCurrentProcessExplicitAppUserModelID(appId): return 0
+
+try:
+  GetCurrentProcessExplicitAppUserModelID = shell32.GetCurrentProcessExplicitAppUserModelID
+  GetCurrentProcessExplicitAppUserModelID.restype = HRESULT
+=================
+7921307
+count:1
+
+CloseClipboard = user32.CloseClipboard
+CloseClipboard.restype = BOOL
+CloseClipboard.argtypes = []
+
+SetClipboardData = user32.SetClipboardData
+SetClipboardData.restype = HANDLE
+SetClipboardData.argtypes = UINT, HANDLE
+
+# See: http://stackoverflow.com/questions/7921307/temporarily-change-cursor-using-python
+CopyIcon = user32.CopyIcon
+CopyIcon.restype = HICON
+CopyIcon.argtype = HICON
+
+#define CopyCursor(pcur) ((HCURSOR)CopyIcon((HICON)(pcur)))
+CopyCursor = user32.CopyIcon
+CopyCursor.restype = HCURSOR
+CopyCursor.argtype = HCURSOR
+
+SetSystemCursor = user32.SetSystemCursor
+=================
+1872480
+count:1
+#   _In_  DWORD dwFreeType
+# );
+#
+# See: pywinauto: http://pywinauto.googlecode.com/hg-history/badf679f1d09af7bf45add1dec55e98a8b92fbbf/pywinauto/win32functions.py
+VirtualFreeEx = kernel32.VirtualFreeEx
+VirtualFreeEx.restype = BOOL
+#VirtualFreeEx.argtypes = HANDLE, LPVOID, SIZE_T, DWORD
+VirtualFreeEx.argtypes = ULONG, LPVOID, SIZE_T, DWORD
+
+# http://stackoverflow.com/questions/1872480/use-python-to-extract-listview-items-from-another-application
+#BOOL WINAPI WriteProcessMemory(
+#  _In_   HANDLE hProcess,
+#  _In_   LPVOID lpBaseAddress,
+#  _In_   LPCVOID lpBuffer,
+#  _In_   SIZE_T nSize,
+#  _Out_  SIZE_T *lpNumberOfBytesWritten
+#);
+WriteProcessMemory = kernel32.WriteProcessMemory
+WriteProcessMemory.restype = BOOL
+#WriteProcessMemory.argtypes = HANDLE, LPVOID, LPCVOID, SIZE_T, LPSIZE_T
+=================
+9920452
+count:1
+    @return  unicode or "" if not exists
+    """
+    try: return win32api.GetLongPathName(path)
+    except Exception, e: dwarn(e); return ""
+
+  ## Process ##
+
+  def kill_my_process(ret=0):
+    # http://snipplr.com/view/60057/
+    # http://stackoverflow.com/questions/1533200/qt-kill-current-process/9920452#9920452
+    win32api.TerminateProcess(win32api.GetCurrentProcess(), ret)
+
+  def kill_process(pid, ret=0):
+    """
+    @param  pid  long
+    @return  bool
+    """
+    ret = False
+    try:
+      # http://snipplr.com/view/60057/
+=================
+1100605
+count:1
+    #except Exception, e: dwarn(e)
+    return ""
+
+  def set_window_text(hwnd, text):
+    """
+    @param  hwnd  HWND
+    @param  text  unicode
+    @return  bool
+
+    See: http://stackoverflow.com/questions/1100605/settext-of-textbox-in-external-app-win32-api
+    """
+    #size = win32gui.SendMessage(hwnd, win32con.WM_GETTEXTLENGTH, 0, 0)
+    ##buf = ctypes.create_unicode_buffer(size)
+    #buf = ctypes.create_string_buffer(size)
+    #win32gui.SendMessage(hwnd, win32con.WM_GETTEXT, size, buf)
+    #return buf.value.decode('sjis')
+    try:
+      buf = ctypes.create_unicode_buffer(text)
+      size = skwinapi.SendMessageW(hwnd, win32con.WM_SETTEXT, 0, ctypes.addressof(buf))
+      return size > 0
+=================
+6381198
+count:1
+  def set_top_window(hwnd):
+    """
+    @param  hwnd  HWND
+    @return  bool
+    """
+    try: return bool(win32gui.BringWindowToTop(hwnd))
+    except: return False
+
+  # Not working for inter-thread windows
+  # see: http://stackoverflow.com/questions/6381198/get-window-z-order-with-python-windows-extensions
+  #def get_top_window(hwnd):
+  #  return ?.GetTopWindow(hwnd)
+
+  def get_window_children(hwnd):
+    """
+    @param  pid long
+    @return  [long]
+    """
+    ret = []
+    try:
+=================
+10085381
+count:1
+  #  """
+  #  try:
+  #    buf = ctypes.create_unicode_buffer(maxlen)
+  #    if 0 == skwinapi.SetCurrentProcessExplicitAppUserModelID(ctypes.addressof(buf)):
+  #      return buf.value
+  #  except Exception, e: dwarn(e)
+
+  ## Task bar ##
+
+  # See: http://stackoverflow.com/questions/10085381/how-to-detect-if-autohidden-taskbar-is-visible-or-not
+  def get_taskbar_window():
+    """
+    @return  HWND
+    """
+    return win32gui.FindWindow("Shell_TrayWnd", "")
+
+  # See: http://stackoverflow.com/questions/10085381/how-to-detect-if-autohidden-taskbar-is-visible-or-not
+  # Magic numbers: 4 (vertical) and 2 (horizontal)
+  def is_taskbar_visible(hwnd=None):
+    """
+=================
+10085381
+count:1
+  ## Task bar ##
+
+  # See: http://stackoverflow.com/questions/10085381/how-to-detect-if-autohidden-taskbar-is-visible-or-not
+  def get_taskbar_window():
+    """
+    @return  HWND
+    """
+    return win32gui.FindWindow("Shell_TrayWnd", "")
+
+  # See: http://stackoverflow.com/questions/10085381/how-to-detect-if-autohidden-taskbar-is-visible-or-not
+  # Magic numbers: 4 (vertical) and 2 (horizontal)
+  def is_taskbar_visible(hwnd=None):
+    """
+    @param  hwnd  HWND or None
+    @return  bool  if taskbar has a visible size on the desktop
+    """
+    left, top, right, bottom = get_window_rect(hwnd or get_taskbar_window())
+    return (bottom > 4 and right > 2 and
+            top > win32api.GetSystemMetrics(win32con.SM_CYSCREEN) - 4 and
+            left > win32api.GetSystemMetrics(win32con.SM_CXSCREEN) - 2)
+=================
+19508268
+count:1
+    except: return false
+
+  def set_file_normal(path): # str -> bool
+    try: bool(win32api.SetFileAttributes(path, win32con.FILE_ATTRIBUTE_READONLY))
+    except: return False
+
+  ## Launch ##
+
+  def open_cpl(path): # unicode -> bool
+    # http://stackoverflow.com/questions/19508268/how-to-open-control-panel-in-python-using-win32-extension
+    try:
+      import skproc
+      return bool(skproc.detachgui(['control.exe', path]))
+    except Exception, e:
+      dwarn(e)
+      return False
+
+  def install_msi_admin(path): # unicode -> bool
+    try: return elevate('msiexec.exe', ('/i', path))
+    except Exception, e:
+=================
+397125
+count:1
+  def elevate(path, args): # str, str
+    try:
+      quoted = ' '.join(("%s" % it for it in args))
+      shell().ShellExecute(path, quoted, '', 'runas')
+      return True
+    except Exception, e:
+      dwarn(e)
+      return False
+
+  # http://stackoverflow.com/questions/397125/reading-the-target-of-a-lnk-file-in-python
+  def get_link_target_wsh(path):
+    """
+    @param  path  unicode  shortcut file location
+    Wreturn  unicode or None
+
+    Note: though returning unicode, the characters are illegal.
+    """
+    try: return wsh().CreateShortcut(path).Targetpath
+    #except Exception, e: dwarn(e)
+    except Exception, e: dwarn(e)
+=================
+196345
+count:1
+
+REGEX_SPECIAL_CHARS = r'()[]^$|\?!*+.'
+
+RE_SPECIAL_CHARS = re.compile(r"[%s]" % re.escape(
+  r'()[]^$|\?!*+.'
+))
+def contains_re_chars(text): # unicode -> bool
+  return bool(RE_SPECIAL_CHARS.search(text))
+
+# http://stackoverflow.com/questions/196345/how-to-check-if-a-string-in-python-is-in-ascii
+def isascii(s):
+  try: s.decode('ascii'); return True
+  except UnicodeDecodeError: return False
+  except Exception, e:
+    dwarn(e)
+    return False
+
+def signed_ord(c):
+  """Return signed char value of the character
+  @param  c  char
+=================
+2556108
+count:1
+
+def signed_ord(c):
+  """Return signed char value of the character
+  @param  c  char
+  @return  int[-128,127]
+  """
+  ret = ord(c)
+  return ret if ret < 128 else ret - 256
+
+# http://stackoverflow.com/questions/2556108/how-to-replace-the-last-occurence-of-an-expression-in-a-string
+def rreplace(s, old, new, count):
+  """
+  @param  s  unicode
+  @param  old  unicode
+  @param  new  unicode
+  @param  count  int
+  """
+  if count == 1:
+    left, mid, right = s.rpartition(old)
+    if mid:
+=================
+6609895
+count:1
+      stop = text.rfind(end, 0, start)
+
+def _multireplacer_lookup(table, match):
+  """
+  @param  table  {unicode fr:unicode to}
+  @param  match  re.match
+  """
+  return table[match.group(1)]
+
+# http://stackoverflow.com/questions/6609895/efficiently-replace-bad-characters
+def multireplacer(table, flags=0, escape=False, prefix=None, suffix=None):
+  """
+  @param  table  {unicode fr:unicode to}
+  @param* flags  re compile flags  However, re.IGNORECASE will break the dictionary
+  @param* prefix  str or None
+  @param* suffix  str or None
+  @return  fn(text)
+  """
+  it = table.iterkeys() if escape else (re.escape(k) for k in table.iterkeys())
+  l = sorted(it, key=len, reverse=True) # sort based on length of the string
+=================
+1695183
+count:1
+_HP = HTMLParser()
+# @param  t  unicode
+# @return  unicode
+unescapehtml = _HP.unescape
+
+# @param  t  unicode
+# @return  unicode
+from cgi import escape as escapehtml
+
+# See: http://stackoverflow.com/questions/1695183/how-to-percent-encode-url-parameters-in-python
+import urllib
+def urlencode(text, safe=''):
+  """
+  @param  text  str not unicode
+  @param* safe  str  characters do not encode
+  @param* encoding  str
+  @param* errors  str
+  @return  str not unicode
+  """
+  return urllib.quote(text, safe=safe) # to percentage encoding
+=================
+6701853
+count:1
+  """
+  @param  h  unicode
+  @param  fun  str->str
+  @return  unicode
+  """
+  return replacefun1(_rx_img, fun, h)
+
+# Validate
+
+# http://stackoverflow.com/questions/6701853/parentheses-pairing-issue
+def checkpair(text, pair=("({[",")}]"), escape='\\'):
+  """
+  @param  text  unicode
+  @param* pair  (unicode open, unicode close)
+  @param* escape  unicode  prefix chars for escape, such as "\\" for regex
+  @return  bool
+  """
+  pushChars, popChars = pair
+  needcheck = False
+  for c in text:
+=================
+919056
+count:1
+<img src="http://www.getchu.com/brandnew/718587/c718587charab15.jpg">
+<img src="http://www.getchu.com/brandnew/718587/c718587charab15.jpg">
+<img src="http://www.getchu.com/brandnew/718587/c718587charab15.jpg">
+and
+'''
+  print replaceimgurls(h, lambda it: "123")
+
+# EOF
+
+# See: http://stackoverflow.com/questions/919056/python-case-insensitive-replace
+#def remove(source, pattern, flags=0):
+#  """
+#  @param  pattern  str or None
+#  @param  source  str or None
+#  @param  flags  re flags
+#  @return  str or ""
+#  """
+#  return ("" if not source or not pattern else
+#      re.compile(re.escape(pattern), flags).sub(source, "") if flags else
+#      source.replace(pattern, ""))
+=================
+5863512
+count:1
+
+DEBUG = True
+
+## Functions ##
+
+def safeprint(*args, **kwargs):
+  try: print(*args, **kwargs)
+  except Exception: pass
+
+# See: http://stackoverflow.com/questions/5863512/python-how-to-get-the-class-of-a-calling-method-through-inspection
+def dprint(msg, *args):
+  if not DEBUG:
+    return
+  """Parameters are in the same format as print in Py3K"""
+  caller = inspect.stack()[1] # caller object
+  frame = caller[skinspect.CALLER_FRAME_INDEX]
+  path = caller[skinspect.CALLER_FILE_INDEX]
+  func = caller[skinspect.CALLER_FUNC_INDEX]
+
+  try:
+=================
+3425512
+count:1
+
+  class C:
+    @debugmethod
+    def method(self):
+      safeprint("hello method", file=sys.stderr)
+  C().method()
+
+# EOF
+
+# See: http://stackoverflow.com/questions/3425512/how-do-i-get-the-same-functionality-as-cs-function-in-python
+# See: http://docs.python.org/library/logging.html
+#import logging
+#import sys
+#
+#logging.basicConfig(
+#    format="%(filename)s:%(funcName)s:%(message)s",
+#    level=logging.DEBUG,
+=================
+9937279
+count:1
+# skclass.py
+# 11/3/2012 jichi
+
+import collections, sys, weakref
+from functools import wraps
+
+## Properties ##
+
+# See: http://stackoverflow.com/questions/9937279/can-modules-have-properties
+class classproperty(property):
+  """Method decorator"""
+  def __init__(self, method):
+    super(classproperty, self).__init__(classmethod(method))
+  def __get__(self, cls, owner):
+    return self.fget.__get__(None, owner)()
+
+class staticproperty(property):
+  """Method decorator"""
+  def __init__(self, method):
+=================
+4272196
+count:1
+    key = QtGui.QKeySequence(key)
+  return QtWidgets.QShortcut(key, parent, slot)
+
+#def del_all(obj):
+#  for c in obj.children():
+#    del_all(c)
+#  del obj
+
+# See: http://doc.qt.digia.com/qt/qlayout.html#takeAt
+# See: http://stackoverflow.com/questions/4272196/qt-remove-all-widgets-from-layout
+def clear_layout(layout, delwidget=False):
+  """
+  @param  layout  QLayout
+  @param  delwidget  bool
+  """
+  if layout:
+    while not layout.isEmpty():
+      item = layout.takeAt(0) # QLayoutItem
+      if delwidget:
+        widget = item.widget()
+=================
+13592219
+count:1
+  else:
+    return QProcess.startDetached(args[0], args[1:])
+
+def detachgui(args):
+  """Always hide command prompt on Windows
+  @param  args  [unicode]
+  @return  pid  ulong
+  """
+  dprint(args)
+  # http://stackoverflow.com/questions/13592219/launch-a-totally-independent-process-from-python
+  #DETACHED_PROCESS = win32con.DETACHED_PROCESS
+  import subprocess
+  try:
+    if skos.WIN:
+      flags = win32con.DETACHED_PROCESS|subprocess.CREATE_NEW_PROCESS_GROUP
+    else:
+      flags = 0
+    p = subprocess.Popen(args,
+        creationflags=flags,
+        #shell=True,
+=================
+13592219
+count:1
+    dwarn(e)
+    return 0
+
+def attachgui(args):
+  """Always hide command prompt on Windows
+  @param  args  [unicode]
+  @return  bool
+  """
+  dprint(args)
+  # http://stackoverflow.com/questions/13592219/launch-a-totally-independent-process-from-python
+  import subprocess
+  try:
+    if skos.WIN:
+      flags = win32con.DETACHED_PROCESS|subprocess.CREATE_NEW_PROCESS_GROUP
+    else:
+      flags = 0
+    errcode = subprocess.call(args,
+        creationflags=flags,
+        #shell=True,
+        close_fds=True)
+=================
+5863512
+count:1
+# skinspect.py
+# 3/26/2013 jichi
+# See: http://stackoverflow.com/questions/5863512/python-how-to-get-the-class-of-a-calling-method-through-inspection
+
+import inspect
+
+# Indices of inspect.stack()[1]
+CALLER_FRAME_INDEX = 0  # caller frame context
+CALLER_FILE_INDEX = 1   # caller file path
+CALLER_FUNC_INDEX  = 3  # caller function name
+
+def get_func_name():
+  """
+=================
+13971787
+count:1
+# 11/9/2011 jichi
+
+__all__ = 'SkNetworkCookieJar',
+
+from skdebug import dprint
+from PySide.QtNetwork import QNetworkCookie, QNetworkCookieJar
+
+## Cookies ##
+
+# http://stackoverflow.com/questions/13971787/how-do-i-save-cookies-with-qt
+# http://qt.gitorious.org/qt/qt/trees/4.8/demos/browser
+
+class SkNetworkCookieJar(QNetworkCookieJar):
+
+  def __init__(self, parent=None):
+    super(SkNetworkCookieJar, self).__init__(parent)
+    # Control characters (\x00 to \x1F plus \x7F) aren't allowed,
+    # http://stackoverflow.com/questions/1969232/allowed-characters-in-cookies
+    self.marshalSeparator = '\0' # illegal in cookie
+
+=================
+1969232
+count:1
+
+# http://stackoverflow.com/questions/13971787/how-do-i-save-cookies-with-qt
+# http://qt.gitorious.org/qt/qt/trees/4.8/demos/browser
+
+class SkNetworkCookieJar(QNetworkCookieJar):
+
+  def __init__(self, parent=None):
+    super(SkNetworkCookieJar, self).__init__(parent)
+    # Control characters (\x00 to \x1F plus \x7F) aren't allowed,
+    # http://stackoverflow.com/questions/1969232/allowed-characters-in-cookies
+    self.marshalSeparator = '\0' # illegal in cookie
+
+  def marshal(self): # -> str
+    l = self.allCookies()
+    dprint("cookie count = %i" % len(l))
+    return self.marshalSeparator.join((
+      cookie.toRawForm().data() for cookie in l
+    ))
+
+  def unmarshal(self, data):  # str ->
+=================
+7287996
+count:1
+  '\t': ' ',
+}) #, escape=True
+def escape(name):
+  """
+  @param  name  unicode
+  @return  unicode
+  """
+  return _repl_escape(name).strip() if name else ''
+
+# http://stackoverflow.com/questions/7287996/python-get-relative-path-from-comparing-two-absolute-paths
+def relpaths(paths): # [unicode] -> [unicode]
+  path = map(os.path.abspath, paths)
+  prefix = os.path.commonprefix(paths)
+  return [os.path.relpath(path, prefix) for path in paths]
+
+def realpath(path, prefix): # unicode, unicode -> unicode
+  return os.path.relpath(os.path.abspath(path), os.path.abspath(prefix))
+
+# Escape brackets in glob
+# http://edgylogic.com/blog/escaping-square-brackets-pythons-glob/
+=================
+973473
+count:1
+
+def fileempty(path):
+  """
+  @return  bool
+  """
+  return filesize(path) == 0
+
+# Directory navigation
+
+# http://stackoverflow.com/questions/973473/getting-a-list-of-all-subdirectories-in-the-current-directory
+def getfirstchildfile(path): # unicode -> unicode or None
+  try:
+    parent, dirs, files = os.walk(path).next()
+    return os.path.join(parent, files[0])
+  except Exception, e:
+    dwarn(e)
+
+# http://stackoverflow.com/questions/973473/getting-a-list-of-all-subdirectories-in-the-current-directory
+def getfirstchilddir(path): # unicode -> unicode or None
+  try:
+=================
+973473
+count:1
+
+# http://stackoverflow.com/questions/973473/getting-a-list-of-all-subdirectories-in-the-current-directory
+def getfirstchildfile(path): # unicode -> unicode or None
+  try:
+    parent, dirs, files = os.walk(path).next()
+    return os.path.join(parent, files[0])
+  except Exception, e:
+    dwarn(e)
+
+# http://stackoverflow.com/questions/973473/getting-a-list-of-all-subdirectories-in-the-current-directory
+def getfirstchilddir(path): # unicode -> unicode or None
+  try:
+    parent, dirs, files = os.walk(path).next()
+    return os.path.join(parent, dirs[0])
+  except Exception, e:
+    dwarn(e)
+
+# Compression
+
+def extractarchive(path, location, type, *args, **kwargs):
+=================
+740820
+count:1
+  elif type == '7z':
+    x = extract7z
+  else:
+    dwarn("unknown archive type = %s" % type)
+    return False
+  return x(path, location, *args, **kwargs)
+
+# http://docs.python.org/2/library/tarfile.html
+# mode: r, r:, r:gz, r:bz2
+# http://stackoverflow.com/questions/740820/python-write-string-directly-to-tarfile
+def extracttar(path, location, mode='r'): # unicode, unicode -> bool
+  """
+  @param  path  unicode
+  @param  location  unicode
+  @param* mode  str
+  @return  bool
+  """
+  import tarfile
+  try:
+    #with tarfile.TarFile(path) as z: # without extraction
+=================
+9431918
+count:1
+  except Exception, e:
+    dwarn(e)
+  return False
+
+def extracttargz(path, location): return extracttar(path, location, 'r:gz')
+def extracttarbz2(path, location): return extracttar(path, location, 'r:bz2')
+extracttgz = extracttargz
+extracttbz2 = extracttarbz2
+
+# http://stackoverflow.com/questions/9431918/extracting-zip-file-contents-to-specific-directory-in-python-2-7
+def extractzip(path, location): # unicode, unicode -> bool
+  """
+  @param  path  unicode
+  @param  location  unicode
+  @return  bool
+  """
+  import zipfile
+  try:
+    with zipfile.ZipFile(path, 'r') as z:
+      z.extractall(location)
+=================
+10701528
+count:1
+    with zipfile.ZipFile(path, 'r') as z:
+      z.extractall(location)
+      return True
+  except Exception, e:
+    dwarn(e)
+  return False
+
+# Python 3 is different
+# github.com/fancycode/pylzma/blob/master/doc/usage.txt
+# http://stackoverflow.com/questions/10701528/example-of-how-to-use-pylzma
+def extractxz(infile, outfile): # unicode, unicode -> bool
+  """
+  @param  infile  unicode
+  @param  outfile  unicode
+  @return  bool
+  """
+  import pylzma
+  try:
+    with open(infile, 'rb') as i:
+      with open(outfile, 'wb') as o:
+=================
+10701528
+count:1
+          data = i.read(1)
+          if not data: break
+          o.write(z.decompress(data))
+        o.write(z.flush())
+  except Exception, e:
+    dwarn(e)
+  return False
+
+# Only needed by Python2. tar.xz is supported by Python3 by default.
+# http://stackoverflow.com/questions/10701528/example-of-how-to-use-pylzma
+# http://stackoverflow.com/questions/17217073/how-to-decompress-a-xz-file-which-has-multiple-folders-files-inside-in-a-singl
+def extracttarxz(path, location): # unicode, unicode -> bool
+  """
+  @param  path  unicode
+  @param  location  unicode
+  @return  bool
+  """
+  try:
+    import pylzma
+    with open(path, 'rb') as fp:
+=================
+17217073
+count:1
+          if not data: break
+          o.write(z.decompress(data))
+        o.write(z.flush())
+  except Exception, e:
+    dwarn(e)
+  return False
+
+# Only needed by Python2. tar.xz is supported by Python3 by default.
+# http://stackoverflow.com/questions/10701528/example-of-how-to-use-pylzma
+# http://stackoverflow.com/questions/17217073/how-to-decompress-a-xz-file-which-has-multiple-folders-files-inside-in-a-singl
+def extracttarxz(path, location): # unicode, unicode -> bool
+  """
+  @param  path  unicode
+  @param  location  unicode
+  @return  bool
+  """
+  try:
+    import pylzma
+    with open(path, 'rb') as fp:
+      z = pylzma.decompressobj()
+=================
+10701528
+count:1
+  #try:
+  #  with contextlib.closing(lzma.LZMAFile(path)) as xz:
+  #    with tarfile.open(fileobj=xz) as f:
+  #      f.extractall(location)
+  #      return True
+  #except Exception, e:
+  #  dwarn(e)
+  #return False
+
+# http://stackoverflow.com/questions/10701528/example-of-how-to-use-pylzma
+# http://www.dreamincode.net/forums/topic/296783-how-to-cope-with-the-occasional-administrator-privledge-requirement/
+# Only needed by Python2. 7zip is supported by Python3 by default.
+# Note: This require pylzma to be installed first
+# FIXME: py7zlib does not support latest 7zip
+
+def extract7zarchive(z, location): # py7zlib.Archive7z, unicode ->, throws
+  """
+  @param  z  file object
+  @param  location  unicode
+  @return  bool
+=================
+1405913
+count:1
+
+WIN     = os.name == 'nt'
+WIN32   = sys.platform == 'win32'
+WIN64   = sys.platform == 'win64'
+
+POSIX   = os.name == 'posix'
+MAC     = sys.platform == 'darwin'
+LINUX   = POSIX and not MAC
+
+# See: http://stackoverflow.com/questions/1405913/how-do-i-determine-if-my-python-shell-is-executing-in-32bit-or-64bit-mode
+X86_64  = sys.maxsize > 2**32
+X86     = not X86_64
+
+name = 'mac' if MAC else 'win' if WIN else 'posix'
+
+# http://stackoverflow.com/questions/196930/how-to-check-if-os-is-vista-in-python
+# >>> import platform
+# >>> platform.win32_ver()
+# ('XP', '5.1.2600', 'SP2', 'Multiprocessor Free')
+# >>> platform.system()
+=================
+196930
+count:1
+MAC     = sys.platform == 'darwin'
+LINUX   = POSIX and not MAC
+
+# See: http://stackoverflow.com/questions/1405913/how-do-i-determine-if-my-python-shell-is-executing-in-32bit-or-64bit-mode
+X86_64  = sys.maxsize > 2**32
+X86     = not X86_64
+
+name = 'mac' if MAC else 'win' if WIN else 'posix'
+
+# http://stackoverflow.com/questions/196930/how-to-check-if-os-is-vista-in-python
+# >>> import platform
+# >>> platform.win32_ver()
+# ('XP', '5.1.2600', 'SP2', 'Multiprocessor Free')
+# >>> platform.system()
+# 'Windows'
+# >>> platform.version()
+# '5.1.2600'
+# >>> platform.release()
+# 'XP'
+
+=================
+9920452
+count:1
+# '5.1.2600'
+# >>> platform.release()
+# 'XP'
+
+WINXP = WIN and platform.release() == 'XP'
+WIN7 = WIN and platform.release() == '7'
+WIN8 = WIN and platform.release() == '8'
+
+def kill_my_process():
+  # http://stackoverflow.com/questions/1533200/qt-kill-current-process/9920452#9920452
+  dwarn("pass")
+  if WIN:
+    import skwin
+    skwin.kill_my_process()
+  else:
+    os.system("kill -9 %i" % os.getpid())
+
+def restart_my_process(params=None): # extra parameters
+  """
+  @param* params  [unicode]
+=================
+3826918
+count:1
+# unichars.py
+# 6/16/2014 jichi
+import re
+import string
+
+# Some of the kana characters are skipped
+# See: http://stackoverflow.com/questions/3826918/how-to-classify-japanese-characters-as-either-kanji-or-kana
+# Here's the range used by Google Guava
+# - Hiragana: \u3040-\u309f
+# - Katagana: \u30a0-\u30ff
+
+# Orders of hiragana and katagana
+ORD_HIRA_FIRST = 12353
+ORD_HIRA_LAST = 12438
+DIST_HIRA_KATA = 96
+ORD_KATA_FIRST = ORD_HIRA_FIRST + DIST_HIRA_KATA
+ORD_KATA_LAST = ORD_HIRA_LAST + DIST_HIRA_KATA
+=================
+3826918
+count:1
+
+# Orders of wide and thin characters
+ORD_THIN_FIRST = 33
+ORD_THIN_LAST = 126
+DIST_THIN_WIDE = 65248
+ORD_WIDE_FIRST = ORD_THIN_FIRST + DIST_THIN_WIDE
+ORD_WIDE_LAST = ORD_THIN_LAST + DIST_THIN_WIDE
+
+# The same range as Google Guava
+# See: http://stackoverflow.com/questions/3826918/how-to-classify-japanese-characters-as-either-kanji-or-kana
+ORD_KANJI_FIRST = 0x4e00 # = u'一'
+ORD_KANJI_LAST = 0x9faf # = u'龯'
+
+ORD_DIGIT_FIRST = ord('0')
+ORD_DIGIT_LAST = ord('9')
+
+ORD_IALPHA_FIRST = ord('a')
+ORD_IALPHA_LAST = ord('z')
+ORD_UALPHA_FIRST = ord('A')
+ORD_UALPHA_LAST = ord('Z')
+=================
+10981258
+count:1
+
+ORD_DIGIT_FIRST = ord('0')
+ORD_DIGIT_LAST = ord('9')
+
+ORD_IALPHA_FIRST = ord('a')
+ORD_IALPHA_LAST = ord('z')
+ORD_UALPHA_FIRST = ord('A')
+ORD_UALPHA_LAST = ord('Z')
+
+# http://stackoverflow.com/questions/10981258/how-can-i-specify-cyrillic-character-ranges-in-a-python-3-2-regex
+ORD_CYRIL_FIRST = 0x400
+ORD_CYRIL_LAST = 0x500
+
+#ORD_NUM_FIRST = ord('0') # 48
+#ORD_NUM_LAST = ord('9') # 57
+
+s_ascii_punct = ',.\'"?!~'
+
+def ordany(text, start, stop):
+  """
+=================
+10115126
+count:1
+from collections import OrderedDict
+#from sakurakit import skstr
+from sakurakit.skdebug import dwarn, derror
+from sakurakit.sknetdef import GZIP_HEADERS
+import infoseekdef
+
+session = requests # global session
+
+# See: http://docs.python-requests.org/en/latest/user/advanced/#keep-alive
+# See: http://stackoverflow.com/questions/10115126/python-requests-close-http-connection
+#session = requests.Session(config={'keep_alive': False})
+
+# See: http://transer.com/sdk/rest_api_function.html
+#   key=LICENCE 	オプション 	サービスのユーザーライセンスを提供します。HTTPリクエストヘッダもしくはHTTP認証のいずれかを使用してユーザーライセンスが提供される場合、URLを指定する必要はありません。
+#   e=ENGINE 	必須 	使用する翻訳エンジンを指定します。翻訳エンジンは/clsoap/userへリクエストして返されたユーザー情報のエンジンIDの内、一つでなければなりません。
+#   p=PROFILE 	オプション 	翻訳で使用するエンジンプロパティのプロファイルを指定します。指定しない場合、エンジンプロパティはデフォルトプロファイルを使用します。
+#   t=TEXT 	必須 	翻訳されたテキストもしくはHTMLを指定します。複数エントリの指定が可能で、それぞれのファイルは別のブロックとして翻訳されます。指定の順番通りに翻訳結果が別々に返されます。
+#   format=TYPE 	オプション 	"t"パラメータのデータをフォーマットを指定します。"text"はテキストデータ、"html"はhtmlデータとして使用してください。これらのパラメータが指定されない場合は、テキストデータがデフォルトとして使用されます。
+#   sent=true 	オプション 	センテンスセグメント情報が翻訳されたテキストとして返すようリクエストします。
+#   equiv=true 	オプション 	equiv情報が翻訳されたテキストとして返すようリクエストします。
+=================
+7387276
+count:1
+    import initdefs
+    path = initdefs.LOCK_RELPATH
+    if not os.path.exists(path):
+      os.makedirs(path)
+    path = os.path.join(path, name)
+    from lockfile import lockfile
+    APP_MUTEX = lockfile.LockFile(path)
+  return APP_MUTEX.tryLock()
+
+# http://stackoverflow.com/questions/7387276/set-window-name-in-python
+def settitle(title): # str ->
+  import os
+  if os.name == 'nt':
+    if isinstance(title, unicode):
+      title = title.encode('utf8', errors='ignore')
+    import ctypes
+    try: ctypes.windll.kernel32.SetConsoleTitleA(title)
+    except Exception, e:
+      from sakurakit.skdebug import dwarn
+      dwarn(e)
+=================
+196930
+count:2
+
+  if os.name == 'nt':
+    reset_win_path()
+
+  # Python chdir is buggy for unicode
+  #os.chdir(maindir)
+
+  import config
+
+  # http://stackoverflow.com/questions/196930/how-to-check-if-os-is-vista-in-python
+  #import platform
+  #if platform.release() == 'XP':
+  #  map(sys.path.append, config.ENV_PYTHONPATH_XP)
+
+  #for path in config.ENV_PYTHONPATH:
+  #  sys.path.append(path)
+  map(sys.path.append, config.ENV_PYTHONPATH)
+  if hasattr(config, 'APP_PYTHONPATH'):
+    map(sys.path.append, config.APP_PYTHONPATH)
+
+=================
+8894244
+count:1
+
+def reg(cls, name, ns=QML_PLUGIN):
+  """
+  @param  cls  class
+  @param  name  str
+  @param* ns  str
+  """
+  qmlRegisterType(cls, ns, 1, 0, name)
+
+# See: http://stackoverflow.com/questions/8894244/qml-and-blurring-image
+from Qt5 import QtWidgets
+#reg(QtWidgets.QGraphicsBlurEffect, 'Blur', QML_EFFECT)
+#reg(QtWidgets.QGraphicsColorizeEffect, 'Colorize', QML_EFFECT)
+#reg(QtWidgets.QGraphicsOpacityEffect, 'Opacity', QML_EFFECT)
+reg(QtWidgets.QGraphicsDropShadowEffect, 'DropShadow', QML_EFFECT)
+
+from sakurakit import skqml
+reg(skqml.SkDesktopProxy, 'DesktopProxy')
+reg(skqml.SkClipboardProxy, 'ClipboardProxy')
+
+=================
+1006289
+count:1
+    @param  async  bool
+    @param  keepsNewLine  bool
+    @param* nthreads  maximum number of threads to use
+    @param* master  bool  whether the master thread should paticipate  should disable this for tablet
+    @param* timeout  int
+    @param* master_threshold  int  minimum number of texts that need to be parallelized
+    @return  [unicode] not None
+    """
+    # Get number of processors
+    # http://stackoverflow.com/questions/1006289/how-to-find-out-the-number-of-cpus-using-python
+    # See: https://pythonhosted.org/joblib/parallel.html
+    #if not nthreads:
+    #  nthreads = psutil.NUM_CPUS or 1
+    ret = []
+    texts = []
+    for text in self._itertexts(text, keepsNewLine=keepsNewLine):
+      if len(text) == 1 and text in _PARAGRAPH_SET or is_escaped_text(text) or text == defs.TERM_ESCAPE_EOS or allspace(text) or allnonprintable(text):
+        ret.append(text)
+      else:
+        t = self._cache.get(text)
+=================
+2068344
+count:1
+  def iterVideoIdsWithImage(self, cache=True):
+    """
+    @param  cache  bool
+    @yield  (str vid, str url)
+    """
+    if self.videos:
+      host = proxy.manager().ytimg_i
+      for it in self.videos:
+        vid = it['vid']
+        img = host + '/vi/' + vid + '/maxresdefault.jpg' # http://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api
+        yield vid, cacheman.cache_image_url(img) if cache else img
+
+class ScapeReference(Reference):
+  def __init__(self, parent=None,
+      type='scape',
+      banner_url=None,
+      okazu=None,
+      genre=None,
+      trial_url=None, trial_h=None,
+      median=None, count=None,
+=================
+196930
+count:1
+  @return  bool or None
+  """
+  from sakurakit import skos
+  if not skos.WIN or WINE:
+    return
+  from sakurakit import skwinsec
+  return skwinsec.is_elevated()
+ADMIN = isadmin() # bool
+
+# http://stackoverflow.com/questions/196930/how-to-check-if-os-is-vista-in-python
+def iswinxp():
+  import platform
+  return platform.release() == 'XP'
+WINXP = iswinxp() # bool
+
+INTERNET_CONNECTION = settings.global_().internetConnection()
+MACHINE_TRANSLATION = settings.global_().allowsMachineTranslation()
+USER_COMMENT = settings.global_().allowsUserComment()
+#TEXT_TO_SPEECH = settings.global_().allowsTextToSpeech()
+MAINLAND_CHINA = False
+=================
+11875770
+count:1
+# jsonutil.py
+# 7/4/2014 jichi
+
+from datetime import datetime
+import i18n
+
+# http://stackoverflow.com/questions/11875770/how-to-overcome-datetime-datetime-not-json-serializable-in-python
+def default_datetime(obj):
+  """
+  @param  obj  any
+  @return  any
+  """
+  if isinstance(obj, datetime):
+    return i18n.unparsedatetime(obj)
+
+if __name__ == '__main__':
+  import json
+=================
+12468613
+count:1
+
+__space_re = re.compile(r'\s{2,}')
+def remove_repeat_spaces(text):
+  """
+  @param  text  unicode
+  @return  unicode
+  """
+  return __space_re.sub(' ', text) if text else ''
+
+__repeat_re = re.compile(r'(.+)\1+', re.DOTALL) # http://stackoverflow.com/questions/12468613/regex-to-remove-repeated-character-pattern-in-a-string
+def remove_repeat_text(text):
+  """
+  @param  text  unicode
+  @return  unicode
+  """
+  return __repeat_re.sub(r'\1', text) if text else ''
+
+# http://e-words.jp/p/r-ascii.html
+# 0-31, except:
+# - x0a
+=================
+19195935
+count:1
+    self.setFont(font)
+
+  # FIXME: wParam does not exist in PySide MSG
+  # Bug: https://bugreports.qt-project.org/browse/PYSIDE-84
+  #def winEventFilter(self, msg):
+  #  """
+  #  @param  msg  PySide.QtCore.MSG
+  #  @return  bool
+  #  """
+  #  # See: http://stackoverflow.com/questions/19195935/how-to-detect-windows-shutdown-or-logoff-in-qt
+  #  if msg.wParam in (WM_QUIT, WM_ENDSESSION, WM_QUERYENDSESSION):
+  #    dprint("quit")
+  #  return super(Application, self).winEventFilter(msg)
+
+  def notify(self, receiver, event):
+    """@reimp @protected
+    virtual bool notify(QObject *receiver, QEvent *e)
+
+    See: http://www.02.246.ne.jp/~torutk/cxx/qt/QtMemo.html
+    """
+=================
+12015170
+count:1
+
+DISPLAY_RESOLUTION = skwin.get_display_resolution() if skos.WIN else (0,0)
+
+## Time ##
+
+NOW = skdatetime.NOW
+#TIMESTAMP = skdatetime.CURRENT_UNIXTIME
+
+def timestamp_jst_diff():
+  # http://stackoverflow.com/questions/12015170/how-do-i-automatically-get-the-timezone-offset-for-my-local-time-zone
+  # pytz.timezone('Japan').utcoffset(datetime.datetime.now()).seconds
+  # = 32400 = 9 * 3600
+  from dateutil import tz
+  delta = tz.tzlocal().utcoffset(NOW)
+  return 9*3600 - delta.seconds * (delta.days * 2 + 1) # +-1
+
+TIMESTAMP_JST_DIFF = timestamp_jst_diff()
+def timestamp2jst(seconds):
+  return seconds + TIMESTAMP_JST_DIFF
+
+=================
+5548121
+count:1
+      ax.xaxis.set_major_locator(mpl.dates.MonthLocator())
+    else:
+      ax.xaxis.set_major_formatter(mpl.dates.DateFormatter('%a %b %d')) # "Feb 2, Mon"
+      ax.xaxis.set_major_locator(mpl.dates.WeekdayLocator())
+
+    ax.grid(True)
+    mindate = info.dates[0]
+    maxdate = info.dates[-1]
+    ax.set_xlim(mindate, maxdate)
+    #ax.set_ylim(ymin=0) # http://stackoverflow.com/questions/5548121/minimum-value-of-y-axis-is-not-being-applied-in-matplotlib-vlines-plot
+
+  @classmethod
+  def _plotUserStackFigure(cls, ax, info):
+    """
+    @param  axes  matplotlib.axes.Axes
+    @param  info  DataInfo
+    """
+    cls._plotStackAxes(ax, info)
+
+    stats = defaultdict(lambda: defaultdict(int))
+=================
+5548121
+count:1
+      c = 1 # at least 1
+      l = []
+      for t in info.times:
+        c += stats[n].get(t) or 0
+        l.append(c)
+      plots.append(l)
+
+    # Not sure why it is optional to user count
+    # Force changing ymin to 0
+    # http://stackoverflow.com/questions/5548121/minimum-value-of-y-axis-is-not-being-applied-in-matplotlib-vlines-plot
+    #ymax = sum(it[-1] for it in plots)
+    #ax.set_ylim(0, ymax)
+
+    ax.stackplot(info.dates, plots)
+
+  @classmethod
+  def _plotLanguageStackFigure(cls, ax, info):
+    """
+    @param  axes  matplotlib.axes.Axes
+    @param  info  DataInfo
+=================
+5548121
+count:1
+    for n in info.languages:
+      c = 1 # at least 1
+      l = []
+      for t in info.times:
+        c += stats[n].get(t) or 0
+        l.append(c)
+      plots.append(l)
+
+    # Force changing ymin to 0
+    # http://stackoverflow.com/questions/5548121/minimum-value-of-y-axis-is-not-being-applied-in-matplotlib-vlines-plot
+    ymax = sum(it[-1] for it in plots) + 600 # larger, 600 = 16000 - 15400
+    ax.set_ylim(0, ymax)
+
+    ax.stackplot(info.dates, plots)
+
+class ChartDialog(QtWidgets.QMainWindow):
+
+  def __init__(self, data, parent=None):
+    """
+    @param  data  [dataman.Comment|dataman.Term]
+=================
+3282328
+count:1
+      #if not ok:
+      #  # http://www.shloemi.com/2012/09/solved-setforegroundwindow-win32-api-not-always-works/
+      #  import win32process
+      #  that = skwin.get_window_thread_id(skwin.get_foreground_window())
+      #  this = skwin.get_window_thread_id(hwnd)
+      #  win32process.AttachThreadInput(that, this, True)
+      #  ok = skwin.set_top_window(hwnd)
+      #  win32process.AttachThreadInput(that, this, False)
+
+      # http://stackoverflow.com/questions/3282328/updating-the-z-order-of-many-windows-using-win32-api
+      #try:
+      #  import gameman
+      #  hwnd = gameman.manager().currentGame().wid
+      #  if hwnd:
+      #    import win32gui, win32con
+      #    winId = skwin.hwnd_from_wid(self.winId())
+      #    win32gui.SetWindowPos(hwnd, win32con.HWND_TOP, 0, 0, 0, 0, win32con.SWP_NOMOVE | win32con.SWP_NOSIZE);
+      #    win32gui.SetWindowPos(winId, win32con.HWND_TOP, 0, 0, 0, 0, win32con.SWP_NOMOVE | win32con.SWP_NOSIZE);
+      #except Exception, e:
+      #  print e
+=================
+380870
+count:1
+    dprint("exit: help")
+    #sys.exit(os.EX_USAGE)
+    return 0
+
+  # Singleton
+  # - Through mutex
+  #   See: http://code.activestate.com/recipes/474070-creating-a-single-instance-application/
+  #   See: http://code.google.com/p/python-windows-tiler/source/browse/singleinstance.py
+  # - Through file
+  #   See: http://stackoverflow.com/questions/380870/python-single-instance-of-program
+  dprint("check single instance")
+
+  from lockfile import lockfile
+
+  app_mutex = lockfile.SingleProcessMutex()
+  single_app = app_mutex.tryLock()
+  if not single_app:
+    dprint("multiple instances are running")
+
+  dprint("python = %s" % sys.executable)
+=================
+1551605
+count:1
+  if not single_app:
+    dprint("multiple instances are running")
+
+  dprint("python = %s" % sys.executable)
+  #dprint("rootdir = %s" % rootdir)
+  #dprint("mecabrc = %s" % mecabrc_path)
+
+  from sakurakit import skos
+  # Must be set before any GUI is showing up
+  # http://stackoverflow.com/questions/1551605/how-to-set-applications-taskbar-icon-in-windows-7
+  if skos.WIN:
+    dprint("set app id")
+    from sakurakit import skwin
+    skwin.set_app_id("org.sakurakit.reader")
+
+  # Detect user language
+  import settings
+
+  ss = settings.global_()
+
+=================
+10115126
+count:1
+  dprint("config python site-packages")
+
+  # Disable requests SSL certificate warning
+  # https://github.com/kennethreitz/requests/issues/2214
+  import requests
+  requests.packages.urllib3.disable_warnings()
+
+  # Disable HTTP request session
+  # See: http://docs.python-requests.org/en/latest/user/advanced/#keep-alive
+  # See: http://stackoverflow.com/questions/10115126/python-requests-close-http-connection
+  #import requests
+  #s = requests.session()
+  #s.config['keep_alive'] = False
+
+  import numpy
+  numpy.seterr(all='ignore')  # ignore overflow warning
+
+  dprint("update settings")
+
+  ss_version = ss.version()
+=================
+8362506
+count:1
+  def getBlockedUrl(url):
+    """
+    @param  url  QUrl
+    @return  unicode or QUrl or None
+    """
+    if url.path() == '/js/localize_welcome.js': # for DMM
+      dprint("block dmm localize welcome")
+      return rc.DMM_LOCALIZED_WELCOME_URL
+
+  # http://stackoverflow.com/questions/8362506/qwebview-qt-webkit-wont-open-some-ssl-pages-redirects-not-allowed
+  @staticmethod
+  def onSslErrors(reply, errors): # QNetworkReply, [QSslError] ->
+    reply.ignoreSslErrors()
+    #dprint("ignore ssl error")
+    #print errors
+

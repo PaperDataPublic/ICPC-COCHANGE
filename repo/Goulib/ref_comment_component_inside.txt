@@ -1,0 +1,236 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/tests/test_Goulib_itertools2.py
+12007820, 160
+------------------
+class TestTakenth:
+    def test_takenth(self):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/tests/test_Goulib_itertools2.py
+12093364, 278
+------------------
+class TestProduct:
+    def test_product(self):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/tests/test_Goulib_itertools2.py
+969709, 420
+------------------
+class TestIntersect:
+    def test_intersect(self):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/examples/oeis/test_oeis.py
+807863, 50
+------------------
+def data(s):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/examples/oeis/test_oeis.py
+32899, 104
+------------------
+class TestOEIS:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/examples/friedman.py
+41115661, 302
+------------------
+def friedman(num):
+    for e in gen(num):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/datetime2.py
+21074460, 153
+------------------
+def timedeltaf(t, fmt=None):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/interval.py
+3721249, 29
+------------------
+def intersect(t1, t2):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/geom.py
+5928725, 28
+------------------
+def _hash(v):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/geom.py
+3349125, 559
+------------------
+def _intersect_circle_circle(c1, c2):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/geom.py
+849211, 584
+------------------
+def _connect_point2_line2(P, L):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/geom.py
+27673463, 1149
+------------------
+def circle_from_3_points(a, b, c):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/drawing.py
+1336663, 200
+------------------
+class Entity(plot.Plot): 
+    def bbox(self):
+        elif isinstance(self, Arc2):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/drawing.py
+15857818, 1258
+------------------
+class Drawing(Group):
+    def read_svg(self, content, **kwargs):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/container.py
+5491708, 20
+------------------
+class Record(OrderedDict):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py
+4187185, 113
+------------------
+def is_number(x):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py
+15390807, 370
+------------------
+def isqrt(n):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py
+11316539, 702
+------------------
+def sets_dist(a, b):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py
+28549402, 797
+------------------
+def kfibonacci(k, mod=0):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py
+1019040, 1371
+------------------
+def euler_phi(n):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py
+22281524, 2585
+------------------
+def lucky_gen():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py
+1055360, 32
+------------------
+def isiterable(obj):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py
+2158395, 206
+------------------
+def flatten(l, donotrecursein=str):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py
+15099647, 501
+------------------
+def icross(*sequences):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py
+7946798, 523
+------------------
+def interleave(l1, l2):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py
+6422700, 592
+------------------
+def sort_indexes(iterable, key=identity, reverse=False):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py
+5352649, 794
+------------------
+def subdict(d, keys):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py
+969709, 859
+------------------
+def intersect(*iterables):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py
+12093364, 872
+------------------
+def product(*iterables, **kwargs):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/table.py
+9819602, 119
+------------------
+class Cell(object):
+    def html(self, **kwargs):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/tests.py
+3124155, 129
+------------------
+class TestCase(unittest.TestCase):
+    def assertEqual(self, first, second, places=7, msg=None, delta=None, reltol=None):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py
+3403973, 382
+------------------
+class Image(plot.Plot):
+    def replace(self, pairs):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py
+9829578, 657
+------------------
+class Image(plot.Plot):
+    def dist(self, other, method=AVERAGE, hash_size=8, symmetries=False):
+        def diff(im):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py
+7422204, 732
+------------------
+class Image(plot.Plot):
+    def normalize(self, newmax=None, newmin=None):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py
+9166400, 836
+------------------
+class Image(plot.Plot):
+    def add(self, other, pos=(0, 0), alpha=1, mode=None):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py
+9166671, 896
+------------------
+def alpha_composite(front, back):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py
+9168169, 945
+------------------
+def pure_pil_alpha_to_color_v1(image, color=(255, 255, 255)):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py
+9459208, 974
+------------------
+def pure_pil_alpha_to_color_v2(image, color=(255, 255, 255)):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py
+10818546, 1347
+------------------
+def lab2ind(im, colors=256):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/expr.py
+2371436, 7
+------------------
+__credits__ = [
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/expr.py
+3867028, 8
+------------------
+__credits__ = [
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/colors.py
+14088375, 44
+------------------
+def rgb2cmyk(rgb, **kwargs):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/colors.py
+11174702, 397
+------------------
+class Palette(OrderedDict):
+    def __init__(self, data=[], keys=256):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/colors.py
+8031418, 481
+------------------
+class Palette(OrderedDict):
+    def sorted(self, key=lambda c: c[1].lab[0]):

@@ -1,0 +1,3312 @@
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+7522250
+=================
+6599172
+count:1
+    """
+    source = SCRUBBER_SOURCE_FILENAME
+    with TemporaryDirectory() as tmpdirname:
+        # ---------------------------------------------------------------------
+        # SVG to PNG
+        # ---------------------------------------------------------------------
+        big_png_filename = join(tmpdirname, "tmp.png")
+        log.info(f"Reading source: {source}")
+        log.info(f"Writing temporary PNG file: {big_png_filename}")
+        # https://stackoverflow.com/questions/6589358/convert-svg-to-png-in-python/6599172#6599172
+        # https://cairosvg.org/
+        # default size is very big
+        svg2png(url=source, write_to=big_png_filename)
+        for png_filename, width, height in PNG_TARGETS:
+            log.info(f"Writing 48x48 PNG to: {png_filename}")
+            svg2png(url=source, write_to=png_filename,
+                    output_width=width, output_height=height)
+
+        # ---------------------------------------------------------------------
+        # PNG to ICO
+=================
+45507
+count:1
+                    output_width=width, output_height=height)
+
+        # ---------------------------------------------------------------------
+        # PNG to ICO
+        # ---------------------------------------------------------------------
+        img = Image.open(big_png_filename)
+        for favicon_filename in FAVICON_TARGETS:
+            log.info(f"Writing multi-size icon to destination: "
+                     f"{favicon_filename}")
+            # https://stackoverflow.com/questions/45507/is-there-a-python-library-for-generating-ico-files
+            # https://pillow.readthedocs.io/en/3.1.x/handbook/image-file-formats.html#ico
+            # ... default sizes are good
+            img.save(favicon_filename)
+
+    log.info("... done.")
+
+
+# =============================================================================
+# Command-line entry point
+# =============================================================================
+=================
+13876875
+count:1
+    if not shutil.which('gdebi'):
+        raise AssertionError("Need gdebi (try: sudo apt-get install gdebi)")
+    installer = ['sudo', 'gdebi']
+    extension = 'deb'
+elif LINUX_DIST in ('fedora', 'rhel', 'centos'):
+    if not shutil.which('yum'):
+        raise AssertionError("Need yum")
+    # installer = ['sudo', 'rpm', '-U']  # -U upgrade, equivalent to -i install
+    installer = ['yum', '--nogpgcheck', 'localinstall']
+    # ... http://stackoverflow.com/questions/13876875
+    extension = 'rpm'
+else:
+    raise AssertionError("Unsupported Linux distribution")
+
+# =============================================================================
+# Establish URL
+# =============================================================================
+
+if BITS_64:
+    arch = 'amd64'
+=================
+2806897
+count:1
+    service_supervisord_command restart
+}
+
+"""  # noqa
+
+
+# =============================================================================
+# Check prerequisites
+# =============================================================================
+# http://stackoverflow.com/questions/2806897
+
+if os.geteuid() == 0:
+    exit("This script should not be run using sudo or as the root user")
+
+print("Checking prerequisites")
+PREREQUISITES = ["dpkg-deb"]
+for cmd in PREREQUISITES:
+    if shutil.which(cmd) is None:
+        error(f"{cmd} command not found; stopping")
+        sys.exit(1)
+=================
+10376206
+count:1
+# -----------------------------------------------------------------------------
+print("Creating preinst file. Will be installed as " +
+      join(INFO_DEST_DPKG_DIR, PACKAGE_FOR_DEB + '.preinst'))
+# -----------------------------------------------------------------------------
+with open(join(DEB_DIR, 'preinst'), 'w') as outfile:
+    # NB "#!/usr/bin/env bash" is refused by Lintian; it gives errors like
+    # "unknown-control-interpreter" and "forbidden-postrm-interpreter".
+    # On Debian, Bash is always /bin/bash.
+    # See also
+    # https://stackoverflow.com/questions/10376206/what-is-the-preferred-bash-shebang  # noqa
+    print(f"""#!/bin/bash
+set -e  # Exit on any errors. (Lintian strongly advises this.)
+
+{BASHFUNC}
+
+echo '{PACKAGE_FOR_DEB}: preinst file executing'
+
+stop_supervisord
+
+echo '{PACKAGE_FOR_DEB}: preinst file finished'
+=================
+10653590
+count:1
+    # noinspection PyPep8
+    print(f"""
+
+; IF YOU EDIT THIS FILE, run:
+;       sudo service supervisor restart
+; TO MONITOR SUPERVISOR, run:
+;       sudo service supervisorctl status
+; NOTES:
+; - You can't put quotes around the directory variable
+;   http://stackoverflow.com/questions/10653590
+; - Programs like celery and gunicorn that are installed within a virtual
+;   environment use the virtualenv's python via their shebang.
+
+[program:crate-celery-worker]
+
+command = {DEST_VIRTUALENV}/bin/celery worker --app=crate_anon.crateweb.consent --loglevel=info
+directory = {DEST_DJANGO_ROOT}
+environment = {CRATEWEB_CONFIG_ENV_VAR}="{DEST_CRATEWEB_CONF_FILE}"
+# ... no longer used: PYTHONPATH="{DEST_ROOT}"
+user = {CRATE_USER}
+=================
+18969093
+count:1
+# to template names.
+#
+# The default sidebars (for documents that don't match any pattern) are
+# defined by theme itself.  Builtin themes are using these templates by
+# default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
+# 'searchbox.html']``.
+#
+# html_sidebars = {}
+
+# https://stackoverflow.com/questions/18969093/how-to-include-the-toctree-in-the-sidebar-of-each-page
+html_sidebars = {
+    '**': ['globaltoc.html', 'relations.html', 'sourcelink.html',
+           'searchbox.html']
+}
+
+# -- Options for HTMLHelp output ---------------------------------------------
+
+# Output file base name for HTML help builder.
+htmlhelp_basename = 'CRATEdoc'
+
+=================
+23462494
+count:1
+# -- Options for todo extension ----------------------------------------------
+
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+todo_include_todos = True
+
+
+# -----------------------------------------------------------------------------
+# RNC: add CSS
+# -----------------------------------------------------------------------------
+# https://stackoverflow.com/questions/23462494/how-to-add-a-custom-css-file-to-sphinx
+
+def setup(app: Sphinx) -> None:
+    app.add_css_file('css/crate_docs.css')  # may also be an URL
+
+
+# -----------------------------------------------------------------------------
+# RNC: autodoc
+# -----------------------------------------------------------------------------
+# http://www.sphinx-doc.org/en/stable/ext/autodoc.html#confval-autodoc_mock_imports  # noqa
+# https://stackoverflow.com/questions/36228537/django-settings-module-not-defined-when-building-sphinx-documentation
+=================
+36228537
+count:1
+
+def setup(app: Sphinx) -> None:
+    app.add_css_file('css/crate_docs.css')  # may also be an URL
+
+
+# -----------------------------------------------------------------------------
+# RNC: autodoc
+# -----------------------------------------------------------------------------
+# http://www.sphinx-doc.org/en/stable/ext/autodoc.html#confval-autodoc_mock_imports  # noqa
+# https://stackoverflow.com/questions/36228537/django-settings-module-not-defined-when-building-sphinx-documentation
+
+autodoc_mock_imports = [
+    "servicemanager",  # Windows only
+    "win32event",  # Windows only
+    "win32service",  # Windows only
+    "win32serviceutil",  # Windows only
+    "winerror",  # Windows only
+]
+
+# If extensions (or modules to document with autodoc) are in another directory,
+=================
+5599254
+count:1
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+
+# sys.path.insert(0, os.path.join(os.path.abspath('.'), '../../myproj'))
+
+# ... see crate_anon/crateweb/config/settings.py
+os.environ['DJANGO_SETTINGS_MODULE'] = 'crate_anon.crateweb.config.settings'
+django.setup()
+
+
+# https://stackoverflow.com/questions/5599254/how-to-use-sphinxs-autodoc-to-document-a-classs-init-self-method  # noqa
+autoclass_content = "both"
+
+# To prevent Pyramid SETTINGS breaking:
+os.environ["_SPHINX_AUTODOC_IN_PROGRESS"] = "true"
+
+# For "Command killed due to excessive memory consumption" on readthedocs.org:
+=================
+388595
+count:1
+    r = requests.post(url, data=request_data, headers=headers,
+                      auth=HTTPBasicAuth(username, password))
+    # -------------------------------------------------------------------------
+    # Process response
+    # -------------------------------------------------------------------------
+    # - Note that the "requests" module automatically handles "gzip" and
+    #   "deflate" transfer-encodings from the server; see
+    #   http://docs.python-requests.org/en/master/user/quickstart/.
+    # - The difference between gzip and deflate:
+    #   https://stackoverflow.com/questions/388595/why-use-deflate-instead-of-gzip-for-text-files-served-by-apache  # noqa
+    log.debug(f"Reply has status_code={r.status_code}, headers={r.headers!r}, "
+              f"text={r.text!r}")
+    try:
+        response = NlprpResponse(data=r.text)
+        # "r.text" automatically does gzip decode
+    except ValueError:  # includes simplejson.errors.JSONDecodeError, json.decoder.JSONDecodeError  # noqa
+        fail("Reply was not JSON")
+        response = None  # for type checker
+    log.debug(f"Response JSON decoded to: {response.dict!r}")
+    try:
+=================
+21666229
+count:1
+from crate_anon.common.exceptions import call_main_with_exception_reporting
+from crate_anon.crateweb.config.constants import CRATEWEB_CELERY_APP_NAME
+
+
+THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+DJANGO_ROOT = os.path.abspath(os.path.join(THIS_DIR, os.pardir, "crateweb"))
+WINDOWS = platform.system() == 'Windows'
+
+
+# http://stackoverflow.com/questions/21666229/celery-auto-reload-on-any-changes
+# HOWEVER: autoreload appears (a) not to work, and (b) to prevent processing!
+
+
+def inner_main() -> None:
+    """
+    Command-line parser. See command-line help.
+    """
+    # noinspection PyTypeChecker
+    parser = argparse.ArgumentParser(
+        description="Launch CRATE Celery processes. "
+=================
+5033547
+count:1
+        VARCHAR(MAX_DOCPROC_ID_LEN), primary_key=True,
+        comment="Primary key (UUID) for the document/processor pair; also "
+                "used as the Celery task ID"
+    )  # type: str
+    document_id = Column(
+        "document_id",
+        VARCHAR(MAX_DOC_ID_LEN),
+        ForeignKey("documents.document_id", ondelete='CASCADE'),
+        # ... delete DocProcRequests when their Documents are deleted
+        # ... https://stackoverflow.com/questions/5033547/sqlalchemy-cascade-delete  # noqa
+        # ... https://docs.sqlalchemy.org/en/13/orm/collections.html#using-passive-deletes  # noqa
+        nullable=False,
+        comment="Document ID (FK to documents.document_id)"
+    )  # type: str
+    processor_id = Column(
+        "processor_id",
+        VARCHAR(MAX_PROCESSOR_ID_LEN),
+        nullable=False,
+        comment="Processor ID, in '<name>_<version>' format"
+    )  # type: str
+=================
+909155
+count:1
+.. code-block:: none
+
+    - AuditTrail
+        SequenceID -- PK for AuditTrail
+        UserNumber -- FK to GenUser.UserNumber
+        ActionDateTime
+        AuditAction -- 2 = insert, 3 = update
+        RowID -- row number -- how does that work?
+            ... cheerfully, SQL Server doesn't have an automatic row ID;
+            http://stackoverflow.com/questions/909155/equivalent-of-oracles-rowid-in-sql-server  # noqa
+            ... so is it the PK we've already identified and called crate_pk?
+        TableNumber -- FK to GenTable.Code
+        ClientID -- FK to ClientIndex.ClientID
+        ...
+
+
+"""
+
+import argparse
+import logging
+=================
+2043259
+count:1
+        basetable: name of the base table from which to look up information
+        basecolumn: name of the column in the base table that maps to the PK
+            in the lookup table
+
+    Returns:
+        an SQL string
+
+    See
+
+    - http://stackoverflow.com/questions/2043259/sql-server-how-to-join-to-first-row
+    - http://stackoverflow.com/questions/9275132/real-life-example-when-to-use-outer-cross-apply-in-sql
+    """  # noqa
+    return (
+        f"OUTER APPLY (SELECT TOP 1 {', '.join(lookup_fields)} "
+        f"FROM {lookup_table} "
+        f"WHERE {lookup_table}.{lookup_key} = {basetable}.{basecolumn}) "
+        f"{aliased_lookup_table}"
+    )
+
+
+=================
+9275132
+count:1
+        basecolumn: name of the column in the base table that maps to the PK
+            in the lookup table
+
+    Returns:
+        an SQL string
+
+    See
+
+    - http://stackoverflow.com/questions/2043259/sql-server-how-to-join-to-first-row
+    - http://stackoverflow.com/questions/9275132/real-life-example-when-to-use-outer-cross-apply-in-sql
+    """  # noqa
+    return (
+        f"OUTER APPLY (SELECT TOP 1 {', '.join(lookup_fields)} "
+        f"FROM {lookup_table} "
+        f"WHERE {lookup_table}.{lookup_key} = {basetable}.{basecolumn}) "
+        f"{aliased_lookup_table}"
+    )
+
+
+def simple_lookup_join(viewmaker: ViewMaker,
+=================
+7778444
+count:1
+                    'basecolumn': 'Specialty',
+                    'lookup_table': 'GenSpecialty',
+                    'column_prefix': 'Specialty',  # RCEP
+                    'internal_alias_prefix': 'sp',
+                }
+            },
+            {
+                'function': simple_view_expr,
+                'kwargs': {
+                    # http://stackoverflow.com/questions/7778444
+                    'expr': 'CAST((MovementTypeFlag & 1) AS BIT)',
+                    'alias': 'Consultant_Change_Flag',
+                },
+            },
+            {
+                'function': simple_view_expr,
+                'kwargs': {
+                    'expr': 'CAST((MovementTypeFlag & 2) AS BIT)',
+                    'alias': 'Bed_Change_Flag',
+                },
+=================
+449560
+count:1
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with CRATE. If not, see <http://www.gnu.org/licenses/>.
+
+===============================================================================
+
+Calculate the size of objects in memory (fast).
+
+From https://stackoverflow.com/questions/449560/how-do-i-determine-the-size-of-an-object-in-python
+
+"""  # noqa
+
+from gc import get_referents
+from sys import getsizeof
+from types import ModuleType, FunctionType
+from typing import Any, List, Set
+
+# Custom objects know their class.
+# Function objects seem to know way too much, including modules.
+=================
+449560
+count:1
+# Custom objects know their class.
+# Function objects seem to know way too much, including modules.
+# Exclude modules as well.
+DENYLIST = type, ModuleType, FunctionType
+
+
+def getsize(obj: Any, assume_none_denied: bool = False) -> int:
+    """
+    Return the total size (in bytes) of the object and its members.
+    From https://stackoverflow.com/questions/449560/how-do-i-determine-the-size-of-an-object-in-python
+    
+    Args:
+        obj:
+            Object to check.
+        assume_none_denied:
+            Skip checks for classes/modules/functions. Assume that all objects
+            should be checked (typically, meaning that the caller guarantees
+            not to pass stuff that doesn't need checking).
+    """  # noqa
+    if not assume_none_denied:
+=================
+1611799
+count:1
+        Args:
+            case_sensitive:
+                Make the parser case-sensitive for option names?
+        """
+        kwargs['interpolation'] = None
+        kwargs['inline_comment_prefixes'] = ('#', ';')
+        # 'converters': Python 3.5 and up
+        super().__init__(*args, **kwargs)
+        if case_sensitive:
+            # https://stackoverflow.com/questions/1611799/preserve-case-in-configparser  # noqa
+            self.optionxform = str
+
+    # Use the underlying ConfigParser class for e.g.
+    #       getboolean(section, option)
+
+    @staticmethod
+    def raise_missing(section: str,
+                      option: str) -> None:
+        """
+        Raise :exc:`ValueError` to complain about a missing parameter.
+=================
+1835018
+count:1
+            a list
+
+        """
+        default = default or []
+        strvalue = self.get(section, option, fallback=None)
+        if not strvalue:
+            return default
+        pyvalue = ast.literal_eval(strvalue)
+        # Now, make sure it's a list:
+        # http://stackoverflow.com/questions/1835018
+        if not isinstance(pyvalue, list):
+            configfail(f"Option {option} must evaluate to a Python list "
+                       f"using ast.literal_eval()")
+        return pyvalue
+
+    def get_database(self,
+                     section: str,
+                     dbname: str = None,
+                     srccfg: "DatabaseSafeConfig" = None,
+                     with_session: bool = False,
+=================
+14630288
+count:1
+    that do not (e.g. Windows stdout, sometimes).
+
+    Args:
+        *objects: things to print
+        sep: separator between those objects
+        end: print this at the end
+        file: file-like object to print to
+
+    See
+    http://stackoverflow.com/questions/14630288/unicodeencodeerror-charmap-codec-cant-encode-character-maps-to-undefined
+
+    Examples:
+
+    - Linux, Python 3.6.8 console: ``sys.stdout.encoding == "UTF-8"``
+    - Windows, Python 3.7.4 console: ``sys.stdout.encoding == "utf-8"``
+    - Windows, Python 3.7.4, from script: ``sys.stdout.encoding == "cp1252"``
+    """  # noqa
+    enc = file.encoding.lower()
+    if enc == 'utf-8':
+        print(*objects, sep=sep, end=end, file=file)
+=================
+11618277
+count:1
+    - In PostgreSQL, schemas live within databases. Tables can be referred to
+      as ``table``, ``schema.table``, or ``database.schema.table``.
+
+      - https://www.postgresql.org/docs/current/static/ddl-schemas.html
+      - The default schema is named ``public``.
+
+    - In MySQL, "database" and "schema" are synonymous. Tables can be referred
+      to as ``table`` or ``database.table`` (= ``schema.table``).
+
+      - https://stackoverflow.com/questions/11618277/difference-between-schema-database-in-mysql
+
+    """  # noqa
+    def __init__(self, db: str = '', schema: str = '') -> None:
+        """
+        Args:
+            db: database name
+            schema: schema name
+        """
+        assert "." not in db, (
+            f"Bad database name ({db!r}); can't include '.'"
+=================
+2523676
+count:1
+
+      - i.e. "COLUMN" optional, parentheses required for >1, multiple OK
+      - http://dev.mysql.com/doc/refman/5.7/en/alter-table.html
+
+    - MS SQL Server: ``ALTER TABLE ADD COLUMN a INT, B VARCHAR(32);``
+
+      - i.e. no "COLUMN", no parentheses, multiple OK
+      - https://msdn.microsoft.com/en-us/library/ms190238.aspx
+      - https://msdn.microsoft.com/en-us/library/ms190273.aspx
+      - http://stackoverflow.com/questions/2523676
+
+    This function therefore operates one at a time.
+
+    SQLAlchemy doesn't provide a shortcut for this.
+
+    """
+    existing_column_names = get_column_names(engine, tablename=table.name,
+                                             to_lower=True)
+    column_defs = []  # type: List[str]
+    for column in columns:
+=================
+18534919
+count:1
+    Args:
+        engine: SQLAlchemy database Engine
+        viewname: view name
+        select_sql: SQL SELECT statement for this view
+    """
+    if engine.dialect.name == 'mysql':
+        # MySQL has CREATE OR REPLACE VIEW.
+        sql = f"CREATE OR REPLACE VIEW {viewname} AS {select_sql}"
+    else:
+        # SQL Server doesn't: http://stackoverflow.com/questions/18534919
+        drop_view(engine, viewname, quiet=True)
+        sql = f"CREATE VIEW {viewname} AS {select_sql}"
+    log.info(f"Creating view: {repr(viewname)}")
+    execute(engine, sql)
+
+
+def assert_view_has_same_num_rows(engine: Engine,
+                                  basetable: str,
+                                  viewname: str) -> None:
+    """
+=================
+2000045
+count:1
+        viewmaker: optional :class:`ViewMaker`
+
+    Returns:
+        modified SQL expression
+
+    *Notes*
+
+    Conversion to INT:
+
+    - http://stackoverflow.com/questions/2000045
+    - http://stackoverflow.com/questions/14719760 (this one in particular!)
+    - http://stackoverflow.com/questions/14692131
+
+      - see LIKE example.
+      - see ISNUMERIC();
+        https://msdn.microsoft.com/en-us/library/ms186272.aspx;
+        but that includes non-integer numerics
+
+    - https://msdn.microsoft.com/en-us/library/ms174214(v=sql.120).aspx;
+      relates to the SQL Server Management Studio "Find and Replace"
+=================
+14719760
+count:1
+
+    Returns:
+        modified SQL expression
+
+    *Notes*
+
+    Conversion to INT:
+
+    - http://stackoverflow.com/questions/2000045
+    - http://stackoverflow.com/questions/14719760 (this one in particular!)
+    - http://stackoverflow.com/questions/14692131
+
+      - see LIKE example.
+      - see ISNUMERIC();
+        https://msdn.microsoft.com/en-us/library/ms186272.aspx;
+        but that includes non-integer numerics
+
+    - https://msdn.microsoft.com/en-us/library/ms174214(v=sql.120).aspx;
+      relates to the SQL Server Management Studio "Find and Replace"
+      dialogue box, not to SQL itself!
+=================
+14692131
+count:1
+    Returns:
+        modified SQL expression
+
+    *Notes*
+
+    Conversion to INT:
+
+    - http://stackoverflow.com/questions/2000045
+    - http://stackoverflow.com/questions/14719760 (this one in particular!)
+    - http://stackoverflow.com/questions/14692131
+
+      - see LIKE example.
+      - see ISNUMERIC();
+        https://msdn.microsoft.com/en-us/library/ms186272.aspx;
+        but that includes non-integer numerics
+
+    - https://msdn.microsoft.com/en-us/library/ms174214(v=sql.120).aspx;
+      relates to the SQL Server Management Studio "Find and Replace"
+      dialogue box, not to SQL itself!
+
+=================
+29206404
+count:1
+      - see LIKE example.
+      - see ISNUMERIC();
+        https://msdn.microsoft.com/en-us/library/ms186272.aspx;
+        but that includes non-integer numerics
+
+    - https://msdn.microsoft.com/en-us/library/ms174214(v=sql.120).aspx;
+      relates to the SQL Server Management Studio "Find and Replace"
+      dialogue box, not to SQL itself!
+
+    - http://stackoverflow.com/questions/29206404/mssql-regular-expression
+
+    Note that the regex-like expression supported by LIKE is extremely limited.
+
+    - https://msdn.microsoft.com/en-us/library/ms179859.aspx
+
+    - The only things supported are:
+
+      .. code-block:: none
+
+        %   any characters
+=================
+712580
+count:1
+        CASE
+            WHEN LTRIM(RTRIM(something)) LIKE '%[^0-9]%' THEN NULL
+            ELSE CAST(something AS BIGINT)
+        END
+
+    That only works for positive integers.
+
+    LTRIM/RTRIM are not ANSI SQL.
+    Nor are unusual LIKE clauses; see
+    http://stackoverflow.com/questions/712580/list-of-special-characters-for-sql-like-clause
+
+    The other, for SQL Server 2012 or higher, is TRY_CAST:
+
+    .. code-block:: sql
+
+        TRY_CAST(something AS BIGINT)
+
+    ... which returns NULL upon failure; see
+    https://msdn.microsoft.com/en-us/library/hh974669.aspx
+
+=================
+5601590
+count:1
+        CursorWrapper.fetchone = replacement_sqlserver_pyodbc_cursorwrapper_fetchone  # noqa
+    except ImportError:
+        return
+
+
+if getattr(
+        settings,
+        SettingsKeys.DISABLE_DJANGO_PYODBC_AZURE_CURSOR_FETCHONE_NEXTSET,
+        True):
+    # http://stackoverflow.com/questions/5601590/how-to-define-a-default-value-for-a-custom-django-setting  # noqa
+    hack_django_pyodbc_azure_cursorwrapper()
+
+
+@django_cache_function(timeout=None)
+def database_last_updated(dbname: str) -> Optional[datetime.datetime]:
+    """
+    Returns a datetime object specifying when the database was last run.
+
+    If there are any tables with a column specifying last updated time
+    (based on the column name provided in the config file) but all dates
+=================
+1455126
+count:1
+    def __repr__(self) -> str:
+        return simple_repr(self, ['id', 'user', 'sql', 'args', 'raw', 'qmark',
+                                  'active', 'created', 'deleted', 'audited'])
+
+    def save(self, *args, **kwargs) -> None:
+        """
+        Custom save method. Ensures that only one :class:`Query` has ``active
+        == True`` for a given user. Also sets the hash.
+        """
+        # http://stackoverflow.com/questions/1455126/unique-booleanfield-value-in-django  # noqa
+        if self.active:
+            Query.objects.filter(user=self.user, active=True)\
+                         .update(active=False)
+        self.set_formatted_sql()
+        self.sql_hash = hash64(self.sql)
+        super().save(*args, **kwargs)
+
+    # -------------------------------------------------------------------------
+    # SQL queries
+    # -------------------------------------------------------------------------
+=================
+12158463
+count:1
+        db_column=PatientInfoConstants.MRID_FIELDNAME,
+        max_length=get_longest_supported_hasher_output_length())
+    trid = models.PositiveIntegerField(
+        db_column=PatientInfoConstants.TRID_FIELDNAME)
+
+    class Meta:
+        managed = False
+        db_table = PatientInfoConstants.SECRET_MAP_TABLENAME
+
+    # https://stackoverflow.com/questions/12158463/how-can-i-make-a-model-read-only  # noqa
+    def save(self, *args, **kwargs) -> None:
+        return
+
+    def delete(self, *args, **kwargs) -> None:
+        return
+
+
+def get_pid_lookup(dbinfo: SingleResearchDatabase,
+                   pid: Union[int, str] = None,
+                   mpid: Union[int, str] = None,
+=================
+49925
+count:1
+    *Development notes:*
+
+    - Patient ID query
+
+      - Single database is easy; we can use RID or TRID, and therefore TRID for
+        performance.
+
+        Note that ``UNION`` gives only ``DISTINCT`` results by default (``UNION
+        ALL`` gives everything); see
+        http://stackoverflow.com/questions/49925/what-is-the-difference-between-union-and-union-all.
+
+        .. code-block:: sql
+
+            -- Clear, but extensibility of boolean logic less clear:
+            SELECT trid
+                FROM diagnosis_table
+                WHERE diagnosis LIKE 'F20%'
+            INTERSECT
+            SELECT trid
+                FROM progress_note_table
+=================
+1869753
+count:1
+        WHERE trid IN ( ... patient_id_query ... )
+        ORDER BY trid
+
+      This means we will repeat the patient_id_query, which may be inefficient.
+      Options:
+
+      - store the TRIDs in Python, then pass them as arguments
+
+        - at which point the SQL string/packet length becomes relevant;
+        - http://stackoverflow.com/questions/1869753/maximum-size-for-a-sql-server-query-in-clause-is-there-a-better-approach
+        - http://stackoverflow.com/questions/16335011/what-is-maximum-query-size-for-mysql
+        - http://stackoverflow.com/questions/96553/practical-limit-to-length-of-sql-query-specifically-mysql
+
+      - let the database worry about it
+
+        - probably best for now!
+
+    - Display
+
+      - One patient per page, with multiple results tables.
+=================
+16335011
+count:1
+        ORDER BY trid
+
+      This means we will repeat the patient_id_query, which may be inefficient.
+      Options:
+
+      - store the TRIDs in Python, then pass them as arguments
+
+        - at which point the SQL string/packet length becomes relevant;
+        - http://stackoverflow.com/questions/1869753/maximum-size-for-a-sql-server-query-in-clause-is-there-a-better-approach
+        - http://stackoverflow.com/questions/16335011/what-is-maximum-query-size-for-mysql
+        - http://stackoverflow.com/questions/96553/practical-limit-to-length-of-sql-query-specifically-mysql
+
+      - let the database worry about it
+
+        - probably best for now!
+
+    - Display
+
+      - One patient per page, with multiple results tables.
+
+=================
+96553
+count:1
+
+      This means we will repeat the patient_id_query, which may be inefficient.
+      Options:
+
+      - store the TRIDs in Python, then pass them as arguments
+
+        - at which point the SQL string/packet length becomes relevant;
+        - http://stackoverflow.com/questions/1869753/maximum-size-for-a-sql-server-query-in-clause-is-there-a-better-approach
+        - http://stackoverflow.com/questions/16335011/what-is-maximum-query-size-for-mysql
+        - http://stackoverflow.com/questions/96553/practical-limit-to-length-of-sql-query-specifically-mysql
+
+      - let the database worry about it
+
+        - probably best for now!
+
+    - Display
+
+      - One patient per page, with multiple results tables.
+
+    - Boolean logic on patient selection
+=================
+13197574
+count:1
+
+    def get_xlsx_binary(self) -> bytes:
+        """
+        Returns an XLSX (Excel) file containing spreadsheets, one for each
+        table in our :attr:`patient_multiquery`.
+
+        Other notes:
+
+        - cell size: see
+          http://stackoverflow.com/questions/13197574/python-openpyxl-column-width-size-adjust;
+          and the "auto_size" / "bestFit" options don't really do the job,
+          according to the interweb.
+
+        """  # noqa
+        wb = Workbook()
+        wb.remove_sheet(wb.active)  # remove the autocreated blank sheet
+        sqlsheet_rows = [["Table", "SQL", "Args", "Executed_at"]]
+        for tsa in self.patient_multiquery.all_queries():
+            table_id = tsa.table_id
+            sql = tsa.sql
+=================
+812925
+count:1
+    Audit log for access to an archive template.
+    """
+    id = models.AutoField(primary_key=True)  # automatic
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             on_delete=models.CASCADE)
+    when = models.DateTimeField(auto_now_add=True)
+    patient_id = models.CharField(max_length=ARCHIVE_PATIENT_ID_MAX_LENGTH)
+    query_string = models.TextField()
+    # ... no max length; see
+    # https://stackoverflow.com/questions/812925/what-is-the-maximum-possible-length-of-a-query-string  # noqa
+
+    def __str__(self) -> str:
+        return f"<ArchiveTemplateAudit id={self.id}>"
+
+
+class ArchiveAttachmentAudit(models.Model):
+    """
+    Audit log for access to an archive attachment.
+    """
+    id = models.AutoField(primary_key=True)  # automatic
+=================
+9692665
+count:1
+                                    qparams: Dict[str, Any]) -> None:
+    """
+    Adds a file's timestamp to the query parameters that will make up a URL.
+
+    Why? So that if the file is edited, a new URL is generated, and caching
+    browsers will automatically refresh.
+
+    See
+
+    - https://stackoverflow.com/questions/9692665/cache-busting-via-params
+    - https://docs.python.org/3/library/os.path.html#os.path.getmtime
+
+    Args:
+        filepath: full path to file
+        qparams: parameter dictionary, which will be modified
+    """
+    if not isfile(filepath):
+        log.error(
+            f"add_file_timestamp_to_url_query: nonexistent file {filepath!r}")
+        return
+=================
+866272
+count:1
+
+    def get_cleaned_where_value(self) -> Any:
+        # Only call this if you've already cleaned/validated the form!
+        return self.cleaned_data[self.get_value_fieldname()]
+
+    def clean(self) -> None:
+        # Check the WHERE information is sufficient.
+        if 'submit_select' in self.data or 'submit_select_star' in self.data:
+            # Form submitted via the "Add" method, so no checks required.
+            # http://stackoverflow.com/questions/866272/how-can-i-build-multiple-submit-buttons-django-form  # noqa
+            return
+        if not self.offering_where():
+            return
+        cleaned_data = super().clean()
+        if not cleaned_data['where_op']:
+            self.add_error('where_op',
+                           forms.ValidationError("Must specify comparison"))
+
+        # No need for a value for NULL-related comparisons. But otherwise:
+        where_op = cleaned_data['where_op']
+=================
+16280918
+count:1
+        Returns:
+            tuple: ``sql, args``
+
+        Notes:
+
+        - SQL Server ``INFORMATION_SCHEMA.COLUMNS``: see
+          https://msdn.microsoft.com/en-us/library/ms188348.aspx
+        - Re fulltext indexes:
+
+          - http://stackoverflow.com/questions/16280918/how-to-find-full-text-indexing-on-database-in-sql-server-2008
+          - ``sys.fulltext_indexes``: https://msdn.microsoft.com/en-us/library/ms186903.aspx
+          - ``sys.fulltext_catalogs``: https://msdn.microsoft.com/en-us/library/ms188779.aspx
+          - ``sys.fulltext_index_columns``: https://msdn.microsoft.com/en-us/library/ms188335.aspx
+
+        """  # noqa
+        if not schema_names:
+            raise ValueError("No schema_names specified (for SQL Server "
+                             "database)")
+        schema_placeholder = ",".join(["?"] * len(schema_names))
+        sql = translate_sql_qmark_to_percent(f"""
+=================
+10335561
+count:1
+        Args:
+            schema_names: a list of schema names within the database
+
+        Returns:
+            tuple: ``sql, args``
+
+        Notes:
+
+        - A PostgreSQL connection is always to a single database; see
+          http://stackoverflow.com/questions/10335561/use-database-name-command-in-postgresql
+        - http://dba.stackexchange.com/questions/75015
+        - http://stackoverflow.com/questions/14713774
+        - Note that creating a GIN index looks like:
+
+          .. code-block:: sql
+
+            ALTER TABLE t ADD COLUMN tsv_mytext TSVECTOR;
+            UPDATE t SET tsv_mytext = to_tsvector(mytext);
+            CREATE INDEX idx_t_mytext_gin ON t USING GIN(tsv_mytext);
+
+=================
+14713774
+count:1
+
+        Returns:
+            tuple: ``sql, args``
+
+        Notes:
+
+        - A PostgreSQL connection is always to a single database; see
+          http://stackoverflow.com/questions/10335561/use-database-name-command-in-postgresql
+        - http://dba.stackexchange.com/questions/75015
+        - http://stackoverflow.com/questions/14713774
+        - Note that creating a GIN index looks like:
+
+          .. code-block:: sql
+
+            ALTER TABLE t ADD COLUMN tsv_mytext TSVECTOR;
+            UPDATE t SET tsv_mytext = to_tsvector(mytext);
+            CREATE INDEX idx_t_mytext_gin ON t USING GIN(tsv_mytext);
+
+        - PostgreSQL ``INFORMATION_SCHEMA.COLUMNS``: see
+          https://www.postgresql.org/docs/9.1/static/infoschema-columns.html
+=================
+907806
+count:1
+            log.warning(
+                f"SingleResearchDatabase.get_schema_infodictlist(): no "
+                f"results for database/schema {self.schema_identifier!r} "
+                f"database - misconfigured?")
+        return results
+        # Re passing multiple values to SQL via args:
+        # - Don't circumvent the parameter protection against SQL injection.
+        # - Too much hassle to use Django's ORM model here, though that would
+        #   also be possible.
+        # - http://stackoverflow.com/questions/907806
+        # - Similarly via SQLAlchemy reflection/inspection.
+
+
+@register_for_json(method=METHOD_NO_ARGS)
+class ResearchDatabaseInfo(object):
+    """
+    Fetches schema information from the research databases. There can be
+    several, and this class represents the whole collection.
+
+    Notes:
+=================
+3151469
+count:1
+        dict: a dictionary with core information about the request, like the
+        currently selected query/Patient Explorer ID for the user.
+
+    Notes:
+
+    - Try to minimize SQL here, as these calls will be used for EVERY
+      request.
+
+      - This problem can be circumvented with a per-request cache; see
+        http://stackoverflow.com/questions/3151469/per-request-cache-in-django
+
+    """
+    query_id = Query.get_active_query_id_or_none(request)
+    pe_id = PatientExplorer.get_active_pe_id_or_none(request)
+    return {
+        'query_selected': query_id is not None,
+        'current_query_id': query_id,
+        'pe_selected': pe_id is not None,
+        'current_pe_id': pe_id,
+    }
+=================
+13090907
+count:1
+    #
+    # - Could switch away from pyodbc, e.g. to Django-mssql [8, 9].
+    #   But, as per the CRATE manual, there were version incompatibilities
+    #   here. Tried again with v1.8, but it gave configuration errors
+    #   (ADODB.Connection; Provider cannot be found. It may not be properly
+    #   installed.) Anyway, pyodbc is good enough for SQLAlchemy.
+    #
+    # [1] https://github.com/michiya/django-pyodbc-azure/blob/azure-1.10/sql_server/pyodbc/base.py  # noqa
+    # [2] https://github.com/mkleehammer/pyodbc/blob/master/tests2/informixtests.py  # noqa
+    # [3] http://stackoverflow.com/questions/13090907
+    # [4] https://docs.python.org/3/c-api/bytes.html
+    # [5] https://docs.python.org/3/c-api/unicode.html
+    # [6] https://documentation.progress.com/output/DataDirect/DataDirectCloud/index.html#page/queries/microsoft-sql-server-data-types.html  # noqa
+    # [7] https://github.com/mkleehammer/pyodbc/wiki/Data-Types
+    # [8] https://docs.djangoproject.com/en/1.10/ref/databases/#using-a-3rd-party-database-backend  # noqa
+    # [9] https://django-mssql.readthedocs.io/en/latest/
+
+    # Screw it, let's use a hash. We can use our hash64() function and
+    # a Django BigIntegerField.
+
+=================
+5440657
+count:1
+            the HTML string to use for database ``NULL`` (Python ``None``)
+            values
+
+    Returns:
+        str: HTML
+
+    """  # noqa
+    # Considered but not implemented: hiding table columns
+    # ... see esp "tr > *:nth-child(n)" at
+    # http://stackoverflow.com/questions/5440657/how-to-hide-columns-in-html-table  # noqa
+    nlptable = False
+    if FN_NLPDEF in fieldnames:
+        srcdb_ind = srctable_ind = srcfield_ind = None
+        srcpkfield_ind = srcpkval_ind = srcpkstr_ind = None
+        for i, field in enumerate(fieldnames):
+            if field == FN_SRCDB:
+                srcdb_ind = i
+            elif field == FN_SRCTABLE:
+                srctable_ind = i
+            elif field == FN_SRCFIELD:
+=================
+3297048
+count:1
+            list of PIDs to look up from
+        mpids:
+            list of MPIDs to look up from
+
+    Returns:
+        a :class:`django.http.response.HttpResponse`
+    """  # noqa
+    # if not request.user.superuser:
+    #    return HttpResponse('Forbidden', status=403)
+    #    # http://stackoverflow.com/questions/3297048/403-forbidden-vs-401-unauthorized-http-responses  # noqa
+    trids = [] if trids is None else trids
+    rids = [] if rids is None else rids
+    mrids = [] if mrids is None else mrids
+    pids = [] if pids is None else pids
+    mpids = [] if mpids is None else mpids
+
+    assert dbinfo.secret_lookup_db
+    lookups = PidLookup.objects.using(dbinfo.secret_lookup_db).filter(
+        Q(trid__in=trids) |
+        Q(rid__in=rids) |
+=================
+12881294
+count:1
+
+    Args:
+        request: the :class:`django.http.request.HttpRequest`
+        pe_id: string form of the integer PK of a
+            :class:`crate_anon.crateweb.research.models.PatientExplorer`
+
+    Returns:
+        a :class:`django.http.response.HttpResponse`
+    """
+    # http://stackoverflow.com/questions/12881294/django-create-a-zip-of-multiple-files-and-make-it-downloadable  # noqa
+    pe = get_object_or_404(PatientExplorer, id=pe_id)  # type: PatientExplorer
+    try:
+        response = file_response(
+            pe.get_zipped_tsv_binary(),
+            content_type=ContentType.ZIP,
+            filename="crate_pe_{num}_{datetime}.zip".format(
+                num=pe.id,
+                datetime=datetime_iso_for_filename(),
+            )
+        )
+=================
+16750464
+count:1
+
+
+def login_view(request: HttpRequest) -> HttpResponse:
+    """
+    Main login view.
+    """
+    # don't call it login (name clash with django.contrib.auth.login)
+    # https://www.fir3net.com/Web-Development/Django/django.html
+    # http://www.flagonwiththedragon.com/2011/06/16/django-authenticationform-for-user-login/  # noqa
+    # http://stackoverflow.com/questions/16750464/django-redirect-after-login-not-working-next-not-posting  # noqa
+
+    # Where to after a successful login?
+    # noinspection PyCallByClass,PyTypeChecker
+    nextpage = request.GET.get(UrlKeys.NEXT, reverse(UrlNames.HOME))
+    nextpage_quoted = quote_plus(nextpage)
+    # log.debug(f"login_view: nextpage: {nextpage}")
+    # log.debug(f"login_view: nextpage_quoted: {nextpage_quoted}")
+
+    if request.user.is_authenticated:
+        # Authenticated, en route somewhere else.
+=================
+3151469
+count:1
+    return {
+        'CRATE_DOCS_URL': CRATE_DOCS_URL,
+        'HelpUrl': HelpUrl,
+        'nav_on_main_menu': False,
+        'RESEARCH_DB_TITLE': settings.RESEARCH_DB_TITLE,
+    }
+    # Try to minimize SQL here (ideally none!), as these calls will be used for
+    # EVERY request.
+    # This problem can partially be circumvented with a per-request cache; see
+    # http://stackoverflow.com/questions/3151469/per-request-cache-in-django
+=================
+2805701
+count:1
+        'get_sent', 'get_transmissions',
+    )
+    fields = readonly_fields  # or other things appear
+    date_hierarchy = 'created_at'
+    list_display = ('id', 'created_at', 'recipient', 'subject', 'get_sent')
+    list_filter = (EmailSentListFilter, )
+    search_fields = ('recipient', 'subject')
+    actions = ['resend']
+    # ... alternative method (per instance):
+    # http://stackoverflow.com/questions/2805701/is-there-a-way-to-get-custom-django-admin-actions-to-appear-on-the-change-view  # noqa
+
+    # - We can't use list_select_related for things that have a foreign key to
+    #   us (rather than things we have an FK to).
+    # - prefetch_related (in the queryset) just uses Python, not SQL.
+    # - http://blog.roseman.org.uk/2010/01/11/django-patterns-part-2-efficient-reverse-lookups/  # noqa
+    # Anyway, premature optimization is the root of all evil, and all that.
+
+    def get_view_msg_html(self, obj: Email) -> str:
+        url = reverse(UrlNames.VIEW_EMAIL_HTML, args=[obj.id])
+        return mark_safe(
+=================
+991926
+count:1
+                    'study', 'contact_request',
+                    'sent_manually_at')
+    list_filter = (LetterSendingStatusFilter,
+                   'to_clinician', 'to_researcher', 'to_patient')
+    list_select_related = (
+        'study__lead_researcher',
+        'contact_request',
+    )
+    date_hierarchy = 'created_at'
+    # ... see also http://stackoverflow.com/questions/991926/custom-filter-in-django-admin-on-django-1-3-or-below  # noqa
+    actions = ['mark_sent']
+
+    def mark_sent(self, request: HttpRequest, queryset: QuerySet) -> None:
+        ids = []  # type: List[int]
+        for letter in queryset:
+            letter.mark_sent()
+            ids.append(letter.id)
+        self.message_user(
+            request,
+            f"{len(ids)} letter(s) were marked as sent: IDs {str(ids)}.")
+=================
+4938491
+count:1
+    enough_info_for_researcher.short_description = (
+        "Enough researcher info?"
+    )
+    enough_info_for_researcher.boolean = True
+
+
+# =============================================================================
+# Assemble main admin site
+# =============================================================================
+# http://stackoverflow.com/questions/4938491/django-admin-change-header-django-administration-text  # noqa
+# http://stackoverflow.com/questions/3400641/how-do-i-inline-edit-a-django-user-profile-in-the-admin-interface  # noqa
+
+class MgrAdminSite(admin.AdminSite):
+    """
+    RDBM admin site.
+    """
+    # Text to put at the end of each page's <title>.
+    site_title = ugettext_lazy(settings.RESEARCH_DB_TITLE + ' manager admin')
+    # Text to put in each page's <h1>.
+    site_header = ugettext_lazy(settings.RESEARCH_DB_TITLE + ": manager admin")
+=================
+3400641
+count:1
+        "Enough researcher info?"
+    )
+    enough_info_for_researcher.boolean = True
+
+
+# =============================================================================
+# Assemble main admin site
+# =============================================================================
+# http://stackoverflow.com/questions/4938491/django-admin-change-header-django-administration-text  # noqa
+# http://stackoverflow.com/questions/3400641/how-do-i-inline-edit-a-django-user-profile-in-the-admin-interface  # noqa
+
+class MgrAdminSite(admin.AdminSite):
+    """
+    RDBM admin site.
+    """
+    # Text to put at the end of each page's <title>.
+    site_title = ugettext_lazy(settings.RESEARCH_DB_TITLE + ' manager admin')
+    # Text to put in each page's <h1>.
+    site_header = ugettext_lazy(settings.RESEARCH_DB_TITLE + ": manager admin")
+    # URL for the "View site" link at the top of each admin page.
+=================
+4938491
+count:1
+mgr_admin_site.register(QueryAudit, QueryMgrAdmin)
+mgr_admin_site.register(Study, StudyMgrAdmin)
+mgr_admin_site.register(TeamRep, TeamRepMgrAdmin)
+mgr_admin_site.register(User, ExtendedUserMgrAdmin)
+
+
+# =============================================================================
+# Assemble secondary (developer) admin site
+# =============================================================================
+# http://stackoverflow.com/questions/4938491/django-admin-change-header-django-administration-text  # noqa
+# http://stackoverflow.com/questions/3400641/how-do-i-inline-edit-a-django-user-profile-in-the-admin-interface  # noqa
+
+class DevAdminSite(admin.AdminSite):
+    """
+    Developer admin site.
+    """
+    site_title = ugettext_lazy(settings.RESEARCH_DB_TITLE + ' dev admin')
+    site_header = ugettext_lazy(settings.RESEARCH_DB_TITLE +
+                                ": developer admin")
+    site_url = settings.FORCE_SCRIPT_NAME + "/"
+=================
+3400641
+count:1
+mgr_admin_site.register(Study, StudyMgrAdmin)
+mgr_admin_site.register(TeamRep, TeamRepMgrAdmin)
+mgr_admin_site.register(User, ExtendedUserMgrAdmin)
+
+
+# =============================================================================
+# Assemble secondary (developer) admin site
+# =============================================================================
+# http://stackoverflow.com/questions/4938491/django-admin-change-header-django-administration-text  # noqa
+# http://stackoverflow.com/questions/3400641/how-do-i-inline-edit-a-django-user-profile-in-the-admin-interface  # noqa
+
+class DevAdminSite(admin.AdminSite):
+    """
+    Developer admin site.
+    """
+    site_title = ugettext_lazy(settings.RESEARCH_DB_TITLE + ' dev admin')
+    site_header = ugettext_lazy(settings.RESEARCH_DB_TITLE +
+                                ": developer admin")
+    site_url = settings.FORCE_SCRIPT_NAME + "/"
+    index_title = ugettext_lazy(settings.RESEARCH_DB_TITLE +
+=================
+1929707
+count:1
+res_admin_site.disable_action('delete_selected')
+res_admin_site.register(Study, StudyResAdmin)
+res_admin_site.register(Leaflet, LeafletResAdmin)
+res_admin_site.register(Email, EmailResAdmin)
+res_admin_site.register(Letter, LetterResAdmin)
+res_admin_site.register(ContactRequest, ContactRequestResAdmin)
+
+"""
+Problem with non-superusers not seeing any apps:
+- http://stackoverflow.com/questions/1929707/django-admin-not-seeing-any-app-permission-problem  # noqa
+  ... but django.contrib.auth.backends.ModelBackend won't load in INSTALLED_APPS  # noqa
+- log.debug(f"registered: {res_admin_site.is_registered(Leaflet)!r}")
+  ... OK
+  ... and anyway, it works for superusers
+- app_list is blank in the template; this is set in AdminSite.index()
+  (in django/contrib/admin/sites.py)
+  So the failure is either in
+        model_admin.has_module_permission(request)
+            return request.user.has_module_perms(self.opts.app_label)
+    or  model_admin.get_model_perms(request)
+=================
+43893853
+count:1
+    Returns:
+        the URL with query parameters
+
+    Note:
+
+        This does not currently sort query parameters. Doing that might be
+        slightly advantageous for caching, i.e. to ensure that
+        "path?a=1&b=2" is treated as identical to "path?b=2&a=1". However, it
+        is legal for servers to treat them as ordered. See
+        https://stackoverflow.com/questions/43893853/http-cache-control-and-params-order.
+    """  # noqa
+    # Get initial query parameters, if any.
+    # log.critical(f"IN: path={path!r}, querydict={querydict!r}, "
+    #              f"kwargs={kwargs!r}")
+    pr = urllib.parse.urlparse(path)  # type: urllib.parse.ParseResult
+    qd = QueryDict(mutable=True)
+    if pr.query:
+        for k, values in urllib.parse.parse_qs(pr.query).items():
+            for v in values:
+                qd[k] = v
+=================
+26221669
+count:1
+    # Calculate the query string
+    if qd:
+        querystring = qd.urlencode()
+        # for kwargs: querystring = urllib.parse.urlencode(kwargs)
+    else:
+        querystring = ""
+
+    # Return the final rebuilt URL.
+    # You can't write to a urllib.parse.ParseResult. So, as per
+    # https://stackoverflow.com/questions/26221669/how-do-i-replace-a-query-with-a-new-value-in-urlparse  # noqa
+    # we have do to this:
+
+    components = list(pr)
+    components[4] = querystring
+    url = urllib.parse.urlunparse(components)
+    # log.critical(f"OUT: {url}")
+    return url
+
+
+def site_absolute_url(path: str) -> str:
+=================
+4150258
+count:1
+            # ... which is context-dependent: see below
+
+    We need to generate links to our site outside the request environment, e.g.
+    for inclusion in e-mails, even when we're generating the e-mails offline
+    via Celery. There's no easy way to do this automatically (site path
+    information comes in only via requests), so we put it in the settings.
+
+    See also:
+
+    - http://stackoverflow.com/questions/4150258/django-obtaining-the-absolute-url-without-access-to-a-request-object
+    - https://fragmentsofcode.wordpress.com/2009/02/24/django-fully-qualified-url/
+
+    **IMPORTANT**
+
+    BEWARE: :func:`reverse` will produce something different inside a request
+    and outside it.
+
+    - http://stackoverflow.com/questions/32340806/django-reverse-returns-different-values-when-called-from-wsgi-or-shell
+
+    So the only moderately clean way of doing this is to do this in the Celery
+=================
+32340806
+count:1
+
+    - http://stackoverflow.com/questions/4150258/django-obtaining-the-absolute-url-without-access-to-a-request-object
+    - https://fragmentsofcode.wordpress.com/2009/02/24/django-fully-qualified-url/
+
+    **IMPORTANT**
+
+    BEWARE: :func:`reverse` will produce something different inside a request
+    and outside it.
+
+    - http://stackoverflow.com/questions/32340806/django-reverse-returns-different-values-when-called-from-wsgi-or-shell
+
+    So the only moderately clean way of doing this is to do this in the Celery
+    backend jobs, for anything that uses Django URLs (e.g. :func:`reverse`) --
+    NOT necessary for anything using only static URLs (e.g. pictures in PDFs).
+
+    .. code-block:: python
+
+        from django.conf import settings
+        from django.urls import set_script_prefix
+
+=================
+2636536
+count:1
+    ENVVAR_GENERATING_CRATE_DOCS,
+    RUNNING_WITHOUT_CONFIG,
+)
+from crate_anon.common.dockerfunc import warn_if_not_within_docker_dir
+from crate_anon.crateweb.config.constants import (
+    CRATEWEB_CONFIG_ENV_VAR,
+    UrlNames,
+)
+
+# http://stackoverflow.com/questions/2636536/how-to-make-django-work-with-unsupported-mysql-drivers-such-as-gevent-mysql-or-c  # noqa
+try:
+    import pymysql
+    pymysql.install_as_MySQLdb()
+except ImportError:
+    pymysql = None
+
+log = logging.getLogger(__name__)
+
+
+# =============================================================================
+=================
+6791911
+count:1
+    res_admin_site,
+)
+import crate_anon.crateweb.core.auth_views as core_auth_views
+import crate_anon.crateweb.core.views as core_views
+import crate_anon.crateweb.consent.views as consent_views
+import crate_anon.crateweb.research.views as research_views
+import crate_anon.crateweb.userprofile.views as userprofile_views
+
+# This is the place for one-time startup code.
+# http://stackoverflow.com/questions/6791911/execute-code-when-django-starts-once-only  # noqa
+# So we cache things here that we don't want the user to have to wait for:
+from crate_anon.crateweb.research.research_db_info import research_database_info  # noqa
+
+research_database_info.get_colinfolist()
+
+log = logging.getLogger(__name__)
+
+
+urlpatterns = [
+    # -------------------------------------------------------------------------
+=================
+32111203
+count:1
+    # Other test views
+    # -------------------------------------------------------------------------
+    # url(r'^404/$', django.views.defaults.page_not_found, ),
+]
+
+
+if settings.DEBUG:
+    # Debug toolbar
+    # - https://github.com/jazzband/django-debug-toolbar/issues/529
+    # - http://stackoverflow.com/questions/32111203/what-is-the-benefit-of-using-django-conf-urls-patterns-versus-a-list-of-url-in-d  # noqa
+    urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ]
+
+    # Silk
+    #
+    # urlpatterns += patterns('', url(r'^silk/',
+    #                                 include('silk.urls', namespace='silk')))
+
+    # Serve static files for development
+=================
+11206884
+count:1
+    decisions.append(f"{len(clinicians)} total past/present "
+                     f"clinician(s)/team(s) found: {clinicians!r}.")
+    current_clinicians = [c for c in clinicians if c.current()]
+    if current_clinicians:
+        lookup.pt_discharged = False
+        lookup.pt_discharge_date = None
+        decisions.append("Patient not discharged.")
+        contactable_curr_clin = [c for c in current_clinicians
+                                 if c.contactable()]
+        # Sorting by two keys: http://stackoverflow.com/questions/11206884
+        # LOW priority: most recent clinician. (Goes first in sort.)
+        # HIGH priority: preferred type of clinician. (Goes last in sort.)
+        # Sort order is: most preferred first.
+        contactable_curr_clin.sort(key=attrgetter('start_date'), reverse=True)
+        contactable_curr_clin.sort(key=attrgetter('clinician_preference_order'))  # noqa
+        decisions.append(f"{len(contactable_curr_clin)} contactable active "
+                         f"clinician(s) found.")
+        if contactable_curr_clin:
+            chosen_clinician = contactable_curr_clin[0]
+            lookup.set_from_clinician_info_holder(chosen_clinician)
+=================
+17313532
+count:1
+
+- http://docs.celeryproject.org/en/latest/faq.html#faq-acks-late-vs-retry
+
+- We'll stick with the default (slightly less reliable but won't be run more
+  than once).
+
+
+**Circular imports:**
+
+- http://stackoverflow.com/questions/17313532/django-import-loop-between-celery-tasks-and-my-models
+
+- The potential circularity is:
+
+    - At launch, Celery must import tasks, which could want to import models.
+
+    - At launch, Django loads models, which may use tasks.
+
+- Simplest solution is to keep tasks very simple (as below) and use delayed
+  imports here.
+
+=================
+26862942
+count:1
+    (1) existing object
+    (2) amend with form
+    (3) save()
+    (4) call function.delay(obj.id)
+
+  Object is received by Celery in the state before save() at step 3.
+
+- http://celery.readthedocs.org/en/latest/userguide/tasks.html#database-transactions
+
+- http://stackoverflow.com/questions/26862942/django-related-objects-are-missing-from-celery-task-race-condition
+
+- https://code.djangoproject.com/ticket/14051
+
+- https://github.com/aaugustin/django-transaction-signals
+
+- SOLUTION:
+  https://docs.djangoproject.com/en/dev/topics/db/transactions/#django.db.transaction.on_commit
+
+  .. code-block:: python
+
+=================
+8609192
+count:1
+        max_upload_size=settings.MAX_UPLOAD_SIZE_BYTES,
+        upload_to=study_details_upload_to)
+    subject_form_template_pdf = ContentTypeRestrictedFileField(
+        blank=True,
+        storage=privatestorage,
+        content_types=[ContentType.PDF],
+        max_upload_size=settings.MAX_UPLOAD_SIZE_BYTES,
+        upload_to=study_form_upload_to)
+    # http://nemesisdesign.net/blog/coding/django-private-file-upload-and-serving/  # noqa
+    # http://stackoverflow.com/questions/8609192/differentiate-null-true-blank-true-in-django  # noqa
+    AUTODELETE_OLD_FILE_FIELDS = ['study_details_pdf',
+                                  'subject_form_template_pdf']
+
+    class Meta:
+        verbose_name_plural = "studies"
+
+    def __str__(self) -> str:
+        # noinspection PyUnresolvedReferences
+        return (
+            f"[Study {self.id}] {self.institutional_id}: "
+=================
+12822847
+count:1
+    YELLOW = 'yellow'
+    GREEN = 'green'
+
+    VALID_CONSENT_MODES = [RED, YELLOW, GREEN]
+    CONSENT_MODE_CHOICES = (
+        (RED, 'red'),
+        (YELLOW, 'yellow'),
+        (GREEN, 'green'),
+    )
+    # ... http://stackoverflow.com/questions/12822847/best-practice-for-python-django-constants  # noqa
+
+    SOURCE_USER_ENTRY = "crate_user_entry"
+    SOURCE_AUTOCREATED = "crate_auto_created"
+    SOURCE_LEGACY = "legacy"  # default, for old versions
+
+    nhs_number = models.BigIntegerField(verbose_name="NHS number")
+    current = models.BooleanField(default=False)
+    # see save() and process_change() below
+    created_at = models.DateTimeField(
+        verbose_name="When was this record created?",
+=================
+1455126
+count:1
+        Custom save method. Ensures that only one :class:`ConsentMode` has
+        ``current == True`` for a given patient.
+
+        This is better than a ``get_latest_by`` clause, because with a flag
+        like this, we can have a simple query that says "get the current
+        records for all patients" -- which is harder if done by date (group by
+        patient, order by patient/date, pick last one for each patient...).
+
+        See
+        http://stackoverflow.com/questions/1455126/unique-booleanfield-value-in-django
+        """  # noqa
+        if self.current:
+            ConsentMode.objects\
+                       .filter(nhs_number=self.nhs_number, current=True)\
+                       .update(current=False)
+        super().save(*args, **kwargs)
+
+    def __str__(self) -> str:
+        return (
+            f"[ConsentMode {self.id}] "
+=================
+11721818
+count:1
+            'consent_mode': self,
+            'patient_lookup': patient_lookup,
+            'settings': settings,
+            # URLs
+            # 'red_img_url': site_absolute_url(static('red.png')),
+            # 'yellow_img_url': site_absolute_url(static('yellow.png')),
+            # 'green_img_url': site_absolute_url(static('green.png')),
+        }
+        # 1. Building a static URL in code:
+        #    http://stackoverflow.com/questions/11721818/django-get-the-static-files-url-in-view  # noqa
+        # 2. Making it an absolute URL means that wkhtmltopdf will also see it
+        #    (by fetching it from this web server).
+        # 3. Works with Django testing server.
+        # 4. Works with Apache, + proxying to backend, + SSL
+        return render_pdf_html_to_string('letter_patient_confirm_traffic.html',
+                                         context, patient=True)
+
+    def notify_rdbm_of_work(self,
+                            letter: LETTER_FWD_REF,
+                            to_researcher: bool = False) -> None:
+=================
+7908349
+count:1
+    Args:
+        request: the :class:`django.http.request.HttpRequest`
+
+    Returns:
+        a :class:`DummyObjectCollection`
+
+    We want to create these objects in memory, without saving to the DB.
+    However, Django is less good at SQLAlchemy for this, and saves.
+
+    - http://stackoverflow.com/questions/7908349/django-making-relationships-in-memory-without-saving-to-db  # noqa
+    - https://code.djangoproject.com/ticket/17253
+    - http://stackoverflow.com/questions/23372786/django-models-assigning-foreignkey-object-without-saving-to-database  # noqa
+    - http://stackoverflow.com/questions/7121341/django-adding-objects-to-a-related-set-without-saving-to-db  # noqa
+
+    A simple method works for an SQLite backend database but fails with
+    an IntegrityError for MySQL/SQL Server. For example:
+
+    .. code-block:: none
+
+        IntegrityError at /draft_traffic_light_decision_form/-1/html/
+=================
+23372786
+count:1
+
+    Returns:
+        a :class:`DummyObjectCollection`
+
+    We want to create these objects in memory, without saving to the DB.
+    However, Django is less good at SQLAlchemy for this, and saves.
+
+    - http://stackoverflow.com/questions/7908349/django-making-relationships-in-memory-without-saving-to-db  # noqa
+    - https://code.djangoproject.com/ticket/17253
+    - http://stackoverflow.com/questions/23372786/django-models-assigning-foreignkey-object-without-saving-to-database  # noqa
+    - http://stackoverflow.com/questions/7121341/django-adding-objects-to-a-related-set-without-saving-to-db  # noqa
+
+    A simple method works for an SQLite backend database but fails with
+    an IntegrityError for MySQL/SQL Server. For example:
+
+    .. code-block:: none
+
+        IntegrityError at /draft_traffic_light_decision_form/-1/html/
+        (1452, 'Cannot add or update a child row: a foreign key constraint
+        fails (`crate_django`.`consent_study_researchers`, CONSTRAINT
+=================
+7121341
+count:1
+    Returns:
+        a :class:`DummyObjectCollection`
+
+    We want to create these objects in memory, without saving to the DB.
+    However, Django is less good at SQLAlchemy for this, and saves.
+
+    - http://stackoverflow.com/questions/7908349/django-making-relationships-in-memory-without-saving-to-db  # noqa
+    - https://code.djangoproject.com/ticket/17253
+    - http://stackoverflow.com/questions/23372786/django-models-assigning-foreignkey-object-without-saving-to-database  # noqa
+    - http://stackoverflow.com/questions/7121341/django-adding-objects-to-a-related-set-without-saving-to-db  # noqa
+
+    A simple method works for an SQLite backend database but fails with
+    an IntegrityError for MySQL/SQL Server. For example:
+
+    .. code-block:: none
+
+        IntegrityError at /draft_traffic_light_decision_form/-1/html/
+        (1452, 'Cannot add or update a child row: a foreign key constraint
+        fails (`crate_django`.`consent_study_researchers`, CONSTRAINT
+        `consent_study_researchers_study_id_19bb255f_fk_consent_study_id`
+=================
+5329586
+count:1
+        study = self.fields['study']  # type: forms.ModelChoiceField
+        rids = self.fields['rids']  # type: MultipleWordAreaField
+        mrids = self.fields['mrids']  # type: MultipleWordAreaField
+
+        study.queryset = Study.filter_studies_for_researcher(
+            queryset=Study.get_queryset_possible_contact_studies(),
+            user=user
+        )
+        # https://docs.djangoproject.com/en/1.8/ref/models/querysets/#field-lookups  # noqa
+        # http://stackoverflow.com/questions/5329586/django-modelchoicefield-filtering-query-set-and-setting-default-value-as-an-obj  # noqa
+        rids.label = f"{dbinfo.rid_field} ({dbinfo.rid_description}) (RID)"
+        mrids.label = f"{dbinfo.mrid_field} ({dbinfo.mrid_description}) (MRID)"
+
+
+class ClinicianSubmitContactRequestForm(AbstractContactRequestForm):
+    """
+    Form for clinician to request that a patient of their's gets contacted
+    about a study.
+    """
+    study = forms.ModelChoiceField(
+=================
+2049502
+count:1
+    if not forename or not surname:  # in case one is empty
+        return default
+    if len(forename) == 1:
+        # Initial only; that won't do.
+        return default
+    # Other duff things we see: John Smith (CALT), where "Smith (CALT)" is the
+    # surname and CALT is Cambridge Adult Locality Team. This can map to
+    # something unpredictable, like JohnSmithOT@cpft.nhs.uk, so we can't use
+    # it.
+    # Formal definition is at http://stackoverflow.com/questions/2049502/what-characters-are-allowed-in-email-address  # noqa
+    # See also: http://emailregex.com/
+    attempt = f"{forename}.{surname}@{domain}"
+    if APPROX_EMAIL_REGEX.match(attempt):
+        return attempt
+    else:
+        return default
+
+
+def make_cpft_email_address(forename: str, surname: str,
+                            default: str = '') -> str:
+=================
+24519559
+count:1
+            pong
+
+Improvement if you run the Celery worker with "--concurrency=4" (up from its
+default of 1). Flower talks to the nodes. The tasks appear in the worker's
+task list. Both "celery status" and "celery inspect ping" work. But tasks
+still go into the "Reserved" list.
+
+The ``-Ofair`` option didn't fix it:
+
+- http://stackoverflow.com/questions/24519559
+
+And then it screwed up again, and became unresponsive to the status things.
+Argh!
+
+- Close all Celery things.
+- Hard reset of RabbitMQ:
+
+.. code-block:: bash
+
+    rabbitmqctl stop_app
+=================
+20309954
+count:1
+  ... now works
+- But tasks are still going into the reserved queue.
+
+People have achieved this with Win10:
+
+- https://github.com/hotdogee/django-blast/Windows-Development-Environment-Setup  # noqa
+
+Aha! Using ``--pool=solo`` made it work!
+
+- https://stackoverflow.com/questions/20309954
+
+
+**See also...**
+
+See also :mod:`crate_anon.crateweb.consent.tasks`, with more notes.
+
+"""
+
+import os
+
+=================
+3068843
+count:1
+
+    .. code-block:: none
+
+        my_admin_site.index_template = 'admin/viewchange_admin_index.html'
+
+    ... to give a modified admin/index.html that says "View/change" not
+    "Change".
+
+    """
+    # http://stackoverflow.com/questions/3068843/permission-to-view-but-not-to-change-django  # noqa
+    # See also http://stackoverflow.com/questions/6680631/django-admin-separate-read-only-view-and-change-view  # noqa
+    # django/contrib/admin/templates/admin/change_form.html
+    # django/contrib/admin/templatetags/admin_modify.py
+    # https://docs.djangoproject.com/en/1.8/ref/contrib/admin/#django.contrib.ModelAdmin.change_view  # noqa
+
+    # Remove the tickbox for deletion, and the top/bottom action bars:
+    actions = None
+
+    # When you drill down into a single object, use a custom template
+    # that removes the 'save' buttons:
+=================
+6680631
+count:1
+    .. code-block:: none
+
+        my_admin_site.index_template = 'admin/viewchange_admin_index.html'
+
+    ... to give a modified admin/index.html that says "View/change" not
+    "Change".
+
+    """
+    # http://stackoverflow.com/questions/3068843/permission-to-view-but-not-to-change-django  # noqa
+    # See also http://stackoverflow.com/questions/6680631/django-admin-separate-read-only-view-and-change-view  # noqa
+    # django/contrib/admin/templates/admin/change_form.html
+    # django/contrib/admin/templatetags/admin_modify.py
+    # https://docs.djangoproject.com/en/1.8/ref/contrib/admin/#django.contrib.ModelAdmin.change_view  # noqa
+
+    # Remove the tickbox for deletion, and the top/bottom action bars:
+    actions = None
+
+    # When you drill down into a single object, use a custom template
+    # that removes the 'save' buttons:
+    change_form_template = 'admin/readonly_view_form.html'
+=================
+7860612
+count:1
+
+    def has_delete_permission(self, request: HttpRequest, obj=None) -> bool:
+        return False
+
+    def get_changelist(self, request: HttpRequest, **kwargs) \
+            -> Type[ChangeList]:
+        return ReadOnlyChangeList
+
+    # This is an add-but-not-edit class.
+    # http://stackoverflow.com/questions/7860612/django-admin-make-field-editable-in-add-but-not-edit  # noqa
+    def get_readonly_fields(self, request: HttpRequest, obj=None) -> List[str]:
+        if obj:  # obj is not None, so this is an edit
+            # self.__class__ is the derived class
+            if hasattr(self.__class__, 'fields_for_viewing'):
+                # noinspection PyUnresolvedReferences,PyTypeChecker
+                return self.__class__.fields_for_viewing
+            elif hasattr(self.__class__, 'readonly_fields'):
+                return self.__class__.readonly_fields
+            else:
+                return self.__class__.fields
+=================
+14345303
+count:1
+    This is used for:
+
+    - stuff the user might edit, e.g. per_page
+    - a representation of the user as a researcher (or maybe clinician)
+    """
+    user = models.OneToOneField(settings.AUTH_USER_MODEL,
+                                primary_key=True,
+                                on_delete=models.CASCADE,
+                                related_name="profile")
+    # http://stackoverflow.com/questions/14345303/creating-a-profile-model-with-both-an-inlineadmin-and-a-post-save-signal-in-djan  # noqa
+
+    # first_name: in Django User model
+    # last_name: in Django User model
+    # email: in Django User model
+
+    N_PAGE_CHOICES = (
+        (10, '10'),
+        (20, '20'),
+        (50, '50'),
+        (100, '100'),
+=================
+19406859
+count:1
+                    f"Table {dbname}.{sourcetable}: not fetching more than "
+                    f"{debuglimit} rows (in total for this process) "
+                    f"due to debugging limits")
+                config.warned_re_limits[db_table_tuple] = True
+            result.close()  # http://docs.sqlalchemy.org/en/latest/core/connections.html  # noqa
+            return
+        config.notify_src_bytes_read(sys.getsizeof(row))  # ... approximate!
+        yield list(row)
+        # yield dict(zip(row.keys(), row))
+        # see also http://stackoverflow.com/questions/19406859
+        config.rows_inserted_per_table[db_table_tuple] += 1
+
+
+def count_rows(dbname: str,
+               sourcetable: str,
+               pid: Union[int, str] = None) -> int:
+    """
+    Count the number of rows in a table for a given PID.
+
+    Args:
+=================
+7443366
+count:1
+    visible to ``ps``.
+
+    Disadvantage: how do you override with a command-line (argparse) setting?
+    .. though: who cares?
+
+    To print a config using that file: raise an exception on nonexistent
+    config, and catch it with a special entry point script.
+
+-   See also
+    http://stackoverflow.com/questions/7443366/argument-passing-strategy-environment-variables-vs-command-line
+
+"""  # noqa
+
+# =============================================================================
+# Imports
+# =============================================================================
+
+import fnmatch
+from io import StringIO
+import logging
+=================
+5424942
+count:1
+
+===============================================================================
+
+**SQLAlchemy ORM models for the CRATE anonymiser, representing information it
+stores in its admin database.**
+
+To create a SQLAlchemy Table programmatically:
+
+- http://docs.sqlalchemy.org/en/latest/core/schema.html
+- http://stackoverflow.com/questions/5424942/sqlalchemy-model-definition-at-execution
+- http://stackoverflow.com/questions/2580497/database-on-the-fly-with-scripting-languages/2580543#2580543
+
+To create a SQLAlchemy ORM programmatically:
+
+- http://stackoverflow.com/questions/2574105/sqlalchemy-dynamic-mapping/2575016#2575016
+"""  # noqa
+
+import logging
+import random
+from typing import Optional, TYPE_CHECKING, Union
+=================
+2580543
+count:1
+===============================================================================
+
+**SQLAlchemy ORM models for the CRATE anonymiser, representing information it
+stores in its admin database.**
+
+To create a SQLAlchemy Table programmatically:
+
+- http://docs.sqlalchemy.org/en/latest/core/schema.html
+- http://stackoverflow.com/questions/5424942/sqlalchemy-model-definition-at-execution
+- http://stackoverflow.com/questions/2580497/database-on-the-fly-with-scripting-languages/2580543#2580543
+
+To create a SQLAlchemy ORM programmatically:
+
+- http://stackoverflow.com/questions/2574105/sqlalchemy-dynamic-mapping/2575016#2575016
+"""  # noqa
+
+import logging
+import random
+from typing import Optional, TYPE_CHECKING, Union
+
+=================
+2575016
+count:1
+
+To create a SQLAlchemy Table programmatically:
+
+- http://docs.sqlalchemy.org/en/latest/core/schema.html
+- http://stackoverflow.com/questions/5424942/sqlalchemy-model-definition-at-execution
+- http://stackoverflow.com/questions/2580497/database-on-the-fly-with-scripting-languages/2580543#2580543
+
+To create a SQLAlchemy ORM programmatically:
+
+- http://stackoverflow.com/questions/2574105/sqlalchemy-dynamic-mapping/2575016#2575016
+"""  # noqa
+
+import logging
+import random
+from typing import Optional, TYPE_CHECKING, Union
+
+from cardinal_pythonlib.sqlalchemy.orm_query import exists_orm
+from sqlalchemy import (
+    Column,
+    MetaData,
+=================
+12297156
+count:1
+
+        Args:
+            session: SQLAlchemy database session for the secret admin database
+            pid: PID of the patient who is opting out
+        """
+        log.debug(f"Adding opt-out for PID {pid}")
+        # noinspection PyArgumentList
+        newthing = cls(pid=pid)
+        session.merge(newthing)
+        # http://stackoverflow.com/questions/12297156/fastest-way-to-insert-object-if-it-doesnt-exist-with-sqlalchemy  # noqa
+
+
+class OptOutMpid(AdminBase):
+    """
+    Records the MPID values of patients opting out of the anonymised database.
+    """
+    __tablename__ = 'opt_out_mpid'
+    __table_args__ = TABLE_KWARGS
+
+    mpid = Column(
+=================
+1803628
+count:1
+    along with CRATE. If not, see <http://www.gnu.org/licenses/>.
+
+===============================================================================
+
+**Script to fetch wordlists from Internet sources, such as lists of forenames
+and surnames.**
+
+See:
+
+- https://stackoverflow.com/questions/1803628/raw-list-of-person-names
+- http://www.dicts.info/dictionaries.php
+
+For the Moby project:
+
+- https://en.wikipedia.org/wiki/Moby_Project
+- https://www.gutenberg.org/ebooks/3201
+- https://www.gutenberg.org/files/3201/3201.txt -- explains other files
+
+and default URLs in command-line parameters
+
+=================
+13243766
+count:1
+        fields: list of source fields containing ``scrub_src`` information
+        pid: patient ID
+
+    Yields:
+         rows, where each row is a list of values that matches ``fields``.
+    """
+    cfg = config.sources[dbname].srccfg
+    if not cfg.ddgen_per_table_pid_field:
+        return
+        # return in a generator: http://stackoverflow.com/questions/13243766
+    log.debug(
+        f"gen_all_values_for_patient: PID {pid}, "
+        f"table {dbname}.{tablename}, fields: {','.join(fields)}")
+    session = config.sources[dbname].session
+    query = (
+        select([column(f) for f in fields]).
+        where(column(cfg.ddgen_per_table_pid_field) == pid).
+        select_from(table(tablename))
+    )
+    result = session.execute(query)
+=================
+356100
+count:1
+    You should have received a copy of the GNU General Public License
+    along with CRATE. If not, see <http://www.gnu.org/licenses/>.
+
+===============================================================================
+
+**Launch the CRATE anonymiser in multiprocess mode.**
+
+Previous bash version: see
+
+- http://stackoverflow.com/questions/356100
+- http://stackoverflow.com/questions/1644856
+- http://stackoverflow.com/questions/8903239
+- http://stackoverflow.com/questions/1951506
+- Note: ``$!`` is the process ID of last process launched in background
+- http://stackoverflow.com/questions/59895
+
+Python version: see
+
+- http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel
+- http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program
+=================
+1644856
+count:1
+    along with CRATE. If not, see <http://www.gnu.org/licenses/>.
+
+===============================================================================
+
+**Launch the CRATE anonymiser in multiprocess mode.**
+
+Previous bash version: see
+
+- http://stackoverflow.com/questions/356100
+- http://stackoverflow.com/questions/1644856
+- http://stackoverflow.com/questions/8903239
+- http://stackoverflow.com/questions/1951506
+- Note: ``$!`` is the process ID of last process launched in background
+- http://stackoverflow.com/questions/59895
+
+Python version: see
+
+- http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel
+- http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program
+- http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python
+=================
+8903239
+count:1
+
+===============================================================================
+
+**Launch the CRATE anonymiser in multiprocess mode.**
+
+Previous bash version: see
+
+- http://stackoverflow.com/questions/356100
+- http://stackoverflow.com/questions/1644856
+- http://stackoverflow.com/questions/8903239
+- http://stackoverflow.com/questions/1951506
+- Note: ``$!`` is the process ID of last process launched in background
+- http://stackoverflow.com/questions/59895
+
+Python version: see
+
+- http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel
+- http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program
+- http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python
+"""  # noqa
+=================
+1951506
+count:1
+===============================================================================
+
+**Launch the CRATE anonymiser in multiprocess mode.**
+
+Previous bash version: see
+
+- http://stackoverflow.com/questions/356100
+- http://stackoverflow.com/questions/1644856
+- http://stackoverflow.com/questions/8903239
+- http://stackoverflow.com/questions/1951506
+- Note: ``$!`` is the process ID of last process launched in background
+- http://stackoverflow.com/questions/59895
+
+Python version: see
+
+- http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel
+- http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program
+- http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python
+"""  # noqa
+
+=================
+59895
+count:1
+**Launch the CRATE anonymiser in multiprocess mode.**
+
+Previous bash version: see
+
+- http://stackoverflow.com/questions/356100
+- http://stackoverflow.com/questions/1644856
+- http://stackoverflow.com/questions/8903239
+- http://stackoverflow.com/questions/1951506
+- Note: ``$!`` is the process ID of last process launched in background
+- http://stackoverflow.com/questions/59895
+
+Python version: see
+
+- http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel
+- http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program
+- http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python
+"""  # noqa
+
+import argparse
+import logging
+=================
+23611396
+count:1
+- http://stackoverflow.com/questions/356100
+- http://stackoverflow.com/questions/1644856
+- http://stackoverflow.com/questions/8903239
+- http://stackoverflow.com/questions/1951506
+- Note: ``$!`` is the process ID of last process launched in background
+- http://stackoverflow.com/questions/59895
+
+Python version: see
+
+- http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel
+- http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program
+- http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python
+"""  # noqa
+
+import argparse
+import logging
+import multiprocessing
+import sys
+import time
+from typing import List
+=================
+320232
+count:1
+- http://stackoverflow.com/questions/1644856
+- http://stackoverflow.com/questions/8903239
+- http://stackoverflow.com/questions/1951506
+- Note: ``$!`` is the process ID of last process launched in background
+- http://stackoverflow.com/questions/59895
+
+Python version: see
+
+- http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel
+- http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program
+- http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python
+"""  # noqa
+
+import argparse
+import logging
+import multiprocessing
+import sys
+import time
+from typing import List
+
+=================
+641420
+count:1
+- http://stackoverflow.com/questions/8903239
+- http://stackoverflow.com/questions/1951506
+- Note: ``$!`` is the process ID of last process launched in background
+- http://stackoverflow.com/questions/59895
+
+Python version: see
+
+- http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel
+- http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program
+- http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python
+"""  # noqa
+
+import argparse
+import logging
+import multiprocessing
+import sys
+import time
+from typing import List
+
+from cardinal_pythonlib.logs import configure_logger_for_colour
+=================
+287757
+count:1
+    VERSION=CRATE_VERSION,
+    VERSION_DATE=CRATE_VERSION_DATE,
+)
+
+# For the style:
+#       [source_databases]
+#       source1 = blah
+#       source2 = thing
+# ... you can't have multiple keys with the same name.
+=================
+9662346
+count:1
+            return None
+
+    @staticmethod
+    def _html_untag_func(text: str) -> str:
+        """
+        Removes HTML tags.
+        """
+        # Lots of ways...
+        # -- xml.etree, for well-formed XML
+        #    http://stackoverflow.com/questions/9662346
+        # return ''.join(xml.etree.ElementTree.fromstring(text).itertext())
+        # -- html.parser
+        #    http://stackoverflow.com/questions/753052
+        # -- lxml (but needs source build on Windows):
+        #    http://www.neuraladvance.com/removing-html-from-python-strings.html
+        #    http://lxml.de/
+        # -- regex/re
+        #    http://stackoverflow.com/questions/3662142
+        return HTML_TAG_RE.sub('', text)
+
+=================
+753052
+count:1
+    def _html_untag_func(text: str) -> str:
+        """
+        Removes HTML tags.
+        """
+        # Lots of ways...
+        # -- xml.etree, for well-formed XML
+        #    http://stackoverflow.com/questions/9662346
+        # return ''.join(xml.etree.ElementTree.fromstring(text).itertext())
+        # -- html.parser
+        #    http://stackoverflow.com/questions/753052
+        # -- lxml (but needs source build on Windows):
+        #    http://www.neuraladvance.com/removing-html-from-python-strings.html
+        #    http://lxml.de/
+        # -- regex/re
+        #    http://stackoverflow.com/questions/3662142
+        return HTML_TAG_RE.sub('', text)
+
+    def _extract_text_func(
+            self, value: Any, row: List[Any],
+            ddrows: List["DataDictionaryRow"]) -> Tuple[Optional[str], bool]:
+=================
+3662142
+count:1
+        # -- xml.etree, for well-formed XML
+        #    http://stackoverflow.com/questions/9662346
+        # return ''.join(xml.etree.ElementTree.fromstring(text).itertext())
+        # -- html.parser
+        #    http://stackoverflow.com/questions/753052
+        # -- lxml (but needs source build on Windows):
+        #    http://www.neuraladvance.com/removing-html-from-python-strings.html
+        #    http://lxml.de/
+        # -- regex/re
+        #    http://stackoverflow.com/questions/3662142
+        return HTML_TAG_RE.sub('', text)
+
+    def _extract_text_func(
+            self, value: Any, row: List[Any],
+            ddrows: List["DataDictionaryRow"]) -> Tuple[Optional[str], bool]:
+        """
+        Take a field's value and return extracted text, for file-related
+        fields, where the DD row indicated that this field contains a filename
+        or a BLOB.
+
+=================
+2831212
+count:1
+        self.max_errors = max_errors
+        self.regex_method = regex_method
+        self._regex = None  # type: Optional[Pattern[str]]
+        self._processor = None  # type: Optional[KeywordProcessorFixed]
+        self._cached_hash = None  # type: Optional[str]
+        self._built = False
+
+        self.words = set()  # type: Set[str]
+        # Sets are faster than lists for "is x in s" operations:
+        # http://stackoverflow.com/questions/2831212/python-sets-vs-lists
+        # noinspection PyTypeChecker
+        for f in filenames:
+            self.add_file(f, clear_cache=False)
+        # noinspection PyTypeChecker
+        for w in words:
+            self.add_word(w, clear_cache=False)
+        # log.debug(f"Created wordlist with {len(self.words)} words")
+
+    def clear_cache(self) -> None:
+        """
+=================
+10017147
+count:1
+                self._alter_methods.append(AlterMethod(
+                    config=self.config,
+                    hash_=True,
+                    hash_config_section=cfg_section
+                ))
+
+        # ---------------------------------------------------------------------
+        # Manipulate the destination table name?
+        # ---------------------------------------------------------------------
+        # http://stackoverflow.com/questions/10017147
+        self.dest_table = table
+        if dbconf.ddgen_force_lower_case:
+            self.dest_table = self.dest_table.lower()
+        if dbconf.ddgen_convert_odd_chars_to_underscore:
+            self.dest_table = str(self.dest_table)
+            # ... if this fails, there's a Unicode problem
+            self.dest_table = self.dest_table.translate(ODD_CHARS_TRANSLATE)
+        for suffix in dbconf.ddgen_rename_tables_remove_suffixes:
+            if self.dest_table.endswith(suffix):
+                self.dest_table = self.dest_table[:-len(suffix)]  # remove it
+=================
+3512471
+count:1
+            ensure that all regexes begin and end with a word boundary
+            requirement
+
+    Returns:
+        the list of regular expression strings, as above
+    """
+    # Reminders: ? zero or one, + one or more, * zero or more
+    # Non-capturing groups: (?:...)
+    # ... https://docs.python.org/2/howto/regex.html
+    # ... http://stackoverflow.com/questions/3512471/non-capturing-group
+    # Day, allowing leading zeroes and e.g. "1st, 2nd"
+    day = "0*" + str(dt.day) + "(?:st|nd|rd|th)?"
+    # Month, allowing leading zeroes for numeric and e.g. Feb/February
+    month_numeric = "0*" + str(dt.month)
+    # month_word = dt.strftime("%B")  # can't cope with years < 1900
+    month_word = calendar.month_name[dt.month]
+    month_word = month_word[0:3] + "(?:" + month_word[3:] + ")?"
+    month = "(?:" + month_numeric + "|" + month_word + ")"
+    # Year
+    year = str(dt.year)
+=================
+15099150
+count:1
+        separators = OPTIONAL_NON_NEWLINE_WHITESPACE
+    else:
+        separators = ""
+    s = separators.join([c for c in chars])  # ... can appear anywhere
+    if at_word_boundaries_only:
+        return [WB + s + WB]
+    else:
+        if at_numeric_boundaries_only:
+            # http://www.regular-expressions.info/lookaround.html
+            # http://stackoverflow.com/questions/15099150/regex-find-one-digit-number  # noqa
+            return [NOT_DIGIT_LOOKBEHIND + s + NOT_DIGIT_LOOKAHEAD]
+        else:
+            return [s]
+
+
+def get_number_of_length_n_regex_elements(
+        n: int,
+        liberal: bool = True,
+        very_liberal: bool = False,
+        at_word_boundaries_only: bool = True) -> List[str]:
+=================
+164979
+count:1
+        at_word_boundaries_only:
+            Boolean. If set, ensure that the regex begins and ends with a word
+            boundary requirement.
+
+    Returns:
+        a list of regular expression strings
+
+    See:
+    
+    - https://stackoverflow.com/questions/164979/regex-for-matching-uk-postcodes
+    """  # noqa
+    # -------------------------------------------------------------------------
+    # Old
+    # -------------------------------------------------------------------------
+
+    # e = [
+    #     "AN NAA",
+    #     "ANN NAA",
+    #     "AAN NAA",
+    #     "AANN NAA",
+=================
+361975
+count:1
+
+    That form of the FileWriter constructor, ``FileWriter(String fileName)``,
+    uses the "default character encoding", as per
+    https://docs.oracle.com/javase/7/docs/api/java/io/FileWriter.html
+
+    That default is given by ``System.getProperty("file.encoding")``. However,
+    we don't have to do something daft like asking the Java to report its file
+    encoding to Python through a pipe; instead, we can set the Java default
+    encoding. It can't be done dynamically, but it can be done at JVM launch:
+    http://stackoverflow.com/questions/361975/setting-the-default-java-character-encoding.
+
+    Therefore, we should have a Java parameter specified in the config file as
+    ``-Dfile.encoding=UTF-8``.
+
+"""  # noqa
+
+import logging
+import os
+import shlex
+import subprocess
+=================
+834788
+count:1
+# $ wc -L filename  # shows length of longest line
+# $ egrep -n "^.{$(wc -L < filename)}$" filename  # shows longest line
+#   ... possibly this gets a bit confused by tabs, can also put a length in:
+# $ egrep -n "^.{302}$" filename  # shows lines of length 302
+# And we find a drug of length 286:
+#   1-oxa-7-azacyclopentadecan-15-one,13-((2,6-dideoy-3-c-methyl-3-o-methyl-alpha-l-ribo-hexopyranosyl)oxy)-2-ethyl-3,4,10-trihydroxy 3,5,8,10,12,14-hexamethyl-7-propyl-11-((3,4,6-trideoxy-3-(dimethylamino)-beta-d-xylo-hexopyranosyl)oxy)-, ((2r*, 3s*,4r*,5s*,8r*,10r*,11r*,12s*,13s*,14r*))-  # noqa
+# Then there are multivitamin things in brand_generic with length >600.
+# So we should use an unlimited field; SQLAlchemy helpfully seems to translate
+# Text to VARCHAR(MAX) under SQL Server, which is the more efficient:
+# http://stackoverflow.com/questions/834788/using-varcharmax-vs-text-on-sql-server  # noqa
+MEDEX_MAX_FORM_LENGTH = 255  # guess; "Powder For Oral Suspension" (26) is one
+MEDEX_MAX_STRENGTH_LENGTH = 50  # guess
+MEDEX_MAX_DOSE_AMOUNT_LENGTH = 50  # guess
+MEDEX_MAX_ROUTE_LENGTH = 50  # guess
+MEDEX_MAX_FREQUENCY_LENGTH = 50  # guess
+MEDEX_MAX_DURATION_LENGTH = 50  # guess
+MEDEX_MAX_NECESSITY_LENGTH = 50  # guess
+
+
+# =============================================================================
+=================
+179085
+count:1
+        """
+        Returns the core indexes to be applied to the destination tables.
+        Primarily, these are for columns that refer to the source.
+
+        Returns:
+            a list of SQLAlchemy :class:`Index` objects
+
+        See
+
+        - http://stackoverflow.com/questions/179085/multiple-indexes-vs-multi-column-indexes
+        """  # noqa
+        return [
+            Index('_idx_srcref',
+                  # Remember, order matters; more to less specific
+                  # See also BaseNlpParser.delete_dest_record
+                  FN_SRCPKVAL,
+                  FN_NLPDEF,
+                  FN_SRCFIELD,
+                  FN_SRCTABLE,
+                  FN_SRCDB,
+=================
+11436469
+count:1
+        query = (
+            session.query(NlpRecord).
+            filter(NlpRecord.srcdb == self._srcdb).
+            filter(NlpRecord.srctable == self._srctable).
+            filter(NlpRecord.srcpkval == srcpkval).
+            filter(NlpRecord.srcfield == self._srcfield).
+            filter(NlpRecord.nlpdef == self._nlpdef.name)
+            # Order not important (though the order of the index certainly
+            # is; see NlpRecord.__table_args__).
+            # http://stackoverflow.com/questions/11436469/does-order-of-where-clauses-matter-in-sql  # noqa
+        )
+        if srcpkstr is not None:
+            query = query.filter(NlpRecord.srcpkstr == srcpkstr)
+        # log.critical(query)
+        with MultiTimerContext(timer, TIMING_PROGRESS_DB_SELECT):
+            # This was surprisingly slow under SQL Server testing.
+            return query.one_or_none()
+
+    def gen_src_pks(self) -> Generator[Tuple[int, Optional[str]], None, None]:
+        """
+=================
+2292662
+count:1
+            #  index fields:
+            'srcpkval',   # integer and most specific
+            'nlpdef',     # usually >1 NLP def to 1 db/table/field combo
+            'srcfield',   # } roughly, more to less specific?
+            'srctable',   # }
+            'srcdb',      # }
+            'srcpkstr',   # last as we may not use it
+            # - performance is critical here
+            # - put them in descending order of specificity
+            #   http://stackoverflow.com/questions/2292662/how-important-is-the-order-of-columns-in-indexes  # noqa
+            # - start with srcpkval, as it's (a) specific and (b) integer
+            # - srcpkfield: don't need to index, because the source table
+            #   can only have one PK
+            # - srcpkstr: must include, since srcpkval can be non-unique,
+            #   due to hash collisions, if we're using a string
+            #   ... but ?should be last because we may not use it in
+            #   queries (for tables with integer PK)
+            unique=True
+            # Despite having a NULL field in a UNIQUE index, this is OK for
+            # SQL Server 2008+ (http://stackoverflow.com/questions/767657) and
+=================
+767657
+count:1
+            # - start with srcpkval, as it's (a) specific and (b) integer
+            # - srcpkfield: don't need to index, because the source table
+            #   can only have one PK
+            # - srcpkstr: must include, since srcpkval can be non-unique,
+            #   due to hash collisions, if we're using a string
+            #   ... but ?should be last because we may not use it in
+            #   queries (for tables with integer PK)
+            unique=True
+            # Despite having a NULL field in a UNIQUE index, this is OK for
+            # SQL Server 2008+ (http://stackoverflow.com/questions/767657) and
+            # MySQL also seems happy.
+        ),
+        TABLE_KWARGS
+    )
+    # http://stackoverflow.com/questions/6626810/multiple-columns-index-when-using-the-declarative-orm-extension-of-sqlalchemy  # noqa
+    # http://docs.sqlalchemy.org/en/latest/orm/extensions/declarative/table_config.html  # noqa
+
+    pk = Column(
+        'pk', BigInteger, primary_key=True, autoincrement=True,
+        comment="PK of NLP record (no specific use)")
+=================
+6626810
+count:1
+            #   ... but ?should be last because we may not use it in
+            #   queries (for tables with integer PK)
+            unique=True
+            # Despite having a NULL field in a UNIQUE index, this is OK for
+            # SQL Server 2008+ (http://stackoverflow.com/questions/767657) and
+            # MySQL also seems happy.
+        ),
+        TABLE_KWARGS
+    )
+    # http://stackoverflow.com/questions/6626810/multiple-columns-index-when-using-the-declarative-orm-extension-of-sqlalchemy  # noqa
+    # http://docs.sqlalchemy.org/en/latest/orm/extensions/declarative/table_config.html  # noqa
+
+    pk = Column(
+        'pk', BigInteger, primary_key=True, autoincrement=True,
+        comment="PK of NLP record (no specific use)")
+    srcdb = Column(
+        'srcdb', SqlTypeDbIdentifier, comment="Source database"
+        # primary_key=True
+    )
+    srctable = Column(
+=================
+7356108
+count:1
+      SQL parameter slots. -- This is now happening; error looks like:
+      pyodbc.ProgrammingError: ('The SQL contains 30807 parameter parkers, but
+      2717783 parameters were supplied', 'HY000')
+
+    A better way might be:
+
+    - for each table, make a temporary table in the same database
+    - populate that table with (source PK integer/hash, source PK string) pairs
+    - delete where pairs don't match -- is that portable SQL?
+      http://stackoverflow.com/questions/7356108/sql-query-for-deleting-rows-with-not-in-using-2-columns  # noqa
+
+    More efficient would be to make one table per destination database.
+
+    On the "delete where multiple fields don't match":
+
+    - Single field syntax is
+
+      .. code-block:: sql
+
+        DELETE FROM a WHERE a1 NOT IN (SELECT b1 FROM b)
+=================
+14600619
+count:1
+
+        DELETE FROM a WHERE NOT EXISTS (
+            SELECT 1 FROM b
+            WHERE a.a1 = b.b1
+            AND a.a2 = b.b2
+        )
+
+    - In SQLAlchemy, :func:`exists`:
+
+      - http://stackoverflow.com/questions/14600619
+      - http://docs.sqlalchemy.org/en/latest/core/selectable.html
+
+    - Furthermore, in SQL ``NULL = NULL`` is false (it's null), and ``NULL <>
+      NULL`` is also false (it's null), so we have to do an explicit null
+      check. You do that with ``field == None``. See
+      http://stackoverflow.com/questions/21668606. We're aiming, therefore,
+      for:
+
+      .. code-block:: sql
+
+=================
+21668606
+count:1
+
+    - In SQLAlchemy, :func:`exists`:
+
+      - http://stackoverflow.com/questions/14600619
+      - http://docs.sqlalchemy.org/en/latest/core/selectable.html
+
+    - Furthermore, in SQL ``NULL = NULL`` is false (it's null), and ``NULL <>
+      NULL`` is also false (it's null), so we have to do an explicit null
+      check. You do that with ``field == None``. See
+      http://stackoverflow.com/questions/21668606. We're aiming, therefore,
+      for:
+
+      .. code-block:: sql
+
+        DELETE FROM a WHERE NOT EXISTS (
+            SELECT 1 FROM b
+            WHERE a.a1 = b.b1
+            AND (
+                a.a2 = b.b2
+                OR (a.a2 IS NULL AND b.b2 IS NULL)
+=================
+35655257
+count:1
+    Returns all non-abstract subclasses of ``cls``.
+
+    Args:
+        cls: class into which to recurse
+
+    Returns:
+        list of classes
+    """
+    # Type hinting, but not quite:
+    #   http://stackoverflow.com/questions/35655257
+    # Getting derived subclasses: http://stackoverflow.com/questions/3862310
+    all_subclasses = []  # List[ClassType]
+    # noinspection PyArgumentList
+    for subclass in cls.__subclasses__():
+        if not isabstract(subclass):
+            all_subclasses.append(subclass)
+        # else:
+        #     log.critical(f"Skipping abstract class: {subclass.__name__}")
+        all_subclasses.extend(get_all_subclasses(subclass))  # recursive
+    all_subclasses.sort(key=lambda c: c.__name__.lower())
+=================
+3862310
+count:1
+
+    Args:
+        cls: class into which to recurse
+
+    Returns:
+        list of classes
+    """
+    # Type hinting, but not quite:
+    #   http://stackoverflow.com/questions/35655257
+    # Getting derived subclasses: http://stackoverflow.com/questions/3862310
+    all_subclasses = []  # List[ClassType]
+    # noinspection PyArgumentList
+    for subclass in cls.__subclasses__():
+        if not isabstract(subclass):
+            all_subclasses.append(subclass)
+        # else:
+        #     log.critical(f"Skipping abstract class: {subclass.__name__}")
+        all_subclasses.extend(get_all_subclasses(subclass))  # recursive
+    all_subclasses.sort(key=lambda c: c.__name__.lower())
+    return all_subclasses
+=================
+2020014
+count:1
+        """
+        return cls.__name__
+
+    @classmethod
+    def fully_qualified_classname(cls) -> str:
+        """
+        Returns the class's fully qualified name.
+        """
+        # This may be imperfect; see
+        # https://stackoverflow.com/questions/2020014/get-fully-qualified-class-name-of-an-object-in-python  # noqa
+        # https://www.python.org/dev/peps/pep-3155/
+        return ".".join([cls.__module__,
+                         cls.__qualname__])
+
+    @classmethod
+    def print_info(cls, file: TextIO = sys.stdout) -> None:
+        """
+        Print general information about this NLP processor.
+
+        Args:
+=================
+27387415
+count:1
+        assert sql_dialect in ALL_SQL_DIALECTS, (
+            f"Unknown SQL dialect {sql_dialect!r}; must be one of "
+            f"{ALL_SQL_DIALECTS}"
+        )
+        dialect = registry.load(sql_dialect)()  # type: Dialect
+        # log.critical(f"dialect: {dialect}")
+        # dialect = MSDialect()
+        column_type = column.type.compile(dialect)
+        data_type = column_type.partition("(")[0]
+        # ... https://stackoverflow.com/questions/27387415/how-would-i-get-everything-before-a-in-a-string-python  # noqa
+        return {
+            NlprpKeys.COLUMN_NAME: column.name,
+            NlprpKeys.COLUMN_TYPE: column_type,
+            NlprpKeys.DATA_TYPE: data_type,
+            NlprpKeys.IS_NULLABLE: column.nullable,
+            NlprpKeys.COLUMN_COMMENT: column.comment,
+        }
+
+    def nlprp_schema_info(self, sql_dialect: str = None) -> Dict[str, Any]:
+        """
+=================
+2077897
+count:1
+        """
+        Returns the processor's description for use in response to the NLPRP
+        :ref:`list_processors <nlprp_list_processors>` command.
+
+        Uses each processor's docstring, and reformats it slightly.
+        """
+        # PyCharm thinks that __doc__ is bytes, but it's str!
+        docstring = str(cls.__doc__)
+        docstring = docstring.replace("\n", " ")
+        # https://stackoverflow.com/questions/2077897/substitute-multiple-whitespace-with-single-whitespace-in-python
+        return " ".join(docstring.split())
+
+    def nlprp_server_processor(self, sql_dialect: str = None) \
+            -> NlprpServerProcessor:
+        schema_info = self.nlprp_schema_info(sql_dialect)
+        return NlprpServerProcessor(
+            name=self.nlprp_name(),
+            title=self.nlprp_title(),
+            version=self.nlprp_version(),
+            is_default_version=self.nlprp_is_default_version(),
+=================
+5917082
+count:1
+PLUS_SIGN = r"\+"  # don't forget to escape it
+MINUS_SIGN = r"[-−–]"  # any of: ASCII hyphen-minus, Unicode minus, en dash
+SIGN = fr"(?: {PLUS_SIGN} | {MINUS_SIGN} )"
+
+NO_MINUS_SIGN_LOOKAHEAD = fr"(?!{MINUS_SIGN})"
+# ... (?! something ) is a negative lookahead assertion
+# ... (?<! something ) is a negative lookbehind assertion
+
+PLAIN_INTEGER = r"(?:\d+)"
+# Numbers with commas: http://stackoverflow.com/questions/5917082
+# ... then modified a little, because that fails with Python's regex module;
+# (a) the "\d+" grabs things like "12,000" and thinks "aha, 12", so we have to
+#     fix that by putting the "thousands" bit first; then
+# (b) that has to be modified to contain at least one comma/thousands grouping
+#     (or it will treat "9800" as "980").
+
+PLAIN_INTEGER_W_THOUSAND_COMMAS = r"(?: (?: \d{1,3} (?:,\d{3})+ ) | \d+ )"
+# ... plain integer allowing commas as a thousands separator
+#       (1) a number with thousands separators, or
+#       (2) a plain number
+=================
+1056323
+count:1
+    "Unit of Time"      unit_of_time
+{NlpOutputConfigKeys.NULL_LITERALS} =
+    null
+    ""
+{NlpOutputConfigKeys.DESTFIELDS} =
+    # Found by (a) manual inspection of BRC GATE pharmacotherapy output from
+    # the GATE console; (b) inspection of
+    # application-resources/schemas/Prescription.xml
+    # Note preference for DECIMAL over FLOAT/REAL; see
+    # https://stackoverflow.com/questions/1056323
+    # Note that not all annotations appear for all texts. Try e.g.:
+    #   Please start haloperidol 5mg tds.
+    #   I suggest you start haloperidol 5mg tds for one week.
+    rule            VARCHAR(100)  Rule yielding this drug. Not in XML but is present in a subset: e.g. "weanOff"; max length unclear
+    drug            VARCHAR(200)  Drug name. Required string; e.g. "haloperidol"; max length 47 from "wc -L BNF_generic.lst", 134 from BNF_trade.lst
+    drug_type       VARCHAR(100)  Type of drug name. Required string; from "drug-type"; e.g. "BNF_generic"; ?length of longest drug ".lst" filename
+    dose            VARCHAR(100)  Dose text. Required string; e.g. "5mg"; max length unclear
+    dose_value      DECIMAL       Numerical dose value. Required numeric; from "dose-value"; "double" in the XML but DECIMAL probably better; e.g. 5.0
+    dose_unit       VARCHAR(100)  Text of dose units. Required string; from "dose-unit"; e.g. "mg"; max length unclear
+    dose_multiple   INT           Dose count (multiple). Required integer; from "dose-multiple"; e.g. 1
+=================
+356100
+count:1
+
+===============================================================================
+
+**Launch the NLP processor in multiprocess mode.**
+
+"""
+
+# Previous bash version:
+#
+# http://stackoverflow.com/questions/356100
+# http://stackoverflow.com/questions/1644856
+# http://stackoverflow.com/questions/8903239
+# http://stackoverflow.com/questions/1951506
+# Note: $! is the process ID of last process launched in background
+# http://stackoverflow.com/questions/59895
+#
+# Python version:
+#
+# http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel  # noqa
+# http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program  # noqa
+=================
+1644856
+count:1
+===============================================================================
+
+**Launch the NLP processor in multiprocess mode.**
+
+"""
+
+# Previous bash version:
+#
+# http://stackoverflow.com/questions/356100
+# http://stackoverflow.com/questions/1644856
+# http://stackoverflow.com/questions/8903239
+# http://stackoverflow.com/questions/1951506
+# Note: $! is the process ID of last process launched in background
+# http://stackoverflow.com/questions/59895
+#
+# Python version:
+#
+# http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel  # noqa
+# http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program  # noqa
+# http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python  # noqa
+=================
+8903239
+count:1
+
+**Launch the NLP processor in multiprocess mode.**
+
+"""
+
+# Previous bash version:
+#
+# http://stackoverflow.com/questions/356100
+# http://stackoverflow.com/questions/1644856
+# http://stackoverflow.com/questions/8903239
+# http://stackoverflow.com/questions/1951506
+# Note: $! is the process ID of last process launched in background
+# http://stackoverflow.com/questions/59895
+#
+# Python version:
+#
+# http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel  # noqa
+# http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program  # noqa
+# http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python  # noqa
+
+=================
+1951506
+count:1
+**Launch the NLP processor in multiprocess mode.**
+
+"""
+
+# Previous bash version:
+#
+# http://stackoverflow.com/questions/356100
+# http://stackoverflow.com/questions/1644856
+# http://stackoverflow.com/questions/8903239
+# http://stackoverflow.com/questions/1951506
+# Note: $! is the process ID of last process launched in background
+# http://stackoverflow.com/questions/59895
+#
+# Python version:
+#
+# http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel  # noqa
+# http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program  # noqa
+# http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python  # noqa
+
+import argparse
+=================
+59895
+count:1
+"""
+
+# Previous bash version:
+#
+# http://stackoverflow.com/questions/356100
+# http://stackoverflow.com/questions/1644856
+# http://stackoverflow.com/questions/8903239
+# http://stackoverflow.com/questions/1951506
+# Note: $! is the process ID of last process launched in background
+# http://stackoverflow.com/questions/59895
+#
+# Python version:
+#
+# http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel  # noqa
+# http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program  # noqa
+# http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python  # noqa
+
+import argparse
+import logging
+import multiprocessing
+=================
+23611396
+count:1
+# http://stackoverflow.com/questions/356100
+# http://stackoverflow.com/questions/1644856
+# http://stackoverflow.com/questions/8903239
+# http://stackoverflow.com/questions/1951506
+# Note: $! is the process ID of last process launched in background
+# http://stackoverflow.com/questions/59895
+#
+# Python version:
+#
+# http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel  # noqa
+# http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program  # noqa
+# http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python  # noqa
+
+import argparse
+import logging
+import multiprocessing
+import sys
+import time
+from typing import List
+
+=================
+320232
+count:1
+# http://stackoverflow.com/questions/1644856
+# http://stackoverflow.com/questions/8903239
+# http://stackoverflow.com/questions/1951506
+# Note: $! is the process ID of last process launched in background
+# http://stackoverflow.com/questions/59895
+#
+# Python version:
+#
+# http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel  # noqa
+# http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program  # noqa
+# http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python  # noqa
+
+import argparse
+import logging
+import multiprocessing
+import sys
+import time
+from typing import List
+
+from cardinal_pythonlib.logs import configure_logger_for_colour
+=================
+641420
+count:1
+# http://stackoverflow.com/questions/8903239
+# http://stackoverflow.com/questions/1951506
+# Note: $! is the process ID of last process launched in background
+# http://stackoverflow.com/questions/59895
+#
+# Python version:
+#
+# http://stackoverflow.com/questions/23611396/python-execute-cat-subprocess-in-parallel  # noqa
+# http://stackoverflow.com/questions/320232/ensuring-subprocesses-are-dead-on-exiting-python-program  # noqa
+# http://stackoverflow.com/questions/641420/how-should-i-log-while-using-multiprocessing-in-python  # noqa
+
+import argparse
+import logging
+import multiprocessing
+import sys
+import time
+from typing import List
+
+from cardinal_pythonlib.logs import configure_logger_for_colour
+from cardinal_pythonlib.subproc import (
+=================
+546433
+count:1
+"""
+# - you often get | characters when people copy/paste tables
+# - blood test abnormality markers can look like e.g.
+#       17 (H), 17 (*), 17 HH
+# - you can also see things like "CRP (5)"
+# - However, if there's a right parenthesis only, that's less good, e.g.
+#   "Present: Nicola Adams (NA). 1.0. Minutes of the last meeting."
+#   ... which we don't want to be interpreted as "sodium 1.0".
+#   HOW BEST TO DO THIS?
+# - http://stackoverflow.com/questions/546433/regular-expression-to-match-outer-brackets  # noqa
+#   http://stackoverflow.com/questions/7898310/using-regex-to-balance-match-parenthesis  # noqa
+# - ... simplest is perhaps: base ignorables, or those with brackets, as above
+# - ... even better than a nested thing is just a list of alternatives
+"""
+
+OPTIONAL_POC = r"""
+    (?: ,? \s* POC )?           # OPTIONAL_POC: "point-of-care testing"
+"""
+"""
+... e.g. "Glucose, POC"; "Potassium, POC".
+=================
+7898310
+count:1
+# - you often get | characters when people copy/paste tables
+# - blood test abnormality markers can look like e.g.
+#       17 (H), 17 (*), 17 HH
+# - you can also see things like "CRP (5)"
+# - However, if there's a right parenthesis only, that's less good, e.g.
+#   "Present: Nicola Adams (NA). 1.0. Minutes of the last meeting."
+#   ... which we don't want to be interpreted as "sodium 1.0".
+#   HOW BEST TO DO THIS?
+# - http://stackoverflow.com/questions/546433/regular-expression-to-match-outer-brackets  # noqa
+#   http://stackoverflow.com/questions/7898310/using-regex-to-balance-match-parenthesis  # noqa
+# - ... simplest is perhaps: base ignorables, or those with brackets, as above
+# - ... even better than a nested thing is just a list of alternatives
+"""
+
+OPTIONAL_POC = r"""
+    (?: ,? \s* POC )?           # OPTIONAL_POC: "point-of-care testing"
+"""
+"""
+... e.g. "Glucose, POC"; "Potassium, POC".
+Seen in CUH for
+=================
+2715847
+count:1
+
+log = logging.getLogger(__name__)
+
+
+# =============================================================================
+# Process handling
+# =============================================================================
+# Have Python host the client process, communicating with stdin/stdout?
+#   http://eyalarubas.com/python-subproc-nonblock.html
+#   http://stackoverflow.com/questions/2715847/python-read-streaming-input-from-subprocess-communicate  # noqa
+# Java process could be a network server.
+#   http://docs.oracle.com/javase/tutorial/networking/sockets/clientServer.html
+#   http://www.tutorialspoint.com/java/java_networking.htm
+# OK, first one works; that's easier.
+
+class Gate(BaseNlpParser):
+    """
+    Class controlling an external process, typically our Java interface to
+    GATE programs, ``CrateGatePipeline.java`` (but it could be any external
+    program).
+=================
+286614
+count:1
+
+    - PROBLEM when attempting to use KConnect (Bio-YODIE): its source code is
+      full of direct calls to ``System.out.println()``.
+
+      POTENTIAL SOLUTIONS:
+
+      - named pipes:
+
+        - ``os.mkfifo()`` - Unix only.
+        - ``win32pipe`` - http://stackoverflow.com/questions/286614
+
+      - ZeroMQ with some sort of security
+
+        - ``pip install zmq``
+        - some sort of Java binding (``jzmq``, ``jeromq``...)
+
+      - redirect ``stdout`` in our Java handler
+
+        - ``System.setOut()``... yes, that works.
+        - Implemented and exposed as ``--suppress_gate_stdout``.
+=================
+82831
+count:1
+        filename: cache filename (pickle format)
+
+    Returns:
+        the result
+
+    Raises:
+        :exc:`FileNotFoundError` if it doesn't exist.
+
+    See
+    https://stackoverflow.com/questions/82831/how-do-i-check-whether-a-file-exists-without-exceptions
+
+    """  # noqa
+    assert filename
+    try:
+        log.info(f"Reading from cache: {filename}")
+        result = pickle.load(open(filename, "rb"))
+        log.info("... done")
+        return result
+    except FileNotFoundError:
+        log.info("... cache not found")
+=================
+12992165
+count:1
+                    freq = max(float(freq_str), min_frequency)
+                    metaphone = get_metaphone(name)
+                    if by_gender:
+                        name_key = name, gender
+                        metaphone_key = metaphone, gender
+                    else:
+                        name_key = name
+                        metaphone_key = metaphone
+                    name_freq[name_key] = freq
+                    # https://stackoverflow.com/questions/12992165/python-dictionary-increment  # noqa
+                    metaphone_freq[metaphone_key] = (
+                        metaphone_freq.get(metaphone_key, 0) + freq
+                    )
+            log.info("... done")
+            # Save to cache
+            cache_save(cache_filename, [name_freq, metaphone_freq])
+
+    def name_frequency(self, name: str, gender: str = "",
+                       prestandardized: bool = True) -> float:
+        """
+=================
+18671528
+count:1
+      10k * 10k set (= 15 probands/sec).
+    - down to 22.5 seconds with DOB shortlisting, and that is with a highly
+      self-similar sample, so that may improve dramatically.
+    - retried multithreading with ThreadPoolExecutor: 20.9 seconds for 400,
+      compared to 23.58 with single-threading; pretty minimal difference.
+    - retried multiprocessing with ProcessPoolExecutor: maybe 2/8 cores at high
+      usage at any given time? Not properly profiled.
+    - then with multiprocessing.Pool...
+
+      - https://stackoverflow.com/questions/18671528/processpoolexecutor-from-concurrent-futures-way-slower-than-multiprocessing-pool
+      - https://helpful.knobs-dials.com/index.php/Python_usage_notes/Multiprocessing_notes
+      - slow, but then added ``chunksize = n_probands // n_workers`` (I think
+        it's the interprocess communication/setup that is slow)...
+
+      - 147.168 seconds -- but for all 10k rows, so that is equivalent to
+        5.88 seconds for 400, and much better.
+      - Subsequently reached 111.8 s for 10k probands (and 10k sample),
+        for 89 probands/sec.
+
+    - This is an O(n^2) algorithm, in that its time grows linearly with the
+=================
+19087189
+count:1
+    Args:
+        cfg:
+            the master :class:`MatchConfig` object
+        set_breakpoint:
+            set a pdb breakpoint to explore objects from the Python console?
+        speedtest:
+            run speed tests only?
+    """
+    log.warning("Running basic unit tests...")
+    # https://stackoverflow.com/questions/19087189/python-unittest-testcase-object-has-no-attribute-runtest  # noqa
+    suite = unittest.defaultTestLoader.loadTestsFromTestCase(TestTemporalIdentifier)  # noqa
+    result = unittest.TextTestRunner().run(suite)
+    assert not result.failures
+
+    log.warning("Building test conditions...")
+    p1 = TemporalIdentifier(
+        "CB2 0QQ",  # Addenbrooke's Hospital
+        Date(2000, 1, 1), Date(2010, 1, 1)
+    )
+    p2 = TemporalIdentifier(
+=================
+1958219
+count:1
+        Still tricky, though.
+
+    - We need to return people with no postcodes.
+
+    - We must deal with a profusion of invalid postcodes -- and SQL Server
+      doesn't support proper regular expressions.
+
+    SQLAlchemy Core query to Python dict:
+
+    - https://stackoverflow.com/questions/1958219/convert-sqlalchemy-row-object-to-python-dict
+    
+    SQL Server doesn't permit "SELECT EXISTS":
+    
+    - https://stackoverflow.com/questions/2759756/is-it-possible-to-select-exists-directly-as-a-bit
+
+    """  # noqa
+    log.critical("validate_2_fetch_rio: needs to be checked")
+    sql = text("""
+
+        -- We use the original raw RiO database, not the CRATE-processed one.
+=================
+2759756
+count:1
+    - We must deal with a profusion of invalid postcodes -- and SQL Server
+      doesn't support proper regular expressions.
+
+    SQLAlchemy Core query to Python dict:
+
+    - https://stackoverflow.com/questions/1958219/convert-sqlalchemy-row-object-to-python-dict
+    
+    SQL Server doesn't permit "SELECT EXISTS":
+    
+    - https://stackoverflow.com/questions/2759756/is-it-possible-to-select-exists-directly-as-a-bit
+
+    """  # noqa
+    log.critical("validate_2_fetch_rio: needs to be checked")
+    sql = text("""
+
+        -- We use the original raw RiO database, not the CRATE-processed one.
+
+        SELECT
+            ci.ClientID AS rio_client_id,
+            CAST(ci.NNN AS BIGINT) AS nhs_number,
+=================
+7522250
+count:1
+    packages=find_packages(),
+    # finds all the .py files in subdirectories, as long as there are
+    # __init__.py files
+
+    package_data={
+        "crate_anon": extra_files,
+    },
+
+    include_package_data=True,  # use MANIFEST.in during install?
+    # https://stackoverflow.com/questions/7522250/how-to-include-package-data-with-setuptools-distribute  # noqa
+
+    install_requires=INSTALL_REQUIRES,
+
+    entry_points={
+        "console_scripts": [
+            # Format is "script=module:function".
+
+            # Documentation
+
+            "crate_help=crate_anon.tools.launch_docs:main",

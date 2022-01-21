@@ -1,0 +1,65 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/Notepad++_extensions/Plugin_Python_Script/mini-helpers/generate_Truthtable_Inputs.py
+6336424, 5
+------------------
+from Tkinter import *
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/Notepad++_extensions/Plugin_Python_Script/Truthtable_generator_and_checker.py
+6336424, 21
+------------------
+import itertools
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/py2exe_scripts/setup_py2exe_DMS_tracer.py
+5811960, 23
+------------------
+options = {'py2exe': {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/py2exe_scripts/setup_py2exe_DMS_Controlfunction.py
+5811960, 22
+------------------
+Mydata_files = [('configfile', ['tools\DMS_Controlfunction.yml'])]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/py2exe_scripts/setup_py2exe_DMS_Value_Changer.py
+5811960, 25
+------------------
+options = {'py2exe': {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/py2exe_scripts/setup_py2exe_Renumber_tool.py
+5811960, 24
+------------------
+options = {'py2exe': {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/py2exe_scripts/setup_py2exe_TCP_Relay.py
+5811960, 22
+------------------
+options = {'py2exe': {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/Curses_emulator.py
+14973963, 29
+------------------
+import dms.dmspipe
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/misc/clipboard.py
+579687, 119
+------------------
+class Clipboard(object):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_Controlfunction.py
+1641280, 37
+------------------
+logger = logging.getLogger('tools.DMS_Controlfunction')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/tools/DMS_Controlfunction.py
+1396668, 38
+------------------
+logger = logging.getLogger('tools.DMS_Controlfunction')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket_test2.py
+31078728, 30
+------------------
+from autobahn.twisted.websocket import WebSocketClientProtocol
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pyVisiToolkit/src/dms/dmswebsocket_test1.py
+31078728, 26
+------------------
+from autobahn.twisted.websocket import WebSocketClientProtocol

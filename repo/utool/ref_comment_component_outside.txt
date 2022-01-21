@@ -1,0 +1,35 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_const.py
+6760685, 93
+------------------
+if __name__ == '__main__':
+==================
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_decor.py
+18625510, 711
+------------------
+def lazyfunc(func):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_str.py
+28455982, 871
+------------------
+def numpy_str(arr, strvals=False, precision=None, pr=None,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dev.py
+15605925, 3022
+------------------
+class NamedPartial(functools.partial, NiceRepr):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dev.py
+31363311, 3023
+------------------
+class NamedPartial(functools.partial, NiceRepr):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cplat.py
+8015163, 1497
+------------------
+def pip_install(package):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/utool/_broken/util_distances.py
+15706339, 118
+------------------
+if __name__ == '__main__':

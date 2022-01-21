@@ -1,0 +1,126 @@
+file_path,post_id,line_count,comment
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_class.py,1015307,471,        http://stackoverflow.com/questions/1015307/python-bind-an-unbound-method
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_class.py,13850114,530,        http://stackoverflow.com/questions/13850114/dynamically-adding-methods-with-or-without-metaclass-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_class.py,8122734,587,        http://stackoverflow.com/questions/8122734/pythons-imp-reload-function-is-not-working
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dbg.py,27914204,348,       http://stackoverflow.com/questions/27911570/can-you-specify-a-command-to-run-after-you-embed-into-ipython/27914204#27914204
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dbg.py,15167200,349,       http://stackoverflow.com/questions/15167200/how-do-i-embed-an-ipython-interpreter-into-an-application-running-in-an-ipython
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dbg.py,15411967,635,    http://stackoverflow.com/questions/15411967/how-can-i-check-if-code-is-executed-in-the-ipython-notebook
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_num.py,2663612,40,        http://stackoverflow.com/questions/2663612/nicely-repr-float-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_time.py,8906926,847,        http://stackoverflow.com/questions/8906926/formatting-python-timedelta-objects
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_iter.py,434287,366,        http://stackoverflow.com/questions/434287/iterate-over-a-list-in-chunks
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_iter.py,434287,482,        http://stackoverflow.com/questions/434287/iterate-over-a-list-in-chunks
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/_internal/meta_util_six.py,12561063,135,                # http://stackoverflow.com/questions/12561063/python-extract-data-from-file
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_grabdata.py,24873302,257,        # http://stackoverflow.com/questions/24873302/webbrowser-chrome-exe-does-not-work
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_grabdata.py,15644964,297,        http://stackoverflow.com/questions/15644964/python-progress-bar-and-downloads
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_grabdata.py,16694907,298,        http://stackoverflow.com/questions/16694907/how-to-download-large-file-in-python-with-requests-py
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_grabdata.py,1112343,432,        http://stackoverflow.com/questions/1112343/capture-sigint-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_grabdata.py,16694907,433,        http://stackoverflow.com/questions/16694907/download-large-file-requests
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_inspect.py,23149218,1125,        http://stackoverflow.com/questions/23149218/check-if-a-python-function-is-builtin
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_inspect.py,7456933,1387,    http://stackoverflow.com/questions/7456933/python-ast-with-preserved-comments
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_inspect.py,20445733,1593,        https://stackoverflow.com/questions/20445733/how-to-tell-which-modules-have-been-imported-in-some-source-code
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_inspect.py,23576681,1795,        http://stackoverflow.com/questions/23576681/python-check-syntax
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_gridsearch.py,4801403,428,        http://stackoverflow.com/questions/4801403/pyparsing-nested-mutiple-opener-clo
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_gridsearch.py,4801403,557,        http://stackoverflow.com/questions/4801403/pyparsing-nested-mutiple-opener-clo
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_gridsearch.py,4801403,692,    http://stackoverflow.com/questions/4801403/how-can-i-use-pyparsing-to-parse-nested-expressions-that-have-mutiple-opener-clo
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_list.py,16945518,1674,        http://stackoverflow.com/questions/16945518/python-argmin-argmax
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_list.py,7352684,2269,        http://stackoverflow.com/questions/7352684/how-to-find-the-groups-of-consecutive-elements-from-an-array-in-numpy
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_list.py,7352684,2295,        http://stackoverflow.com/questions/7352684/how-to-find-the-groups-of-consecutive-elements-from-an-array-in-numpy
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_list.py,9457832,2934,        http://stackoverflow.com/questions/9457832/python-list-rotation
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_alg.py,15047116,993,        http://stackoverflow.com/questions/15047116/iterative-alg-fib
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_alg.py,141779,1153,        http://stackoverflow.com/questions/141779/solving-the-np-complete-problem-in-xkcd
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_alg.py,3433486,2789,        >>> # http://stackoverflow.com/questions/3433486/-curve-fitting-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_alg.py,6800193,2820,        http://stackoverflow.com/questions/6800193/finding-all-the-factors
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_web.py,7436801,15,        http://stackoverflow.com/questions/7436801/identifying-listening-ports-using-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_inject.py,14775916,107,        https://stackoverflow.com/questions/14775916/color-exceptions-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_inject.py,18007995,535,            http://stackoverflow.com/questions/18007995/recursive-paren-balance
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_git.py,1526794,809,            http://stackoverflow.com/questions/1526794/rename?answertab=votes#tab-top
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_git.py,9524933,810,            http://stackoverflow.com/questions/9524933/renaming-a-branch-in-github
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_git.py,8226278,908,            # http://stackoverflow.com/questions/8226278/git-alias-to-squash-all-commits-with-a-particular-commit-message
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_const.py,41048643,18,        http://stackoverflow.com/questions/41048643/a-second-none
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_const.py,6760685,93,#     http://stackoverflow.com/questions/6760685/creating-a-singleton-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_resources.py,938733,25,        # References: http://stackoverflow.com/questions/938733/total-memory-used-by-python-process
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_resources.py,1331471,232,        http://stackoverflow.com/questions/1331471/in-memory-size-of-python-stucture
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_decor.py,18625510,711,#    http://stackoverflow.com/questions/18625510/how-can-i-programmatically-change-the-argspec-of-a-function-not-in-a-python-de
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_decor.py,1697501,948,        https://stackoverflow.com/questions/1697501/python-staticmethod-with-property
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_ipynb.py,24207353,281,        http://stackoverflow.com/questions/21971449/how-do-i-increase-the-cell-width-of-the-ipython-notebook-in-my-browser/24207353#24207353
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_latex.py,16259923,375,        http://stackoverflow.com/questions/16259923/how-can-i-escape-characters
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_latex.py,2892931,882,    # http://stackoverflow.com/questions/2892931/longest-common-substring-from-more-than-two-strings-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_str.py,28455982,871,#         http://stackoverflow.com/questions/28455982/why-are-there-two-np-int64s
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_str.py,2247205,1788,        http://stackoverflow.com/questions/2247205/python-returning-the-wrong-length-of-string-when-using-special-characters
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_str.py,14693701,2107,        # References: http://stackoverflow.com/questions/14693701remove-ansi
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_str.py,14693701,2138,    References: http://stackoverflow.com/questions/14693701remove-ansi
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_str.py,1175208,2634,        http://stackoverflow.com/questions/1175208/convert-camelcase
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_tests.py,427472,1940,        # http://stackoverflow.com/questions/427472/line-completion-with-custom-commands
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_tests.py,427472,1952,        # http://stackoverflow.com/questions/427472/line-completion-with-custom-commands
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dev.py,11063458,102,        http://stackoverflow.com/questions/11063458/python-script-to-copy-text-to-clipboard
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dev.py,579687,103,        http://stackoverflow.com/questions/579687/how-do-i-copy-a-string-to-the-clipboard-on-windows-using-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dev.py,11063458,131,        http://stackoverflow.com/questions/11063458/python-script-to-copy-text-to-clipboard
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dev.py,1335507,206,        http://stackoverflow.com/questions/1335507/keyboard-input-with-timeout-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dev.py,3911560,208,        http://stackoverflow.com/questions/3471461/raw-input-and-timeout/3911560#3911560
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dev.py,141351,521,       http://stackoverflow.com/questions/141351/how-do-i-find-what-is-using-memory-in-a-python-process-in-a-production-system
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dev.py,2629680,1574,        http://stackoverflow.com/questions/2629680/deciding-between-subprocess-multiprocessing-and-thread-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dev.py,15605925,3022,#     http://stackoverflow.com/questions/15605925/last-exception-python-prompt
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dev.py,31363311,3023,#     http://stackoverflow.com/questions/31363311/any-way-to-manually-fix-operation-of-super-after-ipython-reload-avoiding-ty
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dev.py,33024215,3247,        https://stackoverflow.com/questions/33024215/built-in-max-heap-api-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_hash.py,5884066,79,        http://stackoverflow.com/questions/5884066/hashing-a-python-dictionary
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_hash.py,3431825,843,        http://stackoverflow.com/questions/3431825/generating-a-md5-checksum-of-a-file
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_hash.py,5001893,844,        http://stackoverflow.com/questions/5001893/when-should-i-use-sha-1-and-when-should-i-use-sha-2
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_hash.py,23565889,989,        http://stackoverflow.com/questions/23565889/jpeg-images-have-different-pixel-values-across-multiple-devices
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_logging.py,21071448,9,    http://stackoverflow.com/questions/21071448/redirecting-stdout-and-stderr-to-a-pyqt4-qtextedit-from-a-secondary-thread
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_logging.py,7168790,444,        # http://stackoverflow.com/questions/7168790/suppress-newline-in-python-logging-module
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_set.py,1653970,26,        http://stackoverflow.com/questions/1653970/does-python-have-an-ordered-set
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_sysreq.py,7335992,20,        http://stackoverflow.com/questions/7335992/ipython-and-virtualenv-ignoring-site-packages
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_sysreq.py,1871549,23,        http://stackoverflow.com/questions/1871549/python-determine-if-running-inside-virtualenv
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_sysreq.py,7335992,54,        http://stackoverflow.com/questions/7335992/ipython-and-virtualenv-ignoring-site-packages
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_sysreq.py,5721529,109,        http://stackoverflow.com/questions/5721529/running-python-script-as-root-with-sudo-what-is-the-username-of-the-effectiv
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_sysreq.py,2806897,110,        http://stackoverflow.com/questions/2806897/what-is-the-best-practices-for-checking-if-the-user-of-a-python-script-has-root
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cplat.py,22472124,81,        http://stackoverflow.com/questions/22472124/what-is-sys-meipass-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cplat.py,7674790,82,        http://stackoverflow.com/questions/7674790/bundling-data-files-with-pyinstaller-onefile
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cplat.py,51658,113,        http://stackoverflow.com/questions/51658/cross-platform-space-remaining-on-volume-using-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cplat.py,15607903,168,        http://stackoverflow.com/questions/15607903/python-module-os-chmodfile-664-does-not-change-the-permission-to-rw-rw-r-bu
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cplat.py,1392413,244,        http://stackoverflow.com/questions/1392413/calculating-a-directory-size-using-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cplat.py,2692873,468,        http://stackoverflow.com/questions/2692873/quote-posix-shell-special-characters-in-python-output
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cplat.py,1405913,1122,    #http://stackoverflow.com/questions/1405913/how-do-i-determine-if-my-python-shell-is-executing-in-32bit-or-64bit-mode-on-os
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cplat.py,8850484,1276,        http://stackoverflow.com/questions/5343265/setting-title-for-tabs-in-terminator-console-application-in-ubuntu/8850484#8850484
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cplat.py,14788036,1311,        http://stackoverflow.com/questions/14788036/python-win32api-sendmesage
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cplat.py,437589,1456,        http://stackoverflow.com/questions/437589/how-do-i-unload-reload-a-python-module
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cplat.py,8015163,1497,#http://stackoverflow.com/questions/8015163/how-to-check-screen-is-running
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cplat.py,15974100,1509,        http://stackoverflow.com/questions/15974100/ipython-install-new-modules
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_scripts/ensure_python3_compatible.py,18737863,132,    # http://stackoverflow.com/questions/18737863/passing-a-function-to-re-sub-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_parallel.py,2046603,808,        http://stackoverflow.com/questions/2046603/is-it-possible-to-run-function-in-a-subprocess-without-threading-or-writing-a-se
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_parallel.py,1196074,809,        http://stackoverflow.com/questions/1196074/starting-a-background-process-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_parallel.py,15063963,810,        http://stackoverflow.com/questions/15063963/python-is-thread-still-running
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_sqlite.py,17717829,93,        http://stackoverflow.com/questions/17717829/how-to-get-column-names-from-a-table-in-sqlite-via-pragma-net-c
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_numpy.py,44313620,33,        https://stackoverflow.com/questions/44313620/converting-randomstate
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_numpy.py,44313620,60,        https://stackoverflow.com/questions/44313620/converting-randomstate
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_import.py,1707709,196,        http://stackoverflow.com/questions/1707709/list-all-the-modules-that-are-part-of-a-python-package
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_import.py,14050281,284,        http://stackoverflow.com/questions/14050281/module-exists-without-importing
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_io.py,41720952,360,        https://stackoverflow.com/questions/41720952/unpickle-sklearn-tree-descisiontreeregressor-in-python-2-from-python3
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_io.py,8843062,656,        http://stackoverflow.com/questions/8843062/python-how-to-store-a-numpy-multidimensional-array-in-pytables
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dict.py,651794,159,        http://stackoverflow.com/questions/651794/best-way-to-init-dict-of-dicts
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dict.py,651794,188,        http://stackoverflow.com/questions/651794/best-way-to-init-dict-of-dicts
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dict.py,5884066,236,        http://stackoverflow.com/questions/5884066/hashing-a-python-dictionary
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dict.py,1151658,288,       http://stackoverflow.com/questions/1151658/python-hashable-dicts
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dict.py,1151658,289,       http://stackoverflow.com/questions/1151658/python-hashable-dicts
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dict.py,38987,1331,        http://stackoverflow.com/questions/38987/how-can-i-merge-two-python-dictionaries-in-a-single-expression
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dict.py,10193235,1644,        http://stackoverflow.com/questions/10193235/python-translate-a-table-to-a-hierarchical-dictionary
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_dict.py,22663966,1826,        http://stackoverflow.com/questions/22663966/changing-order-of-ordered-dictionary-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cache.py,8230315,427,        http://stackoverflow.com/questions/8230315/python-sets-are
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cache.py,11561932,428,        http://stackoverflow.com/questions/11561932/why-does-json
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cache.py,24369666,430,        http://stackoverflow.com/questions/24369666/typeerror-b1
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cache.py,30469575,431,        http://stackoverflow.com/questions/30469575/how-to-pickle
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cache.py,11561932,542,        http://stackoverflow.com/questions/11561932/why-does-json-dumpslistnp
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_cache.py,7489732,924,        http://stackoverflow.com/questions/7489732/easiest-way-to-add-a-function-to-existing-class
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_path.py,1158076,690,        http://stackoverflow.com/questions/1158076/implement-touch-using-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_path.py,19859840,1047,        http://stackoverflow.com/questions/19859840/excluding-dirs-in-os-walk
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_path.py,19859840,1098,        #     http://stackoverflow.com/questions/19859840/excluding-directories-in-os-walk
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_path.py,19859840,1622,        http://stackoverflow.com/questions/19859840/excluding-directories-in-os-walk
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_path.py,23598461,2133,        http://stackoverflow.com/a/23598461/200291
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_path.py,23598289,2134,        http://stackoverflow.com/questions/23598289/get-win-short-fname-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_path.py,1447575,2546,        http://stackoverflow.com/questions/1447575/symlinks-on-windows
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_path.py,20794,2672,        http://stackoverflow.com/questions/20794/find-broken-symlinks-with-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_graph.py,17078696,79,        http://stackoverflow.com/questions/17078696/transitive-reduction-of-directed-graph-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_graph.py,16150557,1589,        http://stackoverflow.com/questions/16150557/nx-subgraph-from-edges
+/Users/jacob.caulfield/Documents/GitHub4/utool/utool/util_graph.py,33332462,2137,    # http://stackoverflow.com/questions/33332462/minimum-s-t-edge-cut-which-takes-edge-weight-into-consideration
+/Users/jacob.caulfield/Documents/GitHub4/utool/_broken/_grave.py,11125212,49,    # http://stackoverflow.com/questions/11125212/interleaving-lists-in-python
+/Users/jacob.caulfield/Documents/GitHub4/utool/_broken/util_distances.py,15706339,118,#        http://stackoverflow.com/questions/15706339/how-to-compute-emd-for-2-numpy-arrays-i-e-histogram-using-opencv

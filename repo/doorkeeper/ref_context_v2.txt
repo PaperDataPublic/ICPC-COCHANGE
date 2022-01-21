@@ -1,0 +1,1149 @@
+[69, 28, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+279237
+434287
+16694907
+4801403
+7352684
+14693701
+427472
+11063458
+7335992
+651794
+5884066
+1151658
+11561932
+19859840
+=================
+279237
+count:69
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+=================
+279237
+count:28
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+=================
+1015307
+count:1
+
+    References:
+        http://stackoverflow.com/questions/1015307/python-bind-an-unbound-method
+    """
+    if override is not None:
+        # TODO depcirate allow_override
+=================
+13850114
+count:1
+
+    References:
+        http://stackoverflow.com/questions/13850114/dynamically-adding-methods-with-or-without-metaclass-in-python
+    """
+    if method_name is None:
+        method_name = get_funcname(func)
+=================
+8122734
+count:1
+
+    References:
+        http://stackoverflow.com/questions/8122734/pythons-imp-reload-function-is-not-working
+
+    Example:
+        >>> # ENABLE_DOCTEST
+=================
+27914204
+count:1
+
+    References:
+       http://stackoverflow.com/questions/27911570/can-you-specify-a-command-to-run-after-you-embed-into-ipython/27914204#27914204
+       http://stackoverflow.com/questions/15167200/how-do-i-embed-an-ipython-interpreter-into-an-application-running-in-an-ipython
+
+    Notes:
+=================
+15167200
+count:1
+    References:
+       http://stackoverflow.com/questions/27911570/can-you-specify-a-command-to-run-after-you-embed-into-ipython/27914204#27914204
+       http://stackoverflow.com/questions/15167200/how-do-i-embed-an-ipython-interpreter-into-an-application-running-in-an-ipython
+
+    Notes:
+        Use cases I want to achieve
+=================
+15411967
+count:1
+def in_jupyter_notebook():
+    """
+    http://stackoverflow.com/questions/15411967/how-can-i-check-if-code-is-executed-in-the-ipython-notebook
+    """
+    try:
+        cfg = get_ipython().config
+=================
+2663612
+count:1
+    """
+    References:
+        http://stackoverflow.com/questions/2663612/nicely-repr-float-in-python
+    """
+    assert(sigfig > 0)
+    try:
+=================
+8906926
+count:1
+
+    References:
+        http://stackoverflow.com/questions/8906926/formatting-python-timedelta-objects
+
+    Example:
+        >>> # ENABLE_DOCTEST
+=================
+434287
+count:1
+
+    References:
+        http://stackoverflow.com/questions/434287/iterate-over-a-list-in-chunks
+
+    SeeAlso:
+        util_progress.get_num_chunks
+=================
+434287
+count:1
+
+    References:
+        http://stackoverflow.com/questions/434287/iterate-over-a-list-in-chunks
+    """
+    return (list_[ix:ix + chunksize] for ix in range(0, len(list_), chunksize))
+    #return (list_[sl] for sl in ichunk_slices(len(list_), chunksize))
+=================
+12561063
+count:1
+            if str_.startswith(codecs.BOM_UTF8):
+                # Can safely remove the utf8 marker
+                # http://stackoverflow.com/questions/12561063/python-extract-data-from-file
+                str_ = str_[len(codecs.BOM_UTF8):]
+            return str_.decode('utf-8')
+    #if not isinstance(str_, __STR__) and is_byte_encoded_unicode(str_):
+=================
+24873302
+count:1
+    # Hack for finding chrome on win32
+    if ut.WIN32:
+        # http://stackoverflow.com/questions/24873302/webbrowser-chrome-exe-does-not-work
+        win32_chrome_fpath = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe'
+        win32_chrome_browsername = win32_chrome_fpath + ' %s'
+        win32_map = {
+=================
+15644964
+count:1
+    References:
+        http://blog.moleculea.com/2012/10/04/urlretrieve-progres-indicator/
+        http://stackoverflow.com/questions/15644964/python-progress-bar-and-downloads
+        http://stackoverflow.com/questions/16694907/how-to-download-large-file-in-python-with-requests-py
+
+    TODO:
+=================
+16694907
+count:1
+        http://blog.moleculea.com/2012/10/04/urlretrieve-progres-indicator/
+        http://stackoverflow.com/questions/15644964/python-progress-bar-and-downloads
+        http://stackoverflow.com/questions/16694907/how-to-download-large-file-in-python-with-requests-py
+
+    TODO:
+        Delete any partially downloaded files
+=================
+1112343
+count:1
+    r"""
+    References:
+        http://stackoverflow.com/questions/1112343/capture-sigint-in-python
+        http://stackoverflow.com/questions/16694907/download-large-file-requests
+        GracefulInterruptHandler
+
+=================
+16694907
+count:1
+    References:
+        http://stackoverflow.com/questions/1112343/capture-sigint-in-python
+        http://stackoverflow.com/questions/16694907/download-large-file-requests
+        GracefulInterruptHandler
+
+    Ignore:
+=================
+23149218
+count:1
+
+    References:
+        http://stackoverflow.com/questions/23149218/check-if-a-python-function-is-builtin
+
+    CommandLine:
+        python -m utool._internal.meta_util_six is_builtin
+=================
+7456933
+count:1
+    r"""
+    pip install redbaron
+    http://stackoverflow.com/questions/7456933/python-ast-with-preserved-comments
+
+    CommandLine:
+        python -m utool.util_inspect special_parse_process_python_code --show
+=================
+20445733
+count:1
+
+    References:
+        https://stackoverflow.com/questions/20445733/how-to-tell-which-modules-have-been-imported-in-some-source-code
+
+    Example:
+        >>> # ENABLE_DOCTEST
+=================
+23576681
+count:1
+    """
+    References:
+        http://stackoverflow.com/questions/23576681/python-check-syntax
+    """
+    import ast
+    try:
+=================
+4801403
+count:1
+    r"""
+    References:
+        http://stackoverflow.com/questions/4801403/pyparsing-nested-mutiple-opener-clo
+
+    Example:
+        >>> # DISABLE_DOCTEST
+=================
+4801403
+count:1
+    r"""
+    References:
+        http://stackoverflow.com/questions/4801403/pyparsing-nested-mutiple-opener-clo
+
+    CommandLine:
+        python -m utool.util_gridsearch parse_nestings:1 --show
+=================
+4801403
+count:1
+def parse_cfgstr3(string, debug=None):
+    r"""
+    http://stackoverflow.com/questions/4801403/how-can-i-use-pyparsing-to-parse-nested-expressions-that-have-mutiple-opener-clo
+
+    Ignore:
+        >>> from utool.util_gridsearch import *  # NOQA
+=================
+16945518
+count:1
+
+    References:
+        http://stackoverflow.com/questions/16945518/python-argmin-argmax
+
+    Ignore:
+        list_ = np.random.rand(10000).tolist()
+=================
+7352684
+count:1
+
+    References:
+        http://stackoverflow.com/questions/7352684/how-to-find-the-groups-of-consecutive-elements-from-an-array-in-numpy
+    """
+    run = []
+    result = [run]
+=================
+7352684
+count:1
+
+    References:
+        http://stackoverflow.com/questions/7352684/how-to-find-the-groups-of-consecutive-elements-from-an-array-in-numpy
+
+    CommandLine:
+        python -m utool.util_list --test-group_consecutives
+=================
+9457832
+count:1
+
+    References:
+        http://stackoverflow.com/questions/9457832/python-list-rotation
+
+    Example:
+        >>> # ENABLE_DOCTEST
+=================
+15047116
+count:1
+
+    References:
+        http://stackoverflow.com/questions/15047116/iterative-alg-fib
+
+    CommandLine:
+        python -m utool.util_alg fibonacci_iterative
+=================
+141779
+count:1
+    References:
+        http://codereview.stackexchange.com/questions/20569/dynamic-programming-solution-to-knapsack-problem
+        http://stackoverflow.com/questions/141779/solving-the-np-complete-problem-in-xkcd
+        http://www.es.ele.tue.nl/education/5MC10/Solutions/knapsack.pdf
+
+    CommandLine:
+=================
+3433486
+count:1
+        >>> #print('pcov = %r' % (pcov,))
+        >>> #print('popt = %r' % (popt,))
+        >>> # http://stackoverflow.com/questions/3433486/-curve-fitting-in-python
+        >>> pt.plt.plot(x[::num//50], y[::num//50], 'rx', label='measured data')
+        >>> #x2 = np.arange(len(y) * 2)
+        >>> #pt.plt.plot(x2, func(x2, *popt), 'b', label="Fitted Curve") #same as line above \/
+=================
+6800193
+count:1
+
+    References:
+        http://stackoverflow.com/questions/6800193/finding-all-the-factors
+    """
+    return set(reduce(list.__add__,
+                      ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0)))
+=================
+7436801
+count:1
+
+    References:
+        http://stackoverflow.com/questions/7436801/identifying-listening-ports-using-python
+
+    CommandLine:
+        python -m utool.util_web is_local_port_open --show
+=================
+14775916
+count:1
+    """
+    References:
+        https://stackoverflow.com/questions/14775916/color-exceptions-python
+
+    CommandLine:
+        python -m utool.util_inject --test-colored_pygments_excepthook
+=================
+18007995
+count:1
+
+        References:
+            http://stackoverflow.com/questions/18007995/recursive-paren-balance
+        """
+        def balanced(str_, i=0, cnt=0, left='(', right=')'):
+            if i == len(str_):
+=================
+1526794
+count:1
+        r"""
+        References:
+            http://stackoverflow.com/questions/1526794/rename?answertab=votes#tab-top
+            http://stackoverflow.com/questions/9524933/renaming-a-branch-in-github
+
+        CommandLine:
+=================
+9524933
+count:1
+        References:
+            http://stackoverflow.com/questions/1526794/rename?answertab=votes#tab-top
+            http://stackoverflow.com/questions/9524933/renaming-a-branch-in-github
+
+        CommandLine:
+            python -m utool.util_git --test-rename_branch --old=mymaster --new=ibeis_master
+=================
+8226278
+count:1
+    Ignore:
+        def squash_consecutive_commits_with_same_message():
+            # http://stackoverflow.com/questions/8226278/git-alias-to-squash-all-commits-with-a-particular-commit-message
+            # Can do interactively with this. Can it be done automatically and pay attention to
+            # Timestamps etc?
+            git rebase --interactive HEAD~40 --autosquash
+=================
+41048643
+count:1
+
+    References:
+        http://stackoverflow.com/questions/41048643/a-second-none
+
+    Example:
+        >>> # DISABLE_DOCTEST
+=================
+6760685
+count:1
+# class _NoParamType2(object):
+#     """
+#     http://stackoverflow.com/questions/6760685/creating-a-singleton-in-python
+
+#     CommandLine:
+#         python -m utool.util_const _NoParamType2
+=================
+938733
+count:1
+        # MAXRSS is expressed in kilobytes. Convert to bytes
+        # FIXME: MAXRSS is NOT expressed in kilobytes. use resource.getpagesize to Convert to bytes
+        # References: http://stackoverflow.com/questions/938733/total-memory-used-by-python-process
+        #resource.getpagesize
+        maxrss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss * 1024
+        return maxrss
+=================
+1331471
+count:1
+    """
+    References:
+        http://stackoverflow.com/questions/1331471/in-memory-size-of-python-stucture
+
+    CommandLine:
+        python -m utool.util_resources --test-get_python_datastructure_sizes
+=================
+18625510
+count:1
+#    src_func, and __module__ and __dict__ from tgt_func.
+#    .. References
+#    http://stackoverflow.com/questions/18625510/how-can-i-programmatically-change-the-argspec-of-a-function-not-in-a-python-de
+#    """
+#    def __init__(self, src_func):
+#        self.argspec = inspect.getargspec(src_func)
+=================
+1697501
+count:1
+
+    References:
+        https://stackoverflow.com/questions/1697501/python-staticmethod-with-property
+    """
+    def __get__(self, cls, owner):
+        return classmethod(self.fget).__get__(None, owner)()
+=================
+24207353
+count:1
+    References:
+        # Change cell width
+        http://stackoverflow.com/questions/21971449/how-do-i-increase-the-cell-width-of-the-ipython-notebook-in-my-browser/24207353#24207353
+    """
+    import utool as ut
+    header = ut.codeblock(
+=================
+16259923
+count:1
+
+    References:
+        http://stackoverflow.com/questions/16259923/how-can-i-escape-characters
+    """
+    conv = {
+        '&': r'\&',
+=================
+2892931
+count:1
+def long_substr(strlist):
+    # Longest common substring
+    # http://stackoverflow.com/questions/2892931/longest-common-substring-from-more-than-two-strings-python
+    substr = ''
+    if len(strlist) > 1 and len(strlist[0]) > 0:
+        for i in range(len(strlist[0])):
+=================
+28455982
+count:1
+
+#     References:
+#         http://stackoverflow.com/questions/28455982/why-are-there-two-np-int64s
+#         -in-numpy-core-numeric-typelessdata-why-is-numpy-in/28461928#28461928
+#     """
+#     data = arr
+=================
+2247205
+count:1
+
+    Returns:
+        http://stackoverflow.com/questions/2247205/python-returning-the-wrong-length-of-string-when-using-special-characters
+    """
+    import unicodedata
+    return len(unicodedata.normalize('NFC', ensure_unicode(str_)))
+=================
+14693701
+count:1
+    if handle_ansi:
+        # Remove ansi from length calculation
+        # References: http://stackoverflow.com/questions/14693701remove-ansi
+        ansi_escape = re.compile(r'\x1b[^m]*m')
+
+    # Find how much padding is needed
+=================
+14693701
+count:1
+    Removes all ansi directives from the string
+    Helper to remove ansi from length calculation
+    References: http://stackoverflow.com/questions/14693701remove-ansi
+    """
+    ansi_escape = re.compile(r'\x1b[^m]*m')
+    return ansi_escape.sub('', text)
+=================
+1175208
+count:1
+    r"""
+    References:
+        http://stackoverflow.com/questions/1175208/convert-camelcase
+
+    Example:
+        >>> # ENABLE_DOCTEST
+=================
+427472
+count:1
+
+    if ut.get_argflag('--update-bashcomplete'):
+        # http://stackoverflow.com/questions/427472/line-completion-with-custom-commands
+        print('Listing testfuncs')
+        testnames = get_module_completions(module)
+        modname = module if isinstance(module, six.string_types) else module.__name__
+=================
+427472
+count:1
+
+    if ut.get_argflag('--make-bashcomplete'):
+        # http://stackoverflow.com/questions/427472/line-completion-with-custom-commands
+        print('Listing testfuncs')
+        testnames = get_module_completions(module)
+        modname = module if isinstance(module, six.string_types) else module.__name__
+=================
+11063458
+count:1
+
+    References:
+        http://stackoverflow.com/questions/11063458/python-script-to-copy-text-to-clipboard
+        http://stackoverflow.com/questions/579687/how-do-i-copy-a-string-to-the-clipboard-on-windows-using-python
+
+    Ignore:
+=================
+579687
+count:1
+    References:
+        http://stackoverflow.com/questions/11063458/python-script-to-copy-text-to-clipboard
+        http://stackoverflow.com/questions/579687/how-do-i-copy-a-string-to-the-clipboard-on-windows-using-python
+
+    Ignore:
+        import pyperclip
+=================
+11063458
+count:1
+    """
+    References:
+        http://stackoverflow.com/questions/11063458/python-script-to-copy-text-to-clipboard
+    """
+    # import utool as ut
+    import pyperclip
+=================
+1335507
+count:1
+
+    References:
+        http://stackoverflow.com/questions/1335507/keyboard-input-with-timeout-in-python
+        http://home.wlu.edu/~levys/software/kbhit.py
+        http://stackoverflow.com/questions/3471461/raw-input-and-timeout/3911560#3911560
+
+=================
+3911560
+count:1
+        http://stackoverflow.com/questions/1335507/keyboard-input-with-timeout-in-python
+        http://home.wlu.edu/~levys/software/kbhit.py
+        http://stackoverflow.com/questions/3471461/raw-input-and-timeout/3911560#3911560
+
+    Example:
+        >>> # DISABLE_DOCTEST
+=================
+141351
+count:1
+    """
+    References:
+       http://stackoverflow.com/questions/141351/how-do-i-find-what-is-using-memory-in-a-python-process-in-a-production-system
+    """
+    import cPickle
+    dump = open("memory.pickle", 'w')
+=================
+2629680
+count:1
+
+    References:
+        http://stackoverflow.com/questions/2629680/deciding-between-subprocess-multiprocessing-and-thread-in-python
+
+    Reset Numpy Memory::
+        %reset out
+=================
+15605925
+count:1
+# def fix_autoreload_classes():
+#     """
+#     http://stackoverflow.com/questions/15605925/last-exception-python-prompt
+#     http://stackoverflow.com/questions/31363311/any-way-to-manually-fix-operation-of-super-after-ipython-reload-avoiding-ty
+#     """
+#     tb = sys.last_traceback
+=================
+31363311
+count:1
+#     """
+#     http://stackoverflow.com/questions/15605925/last-exception-python-prompt
+#     http://stackoverflow.com/questions/31363311/any-way-to-manually-fix-operation-of-super-after-ipython-reload-avoiding-ty
+#     """
+#     tb = sys.last_traceback
+#     val = sys.last_value
+=================
+33024215
+count:1
+    References:
+        http://code.activestate.com/recipes/522995-priority-dict-a-priority-queue-with-updatable-prio/
+        https://stackoverflow.com/questions/33024215/built-in-max-heap-api-in-python
+
+    Example:
+        >>> # DISABLE_DOCTEST
+=================
+5884066
+count:1
+
+    References:
+        http://stackoverflow.com/questions/5884066/hashing-a-python-dictionary
+    """
+    if type(o) == DictProxyType:
+        o2 = {}
+=================
+3431825
+count:1
+
+    References:
+        http://stackoverflow.com/questions/3431825/generating-a-md5-checksum-of-a-file
+        http://stackoverflow.com/questions/5001893/when-should-i-use-sha-1-and-when-should-i-use-sha-2
+
+    CommandLine:
+=================
+5001893
+count:1
+    References:
+        http://stackoverflow.com/questions/3431825/generating-a-md5-checksum-of-a-file
+        http://stackoverflow.com/questions/5001893/when-should-i-use-sha-1-and-when-should-i-use-sha-2
+
+    CommandLine:
+        python -m utool.util_hash --test-get_file_hash
+=================
+23565889
+count:1
+
+    References:
+        http://stackoverflow.com/questions/23565889/jpeg-images-have-different-pixel-values-across-multiple-devices
+    """
+    print('WARNING DO NOT USE utool.util_hash.image_uuid UNSAFE AND DEPRICATED')
+    # Get the bytes of the image
+=================
+21071448
+count:1
+    # maybe we can do something like this Queue to try fixing error when
+    # when using injected print statments with Qt signals and slots
+    http://stackoverflow.com/questions/21071448/redirecting-stdout-and-stderr-to-a-pyqt4-qtextedit-from-a-secondary-thread
+"""
+from __future__ import absolute_import, division, print_function, unicode_literals
+import six
+=================
+7168790
+count:1
+        stdout_handler = CustomStreamHandler(__UTOOL_STDOUT__)
+        stdout_handler.terminator = ''
+        # http://stackoverflow.com/questions/7168790/suppress-newline-in-python-logging-module
+        #stdout_handler.terminator = ''
+        add_logging_handler(logfile_handler, format_='file')
+        add_logging_handler(stdout_handler, format_='stdout')
+=================
+1653970
+count:1
+        http://code.activestate.com/recipes/576696/
+        http://code.activestate.com/recipes/576694/
+        http://stackoverflow.com/questions/1653970/does-python-have-an-ordered-set
+    """
+
+    def __init__(self, iterable=None):
+=================
+7335992
+count:1
+        It seems IPython does not respect virtual environments properly.
+        TODO: find a solution
+        http://stackoverflow.com/questions/7335992/ipython-and-virtualenv-ignoring-site-packages
+
+    References:
+        http://stackoverflow.com/questions/1871549/python-determine-if-running-inside-virtualenv
+=================
+1871549
+count:1
+
+    References:
+        http://stackoverflow.com/questions/1871549/python-determine-if-running-inside-virtualenv
+
+    CommandLine:
+        python -m utool.util_sysreq in_virtual_env
+=================
+7335992
+count:1
+        It seems IPython does not respect virtual environments properly.
+        TODO: find a solution
+        http://stackoverflow.com/questions/7335992/ipython-and-virtualenv-ignoring-site-packages
+    """
+    import distutils.sysconfig
+    return distutils.sysconfig.get_python_lib()
+=================
+5721529
+count:1
+    """
+    References:
+        http://stackoverflow.com/questions/5721529/running-python-script-as-root-with-sudo-what-is-the-username-of-the-effectiv
+        http://stackoverflow.com/questions/2806897/what-is-the-best-practices-for-checking-if-the-user-of-a-python-script-has-root
+    """
+    return os.getenv('USER') == 'root'
+=================
+2806897
+count:1
+    References:
+        http://stackoverflow.com/questions/5721529/running-python-script-as-root-with-sudo-what-is-the-username-of-the-effectiv
+        http://stackoverflow.com/questions/2806897/what-is-the-best-practices-for-checking-if-the-user-of-a-python-script-has-root
+    """
+    return os.getenv('USER') == 'root'
+
+=================
+22472124
+count:1
+    """
+    References:
+        http://stackoverflow.com/questions/22472124/what-is-sys-meipass-in-python
+        http://stackoverflow.com/questions/7674790/bundling-data-files-with-pyinstaller-onefile
+    """
+    return hasattr(sys, '_MEIPASS')
+=================
+7674790
+count:1
+    References:
+        http://stackoverflow.com/questions/22472124/what-is-sys-meipass-in-python
+        http://stackoverflow.com/questions/7674790/bundling-data-files-with-pyinstaller-onefile
+    """
+    return hasattr(sys, '_MEIPASS')
+
+=================
+51658
+count:1
+
+    References::
+        http://stackoverflow.com/questions/51658/cross-platform-space-remaining-on-volume-using-python
+        http://linux.die.net/man/2/statvfs
+
+    CommandLine:
+=================
+15607903
+count:1
+    """
+    References:
+        http://stackoverflow.com/questions/15607903/python-module-os-chmodfile-664-does-not-change-the-permission-to-rw-rw-r-bu
+        http://www.tutorialspoint.com/python/os_chmod.htm
+        https://en.wikipedia.org/wiki/Chmod
+    """
+=================
+1392413
+count:1
+    """
+    References:
+        http://stackoverflow.com/questions/1392413/calculating-a-directory-size-using-python
+    """
+    total_size = 0
+    for root, dname_list, fname_list in os.walk(start_path):
+=================
+2692873
+count:1
+
+    References:
+        http://stackoverflow.com/questions/2692873/quote-posix-shell-special-characters-in-python-output
+
+    """
+    print('[cplat] startfile(%r)' % fpath)
+=================
+1405913
+count:1
+        True if running 64 bit python and False if running on 32 bit
+    """
+    #http://stackoverflow.com/questions/1405913/how-do-i-determine-if-my-python-shell-is-executing-in-32bit-or-64bit-mode-on-os
+    is64bit = sys.maxsize > 2 ** 32
+    #import platform
+    #platform.architecture()
+=================
+8850484
+count:1
+
+    References:
+        http://stackoverflow.com/questions/5343265/setting-title-for-tabs-in-terminator-console-application-in-ubuntu/8850484#8850484
+
+    CommandLine:
+        python -m utool change_term_title
+=================
+14788036
+count:1
+
+    References:
+        http://stackoverflow.com/questions/14788036/python-win32api-sendmesage
+        http://www.pinvoke.net/default.aspx/user32.sendinput
+
+    CommandLine:
+=================
+437589
+count:1
+
+    References:
+        http://stackoverflow.com/questions/437589/how-do-i-unload-reload-a-python-module
+
+    CommandLine:
+        python -m utool.util_cplat --test-unload_module
+=================
+8015163
+count:1
+
+#from subprocess import check_output
+#http://stackoverflow.com/questions/8015163/how-to-check-screen-is-running
+#def screen_present(name):
+#        var = check_output(["screen -ls; true"],shell=True)
+#        if "."+name+"\t(" in var:
+=================
+15974100
+count:1
+    """
+    References:
+        http://stackoverflow.com/questions/15974100/ipython-install-new-modules
+    """
+    import pip
+    pip.main(['install', package])
+=================
+18737863
+count:1
+
+    """
+    # http://stackoverflow.com/questions/18737863/passing-a-function-to-re-sub-in-python
+    # CANNOT USE [^ ] FOR SOME GOD DAMN REASON USE /S instead
+    regex_list = ['python [A-Za-z_]+[\\/]\S* --allexamples']
+    dpath_list = [
+=================
+2046603
+count:1
+
+    References:
+        http://stackoverflow.com/questions/2046603/is-it-possible-to-run-function-in-a-subprocess-without-threading-or-writing-a-se
+        http://stackoverflow.com/questions/1196074/starting-a-background-process-in-python
+        http://stackoverflow.com/questions/15063963/python-is-thread-still-running
+
+=================
+1196074
+count:1
+    References:
+        http://stackoverflow.com/questions/2046603/is-it-possible-to-run-function-in-a-subprocess-without-threading-or-writing-a-se
+        http://stackoverflow.com/questions/1196074/starting-a-background-process-in-python
+        http://stackoverflow.com/questions/15063963/python-is-thread-still-running
+
+    Args:
+=================
+15063963
+count:1
+        http://stackoverflow.com/questions/2046603/is-it-possible-to-run-function-in-a-subprocess-without-threading-or-writing-a-se
+        http://stackoverflow.com/questions/1196074/starting-a-background-process-in-python
+        http://stackoverflow.com/questions/15063963/python-is-thread-still-running
+
+    Args:
+        func (function):
+=================
+17717829
+count:1
+
+    References:
+        http://stackoverflow.com/questions/17717829/how-to-get-column-names-from-a-table-in-sqlite-via-pragma-net-c
+
+    CommandLine:
+        python -m utool.util_sqlite --test-get_table_columninfo_list
+=================
+44313620
+count:2
+
+    References:
+        https://stackoverflow.com/questions/44313620/converting-randomstate
+
+    Example:
+        >>> # ENABLE_DOCTEST
+=================
+1707709
+count:1
+    r"""
+    References:
+        http://stackoverflow.com/questions/1707709/list-all-the-modules-that-are-part-of-a-python-package
+
+    Args:
+        package (?):
+=================
+14050281
+count:1
+
+    References:
+        http://stackoverflow.com/questions/14050281/module-exists-without-importing
+
+    CommandLine:
+        python -m utool.util_import check_module_installed --show --verbimp --modname=this
+=================
+41720952
+count:1
+    """
+    References:
+        https://stackoverflow.com/questions/41720952/unpickle-sklearn-tree-descisiontreeregressor-in-python-2-from-python3
+    """
+    from lib2to3.fixes.fix_imports import MAPPING
+    import sys
+=================
+8843062
+count:1
+        https://pytables.github.io/cookbook/py2exe_howto.html
+        https://gist.github.com/andrewgiessel/7515520
+        http://stackoverflow.com/questions/8843062/python-how-to-store-a-numpy-multidimensional-array-in-pytables
+        http://pytables.github.io/usersguide/tutorials.html#creating-new-array-objects
+
+    Example:
+=================
+651794
+count:1
+
+    References:
+        http://stackoverflow.com/questions/651794/best-way-to-init-dict-of-dicts
+
+    Example:
+        >>> # ENABLE_DOCTEST
+=================
+651794
+count:1
+
+    References:
+        http://stackoverflow.com/questions/651794/best-way-to-init-dict-of-dicts
+
+    Doctest:
+        >>> from utool.util_dict import *  # NOQA
+=================
+5884066
+count:1
+
+    References:
+        http://stackoverflow.com/questions/5884066/hashing-a-python-dictionary
+
+    CommandLine:
+        python -m utool.util_dict --test-get_dict_hashid
+=================
+1151658
+count:1
+
+    References:
+       http://stackoverflow.com/questions/1151658/python-hashable-dicts
+       http://stackoverflow.com/questions/1151658/python-hashable-dicts
+    """
+    def __key(self):
+=================
+1151658
+count:1
+    References:
+       http://stackoverflow.com/questions/1151658/python-hashable-dicts
+       http://stackoverflow.com/questions/1151658/python-hashable-dicts
+    """
+    def __key(self):
+        return tuple(sorted(self.items()))
+=================
+38987
+count:1
+
+    References:
+        http://stackoverflow.com/questions/38987/how-can-i-merge-two-python-dictionaries-in-a-single-expression
+
+    Example:
+        >>> # ENABLE_DOCTEST
+=================
+10193235
+count:1
+
+    Reference:
+        http://stackoverflow.com/questions/10193235/python-translate-a-table-to-a-hierarchical-dictionary
+
+    Args:
+        item_list (list):
+=================
+22663966
+count:1
+    """
+    References:
+        http://stackoverflow.com/questions/22663966/changing-order-of-ordered-dictionary-in-python
+
+    CommandLine:
+        python -m utool.util_dict --exec-move_odict_item
+=================
+8230315
+count:1
+    """
+    References:
+        http://stackoverflow.com/questions/8230315/python-sets-are
+        http://stackoverflow.com/questions/11561932/why-does-json
+        https://github.com/jsonpickle/jsonpickle
+        http://stackoverflow.com/questions/24369666/typeerror-b1
+=================
+11561932
+count:1
+    References:
+        http://stackoverflow.com/questions/8230315/python-sets-are
+        http://stackoverflow.com/questions/11561932/why-does-json
+        https://github.com/jsonpickle/jsonpickle
+        http://stackoverflow.com/questions/24369666/typeerror-b1
+        http://stackoverflow.com/questions/30469575/how-to-pickle
+=================
+24369666
+count:1
+        http://stackoverflow.com/questions/11561932/why-does-json
+        https://github.com/jsonpickle/jsonpickle
+        http://stackoverflow.com/questions/24369666/typeerror-b1
+        http://stackoverflow.com/questions/30469575/how-to-pickle
+    """
+    import utool as ut
+=================
+30469575
+count:1
+        https://github.com/jsonpickle/jsonpickle
+        http://stackoverflow.com/questions/24369666/typeerror-b1
+        http://stackoverflow.com/questions/30469575/how-to-pickle
+    """
+    import utool as ut
+    PYOBJECT_TAG = '__PYTHON_OBJECT__'
+=================
+11561932
+count:1
+
+    References:
+        http://stackoverflow.com/questions/11561932/why-does-json-dumpslistnp
+
+    CommandLine:
+        python -m utool.util_cache --test-to_json
+=================
+7489732
+count:1
+
+    References:
+        http://stackoverflow.com/questions/7489732/easiest-way-to-add-a-function-to-existing-class
+
+    CommandLine:
+        python -m utool.util_cache --test-shelf_open
+=================
+1158076
+count:1
+
+    References:
+        http://stackoverflow.com/questions/1158076/implement-touch-using-python
+    """
+    try:
+        if verbose:
+=================
+19859840
+count:1
+
+    References:
+        http://stackoverflow.com/questions/19859840/excluding-dirs-in-os-walk
+    """
+    from utool import util_iter
+    if kwargs.get('verbose', False):  # log what i'm going to do
+=================
+19859840
+count:1
+        # directories visitied by os.walk
+        # References:
+        #     http://stackoverflow.com/questions/19859840/excluding-directories-in-os-walk
+        rel_root = relpath(root, dpath_)
+        rel_root2 = relpath(root, dirname(dpath_))
+        #print('rel_root = %r' % (rel_root,))
+=================
+19859840
+count:1
+    References:
+        # TODO: fix names and behavior of exclude_dirs and greater_exclude_dirs
+        http://stackoverflow.com/questions/19859840/excluding-directories-in-os-walk
+
+    Example:
+        >>> # DISABLE_DOCTEST
+=================
+23598461
+count:1
+
+    References:
+        http://stackoverflow.com/a/23598461/200291
+        http://stackoverflow.com/questions/23598289/get-win-short-fname-python
+
+    Example:
+=================
+23598289
+count:1
+    References:
+        http://stackoverflow.com/a/23598461/200291
+        http://stackoverflow.com/questions/23598289/get-win-short-fname-python
+
+    Example:
+        >>> # DISABLE_DOCTEST
+=================
+1447575
+count:1
+
+    References:
+        http://stackoverflow.com/questions/1447575/symlinks-on-windows
+    """
+    if True:
+        import ctypes
+=================
+20794
+count:1
+
+    References:
+        http://stackoverflow.com/questions/20794/find-broken-symlinks-with-python
+
+    CommandLine:
+        python -m utool remove_broken_links:0
+=================
+17078696
+count:1
+        https://en.wikipedia.org/wiki/Transitive_reduction#Computing_the_reduction_using_the_closure
+        http://dept-info.labri.fr/~thibault/tmp/0201008.pdf
+        http://stackoverflow.com/questions/17078696/transitive-reduction-of-directed-graph-in-python
+
+    CommandLine:
+        python -m utool.util_graph nx_transitive_reduction --show
+=================
+16150557
+count:1
+
+    References:
+        http://stackoverflow.com/questions/16150557/nx-subgraph-from-edges
+    """
+
+    # TODO: support multi-di-graph
+=================
+33332462
+count:1
+
+def nx_mincut_edges_weighted(G, s, t, capacity='weight'):
+    # http://stackoverflow.com/questions/33332462/minimum-s-t-edge-cut-which-takes-edge-weight-into-consideration
+    cut_weight, partitions = nx.minimum_cut(G, s, t, capacity=capacity)
+    edge_cut_list = []
+    for p1_node in partitions[0]:
+=================
+11125212
+count:1
+    """roundrobin('ABC', 'D', 'EF') --> A D E B F C"""
+    raise NotImplementedError('not sure if this implementation is correct')
+    # http://stackoverflow.com/questions/11125212/interleaving-lists-in-python
+    #sentinel = object()
+    #return (x for x in chain(*zip_longest(fillvalue=sentinel, *iterables)) if x is not sentinel)
+    pending = len(iterables)
+=================
+15706339
+count:1
+#    References:
+#        https://github.com/andreasjansson/python-emd
+#        http://stackoverflow.com/questions/15706339/how-to-compute-emd-for-2-numpy-arrays-i-e-histogram-using-opencv
+#        http://www.cs.huji.ac.il/~ofirpele/FastEMD/code/
+#        http://www.cs.huji.ac.il/~ofirpele/publications/ECCV2008.pdf
+#    """

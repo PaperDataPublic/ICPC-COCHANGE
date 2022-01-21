@@ -1,0 +1,606 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/erogetrailers/soft.py
+38987, 15
+--------down------
+15
+def _mergedictwith(x, y):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/lingoes/lingoesdb.py
+842059, 166
+---------up-------
+141
+if __name__ == '__main__':
+--------down------
+167
+  PWD = os.getcwd()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/lingoes/searchutil.py
+7380629, 51
+--------down------
+51
+class PrefixCompare:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/dictdb/dbutil.py
+3785294, 4
+--------down------
+4
+def fetchsome(cursor, some):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/dictdb/edictdb.py
+13934994, 130
+--------down------
+131
+  cur.execute('''\
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/dictdb/dictdb.py
+3785294, 87
+--------down------
+87
+def iterentries(cur, select=SELECT_WORD_CONTENT, chunk=100):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/mecabparser/mecabtagger.py
+10299807, 30
+--------down------
+30
+def normalizepath(path):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/socketsvc/socketpack.py
+444591, 30
+--------down------
+30
+def unpackuint(s): #
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/lec/leconline.py
+3465704, 157
+--------down------
+167
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/texthook/texthook.py
+5253854, 4
+--------down------
+5
+__all__ = 'TextHook',
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/google/googletrans.py
+10334358, 145
+---------up-------
+110
+class GoogleJsonTranslator(GoogleTranslator):
+  def translate(self, t, to='auto', fr='auto', align=None):
+    try:
+      r = self.session.post(self.api, headers=self.headers, data={
+--------down------
+147
+        'client': 'p' if client_json else 't',
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/eztrans/j2kengine.py
+13128995, 29
+--------down------
+31
+if __name__ == '__main__': # DEBUG
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/eztrans/j2kengine.py
+11939290, 30
+--------down------
+31
+if __name__ == '__main__': # DEBUG
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/getchu/soft.py
+2802168, 313
+---------up-------
+26
+class SoftApi(object):
+  def _parseprice(self, h):
+--------down------
+313
+    m = self._rx_price.search(h)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/colorconv/colorconv.py
+23889620, 8
+--------down------
+13
+import math
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/mecabjlp/mecabtag.py
+10299807, 11
+--------down------
+11
+def normalizepath(path):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/gameengine/gamedebugger.py
+6187699, 158
+---------up-------
+46
+class GameDebugger(object):
+  def search_memory_long(self, pattern, *args, **kwargs):
+--------down------
+158
+    r = xrange(int(math.log(pattern, 2)/8) * 8, -1, -8)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/qtgesture/gesturefilter.py
+17418108, 265
+---------up-------
+262
+def _subtract((x1,y1), (x2,y2)):
+--------down------
+266
+  return x1 - x2, y1 - y2
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/winmirror/mirrorwidgets.py
+15306866, 105
+---------up-------
+69
+class MirroredWindow(QWidget):
+--------down------
+106
+  def start(self): self.__d.repaintTimer.start(); self.repaint()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/winmirror/mirrorwidgets.py
+1823762, 159
+---------up-------
+69
+class MirroredWindow(QWidget):
+  def keyPressEvent(self, event):
+--------down------
+185
+  def mouseMoveEvent_disabled(self, event):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/winmirror/mirrorwidgets.py
+2086017, 209
+---------up-------
+69
+class MirroredWindow(QWidget):
+  def mouseMoveEvent_disabled(self, event):
+--------down------
+221
+    dw = win32api.MAKELONG(x0 - left, y0 - top)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/winmirror/mirrorwidgets.py
+7259847, 307
+---------up-------
+69
+class MirroredWindow(QWidget):
+--------down------
+307
+  def resizeEvent(self, event) :
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skdatetime.py
+2775864, 16
+--------down------
+16
+def datetime2timestamp(date):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skjson.py
+11875770, 6
+--------down------
+6
+def default_datetime(obj):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/sktypes.py
+354038, 29
+---------up-------
+24
+def is_float(v):
+--------down------
+30
+  try: float(v); return True
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/sknetio.py
+16694907, 158
+--------down------
+158
+def itergetdata(url, chunksize=1024, **kwargs):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skcontainer.py
+480214, 4
+--------down------
+4
+def uniquelist(seq):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skpaths.py
+122327, 73
+---------up-------
+72
+def get_python_site():
+--------down------
+75
+  from distutils import sysconfig
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skyaml.py
+20352794, 3
+--------down------
+4
+from sakurakit.skdebug import dwarn
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skhash.py
+1131220, 182
+--------down------
+182
+def md5sumpath(path):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skhash.py
+7169845, 189
+---------up-------
+183
+def md5sumpath(path):
+  try:
+--------down------
+189
+    if path.startswith('/') and not path.startswith('//'):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwinapi.py
+1551605, 203
+--------down------
+203
+try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwinapi.py
+7921307, 316
+--------down------
+316
+CopyIcon = user32.CopyIcon
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwinapi.py
+1872480, 585
+--------down------
+592
+WriteProcessMemory = kernel32.WriteProcessMemory
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwin.py
+9920452, 115
+---------up-------
+6
+if skos.WIN:
+  def kill_my_process(ret=0):
+--------down------
+115
+    win32api.TerminateProcess(win32api.GetCurrentProcess(), ret)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwin.py
+1100605, 411
+---------up-------
+6
+if skos.WIN:
+  def set_window_text(hwnd, text):
+--------down------
+417
+    try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwin.py
+6381198, 506
+---------up-------
+6
+if skos.WIN:
+--------down------
+509
+  def get_window_children(hwnd):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwin.py
+10085381, 619
+---------up-------
+6
+if skos.WIN:
+--------down------
+619
+  def get_taskbar_window():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwin.py
+19508268, 1083
+---------up-------
+6
+if skos.WIN:
+  def open_cpl(path): # unicode -> bool
+--------down------
+1083
+    try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwin.py
+397125, 1149
+---------up-------
+6
+if skos.WIN:
+--------down------
+1149
+  def get_link_target_wsh(path):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skstr.py
+196345, 15
+--------down------
+15
+def isascii(s):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skstr.py
+2556108, 31
+--------down------
+31
+def rreplace(s, old, new, count):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skstr.py
+6609895, 122
+--------down------
+122
+def multireplacer(table, flags=0, escape=False, prefix=None, suffix=None):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skstr.py
+1695183, 190
+--------down------
+190
+import urllib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skstr.py
+6701853, 242
+--------down------
+242
+def checkpair(text, pair=("({[",")}]"), escape='\\'):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skstr.py
+919056, 324
+--------down------
+334
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skdebug.py
+5863512, 17
+--------down------
+17
+def dprint(msg, *args):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skdebug.py
+3425512, 217
+--------down------
+224
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skclass.py
+9937279, 9
+--------down------
+9
+class classproperty(property):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwidgets.py
+4272196, 50
+--------down------
+50
+def clear_layout(layout, delwidget=False):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skproc.py
+13592219, 33
+---------up-------
+27
+def detachgui(args):
+--------down------
+34
+  import subprocess
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skinspect.py
+5863512, 3
+--------down------
+4
+import inspect
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/sknetwork.py
+13971787, 11
+--------down------
+13
+class SkNetworkCookieJar(QNetworkCookieJar):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/sknetwork.py
+1969232, 19
+---------up-------
+14
+class SkNetworkCookieJar(QNetworkCookieJar):
+  def __init__(self, parent=None):
+--------down------
+19
+    self.marshalSeparator = '\0' # illegal in cookie
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skfileio.py
+7287996, 29
+--------down------
+29
+def relpaths(paths): # [unicode] -> [unicode]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skfileio.py
+973473, 241
+--------down------
+241
+def getfirstchildfile(path): # unicode -> unicode or None
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skfileio.py
+740820, 281
+--------down------
+281
+def extracttar(path, location, mode='r'): # unicode, unicode -> bool
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skfileio.py
+9431918, 304
+--------down------
+304
+def extractzip(path, location): # unicode, unicode -> bool
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skfileio.py
+10701528, 322
+--------down------
+322
+def extractxz(infile, outfile): # unicode, unicode -> bool
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skfileio.py
+17217073, 345
+--------down------
+345
+def extracttarxz(path, location): # unicode, unicode -> bool
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skos.py
+1405913, 15
+--------down------
+15
+X86_64  = sys.maxsize > 2**32
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skos.py
+196930, 21
+--------down------
+31
+WINXP = WIN and platform.release() == 'XP'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skos.py
+9920452, 37
+---------up-------
+36
+def kill_my_process():
+--------down------
+37
+  dwarn("pass")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/unitraits/unichars.py
+3826918, 7
+--------down------
+12
+ORD_HIRA_FIRST = 12353
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/unitraits/unichars.py
+10981258, 39
+--------down------
+39
+ORD_CYRIL_FIRST = 0x400
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/transer/infoseek.py
+10115126, 23
+--------down------
+68
+INFOSEEK_API = ("http://translation.infoseek.ne.jp/clsoap/translate?"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/scripts/initrc.py
+7387276, 36
+--------down------
+36
+def settitle(title): # str ->
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/initrc.py
+196930, 163
+---------up-------
+138
+def initenv():
+--------down------
+169
+  map(sys.path.append, config.ENV_PYTHONPATH)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/qml/qmlplugin.py
+8894244, 30
+--------down------
+30
+from Qt5 import QtWidgets
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/managers/_trman.py
+1006289, 514
+---------up-------
+323
+class MachineTranslator(Translator):
+  def _splitTranslate_par(self, text, tr, to, fr, async, keepsNewLine,
+--------down------
+517
+    ret = []
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/managers/dataman.py
+2068344, 3677
+---------up-------
+3639
+class TrailersItem(object):
+  def iterVideoIdsWithImage(self, cache=True):
+    if self.videos:
+      for it in self.videos:
+--------down------
+3676
+        img = host + '/vi/' + vid + '/maxresdefault.jpg' # http://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/features.py
+196930, 31
+--------down------
+31
+def iswinxp():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/utilities/jsonutil.py
+11875770, 7
+--------down------
+7
+def default_datetime(obj):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/utilities/textutil.py
+12468613, 52
+--------down------
+51
+__repeat_re = re.compile(r'(.+)\1+', re.DOTALL) # http://stackoverflow.com/questions/12468613/regex-to-remove-repeated-character-pattern-in-a-string
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/app.py
+19195935, 64
+---------up-------
+36
+class Application(QApplication):
+--------down------
+68
+  def notify(self, receiver, event):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/sysinfo.py
+12015170, 16
+---------up-------
+15
+def timestamp_jst_diff():
+--------down------
+18
+  from dateutil import tz
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/dialogs/chart.py
+5548121, 183
+---------up-------
+73
+class _ChartDialog(object):
+  def _plotStackAxes(ax, info):
+--------down------
+185
+  def _plotUserStackFigure(cls, ax, info):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/windows.py
+3282328, 152
+---------up-------
+98
+class TopWindow(_Window):
+  def setRefreshInterval(self, msec): self.__d.staysOnTopTimer.setInterval(msec)
+--------down------
+179
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/__main__.py
+380870, 74
+---------up-------
+38
+def main():
+--------down------
+74
+  dprint("check single instance")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/__main__.py
+1551605, 90
+---------up-------
+38
+def main():
+--------down------
+90
+  if skos.WIN:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/__main__.py
+10115126, 338
+---------up-------
+38
+def main():
+--------down------
+342
+  import numpy
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/browser/core/network.py
+8362506, 172
+---------up-------
+130
+class _WbNetworkAccessManager:
+--------down------
+173
+  def onSslErrors(reply, errors): # QNetworkReply, [QSslError] ->

@@ -1,0 +1,60 @@
+file_path,post_id,line_count,comment
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/tests/test_Goulib_itertools2.py,12007820,160,        #http://stackoverflow.com/questions/12007820/better-ways-to-get-nth-element-from-an-unsubscriptable-iterable
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/tests/test_Goulib_itertools2.py,12093364,278,        #test case from http://stackoverflow.com/questions/12093364/cartesian-product-of-large-iterators-itertools
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/tests/test_Goulib_itertools2.py,969709,420,        # http://stackoverflow.com/questions/969709/joining-a-set-of-ordered-integer-yielding-python-iterators
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/examples/oeis/OEIS.ipynb,1019040,31,      "    :see: http://stackoverflow.com/questions/1019040/how-many-numbers-below-n-are-coprimes-to-n\n",
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/examples/oeis/test_oeis.py,807863,50,    # http://stackoverflow.com/questions/807863/how-to-output-list-of-floats-to-a-binary-file-in-python
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/examples/oeis/test_oeis.py,32899,104,    # http://stackoverflow.com/questions/32899/how-to-generate-dynamic-parametrized-unit-tests-in-python
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/examples/friedman.py,41115661,302,        except GeneratorExit:  # https://stackoverflow.com/a/41115661/1395973
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/datetime2.py,40309602,57,# https://stackoverflow.com/a/40309602/1395973
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/datetime2.py,21074460,153,    # https://stackoverflow.com/a/21074460/1395973
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/plot.py,333995,20,elif sys.gettrace():  # http://stackoverflow.com/questions/333995/how-to-detect-that-python-code-is-being-executed-through-the-debugger
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/interval.py,3721249,29,    '''http://stackoverflow.com/questions/3721249/python-date-interval-intersection'''
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/geom.py,5928725,28,    # http://stackoverflow.com/questions/5928725/hashing-2d-3d-and-nd-vectors
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/geom.py,3349125,559,    # http://stackoverflow.com/questions/3349125/circle-circle-intersection-points
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/geom.py,849211,584,    # http://stackoverflow.com/questions/849211/shortest-distance-between-a-point-and-a-line-segment
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/geom.py,27673463,1149,    # future generalization : http://stackoverflow.com/questions/27673463/smallest-enclosing-circle-in-python-error-in-the-code
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/drawing.py,1336663,200,            # http://stackoverflow.com/questions/1336663/2d-bounding-box-of-a-sector
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/drawing.py,15857818,1258,        # from http://stackoverflow.com/questions/15857818/python-svg-parser
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/container.py,5491708,20,    # https://stackoverflow.com/a/5491708/1395973
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py,4187185,113,    # http://stackoverflow.com/questions/4187185/how-can-i-check-if-my-python-object-is-a-number
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py,40190849,272,# code decomposed from http://stackoverflow.com/questions/40190849/efficient-finding-primitive-roots-modulo-n-using-python
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py,15390807,370,    # http://stackoverflow.com/questions/15390807/integer-square-root-in-python
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py,11316539,702,    :see: http://stackoverflow.com/questions/11316539/calculating-the-distance-between-two-unordered-sets
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py,28549402,797,    # http://stackoverflow.com/a/28549402/1395973
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py,1019040,1371,    :see: http://stackoverflow.com/questions/1019040/how-many-numbers-below-n-are-coprimes-to-n
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py,36531120,1703,# https://stackoverflow.com/a/36531120/1395973
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py,28548457,2475,# inspired from http://stackoverflow.com/questions/28548457/nth-fibonacci-number-for-n-as-big-as-1019
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/math2.py,22281524,2585,    # https://stackoverflow.com/a/22281524/1395973
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py,1055360,32,    # http://stackoverflow.com/questions/1055360/how-to-tell-a-variable-is-iterable-but-not-a-string
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py,2158395,206,    # http://stackoverflow.com/questions/2158395/flatten-an-irregular-list-of-lists-in-python
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py,15099647,501,    # http://stackoverflow.com/questions/15099647/cross-product-of-sets-using-recursion
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py,7946798,523,    # http://stackoverflow.com/questions/7946798/interleaving-two-lists-in-python-2-2
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py,6422700,592,    # http://stackoverflow.com/questions/6422700/how-to-get-indices-of-a-sorted-array-in-python
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py,5352649,794,    :see: http://stackoverflow.com/questions/5352546/best-way-to-extract-subset-of-key-value-pairs-from-python-dictionary-object/5352649#5352649
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py,969709,859,    :see: http://stackoverflow.com/questions/969709/joining-a-set-of-ordered-integer-yielding-python-iterators
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/itertools2.py,12093364,872,    :see: http://stackoverflow.com/questions/12093364/cartesian-product-of-large-iterators-itertools
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/table.py,9819602,119,        # http://stackoverflow.com/questions/9819602/union-of-dict-objects-in-python
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/tests.py,3124155,129,        # inspired from http://stackoverflow.com/a/3124155/190597 (KennyTM)
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/notebook.py,15411967,60,try: #http://stackoverflow.com/questions/15411967/how-can-i-check-if-code-is-executed-in-the-ipython-notebook
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py,3403973,382,        # http://stackoverflow.com/questions/3403973/fast-replacement-of-values-in-a-numpy-array
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py,9829578,657,            # http://stackoverflow.com/questions/9829578/fast-way-of-counting-non-zero-bits-in-python
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py,7422204,732,        # http://stackoverflow.com/questions/7422204/intensity-normalization-of-image-using-pythonpil-speed-issues
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py,9166400,836,        # TOD: use http://stackoverflow.com/questions/9166400/convert-rgba-png-to-rgb-with-pil
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py,9166671,896,    Source: http://stackoverflow.com/a/9166671/284318
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py,9168169,945,    Source: http://stackoverflow.com/a/9168169/284318
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py,9459208,974,    Source: http://stackoverflow.com/a/9459208/284318
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py,7422204,1012,    # http://stackoverflow.com/questions/7422204/intensity-normalization-of-image-using-pythonpil-speed-issues
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/image.py,10818546,1347,    # http://stackoverflow.com/questions/10818546/finding-index-of-nearest-point-in-numpy-arrays-of-x-and-y-coordinates
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/expr.py,2371436,7,    'http://stackoverflow.com/questions/2371436/evaluating-a-mathematical-expression-in-a-string',
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/expr.py,3867028,8,    'http://stackoverflow.com/questions/3867028/converting-a-python-numeric-expression-to-latex',
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/expr.py,2371436,25,# http://stackoverflow.com/questions/2371436/evaluating-a-mathematical-expression-in-a-string
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/expr.py,3867028,490,# http://stackoverflow.com/questions/3867028/converting-a-python-numeric-expression-to-latex
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/colors.py,14088375,44,    # http://stackoverflow.com/questions/14088375/how-can-i-convert-rgb-to-cmyk-and-vice-versa-in-python
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/colors.py,11174702,397,        # mandatory http://stackoverflow.com/questions/11174702/how-to-subclass-an-ordereddict
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/colors.py,8031418,481,        # http://stackoverflow.com/questions/8031418/how-to-sort-ordereddict-of-ordereddict-python
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/Goulib/colors.py,876853,587,# http://stackoverflow.com/questions/876853/generating-color-ranges-in-python
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/notebooks/colors.ipynb,1114465,6567,       "// from http://stackoverflow.com/questions/1114465/getting-mouse-location-in-canvas\n",
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/notebooks/colors.ipynb,24161582,6592,       " * http://stackoverflow.com/a/24161582/3208463\n",
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/notebooks/colors.ipynb,1114465,7447,       "// from http://stackoverflow.com/questions/1114465/getting-mouse-location-in-canvas\n",
+/Users/jacob.caulfield/Documents/GitHub4/Goulib/notebooks/colors.ipynb,24161582,7472,       " * http://stackoverflow.com/a/24161582/3208463\n",

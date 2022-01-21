@@ -1,0 +1,177 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_08_B_Metro_Diversity.py
+4700614, 570
+--------down------
+571
+box = ax.get_position()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_07_F_Groupby.py
+14734627, 153
+--------down------
+156
+grouped = df.groupby('first_letter')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_07_F_Groupby.py
+19804282, 154
+--------down------
+156
+grouped = df.groupby('first_letter')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_07_F_Groupby.py
+19530568, 210
+--------down------
+211
+df.groupby("first_letter").apply(lambda x: list(x['NAME']))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_04_A_PfDA.py
+17295128, 56
+--------down------
+56
+import os
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_05_C_Displaying_Census_URLs.py
+10233141, 57
+---------up-------
+48
+def add_census_key(url, api_key=settings.CENSUS_KEY):
+--------down------
+57
+    pr_query = urlparse.parse_qs(pr.query)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_05_C_Displaying_Census_URLs.py
+15074386, 135
+---------up-------
+134
+def parse_urls_col(col):
+--------down------
+135
+    return [child for child in col.itertext()]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_16_A_DimpleJS_Example.py
+22185527, 5
+--------down------
+10
+%%html
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_05_B_Geographical_Hierarchies.py
+3437130, 120
+--------down------
+123
+us.states.STATES
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_12_B_Baby_Names_Starter.py
+3584933, 491
+--------down------
+491
+ax = fig.add_subplot(111)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_19_B_HackFSM.py
+5724453, 62
+--------down------
+65
+class my_g(object):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_19_B_HackFSM.py
+17690738, 455
+--------down------
+455
+date_stngs = ('2008-12-20','2008-12-21','2008-12-22','2008-12-23','Nov. 9, 1964', 'junk')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_04_B_numpy_and_pandas_series.py
+24377, 39
+--------down------
+48
+n = 100
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_04_B_numpy_and_pandas_series.py
+231767, 40
+--------down------
+48
+n = 100
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_04_B_numpy_and_pandas_series.py
+509295, 214
+--------down------
+234
+m = range(10)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_04_B_numpy_and_pandas_series.py
+6771620, 454
+--------down------
+455
+np.sort(np.arange(100))[::-1]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_04_B_numpy_and_pandas_series.py
+2254663, 743
+--------down------
+746
+try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_07_C_Google_Map_API.py
+9519673, 268
+--------down------
+274
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_07_C_Google_Map_API.py
+8361021, 271
+--------down------
+274
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_07_B_Google_Chart_Example.py
+9519673, 24
+--------down------
+28
+%%javascript
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_05_A_Geographical_Hierarchies.py
+3437130, 120
+--------down------
+137
+assert set(states_df.columns) == set((u'NAME', u'P0010001', u'state'))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_19_A_leaflet.py
+14603398, 9
+--------down------
+12
+from IPython.display import HTML, display, clear_output
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_19_A_leaflet.py
+4724676, 30
+---------up-------
+24
+div_id = 'i' + str(uuid.uuid4())
+--------down------
+72
+CSS = """
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_01_B_World_Population.py
+15889203, 131
+--------down------
+131
+def cumsum(lis):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_06_B_Generators.py
+231855, 17
+--------down------
+41
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_06_B_Generators.py
+102632, 20
+--------down------
+41
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_07_A_D3_Choropleth.py
+32647365, 36
+--------down------
+39
+%%javascript
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_04_C_Census.py
+13130357, 269
+--------down------
+269
+count,division = np.histogram(df['P0010001'])

@@ -1,0 +1,1456 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/04-retain-qos0-fresh.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/08-ssl-connect-no-auth-wrong-ca.py
+279237, 15
+--------down------
+15
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/08-ssl-connect-cert-auth-crl.py
+279237, 13
+--------down------
+13
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/09-plugin-auth-unpwd-success.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/03-publish-b2c-timeout-qos2-helper.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/02-unsubscribe-qos0.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/02-subpub-qos2.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/08-ssl-connect-no-identity.py
+279237, 14
+--------down------
+14
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/03-publish-b2c-disconnect-qos1.py
+279237, 8
+--------down------
+8
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/03-publish-b2c-timeout-qos2.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/04-retain-qos1-qos0.py
+279237, 11
+--------down------
+11
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/05-clean-session-qos1.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/02-unsubscribe-qos1.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/07-will-qos0.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/06-bridge-br2b-disconnect-qos1-helper.py
+279237, 7
+--------down------
+7
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/08-ssl-connect-cert-auth-without.py
+279237, 17
+--------down------
+17
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/03-pattern-matching-helper.py
+279237, 7
+--------down------
+7
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/01-connect-uname-password-success-no-tls.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/05-clean-session-qos1-helper.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/03-pattern-matching.py
+279237, 7
+--------down------
+7
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/06-bridge-reconnect-local-out.py
+279237, 11
+--------down------
+11
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/01-connect-invalid-id-0-311.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/03-publish-c2b-disconnect-qos2.py
+279237, 8
+--------down------
+8
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/08-tls-psk-bridge.py
+279237, 18
+--------down------
+18
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/07-will-null.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/06-bridge-br2b-disconnect-qos1.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/03-publish-c2b-timeout-qos2.py
+279237, 11
+--------down------
+11
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/08-ssl-bridge.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/01-connect-invalid-protonum.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/07-will-qos0-helper.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/06-bridge-b2br-disconnect-qos1.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/04-retain-qos0-clear.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/04-retain-qos0-repeated.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/04-retain-qos0.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/08-ssl-connect-cert-auth-revoked.py
+279237, 13
+--------down------
+13
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/01-connect-invalid-id-missing.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/01-connect-anon-denied.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/06-bridge-b2br-disconnect-qos2.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/08-ssl-bridge-helper.py
+279237, 7
+--------down------
+7
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/08-ssl-connect-cert-auth-expired.py
+279237, 16
+--------down------
+16
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/02-subscribe-qos0.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/08-ssl-connect-no-auth.py
+279237, 15
+--------down------
+15
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/06-bridge-br2b-disconnect-qos2.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/03-publish-qos2.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/03-publish-b2c-timeout-qos1.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/06-bridge-reconnect-local-out-helper.py
+279237, 7
+--------down------
+7
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/10-listener-mount-point.py
+279237, 8
+--------down------
+8
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/01-connect-uname-no-password-denied.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/06-bridge-br2b-disconnect-qos2-helper.py
+279237, 7
+--------down------
+7
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/07-will-null-topic.py
+279237, 8
+--------down------
+8
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/08-tls-psk-pub.py
+279237, 18
+--------down------
+18
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/01-connect-success.py
+279237, 11
+--------down------
+11
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/09-plugin-auth-unpwd-fail.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/07-will-null-helper.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/02-subpub-qos1.py
+279237, 9
+--------down------
+9
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/broker/03-publish-b2c-disconnect-qos2.py
+279237, 8
+--------down------
+8
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/03-publish-c2b-qos1-timeout.py
+279237, 25
+--------down------
+25
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/01-unpwd-set.py
+279237, 14
+--------down------
+14
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/03-publish-qos0-no-payload.py
+279237, 19
+--------down------
+19
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/02-unsubscribe.py
+279237, 11
+--------down------
+11
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/01-will-unpwd-set.py
+279237, 16
+--------down------
+16
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/03-publish-c2b-qos2.py
+279237, 29
+--------down------
+29
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/09-util-topic-matching.py
+279237, 8
+--------down------
+8
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/01-will-set.py
+279237, 16
+--------down------
+16
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/01-keepalive-pingreq.py
+279237, 16
+--------down------
+16
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/03-publish-b2c-qos2.py
+279237, 25
+--------down------
+25
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/08-ssl-fake-cacert.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/03-publish-c2b-qos2-disconnect.py
+279237, 11
+--------down------
+11
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/03-publish-c2b-qos1-disconnect.py
+279237, 11
+--------down------
+11
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/02-subscribe-qos2.py
+279237, 21
+--------down------
+21
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/04-retain-qos0.py
+279237, 11
+--------down------
+11
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/09-util-topic-tokenise.py
+279237, 8
+--------down------
+8
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/01-con-discon-success.py
+279237, 17
+--------down------
+17
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/08-ssl-bad-cacert.py
+279237, 10
+--------down------
+10
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/03-publish-b2c-qos1.py
+279237, 20
+--------down------
+20
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/08-ssl-connect-no-auth.py
+279237, 19
+--------down------
+19
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/08-ssl-connect-cert-auth.py
+279237, 20
+--------down------
+20
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/docker/mosquitto/mosquitto-1.4/test/lib/03-publish-c2b-qos2-timeout.py
+279237, 29
+--------down------
+29
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_class.py
+1015307, 471
+---------up-------
+455
+def inject_func_as_method(self, func, method_name=None, class_=None,
+--------down------
+472
+    if override is not None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_class.py
+13850114, 530
+---------up-------
+524
+def inject_func_as_property(self, func, method_name=None, class_=None):
+--------down------
+531
+    if method_name is None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_class.py
+8122734, 587
+---------up-------
+581
+def test_reloading_metaclass():
+--------down------
+594
+    import utool as ut
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dbg.py
+27914204, 348
+---------up-------
+302
+def _wip_embed(parent_locals=None, parent_globals=None, exec_lines=None,
+    References:
+--------down------
+347
+       http://stackoverflow.com/questions/27911570/can-you-specify-a-command-to-run-after-you-embed-into-ipython/27914204#27914204
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dbg.py
+15167200, 349
+---------up-------
+302
+def _wip_embed(parent_locals=None, parent_globals=None, exec_lines=None,
+--------down------
+391
+    import utool as ut
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dbg.py
+15411967, 635
+---------up-------
+633
+def in_jupyter_notebook():
+--------down------
+636
+    try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_num.py
+2663612, 40
+---------up-------
+37
+def sigfig_str(number, sigfig):
+--------down------
+41
+    assert(sigfig > 0)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_time.py
+8906926, 847
+---------up-------
+839
+def get_timedelta_str(timedelta, exclude_zeros=False):
+--------down------
+857
+    if timedelta == datetime.timedelta(0):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_iter.py
+434287, 366
+---------up-------
+356
+def ichunks(iterable, chunksize, bordermode=None):
+--------down------
+376
+                from utool.util_iter import *  # NOQA
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/_internal/meta_util_six.py
+12561063, 135
+---------up-------
+122
+def ensure_unicode(str_):
+    else:
+        except UnicodeDecodeError:
+            if str_.startswith(codecs.BOM_UTF8):
+--------down------
+135
+                str_ = str_[len(codecs.BOM_UTF8):]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_grabdata.py
+24873302, 257
+---------up-------
+225
+def get_prefered_browser(pref_list=[], fallback=True):
+    if ut.WIN32:
+--------down------
+257
+        win32_chrome_fpath = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_grabdata.py
+15644964, 297
+---------up-------
+285
+def download_url(url, filename=None, spoof=False, iri_fallback=True,
+--------down------
+310
+    def reporthook_(num_blocks, block_nBytes, total_nBytes, start_time=0):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_grabdata.py
+16694907, 298
+---------up-------
+285
+def download_url(url, filename=None, spoof=False, iri_fallback=True,
+--------down------
+310
+    def reporthook_(num_blocks, block_nBytes, total_nBytes, start_time=0):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_grabdata.py
+1112343, 432
+---------up-------
+429
+def experiment_download_multiple_urls(url_list):
+--------down------
+445
+    import requests
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_inspect.py
+23149218, 1125
+---------up-------
+1114
+def is_bateries_included(item):
+--------down------
+1137
+    flag = False
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_inspect.py
+7456933, 1387
+---------up-------
+1384
+def special_parse_process_python_code(sourcecode):
+--------down------
+1399
+    import ast
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_inspect.py
+20445733, 1593
+---------up-------
+1579
+def parse_import_names(sourcecode, top_level=True, fpath=None, branch=False):
+--------down------
+1605
+    import ast
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_inspect.py
+23576681, 1795
+---------up-------
+1792
+def is_valid_python(code, reraise=True, ipy_magic_workaround=False):
+--------down------
+1796
+    import ast
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_gridsearch.py
+4801403, 428
+---------up-------
+425
+def parse_nestings2(string, nesters=['()', '[]', '<>', "''", '""'], escape='\\'):
+--------down------
+444
+    import utool as ut  # NOQA
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_list.py
+16945518, 1674
+---------up-------
+1666
+def argmax(input_, multi=False):
+--------down------
+1697
+    if multi:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_list.py
+7352684, 2269
+---------up-------
+2264
+def group_consecutives(data, stepsize=1):
+--------down------
+2270
+    run = []
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_list.py
+9457832, 2934
+---------up-------
+2922
+def list_roll(list_, n):
+--------down------
+2947
+    return list_[-n:] + list_[:-n]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_alg.py
+15047116, 993
+---------up-------
+984
+def fibonacci_iterative(n):
+--------down------
+1007
+    a, b = 0, 1
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_alg.py
+141779, 1153
+---------up-------
+1133
+def knapsack(items, maxweight, method='recursive'):
+--------down------
+1254
+                import utool as ut
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_alg.py
+3433486, 2789
+---------up-------
+2757
+def expensive_task_gen(num=8700):
+    Example:
+--------down------
+2788
+        >>> # http://stackoverflow.com/questions/3433486/-curve-fitting-in-python
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_alg.py
+6800193, 2820
+---------up-------
+2807
+def factors(n):
+--------down------
+2821
+    return set(reduce(list.__add__,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_web.py
+7436801, 15
+---------up-------
+6
+def is_local_port_open(port):
+--------down------
+26
+    import socket
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_inject.py
+14775916, 107
+---------up-------
+104
+def colored_pygments_excepthook(type_, value, tb):
+--------down------
+112
+    tbtext = ''.join(traceback.format_exception(type_, value, tb))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_inject.py
+18007995, 535
+---------up-------
+522
+def split_python_text_into_lines(text):
+    def parentesis_are_balanced(line):
+--------down------
+536
+        def balanced(str_, i=0, cnt=0, left='(', right=')'):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_git.py
+1526794, 809
+---------up-------
+195
+class Repo(util_dev.NiceRepr):
+    def rename_branch(repo, old_branch_name, new_branch_name, remote='origin'):
+        References:
+--------down------
+808
+            http://stackoverflow.com/questions/1526794/rename?answertab=votes#tab-top
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_git.py
+9524933, 810
+---------up-------
+195
+class Repo(util_dev.NiceRepr):
+    def rename_branch(repo, old_branch_name, new_branch_name, remote='origin'):
+--------down------
+824
+        assert repo.is_gitrepo(), 'cannot pull a nongit repo'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_git.py
+8226278, 908
+---------up-------
+875
+def git_sequence_editor_squash(fpath):
+    Ignore:
+        def squash_consecutive_commits_with_same_message():
+--------down------
+910
+            git rebase --interactive HEAD~40 --autosquash
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_const.py
+41048643, 18
+---------up-------
+5
+class _NoParamType(object):
+--------down------
+48
+    def __new__(cls):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_const.py
+6760685, 93
+--------down------
+126
+if __name__ == '__main__':
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_resources.py
+938733, 25
+---------up-------
+7
+try:
+    def peak_memory():
+--------down------
+26
+        maxrss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss * 1024
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_resources.py
+1331471, 232
+---------up-------
+229
+def get_python_datastructure_sizes():
+--------down------
+244
+    import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_decor.py
+18625510, 711
+--------down------
+750
+def lazyfunc(func):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_decor.py
+1697501, 948
+---------up-------
+943
+class classproperty(property):
+--------down------
+949
+    def __get__(self, cls, owner):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_ipynb.py
+24207353, 281
+---------up-------
+277
+def make_notebook(cell_list):
+    References:
+--------down------
+280
+        http://stackoverflow.com/questions/21971449/how-do-i-increase-the-cell-width-of-the-ipython-notebook-in-my-browser/24207353#24207353
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_latex.py
+16259923, 375
+---------up-------
+366
+def escape_latex(text):
+--------down------
+376
+    conv = {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_latex.py
+2892931, 882
+---------up-------
+880
+def long_substr(strlist):
+--------down------
+882
+    substr = ''
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_str.py
+28455982, 871
+--------down------
+1110
+def numpy_str(arr, strvals=False, precision=None, pr=None,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_str.py
+2247205, 1788
+---------up-------
+1783
+def utf8_len(str_):
+--------down------
+1789
+    import unicodedata
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_str.py
+14693701, 2107
+---------up-------
+1979
+def align_lines(line_list, character='=', replchar=None, pos=0):
+    if handle_ansi:
+--------down------
+2107
+        ansi_escape = re.compile(r'\x1b[^m]*m')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_str.py
+1175208, 2634
+---------up-------
+2631
+def to_underscore_case(camelcase_str):
+--------down------
+2644
+    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', camelcase_str)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_tests.py
+427472, 1940
+---------up-------
+1922
+def main_function_tester(module, ignore_prefix=[], ignore_suffix=[],
+    if ut.get_argflag('--update-bashcomplete'):
+--------down------
+1940
+        print('Listing testfuncs')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+11063458, 102
+---------up-------
+92
+def copy_text_to_clipboard(text):
+--------down------
+116
+    import pyperclip
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+579687, 103
+---------up-------
+92
+def copy_text_to_clipboard(text):
+--------down------
+116
+    import pyperclip
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+1335507, 206
+---------up-------
+194
+def input_timeout(msg='Waiting for input...', timeout=30):
+--------down------
+217
+    import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+3911560, 208
+---------up-------
+194
+def input_timeout(msg='Waiting for input...', timeout=30):
+    References:
+--------down------
+207
+        http://stackoverflow.com/questions/3471461/raw-input-and-timeout/3911560#3911560
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+141351, 521
+---------up-------
+518
+def memory_dump():
+--------down------
+522
+    import cPickle
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+2629680, 1574
+---------up-------
+1568
+def _memory_profile(with_gc=False):
+--------down------
+1579
+    import utool as ut
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+15605925, 3022
+--------down------
+3039
+class NamedPartial(functools.partial, NiceRepr):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+31363311, 3023
+--------down------
+3039
+class NamedPartial(functools.partial, NiceRepr):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dev.py
+33024215, 3247
+---------up-------
+3234
+class PriorityQueue(NiceRepr):
+--------down------
+3277
+    def __init__(self, items=None, ascending=True):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_hash.py
+5884066, 79
+---------up-------
+64
+def make_hash(o):
+--------down------
+80
+    if type(o) == DictProxyType:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_hash.py
+3431825, 843
+---------up-------
+829
+def get_file_hash(fpath, blocksize=65536, hasher=None, stride=1,
+--------down------
+884
+    if hasher is None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_hash.py
+5001893, 844
+---------up-------
+829
+def get_file_hash(fpath, blocksize=65536, hasher=None, stride=1,
+--------down------
+884
+    if hasher is None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_hash.py
+23565889, 989
+---------up-------
+982
+def image_uuid(pil_img):
+--------down------
+990
+    print('WARNING DO NOT USE utool.util_hash.image_uuid UNSAFE AND DEPRICATED')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_logging.py
+21071448, 9
+---------up-------
+0
+# -*- coding: utf-8 -*-
+--------down------
+10
+from __future__ import absolute_import, division, print_function, unicode_literals
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_logging.py
+7168790, 444
+---------up-------
+374
+def start_logging(log_fpath=None, mode='a', appname='default', log_dir=None):
+    if __UTOOL_ROOT_LOGGER__ is None and __IN_MAIN_PROCESS__ and not __inside_doctest():
+--------down------
+445
+        add_logging_handler(logfile_handler, format_='file')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_set.py
+1653970, 26
+---------up-------
+13
+class OrderedSet(collections.MutableSet):
+--------down------
+28
+    def __init__(self, iterable=None):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_sysreq.py
+7335992, 20
+---------up-------
+10
+def in_virtual_env():
+--------down------
+34
+    import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_sysreq.py
+1871549, 23
+---------up-------
+10
+def in_virtual_env():
+--------down------
+34
+    import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_sysreq.py
+5721529, 109
+---------up-------
+106
+def is_running_as_root():
+--------down------
+111
+    return os.getenv('USER') == 'root'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_sysreq.py
+2806897, 110
+---------up-------
+106
+def is_running_as_root():
+--------down------
+111
+    return os.getenv('USER') == 'root'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+22472124, 81
+---------up-------
+78
+def in_pyinstaller_package():
+--------down------
+83
+    return hasattr(sys, '_MEIPASS')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+7674790, 82
+---------up-------
+78
+def in_pyinstaller_package():
+--------down------
+83
+    return hasattr(sys, '_MEIPASS')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+51658, 113
+---------up-------
+104
+def get_free_diskbytes(dir_):
+--------down------
+131
+    if WIN32:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+15607903, 168
+---------up-------
+165
+def chmod_add_executable(fpath, group=True, user=True):
+--------down------
+171
+    import stat
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+1392413, 244
+---------up-------
+241
+def get_disk_space(start_path='.'):
+--------down------
+245
+    total_size = 0
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+2692873, 468
+---------up-------
+464
+def startfile(fpath, detatch=True, quote=False, verbose=False, quiet=True):
+--------down------
+470
+    print('[cplat] startfile(%r)' % fpath)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+1405913, 1122
+---------up-------
+1117
+def is64bit_python():
+--------down------
+1122
+    is64bit = sys.maxsize > 2 ** 32
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+8850484, 1276
+---------up-------
+1265
+def change_term_title(title):
+    References:
+--------down------
+1275
+        http://stackoverflow.com/questions/5343265/setting-title-for-tabs-in-terminator-console-application-in-ubuntu/8850484#8850484
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+14788036, 1311
+---------up-------
+1304
+def send_keyboard_input(text=None, key_list=None):
+--------down------
+1326
+    if WIN32:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+437589, 1456
+---------up-------
+1451
+def unload_module(modname):
+--------down------
+1473
+    import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+8015163, 1497
+--------down------
+1505
+def pip_install(package):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cplat.py
+15974100, 1509
+---------up-------
+1506
+def pip_install(package):
+--------down------
+1510
+    import pip
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_scripts/ensure_python3_compatible.py
+18737863, 132
+---------up-------
+126
+def change_doctestcommand_to_use_dashm_flag():
+--------down------
+133
+    regex_list = ['python [A-Za-z_]+[\\/]\S* --allexamples']
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_parallel.py
+2046603, 808
+---------up-------
+802
+def spawn_background_process(func, *args, **kwargs):
+--------down------
+859
+    import utool as ut
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_parallel.py
+1196074, 809
+---------up-------
+802
+def spawn_background_process(func, *args, **kwargs):
+--------down------
+859
+    import utool as ut
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_parallel.py
+15063963, 810
+---------up-------
+802
+def spawn_background_process(func, *args, **kwargs):
+--------down------
+859
+    import utool as ut
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_sqlite.py
+17717829, 93
+---------up-------
+76
+def get_table_columninfo_list(cur, tablename):
+--------down------
+101
+    cur.execute('PRAGMA TABLE_INFO("{tablename}")'.format(tablename=tablename))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_numpy.py
+44313620, 33
+---------up-------
+27
+def _npstate_to_pystate(npstate):
+--------down------
+45
+    PY_VERSION = 3
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_import.py
+1707709, 196
+---------up-------
+192
+def package_contents(package, with_pkg=False, with_mod=True, ignore_prefix=[],
+--------down------
+220
+    import pkgutil
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_import.py
+14050281, 284
+---------up-------
+271
+def check_module_installed(modname):
+--------down------
+300
+    import pkgutil
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_io.py
+41720952, 360
+---------up-------
+357
+def _python2_load_cpkl(fpath):
+--------down------
+361
+    from lib2to3.fixes.fix_imports import MAPPING
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_io.py
+8843062, 656
+---------up-------
+648
+def save_pytables(fpath, data, verbose=False):
+--------down------
+677
+    import tables
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dict.py
+651794, 159
+---------up-------
+152
+class AutoVivification(dict):
+--------down------
+170
+    def __getitem__(self, key):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dict.py
+5884066, 236
+---------up-------
+227
+def get_dict_hashid(dict_):
+--------down------
+256
+    import utool as ut
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dict.py
+1151658, 288
+---------up-------
+267
+class hashdict(dict):
+--------down------
+290
+    def __key(self):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dict.py
+38987, 1331
+---------up-------
+1316
+def merge_dicts(*args):
+--------down------
+1344
+    iter_ = iter(args)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dict.py
+10193235, 1644
+---------up-------
+1637
+def hierarchical_group_items(item_list, groupids_list):
+--------down------
+1698
+    num_groups = len(groupids_list)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_dict.py
+22663966, 1826
+---------up-------
+1823
+def move_odict_item(odict, key, newpos):
+--------down------
+1851
+    odict[key] = odict.pop(key)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cache.py
+8230315, 427
+---------up-------
+424
+def make_utool_json_encoder(allow_pickle=False):
+--------down------
+432
+    import utool as ut
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cache.py
+11561932, 428
+---------up-------
+424
+def make_utool_json_encoder(allow_pickle=False):
+--------down------
+432
+    import utool as ut
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cache.py
+24369666, 430
+---------up-------
+424
+def make_utool_json_encoder(allow_pickle=False):
+--------down------
+432
+    import utool as ut
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cache.py
+30469575, 431
+---------up-------
+424
+def make_utool_json_encoder(allow_pickle=False):
+--------down------
+432
+    import utool as ut
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_cache.py
+7489732, 924
+---------up-------
+919
+def shelf_open(fpath):
+--------down------
+936
+    return contextlib.closing(shelve.open(fpath))
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_path.py
+1158076, 690
+---------up-------
+671
+def touch(fpath, times=None, verbose=True):
+--------down------
+691
+    try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_path.py
+19859840, 1047
+---------up-------
+1026
+def iglob(dpath, pattern=None, recursive=False, with_files=True, with_dirs=True,
+--------down------
+1048
+    from utool import util_iter
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_path.py
+23598461, 2133
+---------up-------
+2128
+def get_win32_short_path_name(long_name):
+--------down------
+2150
+    import ctypes
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_path.py
+23598289, 2134
+---------up-------
+2128
+def get_win32_short_path_name(long_name):
+--------down------
+2150
+    import ctypes
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_path.py
+1447575, 2546
+---------up-------
+2540
+def win_shortcut(source, link_name):
+--------down------
+2547
+    if True:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_path.py
+20794, 2672
+---------up-------
+2661
+def remove_broken_links(dpath, verbose=True):
+--------down------
+2700
+    fname_list = [join(dpath, fname) for fname in os.listdir(dpath)]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_graph.py
+17078696, 79
+---------up-------
+74
+def nx_transitive_reduction(G, mode=1):
+--------down------
+107
+    import utool as ut
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_graph.py
+16150557, 1589
+---------up-------
+1573
+def subgraph_from_edges(G, edge_list, ref_back=True):
+--------down------
+1592
+    sub_nodes = list({y for x in edge_list for y in x[0:2]})
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/utool/util_graph.py
+33332462, 2137
+---------up-------
+2136
+def nx_mincut_edges_weighted(G, s, t, capacity='weight'):
+--------down------
+2137
+    cut_weight, partitions = nx.minimum_cut(G, s, t, capacity=capacity)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/_broken/_grave.py
+11125212, 49
+---------up-------
+46
+def roundrobin(*iterables):
+--------down------
+51
+    pending = len(iterables)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/doorkeeper/utool/_broken/util_distances.py
+15706339, 118
+--------down------
+156
+if __name__ == '__main__':

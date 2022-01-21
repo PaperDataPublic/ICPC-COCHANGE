@@ -1,0 +1,2871 @@
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+15706339
+=================
+1015307
+count:1
+
+    Args:
+       self (object): class instance
+       func : some function whos first arugment is a class instance
+       method_name (str) : default=func.__name__, if specified renames the method
+       class_ (type) : if func is an unbound method of this class
+
+
+    References:
+        http://stackoverflow.com/questions/1015307/python-bind-an-unbound-method
+    """
+    if override is not None:
+        # TODO depcirate allow_override
+        allow_override = override
+    if method_name is None:
+        method_name = get_funcname(func)
+    if force:
+        allow_override = True
+        allow_main = True
+    old_method = getattr(self, method_name, None)
+=================
+13850114
+count:1
+    setattr(self, method_name, new_method)
+
+
+def inject_func_as_property(self, func, method_name=None, class_=None):
+    """
+    WARNING:
+        properties are more safely injected using metaclasses
+
+    References:
+        http://stackoverflow.com/questions/13850114/dynamically-adding-methods-with-or-without-metaclass-in-python
+    """
+    if method_name is None:
+        method_name = get_funcname(func)
+    #new_method = func.__get__(self, self.__class__)
+    new_property = property(func)
+    setattr(self.__class__, method_name, new_property)
+
+
+def inject_func_as_unbound_method(class_, func, method_name=None):
+    """ This is actually quite simple """
+=================
+8122734
+count:1
+    return ForwardingMetaclass
+
+
+def test_reloading_metaclass():
+    r"""
+    CommandLine:
+        python -m utool.util_class --test-test_reloading_metaclass
+
+    References:
+        http://stackoverflow.com/questions/8122734/pythons-imp-reload-function-is-not-working
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_class import *  # NOQA
+        >>> result = test_reloading_metaclass()
+        >>> print(result)
+    """
+    import utool as ut
+    testdir = ut.ensure_app_cache_dir('utool', 'metaclass_tests')
+    testfoo_fpath = ut.unixjoin(testdir, 'testfoo.py')
+=================
+27914204
+count:1
+        parent_globals (None):
+        exec_lines (None):
+        remove_pyqt_hook (bool):
+        N (int):
+
+    CommandLine:
+        python -m utool.util_dbg --test-embed
+
+    References:
+       http://stackoverflow.com/questions/27911570/can-you-specify-a-command-to-run-after-you-embed-into-ipython/27914204#27914204
+       http://stackoverflow.com/questions/15167200/how-do-i-embed-an-ipython-interpreter-into-an-application-running-in-an-ipython
+
+    Notes:
+        Use cases I want to achieve
+
+        1) Simply stop execution and embed in an IPython terminal session
+        2) Like case 1, but execute a specific set of command (eg '%gui qt')
+           AFTER IPython has started
+        3) Embed and pause GUI execution (this is just case 1)
+        3) Embed and let GUI execution continue while embeded. (basically just need case 2)
+=================
+15167200
+count:1
+        exec_lines (None):
+        remove_pyqt_hook (bool):
+        N (int):
+
+    CommandLine:
+        python -m utool.util_dbg --test-embed
+
+    References:
+       http://stackoverflow.com/questions/27911570/can-you-specify-a-command-to-run-after-you-embed-into-ipython/27914204#27914204
+       http://stackoverflow.com/questions/15167200/how-do-i-embed-an-ipython-interpreter-into-an-application-running-in-an-ipython
+
+    Notes:
+        Use cases I want to achieve
+
+        1) Simply stop execution and embed in an IPython terminal session
+        2) Like case 1, but execute a specific set of command (eg '%gui qt')
+           AFTER IPython has started
+        3) Embed and pause GUI execution (this is just case 1)
+        3) Embed and let GUI execution continue while embeded. (basically just need case 2)
+
+=================
+15411967
+count:1
+def quit(num=None, embed_=False):
+    frame = get_parent_frame()
+    return quitflag(num, embed_=embed_,
+                    parent_locals=frame.f_globals,
+                    parent_globals=frame.f_locals)
+
+
+def in_jupyter_notebook():
+    """
+    http://stackoverflow.com/questions/15411967/how-can-i-check-if-code-is-executed-in-the-ipython-notebook
+    """
+    try:
+        cfg = get_ipython().config
+        #print('cfg = %s' % (ut.repr4(cfg),))
+        #x = cfg['IPKernelApp']['parent_appname']
+        # might not work if using jupyter-console
+        if cfg['IPKernelApp']['connection_file'].count('jupyter'):
+            return True
+        else:
+            return False
+=================
+2663612
+count:1
+        ctx.flags[decimal.Inexact] = False
+        ctx.prec *= 2
+        result = ctx.divide(numerator, denominator)
+    return result
+
+
+def sigfig_str(number, sigfig):
+    """
+    References:
+        http://stackoverflow.com/questions/2663612/nicely-repr-float-in-python
+    """
+    assert(sigfig > 0)
+    try:
+        d = decimal.Decimal(number)
+    except TypeError:
+        d = float_to_decimal(float(number))
+    sign, digits, exponent = d.as_tuple()
+    if len(digits) < sigfig:
+        digits = list(digits)
+        digits.extend([0] * (sigfig - len(digits)))
+=================
+8906926
+count:1
+
+def get_timedelta_str(timedelta, exclude_zeros=False):
+    """
+    get_timedelta_str
+
+    Returns:
+        str: timedelta_str, formated time string
+
+    References:
+        http://stackoverflow.com/questions/8906926/formatting-python-timedelta-objects
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_time import *  # NOQA
+        >>> timedelta = get_unix_timedelta(10)
+        >>> timedelta_str = get_timedelta_str(timedelta)
+        >>> result = (timedelta_str)
+        >>> print(result)
+        10 seconds
+    """
+=================
+434287
+count:1
+    r"""
+    generates successive n-sized chunks from ``iterable``.
+
+    Args:
+        iterable (list): input to iterate over
+        chunksize (int): size of sublist to return
+        bordermode (str): None, 'cycle', or 'replicate'
+
+    References:
+        http://stackoverflow.com/questions/434287/iterate-over-a-list-in-chunks
+
+    SeeAlso:
+        util_progress.get_num_chunks
+
+    CommandLine:
+        python -m utool.util_iter --exec-ichunks --show
+
+    Timeit:
+        >>> import utool as ut
+        >>> setup = ut.codeblock('''
+=================
+434287
+count:1
+
+def ichunks_list(list_, chunksize):
+    """
+    input must be a list.
+
+    SeeAlso:
+        ichunks
+
+    References:
+        http://stackoverflow.com/questions/434287/iterate-over-a-list-in-chunks
+    """
+    return (list_[ix:ix + chunksize] for ix in range(0, len(list_), chunksize))
+    #return (list_[sl] for sl in ichunk_slices(len(list_), chunksize))
+
+
+def ichunk_slices(total, chunksize):
+    for ix in range(0, total, chunksize):
+        yield slice(ix, ix + chunksize)
+
+
+=================
+12561063
+count:1
+    """
+    if isinstance(str_, __STR__):
+        return str_
+    else:
+        try:
+            return __STR__(str_)
+        except UnicodeDecodeError:
+            if str_.startswith(codecs.BOM_UTF8):
+                # Can safely remove the utf8 marker
+                # http://stackoverflow.com/questions/12561063/python-extract-data-from-file
+                str_ = str_[len(codecs.BOM_UTF8):]
+            return str_.decode('utf-8')
+    #if not isinstance(str_, __STR__) and is_byte_encoded_unicode(str_):
+    #    return str_.decode('utf-8')
+    #else:
+=================
+24873302
+count:1
+        >>> ut.quit_if_noshow()
+    """
+    import webbrowser
+    import utool as ut
+    pref_list = ut.ensure_iterable(pref_list)
+    error_list = []
+
+    # Hack for finding chrome on win32
+    if ut.WIN32:
+        # http://stackoverflow.com/questions/24873302/webbrowser-chrome-exe-does-not-work
+        win32_chrome_fpath = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe'
+        win32_chrome_browsername = win32_chrome_fpath + ' %s'
+        win32_map = {
+            'chrome': win32_chrome_browsername,
+            'google-chrome': win32_chrome_browsername,
+        }
+        for browsername, win32_browsername in win32_map.items():
+            index = ut.listfind(pref_list, browsername)
+            if index is not None and True:  # ut.checkpath(win32_browsername):
+                pref_list.insert(index + 1, win32_browsername)
+=================
+15644964
+count:1
+
+    Args:
+        url (str): url to download
+        filename (str): path to download to. Defaults to basename of url
+        spoof (bool): if True pretends to by Firefox
+        iri_fallback : falls back to requests get call if there is a UnicodeError
+
+    References:
+        http://blog.moleculea.com/2012/10/04/urlretrieve-progres-indicator/
+        http://stackoverflow.com/questions/15644964/python-progress-bar-and-downloads
+        http://stackoverflow.com/questions/16694907/how-to-download-large-file-in-python-with-requests-py
+
+    TODO:
+        Delete any partially downloaded files
+
+    Ignore:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_grabdata import *  # NOQA
+        >>> url = 'http://www.jrsoftware.org/download.php/ispack.exe'
+        >>> fpath = download_url(url)
+=================
+16694907
+count:1
+    Args:
+        url (str): url to download
+        filename (str): path to download to. Defaults to basename of url
+        spoof (bool): if True pretends to by Firefox
+        iri_fallback : falls back to requests get call if there is a UnicodeError
+
+    References:
+        http://blog.moleculea.com/2012/10/04/urlretrieve-progres-indicator/
+        http://stackoverflow.com/questions/15644964/python-progress-bar-and-downloads
+        http://stackoverflow.com/questions/16694907/how-to-download-large-file-in-python-with-requests-py
+
+    TODO:
+        Delete any partially downloaded files
+
+    Ignore:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_grabdata import *  # NOQA
+        >>> url = 'http://www.jrsoftware.org/download.php/ispack.exe'
+        >>> fpath = download_url(url)
+        >>> print(fpath)
+=================
+1112343
+count:1
+    """
+    data = url_read(url, verbose)
+    text = data.decode('utf8')
+    return text
+
+
+def experiment_download_multiple_urls(url_list):
+    r"""
+    References:
+        http://stackoverflow.com/questions/1112343/capture-sigint-in-python
+        http://stackoverflow.com/questions/16694907/download-large-file-requests
+        GracefulInterruptHandler
+
+    Ignore:
+        import signal
+        import sys
+        def signal_handler(signal, frame):
+                print('You pressed Ctrl+C!')
+                sys.exit(0)
+        signal.signal(signal.SIGINT, signal_handler)
+=================
+16694907
+count:1
+    data = url_read(url, verbose)
+    text = data.decode('utf8')
+    return text
+
+
+def experiment_download_multiple_urls(url_list):
+    r"""
+    References:
+        http://stackoverflow.com/questions/1112343/capture-sigint-in-python
+        http://stackoverflow.com/questions/16694907/download-large-file-requests
+        GracefulInterruptHandler
+
+    Ignore:
+        import signal
+        import sys
+        def signal_handler(signal, frame):
+                print('You pressed Ctrl+C!')
+                sys.exit(0)
+        signal.signal(signal.SIGINT, signal_handler)
+        print('Press Ctrl+C')
+=================
+23149218
+count:1
+    Returns if a value is a python builtin function
+
+    Args:
+        item (object):
+
+    Returns:
+        bool: flag
+
+    References:
+        http://stackoverflow.com/questions/23149218/check-if-a-python-function-is-builtin
+
+    CommandLine:
+        python -m utool._internal.meta_util_six is_builtin
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool._internal.meta_util_six import *  # NOQA
+        >>> item = zip
+        >>> flag = is_bateries_included(item)
+        >>> result = ('flag = %s' % (str(flag),))
+=================
+7456933
+count:1
+    #import ast
+    #astdump.indented(pt)
+    #print(ast.dump(pt, include_attributes=True))
+    print(astor.dump(pt))
+
+
+def special_parse_process_python_code(sourcecode):
+    r"""
+    pip install redbaron
+    http://stackoverflow.com/questions/7456933/python-ast-with-preserved-comments
+
+    CommandLine:
+        python -m utool.util_inspect special_parse_process_python_code --show
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_inspect import *  # NOQA
+        >>> import utool as ut
+        >>> sourcecode = ut.read_from(ut.util_inspect.__file__)
+        >>> result = special_parse_process_python_code(sourcecode)
+=================
+20445733
+count:1
+        sourcecode (str):
+
+    Returns:
+        list: func_names
+
+    CommandLine:
+        python -m utool.util_inspect parse_import_names
+
+    References:
+        https://stackoverflow.com/questions/20445733/how-to-tell-which-modules-have-been-imported-in-some-source-code
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_inspect import *  # NOQA
+        >>> import utool as ut
+        >>> fpath = ut.util_inspect.__file__.replace('.pyc', '.py')
+        >>> #fpath = ut.truepath('~/code/bintrees/bintrees/avltree.py')
+        >>> sourcecode = ut.readfrom(fpath)
+        >>> func_names = parse_import_names(sourcecode)
+        >>> result = ('func_names = %s' % (ut.repr2(func_names),))
+=================
+23576681
+count:1
+        #if ut.SUPER_STRICT:
+        #    raise
+    return child_funcnamess
+    #print('child_funcnamess = %r' % (child_funcnamess,))
+
+
+def is_valid_python(code, reraise=True, ipy_magic_workaround=False):
+    """
+    References:
+        http://stackoverflow.com/questions/23576681/python-check-syntax
+    """
+    import ast
+    try:
+        if ipy_magic_workaround:
+            code = '\n'.join(['pass' if re.match(r'\s*%[a-z]*', line) else line for line in code.split('\n')])
+        ast.parse(code)
+    except SyntaxError:
+        if reraise:
+            import utool as ut
+            print('Syntax Error')
+=================
+4801403
+count:1
+        elif isinstance(self.value, list):
+            for v in self.value:
+                for x in v.itertype(type_):
+                    yield x
+
+
+def parse_nestings2(string, nesters=['()', '[]', '<>', "''", '""'], escape='\\'):
+    r"""
+    References:
+        http://stackoverflow.com/questions/4801403/pyparsing-nested-mutiple-opener-clo
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_gridsearch import *  # NOQA
+        >>> import utool as ut
+        >>> string = r'lambda u: sign(u) * abs(u)**3.0 * greater(u, 0)'
+        >>> parsed_blocks = parse_nestings2(string)
+        >>> print('parsed_blocks = {!r}'.format(parsed_blocks))
+        >>> string = r'lambda u: sign("\"u(\'fdfds\')") * abs(u)**3.0 * greater(u, 0)'
+        >>> parsed_blocks = parse_nestings2(string)
+=================
+4801403
+count:1
+            print('PARSED_BLOCKS = ' + ut.repr3(parsed_blocks, nl=1))
+    else:
+        parsed_blocks = []
+    return parsed_blocks
+
+
+def parse_nestings(string, only_curl=False):
+    r"""
+    References:
+        http://stackoverflow.com/questions/4801403/pyparsing-nested-mutiple-opener-clo
+
+    CommandLine:
+        python -m utool.util_gridsearch parse_nestings:1 --show
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_gridsearch import *  # NOQA
+        >>> import utool as ut
+        >>> string = r'lambda u: sign(u) * abs(u)**3.0 * greater(u, 0)'
+        >>> parsed_blocks = parse_nestings(string)
+=================
+4801403
+count:1
+        if debug_:
+            print('PARSED_BLOCKS = ' + ut.repr3(parsed_blocks, nl=1))
+    else:
+        parsed_blocks = []
+    return parsed_blocks
+
+
+def parse_cfgstr3(string, debug=None):
+    r"""
+    http://stackoverflow.com/questions/4801403/how-can-i-use-pyparsing-to-parse-nested-expressions-that-have-mutiple-opener-clo
+
+    Ignore:
+        >>> from utool.util_gridsearch import *  # NOQA
+        cfgopt_strs = 'f=2,c=[(1,2),(3,4)],d=1,j=[[1,2],[3,4]],foobar,x="[fdsfds",y="]fdsfds",e=[[1,2],[3,4]],[]'
+        string  =  cfgopt_strs
+        parse_cfgstr3(string)
+
+    CommandLine:
+        python -m utool.util_gridsearch parse_cfgstr3 --show
+
+=================
+16945518
+count:1
+
+def argmax(input_, multi=False):
+    """
+    Returns index / key of the item with the largest value.
+
+    Args:
+        input_ (dict or list):
+
+    References:
+        http://stackoverflow.com/questions/16945518/python-argmin-argmax
+
+    Ignore:
+        list_ = np.random.rand(10000).tolist()
+        %timeit list_.index(max(list_))
+        %timeit max(enumerate(list_), key=operator.itemgetter(1))[0]
+        %timeit max(enumerate(list_), key=lambda x: x[1])[0]
+        %timeit max(range(len(list_)), key=list_.__getitem__)
+
+        input_ = dict_
+        list_ = np.random.rand(100000).tolist()
+=================
+7352684
+count:1
+            valx += 1
+    return missing_values
+
+
+def group_consecutives(data, stepsize=1):
+    """
+    Return list of consecutive lists of numbers from data (number list).
+
+    References:
+        http://stackoverflow.com/questions/7352684/how-to-find-the-groups-of-consecutive-elements-from-an-array-in-numpy
+    """
+    run = []
+    result = [run]
+    expect = None
+    for item in data:
+        if (item == expect) or (expect is None):
+            run.append(item)
+        else:
+            run = [item]
+            result.append(run)
+=================
+7352684
+count:1
+
+    Args:
+        data (?):
+        stepsize (int):
+
+    Returns:
+        list: list of ndarrays
+
+    References:
+        http://stackoverflow.com/questions/7352684/how-to-find-the-groups-of-consecutive-elements-from-an-array-in-numpy
+
+    CommandLine:
+        python -m utool.util_list --test-group_consecutives
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_list import *  # NOQA
+        >>> # build test data
+        >>> data = np.array([  0,   1,   2,   3,   4, 320, 636, 637, 638, 639])
+        >>> stepsize = 1
+=================
+9457832
+count:1
+
+    Args:
+        list_ (list):
+        n (int):
+
+    Returns:
+        list:
+
+    References:
+        http://stackoverflow.com/questions/9457832/python-list-rotation
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_list import *  # NOQA
+        >>> list_ = [1, 2, 3, 4, 5]
+        >>> n = 2
+        >>> result = list_roll(list_, n)
+        >>> print(result)
+        [4, 5, 1, 2, 3]
+
+=================
+15047116
+count:1
+def fibonacci_iterative(n):
+    """
+    Args:
+        n (int):
+
+    Returns:
+        int: the n-th fibonacci number
+
+    References:
+        http://stackoverflow.com/questions/15047116/iterative-alg-fib
+
+    CommandLine:
+        python -m utool.util_alg fibonacci_iterative
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_alg import *  # NOQA
+        >>> import utool as ut
+        >>> with ut.Timer('fib iter'):
+        >>>     series = [fibonacci_iterative(n) for n in range(20)]
+=================
+141779
+count:1
+
+    Returns:
+        tuple: (total_value, items_subset) - a pair whose first element is the
+            sum of values in the most valuable subsequence, and whose second
+            element is the subsequence. Subset may be different depending on
+            implementation (ie top-odwn recusrive vs bottom-up iterative)
+
+    References:
+        http://codereview.stackexchange.com/questions/20569/dynamic-programming-solution-to-knapsack-problem
+        http://stackoverflow.com/questions/141779/solving-the-np-complete-problem-in-xkcd
+        http://www.es.ele.tue.nl/education/5MC10/Solutions/knapsack.pdf
+
+    CommandLine:
+        python -m utool.util_alg --test-knapsack
+
+        python -m utool.util_alg --test-knapsack:0
+        python -m utool.util_alg --exec-knapsack:1
+
+    Ignore:
+        annots_per_view = 2
+=================
+3433486
+count:1
+        >>> def func(x, a, b, c, d):
+        >>>     return a * np.exp(-c * x) + d
+        >>> #a*x**3 + b*x**2 +c*x + d
+        >>> y = np.array(time_list)
+        >>> y = np.array(ut.cumsum(y))
+        >>> x = np.arange(len(y))
+        >>> #popt, pcov = curve_fit(func, x, y, p0=(1, 1e-6, 1))
+        >>> #print('pcov = %r' % (pcov,))
+        >>> #print('popt = %r' % (popt,))
+        >>> # http://stackoverflow.com/questions/3433486/-curve-fitting-in-python
+        >>> pt.plt.plot(x[::num//50], y[::num//50], 'rx', label='measured data')
+        >>> #x2 = np.arange(len(y) * 2)
+        >>> #pt.plt.plot(x2, func(x2, *popt), 'b', label="Fitted Curve") #same as line above \/
+        >>> #pt.plt.legend(loc='upper left')
+        >>> ut.show_if_requested()
+    """
+    import utool as ut
+    #time_list = []
+    for x in range(0, num):
+        with ut.Timer(verbose=False) as t:
+=================
+6800193
+count:1
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_alg import *  # NOQA
+        >>> import utool as ut
+        >>> result = sorted(ut.factors(10))
+        >>> print(result)
+        [1, 2, 5, 10]
+
+    References:
+        http://stackoverflow.com/questions/6800193/finding-all-the-factors
+    """
+    return set(reduce(list.__add__,
+                      ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0)))
+
+
+if __name__ == '__main__':
+    """
+    CommandLine:
+        python -m utool.util_alg
+        python -m utool.util_alg --allexamples
+=================
+7436801
+count:1
+def is_local_port_open(port):
+    """
+    Args:
+        port (int):
+
+    Returns:
+        bool:
+
+    References:
+        http://stackoverflow.com/questions/7436801/identifying-listening-ports-using-python
+
+    CommandLine:
+        python -m utool.util_web is_local_port_open --show
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_web import *  # NOQA
+        >>> port = 32183
+        >>> assert is_local_port_open(80) is False, 'port 80 should always be closed'
+        >>> assert is_local_port_open(port) is True, 'maybe this port is actually used?'
+=================
+14775916
+count:1
+        raise ValueError('module_name or module must be exclusively specified')
+    if register is True:
+        _add_injected_module(module)
+    return module
+
+
+def colored_pygments_excepthook(type_, value, tb):
+    """
+    References:
+        https://stackoverflow.com/questions/14775916/color-exceptions-python
+
+    CommandLine:
+        python -m utool.util_inject --test-colored_pygments_excepthook
+
+    """
+    tbtext = ''.join(traceback.format_exception(type_, value, tb))
+    try:
+        from utool import util_str
+        formatted_text = util_str.highlight_text(tbtext, lexer_name='pytb',
+                                                 stripall=True)
+=================
+18007995
+count:1
+    # multiple lines
+    """
+    #import jedi
+    #script = jedi.Script(text, line=1, column=None, path='')
+    def parentesis_are_balanced(line):
+        """
+        helper
+
+        References:
+            http://stackoverflow.com/questions/18007995/recursive-paren-balance
+        """
+        def balanced(str_, i=0, cnt=0, left='(', right=')'):
+            if i == len(str_):
+                return cnt == 0
+            if cnt < 0:
+                return False
+            if str_[i] == left:
+                return  balanced(str_, i + 1, cnt + 1)
+            elif str_[i] == right:
+                return  balanced(str_, i + 1, cnt - 1)
+=================
+1526794
+count:1
+        assert repo.is_gitrepo(), 'cannot pull a nongit repo'
+        _syscmd('git pull')
+        if has_submods:
+            _syscmd('git submodule init')
+            _syscmd('git submodule update')
+
+    def rename_branch(repo, old_branch_name, new_branch_name, remote='origin'):
+        r"""
+        References:
+            http://stackoverflow.com/questions/1526794/rename?answertab=votes#tab-top
+            http://stackoverflow.com/questions/9524933/renaming-a-branch-in-github
+
+        CommandLine:
+            python -m utool.util_git --test-rename_branch --old=mymaster --new=ibeis_master
+
+        Example:
+            >>> # DISABLE_DOCTEST
+            >>> # SCRIPT
+            >>> from utool.util_git import *  # NOQA
+            >>> repo = ut.get_argval('--repo', str, '.')
+=================
+9524933
+count:1
+        _syscmd('git pull')
+        if has_submods:
+            _syscmd('git submodule init')
+            _syscmd('git submodule update')
+
+    def rename_branch(repo, old_branch_name, new_branch_name, remote='origin'):
+        r"""
+        References:
+            http://stackoverflow.com/questions/1526794/rename?answertab=votes#tab-top
+            http://stackoverflow.com/questions/9524933/renaming-a-branch-in-github
+
+        CommandLine:
+            python -m utool.util_git --test-rename_branch --old=mymaster --new=ibeis_master
+
+        Example:
+            >>> # DISABLE_DOCTEST
+            >>> # SCRIPT
+            >>> from utool.util_git import *  # NOQA
+            >>> repo = ut.get_argval('--repo', str, '.')
+            >>> remote = ut.get_argval('--remote', str, 'origin')
+=================
+8226278
+count:1
+            pick c612e98 wip
+            pick b298598 Fixed tablename error
+            pick 1120a87 wip
+            pick f6c4838 wip
+            pick 7f92575 wip
+            ''')
+
+    Ignore:
+        def squash_consecutive_commits_with_same_message():
+            # http://stackoverflow.com/questions/8226278/git-alias-to-squash-all-commits-with-a-particular-commit-message
+            # Can do interactively with this. Can it be done automatically and pay attention to
+            # Timestamps etc?
+            git rebase --interactive HEAD~40 --autosquash
+            git rebase --interactive $(git merge-base HEAD master) --autosquash
+
+            # Lookbehind correct version
+            %s/\([a-z]* [a-z0-9]* wip\n\)\@<=pick \([a-z0-9]*\) wip/squash \2 wip/gc
+
+           # THE FULL NON-INTERACTIVE AUTOSQUASH SCRIPT
+           # TODO: Dont squash if there is a one hour timedelta between commits
+=================
+41048643
+count:1
+    pickling, and copying.
+
+    Howver, try to never assign this value to a persistant variable.  Use this
+    class sparingly.
+
+    CommandLine:
+        python -m utool.util_const _NoParamType
+
+    References:
+        http://stackoverflow.com/questions/41048643/a-second-none
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> import utool as ut
+        >>> from utool import util_const
+        >>> from utool.util_const import _NoParamType, NoParam
+        >>> from six.moves import cPickle as pickle
+        >>> import copy
+        >>> id_ = id(NoParam)
+        >>> versions = {
+=================
+6760685
+count:1
+#         if cls not in cls._instances:
+#             cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
+#         return cls._instances[cls]
+
+
+# import six
+# @six.add_metaclass(Singleton)
+# class _NoParamType2(object):
+#     """
+#     http://stackoverflow.com/questions/6760685/creating-a-singleton-in-python
+
+#     CommandLine:
+#         python -m utool.util_const _NoParamType2
+
+#     Example:
+#         >>> # DISABLE_DOCTEST
+#         >>> from utool.util_const import _NoParamType2
+#         >>> import utool as ut
+#         >>> from six.moves import cPickle as pickle
+#         >>> import copy
+=================
+938733
+count:1
+        utime = resource.getrusage(resource.RUSAGE_SELF).ru_utime
+        return utime
+
+    def peak_memory():
+        """Returns the resident set size (the portion of
+        a process's memory that is held in RAM.)
+        """
+        # MAXRSS is expressed in kilobytes. Convert to bytes
+        # FIXME: MAXRSS is NOT expressed in kilobytes. use resource.getpagesize to Convert to bytes
+        # References: http://stackoverflow.com/questions/938733/total-memory-used-by-python-process
+        #resource.getpagesize
+        maxrss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss * 1024
+        return maxrss
+
+    def get_resource_limits():
+        #rlimit_keys = [key for key in six.iterkeys(resource.__dict__) if key.startswith('RLIMIT_')]
+        #print('\n'.join(['(\'%s\', resource.%s),' % (key.replace('RLIMIT_', ''), key) for key in rlimit_keys]))
+        rlim_keytups = [
+            ('MEMLOCK', resource.RLIMIT_MEMLOCK),
+            ('NOFILE', resource.RLIMIT_NOFILE),
+=================
+1331471
+count:1
+        ('[psutil] available = %s' % util_str.byte_str2(available_memory())),
+        ('[psutil] used      = %s' % util_str.byte_str2(used_memory())),
+        ('[psutil] current   = %s' % util_str.byte_str2(current_memory_usage())),
+    ])
+
+
+def get_python_datastructure_sizes():
+    """
+    References:
+        http://stackoverflow.com/questions/1331471/in-memory-size-of-python-stucture
+
+    CommandLine:
+        python -m utool.util_resources --test-get_python_datastructure_sizes
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_resources import *  # NOQA
+        >>> import utool as ut  # NOQA
+        >>> type_sizes = get_python_datastructure_sizes()
+        >>> result = ut.repr4(type_sizes, sorted_=True)
+=================
+18625510
+count:1
+
+#class copy_argspec(object):
+#    """
+#    copy_argspec is a signature modifying decorator.
+#    Specifically, it copies the signature from `source_func` to the wrapper, and
+#    the wrapper will call the original function (which should be using *args,
+#    **kwds).  The argspec, docstring, and default values are copied from
+#    src_func, and __module__ and __dict__ from tgt_func.
+#    .. References
+#    http://stackoverflow.com/questions/18625510/how-can-i-programmatically-change-the-argspec-of-a-function-not-in-a-python-de
+#    """
+#    def __init__(self, src_func):
+#        self.argspec = inspect.getargspec(src_func)
+#        self.src_doc = src_func.__doc__
+#        self.src_defaults = src_func.func_defaults
+#    def __call__(self, tgt_func):
+#        try:
+#            tgt_argspec = inspect.getargspec(tgt_func)
+#            need_self = False
+#            if len(tgt_argspec) > 0 and len(tgt_argspec[0]) > 0 and tgt_argspec[0][0] == 'self':
+=================
+1697501
+count:1
+        return func
+    return dummy_args_closure
+
+
+class classproperty(property):
+    """
+    Decorates a method turning it into a classattribute
+
+    References:
+        https://stackoverflow.com/questions/1697501/python-staticmethod-with-property
+    """
+    def __get__(self, cls, owner):
+        return classmethod(self.fget).__get__(None, owner)()
+
+
+if __name__ == '__main__':
+    """
+    CommandLine:
+        python -c "import utool, utool.util_decor; utool.doctest_funcs(utool.util_decor)"
+        python -m utool.util_decor
+=================
+24207353
+count:1
+    return (markdown_header + '\n' +
+            ut.indent(repr_single_for_md(markdown), ' ' * 2) +
+            '\n' + markdown_footer)
+
+
+def make_notebook(cell_list):
+    """
+    References:
+        # Change cell width
+        http://stackoverflow.com/questions/21971449/how-do-i-increase-the-cell-width-of-the-ipython-notebook-in-my-browser/24207353#24207353
+    """
+    import utool as ut
+    header = ut.codeblock(
+        '''
+        {
+         "cells": [
+        '''
+    )
+
+    footer = ut.codeblock(
+=================
+16259923
+count:1
+def escape_latex(text):
+    r"""
+    Args:
+        text (str): a plain text message
+
+    Returns:
+        str: the message escaped to appear correctly in LaTeX
+
+    References:
+        http://stackoverflow.com/questions/16259923/how-can-i-escape-characters
+    """
+    conv = {
+        '&': r'\&',
+        '%': r'\%',
+        '$': r'\$',
+        '#': r'\#',
+        '_': r'\_',
+        '{': r'\{',
+        '}': r'\}',
+        '~': r'\textasciitilde{}',
+=================
+2892931
+count:1
+        \end{figure}
+        '''
+    )
+    figure_str = figure_fmtstr % (figure_body)
+    return figure_str
+
+
+def long_substr(strlist):
+    # Longest common substring
+    # http://stackoverflow.com/questions/2892931/longest-common-substring-from-more-than-two-strings-python
+    substr = ''
+    if len(strlist) > 1 and len(strlist[0]) > 0:
+        for i in range(len(strlist[0])):
+            for j in range(len(strlist[0]) - i + 1):
+                if j > len(substr) and is_substr(strlist[0][i:i + j], strlist):
+                    substr = strlist[0][i:i + j]
+    return substr
+
+
+def is_substr(find, strlist):
+=================
+28455982
+count:1
+
+#     id(_typelessdata[-1])
+#     id(_typelessdata[0])
+
+
+#     from numpy.core.numeric import _typelessdata
+#     _typelessdata
+
+#     References:
+#         http://stackoverflow.com/questions/28455982/why-are-there-two-np-int64s
+#         -in-numpy-core-numeric-typelessdata-why-is-numpy-in/28461928#28461928
+#     """
+#     data = arr
+#     strvals = kwargs.get('strvals', False)
+#     # precision = kwargs.get('precision', None)
+#     # suppress_small = kwargs.get('supress_small', None)
+#     # max_line_width = kwargs.get('max_line_width', None)
+#     # with_dtype = kwargs.get('with_dtype', not strvals)
+#     newlines = kwargs.pop('nl', kwargs.pop('newlines', 1))
+
+=================
+2247205
+count:1
+        itemstr_list = ut.take(itemstr_list, sortx)
+    return itemstr_list
+
+
+def utf8_len(str_):
+    """
+    returns num printed characters in utf8
+
+    Returns:
+        http://stackoverflow.com/questions/2247205/python-returning-the-wrong-length-of-string-when-using-special-characters
+    """
+    import unicodedata
+    return len(unicodedata.normalize('NFC', ensure_unicode(str_)))
+
+
+def horiz_string(*args, **kwargs):
+    """
+    Horizontally concatenates strings reprs preserving indentation
+
+    Concats a list of objects ensuring that the next item in the list
+=================
+14693701
+count:1
+    # the pos-th character to align
+    lpos = pos
+    rpos = lpos + 1
+
+    tup_list = [line.split(character) for line in line_list]
+
+    handle_ansi = True
+    if handle_ansi:
+        # Remove ansi from length calculation
+        # References: http://stackoverflow.com/questions/14693701remove-ansi
+        ansi_escape = re.compile(r'\x1b[^m]*m')
+
+    # Find how much padding is needed
+    maxlen = 0
+    for tup in tup_list:
+        if len(tup) >= rpos + 1:
+            if handle_ansi:
+                tup = [ansi_escape.sub('', x) for x in tup]
+            left_lenlist = list(map(len, tup[0:rpos]))
+            left_len = sum(left_lenlist) + lpos * len(replchar)
+=================
+14693701
+count:1
+        else:
+            new_lines.append(replchar.join(tup))
+    return new_lines
+
+
+def strip_ansi(text):
+    """
+    Removes all ansi directives from the string
+    Helper to remove ansi from length calculation
+    References: http://stackoverflow.com/questions/14693701remove-ansi
+    """
+    ansi_escape = re.compile(r'\x1b[^m]*m')
+    return ansi_escape.sub('', text)
+
+
+# FIXME: HASHLEN is a global var in util_hash
+def long_fname_format(fmt_str, fmt_dict, hashable_keys=[], max_len=64,
+                      hashlen=16, ABS_MAX_LEN=255, hack27=False):
+    r"""
+    DEPRICATE
+=================
+1175208
+count:1
+        for count, word in enumerate(words)
+    ]
+    title_str = ' '.join(words2)
+    return title_str
+
+
+def to_underscore_case(camelcase_str):
+    r"""
+    References:
+        http://stackoverflow.com/questions/1175208/convert-camelcase
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_str import *  # NOQA
+        >>> camelcase_str = 'UnderscoreFuncname'
+        >>> camel_case_str = to_underscore_case(camelcase_str)
+        >>> result = ('underscore_str = %s' % (str(camel_case_str),))
+        >>> print(result)
+        underscore_str = underscore_funcname
+    """
+=================
+427472
+count:1
+    if ut.get_argflag('--list-testfuncs'):
+        print('Listing testfuncs')
+        test_tuples = ut.get_package_testables(module)
+        result = ut.repr3(test_tuples)
+        print(result)
+
+    #autocomplete_hook(module)
+
+    if ut.get_argflag('--update-bashcomplete'):
+        # http://stackoverflow.com/questions/427472/line-completion-with-custom-commands
+        print('Listing testfuncs')
+        testnames = get_module_completions(module)
+        modname = module if isinstance(module, six.string_types) else module.__name__
+        line = 'complete -W "%s" "%s"' % (' '.join(testnames), modname)
+        bash_completer = ut.unixjoin(ut.ensure_app_resource_dir('ibeis'), 'ibeis_bash_complete.sh')
+        ut.writeto(bash_completer, line)
+        print('ADD TO BASHRC\nsource %s' % (bash_completer,))
+        #print(line)
+        sys.exit(ut.EXIT_SUCCESS)
+
+=================
+427472
+count:1
+        modname = module if isinstance(module, six.string_types) else module.__name__
+        line = 'complete -W "%s" "%s"' % (' '.join(testnames), modname)
+        bash_completer = ut.unixjoin(ut.ensure_app_resource_dir('ibeis'), 'ibeis_bash_complete.sh')
+        ut.writeto(bash_completer, line)
+        print('ADD TO BASHRC\nsource %s' % (bash_completer,))
+        #print(line)
+        sys.exit(ut.EXIT_SUCCESS)
+
+    if ut.get_argflag('--make-bashcomplete'):
+        # http://stackoverflow.com/questions/427472/line-completion-with-custom-commands
+        print('Listing testfuncs')
+        testnames = get_module_completions(module)
+        modname = module if isinstance(module, six.string_types) else module.__name__
+        line = 'complete -W "%s" "%s"' % (' '.join(testnames), modname)
+        print('add the following line to your bashrc')
+        print(line)
+        sys.exit(ut.EXIT_SUCCESS)
+
+    test_funcname = ut.get_argval(
+        ('--test-func', '--tfunc', '--tf', '--testfunc'),
+=================
+11063458
+count:1
+    """
+    Copies text to the clipboard
+
+    CommandLine:
+        pip install pyperclip
+        sudo apt-get install xclip
+        sudo apt-get install xsel
+
+    References:
+        http://stackoverflow.com/questions/11063458/python-script-to-copy-text-to-clipboard
+        http://stackoverflow.com/questions/579687/how-do-i-copy-a-string-to-the-clipboard-on-windows-using-python
+
+    Ignore:
+        import pyperclip
+        # Qt is by far the fastest, followed by xsel, and then xclip
+        #
+        backend_order = ['xclip', 'xsel', 'qt', 'gtk']
+        backend_order = ['qt', 'xsel', 'xclip', 'gtk']
+        for be in backend_order:
+            print('be = %r' % (be,))
+=================
+579687
+count:1
+    Copies text to the clipboard
+
+    CommandLine:
+        pip install pyperclip
+        sudo apt-get install xclip
+        sudo apt-get install xsel
+
+    References:
+        http://stackoverflow.com/questions/11063458/python-script-to-copy-text-to-clipboard
+        http://stackoverflow.com/questions/579687/how-do-i-copy-a-string-to-the-clipboard-on-windows-using-python
+
+    Ignore:
+        import pyperclip
+        # Qt is by far the fastest, followed by xsel, and then xclip
+        #
+        backend_order = ['xclip', 'xsel', 'qt', 'gtk']
+        backend_order = ['qt', 'xsel', 'xclip', 'gtk']
+        for be in backend_order:
+            print('be = %r' % (be,))
+            pyperclip.set_clipboard(be)
+=================
+11063458
+count:1
+    # tk_inst.withdraw()
+    # tk_inst.clipboard_clear()
+    # tk_inst.clipboard_append(text)
+    # tk_inst.destroy()
+
+
+def get_clipboard():
+    """
+    References:
+        http://stackoverflow.com/questions/11063458/python-script-to-copy-text-to-clipboard
+    """
+    # import utool as ut
+    import pyperclip
+    _ensure_clipboard_backend()
+    text = pyperclip.paste()
+    # from Tkinter import Tk
+    # tk_inst = Tk()
+    # tk_inst.withdraw()
+    # text = tk_inst.clipboard_get()
+    # tk_inst.destroy()
+=================
+1335507
+count:1
+
+    Args:
+        msg (str):
+        timeout (int):
+
+    Returns:
+        ?: ans
+
+    References:
+        http://stackoverflow.com/questions/1335507/keyboard-input-with-timeout-in-python
+        http://home.wlu.edu/~levys/software/kbhit.py
+        http://stackoverflow.com/questions/3471461/raw-input-and-timeout/3911560#3911560
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_dev import *  # NOQA
+        >>> msg = 'Waiting for input...'
+        >>> timeout = 30
+        >>> ans = input_timeout(msg, timeout)
+        >>> print(ans)
+=================
+3911560
+count:1
+        msg (str):
+        timeout (int):
+
+    Returns:
+        ?: ans
+
+    References:
+        http://stackoverflow.com/questions/1335507/keyboard-input-with-timeout-in-python
+        http://home.wlu.edu/~levys/software/kbhit.py
+        http://stackoverflow.com/questions/3471461/raw-input-and-timeout/3911560#3911560
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_dev import *  # NOQA
+        >>> msg = 'Waiting for input...'
+        >>> timeout = 30
+        >>> ans = input_timeout(msg, timeout)
+        >>> print(ans)
+    """
+    import sys
+=================
+141351
+count:1
+        print(stmt)
+        utool.printex(ex, 'error executing statement', keys=['stmt'])
+        raise
+    return result
+
+
+def memory_dump():
+    """
+    References:
+       http://stackoverflow.com/questions/141351/how-do-i-find-what-is-using-memory-in-a-python-process-in-a-production-system
+    """
+    import cPickle
+    dump = open("memory.pickle", 'w')
+    for obj in gc.get_objects():
+        i = id(obj)
+        size = sys.getsizeof(obj, 0)
+        #    referrers = [id(o) for o in gc.get_referrers(obj) if hasattr(o, '__class__')]
+        referents = [id(o) for o in gc.get_referents(obj) if hasattr(o, '__class__')]
+        if hasattr(obj, '__class__'):
+            cls = str(obj.__class__)
+=================
+2629680
+count:1
+#    return True
+
+
+def _memory_profile(with_gc=False):
+    """
+    Helper for memory debugging. Mostly just a namespace where I experiment with
+    guppy and heapy.
+
+    References:
+        http://stackoverflow.com/questions/2629680/deciding-between-subprocess-multiprocessing-and-thread-in-python
+
+    Reset Numpy Memory::
+        %reset out
+        %reset array
+    """
+    import utool as ut
+    if with_gc:
+        garbage_collect()
+    import guppy
+    hp = guppy.hpy()
+=================
+15605925
+count:1
+                newgroup[key_] = [val_]
+            merged_groups.append(ut.ColumnLists(newgroup))
+        merged_multi = self.__class__.flatten(merged_groups)
+        merged = singles + merged_multi
+        return merged
+
+
+# def fix_autoreload_classes():
+#     """
+#     http://stackoverflow.com/questions/15605925/last-exception-python-prompt
+#     http://stackoverflow.com/questions/31363311/any-way-to-manually-fix-operation-of-super-after-ipython-reload-avoiding-ty
+#     """
+#     tb = sys.last_traceback
+#     val = sys.last_value
+#     next_tb = tb
+#     while next_tb is not None:
+#         this_tb = next_tb
+#         next_tb = this_tb.tb_next
+#     frame = this_tb.tb_frame
+#     code = frame.f_code
+=================
+31363311
+count:1
+            merged_groups.append(ut.ColumnLists(newgroup))
+        merged_multi = self.__class__.flatten(merged_groups)
+        merged = singles + merged_multi
+        return merged
+
+
+# def fix_autoreload_classes():
+#     """
+#     http://stackoverflow.com/questions/15605925/last-exception-python-prompt
+#     http://stackoverflow.com/questions/31363311/any-way-to-manually-fix-operation-of-super-after-ipython-reload-avoiding-ty
+#     """
+#     tb = sys.last_traceback
+#     val = sys.last_value
+#     next_tb = tb
+#     while next_tb is not None:
+#         this_tb = next_tb
+#         next_tb = this_tb.tb_next
+#     frame = this_tb.tb_frame
+#     code = frame.f_code
+#     fpath = code.co_filename
+=================
+33024215
+count:1
+    Combines properties of dicts and heaps
+    Uses a heap for fast minimum/maximum value search
+    Uses a dict for fast read only operations
+
+    CommandLine:
+        python -m utool.util_dev PriorityQueue
+
+    References:
+        http://code.activestate.com/recipes/522995-priority-dict-a-priority-queue-with-updatable-prio/
+        https://stackoverflow.com/questions/33024215/built-in-max-heap-api-in-python
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> import utool as ut
+        >>> items = dict(a=42, b=29, c=40, d=95, e=10)
+        >>> self = ut.PriorityQueue(items)
+        >>> print(self)
+        >>> assert len(self) == 5
+        >>> print(self.pop())
+        >>> assert len(self) == 4
+=================
+5884066
+count:1
+    For example, a class can be hashed in this fashion:
+
+    make_hash([cls.__dict__, cls.__name__])
+
+    A function can be hashed like so:
+
+    make_hash([fn.__dict__, fn.__code__])
+
+    References:
+        http://stackoverflow.com/questions/5884066/hashing-a-python-dictionary
+    """
+    if type(o) == DictProxyType:
+        o2 = {}
+        for k, v in o.items():
+            if not k.startswith("__"):
+                o2[k] = v
+            o = o2
+    if isinstance(o, (set, tuple, list)):
+        return tuple([make_hash(e) for e in o])
+    elif not isinstance(o, dict):
+=================
+3431825
+count:1
+    Args:
+        fpath (str):  file path string
+        blocksize (int): 2 ** 16. Affects speed of reading file
+        hasher (None):  defaults to sha1 for fast (but insecure) hashing
+        stride (int): strides > 1 skip data to hash, useful for faster
+                      hashing, but less accurate, also makes hash dependant on
+                      blocksize.
+
+    References:
+        http://stackoverflow.com/questions/3431825/generating-a-md5-checksum-of-a-file
+        http://stackoverflow.com/questions/5001893/when-should-i-use-sha-1-and-when-should-i-use-sha-2
+
+    CommandLine:
+        python -m utool.util_hash --test-get_file_hash
+        python -m utool.util_hash --test-get_file_hash:0
+        python -m utool.util_hash --test-get_file_hash:1
+
+    Ignore:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_hash import *  # NOQA
+=================
+5001893
+count:1
+        fpath (str):  file path string
+        blocksize (int): 2 ** 16. Affects speed of reading file
+        hasher (None):  defaults to sha1 for fast (but insecure) hashing
+        stride (int): strides > 1 skip data to hash, useful for faster
+                      hashing, but less accurate, also makes hash dependant on
+                      blocksize.
+
+    References:
+        http://stackoverflow.com/questions/3431825/generating-a-md5-checksum-of-a-file
+        http://stackoverflow.com/questions/5001893/when-should-i-use-sha-1-and-when-should-i-use-sha-2
+
+    CommandLine:
+        python -m utool.util_hash --test-get_file_hash
+        python -m utool.util_hash --test-get_file_hash:0
+        python -m utool.util_hash --test-get_file_hash:1
+
+    Ignore:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_hash import *  # NOQA
+        >>> fpath = ut.grab_test_imgpath('patsy.jpg')
+=================
+23565889
+count:1
+
+
+def image_uuid(pil_img):
+    """
+    UNSAFE: DEPRICATE: JPEG IS NOT GAURENTEED TO PRODUCE CONSITENT VALUES ON
+
+    MULTIPLE MACHINES image global unique id
+
+    References:
+        http://stackoverflow.com/questions/23565889/jpeg-images-have-different-pixel-values-across-multiple-devices
+    """
+    print('WARNING DO NOT USE utool.util_hash.image_uuid UNSAFE AND DEPRICATED')
+    # Get the bytes of the image
+    img_bytes_ = pil_img.tobytes()
+    uuid_ = hashable_to_uuid(img_bytes_)
+    return uuid_
+
+
+def augment_uuid(uuid_, *hashables):
+    #from six.moves import reprlib
+=================
+21071448
+count:1
+"""
+If logging is on, utool will overwrite the print function with a logging function
+
+This is a special module which will not get injected into (should it be internal?)
+
+References:
+    # maybe we can do something like this Queue to try fixing error when
+    # when using injected print statments with Qt signals and slots
+    http://stackoverflow.com/questions/21071448/redirecting-stdout-and-stderr-to-a-pyqt4-qtextedit-from-a-secondary-thread
+"""
+from __future__ import absolute_import, division, print_function, unicode_literals
+import six
+from six.moves import builtins, map, zip, range  # NOQA
+from os.path import exists, join, realpath
+import logging
+import logging.config
+import multiprocessing
+import os
+import sys
+=================
+7168790
+count:1
+        # Create root logger
+        __UTOOL_ROOT_LOGGER__ = logging.getLogger('root')
+        __UTOOL_ROOT_LOGGER__.setLevel('DEBUG')
+        # create file handler which logs even debug messages
+        #fh = logging.handlers.WatchedFileHandler(log_fpath)
+        logfile_handler = logging.FileHandler(log_fpath, mode=mode)
+        #stdout_handler = logging.StreamHandler(__UTOOL_STDOUT__)
+        stdout_handler = CustomStreamHandler(__UTOOL_STDOUT__)
+        stdout_handler.terminator = ''
+        # http://stackoverflow.com/questions/7168790/suppress-newline-in-python-logging-module
+        #stdout_handler.terminator = ''
+        add_logging_handler(logfile_handler, format_='file')
+        add_logging_handler(stdout_handler, format_='stdout')
+        __UTOOL_ROOT_LOGGER__.propagate = False
+        __UTOOL_ROOT_LOGGER__.setLevel(logging.DEBUG)
+        # Overwrite utool functions with the logging functions
+
+        def utool_flush(*args):
+            """ flushes whatever is in the current utool write buffer """
+            # Flushes only the stdout handler
+=================
+1653970
+count:1
+     The circular doubly linked list starts and ends with a sentinel element.
+     The sentinel element never gets deleted (this simplifies the algorithm).
+     The prev/next links are weakref proxies (to prevent circular references).
+     Individual links are kept alive by the hard reference in self._map.
+     Those hard references disappear when a key is deleted from an OrderedSet.
+
+    References:
+        http://code.activestate.com/recipes/576696/
+        http://code.activestate.com/recipes/576694/
+        http://stackoverflow.com/questions/1653970/does-python-have-an-ordered-set
+    """
+
+    def __init__(self, iterable=None):
+        self._root = root = _Link()  # sentinel node for doubly linked list
+        root.prev = root.next = root
+        self._map = {}  # key --> link
+        if iterable is not None:
+            self |= iterable
+
+    def __len__(self):
+=================
+7335992
+count:1
+    """
+    returns True if you are running inside a python virtual environment.
+    (DOES NOT WORK IF IN IPYTHON AND USING A VIRTUALENV)
+
+    sys.prefix gives the location of the virtualenv
+
+    Notes:
+        It seems IPython does not respect virtual environments properly.
+        TODO: find a solution
+        http://stackoverflow.com/questions/7335992/ipython-and-virtualenv-ignoring-site-packages
+
+    References:
+        http://stackoverflow.com/questions/1871549/python-determine-if-running-inside-virtualenv
+
+    CommandLine:
+        python -m utool.util_sysreq in_virtual_env
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_sysreq import *  # NOQA
+=================
+1871549
+count:1
+
+    sys.prefix gives the location of the virtualenv
+
+    Notes:
+        It seems IPython does not respect virtual environments properly.
+        TODO: find a solution
+        http://stackoverflow.com/questions/7335992/ipython-and-virtualenv-ignoring-site-packages
+
+    References:
+        http://stackoverflow.com/questions/1871549/python-determine-if-running-inside-virtualenv
+
+    CommandLine:
+        python -m utool.util_sysreq in_virtual_env
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_sysreq import *  # NOQA
+        >>> import utool as ut
+        >>> result = in_virtual_env()
+        >>> print(result)
+=================
+7335992
+count:1
+
+def get_site_packages_dir():
+    """
+    CommandLine:
+        python -m utool.util_sysreq get_site_packages_dir
+
+    Notes:
+        It seems IPython does not respect virtual environments properly.
+        TODO: find a solution
+        http://stackoverflow.com/questions/7335992/ipython-and-virtualenv-ignoring-site-packages
+    """
+    import distutils.sysconfig
+    return distutils.sysconfig.get_python_lib()
+
+
+def get_global_dist_packages_dir():
+    """
+    Attempts to work around virtualenvs and find the system dist_pacakges.
+    Essentially this is implmenented as a lookuptable
+    """
+=================
+5721529
+count:1
+            raise NotImplementedError()
+        for path in candidates:
+            if ut.checkpath(path):
+                return path
+
+
+def is_running_as_root():
+    """
+    References:
+        http://stackoverflow.com/questions/5721529/running-python-script-as-root-with-sudo-what-is-the-username-of-the-effectiv
+        http://stackoverflow.com/questions/2806897/what-is-the-best-practices-for-checking-if-the-user-of-a-python-script-has-root
+    """
+    return os.getenv('USER') == 'root'
+
+
+def locate_path(dname, recurse_down=True):
+    """ Search for a path """
+    tried_fpaths = []
+    root_dir = os.getcwd()
+    while root_dir is not None:
+=================
+2806897
+count:1
+        for path in candidates:
+            if ut.checkpath(path):
+                return path
+
+
+def is_running_as_root():
+    """
+    References:
+        http://stackoverflow.com/questions/5721529/running-python-script-as-root-with-sudo-what-is-the-username-of-the-effectiv
+        http://stackoverflow.com/questions/2806897/what-is-the-best-practices-for-checking-if-the-user-of-a-python-script-has-root
+    """
+    return os.getenv('USER') == 'root'
+
+
+def locate_path(dname, recurse_down=True):
+    """ Search for a path """
+    tried_fpaths = []
+    root_dir = os.getcwd()
+    while root_dir is not None:
+        dpath = join(root_dir, dname)
+=================
+22472124
+count:1
+    plat_specifier = ".%s-%s" % (plat_name, sys.version[0:3])
+    if hasattr(sys, 'gettotalrefcount'):
+        plat_specifier += '-pydebug'
+    return plat_specifier
+
+
+def in_pyinstaller_package():
+    """
+    References:
+        http://stackoverflow.com/questions/22472124/what-is-sys-meipass-in-python
+        http://stackoverflow.com/questions/7674790/bundling-data-files-with-pyinstaller-onefile
+    """
+    return hasattr(sys, '_MEIPASS')
+
+
+def get_system_python_library():
+    """
+    FIXME; hacky way of finding python library. Not cross platform yet.
+    """
+    import os
+=================
+7674790
+count:1
+    if hasattr(sys, 'gettotalrefcount'):
+        plat_specifier += '-pydebug'
+    return plat_specifier
+
+
+def in_pyinstaller_package():
+    """
+    References:
+        http://stackoverflow.com/questions/22472124/what-is-sys-meipass-in-python
+        http://stackoverflow.com/questions/7674790/bundling-data-files-with-pyinstaller-onefile
+    """
+    return hasattr(sys, '_MEIPASS')
+
+
+def get_system_python_library():
+    """
+    FIXME; hacky way of finding python library. Not cross platform yet.
+    """
+    import os
+    import utool as ut
+=================
+51658
+count:1
+def get_free_diskbytes(dir_):
+    r"""
+    Args:
+        dir_ (str):
+
+    Returns:
+        int: bytes_ folder/drive free space (in bytes)
+
+    References::
+        http://stackoverflow.com/questions/51658/cross-platform-space-remaining-on-volume-using-python
+        http://linux.die.net/man/2/statvfs
+
+    CommandLine:
+        python -m utool.util_cplat --exec-get_free_diskbytes
+        python -m utool.util_cplat --exec-get_free_diskbytes --dir /media/raid
+        python -m utool.util_cplat --exec-get_free_diskbytes --dir E:
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_cplat import *  # NOQA
+=================
+15607903
+count:1
+        st = os.statvfs(dir_)
+        # blocks total * block size
+        bytes_ = st.f_blocks * st.f_frsize
+        return bytes_
+
+
+def chmod_add_executable(fpath, group=True, user=True):
+    """
+    References:
+        http://stackoverflow.com/questions/15607903/python-module-os-chmodfile-664-does-not-change-the-permission-to-rw-rw-r-bu
+        http://www.tutorialspoint.com/python/os_chmod.htm
+        https://en.wikipedia.org/wiki/Chmod
+    """
+    import stat
+    orig_mode = os.stat(fpath).st_mode
+    new_mode = orig_mode
+    if group:
+        new_mode |= stat.S_IXGRP
+    if user:
+        # new_mode |= stat.S_IXUSR | stat.S_IEXEC
+=================
+1392413
+count:1
+
+def get_file_nBytes_str(fpath):
+    from utool import util_str
+    return util_str.byte_str2(os.path.getsize(fpath))
+
+
+def get_disk_space(start_path='.'):
+    """
+    References:
+        http://stackoverflow.com/questions/1392413/calculating-a-directory-size-using-python
+    """
+    total_size = 0
+    for root, dname_list, fname_list in os.walk(start_path):
+        for fname in fname_list:
+            fpath = os.path.join(root, fname)
+            try:
+                total_size += os.path.getsize(fpath)
+            except OSError:
+                pass
+    return total_size
+=================
+2692873
+count:1
+        'darwin': '/',
+    }[OS_TYPE]
+    return root
+
+
+def startfile(fpath, detatch=True, quote=False, verbose=False, quiet=True):
+    """ Uses default program defined by the system to open a file.
+
+    References:
+        http://stackoverflow.com/questions/2692873/quote-posix-shell-special-characters-in-python-output
+
+    """
+    print('[cplat] startfile(%r)' % fpath)
+    fpath = normpath(fpath)
+    # print('[cplat] fpath=%s' % fpath)
+    if not exists(fpath):
+        raise Exception('Cannot start nonexistant file: %r' % fpath)
+    #if quote:
+    #    fpath = '"%s"' % (fpath,)
+    if not WIN32:
+=================
+1405913
+count:1
+        import utool
+        utool.printex(ex, iswarning=True)
+
+
+def is64bit_python():
+    """
+    Returns:
+        True if running 64 bit python and False if running on 32 bit
+    """
+    #http://stackoverflow.com/questions/1405913/how-do-i-determine-if-my-python-shell-is-executing-in-32bit-or-64bit-mode-on-os
+    is64bit = sys.maxsize > 2 ** 32
+    #import platform
+    #platform.architecture()
+    #import ctypes
+    #(ctypes.sizeof(ctypes.c_voidp))
+    return is64bit
+
+
+def get_python_dynlib():
+    """
+=================
+8850484
+count:1
+    only works on unix systems only tested on Ubuntu GNOME changes text on
+    terminal title for identifying debugging tasks.
+
+    The title will remain until python exists
+
+    Args:
+        title (str):
+
+    References:
+        http://stackoverflow.com/questions/5343265/setting-title-for-tabs-in-terminator-console-application-in-ubuntu/8850484#8850484
+
+    CommandLine:
+        python -m utool change_term_title
+        echo -en "\033]0;newtitle\a"
+
+         printf "\e]2;newtitle\a";
+
+        echo -en "\033]0;DocTest /home/joncrall/code/ibeis/ibeis.algo.graph.core.py --test-AnnotInference._make_state_delta\a"
+
+    Example:
+=================
+14788036
+count:1
+
+
+def send_keyboard_input(text=None, key_list=None):
+    """
+    Args:
+        text (None):
+        key_list (list):
+
+    References:
+        http://stackoverflow.com/questions/14788036/python-win32api-sendmesage
+        http://www.pinvoke.net/default.aspx/user32.sendinput
+
+    CommandLine:
+        python -m utool.util_cplat --test-send_keyboard_input
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_cplat import *  # NOQA
+        >>> text = '%paste'
+        >>> result = send_keyboard_input('%paste')
+=================
+437589
+count:1
+    if not ut.check_installed_debian(pkgname):
+        raise AssertionError('espeak must be installed. run sudo apt-get install -y ' + pkgname)
+
+
+def unload_module(modname):
+    """
+    WARNING POTENTIALLY DANGEROUS AND MAY NOT WORK
+
+    References:
+        http://stackoverflow.com/questions/437589/how-do-i-unload-reload-a-python-module
+
+    CommandLine:
+        python -m utool.util_cplat --test-unload_module
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> import sys, gc  # NOQA
+        >>> import pyhesaff
+        >>> import utool as ut
+        >>> modname = 'pyhesaff'
+=================
+8015163
+count:1
+
+
+#def get_ipython_config_file():
+#    """
+#    or to create an empty default profile, populated with default config files:
+#    ipython profile create
+#    """
+
+#from subprocess import check_output
+#http://stackoverflow.com/questions/8015163/how-to-check-screen-is-running
+#def screen_present(name):
+#        var = check_output(["screen -ls; true"],shell=True)
+#        if "."+name+"\t(" in var:
+#                print name+" is running"
+#        else:
+#                print name+" is not running"
+
+
+def pip_install(package):
+    """
+=================
+15974100
+count:1
+#        if "."+name+"\t(" in var:
+#                print name+" is running"
+#        else:
+#                print name+" is not running"
+
+
+def pip_install(package):
+    """
+    References:
+        http://stackoverflow.com/questions/15974100/ipython-install-new-modules
+    """
+    import pip
+    pip.main(['install', package])
+
+
+if __name__ == '__main__':
+    """
+    CommandLine:
+        python -c "import utool, utool.util_cplat; utool.doctest_funcs(utool.util_cplat, allexamples=True)"
+        python -c "import utool, utool.util_cplat; utool.doctest_funcs(utool.util_cplat)"
+=================
+18737863
+count:1
+    pass
+
+
+def change_doctestcommand_to_use_dashm_flag():
+    r"""
+    VimRegex: # note sure how to execute replace command in vim in one lin
+    %s/python\s*\([A-Za-z_]+[\\/]\S*\)\.py\(.*\)/python -m \1 \2
+
+    """
+    # http://stackoverflow.com/questions/18737863/passing-a-function-to-re-sub-in-python
+    # CANNOT USE [^ ] FOR SOME GOD DAMN REASON USE /S instead
+    regex_list = ['python [A-Za-z_]+[\\/]\S* --allexamples']
+    dpath_list = [
+        ut.ensure_crossplat_path(ut.truepath('~/code/utool/utool')),
+        ut.ensure_crossplat_path(ut.truepath('~/code/ibeis/ibeis')),
+        ut.ensure_crossplat_path(ut.truepath('~/code/vtool/vtool')),
+        ut.ensure_crossplat_path(ut.truepath('~/code/plottool/plottool')),
+        ut.ensure_crossplat_path(ut.truepath('~/code/guitool/guitool')),
+    ]
+    #ut.named_field_repl(['python ', ('modrelpath',),])
+=================
+2046603
+count:1
+    buffer_.close()
+
+
+def spawn_background_process(func, *args, **kwargs):
+    """
+    Run a function in the background
+    (like rebuilding some costly data structure)
+
+    References:
+        http://stackoverflow.com/questions/2046603/is-it-possible-to-run-function-in-a-subprocess-without-threading-or-writing-a-se
+        http://stackoverflow.com/questions/1196074/starting-a-background-process-in-python
+        http://stackoverflow.com/questions/15063963/python-is-thread-still-running
+
+    Args:
+        func (function):
+
+    CommandLine:
+        python -m utool.util_parallel --test-spawn_background_process
+
+    Example:
+=================
+1196074
+count:1
+
+
+def spawn_background_process(func, *args, **kwargs):
+    """
+    Run a function in the background
+    (like rebuilding some costly data structure)
+
+    References:
+        http://stackoverflow.com/questions/2046603/is-it-possible-to-run-function-in-a-subprocess-without-threading-or-writing-a-se
+        http://stackoverflow.com/questions/1196074/starting-a-background-process-in-python
+        http://stackoverflow.com/questions/15063963/python-is-thread-still-running
+
+    Args:
+        func (function):
+
+    CommandLine:
+        python -m utool.util_parallel --test-spawn_background_process
+
+    Example:
+        >>> # DISABLE_DOCTEST
+=================
+15063963
+count:1
+
+def spawn_background_process(func, *args, **kwargs):
+    """
+    Run a function in the background
+    (like rebuilding some costly data structure)
+
+    References:
+        http://stackoverflow.com/questions/2046603/is-it-possible-to-run-function-in-a-subprocess-without-threading-or-writing-a-se
+        http://stackoverflow.com/questions/1196074/starting-a-background-process-in-python
+        http://stackoverflow.com/questions/15063963/python-is-thread-still-running
+
+    Args:
+        func (function):
+
+    CommandLine:
+        python -m utool.util_parallel --test-spawn_background_process
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> # SLOW_DOCTEST
+=================
+17717829
+count:1
+                [0] column_id  : id of the column
+                [1] name       : the name of the column
+                [2] type_      : the type of the column (TEXT, INT, etc...)
+                [3] notnull    : 0 or 1 if the column can contains null values
+                [4] dflt_value : the default value
+                [5] pk         : 0 or 1 if the column partecipate to the primary key
+            )
+
+    References:
+        http://stackoverflow.com/questions/17717829/how-to-get-column-names-from-a-table-in-sqlite-via-pragma-net-c
+
+    CommandLine:
+        python -m utool.util_sqlite --test-get_table_columninfo_list
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_sqlite import *  # NOQA
+    """
+    cur.execute('PRAGMA TABLE_INFO("{tablename}")'.format(tablename=tablename))
+    colinfo_list = cur.fetchall()
+=================
+44313620
+count:1
+    return data32
+
+
+def _npstate_to_pystate(npstate):
+    """
+    Convert state of a NumPy RandomState object to a state
+    that can be used by Python's Random.
+
+    References:
+        https://stackoverflow.com/questions/44313620/converting-randomstate
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_numpy import *  # NOQA
+        >>> from utool.util_numpy import _npstate_to_pystate
+        >>> py_rng = random.Random(0)
+        >>> np_rng = np.random.RandomState(seed=0)
+        >>> npstate = np_rng.get_state()
+        >>> pystate = _npstate_to_pystate(npstate)
+        >>> py_rng.setstate(pystate)
+=================
+44313620
+count:1
+    return pystate
+
+
+def _pystate_to_npstate(pystate):
+    """
+    Convert state of a Python Random object to state usable
+    by NumPy RandomState.
+
+    References:
+        https://stackoverflow.com/questions/44313620/converting-randomstate
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_numpy import *  # NOQA
+        >>> from utool.util_numpy import _pystate_to_npstate
+        >>> py_rng = random.Random(0)
+        >>> np_rng = np.random.RandomState(seed=0)
+        >>> pystate = py_rng.getstate()
+        >>> npstate = _pystate_to_npstate(pystate)
+        >>> np_rng.set_state(npstate)
+=================
+1707709
+count:1
+            imppart = parts[-1]
+            patterns += [import_ + WS + imppart]
+    return patterns
+
+
+def package_contents(package, with_pkg=False, with_mod=True, ignore_prefix=[],
+                     ignore_suffix=[]):
+    r"""
+    References:
+        http://stackoverflow.com/questions/1707709/list-all-the-modules-that-are-part-of-a-python-package
+
+    Args:
+        package (?):
+        with_pkg (bool): (default = False)
+        with_mod (bool): (default = True)
+
+    CommandLine:
+        python -m utool.util_import --exec-package_contents
+
+    Example:
+=================
+14050281
+count:1
+    always loaded.
+
+    Args:
+        modname (str):  module name
+
+    Returns:
+        bool: found
+
+    References:
+        http://stackoverflow.com/questions/14050281/module-exists-without-importing
+
+    CommandLine:
+        python -m utool.util_import check_module_installed --show --verbimp --modname=this
+        python -m utool.util_import check_module_installed --show --verbimp --modname=ibeis.scripts.iccv
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_import import *  # NOQA
+        >>> import utool as ut
+        >>> modname = ut.get_argval('--modname', default='this')
+=================
+41720952
+count:1
+                raise
+        else:
+            raise
+    return data
+
+
+def _python2_load_cpkl(fpath):
+    """
+    References:
+        https://stackoverflow.com/questions/41720952/unpickle-sklearn-tree-descisiontreeregressor-in-python-2-from-python3
+    """
+    from lib2to3.fixes.fix_imports import MAPPING
+    import sys
+    import pickle
+
+    # MAPPING maps Python 2 names to Python 3 names. We want this in reverse.
+    REVERSE_MAPPING = {}
+    for key, val in MAPPING.items():
+        REVERSE_MAPPING[val] = key
+
+=================
+8843062
+count:1
+
+def save_pytables(fpath, data, verbose=False):
+    """
+    sudo pip install numexpr
+    sudo pip install tables
+
+    References:
+        https://pytables.github.io/cookbook/py2exe_howto.html
+        https://gist.github.com/andrewgiessel/7515520
+        http://stackoverflow.com/questions/8843062/python-how-to-store-a-numpy-multidimensional-array-in-pytables
+        http://pytables.github.io/usersguide/tutorials.html#creating-new-array-objects
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_io import *  # NOQA
+        >>> import numpy as np
+        >>> import utool as ut
+        >>> # build test data
+        >>> verbose = True
+        >>> fpath = 'myfile.pytables.hdf5'
+=================
+651794
+count:1
+
+
+class AutoVivification(dict):
+    """
+    Implementation of perl's autovivification feature.
+
+    An AutoVivification is an infinitely nested default dict of dicts.
+
+    References:
+        http://stackoverflow.com/questions/651794/best-way-to-init-dict-of-dicts
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_dict import *  # NOQA
+        >>> dict_ = AutoVivification()
+        >>> # Notice that there is no KeyError
+        >>> dict_[0][10][100] = None
+        >>> result = ('dict_ = %r' % (dict_,))
+        >>> print(result)
+        dict_ = {0: {10: {100: None}}}
+=================
+651794
+count:1
+
+class OrderedAutoVivification(OrderedDict):
+    """
+    Implementation of perl's autovivification feature.
+
+    An OrderedAutoVivification is an infinitely nested default dict of ordered
+    dicts.
+
+    References:
+        http://stackoverflow.com/questions/651794/best-way-to-init-dict-of-dicts
+
+    Doctest:
+        >>> from utool.util_dict import *  # NOQA
+        >>> dict_ = AutoOrderedDict()
+        >>> # Notice that there is no KeyError
+        >>> dict_[0][10][100] = None
+        >>> dict_[0][10][1] = None
+        >>> result = ('dict_ = %r' % (dict_,))
+        >>> print(result)
+        dict_ = {0: {10: {100: None, 1: None}}}
+=================
+5884066
+count:1
+def get_dict_hashid(dict_):
+    r"""
+    Args:
+        dict_ (dict):
+
+    Returns:
+        int: id hash
+
+    References:
+        http://stackoverflow.com/questions/5884066/hashing-a-python-dictionary
+
+    CommandLine:
+        python -m utool.util_dict --test-get_dict_hashid
+        python3 -m utool.util_dict --test-get_dict_hashid
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_dict import *  # NOQA
+        >>> dict_ = {}
+        >>> dict_ = {'a': 'b'}
+=================
+1151658
+count:1
+        >>> d1[h1] = "salad"
+        >>> d1[h1]
+        'salad'
+        >>> d1[h2]
+        Traceback (most recent call last):
+        ...
+        KeyError: hashdict(bananas=3, mangoes=5)
+
+    References:
+       http://stackoverflow.com/questions/1151658/python-hashable-dicts
+       http://stackoverflow.com/questions/1151658/python-hashable-dicts
+    """
+    def __key(self):
+        return tuple(sorted(self.items()))
+
+    def __repr__(self):
+        return "{0}({1})".format(self.__class__.__name__,
+                                 ", ".join("{0}={1}".format(
+                                     str(i[0]), repr(i[1])) for i in self.__key()))
+
+=================
+1151658
+count:1
+        >>> d1[h1]
+        'salad'
+        >>> d1[h2]
+        Traceback (most recent call last):
+        ...
+        KeyError: hashdict(bananas=3, mangoes=5)
+
+    References:
+       http://stackoverflow.com/questions/1151658/python-hashable-dicts
+       http://stackoverflow.com/questions/1151658/python-hashable-dicts
+    """
+    def __key(self):
+        return tuple(sorted(self.items()))
+
+    def __repr__(self):
+        return "{0}({1})".format(self.__class__.__name__,
+                                 ", ".join("{0}={1}".format(
+                                     str(i[0]), repr(i[1])) for i in self.__key()))
+
+    def __hash__(self):
+=================
+38987
+count:1
+    value specified the list of dictionaries.
+
+    Returns:
+        dict: mergedict_
+
+    CommandLine:
+        python -m utool.util_dict --test-merge_dicts
+
+    References:
+        http://stackoverflow.com/questions/38987/how-can-i-merge-two-python-dictionaries-in-a-single-expression
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_dict import *  # NOQA
+        >>> import utool as ut
+        >>> x = {'a': 1, 'b': 2}
+        >>> y = {'b': 3, 'c': 4}
+        >>> mergedict_ = merge_dicts(x, y)
+        >>> result = ut.repr4(mergedict_, sorted_=True, newlines=False)
+        >>> print(result)
+=================
+10193235
+count:1
+
+
+def hierarchical_group_items(item_list, groupids_list):
+    """
+    Generalization of group_item. Convert a flast list of ids into a heirarchical dictionary.
+
+    TODO: move to util_dict
+
+    Reference:
+        http://stackoverflow.com/questions/10193235/python-translate-a-table-to-a-hierarchical-dictionary
+
+    Args:
+        item_list (list):
+        groupids_list (list):
+
+    CommandLine:
+        python -m utool.util_dict --exec-hierarchical_group_items
+
+    Example:
+        >>> # ENABLE_DOCTEST
+=================
+22663966
+count:1
+        if isinstance(node, OrderedDict):
+            return OrderedDict(keyval_list)
+        else:
+            return dict(keyval_list)
+
+
+def move_odict_item(odict, key, newpos):
+    """
+    References:
+        http://stackoverflow.com/questions/22663966/changing-order-of-ordered-dictionary-in-python
+
+    CommandLine:
+        python -m utool.util_dict --exec-move_odict_item
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_dict import *  # NOQA
+        >>> import utool as ut
+        >>> odict = OrderedDict()
+        >>> odict['a'] = 1
+=================
+8230315
+count:1
+        if self.verbose > 0:
+            print('[cache] ... ' + self.fname + ' Cacher save')
+        save_cache(self.dpath, self.fname, cfgstr, data, self.ext)
+
+
+#@util_decor.memoize
+def make_utool_json_encoder(allow_pickle=False):
+    """
+    References:
+        http://stackoverflow.com/questions/8230315/python-sets-are
+        http://stackoverflow.com/questions/11561932/why-does-json
+        https://github.com/jsonpickle/jsonpickle
+        http://stackoverflow.com/questions/24369666/typeerror-b1
+        http://stackoverflow.com/questions/30469575/how-to-pickle
+    """
+    import utool as ut
+    PYOBJECT_TAG = '__PYTHON_OBJECT__'
+    UUID_TAG = '__UUID__'
+    SLICE_TAG = '__SLICE__'
+
+=================
+11561932
+count:1
+            print('[cache] ... ' + self.fname + ' Cacher save')
+        save_cache(self.dpath, self.fname, cfgstr, data, self.ext)
+
+
+#@util_decor.memoize
+def make_utool_json_encoder(allow_pickle=False):
+    """
+    References:
+        http://stackoverflow.com/questions/8230315/python-sets-are
+        http://stackoverflow.com/questions/11561932/why-does-json
+        https://github.com/jsonpickle/jsonpickle
+        http://stackoverflow.com/questions/24369666/typeerror-b1
+        http://stackoverflow.com/questions/30469575/how-to-pickle
+    """
+    import utool as ut
+    PYOBJECT_TAG = '__PYTHON_OBJECT__'
+    UUID_TAG = '__UUID__'
+    SLICE_TAG = '__SLICE__'
+
+    def decode_pickle(text):
+=================
+24369666
+count:1
+
+
+#@util_decor.memoize
+def make_utool_json_encoder(allow_pickle=False):
+    """
+    References:
+        http://stackoverflow.com/questions/8230315/python-sets-are
+        http://stackoverflow.com/questions/11561932/why-does-json
+        https://github.com/jsonpickle/jsonpickle
+        http://stackoverflow.com/questions/24369666/typeerror-b1
+        http://stackoverflow.com/questions/30469575/how-to-pickle
+    """
+    import utool as ut
+    PYOBJECT_TAG = '__PYTHON_OBJECT__'
+    UUID_TAG = '__UUID__'
+    SLICE_TAG = '__SLICE__'
+
+    def decode_pickle(text):
+        obj = pickle.loads(codecs.decode(text.encode(), 'base64'))
+        return obj
+=================
+30469575
+count:1
+
+#@util_decor.memoize
+def make_utool_json_encoder(allow_pickle=False):
+    """
+    References:
+        http://stackoverflow.com/questions/8230315/python-sets-are
+        http://stackoverflow.com/questions/11561932/why-does-json
+        https://github.com/jsonpickle/jsonpickle
+        http://stackoverflow.com/questions/24369666/typeerror-b1
+        http://stackoverflow.com/questions/30469575/how-to-pickle
+    """
+    import utool as ut
+    PYOBJECT_TAG = '__PYTHON_OBJECT__'
+    UUID_TAG = '__UUID__'
+    SLICE_TAG = '__SLICE__'
+
+    def decode_pickle(text):
+        obj = pickle.loads(codecs.decode(text.encode(), 'base64'))
+        return obj
+
+=================
+11561932
+count:1
+    Converts a python object to a JSON string using the utool convention
+
+    Args:
+        val (object):
+
+    Returns:
+        str: json_str
+
+    References:
+        http://stackoverflow.com/questions/11561932/why-does-json-dumpslistnp
+
+    CommandLine:
+        python -m utool.util_cache --test-to_json
+        python3 -m utool.util_cache --test-to_json
+
+    Example:
+        >>> # ENABLE_DOCTEST
+        >>> from utool.util_cache import *  # NOQA
+        >>> import utool as ut
+        >>> import numpy as np
+=================
+7489732
+count:1
+    shelf_fpath = join(global_cache_dir, meta_util_constants.global_cache_fname)
+    return shelf_fpath
+
+
+def shelf_open(fpath):
+    """
+    allows for shelf to be used in with statements
+
+    References:
+        http://stackoverflow.com/questions/7489732/easiest-way-to-add-a-function-to-existing-class
+
+    CommandLine:
+        python -m utool.util_cache --test-shelf_open
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> # UNSTABLE_DOCTEST
+        >>> import utool as ut
+        >>> fpath = ut.unixjoin(ut.ensure_app_resource_dir('utool'), 'testshelf.shelf')
+        >>> with ut.shelf_open(fpath) as dict_:
+=================
+1158076
+count:1
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_path import *  # NOQA
+        >>> fpath = '?'
+        >>> times = None
+        >>> verbose = True
+        >>> result = touch(fpath, times, verbose)
+        >>> print(result)
+
+    References:
+        http://stackoverflow.com/questions/1158076/implement-touch-using-python
+    """
+    try:
+        if verbose:
+            print('[util_path] touching %r' % fpath)
+        with open(fpath, 'a'):
+            os.utime(fpath, times)
+    except Exception as ex:
+        import utool
+        utool.printex(ex, 'touch %s' % fpath)
+        raise
+=================
+19859840
+count:1
+        with_files (bool): (default = True)
+        with_dirs (bool): (default = True)
+        maxdepth (None): (default = None)
+        exclude_dirs (list): (default = [])
+
+    Yields:
+        path
+
+    References:
+        http://stackoverflow.com/questions/19859840/excluding-dirs-in-os-walk
+    """
+    from utool import util_iter
+    if kwargs.get('verbose', False):  # log what i'm going to do
+        print('[util_path] glob(dpath=%r)' % truepath(dpath,))
+
+    debug = False
+    if pattern is None:
+        # separate extract pattern from dpath
+        if debug:
+            print('[iglob] parsing dpath = %r' % (dpath,))
+=================
+19859840
+count:1
+    #exclude_dirs_rel = [relpath(dpath_, dir_) for dir_ in exclude_dirs]
+    #exclude_dirs_rel = [relpath(dpath_, dir_) for dir_ in exclude_dirs]
+    #print('\n\n\n')
+    #import utool as ut
+    #print('exclude_dirs = %s' % (ut.repr4(exclude_dirs),))
+    for root, dirs, files in os.walk(dpath_, topdown=True):
+        # Modifying dirs in-place will prune the subsequent files and
+        # directories visitied by os.walk
+        # References:
+        #     http://stackoverflow.com/questions/19859840/excluding-directories-in-os-walk
+        rel_root = relpath(root, dpath_)
+        rel_root2 = relpath(root, dirname(dpath_))
+        #print('rel_root = %r' % (rel_root,))
+        #if len(dirs) > 0:
+        #    print('dirs = %s' % (ut.repr4([join(rel_root, d) for d in dirs]),))
+        if len(exclude_dirs) > 0:
+            dirs[:] = [d for d in dirs if normpath(join(rel_root, d)) not in exclude_dirs]
+            # hack
+            dirs[:] = [d for d in dirs if normpath(join(rel_root2, d)) not in exclude_dirs]
+            # check abs path as well
+=================
+19859840
+count:1
+
+    Args:
+        dpath_list       (list):
+        include_patterns (str):
+        exclude_dirs     (None):
+        recursive        (bool):
+
+    References:
+        # TODO: fix names and behavior of exclude_dirs and greater_exclude_dirs
+        http://stackoverflow.com/questions/19859840/excluding-directories-in-os-walk
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_path import *  # NOQA
+        >>> import utool as ut
+        >>> dpath_list = [dirname(dirname(ut.__file__))]
+        >>> include_patterns = get_standard_include_patterns()
+        >>> exclude_dirs = ['_page']
+        >>> greater_exclude_dirs = get_standard_exclude_dnames()
+        >>> recursive = True
+=================
+23598461
+count:1
+                print_(fmt_str % (name, lx, colored_line))
+    return '\n'.join(msg_list)
+
+
+def get_win32_short_path_name(long_name):
+    """
+    Gets the short path name of a given long path.
+
+    References:
+        http://stackoverflow.com/a/23598461/200291
+        http://stackoverflow.com/questions/23598289/get-win-short-fname-python
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_path import *  # NOQA
+        >>> import utool as ut  # NOQA
+        >>> # build test data
+        >>> #long_name = unicode(normpath(ut.get_resource_dir()))
+        >>> long_name = unicode(r'C:/Program Files (x86)')
+        >>> #long_name = unicode(r'C:/Python27')
+=================
+23598289
+count:1
+    return '\n'.join(msg_list)
+
+
+def get_win32_short_path_name(long_name):
+    """
+    Gets the short path name of a given long path.
+
+    References:
+        http://stackoverflow.com/a/23598461/200291
+        http://stackoverflow.com/questions/23598289/get-win-short-fname-python
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_path import *  # NOQA
+        >>> import utool as ut  # NOQA
+        >>> # build test data
+        >>> #long_name = unicode(normpath(ut.get_resource_dir()))
+        >>> long_name = unicode(r'C:/Program Files (x86)')
+        >>> #long_name = unicode(r'C:/Python27')
+        #unicode(normpath(ut.get_resource_dir()))
+=================
+1447575
+count:1
+    return fname
+
+
+def win_shortcut(source, link_name):
+    """
+    Attempt to create windows shortcut
+    TODO: TEST / FIXME
+
+    References:
+        http://stackoverflow.com/questions/1447575/symlinks-on-windows
+    """
+    if True:
+        import ctypes
+        kdll = ctypes.windll.LoadLibrary("kernel32.dll")
+        code = 1 if isdir(source) else 0
+        kdll.CreateSymbolicLinkA(source, link_name, code)
+    else:
+        import ctypes
+        csl = ctypes.windll.kernel32.CreateSymbolicLinkW
+        csl.argtypes = (ctypes.c_wchar_p, ctypes.c_wchar_p, ctypes.c_uint32)
+=================
+20794
+count:1
+    Removes all broken links in a directory
+
+    Args:
+        dpath (str):  directory path
+
+    Returns:
+        int: num removed
+
+    References:
+        http://stackoverflow.com/questions/20794/find-broken-symlinks-with-python
+
+    CommandLine:
+        python -m utool remove_broken_links:0
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> # SCRIPT
+        >>> from utool.util_path import *  # NOQA
+        >>> remove_broken_links('.')
+
+=================
+17078696
+count:1
+    A[tuple(np.array(uv_list).T)] = 1
+    return A
+
+
+def nx_transitive_reduction(G, mode=1):
+    """
+    References:
+        https://en.wikipedia.org/wiki/Transitive_reduction#Computing_the_reduction_using_the_closure
+        http://dept-info.labri.fr/~thibault/tmp/0201008.pdf
+        http://stackoverflow.com/questions/17078696/transitive-reduction-of-directed-graph-in-python
+
+    CommandLine:
+        python -m utool.util_graph nx_transitive_reduction --show
+
+    Example:
+        >>> # DISABLE_DOCTEST
+        >>> from utool.util_graph import *  # NOQA
+        >>> import utool as ut
+        >>> G = nx.DiGraph([('a', 'b'), ('a', 'c'), ('a', 'e'),
+        >>>                 ('a', 'd'), ('b', 'd'), ('c', 'e'),
+=================
+16150557
+count:1
+    where u and v are nodes comprising an edge,
+    and d would be a dictionary of edge attributes
+
+    ref_back determines whether the created subgraph refers to back
+    to the original graph and therefore changes to the subgraph's
+    attributes also affect the original graph, or if it is to create a
+    new copy of the original graph.
+
+    References:
+        http://stackoverflow.com/questions/16150557/nx-subgraph-from-edges
+    """
+
+    # TODO: support multi-di-graph
+    sub_nodes = list({y for x in edge_list for y in x[0:2]})
+    #edge_list_no_data = [edge[0:2] for edge in edge_list]
+    multi_edge_list = [edge[0:3] for edge in edge_list]
+
+    if ref_back:
+        G_sub = G.subgraph(sub_nodes)
+        for edge in G_sub.edges(keys=True):
+=================
+33332462
+count:1
+            g_pos = nx.complement(g_neg)
+            # Iterate until n1 has no more possible connections
+            neigbs = list(g_pos.neighbors(n1))
+            neigbs = ut.isect(neigbs, unused)
+    print('num = %r' % (num,))
+    return num
+
+
+def nx_mincut_edges_weighted(G, s, t, capacity='weight'):
+    # http://stackoverflow.com/questions/33332462/minimum-s-t-edge-cut-which-takes-edge-weight-into-consideration
+    cut_weight, partitions = nx.minimum_cut(G, s, t, capacity=capacity)
+    edge_cut_list = []
+    for p1_node in partitions[0]:
+        for p2_node in partitions[1]:
+            if G.has_edge(p1_node, p2_node):
+                edge_cut_list.append((p1_node, p2_node))
+    # assert edge_cut_list == nx_edges_between(G, partitions[0], partitions[1])
+    return edge_cut_list
+
+
+=================
+11125212
+count:1
+    warnings.warn(repr(ex)+'\n!!!!!!!!')
+    embedded = False
+'''
+
+
+
+def roundrobin(*iterables):
+    """roundrobin('ABC', 'D', 'EF') --> A D E B F C"""
+    raise NotImplementedError('not sure if this implementation is correct')
+    # http://stackoverflow.com/questions/11125212/interleaving-lists-in-python
+    #sentinel = object()
+    #return (x for x in chain(*zip_longest(fillvalue=sentinel, *iterables)) if x is not sentinel)
+    pending = len(iterables)
+    if six.PY2:
+        nexts = cycle(iter(it).next for it in iterables)
+    else:
+        nexts = cycle(iter(it).__next__ for it in iterables)
+    while pending:
+        try:
+            for next in nexts:
+=================
+15706339
+count:1
+#    Example:
+#        >>> from utool.util_distances import *   # NOQA
+#        >>> import numpy as np
+#        >>> hist1 = np.random.rand(128)
+#        >>> hist2 = np.random.rand(128)
+#        >>> result = emd(hist1, hist2)
+
+#    References:
+#        https://github.com/andreasjansson/python-emd
+#        http://stackoverflow.com/questions/15706339/how-to-compute-emd-for-2-numpy-arrays-i-e-histogram-using-opencv
+#        http://www.cs.huji.ac.il/~ofirpele/FastEMD/code/
+#        http://www.cs.huji.ac.il/~ofirpele/publications/ECCV2008.pdf
+#    """
+#    try:
+#        from cv2 import cv
+#    except ImportError as ex:
+#        print(repr(ex))
+#        print('Cannot import cv. Is opencv 2.4.9?')
+#        return -1
+

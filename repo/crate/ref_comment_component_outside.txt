@@ -1,0 +1,215 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/tools/make_package.py
+2806897, 181
+------------------
+if os.geteuid() == 0:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/tools/make_package.py
+10653590, 550
+------------------
+print("Creating " + INSTRUCTIONS)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/docs/source/conf.py
+18969093, 164
+------------------
+html_sidebars = {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/docs/source/conf.py
+23462494, 238
+------------------
+def setup(app: Sphinx) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/docs/source/conf.py
+36228537, 248
+------------------
+autodoc_mock_imports = [
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/docs/source/conf.py
+5599254, 269
+------------------
+autoclass_content = "both"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/tools/launch_celery.py
+21666229, 45
+------------------
+def inner_main() -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/common/memsize.py
+449560, 28
+------------------
+from gc import get_referents
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/admin.py
+4938491, 1386
+------------------
+class MgrAdminSite(admin.AdminSite):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/admin.py
+3400641, 1387
+------------------
+class MgrAdminSite(admin.AdminSite):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/core/admin.py
+1929707, 1496
+------------------
+- http://stackoverflow.com/questions/1929707/django-admin-not-seeing-any-app-permission-problem  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/config/settings.py
+2636536, 60
+------------------
+try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/config/urls.py
+6791911, 73
+------------------
+from crate_anon.crateweb.research.research_db_info import research_database_info  # noqa
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/tasks.py
+17313532, 59
+------------------
+import logging
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/tasks.py
+26862942, 84
+------------------
+import logging
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/celery.py
+24519559, 180
+------------------
+import os
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/crateweb/consent/celery.py
+20309954, 205
+------------------
+import os
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/models.py
+5424942, 32
+------------------
+import logging
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/models.py
+2580543, 33
+------------------
+- http://stackoverflow.com/questions/2580497/database-on-the-fly-with-scripting-languages/2580543#2580543
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/models.py
+2575016, 37
+------------------
+- http://stackoverflow.com/questions/2574105/sqlalchemy-dynamic-mapping/2575016#2575016
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/fetch_wordlists.py
+1803628, 31
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+356100, 30
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+1644856, 31
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+8903239, 32
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+1951506, 33
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+59895, 35
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+23611396, 39
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+320232, 40
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/launch_multiprocess_anonymiser.py
+641420, 41
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/anonymise/constants.py
+287757, 642
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/parse_medex.py
+834788, 466
+------------------
+MEDEX_MAX_FORM_LENGTH = 255  # guess; "Powder For Oral Suspension" (26) is one
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/regex_numbers.py
+5917082, 69
+------------------
+PLAIN_INTEGER_W_THOUSAND_COMMAS = r"(?: (?: \d{1,3} (?:,\d{3})+ ) | \d+ )"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+356100, 32
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+1644856, 33
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+8903239, 34
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+1951506, 35
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+59895, 37
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+23611396, 41
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+320232, 42
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/launch_multiprocess_nlp.py
+641420, 43
+------------------
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/regex_parser.py
+546433, 112
+------------------
+"""
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/regex_parser.py
+7898310, 113
+------------------
+"""
+==================
+/Users/jacob.caulfield/Documents/GitHub4/crate/crate_anon/nlp_manager/parse_gate.py
+2715847, 72
+------------------
+class Gate(BaseNlpParser):

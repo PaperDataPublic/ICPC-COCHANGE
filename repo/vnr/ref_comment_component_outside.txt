@@ -1,0 +1,250 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/erogetrailers/soft.py
+38987, 15
+------------------
+def _mergedictwith(x, y):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/lingoes/searchutil.py
+7380629, 51
+------------------
+class PrefixCompare:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/dictdb/dbutil.py
+3785294, 4
+------------------
+def fetchsome(cursor, some):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/dictdb/edictdb.py
+13934994, 130
+------------------
+  cur.execute('''\
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/dictdb/dictdb.py
+3785294, 87
+------------------
+def iterentries(cur, select=SELECT_WORD_CONTENT, chunk=100):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/mecabparser/mecabtagger.py
+10299807, 30
+------------------
+def normalizepath(path):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/socketsvc/socketpack.py
+444591, 30
+------------------
+def unpackuint(s): #
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/lec/leconline.py
+3465704, 157
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/texthook/texthook.py
+5253854, 4
+------------------
+__all__ = 'TextHook',
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/eztrans/j2kengine.py
+13128995, 29
+------------------
+if __name__ == '__main__': # DEBUG
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/eztrans/j2kengine.py
+11939290, 30
+------------------
+if __name__ == '__main__': # DEBUG
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/colorconv/colorconv.py
+23889620, 8
+------------------
+import math
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/mecabjlp/mecabtag.py
+10299807, 11
+------------------
+def normalizepath(path):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skdatetime.py
+2775864, 16
+------------------
+def datetime2timestamp(date):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skjson.py
+11875770, 6
+------------------
+def default_datetime(obj):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/sknetio.py
+16694907, 158
+------------------
+def itergetdata(url, chunksize=1024, **kwargs):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skcontainer.py
+480214, 4
+------------------
+def uniquelist(seq):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skyaml.py
+20352794, 3
+------------------
+from sakurakit.skdebug import dwarn
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skhash.py
+1131220, 182
+------------------
+def md5sumpath(path):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwinapi.py
+1551605, 203
+------------------
+try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwinapi.py
+7921307, 316
+------------------
+CopyIcon = user32.CopyIcon
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwinapi.py
+1872480, 585
+------------------
+WriteProcessMemory = kernel32.WriteProcessMemory
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skstr.py
+196345, 15
+------------------
+def isascii(s):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skstr.py
+2556108, 31
+------------------
+def rreplace(s, old, new, count):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skstr.py
+6609895, 122
+------------------
+def multireplacer(table, flags=0, escape=False, prefix=None, suffix=None):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skstr.py
+1695183, 190
+------------------
+import urllib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skstr.py
+6701853, 242
+------------------
+def checkpair(text, pair=("({[",")}]"), escape='\\'):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skstr.py
+919056, 324
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skdebug.py
+5863512, 17
+------------------
+def dprint(msg, *args):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skdebug.py
+3425512, 217
+------------------
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skclass.py
+9937279, 9
+------------------
+class classproperty(property):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skwidgets.py
+4272196, 50
+------------------
+def clear_layout(layout, delwidget=False):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skinspect.py
+5863512, 3
+------------------
+import inspect
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/sknetwork.py
+13971787, 11
+------------------
+class SkNetworkCookieJar(QNetworkCookieJar):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skfileio.py
+7287996, 29
+------------------
+def relpaths(paths): # [unicode] -> [unicode]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skfileio.py
+973473, 241
+------------------
+def getfirstchildfile(path): # unicode -> unicode or None
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skfileio.py
+740820, 281
+------------------
+def extracttar(path, location, mode='r'): # unicode, unicode -> bool
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skfileio.py
+9431918, 304
+------------------
+def extractzip(path, location): # unicode, unicode -> bool
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skfileio.py
+10701528, 322
+------------------
+def extractxz(infile, outfile): # unicode, unicode -> bool
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skfileio.py
+17217073, 345
+------------------
+def extracttarxz(path, location): # unicode, unicode -> bool
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skos.py
+1405913, 15
+------------------
+X86_64  = sys.maxsize > 2**32
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/sakurakit/skos.py
+196930, 21
+------------------
+WINXP = WIN and platform.release() == 'XP'
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/unitraits/unichars.py
+3826918, 7
+------------------
+ORD_HIRA_FIRST = 12353
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/unitraits/unichars.py
+10981258, 39
+------------------
+ORD_CYRIL_FIRST = 0x400
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/libs/transer/infoseek.py
+10115126, 23
+------------------
+INFOSEEK_API = ("http://translation.infoseek.ne.jp/clsoap/translate?"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/scripts/initrc.py
+7387276, 36
+------------------
+def settitle(title): # str ->
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/qml/qmlplugin.py
+8894244, 30
+------------------
+from Qt5 import QtWidgets
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/features.py
+196930, 31
+------------------
+def iswinxp():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/utilities/jsonutil.py
+11875770, 7
+------------------
+def default_datetime(obj):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/vnr/Frameworks/Sakura/py/apps/reader/utilities/textutil.py
+12468613, 52
+------------------
+__repeat_re = re.compile(r'(.+)\1+', re.DOTALL) # http://stackoverflow.com/questions/12468613/regex-to-remove-repeated-character-pattern-in-a-string

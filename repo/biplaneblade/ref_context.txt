@@ -1,0 +1,190 @@
+[1, 1, 41, 41, 7, 7, 3, 3, 1]
+=================
+1109536
+count:1
+
+Main source:
+https://github.com/Toblerity/Shapely/blob/master/docs/code/buffer.py
+
+Additional sources:
+https://pypi.python.org/pypi/descartes/
+http://toblerity.org/shapely/manual.html#object.buffer
+http://stackoverflow.com/questions/1109536/an-algorithm-for-inflating-deflating-offsetting-buffering-polygons
+
+Author: Toblerity, Perry Roth-Johnson
+Last modified: August 29, 2013
+
+"""
+
+
+import numpy as np
+from matplotlib import pyplot
+from shapely.geometry import LineString, Polygon
+=================
+1109536
+count:1
+
+Main source:
+https://github.com/Toblerity/Shapely/blob/master/docs/code/buffer.py
+
+Additional sources:
+https://pypi.python.org/pypi/descartes/
+http://toblerity.org/shapely/manual.html#object.buffer
+http://stackoverflow.com/questions/1109536/an-algorithm-for-inflating-deflating-offsetting-buffering-polygons
+
+Author: Toblerity, Perry Roth-Johnson
+Last modified: October 7, 2013
+
+"""
+
+
+import numpy as np
+from matplotlib import pyplot
+from shapely.geometry import LineString, Polygon
+=================
+3366569
+count:41
+   relative to the airfoil centerpoint. The magenta edge should be facing 
+   inward.) If you find an element that is oriented incorrectly, note the
+   element number, and look up it's element set name from the printout in the
+   IPython terminal. Then, move that element set name to a different list in
+   this script.
+4. Repeat step 3 until your visual inspection suggests that all the edges (and
+   layer plane angles) are being assigned correctly.
+
+References:
+http://stackoverflow.com/questions/3365171/calculating-the-angle-between-two-lines-without-having-to-calculate-the-slope/3366569#3366569
+http://stackoverflow.com/questions/19295725/angle-less-than-180-between-two-segments-lines
+
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import lib.grid as gr
+reload(gr)
+import lib.abaqus_utils2 as au
+=================
+19295725
+count:41
+   inward.) If you find an element that is oriented incorrectly, note the
+   element number, and look up it's element set name from the printout in the
+   IPython terminal. Then, move that element set name to a different list in
+   this script.
+4. Repeat step 3 until your visual inspection suggests that all the edges (and
+   layer plane angles) are being assigned correctly.
+
+References:
+http://stackoverflow.com/questions/3365171/calculating-the-angle-between-two-lines-without-having-to-calculate-the-slope/3366569#3366569
+http://stackoverflow.com/questions/19295725/angle-less-than-180-between-two-segments-lines
+
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import lib.grid as gr
+reload(gr)
+import lib.abaqus_utils2 as au
+reload(au)
+=================
+3366569
+count:7
+
+Author: Perry Roth-Johnson
+Last modified: March 18, 2014
+
+References:
+http://stackoverflow.com/questions/3365171/calculating-the-angle-between-two-lines-without-having-to-calculate-the-slope/3366569#3366569
+http://stackoverflow.com/questions/19295725/angle-less-than-180-between-two-segments-lines
+
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import lib.grid as gr
+reload(gr)
+import lib.abaqus_utils2 as au
+=================
+19295725
+count:7
+
+Author: Perry Roth-Johnson
+Last modified: March 18, 2014
+
+References:
+http://stackoverflow.com/questions/3365171/calculating-the-angle-between-two-lines-without-having-to-calculate-the-slope/3366569#3366569
+http://stackoverflow.com/questions/19295725/angle-less-than-180-between-two-segments-lines
+
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import lib.grid as gr
+reload(gr)
+import lib.abaqus_utils2 as au
+reload(au)
+=================
+3366569
+count:3
+
+Author: Perry Roth-Johnson
+Last modified: March 17, 2014
+
+References:
+http://stackoverflow.com/questions/3365171/calculating-the-angle-between-two-lines-without-having-to-calculate-the-slope/3366569#3366569
+http://stackoverflow.com/questions/19295725/angle-less-than-180-between-two-segments-lines
+
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import lib.grid as gr
+reload(gr)
+import lib.abaqus_utils2 as au
+=================
+19295725
+count:3
+
+Author: Perry Roth-Johnson
+Last modified: March 17, 2014
+
+References:
+http://stackoverflow.com/questions/3365171/calculating-the-angle-between-two-lines-without-having-to-calculate-the-slope/3366569#3366569
+http://stackoverflow.com/questions/19295725/angle-less-than-180-between-two-segments-lines
+
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import lib.grid as gr
+reload(gr)
+import lib.abaqus_utils2 as au
+reload(au)
+=================
+2745329
+count:1
+### parameters ###
+glw=1.0            # global line width
+gms=8.0           # global marker size
+gmew=1.5           # global marker edge width
+gmfc='None'        # global marker face color (none/empty)
+mec_ms='red'       # marker edge color for monoplane spars
+
+
+def extrap1d(interpolator):
+    # copied from http://stackoverflow.com/questions/2745329/how-to-make-scipy-interpolate-give-a-an-extrapolated-result-beyond-the-input-ran
+    xs = interpolator.x
+    ys = interpolator.y
+    def pointwise(x):
+        if x < xs[0]:
+            return ys[0]+(x-xs[0])*(ys[1]-ys[0])/(xs[1]-xs[0])
+        elif x > xs[-1]:
+            return ys[-1]+(x-xs[-1])*(ys[-1]-ys[-2])/(xs[-1]-xs[-2])
+        else:
+            return interpolator(x)
+    def ufunclike(xs):

@@ -1,0 +1,2337 @@
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 2, 3, 8, 2, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 1, 2, 10, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1]
+=================
+2557110
+count:1
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+"""
+This module does blah blah.
+
+Here is the description of the module.
+See PEP 257 (http://legacy.python.org/dev/peps/pep-0257/) for more details.
+See also http://stackoverflow.com/questions/2557110/what-to-put-in-a-python-module-docstring.
+"""
+
+def main():
+    """
+    This function does blah blah.
+    
+    Here is the description of the function.
+    See PEP 257 (http://legacy.python.org/dev/peps/pep-0257/) for more details.
+    """
+
+=================
+220525
+count:1
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+"""
+This module show how to ensure a single instance of an application in Linux.
+
+See http://stackoverflow.com/questions/220525/ensure-a-single-instance-of-an-application-in-linux
+    https://docs.python.org/3.5/library/fcntl.html
+"""
+
+import fcntl
+import time
+import sys
+
+LOCK_FILENAME = ".lock"
+
+def main():
+=================
+12409714
+count:1
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+"""
+Contains snippet about class members.
+
+See http://stackoverflow.com/questions/12409714/python-class-members
+"""
+
+class Foo(object):
+
+    counter = 0
+
+    def __init__(self):
+        Foo.counter += 1
+        self.number = Foo.counter
+        print("Making", self.number)
+=================
+2557110
+count:1
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+"""
+This module does blah blah.
+
+Here is the description of the module.
+See PEP 257 (http://legacy.python.org/dev/peps/pep-0257/) for more details.
+See also http://stackoverflow.com/questions/2557110/what-to-put-in-a-python-module-docstring.
+
+See also PEP 8 (http://legacy.python.org/dev/peps/pep-0008/) for Python's good practices.
+"""
+
+import sys, os
+
+def main():
+    """
+    This function does blah blah.
+    
+=================
+20760589
+count:1
+# See http://people.csail.mit.edu/hubert/pyaudio/docs/#example-blocking-mode-audio-i-o
+
+import pyaudio
+
+p = pyaudio.PyAudio()
+
+print("Num devices:", p.get_device_count())
+print()
+
+# See https://stackoverflow.com/q/20760589
+for i in range(p.get_device_count()):
+=================
+728356
+count:1
+# Indeed, the value of the "label" variable given in the lambda function is a
+# reference not a copy; thus here, all call to the "callback" function would
+# print "Mango"!
+#
+# A copy of "label" should be given to the lambda function like in the
+# following version ("arg" is a copy of "label", not a reference).
+#
+# See the following links for more information:
+# - http://effbot.org/zone/tkinter-callbacks.htm
+# - http://stackoverflow.com/questions/728356/dynamically-creating-a-menu-in-tkinter-lambda-expressions
+# - http://stackoverflow.com/questions/938429/scope-of-python-lambda-functions-and-their-parameters
+# - http://stackoverflow.com/questions/19693782/callback-function-tkinter-button-with-variable-parameter
+
+def callback(arg):
+    print(arg)
+
+l = []
+
+for label in ["Banana", "Apple", "Mango"]:
+    l.append(lambda arg=label: callback(arg))
+=================
+938429
+count:1
+# reference not a copy; thus here, all call to the "callback" function would
+# print "Mango"!
+#
+# A copy of "label" should be given to the lambda function like in the
+# following version ("arg" is a copy of "label", not a reference).
+#
+# See the following links for more information:
+# - http://effbot.org/zone/tkinter-callbacks.htm
+# - http://stackoverflow.com/questions/728356/dynamically-creating-a-menu-in-tkinter-lambda-expressions
+# - http://stackoverflow.com/questions/938429/scope-of-python-lambda-functions-and-their-parameters
+# - http://stackoverflow.com/questions/19693782/callback-function-tkinter-button-with-variable-parameter
+
+def callback(arg):
+    print(arg)
+
+l = []
+
+for label in ["Banana", "Apple", "Mango"]:
+    l.append(lambda arg=label: callback(arg))
+
+=================
+19693782
+count:1
+# print "Mango"!
+#
+# A copy of "label" should be given to the lambda function like in the
+# following version ("arg" is a copy of "label", not a reference).
+#
+# See the following links for more information:
+# - http://effbot.org/zone/tkinter-callbacks.htm
+# - http://stackoverflow.com/questions/728356/dynamically-creating-a-menu-in-tkinter-lambda-expressions
+# - http://stackoverflow.com/questions/938429/scope-of-python-lambda-functions-and-their-parameters
+# - http://stackoverflow.com/questions/19693782/callback-function-tkinter-button-with-variable-parameter
+
+def callback(arg):
+    print(arg)
+
+l = []
+
+for label in ["Banana", "Apple", "Mango"]:
+    l.append(lambda arg=label: callback(arg))
+
+l[0]()
+=================
+22772968
+count:1
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2015 Jérémie DECOCK (http://www.jdhp.org)
+
+"""
+This is the simplest Python GTK+3 snippet.
+
+See: http://stackoverflow.com/questions/22772968/python-pygtk-how-to-put-a-window-on-a-specific-display-monitor
+"""
+
+from gi.repository import Gtk as gtk
+
+def main():
+    window1 = gtk.Window()
+    window2 = gtk.Window()
+    
+    # Monitors
+    screen = window1.get_screen()
+=================
+19072161
+count:1
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2015 Jérémie DECOCK (http://www.jdhp.org)
+
+"""
+This is the simplest Python GTK+3 snippet.
+
+See: http://stackoverflow.com/questions/19072161/preventing-multiple-instances-of-a-gtk-application
+     https://developer.gnome.org/gnome-devel-demos/stable/GtkApplicationWindow.py.html.en
+     https://git.gnome.org/browse/gnome-music/tree/gnomemusic/application.py
+     https://git.gnome.org/browse/pitivi/tree/pitivi/application.py
+     https://git.gnome.org/browse/gnome-tweak-tool/tree/gtweak/app.py
+     https://git.gnome.org/browse/meld/tree/meld/meldapp.py
+"""
+
+from gi.repository import Gtk as gtk
+from gi.repository import Gio as gio
+import sys
+=================
+9682297
+count:2
+
+# Copyright (c) 2015 Jérémie DECOCK (http://www.jdhp.org)
+
+"""
+This is the simplest Python GTK+3 Poppler snippet.
+
+WARNING: Debian users have to install the "libpoppler-glib-dev" package to run
+         this snippet.
+
+SEE: http://stackoverflow.com/questions/9682297/displaying-pdf-files-with-python3
+"""
+
+import gi
+gi.require_version('Poppler', '0.18')
+
+from gi.repository import Gtk as gtk
+from gi.repository import Poppler as poppler
+
+import os
+
+=================
+17109634
+count:1
+
+# The TreeView's selection callback
+def simple_click_cb(selection):
+    model, treeiter = selection.get_selected()
+    if treeiter != None:
+        print("You selected", model[treeiter][0], "[simple click]")
+
+
+# The TreeView's double click callback
+# See: http://stackoverflow.com/questions/17109634/hyperlink-in-cellrenderertext-markup
+def double_click_cb(tree_view, tree_path, tree_view_column):
+    model = tree_view.get_model()
+    print("You selected", model[tree_path][0], "[double click]")
+
+
+def main():
+    window = gtk.Window()
+    window.set_default_size(300, 450)
+    window.set_border_width(18)
+
+=================
+24788003
+count:1
+# -*- coding: utf-8 -*-
+
+# https://stackoverflow.com/questions/24788003/how-do-you-resize-an-image-in-python-using-pyglet
+
+import pyglet
+
+window = pyglet.window.Window()
+
+#image = pyglet.resource.image('image.png')
+image = pyglet.resource.image('image.jpeg')
+
+print(image.width)
+print(image.height)
+=================
+24226781
+count:2
+# Python 3 named "urllib.request" and "urllib.error".
+# Urllib (and thus urllib2) is part of the Python3 standard library but this is
+# not the case for urllib3 !
+# "urllib and urllib2 have little to do with each other. They were designed to
+# be independent and standalone, each solving a different scope of problems,
+# and urllib3 follows in a similar vein."
+
+# Online documentation:
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen
+# - http://stackoverflow.com/questions/802134/changing-user-agent-on-urllib2-urlopen
+
+import argparse
+import gzip
+import urllib.request
+
+HTTP_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.2.1',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+=================
+802134
+count:2
+# Urllib (and thus urllib2) is part of the Python3 standard library but this is
+# not the case for urllib3 !
+# "urllib and urllib2 have little to do with each other. They were designed to
+# be independent and standalone, each solving a different scope of problems,
+# and urllib3 follows in a similar vein."
+
+# Online documentation:
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen
+# - http://stackoverflow.com/questions/802134/changing-user-agent-on-urllib2-urlopen
+
+import argparse
+import gzip
+import urllib.request
+
+HTTP_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.2.1',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding': 'gzip, deflate'
+=================
+24226781
+count:1
+# Python 3 named "urllib.request" and "urllib.error".
+# Urllib (and thus urllib2) is part of the Python3 standard library but this is
+# not the case for urllib3 !
+# "urllib and urllib2 have little to do with each other. They were designed to
+# be independent and standalone, each solving a different scope of problems,
+# and urllib3 follows in a similar vein."
+
+# Online documentation:
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen
+# - http://stackoverflow.com/questions/802134/changing-user-agent-on-urllib2-urlopen
+
+import argparse
+import shutil
+import urllib.request
+
+HTTP_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.2.1',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+=================
+802134
+count:1
+# Urllib (and thus urllib2) is part of the Python3 standard library but this is
+# not the case for urllib3 !
+# "urllib and urllib2 have little to do with each other. They were designed to
+# be independent and standalone, each solving a different scope of problems,
+# and urllib3 follows in a similar vein."
+
+# Online documentation:
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen
+# - http://stackoverflow.com/questions/802134/changing-user-agent-on-urllib2-urlopen
+
+import argparse
+import shutil
+import urllib.request
+
+HTTP_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.2.1',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding': 'gzip, deflate'
+=================
+7243750
+count:1
+    parser.add_argument("url", nargs=1, metavar="URL",
+                        help="The URL of the webpage to parse.")
+    args = parser.parse_args()
+
+    url = args.url[0]
+    print("URL:", url)
+    print()
+
+    # HTTP REQUEST ############################################################
+    # See http://stackoverflow.com/questions/7243750/download-file-from-web-in-python-3
+
+    http_request = urllib.request.Request(url, data=None, headers=HTTP_HEADERS)
+
+    with urllib.request.urlopen(http_request) as http_response, open('out.html', 'wb') as out_file:
+        shutil.copyfileobj(http_response, out_file)
+
+if __name__ == '__main__':
+    main()
+=================
+24226781
+count:1
+# Python 3 named "urllib.request" and "urllib.error".
+# Urllib (and thus urllib2) is part of the Python3 standard library but this is
+# not the case for urllib3 !
+# "urllib and urllib2 have little to do with each other. They were designed to
+# be independent and standalone, each solving a different scope of problems,
+# and urllib3 follows in a similar vein."
+
+# Online documentation:
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen
+# - http://stackoverflow.com/questions/802134/changing-user-agent-on-urllib2-urlopen
+
+import argparse
+import urllib.request
+
+HTTP_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.2.1',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding': 'gzip, deflate'
+=================
+802134
+count:1
+# Urllib (and thus urllib2) is part of the Python3 standard library but this is
+# not the case for urllib3 !
+# "urllib and urllib2 have little to do with each other. They were designed to
+# be independent and standalone, each solving a different scope of problems,
+# and urllib3 follows in a similar vein."
+
+# Online documentation:
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen
+# - http://stackoverflow.com/questions/802134/changing-user-agent-on-urllib2-urlopen
+
+import argparse
+import urllib.request
+
+HTTP_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.2.1',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding': 'gzip, deflate'
+}
+=================
+9718541
+count:1
+# Python 3 named "urllib.request" and "urllib.error".
+# Urllib (and thus urllib2) is part of the Python3 standard library but this is
+# not the case for urllib3 !
+# "urllib and urllib2 have little to do with each other. They were designed to
+# be independent and standalone, each solving a different scope of problems,
+# and urllib3 follows in a similar vein."
+
+# Online documentation:
+# - https://docs.python.org/3.0/library/urllib.parse.html
+# - http://stackoverflow.com/questions/9718541/reconstructing-absolute-urls-from-relative-urls-on-a-page
+
+from urllib.parse import urljoin
+
+def main():
+
+    base = "http://www.jdhp.org/foo/bar/baz.html"
+    relative_url = "../../images/img.png"
+
+    absolute_url = urljoin(base, relative_url)
+
+=================
+9626535
+count:1
+# Python 3 named "urllib.request" and "urllib.error".
+# Urllib (and thus urllib2) is part of the Python3 standard library but this is
+# not the case for urllib3 !
+# "urllib and urllib2 have little to do with each other. They were designed to
+# be independent and standalone, each solving a different scope of problems,
+# and urllib3 follows in a similar vein."
+
+# Online documentation:
+# - https://docs.python.org/3.0/library/urllib.parse.html
+# - http://stackoverflow.com/questions/9626535/get-domain-name-from-url
+
+from urllib.parse import urlparse
+
+def main():
+
+    uri = "http://www.jdhp.org/home_en.html"
+
+    parsed_uri = urlparse(uri)
+
+    print("uri", uri)
+=================
+7243750
+count:1
+# Python 3 named "urllib.request" and "urllib.error".
+# Urllib (and thus urllib2) is part of the Python3 standard library but this is
+# not the case for urllib3 !
+# "urllib and urllib2 have little to do with each other. They were designed to
+# be independent and standalone, each solving a different scope of problems,
+# and urllib3 follows in a similar vein."
+
+# Online documentation:
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/7243750/download-file-from-web-in-python-3
+# - http://stackoverflow.com/questions/22676/how-do-i-download-a-file-over-http-using-python
+
+import urllib.request
+
+def main():
+    """Main function"""
+
+    url = "https://www.google.fr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+
+    # Download the file from "url" and save it locally under "out.png"
+=================
+22676
+count:1
+# Urllib (and thus urllib2) is part of the Python3 standard library but this is
+# not the case for urllib3 !
+# "urllib and urllib2 have little to do with each other. They were designed to
+# be independent and standalone, each solving a different scope of problems,
+# and urllib3 follows in a similar vein."
+
+# Online documentation:
+# - https://docs.python.org/3/library/urllib.request.html
+# - http://stackoverflow.com/questions/7243750/download-file-from-web-in-python-3
+# - http://stackoverflow.com/questions/22676/how-do-i-download-a-file-over-http-using-python
+
+import urllib.request
+
+def main():
+    """Main function"""
+
+    url = "https://www.google.fr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+
+    # Download the file from "url" and save it locally under "out.png"
+    urllib.request.urlretrieve(url, "out.png")
+=================
+9626535
+count:1
+# Python 3 named "urllib.request" and "urllib.error".
+# Urllib (and thus urllib2) is part of the Python3 standard library but this is
+# not the case for urllib3 !
+# "urllib and urllib2 have little to do with each other. They were designed to
+# be independent and standalone, each solving a different scope of problems,
+# and urllib3 follows in a similar vein."
+
+# Online documentation:
+# - https://docs.python.org/3.0/library/urllib.parse.html
+# - http://stackoverflow.com/questions/9626535/get-domain-name-from-url
+
+from urllib.parse import urlparse
+
+def main():
+
+    uri = "http://www.jdhp.org/home_en.html"
+
+    parsed_uri = urlparse(uri)
+    domain = '{uri.netloc}'.format(uri=parsed_uri)
+
+=================
+18675266
+count:4
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# See: http://matplotlib.sourceforge.net/examples/user_interfaces/embedding_in_tk.html
+#      http://matplotlib.sourceforge.net/examples/user_interfaces/embedding_in_tk2.html
+#      http://stackoverflow.com/questions/18675266/how-to-make-matplotlibpyplot-resizeable-with-the-tkinter-window-in-python
+
+import matplotlib
+matplotlib.use('TkAgg')
+
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+# implement the default mpl key bindings
+=================
+18675266
+count:2
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# See: http://matplotlib.sourceforge.net/examples/user_interfaces/embedding_in_tk.html
+#      http://matplotlib.sourceforge.net/examples/user_interfaces/embedding_in_tk2.html
+#      http://stackoverflow.com/questions/18675266/how-to-make-matplotlibpyplot-resizeable-with-the-tkinter-window-in-python
+
+import matplotlib
+matplotlib.use('TkAgg')
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+
+import tkinter as tk
+=================
+4065783
+count:3
+
+import tkinter as tk
+
+root = tk.Tk()
+
+label = tk.Label(root, text="Please resize the window...")
+label.pack(fill=tk.BOTH, expand=1)
+
+def resize_callback(event):
+    # http://stackoverflow.com/questions/4065783/how-do-i-get-a-windows-current-size-using-tkinter
+    widget_current_width = label.winfo_width()      # Current label width (this work for every widgets!)
+    widget_current_height = label.winfo_height()    # Current label height (this work for every widgets!)
+
+    label["text"] = "Label widget size: {}x{}".format(widget_current_width, widget_current_height)
+
+label.bind('<Configure>', resize_callback)
+
+=================
+18675266
+count:8
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# See: http://matplotlib.sourceforge.net/examples/user_interfaces/embedding_in_tk.html
+#      http://matplotlib.sourceforge.net/examples/user_interfaces/embedding_in_tk2.html
+#      http://stackoverflow.com/questions/18675266/how-to-make-matplotlibpyplot-resizeable-with-the-tkinter-window-in-python
+
+import matplotlib
+matplotlib.use('TkAgg')
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
+import tkinter as tk
+=================
+18675266
+count:2
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# See: http://matplotlib.sourceforge.net/examples/user_interfaces/embedding_in_tk.html
+#      http://matplotlib.sourceforge.net/examples/user_interfaces/embedding_in_tk2.html
+#      http://stackoverflow.com/questions/18675266/how-to-make-matplotlibpyplot-resizeable-with-the-tkinter-window-in-python
+
+import matplotlib
+matplotlib.use('TkAgg')
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+
+# Implement the default Matplotlib key bindings
+=================
+3177231
+count:3
+if tk.TkVersion < 8.6:
+    print("*" * 80)
+    print("WARNING: Tk version {} is installed on your system.".format(tk.TkVersion))
+    print("Tk < 8.6 only supports three file formats: GIF, PGM and PPM.")
+    print("You need to install Tk >= 8.6 if you want to read JPEG and PNG images!")
+    print("*" * 80)
+
+# WARNING:
+# A Tk window MUST be created before you can call PhotoImage!
+# See: http://stackoverflow.com/questions/3177231/python-pil-imagetk-photoimage-is-giving-me-a-bus-error
+#      http://stackoverflow.com/questions/1236540/how-do-i-use-pil-with-tkinter
+
+root = tk.Tk()
+
+# PIL #########################################################################
+
+# WARNING:
+# You must keep a reference to the image object in your Python program,
+# either by storing it in a global variable, or by attaching it to another
+# object!
+=================
+1236540
+count:3
+    print("*" * 80)
+    print("WARNING: Tk version {} is installed on your system.".format(tk.TkVersion))
+    print("Tk < 8.6 only supports three file formats: GIF, PGM and PPM.")
+    print("You need to install Tk >= 8.6 if you want to read JPEG and PNG images!")
+    print("*" * 80)
+
+# WARNING:
+# A Tk window MUST be created before you can call PhotoImage!
+# See: http://stackoverflow.com/questions/3177231/python-pil-imagetk-photoimage-is-giving-me-a-bus-error
+#      http://stackoverflow.com/questions/1236540/how-do-i-use-pil-with-tkinter
+
+root = tk.Tk()
+
+# PIL #########################################################################
+
+# WARNING:
+# You must keep a reference to the image object in your Python program,
+# either by storing it in a global variable, or by attaching it to another
+# object!
+#
+=================
+25480853
+count:1
+ 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# SEE: http://stackoverflow.com/questions/25480853/cairo-with-tkinter
+#      http://effbot.org/tkinterbook/photoimage.htm#patterns
+
+# Required Debian package (Debian 8.1 Jessie): python3-pil.imagetk
+
+import tkinter as tk
+import PIL.Image as pil      # PIL.Image is a module not a class...
+import PIL.ImageTk as piltk  # PIL.ImageTk is a module not a class...
+
+import cairo
+
+=================
+3177231
+count:1
+cairo_context.rectangle(0, 0, 1, 1)
+cairo_context.set_source_rgba(1, 0, 0, 0.8)
+cairo_context.fill()
+
+
+# TKINTER
+
+# WARNING:
+# A Tk window MUST be created before you can call PhotoImage!
+# See: http://stackoverflow.com/questions/3177231/python-pil-imagetk-photoimage-is-giving-me-a-bus-error
+#      http://stackoverflow.com/questions/1236540/how-do-i-use-pil-with-tkinter
+
+root = tk.Tk()
+
+
+# PIL
+
+# WARNING:
+# You must keep a reference to the image object in your Python program,
+# either by storing it in a global variable, or by attaching it to another
+=================
+1236540
+count:1
+cairo_context.set_source_rgba(1, 0, 0, 0.8)
+cairo_context.fill()
+
+
+# TKINTER
+
+# WARNING:
+# A Tk window MUST be created before you can call PhotoImage!
+# See: http://stackoverflow.com/questions/3177231/python-pil-imagetk-photoimage-is-giving-me-a-bus-error
+#      http://stackoverflow.com/questions/1236540/how-do-i-use-pil-with-tkinter
+
+root = tk.Tk()
+
+
+# PIL
+
+# WARNING:
+# You must keep a reference to the image object in your Python program,
+# either by storing it in a global variable, or by attaching it to another
+# object!
+=================
+5886280
+count:1
+ 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# See: http://stackoverflow.com/questions/5886280/python-tkinter-overrideredirect-cannot-receive-keystrokes-linux
+#      http://stackoverflow.com/questions/7966119/display-fullscreen-mode-on-tkinter
+#      http://effbot.org/tkinterbook/wm.htm
+
+import tkinter as tk
+
+root = tk.Tk()
+
+label = tk.Label(root, text="Press any key to quit")
+label.pack(fill=tk.BOTH, expand=1)
+
+=================
+7966119
+count:1
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# See: http://stackoverflow.com/questions/5886280/python-tkinter-overrideredirect-cannot-receive-keystrokes-linux
+#      http://stackoverflow.com/questions/7966119/display-fullscreen-mode-on-tkinter
+#      http://effbot.org/tkinterbook/wm.htm
+
+import tkinter as tk
+
+root = tk.Tk()
+
+label = tk.Label(root, text="Press any key to quit")
+label.pack(fill=tk.BOTH, expand=1)
+
+# SETUP FULLSCREEN
+=================
+3962247
+count:1
+
+label_stack = []
+
+def add_label():
+    label = tk.Label(root, text="Label " + str(len(label_stack)))
+    label.pack(side=tk.TOP)
+    label_stack.append(label)
+
+def del_label():
+    # See http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+    #     http://stackoverflow.com/questions/12364981/how-to-delete-tkinter-widgets-from-a-window
+    try:
+        label = label_stack.pop()
+        label.pack_forget()
+        label.destroy()
+    except:
+        print("Empty stack.")
+
+root = tk.Tk()
+
+=================
+12364981
+count:1
+label_stack = []
+
+def add_label():
+    label = tk.Label(root, text="Label " + str(len(label_stack)))
+    label.pack(side=tk.TOP)
+    label_stack.append(label)
+
+def del_label():
+    # See http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+    #     http://stackoverflow.com/questions/12364981/how-to-delete-tkinter-widgets-from-a-window
+    try:
+        label = label_stack.pop()
+        label.pack_forget()
+        label.destroy()
+    except:
+        print("Empty stack.")
+
+root = tk.Tk()
+
+del_button = tk.Button(root, text="Del", width=10, command=del_label)
+=================
+728356
+count:1
+#
+# Indeed, the value of the "label" variable given in the lambda function is a
+# reference not a copy; thus here, all buttons would print "Mango"!
+#
+# A copy of "label" should be given to the lambda function like in the
+# following version ("arg" is a copy of "label", not a reference).
+#
+# See the following links for more information:
+# - http://effbot.org/zone/tkinter-callbacks.htm
+# - http://stackoverflow.com/questions/728356/dynamically-creating-a-menu-in-tkinter-lambda-expressions
+# - http://stackoverflow.com/questions/938429/scope-of-python-lambda-functions-and-their-parameters
+# - http://stackoverflow.com/questions/19693782/callback-function-tkinter-button-with-variable-parameter
+
+import tkinter as tk
+
+def callback(arg):
+    """A callback with an argument."""
+    print(arg)
+
+root = tk.Tk()
+=================
+938429
+count:1
+# Indeed, the value of the "label" variable given in the lambda function is a
+# reference not a copy; thus here, all buttons would print "Mango"!
+#
+# A copy of "label" should be given to the lambda function like in the
+# following version ("arg" is a copy of "label", not a reference).
+#
+# See the following links for more information:
+# - http://effbot.org/zone/tkinter-callbacks.htm
+# - http://stackoverflow.com/questions/728356/dynamically-creating-a-menu-in-tkinter-lambda-expressions
+# - http://stackoverflow.com/questions/938429/scope-of-python-lambda-functions-and-their-parameters
+# - http://stackoverflow.com/questions/19693782/callback-function-tkinter-button-with-variable-parameter
+
+import tkinter as tk
+
+def callback(arg):
+    """A callback with an argument."""
+    print(arg)
+
+root = tk.Tk()
+
+=================
+19693782
+count:1
+# reference not a copy; thus here, all buttons would print "Mango"!
+#
+# A copy of "label" should be given to the lambda function like in the
+# following version ("arg" is a copy of "label", not a reference).
+#
+# See the following links for more information:
+# - http://effbot.org/zone/tkinter-callbacks.htm
+# - http://stackoverflow.com/questions/728356/dynamically-creating-a-menu-in-tkinter-lambda-expressions
+# - http://stackoverflow.com/questions/938429/scope-of-python-lambda-functions-and-their-parameters
+# - http://stackoverflow.com/questions/19693782/callback-function-tkinter-button-with-variable-parameter
+
+import tkinter as tk
+
+def callback(arg):
+    """A callback with an argument."""
+    print(arg)
+
+root = tk.Tk()
+
+for label in ["Banana", "Apple", "Mango"]:
+=================
+8691655
+count:1
+ 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# See http://stackoverflow.com/questions/8691655/how-to-put-a-tkinter-window-on-top-of-the-others
+#     http://stackoverflow.com/questions/1892339/how-to-make-a-window-jump-to-the-front
+
+import tkinter as tk
+
+root = tk.Tk()
+
+root.lift()
+root.attributes("-topmost", True)   # Set the window as "always visible"
+root.attributes("-topmost", False)
+
+=================
+1892339
+count:1
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# See http://stackoverflow.com/questions/8691655/how-to-put-a-tkinter-window-on-top-of-the-others
+#     http://stackoverflow.com/questions/1892339/how-to-make-a-window-jump-to-the-front
+
+import tkinter as tk
+
+root = tk.Tk()
+
+root.lift()
+root.attributes("-topmost", True)   # Set the window as "always visible"
+root.attributes("-topmost", False)
+
+=================
+8691655
+count:1
+ 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# See http://stackoverflow.com/questions/8691655/how-to-put-a-tkinter-window-on-top-of-the-others
+
+import tkinter as tk
+
+root = tk.Tk()
+
+root.lift()
+#root.attributes("-topmost", True)   # Set the window as "always visible"
+root.call('wm', 'attributes', '.', '-topmost', True)
+root.after_idle(root.call, 'wm', 'attributes', '.', '-topmost', False)
+
+=================
+25480853
+count:1
+ 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# SEE: http://stackoverflow.com/questions/25480853/cairo-with-tkinter
+#      http://effbot.org/tkinterbook/photoimage.htm#patterns
+
+# Required Debian package (Debian 8.1 Jessie): python-pil.imagetk
+
+import Tkinter as tk
+import PIL.Image as pil      # PIL.Image is a module not a class...
+import PIL.ImageTk as piltk  # PIL.ImageTk is a module not a class...
+
+import cairo
+
+=================
+3177231
+count:1
+    cairo_context.rectangle(0, 0, 1, 1)
+    cairo_context.set_source_rgba(1, 0, 0, 0.8)
+    cairo_context.fill()
+
+
+    # TKINTER
+
+    # WARNING:
+    # A Tk window MUST be created before you can call PhotoImage!
+    # See: http://stackoverflow.com/questions/3177231/python-pil-imagetk-photoimage-is-giving-me-a-bus-error
+    #      http://stackoverflow.com/questions/1236540/how-do-i-use-pil-with-tkinter
+
+    root = tk.Tk()
+
+
+    # PIL
+
+    # WARNING:
+    # You must keep a reference to the image object in your Python program,
+    # either by storing it in a global variable, or by attaching it to another
+=================
+1236540
+count:1
+    cairo_context.set_source_rgba(1, 0, 0, 0.8)
+    cairo_context.fill()
+
+
+    # TKINTER
+
+    # WARNING:
+    # A Tk window MUST be created before you can call PhotoImage!
+    # See: http://stackoverflow.com/questions/3177231/python-pil-imagetk-photoimage-is-giving-me-a-bus-error
+    #      http://stackoverflow.com/questions/1236540/how-do-i-use-pil-with-tkinter
+
+    root = tk.Tk()
+
+
+    # PIL
+
+    # WARNING:
+    # You must keep a reference to the image object in your Python program,
+    # either by storing it in a global variable, or by attaching it to another
+    # object!
+=================
+3962247
+count:1
+
+label_stack = []
+
+def add_label():
+    label = tk.Label(root, text="Label " + str(len(label_stack)))
+    label.pack(side=tk.TOP)
+    label_stack.append(label)
+
+def del_label():
+    # See http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+    #     http://stackoverflow.com/questions/12364981/how-to-delete-tkinter-widgets-from-a-window
+    try:
+        label = label_stack.pop()
+        label.pack_forget()
+        label.destroy()
+    except:
+        print "Empty stack."
+
+root = tk.Tk()
+
+=================
+12364981
+count:1
+label_stack = []
+
+def add_label():
+    label = tk.Label(root, text="Label " + str(len(label_stack)))
+    label.pack(side=tk.TOP)
+    label_stack.append(label)
+
+def del_label():
+    # See http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+    #     http://stackoverflow.com/questions/12364981/how-to-delete-tkinter-widgets-from-a-window
+    try:
+        label = label_stack.pop()
+        label.pack_forget()
+        label.destroy()
+    except:
+        print "Empty stack."
+
+root = tk.Tk()
+
+del_button = tk.Button(root, text="Del", width=10, command=del_label)
+=================
+11373192
+count:2
+# -*- coding: utf-8 -*-
+            
+# see http://stackoverflow.com/questions/11373192/generating-discrete-random-variables-with-specified-weights-using-scipy-or-numpy
+
+import numpy as np
+from scipy.stats import rv_discrete  
+
+
+# IF VALUES ARE INTEGERS ########################
+
+values = [1, 2, 3]
+probabilities = [0.2, 0.5, 0.3]
+num_samples = 1000
+=================
+16621351
+count:1
+
+# See https://docs.scipy.org/doc/numpy/user/basics.rec.html
+#     http://stackoverflow.com/questions/16621351/how-to-use-python-numpy-savetxt-to-write-strings-and-float-number-to-an-ascii-fi
+
+import numpy as np
+
+# METH 1
+
+foo = np.array([
+                   (1, 'Sirius', -1.45, 'A1V'),
+                   (2, 'Canopus', -0.73, 'F0Ib'),
+                   (3, 'Rigil Kent', -0.1, 'G2V')
+               ],
+=================
+7370801
+count:1
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2016 Jérémie DECOCK (http://www.jdhp.org)
+
+# See: https://docs.python.org/3/library/time.html#time.process_time
+#      http://stackoverflow.com/questions/7370801/measure-time-elapsed-in-python
+
+import time
+
+initial_time = time.process_time()
+
+#do some stuff
+time.sleep(1)
+
+final_time = time.process_time()
+
+=================
+7370801
+count:1
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2016 Jérémie DECOCK (http://www.jdhp.org)
+
+# See: https://docs.python.org/3/library/time.html#time.process_time
+#      http://stackoverflow.com/questions/7370801/measure-time-elapsed-in-python
+
+import time
+
+initial_time = time.perf_counter()
+
+#do some stuff
+time.sleep(1)
+
+final_time = time.perf_counter()
+
+=================
+4765242
+count:1
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+
+# See http://stackoverflow.com/questions/4764932/in-python-how-do-i-read-the-exif-data-for-an-image/4765242#4765242
+
+import Image
+
+import PIL
+import PIL.ExifTags
+
+def main():
+    """Main function"""
+
+    img = Image.open("test.jpeg")
+=================
+3908063
+count:1
+import os
+import sys
+import subprocess
+
+TIMEOUT=3  # seconds
+
+# If you launch a sub-process (even with shell=False), then the
+# subprocess.Popen.kill() function will only kill that sub-process (so if there
+# are any "grandchild" processes, they won't be terminated.).
+# See: http://stackoverflow.com/questions/3908063/python-subprocess-with-shell-true-redirections-and-platform-independent-subproc
+#
+# The solution is to use preexec_fn to cause the subprocess to acquire it's own
+# session group (then a signal is sent to all processes in that session group).
+# See: http://stackoverflow.com/questions/3876886/timeout-a-subprocess
+
+def execute(args):
+    try:
+        output = subprocess.check_output(args, stderr=subprocess.STDOUT, universal_newlines=True, timeout=TIMEOUT)
+        #output = subprocess.check_output(args, stderr=subprocess.STDOUT, universal_newlines=True, timeout=TIMEOUT, preexec_fn=os.setsid)
+        print(output)
+=================
+3876886
+count:1
+TIMEOUT=3  # seconds
+
+# If you launch a sub-process (even with shell=False), then the
+# subprocess.Popen.kill() function will only kill that sub-process (so if there
+# are any "grandchild" processes, they won't be terminated.).
+# See: http://stackoverflow.com/questions/3908063/python-subprocess-with-shell-true-redirections-and-platform-independent-subproc
+#
+# The solution is to use preexec_fn to cause the subprocess to acquire it's own
+# session group (then a signal is sent to all processes in that session group).
+# See: http://stackoverflow.com/questions/3876886/timeout-a-subprocess
+
+def execute(args):
+    try:
+        output = subprocess.check_output(args, stderr=subprocess.STDOUT, universal_newlines=True, timeout=TIMEOUT)
+        #output = subprocess.check_output(args, stderr=subprocess.STDOUT, universal_newlines=True, timeout=TIMEOUT, preexec_fn=os.setsid)
+        print(output)
+    except OSError as e:
+        print("Execution failed:", e, file=sys.stderr)
+    except subprocess.CalledProcessError as e:
+        print("Execution failed:", e, file=sys.stderr)
+=================
+4765242
+count:1
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+
+# See http://stackoverflow.com/questions/4764932/in-python-how-do-i-read-the-exif-data-for-an-image/4765242#4765242
+
+import PIL.Image as pil_img           # PIL.Image is a module not a class...
+import PIL.ExifTags as pil_exif_tags  # PIL.ExifTags is a module not a class...
+
+import sys
+
+def main():
+    """Main function"""
+
+    try:
+=================
+16311562
+count:2
+data = {"key1": "value1",
+        "key2": 2,
+        "key3": 3.14,
+        "key4": True,
+        "key5": (1, 2, 3, 4)}
+
+print(data)
+
+with lzma.open("test.json.xz", "wt") as fd:
+    # https://stackoverflow.com/questions/16311562/python-json-without-whitespaces
+    # https://docs.python.org/3/library/json.html#json.dump
+=================
+10556479
+count:1
+"""
+OpenCV - Trackbar widget.
+
+Required: opencv library (Debian: aptitude install python-opencv)
+
+See: https://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_gui/py_trackbar/py_trackbar.html#trackbar
+
+WARNING: Tkinter doesn't work if it's run outside the main thread!
+
+    See: http://stackoverflow.com/questions/10556479/running-a-tkinter-form-in-a-separate-thread
+    "Tkinter isn't thread safe, and the general consensus is that Tkinter
+    doesn't work in a non-main thread. If you rewrite your code so that Tkinter
+    runs in the main thread, you can have your workers run in other threads."
+"""
+
+from __future__ import print_function
+
+import cv2 as cv
+import numpy as np
+import argparse
+=================
+28521783
+count:1
+
+Required: opencv library (Debian: aptitude install python-opencv)
+
+See: https://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_imgproc/py_houghcircles/py_houghcircles.html#hough-circles
+     https://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_imgproc/py_colorspaces/py_colorspaces.html#object-tracking
+     Oreilly's book "Learning OpenCV" (first edition) p.158 for details about Hough transforms.
+
+     http://txt.arboreus.com/2014/10/21/remove-circles-from-an-image-in-python.html
+     http://wiki.elphel.com/index.php?title=OpenCV_Tennis_balls_recognizing_tutorial
+     http://stackoverflow.com/questions/28521783/python-opencv-houghcircles-not-giving-good-results
+     http://computer-vision-talks.com/articles/how-to-detect-circles-in-noisy-image/
+     http://www.pyimagesearch.com/2014/07/21/detecting-circles-images-using-opencv-hough-circles/
+"""
+
+from __future__ import print_function
+
+import cv2 as cv
+import numpy as np
+import argparse
+
+=================
+27156381
+count:1
+ax = fig.add_subplot(111)
+
+# AX ##########################################################################
+
+xbins = np.linspace(x.min(), x.max(), 70)
+ybins = np.linspace(y.min(), y.max(), 70)
+
+hist, xedges, yedges = np.histogram2d(x, y, bins=(xbins, ybins))
+
+# See http://stackoverflow.com/questions/27156381/python-creating-a-2d-histogram-from-a-numpy-matrix
+
+xidx = np.clip(np.digitize(x, xedges), 0, hist.shape[0]-1)
+yidx = np.clip(np.digitize(y, yedges), 0, hist.shape[1]-1)
+c = hist[xidx, yidx]
+
+sc = ax.scatter(x, y,
+                c=c,
+                s=5,
+                marker='o',
+                #cmap='gnuplot2',
+=================
+8482588
+count:2
+# -*- coding: utf-8 -*-
+
+"""
+Plot an histogram with a text stats summary
+
+See:
+
+- https://stackoverflow.com/questions/8482588/putting-text-in-top-left-corner-of-matplotlib-plot
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+###############################################################################
+
+def add_stat_box(ax, samples):
+    sig_info = "Samples: {}\nMin: {:0.2f}\nMax: {:0.2f}\nMean: {:0.2f}\nSTD: {:0.2f}".format(len(samples),
+                                                                                             samples.min(),
+=================
+8482588
+count:2
+###############################################################################
+
+def add_stat_box(ax, samples):
+    sig_info = "Samples: {}\nMin: {:0.2f}\nMax: {:0.2f}\nMean: {:0.2f}\nSTD: {:0.2f}".format(len(samples),
+                                                                                             samples.min(),
+                                                                                             samples.max(),
+                                                                                             samples.mean(),
+                                                                                             samples.std())
+
+    # https://stackoverflow.com/questions/8482588/putting-text-in-top-left-corner-of-matplotlib-plot
+    ax.text(0.95, 0.95, sig_info,
+            horizontalalignment='right',
+            verticalalignment='top',
+            fontsize=18,
+            transform = ax.transAxes)
+
+    return ax
+
+# MAKE DATA ###################################################################
+
+=================
+11874767
+count:1
+# -*- coding: utf-8 -*-
+
+"""
+Realtime animation
+
+See http://stackoverflow.com/questions/11874767/real-time-plotting-in-while-loop-with-matplotlib
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+import random
+import time
+
+X_DELTA = 1
+TIME_SLEEP = 0.1
+=================
+33371917
+count:1
+# -*- coding: utf-8 -*-
+
+"""
+Plot an histogram of a large input data (larger than memory)
+
+Fill the histogram chunk by chunk.
+
+See:
+- https://stackoverflow.com/questions/33371917/how-to-plot-result-of-np-histogram-with-matplotlib-analog-to-plt-his
+- https://stackoverflow.com/questions/5328556/histogram-matplotlib
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+mu, sigma = 100, 15
+
+# Build histogram chunk by chunk ######
+
+=================
+5328556
+count:1
+# -*- coding: utf-8 -*-
+
+"""
+Plot an histogram of a large input data (larger than memory)
+
+Fill the histogram chunk by chunk.
+
+See:
+- https://stackoverflow.com/questions/33371917/how-to-plot-result-of-np-histogram-with-matplotlib-analog-to-plt-his
+- https://stackoverflow.com/questions/5328556/histogram-matplotlib
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+mu, sigma = 100, 15
+
+# Build histogram chunk by chunk ######
+
+bins = range(40, 160)
+=================
+29175093
+count:1
+# -*- coding: utf-8 -*-
+
+"""
+Make a 2D histogram using a logarithmic scale on X and Y axis
+
+See:
+
+- http://stackoverflow.com/questions/29175093/creating-a-log-linear-plot-in-matplotlib-using-hist2d
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# MAKE DATA ###################################################################
+
+x, y = np.random.exponential(size=(2, 100000))
+
+# INIT FIGURE #################################################################
+=================
+29175093
+count:1
+counts, _, _ = np.histogram2d(x, y, bins=(xbins, ybins))
+
+print(counts)
+
+pcm = ax2.pcolormesh(xbins, ybins, counts)
+plt.colorbar(pcm)
+#fig.colorbar(pcm, ax=ax2)  # this works too
+
+## The following line doesn't actually work...
+## See http://stackoverflow.com/questions/29175093/creating-a-log-linear-plot-in-matplotlib-using-hist2d
+#H = ax2.hist2d(x, y, bins=[xbins, ybins])
+#fig.colorbar(H[3], ax=ax2)
+
+ax2.set_xscale("log")               # <- Activate log scale on X axis
+ax2.set_yscale("log")               # <- Activate log scale on Y axis
+
+ax2.set_xlim(xmin=xbins[0])
+ax2.set_xlim(xmax=xbins[-1])
+ax2.set_ylim(ymin=ybins[0])
+ax2.set_ylim(ymax=ybins[-1])
+=================
+8248467
+count:1
+plot(ax3, data_list, bins_min=1, bins_max=100, label_list=label_list, title="Log scale on y axis", logy=True)
+plot(ax4, data_list, bins_min=1, bins_max=300, label_list=label_list, title="Log scale on x and y axis", logx=True, logy=True)
+
+# General title #############
+
+plt.suptitle("Binomial distribution", fontsize=22)
+
+plt.tight_layout()
+
+# http://stackoverflow.com/questions/8248467/matplotlib-tight-layout-doesnt-take-into-account-figure-suptitle
+plt.subplots_adjust(top=0.9)
+
+# Save file and plot ########
+
+plt.savefig("subplots_full_example.png", bbox_inches='tight')
+
+plt.show()
+=================
+4285103
+count:2
+- Text with Fancy Box:
+
+    - https://matplotlib.org/api/patches_api.html#matplotlib.patches.BoxStyle
+    - http://matplotlib.org/examples/pylab_examples/fancybox_demo2.html
+
+- Path Patch: https://matplotlib.org/api/path_api.html#module-matplotlib.path
+- Transform:
+
+    - https://matplotlib.org/users/transforms_tutorial.html
+    - https://stackoverflow.com/questions/4285103/matplotlib-rotating-a-patch
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+import math
+
+import matplotlib.patches as mpatches
+import matplotlib.lines as mlines
+import matplotlib.path as mpath
+import itertools
+=================
+33371917
+count:1
+# -*- coding: utf-8 -*-
+
+"""
+Plot a loglog histogram of a large input data (larger than memory)
+
+Fill the histogram chunk by chunk.
+
+See:
+- https://stackoverflow.com/questions/33371917/how-to-plot-result-of-np-histogram-with-matplotlib-analog-to-plt-his
+- https://stackoverflow.com/questions/5328556/histogram-matplotlib
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+mu, sigma = 1000, 1000
+
+# Build histogram chunk by chunk ######
+
+=================
+5328556
+count:1
+# -*- coding: utf-8 -*-
+
+"""
+Plot a loglog histogram of a large input data (larger than memory)
+
+Fill the histogram chunk by chunk.
+
+See:
+- https://stackoverflow.com/questions/33371917/how-to-plot-result-of-np-histogram-with-matplotlib-analog-to-plt-his
+- https://stackoverflow.com/questions/5328556/histogram-matplotlib
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+mu, sigma = 1000, 1000
+
+# Build histogram chunk by chunk ######
+
+vmin = -1.
+=================
+6855710
+count:1
+# -*- coding: utf-8 -*-
+
+"""
+Make a histogram using a logarithmic scale on X axis
+
+See:
+
+- http://stackoverflow.com/questions/6855710/how-to-have-logarithmic-bins-in-a-python-histogram
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# SETUP #######################################################################
+
+# histtype : [‘bar’ | ‘barstacked’ | ‘step’ | ‘stepfilled’]
+HIST_TYPE='bar'
+ALPHA=0.5
+=================
+6855710
+count:1
+# -*- coding: utf-8 -*-
+
+"""
+Make a histogram using a logarithmic scale on X and Y axis
+
+See:
+
+- http://stackoverflow.com/questions/6855710/how-to-have-logarithmic-bins-in-a-python-histogram
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# SETUP #######################################################################
+
+# histtype : [‘bar’ | ‘barstacked’ | ‘step’ | ‘stepfilled’]
+HIST_TYPE='bar'
+ALPHA=0.5
+=================
+27156381
+count:1
+fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2, figsize=(12, 6))
+
+# AX1 #########################################################################
+
+xbins = np.linspace(x.min(), x.max(), 70)
+ybins = np.linspace(y.min(), y.max(), 70)
+
+hist, xedges, yedges = np.histogram2d(x, y, bins=(xbins, ybins))
+
+# See http://stackoverflow.com/questions/27156381/python-creating-a-2d-histogram-from-a-numpy-matrix
+
+xidx = np.clip(np.digitize(x, xedges), 0, hist.shape[0]-1)
+yidx = np.clip(np.digitize(y, yedges), 0, hist.shape[1]-1)
+c = hist[xidx, yidx]
+
+sc = ax1.scatter(x, y,
+                 c=c,
+                 s=5,
+                 marker='o',
+                 #cmap='gnuplot2',
+=================
+27156381
+count:1
+
+x = np.log10(x)
+y = np.log10(y)
+
+xbins = np.linspace(x.min(), x.max(), 70)
+ybins = np.linspace(y.min(), y.max(), 70)
+
+hist, xedges, yedges = np.histogram2d(x, y, bins=(xbins, ybins))
+
+# See http://stackoverflow.com/questions/27156381/python-creating-a-2d-histogram-from-a-numpy-matrix
+
+xidx = np.clip(np.digitize(x, xedges), 0, hist.shape[0]-1)
+yidx = np.clip(np.digitize(y, yedges), 0, hist.shape[1]-1)
+c = hist[xidx, yidx]
+
+sc = ax2.scatter(x, y,
+                 c=c,
+                 s=5,
+                 marker='o',
+                 #cmap='gnuplot2',
+=================
+33371917
+count:1
+# -*- coding: utf-8 -*-
+
+"""
+Plot a loglog histogram of a large input data (larger than memory) with generator
+
+Fill the histogram chunk by chunk.
+Use a generator to get samples (to make an easily reusable snippet).
+
+See:
+- https://stackoverflow.com/questions/33371917/how-to-plot-result-of-np-histogram-with-matplotlib-analog-to-plt-his
+- https://stackoverflow.com/questions/5328556/histogram-matplotlib
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def sample_generator(max_num_samples, chunk_size=100):
+
+    mu, sigma = 1000, 1000
+
+=================
+5328556
+count:1
+
+"""
+Plot a loglog histogram of a large input data (larger than memory) with generator
+
+Fill the histogram chunk by chunk.
+Use a generator to get samples (to make an easily reusable snippet).
+
+See:
+- https://stackoverflow.com/questions/33371917/how-to-plot-result-of-np-histogram-with-matplotlib-analog-to-plt-his
+- https://stackoverflow.com/questions/5328556/histogram-matplotlib
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def sample_generator(max_num_samples, chunk_size=100):
+
+    mu, sigma = 1000, 1000
+
+    cpt = 0
+=================
+22445217
+count:2
+# -*- coding: utf-8 -*-
+
+# See:
+# - https://docs.python.org/3.7/library/webbrowser.html
+# - https://stackoverflow.com/questions/22445217/python-webbrowser-open-to-open-chrome-browser
+# - https://stackoverflow.com/questions/31715119/how-can-i-open-a-website-in-my-web-browser-using-python
+
+import webbrowser
+
+=================
+10562945
+count:4
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# Debian packages required:
+# - python-poppler-qt4  (not python-poppler)
+
+# See: http://stackoverflow.com/questions/10562945/how-to-display-pdf-with-python-poppler-qt4
+#      http://web.archive.org/web/20120417095851/http://www.rkblog.rk.edu.pl/w/p/rendering-pdf-files-pyqt4-pypoppler-qt4/
+#      http://bazaar.launchpad.net/~j-corwin/openlp/pdf/annotate/head:/openlp/plugins/presentations/lib/pdfcontroller.py
+
+
+import sys
+from PyQt4 import QtGui, QtCore
+
+import popplerqt4
+
+class Window(QtGui.QWidget):
+=================
+13670333
+count:1
+import scipy.optimize as optimize
+
+# See:
+# - http://docs.scipy.org/doc/scipy/reference/optimize.html
+# - http://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html
+# - http://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.OptimizeResult.html#scipy.optimize.OptimizeResult
+# - http://www.scipy-lectures.org/advanced/mathematical_optimization/
+# - http://students.mimuw.edu.pl/~pbechler/scipy_doc/tutorial/optimize.html
+# - https://people.duke.edu/~ccc14/sta-663/BlackBoxOptimization.html
+# - http://stackoverflow.com/questions/13670333/multiple-variables-in-scipys-optimize-minimize
+
+
+# DEFINE THE OBJECTIVE FUNCTION ###############################################
+
+def f(x):
+    #return np.power(x[0], 2.) + np.power(x[1], 2.)
+    return optimize.rosen(x)   # The Rosenbrock function
+
+
+# OPTIMIZE ####################################################################
+=================
+6854947
+count:2
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+
+# See: http://stackoverflow.com/questions/6854947/how-to-display-a-window-on-a-secondary-display-in-pyqt
+#      http://pyqt.sourceforge.net/Docs/PyQt4/qdesktopwidget.html#details
+
+
+import sys
+from PyQt4 import QtGui, QtCore
+
+class Window(QtGui.QWidget):
+    def __init__(self, name):
+        super(Window, self).__init__()
+
+=================
+8480223
+count:10
+
+    def rowCount(self, parent):
+        return self._data.get_num_rows()
+
+    def columnCount(self, parent):
+        return self._data.get_num_columns()
+
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+            # See https://stackoverflow.com/a/8480223
+            return self._data.get_data(index.row(), index.column())
+        return QVariant()
+
+    def setData(self, index, value, role):
+        if role == Qt.EditRole:
+
+            try:
+                self._data.set_data(index.row(), index.column(), value)
+
+                # The following line are necessary e.g. to dynamically update the QSortFilterProxyModel
+=================
+11606946
+count:2
+# -*- coding: utf-8 -*-
+
+# Ref:
+# - http://doc.qt.io/qt-5/model-view-programming.html#sorting
+# - http://doc.qt.io/qt-5/model-view-programming.html#proxy-models
+# - http://doc.qt.io/qt-5/qsortfilterproxymodel.html#sorting
+# - https://stackoverflow.com/a/11606946
+# - http://doc.qt.io/qt-5/qtwidgets-itemviews-basicsortfiltermodel-example.html
+# - http://doc.qt.io/qt-5/qtwidgets-itemviews-customsortfiltermodel-example.html
+
+import numpy as np
+import sys
+from PyQt5.QtCore import Qt, QAbstractTableModel, QVariant, QSortFilterProxyModel
+from PyQt5.QtWidgets import QApplication, QTableView
+
+
+class MyModel(QAbstractTableModel):
+=================
+29055475
+count:2
+# -*- coding: utf-8 -*-
+
+# See http://doc.qt.io/qt-5/qwebengineview.html#details
+
+# This class replace the deprecated QWebView (based on QtWebKit).
+# See:
+# - https://stackoverflow.com/questions/29055475/qwebview-or-qwebengineview
+# - https://wiki.qt.io/QtWebEngine/Porting_from_QtWebKit
+
+HTML = r'''<!DOCTYPE html>
+<html>
+    <!-- Source: https://github.com/mathjax/MathJax/blob/master/test/sample-tex.html -->
+    <head>
+        <title>MathJax TeX Example</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+=================
+8480223
+count:1
+# -*- coding: utf-8 -*-
+
+# Documentation:
+# - http://doc.qt.io/qt-5/modelview.html
+# - http://doc.qt.io/qt-5/model-view-programming.html
+
+# TODO:
+# - [x] Keep the current value while editing a cell -> see https://stackoverflow.com/a/8480223
+#
+# - [x] Remove selected lines instead of the last one TODO: check the possible (but very unlikely bug) when reomving non-contiguous rows
+# - [x] Remove using the "Suppr" key instead of a button -> simply call the remove_rows callback when the suppr key is pressed...
+# - [x] Add a keyboard shortcut to add a row
+# - [x] Sort by datetime or by value. See http://doc.qt.io/qt-5/model-view-programming.html#sorting , http://doc.qt.io/qt-5/qsortfilterproxymodel.html#sorting and https://stackoverflow.com/questions/11606259/how-to-sort-a-qtableview-by-a-column#11606946
+#
+# - [x] Use Qt delegate example
+# - [x] Don't show all Model's columns (+ add a description column in the model but don't show it in the view): "table_view.setColumnHidden(column_num, True)"
+# - [x] Use QDataWidgetMapper example (with the hidden description column for instance)
+#
+=================
+11606259
+count:1
+# - http://doc.qt.io/qt-5/modelview.html
+# - http://doc.qt.io/qt-5/model-view-programming.html
+
+# TODO:
+# - [x] Keep the current value while editing a cell -> see https://stackoverflow.com/a/8480223
+#
+# - [x] Remove selected lines instead of the last one TODO: check the possible (but very unlikely bug) when reomving non-contiguous rows
+# - [x] Remove using the "Suppr" key instead of a button -> simply call the remove_rows callback when the suppr key is pressed...
+# - [x] Add a keyboard shortcut to add a row
+# - [x] Sort by datetime or by value. See http://doc.qt.io/qt-5/model-view-programming.html#sorting , http://doc.qt.io/qt-5/qsortfilterproxymodel.html#sorting and https://stackoverflow.com/questions/11606259/how-to-sort-a-qtableview-by-a-column#11606946
+#
+# - [x] Use Qt delegate example
+# - [x] Don't show all Model's columns (+ add a description column in the model but don't show it in the view): "table_view.setColumnHidden(column_num, True)"
+# - [x] Use QDataWidgetMapper example (with the hidden description column for instance)
+#
+# - [x] Add Tabs widgets + add a matplotlib plot of values
+# - [ ] Add "undo" and "redo" actions (search "(python) design pattern for undo redo actions") -> Command pattern and Memento pattern (https://stackoverflow.com/a/3448959)
+#       - http://doc.qt.io/qt-5/qundoview.html#details
+#       - http://doc.qt.io/qt-5/qundostack.html#details
+#       - http://doc.qt.io/qt-5/qundocommand.html#details
+=================
+3448959
+count:1
+# - [x] Remove using the "Suppr" key instead of a button -> simply call the remove_rows callback when the suppr key is pressed...
+# - [x] Add a keyboard shortcut to add a row
+# - [x] Sort by datetime or by value. See http://doc.qt.io/qt-5/model-view-programming.html#sorting , http://doc.qt.io/qt-5/qsortfilterproxymodel.html#sorting and https://stackoverflow.com/questions/11606259/how-to-sort-a-qtableview-by-a-column#11606946
+#
+# - [x] Use Qt delegate example
+# - [x] Don't show all Model's columns (+ add a description column in the model but don't show it in the view): "table_view.setColumnHidden(column_num, True)"
+# - [x] Use QDataWidgetMapper example (with the hidden description column for instance)
+#
+# - [x] Add Tabs widgets + add a matplotlib plot of values
+# - [ ] Add "undo" and "redo" actions (search "(python) design pattern for undo redo actions") -> Command pattern and Memento pattern (https://stackoverflow.com/a/3448959)
+#       - http://doc.qt.io/qt-5/qundoview.html#details
+#       - http://doc.qt.io/qt-5/qundostack.html#details
+#       - http://doc.qt.io/qt-5/qundocommand.html#details
+#       - http://doc.qt.io/qt-5/qundo.html
+# - [ ] Add/clean doc strings
+#
+# - [ ] When a row is inserted, select it (+ auto scroll to it) + automatically edit its first value column
+# - [x] Use a system date time dialog box to edit date time (with calendar and clock...)
+#       - http://doc.qt.io/qt-5/widget-classes.html
+#       - http://doc.qt.io/qt-5/gallery.html
+=================
+17535563
+count:1
+        # Set the view ####################################
+
+        self.table_view.setSelectionBehavior(QAbstractItemView.SelectRows)    # Select the full row when a cell is selected (See http://doc.qt.io/qt-5/qabstractitemview.html#selectionBehavior-prop )
+        #self.table_view.setSelectionMode(QAbstractItemView.SingleSelection)  # Set selection mode. See http://doc.qt.io/qt-5/qabstractitemview.html#selectionMode-prop
+
+        self.table_view.setAlternatingRowColors(True)
+        self.table_view.setSortingEnabled(True)
+        self.table_view.setColumnWidth(0, 200)                       # TODO: automatically get the best width
+
+        self.table_view.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)    # https://stackoverflow.com/q/17535563
+
+        self.table_view.setColumnHidden(COMMENT_COLUMN_INDEX, True)
+
+        delegate = Delegate()
+        self.table_view.setItemDelegate(delegate)
+
+        # Set key shortcut ################################
+
+        # see https://stackoverflow.com/a/17631703  and  http://doc.qt.io/qt-5/qaction.html#details
+
+=================
+17631703
+count:1
+        self.table_view.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)    # https://stackoverflow.com/q/17535563
+
+        self.table_view.setColumnHidden(COMMENT_COLUMN_INDEX, True)
+
+        delegate = Delegate()
+        self.table_view.setItemDelegate(delegate)
+
+        # Set key shortcut ################################
+
+        # see https://stackoverflow.com/a/17631703  and  http://doc.qt.io/qt-5/qaction.html#details
+
+        # Add row action
+
+        add_action = QAction(self.table_view)
+        add_action.setShortcut(Qt.CTRL | Qt.Key_N)
+
+        add_action.triggered.connect(self.add_row_btn_callback)
+        self.table_view.addAction(add_action)
+
+        # Delete action
+=================
+29055475
+count:1
+# -*- coding: utf-8 -*-
+
+# See https://pythonspot.com/en/pyqt5-browser/
+
+##############################################################################
+# WARNING: QWebView/QtWebKit are DEPRECATED !!! Use QWebEngineView instead ! #
+# (That's why it is not available on Anaconda !)                             #
+# See:                                                                       #
+# - https://stackoverflow.com/questions/29055475/qwebview-or-qwebengineview  #
+# - https://wiki.qt.io/QtWebEngine/Porting_from_QtWebKit                     #
+##############################################################################
+
+import sys
+from PyQt5.QtCore import *
+from PyQt5.QtWebKit import *
+from PyQt5.QtWebKitWidgets import *
+from PyQt5.QtWidgets import QApplication
+
+app = QApplication(sys.argv)
+=================
+17535563
+count:1
+        return QVariant()
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+
+    table_view = QTableView()
+    my_model = MyModel(None)
+    table_view.setModel(my_model)
+
+    table_view.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)    # <- https://stackoverflow.com/q/17535563
+
+    table_view.show()
+
+    # The mainloop of the application. The event handling starts from this point.
+    # The exec_() method has an underscore. It is because the exec is a Python keyword. And thus, exec_() was used instead.
+    exit_code = app.exec_()
+
+    # The sys.exit() method ensures a clean exit.
+    # The environment will be informed, how the application ended.
+=================
+11606946
+count:1
+# -*- coding: utf-8 -*-
+
+# Ref:
+# - http://doc.qt.io/qt-5/model-view-programming.html#sorting
+# - http://doc.qt.io/qt-5/model-view-programming.html#proxy-models
+# - http://doc.qt.io/qt-5/qsortfilterproxymodel.html#sorting
+# - https://stackoverflow.com/a/11606946
+# - http://doc.qt.io/qt-5/qtwidgets-itemviews-basicsortfiltermodel-example.html
+# - http://doc.qt.io/qt-5/qtwidgets-itemviews-customsortfiltermodel-example.html
+
+import numpy as np
+import sys
+from PyQt5.QtCore import Qt, QAbstractTableModel, QVariant, QSortFilterProxyModel, QRegExp
+from PyQt5.QtWidgets import QApplication, QWidget, QTableView, QLineEdit, QVBoxLayout
+
+
+class MyModel(QAbstractTableModel):
+=================
+11606946
+count:1
+# -*- coding: utf-8 -*-
+
+# Ref:
+# - http://doc.qt.io/qt-5/model-view-programming.html#sorting
+# - http://doc.qt.io/qt-5/model-view-programming.html#proxy-models
+# - http://doc.qt.io/qt-5/qsortfilterproxymodel.html#sorting
+# - https://stackoverflow.com/a/11606946
+# - http://doc.qt.io/qt-5/qtwidgets-itemviews-basicsortfiltermodel-example.html
+# - http://doc.qt.io/qt-5/qtwidgets-itemviews-customsortfiltermodel-example.html
+
+import numpy as np
+import sys
+from PyQt5.QtCore import Qt, QAbstractTableModel, QVariant, QSortFilterProxyModel, QRegExp
+from PyQt5.QtWidgets import QApplication, QTableView
+
+
+class MyModel(QAbstractTableModel):
+=================
+36555153
+count:2
+# -*- coding: utf-8 -*-
+
+# See http://doc.qt.io/qt-5/qpushbutton.html#details
+#     https://stackoverflow.com/questions/36555153/pyqt5-closing-terminating-application
+
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
+
+app = QApplication(sys.argv)
+
+# The default constructor has no parent.
+# A widget with no parent is a window.
+window = QMainWindow()
+
+=================
+50830399
+count:1
+# -*- coding: utf-8 -*-
+
+# See:
+# - https://developers.google.com/chart/interactive/docs/gallery/ganttchart
+# - https://stackoverflow.com/questions/50830399/how-to-add-a-horizontal-scroll-bar-to-google-gantt-chart
+
+HTML = r'''<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['gantt']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function daysToMilliseconds(days) {
+=================
+8480223
+count:1
+
+    def rowCount(self, parent):
+        return self._data.get_num_rows()
+
+    def columnCount(self, parent):
+        return self._data.get_num_columns()
+
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:           # <--
+            # See https://stackoverflow.com/a/8480223
+            return self._data.get_data(index.row(), index.column())
+        return QVariant()
+
+    def setData(self, index, value, role):
+        if role == Qt.EditRole:
+
+            try:
+                self._data.set_data(index.row(), index.column(), value)
+
+                # The following line are necessary e.g. to dynamically update the QSortFilterProxyModel
+=================
+40580749
+count:1
+# Set the layout
+
+grid = QGridLayout()
+
+grid.addWidget(btn1, 1, 1)   # QWidget, row (int), column (int), rowSpan (int), columnSpan (int), alignment
+grid.addWidget(btn2, 2, 2)
+grid.addWidget(btn3, 3, 1, 1, 2)
+grid.addWidget(btn4, 1, 3, 2, 1)
+
+btn4.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)  # http://doc.qt.io/qt-5/qsizepolicy.html ; https://stackoverflow.com/questions/40580749/why-do-some-widgets-not-stretch-to-fill-the-maximum-space-in-a-layout
+
+grid.setContentsMargins(0, 0, 0, 0)  # set the spacing around the layout (in pixels)
+grid.setSpacing(0)                   # set the spacing between elements (in pixels)
+
+window.setLayout(grid)
+
+# Show
+window.show()
+
+# The mainloop of the application. The event handling starts from this point.
+=================
+8480223
+count:1
+
+    def rowCount(self, parent):
+        return self._data.get_num_rows()
+
+    def columnCount(self, parent):
+        return self._data.get_num_columns()
+
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:           # <--
+            # See https://stackoverflow.com/a/8480223
+            return self._data.get_data(index.row(), index.column())
+        return QVariant()
+
+    def headerData(self, index, orientation, role):
+        if role == Qt.DisplayRole:
+            if orientation == Qt.Horizontal:
+                return HEADER_LIST[index]
+            elif orientation == Qt.Vertical:
+                return "{}".format(index)
+        return None
+=================
+29055475
+count:1
+# -*- coding: utf-8 -*-
+
+# See http://doc.qt.io/qt-5/qwebengineview.html#details
+
+# This class replace the deprecated QWebView (based on QtWebKit).
+# See:
+# - https://stackoverflow.com/questions/29055475/qwebview-or-qwebengineview
+# - https://wiki.qt.io/QtWebEngine/Porting_from_QtWebKit
+
+# The next two lines are a workaround to fix an issue with QWebEngineView (see https://github.com/ContinuumIO/anaconda-issues/issues/9199#issuecomment-383842265)
+import ctypes
+ctypes.CDLL("libGL.so.1", mode=ctypes.RTLD_GLOBAL)
+
+import sys
+from PyQt5.QtCore import *
+from PyQt5.QtWebEngineWidgets import QWebEngineView
+from PyQt5.QtWidgets import QApplication
+=================
+29055475
+count:1
+# -*- coding: utf-8 -*-
+
+# See http://doc.qt.io/qt-5/qwebengineview.html#details
+
+# This class replace the deprecated QWebView (based on QtWebKit).
+# See:
+# - https://stackoverflow.com/questions/29055475/qwebview-or-qwebengineview
+# - https://wiki.qt.io/QtWebEngine/Porting_from_QtWebKit
+
+HTML = r'''<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <style type="text/css" media="all">
+* {
+    border-width      : 0px;
+
+=================
+17631703
+count:1
+
+from PyQt5.QtWidgets import QApplication, QWidget, QAction
+from PyQt5.QtCore import Qt
+
+class MainWindow(QWidget):
+
+    def __init__(self):
+        super().__init__()
+
+        # see https://stackoverflow.com/a/17631703  and  http://doc.qt.io/qt-5/qaction.html#details
+
+        action = QAction(self)
+        action.setShortcut(Qt.Key_F)
+
+        action.triggered.connect(self.fullscreen_toggle_key_callback)
+        self.addAction(action)
+
+
+    def fullscreen_toggle_key_callback(self):
+        if self.windowState() & Qt.WindowFullScreen:         # https://stackoverflow.com/questions/17834835/test-if-qquickview-qwindow-is-full-screen-in-qt-5-0-x
+=================
+17834835
+count:1
+
+        action = QAction(self)
+        action.setShortcut(Qt.Key_F)
+
+        action.triggered.connect(self.fullscreen_toggle_key_callback)
+        self.addAction(action)
+
+
+    def fullscreen_toggle_key_callback(self):
+        if self.windowState() & Qt.WindowFullScreen:         # https://stackoverflow.com/questions/17834835/test-if-qquickview-qwindow-is-full-screen-in-qt-5-0-x
+            self.showNormal()                                # <- NORMAL SCREEN
+        else:
+            self.showFullScreen()                            # <- FULL SCREEN
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+
+    main_window = MainWindow()
+    main_window.show()
+=================
+28660287
+count:1
+# -*- coding: utf-8 -*-
+
+# Ref: https://stackoverflow.com/questions/28660287/sort-qtableview-in-pyqt5
+
+import numpy as np
+import pandas as pd
+import sys
+
+from PyQt5.QtCore import Qt, QAbstractTableModel, QVariant
+from PyQt5.QtWidgets import QApplication, QTableView
+
+class PandasModel(QAbstractTableModel):
+
+=================
+17631703
+count:2
+# to take up all the space in the window by default.
+window.setCentralWidget(label)
+
+# Set key shortcut ################################
+
+def action_callback():
+    print("Hello!")
+
+
+# see https://stackoverflow.com/a/17631703  and  http://doc.qt.io/qt-5/qaction.html#details
+
+action = QAction(window)                   # <-
+action.setShortcut(Qt.Key_P | Qt.CTRL)     # <-
+
+action.triggered.connect(action_callback)  # <-
+window.addAction(action)                   # <-
+
+###################################################
+
+window.show()
+=================
+8480223
+count:1
+
+    def rowCount(self, parent):
+        return len(self._data)
+
+    def columnCount(self, parent):
+        return 1
+
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+            # See https://stackoverflow.com/a/8480223
+            return self._data[index.row()]
+        return QVariant()
+
+    def setData(self, index, value, role):
+        if role == Qt.EditRole:
+
+            try:
+                self._data[index.row()] = value
+
+                # The following line are necessary e.g. to dynamically update the QSortFilterProxyModel

@@ -1,0 +1,584 @@
+[1, 1, 1, 5, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+15889203
+3584933
+17295128
+3437130
+9519673
+4724676
+10233141
+15074386
+22185527
+24377
+231767
+509295
+6771620
+2254663
+8361021
+14603398
+5724453
+17690738
+231855
+102632
+14734627
+19804282
+19530568
+32647365
+13130357
+4700614
+=================
+4700614
+count:1
+plt.yticks(y_race, cities)
+
+# legend foo https://stackoverflow.com/questions/4700614/how-to-put-the-legend-out-of-the-plot
+# Shink current axis's height by 10% on the bottom
+box = ax.get_position()
+ax.set_position([box.x0, box.y0 + box.height * 0.1,
+=================
+231855
+count:1
+      "For some background on Python generators:\n",
+      "\n",
+      "* [iterator - The Python yield keyword explained - Stack Overflow](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained/231855#231855)\n",
+      "* [Improve Your Python: 'yield' and Generators Explained](http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/) \n",
+      "\n",
+      "Why use generators: http://stackoverflow.com/a/102632/7782\n",
+=================
+102632
+count:1
+      "* [Improve Your Python: 'yield' and Generators Explained](http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/) \n",
+      "\n",
+      "Why use generators: http://stackoverflow.com/a/102632/7782\n",
+      "\n",
+      "<blockquote>Generators are good for calculating large sets of results (in particular calculations involving loops themselves) where you don't know if you are going to need all results, or where you don't want to allocate the memory for all results at the same time. </blockquote>\n",
+      "\n",
+=================
+3437130
+count:5
+      "\n",
+      "* calculate a `np.array` holding the the fips of the states\n",
+      "* then use [numpy.in1d](http://docs.scipy.org/doc/numpy/reference/generated/numpy.in1d.html), which is a analogous to the [in](http://stackoverflow.com/a/3437130/7782) operator to test membership in a list"
+     ]
+    },
+    {
+=================
+14734627
+count:1
+
+# how about accessing group 'C'?
+# http://stackoverflow.com/a/14734627/7782
+# http://stackoverflow.com/questions/19804282/in-pandas-is-there-something-like-a-groupby-get-group-but-with-an-optional-defa
+# http://pandas.pydata.org/pandas-docs/dev/generated/pandas.core.groupby.GroupBy.get_group.html
+
+=================
+19804282
+count:1
+# how about accessing group 'C'?
+# http://stackoverflow.com/a/14734627/7782
+# http://stackoverflow.com/questions/19804282/in-pandas-is-there-something-like-a-groupby-get-group-but-with-an-optional-defa
+# http://pandas.pydata.org/pandas-docs/dev/generated/pandas.core.groupby.GroupBy.get_group.html
+
+grouped = df.groupby('first_letter')
+=================
+19530568
+count:1
+
+# http://pandas.pydata.org/pandas-docs/dev/groupby.html#flexible-apply
+# http://stackoverflow.com/questions/19530568/can-pandas-groupby-aggregate-into-a-list-rather-than-sum-mean-etc
+
+df.groupby("first_letter").apply(lambda x: list(x['NAME']))
+
+=================
+24377
+count:2
+      "* try an explicit loop vs `sum`\n",
+      "* bonus:  try [itertool.count](http://docs.python.org/2/library/itertools.html#itertools.count) and [itertool.islice](http://docs.python.org/2/library/itertools.html#itertools.islice) -- these functions are Python *iterators*. \n",
+      "* See [Build a Basic Python Iterator](http://stackoverflow.com/a/24377/7782) and \n",
+      "[The Python yield keyword explained](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained)\n",
+      "\n",
+      "\n",
+=================
+231767
+count:2
+      "* bonus:  try [itertool.count](http://docs.python.org/2/library/itertools.html#itertools.count) and [itertool.islice](http://docs.python.org/2/library/itertools.html#itertools.islice) -- these functions are Python *iterators*. \n",
+      "* See [Build a Basic Python Iterator](http://stackoverflow.com/a/24377/7782) and \n",
+      "[The Python yield keyword explained](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained)\n",
+      "\n",
+      "\n",
+      "**Beware:  in ipython w/ pylab mode, `sum` might be overwritten by numpy's sum -- use `__builtin__.sum` if you want http://docs.python.org/2/library/functions.html#sum as opposed to http://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html** \n"
+=================
+509295
+count:2
+     "metadata": {},
+     "source": [
+      "http://stackoverflow.com/a/509295/7782\n",
+      "\n",
+      "Use on any of the **sequence** types ([python docs on sequence types](http://docs.python.org/2/library/stdtypes.html#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange)):\n",
+      "\n",
+=================
+6771620
+count:2
+     "input": [
+      "# reverse sort -- best way?\n",
+      "#http://stackoverflow.com/a/6771620/7782\n",
+      "\n",
+      "np.sort(np.arange(100))[::-1]"
+     ],
+=================
+2254663
+count:2
+     "metadata": {},
+     "source": [
+      "Now I thought I'd be able to use a `n0.__eq__(5)` but nope -- it's complicated -- see http://stackoverflow.com/questions/2281222/why-when-in-python-does-x-y-call-y-eq-x#comment2254663_2282795"
+     ]
+    },
+    {
+=================
+15889203
+count:1
+      "from collections import Counter\n",
+      "\n",
+      "# http://stackoverflow.com/a/15889203/7782\n",
+      "def cumsum(lis):\n",
+      "    total = 0\n",
+      "    for x in lis:\n",
+=================
+1779324
+count:1
+      "from itertools import islice\n",
+      "\n",
+      "# http://stackoverflow.com/a/1779324/7782\n",
+      "import locale\n",
+      "locale.setlocale( locale.LC_ALL, 'en_US.UTF-8' ) \n",
+      "\n",
+=================
+15889203
+count:1
+     "collapsed": false,
+     "input": [
+      "# http://stackoverflow.com/a/15889203/7782\n",
+      "def cumsum(lis):\n",
+      "    total = 0\n",
+      "    for x in lis:\n",
+=================
+3584933
+count:2
+      "fig = figure()\n",
+      "\n",
+      "# meaning of 111: http://stackoverflow.com/a/3584933/7782\n",
+      "ax = fig.add_subplot(111)\n",
+      "ax.set_title('Ratio of M to F births')\n",
+      "\n",
+=================
+3584933
+count:2
+      "fig = figure()\n",
+      "\n",
+      "# meaning of 111: http://stackoverflow.com/a/3584933/7782\n",
+      "ax = fig.add_subplot(111)\n",
+      "ax.set_title('Entropy of names')\n",
+      "\n",
+=================
+13130357
+count:2
+     "collapsed": false,
+     "input": [
+      "#http://stackoverflow.com/a/13130357/7782\n",
+      "count,division = np.histogram(df['P0010001'])\n",
+      "df['P0010001'].hist(bins=division)"
+     ],
+=================
+17295128
+count:1
+# <codecell>
+
+#http://stackoverflow.com/a/17295128/7782
+import os
+PFDA_PATH  = os.path.abspath(os.path.join(os.getcwd(), 
+                                          os.path.join(os.path.pardir, "pydata-book")
+=================
+10233141
+count:1
+    
+    # convert pr.query from string to dict
+    # see http://stackoverflow.com/a/10233141/7782 for meaning of doseq
+    pr_query = urlparse.parse_qs(pr.query)
+    pr_query["key"]= api_key
+
+=================
+15074386
+count:1
+        
+def parse_urls_col(col):
+    # http://stackoverflow.com/a/15074386/7782
+    return [child for child in col.itertext()]
+
+def parse_census_examples():
+=================
+22185527
+count:1
+# <codecell>
+
+# http://stackoverflow.com/questions/22185527/how-can-i-successfully-load-dimple-js-when-require-js-is-present
+
+# Answer: https://github.com/PMSI-AlignAlytics/dimple/pull/56#issuecomment-37480189
+
+=================
+17295128
+count:2
+     "collapsed": false,
+     "input": [
+      "#http://stackoverflow.com/a/17295128/7782\n",
+      "import os\n",
+      "PFDA_PATH  = os.path.abspath(os.path.join(os.getcwd(), \n",
+      "                                          os.path.join(os.path.pardir, \"pydata-book\")\n",
+=================
+3437130
+count:2
+# 
+# * calculate a `np.array` holding the the fips of the states
+# * then use [numpy.in1d](http://docs.scipy.org/doc/numpy/reference/generated/numpy.in1d.html), which is a analogous to the [in](http://stackoverflow.com/a/3437130/7782) operator to test membership in a list
+
+# <codecell>
+
+=================
+9519673
+count:2
+      "\n",
+      "> google.load blanks the page unless you give it a\n",
+      "callback<http://stackoverflow.com/questions/9519673/why-does-google-load-cause-my-page-to-go-blank>\n",
+      ".\n"
+     ]
+    },
+=================
+9519673
+count:2
+      "\n",
+      "> google.load blanks the page unless you give it a\n",
+      "callback <http://stackoverflow.com/questions/9519673/why-does-google-load-cause-my-page-to-go-blank>\n",
+      ".\n",
+      "\n",
+      "Also: [javascript - Google Maps API v3 - TypeError: Result of expression 'google.maps.LatLng' undefined] is not a constructor - Stack Overflow](http://stackoverflow.com/questions/6577404/google-maps-api-v3-typeerror-result-of-expression-google-maps-latlng-undef/8361021#8361021)\n"
+=================
+8361021
+count:2
+      ".\n",
+      "\n",
+      "Also: [javascript - Google Maps API v3 - TypeError: Result of expression 'google.maps.LatLng' undefined] is not a constructor - Stack Overflow](http://stackoverflow.com/questions/6577404/google-maps-api-v3-typeerror-result-of-expression-google-maps-latlng-undef/8361021#8361021)\n"
+     ]
+    },
+    {
+=================
+14603398
+count:1
+     "metadata": {},
+     "source": [
+      "I have a question:  can you use requirejs to deal with non-AMD JavaScript files?  According to http://stackoverflow.com/a/14603398/7782: maybe.  Seems to be affirmed by [Requirement #9:  Load any script](http://requirejs.org/docs/requirements.html#9)."
+     ]
+    },
+    {
+=================
+4724676
+count:2
+      "\n",
+      "\n",
+      "    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782\n",
+      "    function loadcss(url) {\n",
+      "        if (!$(\"link[href='\" + url + \"']\").length)\n",
+      "            $('<link href=\"' + url + '\" rel=\"stylesheet\">').appendTo(\"head\");\n",
+=================
+4724676
+count:2
+        "\n",
+        "\n",
+        "    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782\n",
+        "    function loadcss(url) {\n",
+        "        if (!$(\"link[href='\" + url + \"']\").length)\n",
+        "            $('<link href=\"' + url + '\" rel=\"stylesheet\">').appendTo(\"head\");\n",
+=================
+4724676
+count:1
+      "<script type=\"text/javascript\">\n",
+      "\n",
+      "    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782\n",
+      "    function loadcss(url) {\n",
+      "        if (!$(\"link[href='\" + url + \"']\").length)\n",
+      "            $('<link href=\"' + url + '\" rel=\"stylesheet\">').appendTo(\"head\");\n",
+=================
+4724676
+count:2
+        "<script type=\"text/javascript\">\n",
+        "\n",
+        "    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782\n",
+        "    function loadcss(url) {\n",
+        "        if (!$(\"link[href='\" + url + \"']\").length)\n",
+        "            $('<link href=\"' + url + '\" rel=\"stylesheet\">').appendTo(\"head\");\n",
+=================
+3584933
+count:1
+fig = figure()
+
+# meaning of 111: http://stackoverflow.com/a/3584933/7782
+ax = fig.add_subplot(111)
+ax.set_title('Ratio of M to F births')
+
+=================
+3584933
+count:1
+fig = figure()
+
+# meaning of 111: http://stackoverflow.com/a/3584933/7782
+ax = fig.add_subplot(111)
+ax.set_title('Entropy of names')
+
+=================
+10233141
+count:1
+      "    \n",
+      "    # convert pr.query from string to dict\n",
+      "    # see http://stackoverflow.com/a/10233141/7782 for meaning of doseq\n",
+      "    pr_query = urlparse.parse_qs(pr.query)\n",
+      "    pr_query[\"key\"]= api_key\n",
+      "\n",
+=================
+15074386
+count:1
+      "        \n",
+      "def parse_urls_col(col):\n",
+      "    # http://stackoverflow.com/a/15074386/7782\n",
+      "    return [child for child in col.itertext()]\n",
+      "\n",
+      "def parse_census_examples():\n",
+=================
+22185527
+count:2
+     "collapsed": false,
+     "input": [
+      "# http://stackoverflow.com/questions/22185527/how-can-i-successfully-load-dimple-js-when-require-js-is-present\n",
+      "\n",
+      "# Answer: https://github.com/PMSI-AlignAlytics/dimple/pull/56#issuecomment-37480189"
+     ],
+=================
+5724453
+count:1
+
+# try again
+# http://stackoverflow.com/a/5724453/7782
+# http://excess.org/article/2013/02/itergen1/
+
+
+=================
+17690738
+count:1
+# <codecell>
+
+# http://stackoverflow.com/questions/17690738/in-pandas-how-do-i-convert-a-string-of-date-strings-to-datetime-objects-and-put
+date_stngs = ('2008-12-20','2008-12-21','2008-12-22','2008-12-23','Nov. 9, 1964', 'junk')
+pd.to_datetime(pd.Series(date_stngs),coerce=True)
+
+=================
+24377
+count:1
+# * try an explicit loop vs `sum`
+# * bonus:  try [itertool.count](http://docs.python.org/2/library/itertools.html#itertools.count) and [itertool.islice](http://docs.python.org/2/library/itertools.html#itertools.islice) -- these functions are Python *iterators*. 
+# * See [Build a Basic Python Iterator](http://stackoverflow.com/a/24377/7782) and 
+# [The Python yield keyword explained](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained)
+# 
+# 
+=================
+231767
+count:1
+# * bonus:  try [itertool.count](http://docs.python.org/2/library/itertools.html#itertools.count) and [itertool.islice](http://docs.python.org/2/library/itertools.html#itertools.islice) -- these functions are Python *iterators*. 
+# * See [Build a Basic Python Iterator](http://stackoverflow.com/a/24377/7782) and 
+# [The Python yield keyword explained](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained)
+# 
+# 
+# **Beware:  in ipython w/ pylab mode, `sum` might be overwritten by numpy's sum -- use `__builtin__.sum` if you want http://docs.python.org/2/library/functions.html#sum as opposed to http://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html** 
+=================
+509295
+count:1
+# <markdowncell>
+
+# http://stackoverflow.com/a/509295/7782
+# 
+# Use on any of the **sequence** types ([python docs on sequence types](http://docs.python.org/2/library/stdtypes.html#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange)):
+# 
+=================
+6771620
+count:1
+
+# reverse sort -- best way?
+#http://stackoverflow.com/a/6771620/7782
+
+np.sort(np.arange(100))[::-1]
+
+=================
+2254663
+count:1
+# <markdowncell>
+
+# Now I thought I'd be able to use a `n0.__eq__(5)` but nope -- it's complicated -- see http://stackoverflow.com/questions/2281222/why-when-in-python-does-x-y-call-y-eq-x#comment2254663_2282795
+
+# <codecell>
+
+=================
+9519673
+count:1
+# 
+# > google.load blanks the page unless you give it a
+# callback <http://stackoverflow.com/questions/9519673/why-does-google-load-cause-my-page-to-go-blank>
+# .
+# 
+# Also: [javascript - Google Maps API v3 - TypeError: Result of expression 'google.maps.LatLng' undefined] is not a constructor - Stack Overflow](http://stackoverflow.com/questions/6577404/google-maps-api-v3-typeerror-result-of-expression-google-maps-latlng-undef/8361021#8361021)
+=================
+8361021
+count:1
+# .
+# 
+# Also: [javascript - Google Maps API v3 - TypeError: Result of expression 'google.maps.LatLng' undefined] is not a constructor - Stack Overflow](http://stackoverflow.com/questions/6577404/google-maps-api-v3-typeerror-result-of-expression-google-maps-latlng-undef/8361021#8361021)
+
+# <codecell>
+
+=================
+9519673
+count:1
+# 
+# > google.load blanks the page unless you give it a
+# callback<http://stackoverflow.com/questions/9519673/why-does-google-load-cause-my-page-to-go-blank>
+# .
+
+# <codecell>
+=================
+14603398
+count:1
+# <markdowncell>
+
+# I have a question:  can you use requirejs to deal with non-AMD JavaScript files?  According to http://stackoverflow.com/a/14603398/7782: maybe.  Seems to be affirmed by [Requirement #9:  Load any script](http://requirejs.org/docs/requirements.html#9).
+
+# <codecell>
+
+=================
+4724676
+count:2
+
+
+    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782
+    function loadcss(url) {
+        if (!$("link[href='" + url + "']").length)
+            $('<link href="' + url + '" rel="stylesheet">').appendTo("head");
+=================
+4724676
+count:1
+<script type="text/javascript">
+
+    // load css if it's not already there: http://stackoverflow.com/a/4724676/7782
+    function loadcss(url) {
+        if (!$("link[href='" + url + "']").length)
+            $('<link href="' + url + '" rel="stylesheet">').appendTo("head");
+=================
+32647365
+count:2
+      "It turned out that the hard part of doing the translation to IPython Notebook was figuring out how to load the required JavaScript libraries.  Being an off-and-on JavaScript programmer who is ramping up on the way to writing JavaScript properly in 2014, I was still living in the world of adding a `<script>` to load libraries. The problem of such an approach is the possibility of a lot of name collisions.   I knew that the IPython developers had moved to using [RequireJS](http://requirejs.org/), but I really couldn't figure out how to use it by reading the documentation for RequireJS.  \n",
+      "\n",
+      "It was only when I read [Something wrong with the d3js.org/d3.v3.min.js package - Issue #1693 - mbostock/d3](https://github.com/mbostock/d3/issues/1693), which I found via [d3.js - how to integrate d3 with require.js - Stack Overflow](http://stackoverflow.com/questions/13157704/how-to-integrate-d3-with-require-js#comment32647365_13171592) that I knew what to do.  Here's the very helpful incantion I was looking for:"
+     ]
+    },
+    {
+=================
+5724453
+count:1
+     "input": [
+      "# try again\n",
+      "# http://stackoverflow.com/a/5724453/7782\n",
+      "# http://excess.org/article/2013/02/itergen1/\n",
+      "\n",
+      "\n",
+=================
+17690738
+count:1
+     "collapsed": false,
+     "input": [
+      "# http://stackoverflow.com/questions/17690738/in-pandas-how-do-i-convert-a-string-of-date-strings-to-datetime-objects-and-put\n",
+      "date_stngs = ('2008-12-20','2008-12-21','2008-12-22','2008-12-23','Nov. 9, 1964', 'junk')\n",
+      "pd.to_datetime(pd.Series(date_stngs),coerce=True)"
+     ],
+=================
+15889203
+count:1
+from collections import Counter
+
+# http://stackoverflow.com/a/15889203/7782
+def cumsum(lis):
+    total = 0
+    for x in lis:
+=================
+231855
+count:1
+# For some background on Python generators:
+# 
+# * [iterator - The Python yield keyword explained - Stack Overflow](http://stackoverflow.com/questions/231767/the-python-yield-keyword-explained/231855#231855)
+# * [Improve Your Python: 'yield' and Generators Explained](http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/) 
+# 
+# Why use generators: http://stackoverflow.com/a/102632/7782
+=================
+102632
+count:1
+# * [Improve Your Python: 'yield' and Generators Explained](http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/) 
+# 
+# Why use generators: http://stackoverflow.com/a/102632/7782
+# 
+# <blockquote>Generators are good for calculating large sets of results (in particular calculations involving loops themselves) where you don't know if you are going to need all results, or where you don't want to allocate the memory for all results at the same time. </blockquote>
+# 
+=================
+14734627
+count:1
+     "input": [
+      "# how about accessing group 'C'?\n",
+      "# http://stackoverflow.com/a/14734627/7782\n",
+      "# http://stackoverflow.com/questions/19804282/in-pandas-is-there-something-like-a-groupby-get-group-but-with-an-optional-defa\n",
+      "# http://pandas.pydata.org/pandas-docs/dev/generated/pandas.core.groupby.GroupBy.get_group.html\n",
+      "\n",
+=================
+19804282
+count:1
+      "# how about accessing group 'C'?\n",
+      "# http://stackoverflow.com/a/14734627/7782\n",
+      "# http://stackoverflow.com/questions/19804282/in-pandas-is-there-something-like-a-groupby-get-group-but-with-an-optional-defa\n",
+      "# http://pandas.pydata.org/pandas-docs/dev/generated/pandas.core.groupby.GroupBy.get_group.html\n",
+      "\n",
+      "grouped = df.groupby('first_letter')\n",
+=================
+19530568
+count:1
+      "\n",
+      "# http://pandas.pydata.org/pandas-docs/dev/groupby.html#flexible-apply\n",
+      "# http://stackoverflow.com/questions/19530568/can-pandas-groupby-aggregate-into-a-list-rather-than-sum-mean-etc\n",
+      "\n",
+      "df.groupby(\"first_letter\").apply(lambda x: list(x['NAME']))"
+     ],
+=================
+32647365
+count:1
+# It turned out that the hard part of doing the translation to IPython Notebook was figuring out how to load the required JavaScript libraries.  Being an off-and-on JavaScript programmer who is ramping up on the way to writing JavaScript properly in 2014, I was still living in the world of adding a `<script>` to load libraries. The problem of such an approach is the possibility of a lot of name collisions.   I knew that the IPython developers had moved to using [RequireJS](http://requirejs.org/), but I really couldn't figure out how to use it by reading the documentation for RequireJS.  
+# 
+# It was only when I read [Something wrong with the d3js.org/d3.v3.min.js package - Issue #1693 - mbostock/d3](https://github.com/mbostock/d3/issues/1693), which I found via [d3.js - how to integrate d3 with require.js - Stack Overflow](http://stackoverflow.com/questions/13157704/how-to-integrate-d3-with-require-js#comment32647365_13171592) that I knew what to do.  Here's the very helpful incantion I was looking for:
+
+# <codecell>
+
+=================
+13130357
+count:1
+# <codecell>
+
+#http://stackoverflow.com/a/13130357/7782
+count,division = np.histogram(df['P0010001'])
+df['P0010001'].hist(bins=division)
+=================
+4700614
+count:1
+      plt.yticks(y_race, cities)
+      
+      # legend foo https://stackoverflow.com/questions/4700614/how-to-put-the-legend-out-of-the-plot
+      # Shink current axis's height by 10% on the bottom
+      box = ax.get_position()
+      ax.set_position([box.x0, box.y0 + box.height * 0.1,

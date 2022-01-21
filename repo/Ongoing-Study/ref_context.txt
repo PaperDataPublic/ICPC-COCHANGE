@@ -1,0 +1,1421 @@
+[1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+2849010
+=================
+23487307
+count:1
+# 2014-10-21T18:12+08:00
+
+"""
+Benchmark test for list & deque in Python.
+
+This program is inspired by a question on zhihu.com: 
+http://www.zhihu.com/question/26091467
+
+Some more useful information:
+http://stackoverflow.com/questions/23487307/python-deque-vs-list-performance-comparison
+http://stackoverflow.com/questions/1296511/efficiency-of-using-a-python-list-as-a-queue
+
+C++ benchmark test:
+http://baptiste-wicht.com/posts/2012/12/cpp-benchmark-vector-list-deque.html
+http://blog.davidecoppola.com/2014/05/20/cpp-benchmarks-vector-vs-list-vs-deque/
+http://stackoverflow.com/questions/1436020/c-stl-containers-whats-the-difference-between-deque-and-list
+"""
+
+import collections
+#import inspect
+=================
+1296511
+count:1
+
+"""
+Benchmark test for list & deque in Python.
+
+This program is inspired by a question on zhihu.com: 
+http://www.zhihu.com/question/26091467
+
+Some more useful information:
+http://stackoverflow.com/questions/23487307/python-deque-vs-list-performance-comparison
+http://stackoverflow.com/questions/1296511/efficiency-of-using-a-python-list-as-a-queue
+
+C++ benchmark test:
+http://baptiste-wicht.com/posts/2012/12/cpp-benchmark-vector-list-deque.html
+http://blog.davidecoppola.com/2014/05/20/cpp-benchmarks-vector-vs-list-vs-deque/
+http://stackoverflow.com/questions/1436020/c-stl-containers-whats-the-difference-between-deque-and-list
+"""
+
+import collections
+#import inspect
+import random
+=================
+1436020
+count:1
+http://www.zhihu.com/question/26091467
+
+Some more useful information:
+http://stackoverflow.com/questions/23487307/python-deque-vs-list-performance-comparison
+http://stackoverflow.com/questions/1296511/efficiency-of-using-a-python-list-as-a-queue
+
+C++ benchmark test:
+http://baptiste-wicht.com/posts/2012/12/cpp-benchmark-vector-list-deque.html
+http://blog.davidecoppola.com/2014/05/20/cpp-benchmarks-vector-vs-list-vs-deque/
+http://stackoverflow.com/questions/1436020/c-stl-containers-whats-the-difference-between-deque-and-list
+"""
+
+import collections
+#import inspect
+import random
+import timeit
+#import types
+
+loops = random.randint(10000, 100000)
+rng = range(loops)
+=================
+22676
+count:2
+    
+    bucket_size_benchmark()
+
+
+# References:
+# [GitHub: pybind/python_example](https://github.com/pybind/python_example)
+# Matplotlib documentation
+# 
+# Download a file over HTTP:
+# [How do I download a file over HTTP using Python?](http://stackoverflow.com/questions/22676/how-do-i-download-a-file-over-http-using-python)
+=================
+22905316
+count:1
+# coding: utf-8
+
+# 2018-03-08T21:44+08:00
+
+# When building MuPDF from scratch on Windows 7 with VS2010 this afternoon, I encountered several compilation errors like this:
+#   >..\..\generated\SourceHanSansCN-Regular.c(3452): fatal error C1091: compiler limit: string exceeds 65535 bytes in length
+#    ......
+# I found these pages:
+#    https://stackoverflow.com/questions/22905316/fatal-error-compiler-limit-when-building-cimg
+#    https://github.com/glfw/glfw/issues/1145
+#    https://sourceforge.net/p/fuego/tickets/88/
+# So what I need to do is replacing code like this:
+#    const unsigned char fz_resources_fonts_sil_CharisSIL_B_cff[] =
+#    "\x01\x00\x04\x03\x00\x01\x01\x01\x0f\x43\x68\x61\x72\x69\x73\x53\x49\x4c\x2d"
+#    "\x42\x6f\x6c\x64\x00\x01\x01\x01\x5c\xf8\x10\x00\x1c\x08\xc5\x01\x1c\x08\xc6"
+#    "\x02\x1c\x08\xc7\x03\xf8\x14\x04\xfb\xf2\x0c\x03\xf7\x0c\x0c\x04\x1c\xfa\x3d"
+#    "\xfe\xd8\x1c\x18\x00\x1c\x0a\x28\x05\x1e\xa0\x00\x48\x82\x80\x98\x8f\x8b\x8b"
+#      ......
+#    "\x3c\x1d\x88\xf7\xb3\x25\x0a\xf7\x19\x0a\xf7\x13\x66\x0a\xfd\xfe\x72\x1d\x0b"
+=================
+13673060
+count:1
+        raise SystemExit('Sub-directory \'{0}\' not found.'.format(target_dir))
+
+    fonts_resource_files = (os.path.join(target_dir, file) for file in os.listdir(target_dir))
+    for file in fonts_resource_files:
+        print('Processing file', file)
+        process_file(file)        
+        
+
+
+=================
+1094717
+count:1
+    """
+    return int(to_num(num))
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
+    
+# References:
+# [Convert a string to integer with decimal in Python](http://stackoverflow.com/questions/1094717/convert-a-string-to-integer-with-decimal-in-python)
+# [Convert hex string to int in Python](http://stackoverflow.com/questions/209513/convert-hex-string-to-int-in-python)
+# [Invalid Token when using Octal numbers](http://stackoverflow.com/questions/1837874/invalid-token-when-using-octal-numbers)
+=================
+209513
+count:1
+    return int(to_num(num))
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
+    
+# References:
+# [Convert a string to integer with decimal in Python](http://stackoverflow.com/questions/1094717/convert-a-string-to-integer-with-decimal-in-python)
+# [Convert hex string to int in Python](http://stackoverflow.com/questions/209513/convert-hex-string-to-int-in-python)
+# [Invalid Token when using Octal numbers](http://stackoverflow.com/questions/1837874/invalid-token-when-using-octal-numbers)
+=================
+1837874
+count:1
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
+    
+# References:
+# [Convert a string to integer with decimal in Python](http://stackoverflow.com/questions/1094717/convert-a-string-to-integer-with-decimal-in-python)
+# [Convert hex string to int in Python](http://stackoverflow.com/questions/209513/convert-hex-string-to-int-in-python)
+# [Invalid Token when using Octal numbers](http://stackoverflow.com/questions/1837874/invalid-token-when-using-octal-numbers)
+=================
+379906
+count:1
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
+    
+# References:
+# [Convert a string to integer with decimal in Python](http://stackoverflow.com/questions/1094717/convert-a-string-to-integer-with-decimal-in-python)
+# [Convert hex string to int in Python](http://stackoverflow.com/questions/209513/convert-hex-string-to-int-in-python)
+# [Invalid Token when using Octal numbers](http://stackoverflow.com/questions/1837874/invalid-token-when-using-octal-numbers)
+=================
+4568580
+count:1
+        run_subprocess(cmd_args)
+
+
+if __name__ == '__main__':
+    main()
+
+
+# References:
+#  Ongoing-Study/cpp/msvc_cmdline_args/msvc_cmdline_args.cpp
+# [Python glob multiple filetypes](http://stackoverflow.com/questions/4568580/python-glob-multiple-filetypes)
+=================
+22351254
+count:1
+# 2018-05-28T10:38+08:00
+
+
+def img_to_bytes(fn):
+    with open(fn, "rb") as fp:
+        return bytearray(fp.read())
+
+
+# References:
+# https://stackoverflow.com/questions/22351254/python-script-to-convert-image-into-byte-array
+=================
+35390187
+count:1
+
+folium = lhs - rhs
+folium_idiff = sympy.idiff(folium, y, x).simplify()
+print(folium_idiff)
+sympy.plotting.plot_implicit(folium_idiff, title=str(folium_idiff))
+
+
+# References:
+# Calculus, 7ed, James.Stewart, P157
+# https://stackoverflow.com/questions/35390187/using-sympy-equations-for-plotting
+=================
+25791425
+count:1
+folium = lhs - rhs
+folium_idiff = sympy.idiff(folium, y, x).simplify()
+print(folium_idiff)
+sympy.plotting.plot_implicit(folium_idiff, title=str(folium_idiff))
+
+
+# References:
+# Calculus, 7ed, James.Stewart, P157
+# https://stackoverflow.com/questions/35390187/using-sympy-equations-for-plotting
+=================
+9535732
+count:1
+    return ''.join(fetch_page(url, encoding))
+
+
+def iurl(page_contents):
+    pq = pyquery.PyQuery(page_contents)
+    yield from (url.attrib.get('href') for url in pq('a') if url.attrib.get('href'))
+        
+        
+# References:
+# https://stackoverflow.com/questions/9535732/how-to-extract-all-the-urls-from-a-website
+# http://pyquery.readthedocs.io/en/latest/
+=================
+802134
+count:1
+
+def iurl(page_contents):
+    pq = pyquery.PyQuery(page_contents)
+    yield from (url.attrib.get('href') for url in pq('a') if url.attrib.get('href'))
+        
+        
+# References:
+# https://stackoverflow.com/questions/9535732/how-to-extract-all-the-urls-from-a-website
+# http://pyquery.readthedocs.io/en/latest/
+=================
+1995418
+count:1
+    print()
+    
+if __name__ == '__main__':
+    main()
+
+# References:
+# [Python 3.4.3 documentation/The Python Standard Library/4.8. Binary Sequence Types — bytes, bytearray, memoryview]
+# [Python 3.4.3 documentation/The Python Language Reference/6.2.9.1. Generator-iterator methods]
+# [PEP 0380 -- Syntax for Delegating to a Subgenerator](https://www.python.org/dev/peps/pep-0380/)
+# [Python: generator expression vs. yield](http://stackoverflow.com/questions/1995418/python-generator-expression-vs-yield)
+# [Return in generator together with yield in Python 3.3](http://stackoverflow.com/questions/16780002/return-in-generator-together-with-yield-in-python-3-3)
+# [What does the yield keyword do in Python?](http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python)
+=================
+16780002
+count:1
+    
+if __name__ == '__main__':
+    main()
+
+# References:
+# [Python 3.4.3 documentation/The Python Standard Library/4.8. Binary Sequence Types — bytes, bytearray, memoryview]
+# [Python 3.4.3 documentation/The Python Language Reference/6.2.9.1. Generator-iterator methods]
+# [PEP 0380 -- Syntax for Delegating to a Subgenerator](https://www.python.org/dev/peps/pep-0380/)
+# [Python: generator expression vs. yield](http://stackoverflow.com/questions/1995418/python-generator-expression-vs-yield)
+# [Return in generator together with yield in Python 3.3](http://stackoverflow.com/questions/16780002/return-in-generator-together-with-yield-in-python-3-3)
+# [What does the yield keyword do in Python?](http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python)
+=================
+231767
+count:1
+if __name__ == '__main__':
+    main()
+
+# References:
+# [Python 3.4.3 documentation/The Python Standard Library/4.8. Binary Sequence Types — bytes, bytearray, memoryview]
+# [Python 3.4.3 documentation/The Python Language Reference/6.2.9.1. Generator-iterator methods]
+# [PEP 0380 -- Syntax for Delegating to a Subgenerator](https://www.python.org/dev/peps/pep-0380/)
+# [Python: generator expression vs. yield](http://stackoverflow.com/questions/1995418/python-generator-expression-vs-yield)
+# [Return in generator together with yield in Python 3.3](http://stackoverflow.com/questions/16780002/return-in-generator-together-with-yield-in-python-3-3)
+# [What does the yield keyword do in Python?](http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python)
+=================
+1419046
+count:1
+# mandatory argument
+# optional argument
+
+# So, What is the meaning of these five glossary? There difference?
+# mandatory argument
+# optional argument
+# keyword argument
+# keyword only argument
+# positional argument
+# http://stackoverflow.com/questions/1419046/python-normal-arguments-vs-keyword-arguments
+# http://stackoverflow.com/questions/13687043/python-optional-positional-and-keyword-arguments
+# PEP 3102: https://www.python.org/dev/peps/pep-3102/
+
+# More information about: Packing and Unpacking Arguments in Python
+# http://hangar.runway7.net/python/packing-unpacking-arguments
+
+# Python >> 3.4.2 Documentation >> Python Frequently Asked Questions
+# How can I pass optional or keyword parameters from one function to another?
+# From this FAQ, we know that:
+# With the ** specifier in the function's parameter list, all keyword arguments
+=================
+13687043
+count:1
+# optional argument
+
+# So, What is the meaning of these five glossary? There difference?
+# mandatory argument
+# optional argument
+# keyword argument
+# keyword only argument
+# positional argument
+# http://stackoverflow.com/questions/1419046/python-normal-arguments-vs-keyword-arguments
+# http://stackoverflow.com/questions/13687043/python-optional-positional-and-keyword-arguments
+# PEP 3102: https://www.python.org/dev/peps/pep-3102/
+
+# More information about: Packing and Unpacking Arguments in Python
+# http://hangar.runway7.net/python/packing-unpacking-arguments
+
+# Python >> 3.4.2 Documentation >> Python Frequently Asked Questions
+# How can I pass optional or keyword parameters from one function to another?
+# From this FAQ, we know that:
+# With the ** specifier in the function's parameter list, all keyword arguments
+# are packed into a dict object. And we can pass the keyword arguments to another
+=================
+16672856
+count:1
+            yield winreg.EnumKey(key_to_enum, i)
+
+    _CloseKeyToEnum(key, key_to_enum)
+
+# The old version of EnumSubKey looks like this:
+#EnumSubKey = functools.update_wrapper(
+#    functools.partial(_EnumSubKeyImpl, first_recursion = True), _EnumSubKeyImpl)
+# in which case 'help(EnumSubKey)' will not work but 'print(EnumSubKey.__doc__)' works.
+# So I may need some black-magic:
+# http://stackoverflow.com/questions/16672856/allow-help-to-work-on-partial-function-object
+# But it is even more confusing. So I rewrite it.
+def EnumSubKey(key, sub_key = None, recursive = False):
+    '''Enumerate all sub-keys under specified registry item.'''
+    return _EnumSubKeyImpl(key, sub_key, recursive, True) # See issue #1
+
+def EnumValue(key, sub_key = None, recursive = False):
+    '''Enumerate all values under specified registry item.'''
+    key_to_enum = _OpenKeyToEnum(key, sub_key)
+    sub_key_cnt, val_cnt, last_modified = winreg.QueryInfoKey(key_to_enum)
+
+=================
+825678
+count:1
+
+
+if __name__ == '__main__':
+    for file in iter_images(os.path.dirname(os.path.dirname(__file__))):
+        print(file)
+
+
+# References:
+# [Date and Time Formats](http://www.w3.org/TR/NOTE-datetime)
+# [What is the best way to generate a unique and short file name in Java](http://stackoverflow.com/questions/825678/what-is-the-best-way-to-generate-a-unique-and-short-file-name-in-java)
+=================
+4657974
+count:1
+
+if __name__ == '__main__':
+    for file in iter_images(os.path.dirname(os.path.dirname(__file__))):
+        print(file)
+
+
+# References:
+# [Date and Time Formats](http://www.w3.org/TR/NOTE-datetime)
+# [What is the best way to generate a unique and short file name in Java](http://stackoverflow.com/questions/825678/what-is-the-best-way-to-generate-a-unique-and-short-file-name-in-java)
+=================
+1035340
+count:1
+
+
+# TODO: unittest
+def get_md5(filename, block_size=1024*1024):
+    """Calculate the MD5 digest of given file."""
+    with open(filename, 'rb') as fp:
+        md5 = hashlib.md5()
+
+        # Read a binary file elegantly:
+        # http://stackoverflow.com/questions/1035340/reading-binary-file-in-python
+        # or you want to make a binary file object iterable?
+        # http://stackoverflow.com/questions/4566498/python-file-iterator-over-a-binary-file-with-newer-idiom
+        data = fp.read(block_size)
+        while data:
+            md5.update(data)
+            data = fp.read(block_size)
+
+        return md5.hexdigest()
+
+    return ''
+=================
+4566498
+count:1
+# TODO: unittest
+def get_md5(filename, block_size=1024*1024):
+    """Calculate the MD5 digest of given file."""
+    with open(filename, 'rb') as fp:
+        md5 = hashlib.md5()
+
+        # Read a binary file elegantly:
+        # http://stackoverflow.com/questions/1035340/reading-binary-file-in-python
+        # or you want to make a binary file object iterable?
+        # http://stackoverflow.com/questions/4566498/python-file-iterator-over-a-binary-file-with-newer-idiom
+        data = fp.read(block_size)
+        while data:
+            md5.update(data)
+            data = fp.read(block_size)
+
+        return md5.hexdigest()
+
+    return ''
+
+
+=================
+2404430
+count:1
+            self.assertFalse(f.closed)
+            f.seek(0, 0)
+            self.assertEqual(f.read(), test_data)
+            f.close()
+
+    unittest.main()
+
+
+# References:
+# [Does filehandle get closed automatically in Python after it goes out of scope?](http://stackoverflow.com/questions/2404430/does-filehandle-get-closed-automatically-in-python-after-it-goes-out-of-scope)
+# [Does a File Object Automatically Close when its Reference Count Hits Zero?](http://stackoverflow.com/questions/1834556/does-a-file-object-automatically-close-when-its-reference-count-hits-zero)
+# [Explaining Python's '__enter__' and '__exit__'](http://stackoverflow.com/questions/1984325/explaining-pythons-enter-and-exit)
+# [Is close() necessary when using iterator on a Python file object](http://stackoverflow.com/questions/1832528/is-close-necessary-when-using-iterator-on-a-python-file-object)
+# [Python file with closing automatically](http://www.peterbe.com/plog/python-file-with-closing-automatically)
+# [Size of an open file object](http://stackoverflow.com/questions/283707/size-of-an-open-file-object)
+=================
+1834556
+count:1
+            f.seek(0, 0)
+            self.assertEqual(f.read(), test_data)
+            f.close()
+
+    unittest.main()
+
+
+# References:
+# [Does filehandle get closed automatically in Python after it goes out of scope?](http://stackoverflow.com/questions/2404430/does-filehandle-get-closed-automatically-in-python-after-it-goes-out-of-scope)
+# [Does a File Object Automatically Close when its Reference Count Hits Zero?](http://stackoverflow.com/questions/1834556/does-a-file-object-automatically-close-when-its-reference-count-hits-zero)
+# [Explaining Python's '__enter__' and '__exit__'](http://stackoverflow.com/questions/1984325/explaining-pythons-enter-and-exit)
+# [Is close() necessary when using iterator on a Python file object](http://stackoverflow.com/questions/1832528/is-close-necessary-when-using-iterator-on-a-python-file-object)
+# [Python file with closing automatically](http://www.peterbe.com/plog/python-file-with-closing-automatically)
+# [Size of an open file object](http://stackoverflow.com/questions/283707/size-of-an-open-file-object)
+=================
+1984325
+count:1
+            self.assertEqual(f.read(), test_data)
+            f.close()
+
+    unittest.main()
+
+
+# References:
+# [Does filehandle get closed automatically in Python after it goes out of scope?](http://stackoverflow.com/questions/2404430/does-filehandle-get-closed-automatically-in-python-after-it-goes-out-of-scope)
+# [Does a File Object Automatically Close when its Reference Count Hits Zero?](http://stackoverflow.com/questions/1834556/does-a-file-object-automatically-close-when-its-reference-count-hits-zero)
+# [Explaining Python's '__enter__' and '__exit__'](http://stackoverflow.com/questions/1984325/explaining-pythons-enter-and-exit)
+# [Is close() necessary when using iterator on a Python file object](http://stackoverflow.com/questions/1832528/is-close-necessary-when-using-iterator-on-a-python-file-object)
+# [Python file with closing automatically](http://www.peterbe.com/plog/python-file-with-closing-automatically)
+# [Size of an open file object](http://stackoverflow.com/questions/283707/size-of-an-open-file-object)
+=================
+1832528
+count:1
+            f.close()
+
+    unittest.main()
+
+
+# References:
+# [Does filehandle get closed automatically in Python after it goes out of scope?](http://stackoverflow.com/questions/2404430/does-filehandle-get-closed-automatically-in-python-after-it-goes-out-of-scope)
+# [Does a File Object Automatically Close when its Reference Count Hits Zero?](http://stackoverflow.com/questions/1834556/does-a-file-object-automatically-close-when-its-reference-count-hits-zero)
+# [Explaining Python's '__enter__' and '__exit__'](http://stackoverflow.com/questions/1984325/explaining-pythons-enter-and-exit)
+# [Is close() necessary when using iterator on a Python file object](http://stackoverflow.com/questions/1832528/is-close-necessary-when-using-iterator-on-a-python-file-object)
+# [Python file with closing automatically](http://www.peterbe.com/plog/python-file-with-closing-automatically)
+# [Size of an open file object](http://stackoverflow.com/questions/283707/size-of-an-open-file-object)
+=================
+283707
+count:1
+    unittest.main()
+
+
+# References:
+# [Does filehandle get closed automatically in Python after it goes out of scope?](http://stackoverflow.com/questions/2404430/does-filehandle-get-closed-automatically-in-python-after-it-goes-out-of-scope)
+# [Does a File Object Automatically Close when its Reference Count Hits Zero?](http://stackoverflow.com/questions/1834556/does-a-file-object-automatically-close-when-its-reference-count-hits-zero)
+# [Explaining Python's '__enter__' and '__exit__'](http://stackoverflow.com/questions/1984325/explaining-pythons-enter-and-exit)
+# [Is close() necessary when using iterator on a Python file object](http://stackoverflow.com/questions/1832528/is-close-necessary-when-using-iterator-on-a-python-file-object)
+# [Python file with closing automatically](http://www.peterbe.com/plog/python-file-with-closing-automatically)
+# [Size of an open file object](http://stackoverflow.com/questions/283707/size-of-an-open-file-object)
+=================
+13415400
+count:1
+        output_fp.write(args.output_delimiter.join(extracted_columns))
+        output_fp.write('\n')
+
+
+if __name__ == '__main__':
+    main()
+
+
+# References:
+# [How to parse on/off (debug) flag using argparse?](https://stackoverflow.com/questions/13415400/how-to-parse-on-off-debug-flag-using-argparse)
+# [How do you find out what the “system default encoding” is?](https://stackoverflow.com/questions/7387744/how-do-you-find-out-what-the-system-default-encoding-is)
+# [How can I pass a list as a command-line argument with argparse?](https://stackoverflow.com/questions/15753701/how-can-i-pass-a-list-as-a-command-line-argument-with-argparse)
+# [Python: filtering lists by indices](https://stackoverflow.com/questions/11847491/python-filtering-lists-by-indices)
+# [Extracting extension from filename in Python](https://stackoverflow.com/questions/541390/extracting-extension-from-filename-in-python)
+# [Why are empty strings returned in split() results?](https://stackoverflow.com/questions/2197451/why-are-empty-strings-returned-in-split-results)
+=================
+7387744
+count:1
+        output_fp.write('\n')
+
+
+if __name__ == '__main__':
+    main()
+
+
+# References:
+# [How to parse on/off (debug) flag using argparse?](https://stackoverflow.com/questions/13415400/how-to-parse-on-off-debug-flag-using-argparse)
+# [How do you find out what the “system default encoding” is?](https://stackoverflow.com/questions/7387744/how-do-you-find-out-what-the-system-default-encoding-is)
+# [How can I pass a list as a command-line argument with argparse?](https://stackoverflow.com/questions/15753701/how-can-i-pass-a-list-as-a-command-line-argument-with-argparse)
+# [Python: filtering lists by indices](https://stackoverflow.com/questions/11847491/python-filtering-lists-by-indices)
+# [Extracting extension from filename in Python](https://stackoverflow.com/questions/541390/extracting-extension-from-filename-in-python)
+# [Why are empty strings returned in split() results?](https://stackoverflow.com/questions/2197451/why-are-empty-strings-returned-in-split-results)
+=================
+15753701
+count:1
+
+
+if __name__ == '__main__':
+    main()
+
+
+# References:
+# [How to parse on/off (debug) flag using argparse?](https://stackoverflow.com/questions/13415400/how-to-parse-on-off-debug-flag-using-argparse)
+# [How do you find out what the “system default encoding” is?](https://stackoverflow.com/questions/7387744/how-do-you-find-out-what-the-system-default-encoding-is)
+# [How can I pass a list as a command-line argument with argparse?](https://stackoverflow.com/questions/15753701/how-can-i-pass-a-list-as-a-command-line-argument-with-argparse)
+# [Python: filtering lists by indices](https://stackoverflow.com/questions/11847491/python-filtering-lists-by-indices)
+# [Extracting extension from filename in Python](https://stackoverflow.com/questions/541390/extracting-extension-from-filename-in-python)
+# [Why are empty strings returned in split() results?](https://stackoverflow.com/questions/2197451/why-are-empty-strings-returned-in-split-results)
+=================
+11847491
+count:1
+
+if __name__ == '__main__':
+    main()
+
+
+# References:
+# [How to parse on/off (debug) flag using argparse?](https://stackoverflow.com/questions/13415400/how-to-parse-on-off-debug-flag-using-argparse)
+# [How do you find out what the “system default encoding” is?](https://stackoverflow.com/questions/7387744/how-do-you-find-out-what-the-system-default-encoding-is)
+# [How can I pass a list as a command-line argument with argparse?](https://stackoverflow.com/questions/15753701/how-can-i-pass-a-list-as-a-command-line-argument-with-argparse)
+# [Python: filtering lists by indices](https://stackoverflow.com/questions/11847491/python-filtering-lists-by-indices)
+# [Extracting extension from filename in Python](https://stackoverflow.com/questions/541390/extracting-extension-from-filename-in-python)
+# [Why are empty strings returned in split() results?](https://stackoverflow.com/questions/2197451/why-are-empty-strings-returned-in-split-results)
+=================
+541390
+count:1
+if __name__ == '__main__':
+    main()
+
+
+# References:
+# [How to parse on/off (debug) flag using argparse?](https://stackoverflow.com/questions/13415400/how-to-parse-on-off-debug-flag-using-argparse)
+# [How do you find out what the “system default encoding” is?](https://stackoverflow.com/questions/7387744/how-do-you-find-out-what-the-system-default-encoding-is)
+# [How can I pass a list as a command-line argument with argparse?](https://stackoverflow.com/questions/15753701/how-can-i-pass-a-list-as-a-command-line-argument-with-argparse)
+# [Python: filtering lists by indices](https://stackoverflow.com/questions/11847491/python-filtering-lists-by-indices)
+# [Extracting extension from filename in Python](https://stackoverflow.com/questions/541390/extracting-extension-from-filename-in-python)
+# [Why are empty strings returned in split() results?](https://stackoverflow.com/questions/2197451/why-are-empty-strings-returned-in-split-results)
+=================
+2197451
+count:1
+    main()
+
+
+# References:
+# [How to parse on/off (debug) flag using argparse?](https://stackoverflow.com/questions/13415400/how-to-parse-on-off-debug-flag-using-argparse)
+# [How do you find out what the “system default encoding” is?](https://stackoverflow.com/questions/7387744/how-do-you-find-out-what-the-system-default-encoding-is)
+# [How can I pass a list as a command-line argument with argparse?](https://stackoverflow.com/questions/15753701/how-can-i-pass-a-list-as-a-command-line-argument-with-argparse)
+# [Python: filtering lists by indices](https://stackoverflow.com/questions/11847491/python-filtering-lists-by-indices)
+# [Extracting extension from filename in Python](https://stackoverflow.com/questions/541390/extracting-extension-from-filename-in-python)
+# [Why are empty strings returned in split() results?](https://stackoverflow.com/questions/2197451/why-are-empty-strings-returned-in-split-results)
+=================
+369755
+count:1
+        print(cursor.fetchall())
+
+        cursor.execute("SELECT id, name FROM users WHERE fuzzy_match(name, 'Doctor Zhang')")
+        print(cursor.fetchall())
+
+
+# References:
+# https://www.zhihu.com/question/65132459
+# [Using Fuzzy Matching to Search by Sound with Python](https://doughellmann.com/blog/2012/03/03/using-fuzzy-matching-to-search-by-sound-with-python/)
+=================
+24196932
+count:1
+    
+for interface in netifaces.interfaces():
+    print(f'Interface: {interface}')
+        
+    addr = netifaces.ifaddresses(interface)
+    print(f'Address: {addr}')
+
+
+# References:
+=================
+5234090
+count:1
+            count = count + 1
+    else:
+        while count < stop:
+            yield count
+            count = count + 1
+
+
+def get_the_n_next_values_of_a_generator():
+    # References:
+    # https://stackoverflow.com/questions/5234090/how-to-take-the-first-n-items-from-a-generator-or-list-in-python
+    # https://stackoverflow.com/questions/4152376/how-to-get-the-n-next-values-of-a-generator-in-a-list-python
+    assert list(itertools.islice(counter(), 5)) == [0, 1, 2, 3, 4]
+    assert list(itertools.islice(counter(4), 5)) == [0, 1, 2, 3]
+
+
+if __name__ == '__main__':
+=================
+4152376
+count:1
+    else:
+        while count < stop:
+            yield count
+            count = count + 1
+
+
+def get_the_n_next_values_of_a_generator():
+    # References:
+    # https://stackoverflow.com/questions/5234090/how-to-take-the-first-n-items-from-a-generator-or-list-in-python
+    # https://stackoverflow.com/questions/4152376/how-to-get-the-n-next-values-of-a-generator-in-a-list-python
+    assert list(itertools.islice(counter(), 5)) == [0, 1, 2, 3, 4]
+    assert list(itertools.islice(counter(4), 5)) == [0, 1, 2, 3]
+
+
+if __name__ == '__main__':
+=================
+22055500
+count:1
+    "sep = os.path.sep\n",
+    "\n",
+    "p(escape('.gitignore'))\n",
+    "p(fnmatch('.gitignore', '.gitignore'))\n",
+    "p(fnmatch('.vs' + sep, '.vs' + sep))\n",
+    "p(fnmatch('.vs' + sep, '[.]vs' + sep))\n",
+    "\n",
+    "\n",
+    "# References:\n",
+    "# https://stackoverflow.com/questions/22055500/python-glob-issues-with-directory-with-in-name\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+=================
+1561214
+count:1
+
+# 2017-11-02T14:36+08:00
+
+from itertools_notes import counter
+    
+
+
+def reverse_a_generator():
+    # References:
+    # https://stackoverflow.com/questions/1561214/python-reverse-generator
+    assert list(reversed(list(counter(5)))) == [4, 3, 2, 1, 0]
+    assert list(reversed([0, 1, 2, 3])) == [3, 2, 1, 0]
+    # It is impossible to reverse a generator like `counter(None)`
+
+
+if __name__ == '__main__':
+=================
+6608535
+count:1
+    
+    ecg_to_dcm(r'E:\data\1\20110607153002.dat')
+    ecg_to_dcm(r'd:\20120503152310.dat')
+
+# References:
+# DICOM 2015a PS3.5 7.4 Data Element Type
+# DICOM 2015a PS3.5 8.3 Waveform Data and Related Data Elements
+# DICOM 2015a PS3.6 6 Registry of DICOM Data Elements
+# [DICOM Waveform Generator](http://libir.tmu.edu.tw/bitstream/987654321/21661/1/B09.pdf)
+# [Mandatory Tags for DICOM Instance](http://stackoverflow.com/questions/6608535/mandatory-tags-for-dicom-instance)
+# [Questions regarding the DICOM file](http://fixunix.com/dicom/50267-questions-regarding-dicom-file.html)
+=================
+1434918
+count:1
+    ecg_to_dcm(r'd:\20120503152310.dat')
+
+# References:
+# DICOM 2015a PS3.5 7.4 Data Element Type
+# DICOM 2015a PS3.5 8.3 Waveform Data and Related Data Elements
+# DICOM 2015a PS3.6 6 Registry of DICOM Data Elements
+# [DICOM Waveform Generator](http://libir.tmu.edu.tw/bitstream/987654321/21661/1/B09.pdf)
+# [Mandatory Tags for DICOM Instance](http://stackoverflow.com/questions/6608535/mandatory-tags-for-dicom-instance)
+# [Questions regarding the DICOM file](http://fixunix.com/dicom/50267-questions-regarding-dicom-file.html)
+=================
+21017698
+count:1
+
+import struct
+
+print(struct.pack('I', num))
+print("Little endian:", struct.pack('<I', num))
+print("Big endian:", struct.pack('>I', num))
+
+
+# References:
+# [Converting int to bytes in Python 3](https://stackoverflow.com/questions/21017698/converting-int-to-bytes-in-python-3)
+# [How to convert integer value to array of four bytes in python](https://stackoverflow.com/questions/6187699/how-to-convert-integer-value-to-array-of-four-bytes-in-python)
+=================
+6187699
+count:1
+import struct
+
+print(struct.pack('I', num))
+print("Little endian:", struct.pack('<I', num))
+print("Big endian:", struct.pack('>I', num))
+
+
+# References:
+# [Converting int to bytes in Python 3](https://stackoverflow.com/questions/21017698/converting-int-to-bytes-in-python-3)
+# [How to convert integer value to array of four bytes in python](https://stackoverflow.com/questions/6187699/how-to-convert-integer-value-to-array-of-four-bytes-in-python)
+=================
+37571622
+count:1
+print(np.dot([[3,1], [1,2]], [2,3]))
+
+print(result)
+plot(result)
+
+
+# References:
+# https://dsp.stackexchange.com/questions/11466/differences-between-python-and-matlab-filtfilt-function
+# MATLAB: doc filter
+=================
+11430863
+count:1
+import re
+
+# findall: Return all non-overlapping matches of pattern in string
+print(re.findall(r'aba','cababadddd'))
+
+# In order to do overlapping searching, we can use lookahead assertion.
+print(re.findall(r'(?=(aba))','cababadddd'))
+
+# References:
+# [How to find overlapping matches with a regexp?](http://stackoverflow.com/questions/11430863/how-to-find-overlapping-matches-with-a-regexp)
+# [Overlapping regex matches](http://stackoverflow.com/questions/15799332/overlapping-regex-matches)
+=================
+15799332
+count:1
+
+# findall: Return all non-overlapping matches of pattern in string
+print(re.findall(r'aba','cababadddd'))
+
+# In order to do overlapping searching, we can use lookahead assertion.
+print(re.findall(r'(?=(aba))','cababadddd'))
+
+# References:
+# [How to find overlapping matches with a regexp?](http://stackoverflow.com/questions/11430863/how-to-find-overlapping-matches-with-a-regexp)
+# [Overlapping regex matches](http://stackoverflow.com/questions/15799332/overlapping-regex-matches)
+=================
+5616822
+count:1
+# findall: Return all non-overlapping matches of pattern in string
+print(re.findall(r'aba','cababadddd'))
+
+# In order to do overlapping searching, we can use lookahead assertion.
+print(re.findall(r'(?=(aba))','cababadddd'))
+
+# References:
+# [How to find overlapping matches with a regexp?](http://stackoverflow.com/questions/11430863/how-to-find-overlapping-matches-with-a-regexp)
+# [Overlapping regex matches](http://stackoverflow.com/questions/15799332/overlapping-regex-matches)
+=================
+1035340
+count:1
+    '''Calculate the MD5 digest of given file.
+
+    file_name: Specify the target file whose MD5 you want to calculate
+    size: Each time read size bytes from the file
+    upper: Will the result upper-case or not
+    '''
+    md5_inst = hashlib.md5()
+    with open(file_name, 'rb') as fp:
+        # Read a binary file elegantly:
+        # http://stackoverflow.com/questions/1035340/reading-binary-file-in-python
+        # or you want to make a binary file object iterable?
+        # http://stackoverflow.com/questions/4566498/python-file-iterator-over-a-binary-file-with-newer-idiom
+        data = fp.read(size)
+        while data:
+            md5_inst.update(data)
+            data = fp.read(size)
+    return md5_inst.hexdigest().upper() if upper else \
+           md5_inst.hexdigest()
+
+@utility.benchmark(1)
+=================
+4566498
+count:1
+    file_name: Specify the target file whose MD5 you want to calculate
+    size: Each time read size bytes from the file
+    upper: Will the result upper-case or not
+    '''
+    md5_inst = hashlib.md5()
+    with open(file_name, 'rb') as fp:
+        # Read a binary file elegantly:
+        # http://stackoverflow.com/questions/1035340/reading-binary-file-in-python
+        # or you want to make a binary file object iterable?
+        # http://stackoverflow.com/questions/4566498/python-file-iterator-over-a-binary-file-with-newer-idiom
+        data = fp.read(size)
+        while data:
+            md5_inst.update(data)
+            data = fp.read(size)
+    return md5_inst.hexdigest().upper() if upper else \
+           md5_inst.hexdigest()
+
+@utility.benchmark(1)
+def put_test(conn, db, collection_name, file_name):
+    md5 = get_file_md5(file_name)
+=================
+273192
+count:1
+    prog = os.path.basename(__file__)
+    ResourceCrawler(prog, __version__).run()
+
+
+if __name__ == '__main__':
+    main()
+
+
+# References:
+# https://stackoverflow.com/questions/273192/how-can-i-create-a-directory-if-it-does-not-exist
+# https://stackoverflow.com/questions/8357098/how-can-i-check-if-a-url-is-absolute-using-python
+# Ongoing-Study/python/notes/os.path.ipynb
+# https://stackoverflow.com/questions/37748105/how-to-use-progressbar-module-with-urlretrieve
+# http://docopt.org/
+# https://github.com/docopt/docopt
+# https://stackoverflow.com/questions/4533304/python-urlretrieve-limit-rate-and-resume-partial-download
+# https://stackoverflow.com/questions/2021519/download-file-using-urllib-in-python-with-the-wget-c-feature
+=================
+8357098
+count:1
+    ResourceCrawler(prog, __version__).run()
+
+
+if __name__ == '__main__':
+    main()
+
+
+# References:
+# https://stackoverflow.com/questions/273192/how-can-i-create-a-directory-if-it-does-not-exist
+# https://stackoverflow.com/questions/8357098/how-can-i-check-if-a-url-is-absolute-using-python
+# Ongoing-Study/python/notes/os.path.ipynb
+# https://stackoverflow.com/questions/37748105/how-to-use-progressbar-module-with-urlretrieve
+# http://docopt.org/
+# https://github.com/docopt/docopt
+# https://stackoverflow.com/questions/4533304/python-urlretrieve-limit-rate-and-resume-partial-download
+# https://stackoverflow.com/questions/2021519/download-file-using-urllib-in-python-with-the-wget-c-feature
+=================
+37748105
+count:1
+
+if __name__ == '__main__':
+    main()
+
+
+# References:
+# https://stackoverflow.com/questions/273192/how-can-i-create-a-directory-if-it-does-not-exist
+# https://stackoverflow.com/questions/8357098/how-can-i-check-if-a-url-is-absolute-using-python
+# Ongoing-Study/python/notes/os.path.ipynb
+# https://stackoverflow.com/questions/37748105/how-to-use-progressbar-module-with-urlretrieve
+# http://docopt.org/
+# https://github.com/docopt/docopt
+# https://stackoverflow.com/questions/4533304/python-urlretrieve-limit-rate-and-resume-partial-download
+# https://stackoverflow.com/questions/2021519/download-file-using-urllib-in-python-with-the-wget-c-feature
+=================
+4533304
+count:1
+
+
+# References:
+# https://stackoverflow.com/questions/273192/how-can-i-create-a-directory-if-it-does-not-exist
+# https://stackoverflow.com/questions/8357098/how-can-i-check-if-a-url-is-absolute-using-python
+# Ongoing-Study/python/notes/os.path.ipynb
+# https://stackoverflow.com/questions/37748105/how-to-use-progressbar-module-with-urlretrieve
+# http://docopt.org/
+# https://github.com/docopt/docopt
+# https://stackoverflow.com/questions/4533304/python-urlretrieve-limit-rate-and-resume-partial-download
+# https://stackoverflow.com/questions/2021519/download-file-using-urllib-in-python-with-the-wget-c-feature
+=================
+2021519
+count:1
+
+# References:
+# https://stackoverflow.com/questions/273192/how-can-i-create-a-directory-if-it-does-not-exist
+# https://stackoverflow.com/questions/8357098/how-can-i-check-if-a-url-is-absolute-using-python
+# Ongoing-Study/python/notes/os.path.ipynb
+# https://stackoverflow.com/questions/37748105/how-to-use-progressbar-module-with-urlretrieve
+# http://docopt.org/
+# https://github.com/docopt/docopt
+# https://stackoverflow.com/questions/4533304/python-urlretrieve-limit-rate-and-resume-partial-download
+# https://stackoverflow.com/questions/2021519/download-file-using-urllib-in-python-with-the-wget-c-feature
+=================
+696047
+count:1
+            print('Save "{0}" as "{1}".'.format(res_uri, res_fullpath))
+
+
+if __name__ == '__main__':
+    url = 'http://www.pythonscraping.com/pages/page3.html'
+    fetch_page(url, '.\\temp', False)
+
+
+# References:
+=================
+1047580
+count:1
+    
+    debug_print(ds)
+    return ds
+
+
+if __name__ == '__main__':    
+    dataset = fetch_patient_info(r'testdb.configuration', criteria_arg='0002', extra_elems_dict={})
+
+# References:
+# [MS Access library for python](http://stackoverflow.com/questions/1047580/ms-access-library-for-python)
+# [Microsoft Access ODBC Driver connection strings](https://www.connectionstrings.com/microsoft-access-odbc-driver/)
+=================
+1611799
+count:1
+    return ds
+
+
+if __name__ == '__main__':    
+    dataset = fetch_patient_info(r'testdb.configuration', criteria_arg='0002', extra_elems_dict={})
+
+# References:
+# [MS Access library for python](http://stackoverflow.com/questions/1047580/ms-access-library-for-python)
+# [Microsoft Access ODBC Driver connection strings](https://www.connectionstrings.com/microsoft-access-odbc-driver/)
+=================
+2386772
+count:1
+# -*- coding: utf-8 -*-
+
+# 2015-01-04T13:18+08:00
+
+# A Python implementation of Kahan summation algorithm.
+# I read about this algorithm on:
+# http://stackoverflow.com/questions/2386772/difference-between-float-and-double
+# (I read about math.fsum on this page too.)
+# For more details of this algorithm, see:
+# http://en.wikipedia.org/wiki/Kahan_summation_algorithm
+# The doc of math.fsum in Python 3.4.2 documentation also mention this page:
+# ASPN cookbook recipes for accurate floating point summation: http://code.activestate.com/recipes/393090/
+
+# 2015-07-27T13:51+08:00
+# Ongoing-Study/cpp/Boost/Accumulators/KahanSum
+
+
+=================
+5495492
+count:1
+
+    data = b'%\x9f\x88\x94\xa9\xc1\x08f-yG\x1d?P\x8d\xc0\xdak\xc9\xb9'
+    print(base64_c.base64_encode(data))
+    print(base64.b64encode(data))
+
+    unittest.main()
+
+
+# References:
+=================
+28941133
+count:1
+    do_test(b'Hello, world')
+    do_test(b'Hello, world!')
+    do_test(b'Hello, world!', B64F_NORMAL | B64F_NO_PADDING)
+    do_test(b'\x04B<\x96\xaa\x0e\xdae\x94U{\xd5]\xaat\xb6\xd5_')
+    do_test(b'\x99\x00`\xd2R\xae')
+    do_test(b'\xce_{\xad')
+
+
+# References:
+# https://stackoverflow.com/questions/28941133/what-is-the-encoding-of-the-subprocess-module-output-in-python-2-7
+# https://stackoverflow.com/questions/20950612/python-ctypes-integer-pointer
+# https://stackoverflow.com/questions/26277322/passing-arrays-with-ctypes
+# https://stackoverflow.com/questions/33813272/python-ctypes-pass-c-void-p-as-an-out-parameter-to-c-function
+# https://stackoverflow.com/questions/46171507/passing-a-byte-array-to-a-c-function-that-accepts-a-void-pointer
+# https://stackoverflow.com/questions/16676739/python-ctypes-how-to-pass-void-as-argument
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+=================
+20950612
+count:1
+    do_test(b'Hello, world!')
+    do_test(b'Hello, world!', B64F_NORMAL | B64F_NO_PADDING)
+    do_test(b'\x04B<\x96\xaa\x0e\xdae\x94U{\xd5]\xaat\xb6\xd5_')
+    do_test(b'\x99\x00`\xd2R\xae')
+    do_test(b'\xce_{\xad')
+
+
+# References:
+# https://stackoverflow.com/questions/28941133/what-is-the-encoding-of-the-subprocess-module-output-in-python-2-7
+# https://stackoverflow.com/questions/20950612/python-ctypes-integer-pointer
+# https://stackoverflow.com/questions/26277322/passing-arrays-with-ctypes
+# https://stackoverflow.com/questions/33813272/python-ctypes-pass-c-void-p-as-an-out-parameter-to-c-function
+# https://stackoverflow.com/questions/46171507/passing-a-byte-array-to-a-c-function-that-accepts-a-void-pointer
+# https://stackoverflow.com/questions/16676739/python-ctypes-how-to-pass-void-as-argument
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+=================
+26277322
+count:1
+    do_test(b'Hello, world!', B64F_NORMAL | B64F_NO_PADDING)
+    do_test(b'\x04B<\x96\xaa\x0e\xdae\x94U{\xd5]\xaat\xb6\xd5_')
+    do_test(b'\x99\x00`\xd2R\xae')
+    do_test(b'\xce_{\xad')
+
+
+# References:
+# https://stackoverflow.com/questions/28941133/what-is-the-encoding-of-the-subprocess-module-output-in-python-2-7
+# https://stackoverflow.com/questions/20950612/python-ctypes-integer-pointer
+# https://stackoverflow.com/questions/26277322/passing-arrays-with-ctypes
+# https://stackoverflow.com/questions/33813272/python-ctypes-pass-c-void-p-as-an-out-parameter-to-c-function
+# https://stackoverflow.com/questions/46171507/passing-a-byte-array-to-a-c-function-that-accepts-a-void-pointer
+# https://stackoverflow.com/questions/16676739/python-ctypes-how-to-pass-void-as-argument
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+# https://stackoverflow.com/questions/1363163/pointers-and-arrays-in-python-ctypes
+=================
+33813272
+count:1
+    do_test(b'\x04B<\x96\xaa\x0e\xdae\x94U{\xd5]\xaat\xb6\xd5_')
+    do_test(b'\x99\x00`\xd2R\xae')
+    do_test(b'\xce_{\xad')
+
+
+# References:
+# https://stackoverflow.com/questions/28941133/what-is-the-encoding-of-the-subprocess-module-output-in-python-2-7
+# https://stackoverflow.com/questions/20950612/python-ctypes-integer-pointer
+# https://stackoverflow.com/questions/26277322/passing-arrays-with-ctypes
+# https://stackoverflow.com/questions/33813272/python-ctypes-pass-c-void-p-as-an-out-parameter-to-c-function
+# https://stackoverflow.com/questions/46171507/passing-a-byte-array-to-a-c-function-that-accepts-a-void-pointer
+# https://stackoverflow.com/questions/16676739/python-ctypes-how-to-pass-void-as-argument
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+# https://stackoverflow.com/questions/1363163/pointers-and-arrays-in-python-ctypes
+# https://stackoverflow.com/questions/15377338/convert-ctype-byte-array-to-bytes
+=================
+46171507
+count:1
+    do_test(b'\x99\x00`\xd2R\xae')
+    do_test(b'\xce_{\xad')
+
+
+# References:
+# https://stackoverflow.com/questions/28941133/what-is-the-encoding-of-the-subprocess-module-output-in-python-2-7
+# https://stackoverflow.com/questions/20950612/python-ctypes-integer-pointer
+# https://stackoverflow.com/questions/26277322/passing-arrays-with-ctypes
+# https://stackoverflow.com/questions/33813272/python-ctypes-pass-c-void-p-as-an-out-parameter-to-c-function
+# https://stackoverflow.com/questions/46171507/passing-a-byte-array-to-a-c-function-that-accepts-a-void-pointer
+# https://stackoverflow.com/questions/16676739/python-ctypes-how-to-pass-void-as-argument
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+# https://stackoverflow.com/questions/1363163/pointers-and-arrays-in-python-ctypes
+# https://stackoverflow.com/questions/15377338/convert-ctype-byte-array-to-bytes
+# https://stackoverflow.com/questions/24912065/how-to-access-data-from-pointer-in-struct-from-python-with-ctypes
+=================
+16676739
+count:1
+    do_test(b'\xce_{\xad')
+
+
+# References:
+# https://stackoverflow.com/questions/28941133/what-is-the-encoding-of-the-subprocess-module-output-in-python-2-7
+# https://stackoverflow.com/questions/20950612/python-ctypes-integer-pointer
+# https://stackoverflow.com/questions/26277322/passing-arrays-with-ctypes
+# https://stackoverflow.com/questions/33813272/python-ctypes-pass-c-void-p-as-an-out-parameter-to-c-function
+# https://stackoverflow.com/questions/46171507/passing-a-byte-array-to-a-c-function-that-accepts-a-void-pointer
+# https://stackoverflow.com/questions/16676739/python-ctypes-how-to-pass-void-as-argument
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+# https://stackoverflow.com/questions/1363163/pointers-and-arrays-in-python-ctypes
+# https://stackoverflow.com/questions/15377338/convert-ctype-byte-array-to-bytes
+# https://stackoverflow.com/questions/24912065/how-to-access-data-from-pointer-in-struct-from-python-with-ctypes
+# https://stackoverflow.com/questions/54357920/python-ctypes-create-bytearray-from-void
+=================
+1546355
+count:1
+
+
+# References:
+# https://stackoverflow.com/questions/28941133/what-is-the-encoding-of-the-subprocess-module-output-in-python-2-7
+# https://stackoverflow.com/questions/20950612/python-ctypes-integer-pointer
+# https://stackoverflow.com/questions/26277322/passing-arrays-with-ctypes
+# https://stackoverflow.com/questions/33813272/python-ctypes-pass-c-void-p-as-an-out-parameter-to-c-function
+# https://stackoverflow.com/questions/46171507/passing-a-byte-array-to-a-c-function-that-accepts-a-void-pointer
+# https://stackoverflow.com/questions/16676739/python-ctypes-how-to-pass-void-as-argument
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+# https://stackoverflow.com/questions/1363163/pointers-and-arrays-in-python-ctypes
+# https://stackoverflow.com/questions/15377338/convert-ctype-byte-array-to-bytes
+# https://stackoverflow.com/questions/24912065/how-to-access-data-from-pointer-in-struct-from-python-with-ctypes
+# https://stackoverflow.com/questions/54357920/python-ctypes-create-bytearray-from-void
+=================
+1615813
+count:1
+# https://stackoverflow.com/questions/28941133/what-is-the-encoding-of-the-subprocess-module-output-in-python-2-7
+# https://stackoverflow.com/questions/20950612/python-ctypes-integer-pointer
+# https://stackoverflow.com/questions/26277322/passing-arrays-with-ctypes
+# https://stackoverflow.com/questions/33813272/python-ctypes-pass-c-void-p-as-an-out-parameter-to-c-function
+# https://stackoverflow.com/questions/46171507/passing-a-byte-array-to-a-c-function-that-accepts-a-void-pointer
+# https://stackoverflow.com/questions/16676739/python-ctypes-how-to-pass-void-as-argument
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+# https://stackoverflow.com/questions/1363163/pointers-and-arrays-in-python-ctypes
+# https://stackoverflow.com/questions/15377338/convert-ctype-byte-array-to-bytes
+# https://stackoverflow.com/questions/24912065/how-to-access-data-from-pointer-in-struct-from-python-with-ctypes
+# https://stackoverflow.com/questions/54357920/python-ctypes-create-bytearray-from-void
+=================
+6221001
+count:1
+# https://stackoverflow.com/questions/20950612/python-ctypes-integer-pointer
+# https://stackoverflow.com/questions/26277322/passing-arrays-with-ctypes
+# https://stackoverflow.com/questions/33813272/python-ctypes-pass-c-void-p-as-an-out-parameter-to-c-function
+# https://stackoverflow.com/questions/46171507/passing-a-byte-array-to-a-c-function-that-accepts-a-void-pointer
+# https://stackoverflow.com/questions/16676739/python-ctypes-how-to-pass-void-as-argument
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+# https://stackoverflow.com/questions/1363163/pointers-and-arrays-in-python-ctypes
+# https://stackoverflow.com/questions/15377338/convert-ctype-byte-array-to-bytes
+# https://stackoverflow.com/questions/24912065/how-to-access-data-from-pointer-in-struct-from-python-with-ctypes
+# https://stackoverflow.com/questions/54357920/python-ctypes-create-bytearray-from-void
+=================
+18679264
+count:1
+# https://stackoverflow.com/questions/26277322/passing-arrays-with-ctypes
+# https://stackoverflow.com/questions/33813272/python-ctypes-pass-c-void-p-as-an-out-parameter-to-c-function
+# https://stackoverflow.com/questions/46171507/passing-a-byte-array-to-a-c-function-that-accepts-a-void-pointer
+# https://stackoverflow.com/questions/16676739/python-ctypes-how-to-pass-void-as-argument
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+# https://stackoverflow.com/questions/1363163/pointers-and-arrays-in-python-ctypes
+# https://stackoverflow.com/questions/15377338/convert-ctype-byte-array-to-bytes
+# https://stackoverflow.com/questions/24912065/how-to-access-data-from-pointer-in-struct-from-python-with-ctypes
+# https://stackoverflow.com/questions/54357920/python-ctypes-create-bytearray-from-void
+=================
+1363163
+count:1
+# https://stackoverflow.com/questions/33813272/python-ctypes-pass-c-void-p-as-an-out-parameter-to-c-function
+# https://stackoverflow.com/questions/46171507/passing-a-byte-array-to-a-c-function-that-accepts-a-void-pointer
+# https://stackoverflow.com/questions/16676739/python-ctypes-how-to-pass-void-as-argument
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+# https://stackoverflow.com/questions/1363163/pointers-and-arrays-in-python-ctypes
+# https://stackoverflow.com/questions/15377338/convert-ctype-byte-array-to-bytes
+# https://stackoverflow.com/questions/24912065/how-to-access-data-from-pointer-in-struct-from-python-with-ctypes
+# https://stackoverflow.com/questions/54357920/python-ctypes-create-bytearray-from-void
+=================
+15377338
+count:1
+# https://stackoverflow.com/questions/46171507/passing-a-byte-array-to-a-c-function-that-accepts-a-void-pointer
+# https://stackoverflow.com/questions/16676739/python-ctypes-how-to-pass-void-as-argument
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+# https://stackoverflow.com/questions/1363163/pointers-and-arrays-in-python-ctypes
+# https://stackoverflow.com/questions/15377338/convert-ctype-byte-array-to-bytes
+# https://stackoverflow.com/questions/24912065/how-to-access-data-from-pointer-in-struct-from-python-with-ctypes
+# https://stackoverflow.com/questions/54357920/python-ctypes-create-bytearray-from-void
+=================
+24912065
+count:1
+# https://stackoverflow.com/questions/16676739/python-ctypes-how-to-pass-void-as-argument
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+# https://stackoverflow.com/questions/1363163/pointers-and-arrays-in-python-ctypes
+# https://stackoverflow.com/questions/15377338/convert-ctype-byte-array-to-bytes
+# https://stackoverflow.com/questions/24912065/how-to-access-data-from-pointer-in-struct-from-python-with-ctypes
+# https://stackoverflow.com/questions/54357920/python-ctypes-create-bytearray-from-void
+=================
+54357920
+count:1
+# https://stackoverflow.com/questions/1546355/using-enums-in-ctypes-structure
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+# https://stackoverflow.com/questions/1363163/pointers-and-arrays-in-python-ctypes
+# https://stackoverflow.com/questions/15377338/convert-ctype-byte-array-to-bytes
+# https://stackoverflow.com/questions/24912065/how-to-access-data-from-pointer-in-struct-from-python-with-ctypes
+# https://stackoverflow.com/questions/54357920/python-ctypes-create-bytearray-from-void
+=================
+1825715
+count:1
+# http://code.activestate.com/recipes/576415/
+# https://github.com/ActiveState/code/blob/master/recipes/Python/576415_ctype_Enumeration_class/recipe-576415.py
+# https://stackoverflow.com/questions/1615813/how-to-use-c-classes-with-ctypes
+# https://stackoverflow.com/questions/6221001/calling-uname-from-libc-with-pythons-ctypes
+# https://stackoverflow.com/questions/18679264/how-to-use-malloc-and-free-with-python-ctypes
+# https://stackoverflow.com/questions/1363163/pointers-and-arrays-in-python-ctypes
+# https://stackoverflow.com/questions/15377338/convert-ctype-byte-array-to-bytes
+# https://stackoverflow.com/questions/24912065/how-to-access-data-from-pointer-in-struct-from-python-with-ctypes
+# https://stackoverflow.com/questions/54357920/python-ctypes-create-bytearray-from-void
+=================
+952914
+count:1
+    #data = [num[0] for num in struct.iter_unpack('<d', raw_data)]
+    #data = list(itertools.chain.from_iterable(struct.iter_unpack('<d', raw_data)))
+    do_test(np.array(data), mph=0.05, mpd=100, show=True)
+
+if __name__ == '__main__':
+    main()
+
+
+# References:
+=================
+42950256
+count:1
+    ind = np.array(ind)
+    
+    if show:
+        _plot(x, mph, mpd, threshold, edge, valley, ax, np.array(ind), 'FindPeaks(C++)')
+
+    return ind
+
+
+# References:
+=================
+41709257
+count:1
+indices = np.array(indices)
+
+plt.plot(data)
+plt.plot(indices, data[indices], 'r+')
+
+plt.show()
+
+
+# References:
+# https://stackoverflow.com/questions/41709257/how-to-change-the-plot-line-color-from-blue-to-black
+=================
+8409095
+count:1
+
+plt.plot(data)
+plt.plot(indices, data[indices], 'r+')
+
+plt.show()
+
+
+# References:
+# https://stackoverflow.com/questions/41709257/how-to-change-the-plot-line-color-from-blue-to-black
+=================
+25150955
+count:1
+    release_dir = os.path.join(target_dir, 'Release')
+    for exe in os.listdir(release_dir):
+        if exe.endswith('.exe'):
+            print('{0} Run {1} {0}'.format('-' * ((79 - len(exe) - 6) // 2), exe))
+            subprocess.run(os.path.join(release_dir, exe))
+
+
+# References:
+# Python 3.6.4 Documentation/7.2.3. Standard Encodings
+# https://stackoverflow.com/questions/25150955/python-iterating-through-object-attributes
+# https://stackoverflow.com/questions/18239373/python-writing-a-ucs-2-little-endian-utf-16-le-file-with-bom
+# https://stackoverflow.com/questions/22459020/python-decode-utf-16-file-with-bom
+# https://stackoverflow.com/questions/2492077/output-unicode-strings-in-windows-console-app
+# https://www.codeproject.com/articles/34068/unicode-output-to-the-windows-console
+# https://stackoverflow.com/questions/2849010/output-unicode-to-console-using-c-in-windows
+=================
+18239373
+count:1
+    for exe in os.listdir(release_dir):
+        if exe.endswith('.exe'):
+            print('{0} Run {1} {0}'.format('-' * ((79 - len(exe) - 6) // 2), exe))
+            subprocess.run(os.path.join(release_dir, exe))
+
+
+# References:
+# Python 3.6.4 Documentation/7.2.3. Standard Encodings
+# https://stackoverflow.com/questions/25150955/python-iterating-through-object-attributes
+# https://stackoverflow.com/questions/18239373/python-writing-a-ucs-2-little-endian-utf-16-le-file-with-bom
+# https://stackoverflow.com/questions/22459020/python-decode-utf-16-file-with-bom
+# https://stackoverflow.com/questions/2492077/output-unicode-strings-in-windows-console-app
+# https://www.codeproject.com/articles/34068/unicode-output-to-the-windows-console
+# https://stackoverflow.com/questions/2849010/output-unicode-to-console-using-c-in-windows
+=================
+22459020
+count:1
+        if exe.endswith('.exe'):
+            print('{0} Run {1} {0}'.format('-' * ((79 - len(exe) - 6) // 2), exe))
+            subprocess.run(os.path.join(release_dir, exe))
+
+
+# References:
+# Python 3.6.4 Documentation/7.2.3. Standard Encodings
+# https://stackoverflow.com/questions/25150955/python-iterating-through-object-attributes
+# https://stackoverflow.com/questions/18239373/python-writing-a-ucs-2-little-endian-utf-16-le-file-with-bom
+# https://stackoverflow.com/questions/22459020/python-decode-utf-16-file-with-bom
+# https://stackoverflow.com/questions/2492077/output-unicode-strings-in-windows-console-app
+# https://www.codeproject.com/articles/34068/unicode-output-to-the-windows-console
+# https://stackoverflow.com/questions/2849010/output-unicode-to-console-using-c-in-windows
+=================
+2492077
+count:1
+            print('{0} Run {1} {0}'.format('-' * ((79 - len(exe) - 6) // 2), exe))
+            subprocess.run(os.path.join(release_dir, exe))
+
+
+# References:
+# Python 3.6.4 Documentation/7.2.3. Standard Encodings
+# https://stackoverflow.com/questions/25150955/python-iterating-through-object-attributes
+# https://stackoverflow.com/questions/18239373/python-writing-a-ucs-2-little-endian-utf-16-le-file-with-bom
+# https://stackoverflow.com/questions/22459020/python-decode-utf-16-file-with-bom
+# https://stackoverflow.com/questions/2492077/output-unicode-strings-in-windows-console-app
+# https://www.codeproject.com/articles/34068/unicode-output-to-the-windows-console
+# https://stackoverflow.com/questions/2849010/output-unicode-to-console-using-c-in-windows
+=================
+2849010
+count:1
+
+
+# References:
+# Python 3.6.4 Documentation/7.2.3. Standard Encodings
+# https://stackoverflow.com/questions/25150955/python-iterating-through-object-attributes
+# https://stackoverflow.com/questions/18239373/python-writing-a-ucs-2-little-endian-utf-16-le-file-with-bom
+# https://stackoverflow.com/questions/22459020/python-decode-utf-16-file-with-bom
+# https://stackoverflow.com/questions/2492077/output-unicode-strings-in-windows-console-app
+# https://www.codeproject.com/articles/34068/unicode-output-to-the-windows-console
+# https://stackoverflow.com/questions/2849010/output-unicode-to-console-using-c-in-windows

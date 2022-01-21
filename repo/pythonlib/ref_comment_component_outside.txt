@@ -1,0 +1,240 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py
+616645, 50
+------------------
+from contextlib import contextmanager
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py
+24931, 51
+------------------
+from contextlib import contextmanager
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py
+4675728, 54
+------------------
+from contextlib import contextmanager
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py
+2996887, 57
+------------------
+from contextlib import contextmanager
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py
+4985080, 59
+------------------
+- https://stackoverflow.com/questions/4984428/python-subprocess-get-childrens-output-to-file-and-terminal/4985080#4985080
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/plot.py
+787287, 47
+------------------
+def png_img_html_from_pyplot_figure(fig: "Figure",
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/regexfunc.py
+597476, 34
+------------------
+class CompiledRegexMemory(object):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sort.py
+5967500, 36
+------------------
+def atoi(text: str) -> Union[int, str]:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/cache_mw.py
+49547, 47
+------------------
+def add_never_cache_headers(headers: TYPE_WSGI_RESPONSE_HEADERS) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/cache_mw.py
+3859097, 48
+------------------
+def add_never_cache_headers(headers: TYPE_WSGI_RESPONSE_HEADERS) -> None:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py
+32404, 30
+------------------
+import atexit
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py
+7085604, 222
+------------------
+import atexit
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py
+140111, 223
+------------------
+import atexit
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py
+20561990, 244
+------------------
+import atexit
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/enumlike.py
+36932, 408
+------------------
+class AttrDict(dict):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py
+7543452, 586
+------------------
+def get_concatenated_pdf_from_disk(filenames: Iterable[str],
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py
+3582414, 590
+------------------
+def get_concatenated_pdf_from_disk(filenames: Iterable[str],
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/alembic_func.py
+24622170, 68
+------------------
+def get_head_revision_from_alembic(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/insert_on_duplicate.py
+6611563, 30
+------------------
+import re
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/core_query.py
+12941416, 75
+------------------
+def count_star(session: Union[Session, Engine, Connection],
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/core_query.py
+15381604, 135
+------------------
+def exists_in_table(session: Session, table_: Table, *criteria: Any) -> bool:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/getch.py
+510357, 48
+------------------
+def _getch_windows() -> str:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/getch.py
+2408560, 73
+------------------
+def _kbhit_windows() -> bool:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/logs.py
+13131400, 580
+------------------
+class BraceMessage(object):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/logs.py
+24683360, 581
+------------------
+class BraceMessage(object):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/text.py
+13233076, 156
+------------------
+_UNICODE_CATEGORY_SRC = {
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/network.py
+2953462, 33
+------------------
+import os
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/network.py
+316866, 34
+------------------
+import os
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_web.py
+151079, 423
+------------------
+def pdf_result(pdf_binary: bytes,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/classes.py
+1776994, 36
+------------------
+T1 = TypeVar('T1')
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/classes.py
+3862310, 107
+------------------
+def gen_all_subclasses(cls: Type) -> Generator[Type, None, None]:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/files.py
+16041232, 36
+------------------
+def auto_delete_files_on_instance_delete(instance: Any,
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/admin.py
+13990846, 41
+------------------
+def disable_bool_icon(
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/jsonclassfield.py
+6578986, 47
+------------------
+from django.core.exceptions import ValidationError
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/jsonclassfield.py
+31235771, 48
+------------------
+from django.core.exceptions import ValidationError
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/jsonclassfield.py
+16406798, 49
+------------------
+- http://stackoverflow.com/questions/16405969/how-to-change-json-encoding-behaviour-for-serializable-python-object/16406798#16406798
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/jsonclassfield.py
+3768895, 50
+------------------
+from django.core.exceptions import ValidationError
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/request_cache.py
+3151469, 28
+------------------
+from threading import currentThread
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/middleware.py
+3214589, 135
+------------------
+EXEMPT_URLS = [compile(settings.LOGIN_URL.lstrip('/'))]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/middleware.py
+2095520, 224
+------------------
+class DisableClientSideCachingMiddleware(MiddlewareMixin):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py
+19237878, 30
+------------------
+import cProfile
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py
+30086936, 82
+------------------
+DTYPE_DATE = "datetime64[D]"  # D for day resolution, ns for nanoseconds, etc.
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py
+49127844, 83
+------------------
+DTYPE_DATE = "datetime64[D]"  # D for day resolution, ns for nanoseconds, etc.
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar_mssql.py
+8562136, 121
+------------------
+CHECKSUM_AGG = sql_keyword("CHECKSUM_AGG")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar_mssql.py
+5411619, 124
+------------------
+CHECKSUM_AGG = sql_keyword("CHECKSUM_AGG")
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar.py
+4214173, 115
+------------------
+def word_regex_element(word: str) -> str:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/docs/source/conf.py
+5599254, 186
+------------------
+if django:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/docs/source/conf.py
+36228537, 192
+------------------
+if django:

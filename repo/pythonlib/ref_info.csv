@@ -1,0 +1,242 @@
+file_path,post_id,line_count,comment
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py,616645,50,- https://stackoverflow.com/questions/616645/how-do-i-duplicate-sys-stdout-to-a-log-file-in-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py,24931,51,- https://stackoverflow.com/questions/24931/how-to-capture-python-interpreters-and-or-cmd-exes-output-from-a-python-script
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py,4675728,54,- https://stackoverflow.com/questions/4675728/redirect-stdout-to-a-file-in-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py,2996887,57,- https://stackoverflow.com/questions/2996887/how-to-replicate-tee-behavior-in-python-when-using-subprocess
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py,4985080,59,- https://stackoverflow.com/questions/4984428/python-subprocess-get-childrens-output-to-file-and-terminal/4985080#4985080
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py,4984428,91,    https://stackoverflow.com/questions/4984428/python-subprocess-get-childrens-output-to-file-and-terminal
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tee.py,4984428,161,    https://stackoverflow.com/questions/4984428/python-subprocess-get-childrens-output-to-file-and-terminal
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/tools/convert_mdb_to_mysql.py,27921629,134,    http://stackoverflow.com/questions/27921629/python-using-getpass-with-argparse 
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/datetimefunc.py,538666,252,    https://stackoverflow.com/questions/538666/python-format-timedelta-to-string
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/plot.py,787287,47,# http://stackoverflow.com/questions/787287
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/plot.py,3899980,100,        # http://stackoverflow.com/questions/3899980
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/plot.py,7125009,114,        # http://stackoverflow.com/questions/7125009
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/lists.py,952914,114,    http://stackoverflow.com/questions/952914/making-a-flat-list-out-of-list-of-lists-in-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/lists.py,480214,131,    http://stackoverflow.com/questions/480214/how-do-you-remove-duplicates-from-a-list-in-whilst-preserving-order
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/athena_ohdsi.py,8897593,193,        - https://stackoverflow.com/questions/8897593/similarity-between-two-text-documents
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/athena_ohdsi.py,2380394,194,        - https://stackoverflow.com/questions/2380394/simple-implementation-of-n-gram-tf-idf-and-cosine-similarity-in-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/regexfunc.py,597476,34,# Based on http://stackoverflow.com/questions/597476/how-to-concisely-cascade-through-multiple-regex-statements-in-python  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/regexfunc.py,597476,45,    http://stackoverflow.com/questions/597476/how-to-concisely-cascade-through-multiple-regex-statements-in-python.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pyramid/responses.py,4832357,165,        # https://stackoverflow.com/questions/4832357
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pyramid/responses.py,1395151,180,        # https://stackoverflow.com/questions/1395151
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sort.py,5967500,36,# http://stackoverflow.com/questions/5967500/how-to-correctly-sort-a-string-with-a-number-inside  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sort.py,5967500,51,    http://stackoverflow.com/questions/5967500/how-to-correctly-sort-a-string-with-a-number-inside
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/subproc.py,13299550,142,    # Can't preserve colour: http://stackoverflow.com/questions/13299550/preserve-colored-output-from-python-os-popen  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/constants.py,16042647,119,    #     https://stackoverflow.com/questions/16042647/whats-the-de-facto-standard-for-a-reverse-proxy-to-tell-the-backend-ssl-is-used  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/request_logging_mw.py,7835030,103,            # https://stackoverflow.com/questions/7835030/obtaining-client-ip-address-from-a-wsgi-app-using-eventlet  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/cache_mw.py,49547,47,# http://stackoverflow.com/questions/49547/making-sure-a-web-page-is-not-cached-across-all-browsers  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/cache_mw.py,3859097,48,# http://stackoverflow.com/questions/3859097/how-to-add-http-headers-in-wsgi-middleware  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/reverse_proxied_mw.py,16042647,149,            # ... https://stackoverflow.com/questions/16042647
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/wsgi/reverse_proxied_mw.py,2297403,451,        https://stackoverflow.com/questions/2297403/what-is-the-difference-between-http-host-and-server-name-in-php  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/compression.py,8506897,52,      https://stackoverflow.com/questions/8506897/how-do-i-gzip-compress-a-string-in-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/convert.py,5649407,187,      http://stackoverflow.com/questions/5649407
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/convert.py,475074,220,    - regex from http://stackoverflow.com/questions/475074
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/iterhelp.py,5228158,35,    https://stackoverflow.com/questions/5228158/cartesian-product-of-a-dictionary-of-lists.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/maths_py.py,33019698,114,    - https://stackoverflow.com/questions/33019698/how-to-properly-round-up-half-float-numbers-in-python  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/maths_py.py,3410976,148,    https://stackoverflow.com/questions/3410976/how-to-round-a-number-to-significant-figures-in-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/cmdline.py,33560364,38,    https://stackoverflow.com/questions/33560364/python-windows-parsing-command-lines-with-shlex.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py,32404,30,- http://stackoverflow.com/questions/32404
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py,34696815,89,  - At this point, see also http://stackoverflow.com/questions/34696815
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py,7085604,222,- http://stackoverflow.com/questions/7085604/sending-c-to-python-subprocess-objects-on-windows
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py,140111,223,- http://stackoverflow.com/questions/140111/sending-an-arbitrary-signal-in-windows
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py,20561990,244,- http://stackoverflow.com/questions/20561990
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py,18682681,655,        # http://stackoverflow.com/questions/18682681/what-are-exit-codes-from-the-taskkill-utility  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py,1230669,688,          https://stackoverflow.com/questions/1230669/subprocess-deleting-child-processes-in-windows,
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/winservice.py,16333054,944,        # https://stackoverflow.com/questions/16333054
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/httpconst.py,6783921,68,      - https://stackoverflow.com/questions/6783921/which-mime-type-to-use-for-a-binary-file-thats-specific-to-my-program
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/httpconst.py,264256,72,      - http://stackoverflow.com/questions/264256/what-is-the-best-mime-type-and-extension-to-use-when-exporting-tab-delimited
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/httpconst.py,4411757,77,      - http://stackoverflow.com/questions/4411757/zip-mime-types-when-to-pick-which-one
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/httpconst.py,31489757,86,      - https://stackoverflow.com/questions/31489757/what-is-correct-mimetype-with-apache-openoffice-files-like-odt-ods-odp
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/enumlike.py,32214614,184,    http://stackoverflow.com/questions/32214614/automatically-setting-an-enum-members-value-to-its-name/32215467
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/enumlike.py,36932,408,#     """Enum support, as at http://stackoverflow.com/questions/36932"""
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/enumlike.py,4984647,419,    http://stackoverflow.com/questions/4984647
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/enumlike.py,455059,433,    As per http://stackoverflow.com/questions/455059, modified for
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py,3310584,328,            # http://stackoverflow.com/questions/3310584
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py,15169101,360,        #   http://stackoverflow.com/questions/15169101
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py,5776125,362,        #   http://stackoverflow.com/questions/5776125
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py,312230,529,    - http://stackoverflow.com/questions/312230/proper-mime-type-for-pdf-files
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py,2374427,531,    - http://stackoverflow.com/questions/2374427
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py,908331,536,    # https://stackoverflow.com/questions/908331/how-to-write-binary-data-to-stdout-in-python-3  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py,7543452,586,#       http://stackoverflow.com/questions/7543452/how-to-launch-a-pdftk-subprocess-while-in-wsgi  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py,3582414,590,#   http://stackoverflow.com/questions/3582414/removing-tmp-file-after-return-httpresponse-in-django  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/pdf.py,17104926,616,    # http://stackoverflow.com/questions/17104926/pypdf-merging-multiple-pdf-files-into-one-pdf  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/debugging.py,2203424,81,    # http://stackoverflow.com/questions/2203424/python-how-to-retrieve-class-information-from-a-frame-object  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/debugging.py,5067604,139,    # http://stackoverflow.com/questions/5067604/determine-function-name-from-within-that-function-without-using-traceback  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/sqlserver.py,123558,53,    https://stackoverflow.com/questions/123558/sql-server-2005-t-sql-to-temporarily-disable-a-trigger
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/sqlserver.py,123558,79,    https://stackoverflow.com/questions/123558/sql-server-2005-t-sql-to-temporarily-disable-a-trigger
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/orm_inspect.py,2537471,103,    See http://stackoverflow.com/questions/2537471 and in particular
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/orm_inspect.py,2441796,104,    http://stackoverflow.com/questions/2441796.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/orm_schema.py,19175311,63,    # https://stackoverflow.com/questions/19175311/how-to-create-only-one-table-with-sqlalchemy  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/alembic_func.py,24622170,68,# http://stackoverflow.com/questions/24622170/using-alembic-api-from-inside-application-code  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/dump.py,870925,94,    # http://stackoverflow.com/questions/870925/how-to-generate-a-file-with-ddl-in-the-engines-sql-dialect-in-sqlalchemy  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/dump.py,5631078,139,    http://stackoverflow.com/questions/5631078/sqlalchemy-print-the-actual-query
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/dump.py,5631078,164,        # http://stackoverflow.com/questions/5631078/sqlalchemy-print-the-actual-query  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/dump.py,5631078,179,        # http://stackoverflow.com/questions/5631078/sqlalchemy-print-the-actual-query  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/dump.py,5631078,198,    http://stackoverflow.com/questions/5631078/sqlalchemy-print-the-actual-query
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/dump.py,5631078,302,    # http://stackoverflow.com/questions/5631078/sqlalchemy-print-the-actual-query  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/dump.py,5014700,496,      http://stackoverflow.com/questions/5014700/in-mysql-can-i-defer-referential-integrity-checks-until-commit  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/insert_on_duplicate.py,6611563,30,- http://stackoverflow.com/questions/6611563/sqlalchemy-on-duplicate-key-update
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/insert_on_duplicate.py,6611563,137,      (http://stackoverflow.com/questions/6611563/sqlalchemy-on-duplicate-key-update)
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/core_query.py,12941416,75,# http://stackoverflow.com/questions/12941416
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/core_query.py,15381604,135,# http://stackoverflow.com/questions/15381604
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/merge_db.py,14636192,893,                # https://stackoverflow.com/questions/14636192/sqlalchemy-modification-of-detached-object  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/merge_db.py,1323455,1027,      https://stackoverflow.com/questions/1323455/python-unit-test-with-base-and-sub-class
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/orm_query.py,6455560,65,    # https://stackoverflow.com/questions/6455560/how-to-get-column-names-from-sqlalchemy-result-declarative-syntax  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/orm_query.py,2546207,162,    See http://stackoverflow.com/questions/2546207 (this function is a
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/orm_query.py,12941416,188,        https://stackoverflow.com/questions/12941416/how-to-count-rows-with-select-count-with-sqlalchemy
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/schema.py,87747,242,      ... http://stackoverflow.com/questions/87747
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/schema.py,2937229,552,        # see http://stackoverflow.com/questions/2937229
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/schema.py,10262426,916,        # - http://stackoverflow.com/questions/10262426/sql-server-cannot-insert-an-explicit-value-into-a-timestamp-column  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/schema.py,409286,920,        # - http://stackoverflow.com/questions/409286/should-i-use-field-datetime-or-timestamp  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/schema.py,32917867,1085,    # http://stackoverflow.com/questions/32917867/sqlalchemy-making-schema-reflection-find-use-a-custom-type-for-all-instances  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sqlalchemy/schema.py,34787794,1100,    See http://stackoverflow.com/questions/34787794/sqlalchemy-column-type-comparison.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/snomed.py,1675181,161,    - https://stackoverflow.com/questions/1675181/get-str-repr-with-double-quotes-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/snomed.py,3055477,180,    # https://stackoverflow.com/questions/3055477/how-slow-is-pythons-string-concatenation-vs-str-join  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/fileops.py,169070,149,    # http://stackoverflow.com/questions/169070/python-how-do-i-write-a-decorator-that-restores-the-cwd  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/fileops.py,12041525,162,    # http://stackoverflow.com/questions/12041525
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/fileops.py,2656322,339,    https://stackoverflow.com/questions/2656322/shutil-rmtree-fails-on-windows-with-access-is-denied
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/fileops.py,2853723,371,    As per http://stackoverflow.com/questions/2853723
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/fileops.py,1392413,513,    https://stackoverflow.com/questions/1392413/calculating-a-directorys-size-using-python.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/docker.py,43878953,35,    https://stackoverflow.com/questions/43878953/how-does-one-detect-if-one-is-running-within-a-docker-container-within-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/typing_helpers.py,51264355,41,    See https://stackoverflow.com/questions/51264355/how-to-type-annotate-object-returned-by-csv-writer
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/typing_helpers.py,35344209,272,        # https://stackoverflow.com/questions/35344209/python-abstract-property-setter-with-concrete-getter
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/hash.py,7585435,305,    - http://stackoverflow.com/questions/7585435/best-way-to-convert-string-to-bytes-in-python-3
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/hash.py,10459067,306,    - http://stackoverflow.com/questions/10459067/how-to-convert-my-bytearrayb-x9e-x18k-x9a-to-something-like-this-x9e-x1
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/hash.py,1604464,332,    See http://stackoverflow.com/questions/1604464/twos-complement-in-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/hash.py,13305290,386,    http://stackoverflow.com/questions/13305290/is-there-a-pure-python-implementation-of-murmurhash.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/hash.py,13305290,449,    http://stackoverflow.com/questions/13305290/is-there-a-pure-python-implementation-of-murmurhash
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sizeformatter.py,1094841,31,    becomes ``'2 KiB'``); from http://stackoverflow.com/questions/1094841.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/extract_text.py,125222,42,  - http://stackoverflow.com/questions/125222
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/extract_text.py,42482,43,  - http://stackoverflow.com/questions/42482
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/extract_text.py,25665,47,  - http://stackoverflow.com/questions/25665
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/extract_text.py,5725278,49,  - http://stackoverflow.com/questions/5725278
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/extract_text.py,13857856,435,    # http://stackoverflow.com/questions/13857856/split-byte-string-into-lines
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/extract_text.py,25228106,1111,      - http://stackoverflow.com/questions/25228106
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/json/serialize.py,653368,479,    # http://stackoverflow.com/questions/653368/how-to-create-a-python-decorator-that-can-be-used-either-with-or-without-paramet  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/getch.py,510357,48,# http://stackoverflow.com/questions/510357/python-read-a-single-character-from-the-user  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/getch.py,2408560,73,# http://stackoverflow.com/questions/2408560/python-nonblocking-console-input
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/logs.py,12296214,69,    #     http://stackoverflow.com/questions/12296214
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/logs.py,7484454,199,        logger.handlers = []  # http://stackoverflow.com/questions/7484454
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/logs.py,7484454,348,            obj.handlers = []  # http://stackoverflow.com/questions/7484454
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/logs.py,13131400,580,# - https://stackoverflow.com/questions/13131400/logging-variable-data-with-new-format-string  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/logs.py,24683360,581,# - https://stackoverflow.com/questions/13131400/logging-variable-data-with-new-format-string/24683360#24683360  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/logs.py,31992424,599,        # https://stackoverflow.com/questions/31992424/performance-implications-of-unpacking-dictionaries-in-python  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dogpile_cache.py,1987919,456,        # https://stackoverflow.com/questions/1987919/why-can-decorator-not-decorate-a-staticmethod-or-a-classmethod  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dogpile_cache.py,1987919,513,        # https://stackoverflow.com/questions/1987919/why-can-decorator-not-decorate-a-staticmethod-or-a-classmethod  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/text.py,4020539,61,    # See also http://stackoverflow.com/questions/4020539
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/text.py,4020539,103,    See also http://stackoverflow.com/questions/4020539.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/text.py,13233076,156,# https://stackoverflow.com/questions/13233076/determine-if-a-unicode-character-is-alphanumeric-without-using-a-regular-express  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/platformfunc.py,1214496,213,    From https://stackoverflow.com/questions/1214496/how-to-get-environment-from-a-subprocess-in-python,
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/platformfunc.py,34124636,312,    See https://stackoverflow.com/questions/34124636.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/network.py,2953462,33,http://stackoverflow.com/questions/2953462/pinging-servers-in-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/network.py,316866,34,http://stackoverflow.com/questions/316866/ping-a-site-in-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/network.py,27804710,116,    # https://stackoverflow.com/questions/27804710
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_web.py,530526,375,    # http://stackoverflow.com/questions/530526/accessing-post-data-from-wsgi
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_web.py,151079,423,#   http://stackoverflow.com/questions/151079
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_web.py,1061697,616,    # http://stackoverflow.com/questions/1061697
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_web.py,1071191,641,    - http://stackoverflow.com/questions/1071191
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_web.py,10397968,662,    # https://stackoverflow.com/questions/10397968/escape-dot-in-a-regex-range
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/stringfunc.py,1883980,45,    https://stackoverflow.com/questions/1883980/find-the-nth-occurrence-of-substring-in-a-string 
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/stringfunc.py,9475241,64,    # https://stackoverflow.com/questions/9475241/split-string-every-nth-character  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/stringfunc.py,6116978,78,    http://stackoverflow.com/questions/6116978/python-replace-multiple-strings.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/stringfunc.py,1207457,113,    # http://stackoverflow.com/questions/1207457
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/betweendict.py,30254739,71,    - http://stackoverflow.com/questions/30254739/is-there-a-library-implemented-rangedict-in-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/probability.py,42980201,56,    https://stackoverflow.com/questions/42980201/logarithm-of-zero-in-python.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/probability.py,42980201,94,    https://stackoverflow.com/questions/42980201/logarithm-of-zero-in-python.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/exceptions.py,9157210,46,    http://stackoverflow.com/questions/9157210/how-do-i-raise-the-same-exception-with-a-custom-message-in-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/exceptions.py,9555133,77,    http://stackoverflow.com/questions/9555133/e-printstacktrace-equivalent-in-python.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/openxml/find_bad_openxml.py,22094852,286,            # ... https://stackoverflow.com/questions/22094852/how-to-catch-exceptions-in-workers-in-multiprocessing  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/openxml/find_recovered_openxml.py,19924104,333,        # https://stackoverflow.com/questions/19924104/python-multiprocessing-handling-child-errors-in-parent  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/openxml/find_recovered_openxml.py,26096355,334,        # https://stackoverflow.com/questions/6126007/python-getting-a-traceback-from-a-multiprocessing-process/26096355#26096355  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/openxml/find_recovered_openxml.py,22094852,512,            # ... https://stackoverflow.com/questions/22094852/how-to-catch-exceptions-in-workers-in-multiprocessing  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/process.py,1230669,149,    https://stackoverflow.com/questions/1230669/subprocess-deleting-child-processes-in-windows.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/process.py,34458583,182,    https://stackoverflow.com/questions/34458583/python-subprocess-call-doesnt-handle-signal-correctly
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/file_io.py,17602878,64,    # https://stackoverflow.com/questions/17602878/how-to-handle-both-with-open-and-sys-stdout-nicely  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/file_io.py,29824059,65,    # https://stackoverflow.com/questions/1744989/read-from-file-or-stdin/29824059#29824059  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/file_io.py,13730107,101,    http://stackoverflow.com/questions/13730107/writelines-writes-lines-without-newline-just-fills-the-file)
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/file_io.py,25728472,123,    - See http://stackoverflow.com/questions/25728472/python-gzip-omit-the-original-filename-and-timestamp
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/file_io.py,12821961,275,            https://stackoverflow.com/questions/12821961/)
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/file_io.py,12821961,298,                    # https://stackoverflow.com/questions/12821961/
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/file_io.py,12771480,337,    # https://stackoverflow.com/questions/12771480/part-of-a-word-bold-in-restructuredtext  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/typetests.py,3647692,67,    # http://stackoverflow.com/questions/3647692/
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/modules.py,3365740,62,    # http://stackoverflow.com/questions/3365740/how-to-import-all-submodules
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/modules.py,20339053,104,    https://stackoverflow.com/questions/20339053/in-python-how-can-one-tell-if-a-module-comes-from-a-c-extension.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/modules.py,3365740,277,        # See https://stackoverflow.com/questions/3365740/how-to-import-all-submodules.  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sphinxtools.py,20638040,753,        - https://stackoverflow.com/questions/20638040/glob-exclude-pattern
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/classes.py,1776994,36,http://stackoverflow.com/questions/1776994
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/classes.py,3862310,107,# https://stackoverflow.com/questions/3862310/how-can-i-find-all-subclasses-of-a-class-given-its-name  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/classes.py,128573,151,    https://stackoverflow.com/questions/128573/using-property-on-classmethods.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/classes.py,128573,156,    # https://stackoverflow.com/questions/128573/using-property-on-classmethods
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/classes.py,128573,170,    https://stackoverflow.com/questions/128573/using-property-on-classmethods
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/contexts.py,27803059,37,    - https://stackoverflow.com/questions/27803059/conditional-with-statement-in-python
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/contexts.py,893333,39,      https://stackoverflow.com/questions/893333/multiple-variables-in-a-with-statement
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py,38987,51,    See http://stackoverflow.com/questions/38987.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py,38987,73,    See http://stackoverflow.com/questions/38987.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py,4406501,120,    https://stackoverflow.com/questions/4406501/change-the-name-of-a-key-in-dictionary.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py,6777485,161,    #       https://stackoverflow.com/questions/6777485
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py,2315520,162,    #       https://stackoverflow.com/questions/2315520
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py,17532929,247,    https://stackoverflow.com/questions/17532929/how-to-implement-a-lazy-setdefault.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py,17532929,278,    https://stackoverflow.com/questions/17532929/how-to-implement-a-lazy-setdefault.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py,1151658,307,    See https://stackoverflow.com/questions/1151658/python-hashable-dicts.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/dicts.py,32888599,320,    https://stackoverflow.com/questions/2082152/case-insensitive-dictionary/32888599#32888599,
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/files.py,16041232,36,# http://stackoverflow.com/questions/16041232/django-delete-filefield
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/serve.py,1156246,153,    # http://stackoverflow.com/questions/1156246/having-django-serve-downloadable-files  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/serve.py,4460661,177,    #   http://stackoverflow.com/questions/4460661/what-to-do-with-chrome-sending-extra-requests  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/forms.py,29303902,69,    # See also http://stackoverflow.com/questions/29303902/django-form-with-list-of-integers  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/admin.py,13990846,41,# http://stackoverflow.com/questions/13990846/disable-on-off-icon-for-boolean-field-in-django  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/restrictedcontentfile.py,2472422,72,    - https://stackoverflow.com/questions/2472422/django-file-upload-size-limit
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/isodatetimetz.py,14368290,138,        ... http://stackoverflow.com/questions/14368290/django-datetimefield-and-timezone-now
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/jsonclassfield.py,6578986,47,- http://stackoverflow.com/questions/6578986/how-to-convert-json-data-into-a-python-object
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/jsonclassfield.py,31235771,48,- http://stackoverflow.com/questions/31235771/is-parsing-a-json-naively-into-a-python-class-or-struct-secure
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/jsonclassfield.py,16406798,49,- http://stackoverflow.com/questions/16405969/how-to-change-json-encoding-behaviour-for-serializable-python-object/16406798#16406798
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/fields/jsonclassfield.py,3768895,50,- http://stackoverflow.com/questions/3768895/how-to-make-a-class-json-serializable
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/request_cache.py,3151469,28,# http://stackoverflow.com/questions/3151469/per-request-cache-in-django
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/middleware.py,3214589,135,# http://stackoverflow.com/questions/3214589/
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/django/middleware.py,2095520,224,# http://stackoverflow.com/questions/2095520/fighting-client-side-caching-in-django  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/buildfunc.py,1386291,131,        # https://stackoverflow.com/questions/1386291/git-git-dir-not-working-as-expected  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/chebi.py,2082152,523,    https://stackoverflow.com/questions/2082152/case-insensitive-dictionary
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/email/sendmail.py,64505,382,    - http://stackoverflow.com/questions/64505
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/email/sendmail.py,3362600,383,    - http://stackoverflow.com/questions/3362600
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py,19237878,30,- From https://stackoverflow.com/questions/19237878/ to
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py,17071871,31,  https://stackoverflow.com/questions/17071871/select-rows-from-a-dataframe-based-on-values-in-a-column-in-pandas  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py,28757389,42,  - https://stackoverflow.com/questions/28757389/loc-vs-iloc-vs-ix-vs-at-vs-iat
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py,30086936,82,# ... https://stackoverflow.com/questions/30086936/what-is-the-difference-between-the-types-type-numpy-string-and-type-str  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py,49127844,83,# ... https://stackoverflow.com/questions/49127844/python-convert-python-string-to-numpy-unicode-string  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py,15943769,211,    nrows_all = len(tp)  # https://stackoverflow.com/questions/15943769/
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/psychiatry/treatment_resistant_depression.py,19365513,336,        # https://stackoverflow.com/questions/19365513/how-to-add-an-extra-row-to-a-pandas-dataframe/19368360  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/argparse_func.py,20094215,50,    https://stackoverflow.com/questions/20094215/argparse-subparser-monolithic-help-output
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/argparse_func.py,15008758,112,    https://stackoverflow.com/questions/15008758/parsing-boolean-values-with-argparse
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/metaclasses.py,6557407,45,    https://stackoverflow.com/questions/6557407/triple-inheritance-causes-metaclass-conflict-sometimes.
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,201282,416,        # http://stackoverflow.com/questions/201282
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,2221250,443,        #   http://stackoverflow.com/questions/2221250
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,3343922,445,        #   http://stackoverflow.com/questions/3343922/get-column-names
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,6568098,795,        # http://stackoverflow.com/questions/6568098
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,917431,822,        # http://stackoverflow.com/questions/917431
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,917431,837,        # http://stackoverflow.com/questions/917431
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,4205181,943,    # http://stackoverflow.com/questions/4205181
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,10263956,1001,    # http://stackoverflow.com/questions/10263956
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,5088671,1109,    # http://stackoverflow.com/questions/5088671
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,2920364,1112,    # http://stackoverflow.com/questions/2920364/checking-for-a-null-int-value-from-a-java-resultset  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,26899595,1167,    # http://stackoverflow.com/questions/26899595
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,6777810,1203,    #       http://stackoverflow.com/questions/6777810
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,2901453,1452,        # http://stackoverflow.com/questions/2901453
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,7311990,1453,        # http://stackoverflow.com/questions/7311990
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,11053941,1613,            #   http://stackoverflow.com/questions/11053941
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,6001104,1648,            # http://stackoverflow.com/questions/6001104
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,1063770,1664,            # http://stackoverflow.com/questions/1063770
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,1063770,1709,            # http://stackoverflow.com/questions/1063770
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,1063770,1755,            # http://stackoverflow.com/questions/1063770
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,9337134,1897,        # http://stackoverflow.com/questions/9337134
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,6202726,2092,        #   http://stackoverflow.com/questions/6202726/writing-utf-8-string-to-mysql-with-python  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,8859353,2790,        # http://stackoverflow.com/questions/8859353
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/rnc_db.py,1903041,2843,        # http://stackoverflow.com/questions/1903041
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar_mssql.py,8562136,121,# DISTINCTROW: no; http://stackoverflow.com/questions/8562136/distinctrow-equivalent-in-sql-server  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar_mssql.py,5411619,124,# XOR: use ^ instead; http://stackoverflow.com/questions/5411619/t-sql-xor-operator  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar_mssql.py,285775,291,    # - http://stackoverflow.com/questions/285775/how-to-deal-with-sql-column-names-that-look-like-sql-keywords  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar_mssql.py,11016935,303,    # ... http://stackoverflow.com/questions/11016935/how-can-i-force-a-query-to-not-use-a-index-on-a-given-table  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar.py,1345039,48,    http://stackoverflow.com/questions/1345039
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar.py,37926516,101,    # BUT SEE ALSO ALTERNATIVE: http://stackoverflow.com/questions/37926516
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar.py,4214173,115,# http://stackoverflow.com/questions/4213800/is-there-something-like-a-counter-variable-in-regular-expression-replace/4214173#4214173  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/cardinal_pythonlib/sql/sql_grammar_mysql.py,37926516,371,    # or setParseAction: http://stackoverflow.com/questions/37926516
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/docs/source/conf.py,5599254,186,# https://stackoverflow.com/questions/5599254/how-to-use-sphinxs-autodoc-to-document-a-classs-init-self-method  # noqa
+/Users/jacob.caulfield/Documents/GitHub4/pythonlib/docs/source/conf.py,36228537,192,# https://stackoverflow.com/questions/36228537/django-settings-module-not-defined-when-building-sphinx-documentation

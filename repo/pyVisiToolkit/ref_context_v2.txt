@@ -1,0 +1,1482 @@
+[1, 1, 1, 1, 10, 1, 5, 6, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1]
+6336424
+5811960
+9226516
+13180941
+9252373
+579687
+4896288
+8259001
+8036499
+13588908
+3962247
+6920302
+10695139
+1444159
+18536182
+231767
+3224268
+13114953
+390250
+455612
+5676646
+5624912
+969285
+=================
+17485382
+count:1
+def evaluate(event):
+	# example: iteration over text lines:
+	# http://stackoverflow.com/questions/17485382/tkinter-text-widget-iterating-over-lines
+	
+	# turn text into sets (then we have unique elements!)
+	set1 = set(entry1.get('1.0', 'end-1c').splitlines())
+=================
+6336424
+count:1
+# and improvements from http://effbot.org/tkinterbook/entry.htm
+# and idea from https://docs.python.org/2/library/itertools.html#itertools.product
+# and http://stackoverflow.com/questions/6336424/python-build-a-dynamic-growing-truth-table
+
+from Tkinter import *
+import itertools
+=================
+35526466
+count:1
+	
+	# convert opened DMS file into Windows-1252 encoding
+	# hint by http://stackoverflow.com/questions/35526466/notepad-convert-to-utf-8-multiple-files
+	# strings found in files C:\Program Files (x86)\Notepad++\localization\...
+	#
+	# =>following code doesn't run... :-/
+=================
+6336424
+count:1
+# and improvements from http://effbot.org/tkinterbook/entry.htm
+# and idea from https://docs.python.org/2/library/itertools.html#itertools.product
+# and http://stackoverflow.com/questions/6336424/python-build-a-dynamic-growing-truth-table
+
+
+import itertools
+=================
+5811960
+count:10
+
+# some help from
+# http://stackoverflow.com/questions/5811960/is-there-a-way-to-specify-the-build-directory-for-py2exe
+# http://www.py2exe.org/index.cgi/ListOfOptions
+
+options = {'py2exe': {
+=================
+5811960
+count:1
+
+# some help from
+# http://stackoverflow.com/questions/5811960/is-there-a-way-to-specify-the-build-directory-for-py2exe
+# http://www.py2exe.org/index.cgi/ListOfOptions
+# http://www.py2exe.org/index.cgi/data_files
+
+=================
+9226516
+count:5
+	ENCODING_STDOUT1= sys.stdout.encoding or sys.getfilesystemencoding()
+
+	# hint from http://stackoverflow.com/questions/9226516/python-windows-console-and-encodings-cp-850-vs-cp1252
+	# following code doesn't work in IDE because PyCharm uses UTF-8 and not encoding from Windows command prompt...
+	global ENCODING_STDOUT2
+	ENCODING_STDOUT2 = locale.getpreferredencoding()
+=================
+3224268
+count:6
+		get_encoding()
+	# when a character isn't available in given ENCODING, then it gets replaced by "?". Other options:
+	# http://stackoverflow.com/questions/3224268/python-unicode-encode-error
+	try:
+		bytestring_line = unicode_line.encode(ENCODING_STDOUT1, errors='strict')
+	except UnicodeEncodeError:
+=================
+8928240
+count:1
+			print('WARNING: row "' + row_str + '" has wrong length, is this BLM-file corrupted?')
+		# constructor of integer accepts string
+		# (help from http://stackoverflow.com/questions/8928240/convert-base-2-binary-number-string-to-int )
+		self.row_list.append(int(row_str, 2))
+
+	def get_size(self):
+=================
+13180941
+count:1
+
+	def play_moviefile(self):
+		# help from http://stackoverflow.com/questions/13180941/how-to-kill-a-while-loop-with-a-keystroke
+		try:
+			play_movie = True
+			while play_movie:
+=================
+3429250
+count:1
+def _search_tasklist():
+	# first try: search executable in currently executed tasks
+	# help from http://stackoverflow.com/questions/3429250/determining-running-programs-in-python
+	# remark: WMI command-line (WMIC) utility works on Windows >Vista and Server >2008
+	#  (according to https://msdn.microsoft.com/en-us/library/windows/desktop/aa394531(v=vs.85).aspx )
+	# =>following command gives wrong info: 'WMIC PROCESS get Commandline'
+=================
+2422798
+count:1
+	for directory in DIRECTORIES:
+		# FIXME: os.path.join() doesn't work in every case... is there a better way?
+		# http://stackoverflow.com/questions/2422798/python-os-path-join-on-windows
+		filename = os.path.join(directory, BIN_FOLDER, DMS_FILENAME)
+		if os.path.isfile(filename):
+			return filename
+=================
+14973963
+count:1
+differences to "curses":
+=>it seems that Python "curses" library doesn't follow class name capitalization convention, but we do...
+https://stackoverflow.com/questions/14973963/if-the-convention-in-python-is-to-capitalize-classes-why-then-is-list-not-cap
+
+=>Hmm, in Python's "curse" it seems that there exists only ONE terminal screen at the same time...
+==>I want to allow multiple screens, so we have different classes and instances.
+=================
+9226516
+count:1
+	ENCODING_STDOUT1 = sys.stdout.encoding or sys.getfilesystemencoding()
+
+	# hint from http://stackoverflow.com/questions/9226516/python-windows-console-and-encodings-cp-850-vs-cp1252
+	# following code doesn't work in IDE because PyCharm uses UTF-8 and not encoding from Windows command prompt...
+	global ENCODING_STDOUT2
+	ENCODING_STDOUT2 = locale.getpreferredencoding()
+=================
+1319615
+count:1
+class Error(Exception):
+	''' custom exception when an error occours in curses-emulator '''
+	# based on help from https://stackoverflow.com/questions/1319615/proper-way-to-declare-custom-exceptions-in-modern-python
+	def __init__(self, message):
+		# Call the base class constructor with the parameters it needs
+		Exception.__init__(message)
+=================
+13180941
+count:1
+		bit_pattern = 2047
+
+		# help from http://stackoverflow.com/questions/13180941/how-to-kill-a-while-loop-with-a-keystroke
+		try:
+			while True:
+				if rows_list[0] == 0:
+=================
+699866
+count:1
+					rows_list = rows_list[:NOF_ROWS]
+
+				# help from http://stackoverflow.com/questions/699866/python-int-to-binary
+				my_print('drawn road "' + "{0:b}".format(new_value).zfill(NOF_COLUMNS))
+				#time.sleep(PAUSE_SECONDS)
+				time.sleep(0.05)
+=================
+16396141
+count:1
+
+		# storing display: using numpy two dimensional array, one 8bit value per pixel
+		# help from https://stackoverflow.com/questions/16396141/python-numpy-2d-array-indexing
+		# numpy datatypes: https://docs.scipy.org/doc/numpy-1.12.0/reference/arrays.dtypes.html
+		self._buffer = np.zeros((Display.SCREEN_HEIGHT, Display.SCREEN_WIDTH), dtype='uint8')
+
+=================
+9252373
+count:2
+		''' redraw changed lines '''
+		# randomly update row for smoother screen redrawing
+		# (with help from https://stackoverflow.com/questions/9252373/random-iteration-in-python )
+		#
+		# =>conversion of bitfield into a string of chars representing every pixel,
+		#   it's very similar to Display2
+=================
+5218895
+count:1
+		# registering callback function when user changes dropdop menu
+		# help with function attributes (I had troubles with variable scopes inside of functions)
+		# https://stackoverflow.com/questions/5218895/python-nested-functions-variable-scoping
+		main.pause = True
+		main.choice = 1
+		def cb_dropdown_menu(event):
+=================
+9252373
+count:1
+		''' redraw changed lines '''
+		# randomly update row for smoother screen redrawing
+		# (with help from https://stackoverflow.com/questions/9252373/random-iteration-in-python )
+		#
+		# =>conversion of bitfield into a string-array of chars representing every pixel with "0" or "1"
+		row_idx_list = range(Display.SCREEN_HEIGHT)
+=================
+3400495
+count:1
+	# factory for dynamic size structure
+	# example:
+	# http://stackoverflow.com/questions/3400495/how-do-i-emulate-a-dynamically-sized-c-structure-in-python-using-ctypes
+	# http://stackoverflow.com/questions/7015487/ctypes-variable-length-structures
+	class CP_PROMOS(ctypes.Structure):
+		"""
+=================
+7015487
+count:1
+	# example:
+	# http://stackoverflow.com/questions/3400495/how-do-i-emulate-a-dynamically-sized-c-structure-in-python-using-ctypes
+	# http://stackoverflow.com/questions/7015487/ctypes-variable-length-structures
+	class CP_PROMOS(ctypes.Structure):
+		"""
+		clipboard object "PROMOS" with unknown structure
+=================
+579687
+count:1
+
+
+# http://stackoverflow.com/questions/579687/how-do-i-copy-a-string-to-the-clipboard-on-windows-using-python/4203897
+class Clipboard(object):
+	# based on example code from
+	# http://bugs.python.org/file37366/test_clipboard_win.py
+=================
+579687
+count:1
+	# based on example code from
+	# http://bugs.python.org/file37366/test_clipboard_win.py
+	# http://stackoverflow.com/questions/579687/how-do-i-copy-a-string-to-the-clipboard-on-windows-using-python/4203897
+
+	cp_format_dict = {}                     # look-up for "clipboard format name" -> "clipboard format number"
+	CF_UNICODETEXT = 13                     # standard clipboard format
+=================
+22075754
+count:1
+			# PROMOS object has minimal size of 8192 bytes, and maximum size is "as huge as needed"...
+			# =>could have data from earlier copy processes in there!
+			# http://stackoverflow.com/questions/22075754/how-do-i-determine-clipboard-data-size
+			# https://msdn.microsoft.com/en-us/library/windows/desktop/aa366593%28v=vs.85%29.aspx
+			buf_size = Clipboard.GlobalSize(handle)
+			if DEBUGGING:
+=================
+20598791
+count:1
+		threading.Thread.__init__(self)
+		# trying to cleanup thread, so no daemon...
+		# https://stackoverflow.com/questions/20596918/python-exception-in-thread-thread-1-most-likely-raised-during-interpreter-shutd/20598791#20598791
+		self.daemon = False
+		self._target_q = target_q
+		#self.keep_running = True
+=================
+6018340
+count:1
+					self._psc_dms_keystats[fullpath] = DMS_keystats()
+
+				# help with regex: https://stackoverflow.com/questions/6018340/capturing-group-with-findall
+				# =>we search only for one group, so we get a list of strings and not a list of tuples containing matched groups
+				patterns = [re.compile(r'LIB;[\w\s]+\.plb;\w+;([\w:]+);BMO:.+'),                    # BMO instances
+				            re.compile(r'IBW;[\w\s]+\.*\w*;\d+;\d+;\d+;\d+;BMO[\w:]+;([\w:]+);')]   # button with reinit
+=================
+8899905
+count:1
+				# (old idea: sorting by number of "0" in filename (lesser "0" means lesser specific PSC file in menu concept)
+				# help from https://www.programiz.com/python-programming/methods/built-in/sorted
+				# and https://stackoverflow.com/questions/8899905/count-number-of-occurrences-of-a-given-substring-in-a-string
+				# psc_list = sorted(psc_list, key=lambda x: x.count("0"))
+				#
+				# (old idea: removing "Logik"-files. =>now we use them as last option
+=================
+3013449
+count:1
+				# (old idea: removing "Logik"-files. =>now we use them as last option
+				# removing "Logik" files
+				# with help from https://stackoverflow.com/questions/3013449/list-filtering-list-comprehension-vs-lambda-filter
+				#psc_list = [filename for filename in psc_list if not filename.upper().endswith("_LG.PSC")]
+
+				# sort priority:
+=================
+5212870
+count:1
+					# generates tuple (<is Logik-file as bool>, <keyscore as integer>) for sorting in "get_psc_filename()"
+					# help from https://wiki.python.org/moin/HowTo/Sorting#Key_Functions
+					# and idea from https://stackoverflow.com/questions/5212870/sorting-a-python-list-by-two-criteria
+
+					# sort priority:
+					# 1) use "Logik" files only if BMO instance has no other appearance
+=================
+26660654
+count:1
+			if len(unwritten_screens_dict):
+				logger.info('ALM_datapoint.write_ALM_screen(): =>write changed screen-mappings into DMS...')
+				# iteration over dictionary: https://stackoverflow.com/questions/26660654/how-do-i-print-the-key-value-pairs-of-a-dictionary-in-python
+				for alm, screen in unwritten_screens_dict.iteritems():
+					self._write_ALM_screen(alm_dp=alm, psc_filename=screen)
+				logger.info('ALM_datapoint.write_ALM_screen(): done. :-)')
+=================
+415511
+count:1
+
+def print_with_timestamp(line_str):
+	# with help from http://stackoverflow.com/questions/415511/how-to-get-current-time-in-python
+	time_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+	print('\t'.join([time_str, line_str]))
+
+=================
+13180941
+count:1
+	first_run = True
+
+	# help from http://stackoverflow.com/questions/13180941/how-to-kill-a-while-loop-with-a-keystroke
+	try:
+		while True:
+			# handling of set() datatype: https://docs.python.org/2/library/sets.html#set-objects
+=================
+8259001
+count:1
+
+	# using a flag for insertion of linebreaks
+	# help from https://stackoverflow.com/questions/8259001/python-argparse-command-line-flags-without-arguments
+	parser.add_argument('-l', '--linear', action='store_true', help='suppress additional newlines between differences (default is building sections for better readability)')
+
+	parser.add_argument('-p', '--pause', default=1.0, type=float, nargs='?', help='waiting time in seconds for next polling cycle (default is 1.0)')
+=================
+4480075
+count:1
+
+	# this positional argument is optional
+	# with help from http://stackoverflow.com/questions/4480075/argparse-optional-positional-arguments
+	parser.add_argument('DMS_NODE', default='BMO', nargs='?', help='DMS node and all subnodes to trace (e.g. MSR01:H01, default is BMO)')
+
+	args = parser.parse_args()
+=================
+26744366
+count:1
+	def _draw_gui(self):
+		# optionmenu: example from http://effbot.org/tkinterbook/optionmenu.htm
+		# "apply" seems deprecated... https://stackoverflow.com/questions/26744366/adding-command-to-a-tkinter-optionmenu
+		options = Param_Frame.INTERVALS.keys()
+		self._optmenu_intervals = Tkinter.OptionMenu(self, self._interval_var, *options, command=self._cb_optmenu_interval)
+
+=================
+16522380
+count:1
+					#plt.figure()
+					#self._histData_ts.plot()
+					## help from https://stackoverflow.com/questions/16522380/matplotlib-plot-is-a-no-show
+					#plt.show()
+
+				else:
+=================
+10856106
+count:1
+			# (iteratively appending to a pandas Series is not recommended!)
+			#  read https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.append.html
+			# and usage hint from https://stackoverflow.com/questions/10839701/time-weighted-average-with-pandas/10856106#10856106
+			tstamps = []
+			states = []
+			values = []
+=================
+4896288
+count:1
+	# problem: when running a subprocess, then reading it's stdout will block until subprocess wrote data...
+	# background information from http://eyalarubas.com/python-subproc-nonblock.html
+	# and help from: https://stackoverflow.com/questions/375427/non-blocking-read-on-a-subprocess-pipe-in-python/4896288#4896288
+	def __init__(self, cmd, stdout_queue):
+		self._cmd = str(cmd)
+		self._stdout_queue = stdout_queue
+=================
+4896288
+count:1
+
+	def run(self):
+		# help from https://stackoverflow.com/questions/375427/non-blocking-read-on-a-subprocess-pipe-in-python/4896288#4896288
+		for line in iter(self._process.stdout.readline, b''):
+			self._stdout_queue.put(line)
+		self._process.stdout.close()
+=================
+4084322
+count:1
+
+	def stop(self):
+		# with help from https://stackoverflow.com/questions/4084322/killing-a-process-created-with-pythons-subprocess-popen
+		logger.debug('AsyncProcess.stop(): killing background subprocess...')
+		self._process.kill()
+
+=================
+4896288
+count:1
+
+	def get_ping_rtt(self):
+		# using nonblocking queue for getting stdout of subprocess: https://stackoverflow.com/questions/375427/non-blocking-read-on-a-subprocess-pipe-in-python/4896288#4896288
+		try:
+			line = self._stdout_queue.get_nowait()
+		except Queue.Empty:
+=================
+13180941
+count:1
+			runner.start_pings()
+
+			# help from http://stackoverflow.com/questions/13180941/how-to-kill-a-while-loop-with-a-keystroke
+			# and http://effbot.org/zone/stupid-exceptions-keyboardinterrupt.htm
+			try:
+				logger.info('"Ping_Trend" is working now... Press <CTRL> + C for aborting.')
+=================
+8259001
+count:1
+	parser = argparse.ArgumentParser(description='Pinging target(s) in background and writing Round-Trip-Time to DMS.')
+
+	# help for commandline switches: https://stackoverflow.com/questions/8259001/python-argparse-command-line-flags-without-arguments
+	# help for appending list of targets: https://mkaz.tech/code/python-argparse-cookbook/
+
+	# help for required arguments: https://stackoverflow.com/questions/24180527/argparse-required-arguments-listed-under-optional-arguments
+=================
+24180527
+count:1
+	# help for appending list of targets: https://mkaz.tech/code/python-argparse-cookbook/
+
+	# help for required arguments: https://stackoverflow.com/questions/24180527/argparse-required-arguments-listed-under-optional-arguments
+	requiredArg = parser.add_argument_group('required (ping target)')
+	requiredArg.add_argument('--target', '-t', action='append', dest='target', nargs=2, required=True, help='pair of target and DMS key, one or more times (example: -t 192.168.1.1 System:Ping_Trend:DefaultGW)')
+
+=================
+1641280
+count:1
+
+# ### DEBUGGING memory leak
+# # help from https://stackoverflow.com/questions/1641231/python-working-around-memory-leaks/1641280#1641280
+# # and https://stackoverflow.com/questions/1396668/get-object-by-id
+# import gc
+
+=================
+1396668
+count:1
+# ### DEBUGGING memory leak
+# # help from https://stackoverflow.com/questions/1641231/python-working-around-memory-leaks/1641280#1641280
+# # and https://stackoverflow.com/questions/1396668/get-object-by-id
+# import gc
+
+
+=================
+6190776
+count:1
+				except Exception as ex:
+					logger.error('DMSDatapoint_Result.write_to_dms(): type mismatch, got exception "' + repr(ex) + '" while convert new result ' + repr(newval) + ' to ' + self._datatype + '!')
+					# leave function (help from https://stackoverflow.com/questions/6190776/what-is-the-best-way-to-exit-a-function-which-has-no-return-value-in-python-be )
+					raise ex
+				resp = self._dms_ws.dp_set(path=self.key_str,
+				                           value=self._value,
+=================
+10220599
+count:1
+		# we have to sort keyword arguments for always getting same hash value as key in our dict
+		# =>only tuples can be hashed (we get a tuple of expr and tuples)
+		# (help from https://stackoverflow.com/questions/10220599/how-to-hash-args-kwargs-for-function-cache )
+		key_tuple = (expr_str, ) + tuple(sorted(locals_dict.items()))
+		try:
+			return Controlfunction._caching_ordereddict[key_tuple]
+=================
+13180941
+count:1
+			runner.subscribe_datapoints()
+
+			# help from http://stackoverflow.com/questions/13180941/how-to-kill-a-while-loop-with-a-keystroke
+			try:
+				logger.info('"DMS_Controlfunction" is working now... Press <CTRL> + C for aborting.')
+
+=================
+2844516
+count:1
+					# 				except KeyError:
+					# 					types_dict[curr_type] = -1
+					# 		# help for dict comprehension: https://stackoverflow.com/questions/2844516/how-to-filter-a-dictionary-according-to-an-arbitrary-condition-function
+					# 		logger.info('DEBUGGING: differences in number of objects: ' + repr({k: v for k, v in types_dict.iteritems() if v != 0}))
+					#
+					# 		# preparing next cycle
+=================
+8259001
+count:1
+	parser = argparse.ArgumentParser(description='Python as external Controlfunction (Leitfunktion).')
+
+	# help for commandline switches: https://stackoverflow.com/questions/8259001/python-argparse-command-line-flags-without-arguments
+
+	parser.add_argument('--check', '-c', action='store_true', dest='only_check', default=False, help='only check configurationfile and exit (default: False)')
+	parser.add_argument('--dryrun', '-d', action='store_true', dest='only_dryrun', default=False, help='no write into DMS, only print result (default: False)')
+=================
+19143091
+count:1
+
+	sock_srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	# host and port as a tuple: http://stackoverflow.com/questions/19143091/typeerror-connect-takes-exactly-one-argument
+	sock_srv.bind((str(local_ip), local_port))
+	sock_srv.listen(1)
+	print('listening on local TCP port ' + str(local_port) + ' on interface ' + str(local_ip) + ' for incoming connections...')
+=================
+25447803
+count:1
+
+			# select returned a socket with available data ->forward on the other connection
+			# (exception handling: http://stackoverflow.com/questions/25447803/python-socket-connection-exception )
+			if client_conn in ready_to_read:
+				data = client_conn.recv(BUFFER_SIZE)
+				if not data: break
+=================
+39359245
+count:2
+
+	def get_metadata(self):
+		# examples from http://stackoverflow.com/questions/39359245/from-stat-st-mtime-to-datetime
+		# and http://stackoverflow.com/questions/6591931/getting-file-size-in-python
+		# and https://docs.python.org/2/library/stat.html
+		# and http://stackoverflow.com/questions/455612/limiting-floats-to-two-decimal-points
+=================
+6591931
+count:2
+	def get_metadata(self):
+		# examples from http://stackoverflow.com/questions/39359245/from-stat-st-mtime-to-datetime
+		# and http://stackoverflow.com/questions/6591931/getting-file-size-in-python
+		# and https://docs.python.org/2/library/stat.html
+		# and http://stackoverflow.com/questions/455612/limiting-floats-to-two-decimal-points
+		# and http://stackoverflow.com/questions/311627/how-to-print-date-in-a-regular-format-in-python
+=================
+455612
+count:2
+		# and http://stackoverflow.com/questions/6591931/getting-file-size-in-python
+		# and https://docs.python.org/2/library/stat.html
+		# and http://stackoverflow.com/questions/455612/limiting-floats-to-two-decimal-points
+		# and http://stackoverflow.com/questions/311627/how-to-print-date-in-a-regular-format-in-python
+		self._read_metadata()
+		size = float("{0:.2f}".format(self._filesize / 1024.0))
+=================
+311627
+count:2
+		# and https://docs.python.org/2/library/stat.html
+		# and http://stackoverflow.com/questions/455612/limiting-floats-to-two-decimal-points
+		# and http://stackoverflow.com/questions/311627/how-to-print-date-in-a-regular-format-in-python
+		self._read_metadata()
+		size = float("{0:.2f}".format(self._filesize / 1024.0))
+		mod_time = datetime.datetime.fromtimestamp(self._modification_time).strftime("%Y.%m.%d %H:%M:%S")
+=================
+8036499
+count:1
+	def _to_unicode(self, text, encoding):
+		# tkinter entry widget returns ASCII or unicode, so we should handle all regex operations in unicode
+		# help from https://stackoverflow.com/questions/8036499/unicodewarning-special-characters-in-tkinter
+		try:
+			text = text.decode(encoding)
+		except UnicodeEncodeError:
+=================
+10695139
+count:1
+
+		# sort list by item specified by caller
+		# based on example from http://stackoverflow.com/questions/10695139/sort-a-list-of-tuples-by-2nd-item-integer-value
+		return sorted(detail_list, key=itemgetter(sort_item), reverse=reversed)
+
+
+=================
+4072150
+count:1
+
+		# display usage/hint label with bold text:
+		# http://stackoverflow.com/questions/4072150/how-to-change-a-widgets-font-style-without-knowing-the-widgets-font-family-siz
+		usage_label = Tkinter.Label(self, text=USAGE_HINT_TEXT, font="-weight bold")
+		usage_label.grid(row=2, column=0, sticky='w', padx=4, pady=8)
+
+=================
+8830507
+count:1
+		if self.tree:
+			# tree does exist... first delete all items of this tree
+			# code from http://stackoverflow.com/questions/8830507/how-to-clear-items-from-a-ttk-treeview-widget
+			children = self.tree.get_children()
+			for item in children:
+				self.tree.delete(item)
+=================
+3794268
+count:1
+		"""
+		if event:
+			# idea from http://stackoverflow.com/questions/3794268/command-for-clicking-on-the-items-of-a-tkinter-treeview-widget
+			curr_item = self.tree.identify('item', event.x, event.y)
+		else:
+			# getting item-ID of the first selected tree item
+=================
+31584415
+count:1
+		click a second time on same header =>inverse sorting of this column
+		"""
+		# idea from http://stackoverflow.com/questions/31584415/how-to-bind-an-action-to-the-heading-of-a-tkinter-treeview-in-python
+		# format is a string '#x' where x stands for column number (#0 is "icon column", #1 is first column, ...)
+
+		region = self.tree.identify("region", event.x, event.y)
+=================
+12014210
+count:1
+		"""
+		# with hints from http://effbot.org/zone/tkinter-popup-menu.htm
+		# and http://stackoverflow.com/questions/12014210/python-tkinter-app-adding-a-right-click-context-menu
+		# and https://docs.python.org/dev/library/tkinter.ttk.html#ttk-treeview
+		try:
+			# set selection on current row
+=================
+281888
+count:1
+		if DEBUGGING:
+			my_print(u'popup menu "open Windows Explorer": filename="' + self._get_clicked_filename() + u'", fullpath="' + self._get_clicked_fullpath() + u'"')
+		# help from http://stackoverflow.com/questions/281888/open-explorer-on-a-file
+		subprocess.Popen(r'explorer /select,"' + self._get_clicked_fullpath() + '"')
+
+	def _cb_open_notepad(self):
+=================
+13588908
+count:1
+		except:
+			# Regex must have wrong syntax... =>give user a feedback
+			# changing colors in a widget: hint from http://stackoverflow.com/questions/13588908/dynamically-change-widget-background-color-in-tkinter
+			self.file_regex_entrybox.configure(bg="red")
+
+		## hint from http://stackoverflow.com/questions/8036499/unicodewarning-special-characters-in-tkinter
+=================
+8036499
+count:1
+			self.file_regex_entrybox.configure(bg="red")
+
+		## hint from http://stackoverflow.com/questions/8036499/unicodewarning-special-characters-in-tkinter
+		#mystr = self.file_regex_pattern.get()
+		# if isinstance(mystr, unicode):
+		# 	uni_mystr = mystr
+=================
+13588908
+count:1
+		except:
+			# Regex must have wrong syntax... =>give user a feedback
+			# changing colors in a widget: hint from http://stackoverflow.com/questions/13588908/dynamically-change-widget-background-color-in-tkinter
+			self.string_regex_entrybox.configure(bg="red")
+
+		# # hint from http://stackoverflow.com/questions/8036499/unicodewarning-special-characters-in-tkinter
+=================
+8036499
+count:1
+			self.string_regex_entrybox.configure(bg="red")
+
+		# # hint from http://stackoverflow.com/questions/8036499/unicodewarning-special-characters-in-tkinter
+		# mystr = self.string_regex_pattern.get()
+		# if isinstance(mystr, unicode):
+		# 	uni_mystr = mystr
+=================
+25734244
+count:1
+
+			# set all nodes with hardware dependency on same rank as sink (last line in graph)
+			# (with help from http://stackoverflow.com/questions/25734244/how-do-i-place-nodes-on-the-same-level-in-dot )
+			mynodes = '"; "'.join(hardware_bmo_list)
+			f.write('\t{rank = same; "' + mynodes + '";}\n')
+
+=================
+26348989
+count:1
+
+		# coloring lines for better readability
+		# code source: http://stackoverflow.com/questions/26348989/changing-background-color-for-every-other-line-of-text-in-a-tkinter-text-box-wid
+		for area in ['key', 'metadata', 'oldval', 'newval']:
+			self.text_area_dict[area].tag_configure("even", background="#e0e0e0")
+			self.text_area_dict[area].tag_configure("odd", background="#ffffff")
+=================
+32038701
+count:1
+		self.yscrollbar.set(*kargs)
+
+		# help from https://stackoverflow.com/questions/32038701/python-tkinter-making-two-text-widgets-scrolling-synchronize
+		self._scrollbar_command('moveto', kargs[0])
+
+
+=================
+715417
+count:1
+
+def parse_boolean(curr_str):
+	# help from http://stackoverflow.com/questions/715417/converting-from-a-string-to-boolean-in-python
+	# just "bool('xxx')" returns always true... So we need another solution
+	return curr_str.upper() in ['TRUE', '1']
+
+=================
+3962247
+count:1
+		if self.textarea_frame != None:
+			# updating information ->first delete the widget, then redraw it
+			# http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+			self.textarea_frame.grid_forget()
+			self.textarea_frame.destroy()
+		self.textarea_frame = _Text_area(curr_string)
+=================
+17657212
+count:2
+	def _show_text(self):
+		# example: multiline text with scrollbars:
+		# http://stackoverflow.com/questions/17657212/how-to-code-the-tkinter-scrolledtext-module
+		xscrollbar = tk.Scrollbar(self)
+		yscrollbar = tk.Scrollbar(self)
+		textArea = tk.Text(self, width=150, height=50, wrap="word",
+=================
+3962247
+count:1
+		if self.clip_frm != None:
+			# updating information ->first delete the widget, then redraw it
+			# http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+			self.clip_frm.pack_forget()
+			self.clip_frm.destroy()
+		self.clip_frm = _Clip_frame(master=self, tiepoint=self.tiepoint, clipboard=self.clipboard, selected_bmo=self.selected_bmo, relief=tk.SUNKEN, borderwidth=2)
+=================
+3962247
+count:1
+		if self.bmo_frm != None:
+			# updating information ->first delete the widget, then redraw it
+			# http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+			self.bmo_frm.pack_forget()
+			self.bmo_frm.destroy()
+		self.bmo_frm = _Bmo_frame(master=self, tiepoint=self.tiepoint, clipboard=self.clipboard, relief=tk.SUNKEN, borderwidth=2)
+=================
+3962247
+count:1
+		if self.dp_frm != None:
+			# updating information ->first delete the widget, then redraw it
+			# http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+			self.dp_frm.pack_forget()
+			self.dp_frm.destroy()
+
+=================
+3962247
+count:1
+		if self.filter_frm != None:
+			# updating information ->first delete the widget, then redraw it
+			# http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+			self.filter_frm.pack_forget()
+			self.filter_frm.destroy()
+		self.filter_frm = _Filter_frame(master=self, parent_widget=self, relief=tk.SUNKEN, borderwidth=2)
+=================
+3085696
+count:1
+		# adding vertical scrollbar to a frame isn't possible...
+		# ->we have to create a canvas, then add the scrollbar and a inner frame to current frame
+		# http://stackoverflow.com/questions/3085696/adding-a-scrollbar-to-a-group-of-widgets-in-tkinter
+		self.canvas = tk.Canvas(self, borderwidth=0, background="gray", width=800, height=500)
+		self.frame = tk.Frame(self.canvas, background="gray")
+		self.vsb = tk.Scrollbar(self, orient="vertical", command=self.canvas.yview)
+=================
+6920302
+count:1
+				#   command=lambda: self._cb_button_to_clipboard(child)
+				# =>using "partial" from functools:
+				# http://stackoverflow.com/questions/6920302/how-to-pass-arguments-to-a-button-command-in-tkinter
+				myfunc = functools.partial(self._cb_button_to_clipboard_normal, child)
+				btn = tk.Button(master=self.frame, text='normal', command=myfunc)
+				btn.grid(row=row_idx, column=6, sticky=tk.N + tk.S + tk.E + tk.W)
+=================
+13954841
+count:1
+		# using built-in "sorted()" function for getting same ordering as in PET (DMS-keys are case-sensitive)
+		# =>but: Python's "sorted()" seems to sort by ASCII-code, and Visi+ by AaBbCcDd... =>need to help sorted() with own key-function:
+		# http://stackoverflow.com/questions/13954841/python-sort-upper-case-and-lower-case
+		# https://docs.python.org/2/library/functions.html#sorted
+
+		# digital datapoints
+=================
+11047803
+count:1
+			# Header:
+			# build a table-similar structure:
+			# http://stackoverflow.com/questions/11047803/creating-a-table-look-a-like-tkinter
+			lab = tk.Label(master=self, text='name', relief=tk.RIDGE)
+			lab.grid(row=4, column=0, sticky=tk.N + tk.S + tk.E + tk.W)
+
+=================
+6920302
+count:1
+				#   command=lambda: self._cb_button_activate(channel)
+				# =>using "partial" from functools:
+				# http://stackoverflow.com/questions/6920302/how-to-pass-arguments-to-a-button-command-in-tkinter
+				myfunc = functools.partial(self._cb_button_activate, channel)
+				btn = tk.Button(master=self, text=state[2], command=myfunc)
+				btn.grid(row=row_idx, column=3, sticky=tk.N + tk.S + tk.E + tk.W)
+=================
+459083
+count:1
+
+			# start background task for keeping Status label updated
+			# http://stackoverflow.com/questions/459083/how-do-you-run-your-own-code-alongside-tkinters-event-loop
+			self.rootwindow.after(self.BGTASKINTERVAL, self._update_status)
+
+		else:
+=================
+10695139
+count:1
+		while tstamp_generator_list:
+			# consuming timestamps, returning always oldest one, updating first element
+			# sorting list of tuples: http://stackoverflow.com/questions/10695139/sort-a-list-of-tuples-by-2nd-item-integer-value
+			# =>getting source list with oldest timestamp
+			key_func = lambda tstamp_iter_source: tstamp_iter_source.head_elem.tstamp_dt
+			tstamp_generator_list = sorted(tstamp_generator_list, key=key_func)
+=================
+3789372
+count:1
+		# generate a set containing only active statusbits from given status value
+		# (if available insert named and unnamed statusbits)
+		# =>idea from http://stackoverflow.com/questions/3789372/python-can-we-convert-a-ctypes-structure-to-a-dictionary
+
+		# first look in cached statusvalue-meaning
+		if curr_status in Statusbit_Meaning.statusvalue_meaning_dict:
+=================
+1444159
+count:1
+	STRUCT_FORMAT = 'IfI'
+
+	# based on http://stackoverflow.com/questions/1444159/how-to-read-a-structure-containing-an-array-using-pythons-ctypes-and-readinto
+	_fields_ = [
+		("timestamp", ctypes.c_uint),
+		("value", ctypes.c_float),
+=================
+1444159
+count:1
+	STRUCT_FORMAT = 'IHHIId'
+
+	# based on http://stackoverflow.com/questions/1444159/how-to-read-a-structure-containing-an-array-using-pythons-ctypes-and-readinto
+	_fields_ = [
+		("timestamp", ctypes.c_uint),
+		("milliseconds", ctypes.c_ushort),
+=================
+390250
+count:2
+	# allow using DBData objects in set():
+	# =>we need a hash value over all fields to get same hash for same trenddata element!
+	# example from http://stackoverflow.com/questions/390250/elegant-ways-to-support-equivalence-equality-in-python-classes
+	# ==>we need to implement __hash__() and __eq__()
+	# (according to https://docs.python.org/2/library/sets.html )
+	def __hash__(self):
+=================
+1444159
+count:1
+
+
+		# FIXME: perhaps implement Array as in http://stackoverflow.com/questions/1444159/how-to-read-a-structure-containing-an-array-using-pythons-ctypes-and-readinto
+		# FIXME: using that in trendfile.py?
+		# FIXME: example: https://www.daniweb.com/programming/software-development/threads/351774/passing-pointer-to-array-of-structures-in-ctypes
+
+=================
+16704408
+count:1
+		# FIXME: example: https://www.daniweb.com/programming/software-development/threads/351774/passing-pointer-to-array-of-structures-in-ctypes
+
+		# code based on http://stackoverflow.com/questions/16704408/python-ctypes-populate-an-array-of-structures
+		self.pmospipe.PdbsGetData.argtypes = [ctypes.c_int, ctypes.c_char_p, ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.POINTER(
+			trend.datasource.dbdata.DBData)]
+		self.pmospipe.PdbsGetData.restype = ctypes.c_int
+=================
+18536182
+count:1
+		data section contains all DBData elements, amount depends on filesize...
+		"""
+		# contains some hints from http://stackoverflow.com/questions/18536182/parsing-binary-data-into-ctypes-structure-object-via-readinto
+		_fields_ = [
+			("dmsDatapoint", ctypes.c_char * DMSDP_NOF_BYTES),                          # DMS datapoint name
+			("UNKNOWN_BYTES", ctypes.c_char * (TRENDDATA_OFFSET - DMSDP_NOF_BYTES)),    # perhaps unused
+=================
+18536182
+count:1
+	def _parseFile_(self):
+		# reading binary trendfile into ctypes structure
+		# contains hints from http://stackoverflow.com/questions/18536182/parsing-binary-data-into-ctypes-structure-object-via-readinto
+		with open(self._fileFullpath, "rb") as f:
+			f.readinto(self._trendstruct)
+
+=================
+231767
+count:1
+		a generator for memory efficient retrieving DBData elements
+		(caller can only loop once through generator,
+		read here: http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python  )
+		=>optional arguments allows filtering of DBData elements
+		"""
+		# FIXME: implement some filtering (same as in "trendfile.py.old"?) Or is further filtering done in HighLevelTrendfile?
+=================
+10576548
+count:1
+
+		# some statistics over DBData items
+		# with help from http://stackoverflow.com/questions/10576548/python-usable-max-and-min-values
+		self.minValue = -float("inf")
+		self.maxValue = +float("inf")
+
+=================
+295135
+count:1
+		#  ===>trenddata of all three TRD-datapoints were combined into file "MSR_U02_Test_L01_02_foo_Input.hdb" !!!
+
+		# some help from http://stackoverflow.com/questions/295135/turn-a-string-into-a-valid-filename
+		# =>now we restrict filename and hope PDBS does it the same way...
+		valid_chars = set(string.ascii_letters) ^ set(string.digits)
+		char_list = []
+=================
+42950
+count:1
+				# walking forward through available directories
+				for year, month in sorted(self.backup_subdirs_dict.keys(), reverse=False):
+					# with help from http://stackoverflow.com/questions/42950/get-last-day-of-the-month-in-python
+					last_day_of_month = calendar.monthrange(int(year), int(month))[1]
+					backupdir_timestamp = datetime.datetime(year=int(year), month=int(month), day=last_day_of_month, tzinfo=MetaTrendfile._tz)
+					if backupdir_timestamp > timestamp_datetime:
+=================
+231767
+count:1
+		items with same timestamp are grouped
+		(caller can only loop once through generator,
+		read here: http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python  )
+		=>optional arguments allows filtering of DBData elements
+		=>using something similar like "mergesort" algorithm: https://en.wikipedia.org/wiki/Merge_sort
+		=>using "deque" objects for efficient popleft: https://docs.python.org/2/library/collections.html#collections.deque
+=================
+15114023
+count:1
+			def __len__(self):
+				# overriding this hook method for allowing getting current size of deque object
+				# (with help from http://stackoverflow.com/questions/15114023/using-len-and-def-len-self-to-build-a-class
+				#  and http://stackoverflow.com/questions/7816363/if-a-vs-if-a-is-not-none
+				# )
+				return len(self._deque_obj)
+=================
+7816363
+count:1
+				# overriding this hook method for allowing getting current size of deque object
+				# (with help from http://stackoverflow.com/questions/15114023/using-len-and-def-len-self-to-build-a-class
+				#  and http://stackoverflow.com/questions/7816363/if-a-vs-if-a-is-not-none
+				# )
+				return len(self._deque_obj)
+
+=================
+15004772
+count:1
+
+		# lazily generating timestamp iterators from backup
+		# (idea from http://stackoverflow.com/questions/15004772/what-is-the-difference-between-chain-and-chain-from-iterable-in-itertools )
+		def generate_backup_iterators():
+			# walking forward through available directories
+			for year, month in sorted(self.backup_subdirs_dict.keys(), reverse=False):
+=================
+10695139
+count:1
+		while tstamp_generator_list:
+			# consuming timestamps, returning always oldest one, updating first element
+			# sorting list of tuples: http://stackoverflow.com/questions/10695139/sort-a-list-of-tuples-by-2nd-item-integer-value
+			# =>getting source list with oldest timestamp
+			tstamp_generator_list = sorted(tstamp_generator_list, key=itemgetter(0))
+			oldest_source_list = tstamp_generator_list[0]
+=================
+4741243
+count:1
+	#
+	# 	# getting some values...
+	# 	# hint from http://stackoverflow.com/questions/4741243/how-to-pick-just-one-item-from-a-generator-in-python
+	# 	# =>we need to get another generator object when we want to get the same interation!
+	# 	for x in range(2):
+	# 		print('interpretation of values of some DBData elements: (run number ' + str(x) + ')')
+=================
+7588511
+count:1
+			for item in curr_trf.get_dbdata_elements_generator():
+				# using datetime object for getting millisecond resolution (DBData2) instead of using time (DBData)
+				# (with help from https://stackoverflow.com/questions/7588511/format-a-datetime-into-a-string-with-milliseconds
+				# we cut microseconds away. By the way: our datetime object is timezone-aware! :-) )
+				timestamp_str = item.get_datetime().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+
+=================
+12400256
+count:1
+				timestamp_str = item.get_datetime().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+
+				## help from http://stackoverflow.com/questions/12400256/python-converting-epoch-time-into-the-datetime
+				#timestamp_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(item.getTimestamp()))
+
+				## test with DST (daylight saving time)
+=================
+5214578
+count:1
+	filename_export_pdbs_str = r'D:\from_PDBS.csv'
+
+	# Example: Write into textfile: http://stackoverflow.com/questions/5214578/python-print-string-to-text-file
+
+
+	###################### trenddata from Visi.Plus PDBS service ##################
+=================
+3224268
+count:1
+
+	# when a character isn't available in given ENCODING, then it gets replaced by "?". Other options:
+	# http://stackoverflow.com/questions/3224268/python-unicode-encode-error
+	print(unicode_line.encode(ENCODING_STDOUT, errors='replace'))
+
+## FIXME: warum funktioniert untenstehender Code nicht?!?! ==>DEBUGGING!!! :-(
+=================
+3224268
+count:2
+
+	# when a character isn't available in given ENCODING, then it gets replaced by "?". Other options:
+	# http://stackoverflow.com/questions/3224268/python-unicode-encode-error
+	print(unicode_line.encode(ENCODING_STDOUT, errors='replace'))
+
+
+=================
+12550929
+count:1
+	nof_parts = max(len(parts1), len(parts2))
+	# normalize lists: include empty parts if one PSC line has more CSV fields
+	# (help from http://stackoverflow.com/questions/12550929/how-to-make-all-lists-in-a-list-of-lists-the-same-length-by-adding-to-them )
+	for curr_parts_list in [parts1, parts2]:
+		length = len(curr_parts_list)
+		if length < nof_parts:
+=================
+3977570
+count:1
+
+			# cleaning up all tables...
+			# help from https://stackoverflow.com/questions/3977570/how-to-delete-record-from-table
+			self._dbcur.execute("DELETE FROM instances WHERE instance_id=?", (inst_id,))
+
+			for plc_id in self._dbcur.execute("SELECT plc_id FROM plcs WHERE instance_id=?", (inst_id,)).fetchall():
+=================
+39087139
+count:1
+
+			# add text over rectangle (and reusing same tags for event binding)
+			# help from https://stackoverflow.com/questions/39087139/tkinter-label-text-in-canvas-rectangle-python
+			x, y = metadata.get_center_coords()
+			canvas_visu.create_text((x, y), text=self._bmo_instances[instance].get_BMO_class(), tags=tags)
+
+=================
+3962247
+count:1
+			# widget already exists... =>delete it for redrawing
+			# updating information ->first delete the widget, then redraw it
+			# http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+			self._canvas_visu.grid_forget()
+			self._canvas_visu.destroy()
+
+=================
+44887576
+count:1
+		# FIXME: we should implement a cleaner design. canvas widget into own class.
+		# FIXME: implement drag and drop for setting links (while moving: drawing line. on drop: show popup with PAR_INs/PLCs)
+		#       https://stackoverflow.com/questions/44887576/how-make-drag-and-drop-interface
+		#       https://stackoverflow.com/questions/15466469/tkinter-drag-and-drop
+		# FIXME: implement right-click "delete link"? / "show parameters" (edit fields?)
+		# done: implement mouse-hover: label showing BMO instance & class under mouse
+=================
+15466469
+count:1
+		# FIXME: implement drag and drop for setting links (while moving: drawing line. on drop: show popup with PAR_INs/PLCs)
+		#       https://stackoverflow.com/questions/44887576/how-make-drag-and-drop-interface
+		#       https://stackoverflow.com/questions/15466469/tkinter-drag-and-drop
+		# FIXME: implement right-click "delete link"? / "show parameters" (edit fields?)
+		# done: implement mouse-hover: label showing BMO instance & class under mouse
+		# done: checkbox "show links" ->red=digital, green=analog (only from/to one BMO instance, or between all?)
+=================
+33121545
+count:1
+
+		# show information when mouse is over a BMO instance
+		# =>help from https://stackoverflow.com/questions/33121545/how-to-display-canvas-coordinates-when-hovering-cursor-over-canvas
+		self._canvas_visu.tag_bind(MyGUI.BMO_EXISTS_TAG, '<Motion>', self._on_mouseover)
+		self._canvas_visu.tag_bind(MyGUI.BMO_EXISTS_TAG, '<Enter>', self._on_mouseover)  # handle <Alt>+<Tab> switches between windows
+		self._curr_bmo_instance = ''
+=================
+35111894
+count:1
+
+		# delete background link lines
+		# =>help from https://stackoverflow.com/questions/35111894/tkinter-canvas-leave-event-isnt-trigged
+		self._canvas_visu.tag_bind(MyGUI.BMO_EXISTS_TAG, '<Leave>', self._on_mouse_leave)
+
+
+=================
+6789351
+count:1
+
+		# create BMO link: drag and drop a line for visualisation
+		# help from https://stackoverflow.com/questions/6740855/board-drawing-code-to-move-an-oval/6789351#6789351
+		# this data is used to keep track of line being dragged
+		self._drag_data = {"x": 0, "y": 0, "source_item": None}
+		# add bindings for clicking, dragging and releasing
+=================
+13114953
+count:1
+		""" update BMO information """
+		# help from http://effbot.org/tkinterbook/canvas.htm#item-specifiers
+		# and https://stackoverflow.com/questions/13114953/how-do-i-get-id-of-a-widget-that-invoke-an-event-tkinter
+
+		canvas = event.widget
+		x = canvas.canvasx(event.x)
+=================
+13114953
+count:1
+			# change coordinates of link line
+			# help from http://effbot.org/tkinterbook/canvas.htm#patterns
+			# and https://stackoverflow.com/questions/13114953/how-do-i-get-id-of-a-widget-that-invoke-an-event-tkinter
+			canvas = event.widget
+			canvas.coords(MyGUI.CANVAS_DND_LINK_LINE_TAG, self._drag_data["x"], self._drag_data["y"], event.x, event.y)
+
+=================
+10174211
+count:1
+
+		# help with keeping filename always relative to current module:
+		# https://stackoverflow.com/questions/10174211/make-an-always-relative-to-current-module-file-path
+		self._filename = os.path.join(os.path.dirname(__file__), fname)
+		self._config_dict = None
+		self._load_config()
+=================
+15159854
+count:1
+		# FIXME: this doesn't work as expected when objects were created under '__main__' in Parser.py...
+		# <class 'Parser.PscVar_RGB'> vs. <class '__main__.PscVar_RGB'>
+		# ==>here is a similar problem: http://stackoverflow.com/questions/15159854/python-namespace-main-class-not-isinstance-of-package-class
+		prop_obj = Mapping.obj_dict[self._property_obj_str]
+		if DEBUGGING:
+			my_print(u'is_property_obj_valid: prop_obj' + repr(prop_obj))
+=================
+510972
+count:1
+		else:
+			# second try: compare classname as fallback (caveat: doesn't work with subclasses...)
+			# idea from http://stackoverflow.com/questions/510972/getting-the-class-name-of-an-instance-in-python
+			# =>trial and error showed this: '__name__' and '__class__' doesn't work for both types (instances and classes)
+			if DEBUGGING:
+				my_print(u'type(obj).__name__: ' + str(type(obj).__name__) + u', repr(prop_obj): ' + repr(prop_obj))
+=================
+3224268
+count:3
+		get_encoding()
+	# when a character isn't available in given ENCODING, then it gets replaced by "?". Other options:
+	# http://stackoverflow.com/questions/3224268/python-unicode-encode-error
+	print(unicode_line.encode(ENCODING_STDOUT, errors='replace'))
+
+
+=================
+8009882
+count:1
+		# reading textfile: example from
+		# https://docs.python.org/2/tutorial/inputoutput.html#methods-of-file-objects
+		# http://stackoverflow.com/questions/8009882/how-to-read-large-file-line-by-line-in-python
+		# http://stackoverflow.com/questions/3277503/python-read-file-line-by-line-into-array
+		with codecs.open(self._filename, encoding=ENCODING_FILES_PSC, mode=u'r') as f:
+			curr_elem = collections.OrderedDict()
+=================
+3277503
+count:1
+		# https://docs.python.org/2/tutorial/inputoutput.html#methods-of-file-objects
+		# http://stackoverflow.com/questions/8009882/how-to-read-large-file-line-by-line-in-python
+		# http://stackoverflow.com/questions/3277503/python-read-file-line-by-line-into-array
+		with codecs.open(self._filename, encoding=ENCODING_FILES_PSC, mode=u'r') as f:
+			curr_elem = collections.OrderedDict()
+			curr_window = collections.OrderedDict()
+=================
+390250
+count:1
+							my_print(u'\tmy_prop=' + repr(my_prop) + u' , type(my_prop)=' + repr(type(my_prop)))
+						# FIXME: a cleaner way to really compare two objects would be overriding further internal methods:
+						# http://stackoverflow.com/questions/390250/elegant-ways-to-support-equivalence-equality-in-python-classes
+						assert repr(new_val) == repr(my_prop), u'ERROR: storing and reloading property failed! new_val=' + repr(new_val) + u', my_prop=' + repr(my_prop)
+
+
+=================
+3962247
+count:1
+			# widget already exists... =>delete it for redrawing
+			# updating information ->first delete the widget, then redraw it
+			# http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+			self._canvas_visu.grid_forget()
+			self._canvas_visu.destroy()
+		self._canvas_visu = Tkinter.Canvas(parent, width=1280, height=1024, background="white")
+=================
+3962247
+count:1
+			# widget already exists... =>delete it for redrawing
+			# updating information ->first delete the widget, then redraw it
+			# http://stackoverflow.com/questions/3962247/python-removing-a-tkinter-frame
+			self._canvas_sideview.grid_forget()
+			self._canvas_sideview.destroy()
+
+=================
+390250
+count:1
+
+	# allow comparison of PscVariable objects with their python counterpart
+	# based on example from http://stackoverflow.com/questions/390250/elegant-ways-to-support-equivalence-equality-in-python-classes
+	def __eq__(self, other):
+		"""Override the default Equals behavior"""
+		if isinstance(other, self.__class__):
+=================
+455612
+count:1
+	def get_serialized(self):
+		# return format used in PSC file
+		# help from http://stackoverflow.com/questions/455612/limiting-floats-to-two-decimal-points
+		return u'{0:.2f}'.format(self._value)
+
+
+=================
+390250
+count:1
+
+	# allow comparison of PscVar_point objects
+	# example from http://stackoverflow.com/questions/390250/elegant-ways-to-support-equivalence-equality-in-python-classes
+	def __eq__(self, other):
+		"""Override the default Equals behavior"""
+		if isinstance(other, self.__class__):
+=================
+390250
+count:1
+
+	# allow comparison of PscVar_rectangle objects
+	# example from http://stackoverflow.com/questions/390250/elegant-ways-to-support-equivalence-equality-in-python-classes
+	def __eq__(self, other):
+		"""Override the default Equals behavior"""
+		if isinstance(other, self.__class__):
+=================
+4647050
+count:1
+		rgb_int = None
+		# conversion of list into list of tuples:
+		# and http://stackoverflow.com/questions/4647050/collect-every-pair-of-elements-from-a-list-into-tuples-in-python
+		for elem_tuple in zip(elem_list[0::2], elem_list[1::2]):
+			value_float = float(elem_tuple[0])
+			rgb_int = int(elem_tuple[1])
+=================
+390250
+count:1
+
+	# allow comparison of PscVar_value_rgb_pairs objects
+	# example from http://stackoverflow.com/questions/390250/elegant-ways-to-support-equivalence-equality-in-python-classes
+	def __eq__(self, other):
+		"""Override the default Equals behavior"""
+		if isinstance(other, self.__class__):
+=================
+390250
+count:1
+
+	# allow comparison of PscVar_line_style objects
+	# example from http://stackoverflow.com/questions/390250/elegant-ways-to-support-equivalence-equality-in-python-classes
+	def __eq__(self, other):
+		"""Override the default Equals behavior"""
+		if isinstance(other, self.__class__):
+=================
+5676646
+count:1
+		# return HTML-colorcode as string '#RRGGBB'
+		# string filled to a fixed length with zeros
+		# based on http://stackoverflow.com/questions/5676646/fill-out-a-python-string-with-spaces
+		hex_string_parts = []
+		for part in self.get_tuple():
+			hex_string = hex(part).upper()[2:]
+=================
+5676646
+count:1
+
+		# string filled to a fixed length with zeros
+		# based on http://stackoverflow.com/questions/5676646/fill-out-a-python-string-with-spaces
+		return u'#' + u''.join(hex_string_parts)
+
+	def get_serialized(self):
+=================
+390250
+count:1
+
+	# allow comparison of PscVar_RGB objects
+	# example from http://stackoverflow.com/questions/390250/elegant-ways-to-support-equivalence-equality-in-python-classes
+	def __eq__(self, other):
+		"""Override the default Equals behavior"""
+		if isinstance(other, self.__class__):
+=================
+19775685
+count:2
+
+	# inherit from abstract class "Mapping" for getting dictionary-interface
+	# https://stackoverflow.com/questions/19775685/how-to-correctly-implement-the-mapping-protocol-in-python
+	# https://docs.python.org/2.7/library/collections.html#collections.MutableMapping
+	# (then the options are similar to Tkinter widgets: http://effbot.org/tkinterbook/tkinter-widget-configuration.htm )
+
+=================
+2405590
+count:1
+		# get's called when attribute isn't found
+		# =>convenient way for retrieving element from dictionary!
+		# https://stackoverflow.com/questions/2405590/how-do-i-override-getattr-in-python-without-breaking-the-default-behavior
+		try:
+			return self._values_dict[name]
+		except KeyError:
+=================
+5624912
+count:1
+
+	def __init__(self, msghandler, path, **kwargs):
+		# parsing of kwargs: help from https://stackoverflow.com/questions/5624912/kwargs-parsing-best-practice
+		# deleting keys from kwargs while iteration over it
+		# https://stackoverflow.com/questions/5384914/how-to-delete-items-from-a-dictionary-while-iterating-over-it
+		self.path = u'' + path
+=================
+5384914
+count:1
+		# parsing of kwargs: help from https://stackoverflow.com/questions/5624912/kwargs-parsing-best-practice
+		# deleting keys from kwargs while iteration over it
+		# https://stackoverflow.com/questions/5384914/how-to-delete-items-from-a-dictionary-while-iterating-over-it
+		self.path = u'' + path
+		self.query = None
+		self.histData = None
+=================
+5624912
+count:1
+
+	def __init__(self, msghandler, path, value, **kwargs):
+		# parsing of kwargs: help from https://stackoverflow.com/questions/5624912/kwargs-parsing-best-practice
+		# =>since all fields in "set" object and all it's subobjects are unique, we could handle them in the same loop
+		self.path = u'' + path
+		self.value = value
+=================
+5624912
+count:1
+
+	def __init__(self, msghandler, path, **kwargs):
+		# parsing of kwargs: help from https://stackoverflow.com/questions/5624912/kwargs-parsing-best-practice
+		# =>since all fields in "sub" object and all it's subobjects are unique, we could handle them in the same loop
+		self.path = u'' + path
+		self.query = None
+=================
+5624912
+count:1
+
+	def __init__(self, msghandler, group, start, **kwargs):
+		# parsing of kwargs: help from https://stackoverflow.com/questions/5624912/kwargs-parsing-best-practice
+		# =>since all fields in "changelogRead" object and all it's subobjects are unique, we could handle them in the same loop
+		self.group = u'' + group
+
+=================
+969285
+count:1
+				if field == u'stamp':
+					# timestamps are ISO 8601 formatted (or "null" after DMS restart or on nodes with type "none")
+					# https://stackoverflow.com/questions/969285/how-do-i-translate-a-iso-8601-datetime-string-into-a-python-datetime-object
+					try:
+						curr_dict[field] = dateutil.parser.parse(histobj[field])
+					except ValueError:
+=================
+969285
+count:1
+
+			# timestamps are ISO 8601 formatted (or "null" after DMS restart or on nodes with type "none")
+			# https://stackoverflow.com/questions/969285/how-do-i-translate-a-iso-8601-datetime-string-into-a-python-datetime-object
+			try:
+				stamp = dateutil.parser.parse(stamp_str)
+			except ValueError:
+=================
+969285
+count:1
+				if field == u'stamp':
+					# timestamps are ISO 8601 formatted (or "null" after DMS restart or on nodes with type "none")
+					# https://stackoverflow.com/questions/969285/how-do-i-translate-a-iso-8601-datetime-string-into-a-python-datetime-object
+					try:
+						curr_dict[field] = dateutil.parser.parse(obj[field])
+					except ValueError:
+=================
+969285
+count:4
+				if field == u'stamp':
+					# timestamps are ISO 8601 formatted (or "null" after DMS restart or on nodes with type "none")
+					# https://stackoverflow.com/questions/969285/how-do-i-translate-a-iso-8601-datetime-string-into-a-python-datetime-object
+					try:
+						self._values_dict[field] = dateutil.parser.parse(kwargs.pop(field))
+					except:
+=================
+969285
+count:1
+				if field == u'stamp':
+					# timestamps are ISO 8601 formatted (or "null" after DMS restart or on nodes with type "none")
+					# https://stackoverflow.com/questions/969285/how-do-i-translate-a-iso-8601-datetime-string-into-a-python-datetime-object
+					try:
+						self._values_dict[field] = dateutil.parser.parse(kwargs[field])
+					except:
+=================
+8487673
+count:1
+		# (documentation: https://docs.python.org/2/library/threading.html#lock-objects )
+		# http://effbot.org/pyfaq/what-kinds-of-global-value-mutation-are-thread-safe.htm
+		# https://stackoverflow.com/questions/8487673/how-would-you-make-this-python-dictionary-thread-safe
+
+		# dict for pending responses (key: cmd-tag, value: list of CmdResponse-objects)
+		# =>None means request is sent, but answer is not yet here
+=================
+5191830
+count:1
+						self._pending_response_dict[curr_tag].isAvailable.set()
+		except Exception as ex:
+			# help from https://stackoverflow.com/questions/5191830/best-way-to-log-a-python-exception
+			logger.exception("exception occurred in _MessageHandler.handle()")
+
+
+=================
+5082753
+count:1
+
+class DMS_STRING(ctypes.Structure):
+	# loosely based on http://stackoverflow.com/questions/5082753/how-do-i-build-a-python-string-from-a-ctype-struct
+	# http://stackoverflow.com/questions/10006610/sending-stucture-containing-mutable-string-to-c-from-python-thru-ctypes/10007443#10007443
+	# but ignoring handling of strings containing NULL characters inside...
+
+=================
+10007443
+count:1
+class DMS_STRING(ctypes.Structure):
+	# loosely based on http://stackoverflow.com/questions/5082753/how-do-i-build-a-python-string-from-a-ctype-struct
+	# http://stackoverflow.com/questions/10006610/sending-stucture-containing-mutable-string-to-c-from-python-thru-ctypes/10007443#10007443
+	# but ignoring handling of strings containing NULL characters inside...
+
+	MAXLENGTH = 81  #  (max. string length in DMS: 80 characters + NULL character)
+=================
+31078728
+count:2
+
+example for clean connection establishment and closing
+https://stackoverflow.com/questions/31078728/exiting-python-program-after-closing-connection-in-twisted
+
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+=================
+5624912
+count:2
+
+	def __init__(self, dmsclient, path, **kwargs):
+		# parsing of kwargs: help from https://stackoverflow.com/questions/5624912/kwargs-parsing-best-practice
+		# =>since all fields in "get" object and all it's subobjects are unique, we could handle them in the same loop
+		self.dmsclient = dmsclient
+		self.path = u'' + path
+=================
+3249524
+count:1
+	print('\n=>WebSocket connection runs now in background...')
+	for x in range(3):
+		# appending string to current line: https://stackoverflow.com/questions/3249524/print-in-one-line-dynamically
+		print '.',
+		time.sleep(1)
+	print('\nTesting creation of Request command:')
+=================
+21025959
+count:1
+
+class Dms_dp_Factory(object):
+	# example of "factory" pattern: http://stackoverflow.com/questions/21025959/factory-design-pattern
+	dp_types_dict = { 'NONE':   Dp_NONE,
+					'BIT':	Dp_BIT,
+					'BYS':	Dp_BYS,
+=================
+6526923
+count:1
+
+		# stopping twisted reactor loop after this message...
+		# idea from https://stackoverflow.com/questions/6526923/stop-twisted-reactor-on-a-condition
+		reactor.callFromThread(reactor.stop)
+
+

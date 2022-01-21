@@ -1,0 +1,1684 @@
+[1, 5, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 7, 1, 1, 1, 1, 1, 1, 2, 2, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+=================
+279237
+count:1
+
+# Test whether a retained PUBLISH to a topic with QoS 0 is sent with
+# retain=false to an already subscribed client.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+mid = 16
+connect_packet = mosq_test.gen_connect("retain-qos0-fresh-test", keepalive=keepalive)
+=================
+279237
+count:5
+import ssl
+import sys
+import time
+
+if sys.version < '2.7':
+    print("WARNING: SSL not supported on Python 2.6")
+    exit(0)
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-success-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a connection is successful with correct username and password
+# when using a simple auth_plugin.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-uname-pwd-test", keepalive=keepalive, username="test-username", password="cnwTICONIURW")
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:3
+
+# Test whether a PUBLISH to a topic with QoS 2 results in the correct packet flow.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("test-helper", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a UNSUBSCRIBE to a topic with QoS 0 results in the correct UNSUBACK packet.
+# This doesn't assume a subscription exists.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 53
+keepalive = 60
+connect_packet = mosq_test.gen_connect("unsubscribe-qos0-test", keepalive=keepalive)
+=================
+279237
+count:1
+
+# Test whether a client subscribed to a topic receives its own message sent to that topic.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 530
+keepalive = 60
+connect_packet = mosq_test.gen_connect("subpub-qos2-test", keepalive=keepalive)
+=================
+279237
+count:1
+import ssl
+import sys
+import time
+
+if sys.version < '2.7':
+    print("WARNING: SSL not supported on Python 2.6")
+    exit(0)
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-no-identity-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=4)
+=================
+279237
+count:1
+
+import subprocess
+import socket
+import time
+from os import environ
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 3265
+keepalive = 60
+connect_packet = mosq_test.gen_connect("pub-qos1-disco-test", keepalive=keepalive, clean_session=False)
+=================
+279237
+count:1
+
+# Test whether a SUBSCRIBE to a topic with QoS 2 results in the correct SUBACK packet.
+
+import subprocess
+import socket
+import time
+from os import environ
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 3265
+keepalive = 60
+connect_packet = mosq_test.gen_connect("pub-qo2-timeout-test", keepalive=keepalive)
+=================
+279237
+count:1
+# Test whether a retained PUBLISH to a topic with QoS 1 is retained.
+# Subscription is made with QoS 0 so the retained message should also have QoS
+# 0.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("retain-qos1-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a clean session client has a QoS 1 message queued for it.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 109
+keepalive = 60
+connect_packet = mosq_test.gen_connect("clean-qos2-test", keepalive=keepalive, clean_session=False)
+=================
+279237
+count:1
+
+# Test whether a SUBSCRIBE to a topic with QoS 1 results in the correct SUBACK packet.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 79
+keepalive = 60
+connect_packet = mosq_test.gen_connect("unsubscribe-qos1-test", keepalive=keepalive)
+=================
+279237
+count:1
+
+# Test whether a client will is transmitted correctly.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 53
+keepalive = 60
+connect_packet = mosq_test.gen_connect("will-qos0-test", keepalive=keepalive)
+=================
+279237
+count:7
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("test-helper", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+import ssl
+import sys
+import time
+
+if sys.version < '2.7':
+    print("WARNING: SSL not supported on Python 2.6")
+    exit(0)
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-cert-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a clean session client has a QoS 1 message queued for it.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("test-helper", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+def pattern_test(sub_topic, pub_topic):
+    rc = 1
+    keepalive = 60
+    connect_packet = mosq_test.gen_connect("pattern-sub-test", keepalive=keepalive)
+=================
+279237
+count:1
+# Test whether a bridge topics work correctly after reconnection.
+# Important point here is that persistence is enabled.
+
+import os
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("bridge-reconnect-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a connection is denied if it provides a correct username but
+# incorrect password.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-uname-pwd-test", keepalive=keepalive, username="user", password="password")
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a CONNECT with a zero length client id results in the correct CONNACK packet.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("", keepalive=keepalive, proto_ver=4)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:2
+
+import subprocess
+import socket
+import time
+from os import environ
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 3265
+keepalive = 60
+connect_packet = mosq_test.gen_connect("pub-qos2-disco-test", keepalive=keepalive, clean_session=False)
+=================
+279237
+count:2
+    print("WARNING: SSL not supported on Python 2.6")
+    exit(0)
+
+if ssl.OPENSSL_VERSION_NUMBER < 0x10000000:
+    print("WARNING: TLS-PSK not supported on OpenSSL < 1.0")
+    exit(0)
+
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+env = dict(os.environ)
+env['LD_LIBRARY_PATH'] = '../../lib:../../lib/cpp'
+try:
+    pp = env['PYTHONPATH']
+=================
+279237
+count:1
+
+# Test whether a client will is transmitted correctly with a null character in the middle.
+
+import struct
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 53
+keepalive = 60
+connect_packet = mosq_test.gen_connect("will-qos0-test", keepalive=keepalive)
+=================
+279237
+count:4
+
+# Does a bridge resend a QoS=1 message correctly after a disconnect?
+
+import os
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+client_id = socket.gethostname()+".bridge_sample"
+connect_packet = mosq_test.gen_connect(client_id, keepalive=keepalive, clean_session=False, proto_ver=128+3)
+=================
+279237
+count:1
+
+# Test whether a PUBLISH to a topic with QoS 1 results in the correct PUBACK packet.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 19
+keepalive = 60
+connect_packet = mosq_test.gen_connect("pub-qos1-test", keepalive=keepalive)
+=================
+279237
+count:1
+# Test whether a PUBLISH to a topic with QoS 2 results in the correct packet
+# flow. This test introduces delays into the flow in order to force the broker
+# to send duplicate PUBREC and PUBCOMP messages.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 600
+connect_packet = mosq_test.gen_connect("pub-qos2-timeout-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+import os
+import subprocess
+import socket
+import ssl
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+client_id = socket.gethostname()+".bridge_test"
+connect_packet = mosq_test.gen_connect(client_id, keepalive=keepalive, clean_session=False, proto_ver=128+3)
+=================
+279237
+count:1
+
+# Test whether a CONNECT with an invalid protocol number results in the correct CONNACK packet.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-invalid-test", keepalive=keepalive, proto_ver=0)
+connack_packet = mosq_test.gen_connack(rc=1)
+=================
+279237
+count:1
+
+# Connect a client with a will, then disconnect without DISCONNECT.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("test-helper", keepalive=keepalive, will_topic="will/qos0/test", will_payload="will-message")
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a CONNECT with a zero length client id results in the correct CONNACK packet.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=2)
+=================
+279237
+count:1
+
+# Test whether a retained PUBLISH is cleared when a zero length retained
+# message is published to a topic.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("retain-clear-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a retained PUBLISH to a topic with QoS 0 is actually retained
+# and delivered when multiple sub/unsub operations are carried out.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+mid = 16
+connect_packet = mosq_test.gen_connect("retain-qos0-rep-test", keepalive=keepalive)
+=================
+279237
+count:1
+
+# Test whether a SUBSCRIBE to a topic with QoS 2 results in the correct SUBACK packet.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 3
+keepalive = 60
+connect_packet = mosq_test.gen_connect("subscribe-qos2-test", keepalive=keepalive)
+=================
+279237
+count:1
+
+# Test whether a retained PUBLISH to a topic with QoS 0 is actually retained.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+mid = 16
+connect_packet = mosq_test.gen_connect("retain-qos0-test", keepalive=keepalive)
+=================
+279237
+count:1
+import ssl
+import sys
+import time
+
+if sys.version < '2.7':
+    print("WARNING: SSL not supported on Python 2.6")
+    exit(0)
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-revoked-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a CONNECT with a zero length client id results in the correct CONNACK packet.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect(None, keepalive=keepalive)
+
+=================
+279237
+count:1
+
+# Test whether an anonymous connection is correctly denied.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-anon-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=5)
+=================
+279237
+count:1
+
+# Test whether a SUBSCRIBE to a topic with QoS 1 results in the correct SUBACK packet.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 79
+keepalive = 60
+connect_packet = mosq_test.gen_connect("subscribe-qos1-test", keepalive=keepalive)
+=================
+279237
+count:1
+import ssl
+import sys
+import time
+
+if sys.version < '2.7':
+    print("WARNING: SSL not supported on Python 2.6")
+    exit(0)
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-identity-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a SUBSCRIBE to a topic with QoS 0 results in the correct SUBACK packet.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 53
+keepalive = 60
+connect_packet = mosq_test.gen_connect("subscribe-qos0-test", keepalive=keepalive)
+=================
+279237
+count:1
+
+# Test whether a CONNECT with a too-long client id results in the correct CONNACK packet.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-invalid-id-test-", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=2)
+=================
+279237
+count:1
+
+# Test whether a PUBLISH to a topic with QoS 2 results in the correct packet flow.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("pub-qos2-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a SUBSCRIBE to a topic with QoS 2 results in the correct SUBACK packet.
+
+import subprocess
+import socket
+import time
+from os import environ
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 3265
+keepalive = 60
+connect_packet = mosq_test.gen_connect("pub-qos1-timeout-test", keepalive=keepalive)
+=================
+279237
+count:1
+
+# Test whether a client subscribed to a topic receives its own message sent to that topic.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 53
+keepalive = 60
+connect_packet = mosq_test.gen_connect("subpub-qos0-test", keepalive=keepalive)
+=================
+279237
+count:1
+
+# Test whether a SUBSCRIBE to a topic with QoS 2 results in the correct SUBACK packet.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 3
+keepalive = 60
+connect_packet = mosq_test.gen_connect("unsubscribe-qos2-test", keepalive=keepalive)
+=================
+279237
+count:1
+
+import os
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("test2", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a connection is denied if it provides just a username when it
+# needs a username and password.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-uname-test", keepalive=keepalive, username="user")
+connack_packet = mosq_test.gen_connack(rc=4)
+=================
+279237
+count:1
+
+import struct
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("will-null-topic", keepalive=keepalive, will_topic="", will_payload=struct.pack("!4sB7s", "will", 0, "message"))
+connack_packet = mosq_test.gen_connack(rc=2)
+=================
+279237
+count:1
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 53
+keepalive = 60
+connect_packet_ok = mosq_test.gen_connect("will-acl-test", keepalive=keepalive, will_topic="ok", will_payload="should be ok")
+=================
+279237
+count:1
+
+# Test whether a connection is denied if it provides a correct username but
+# incorrect password.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-uname-pwd-test", keepalive=keepalive, username="user", password="password9")
+connack_packet = mosq_test.gen_connack(rc=4)
+=================
+279237
+count:1
+# Test whether a valid CONNECT results in the correct CONNACK packet.
+
+import inspect, os, sys
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-success-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a connection is successful with correct username and password
+# when using a simple auth_plugin.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 10
+connect_packet = mosq_test.gen_connect("connect-uname-pwd-test", keepalive=keepalive, username="test-username", password="wrong")
+connack_packet = mosq_test.gen_connack(rc=4)
+=================
+279237
+count:1
+
+# Connect a client with a will, then disconnect without DISCONNECT.
+
+import struct
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("test-helper", keepalive=keepalive, will_topic="will/null/test")
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+
+# Test whether a client subscribed to a topic receives its own message sent to that topic.
+
+import subprocess
+import socket
+import time
+
+import inspect, os, sys
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+mid = 530
+keepalive = 60
+connect_packet = mosq_test.gen_connect("subpub-qos1-test", keepalive=keepalive)
+=================
+279237
+count:1
+# send a DISCONNECT message.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("publish-qos1-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+# client id 01-unpwd-set, username set to uname and password set to ;'[08gn=#
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("01-unpwd-set", keepalive=keepalive, username="uname", password=";'[08gn=#")
+
+=================
+279237
+count:1
+# After sending the PUBLISH message, the client should send a DISCONNECT message.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("publish-qos0-test-np", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+# Test whether a client sends a correct UNSUBSCRIBE packet.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("unsubscribe-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+# "oibvvwqw" and password set to "#'^2hg9a&nm38*us".
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("01-will-unpwd-set",
+        keepalive=keepalive, username="oibvvwqw", password="#'^2hg9a&nm38*us",
+=================
+279237
+count:2
+# PUBCOMP response, the client should send a DISCONNECT message.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("publish-qos2-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:2
+
+import inspect
+import os
+import subprocess
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+rc = 1
+
+client_args = sys.argv[1:]
+env = dict(os.environ)
+env['LD_LIBRARY_PATH'] = '../../lib:../../lib/cpp'
+try:
+=================
+279237
+count:1
+# payload set to "will message", will qos set to 1 and will retain set.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("01-will-set", keepalive=keepalive, will_topic="topic/on/unexpected/disconnect", will_qos=1, will_retain=True, will_payload="will message")
+
+=================
+279237
+count:1
+# (4 seconds after no traffic).
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 4
+connect_packet = mosq_test.gen_connect("01-keepalive-pingreq", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+# message and then exit with return code=0.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("publish-qos2-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:4
+
+import inspect
+import os
+import subprocess
+import socket
+import ssl
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+if sys.version < '2.7':
+    print("WARNING: SSL not supported on Python 2.6")
+    exit(0)
+
+=================
+279237
+count:1
+# Test whether a client sends a correct PUBLISH to a topic with QoS 2 and responds to a disconnect.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("publish-qos2-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+# Test whether a client sends a correct PUBLISH to a topic with QoS 1, then responds correctly to a disconnect.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("publish-qos1-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+# After sending the PUBLISH message, the client should send a DISCONNECT message.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("publish-qos0-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+# message, the client should send a DISCONNECT message.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("subscribe-qos2-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+# Test whether a client sends a correct retained PUBLISH to a topic with QoS 0.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+mid = 16
+connect_packet = mosq_test.gen_connect("retain-qos0-test", keepalive=keepalive)
+=================
+279237
+count:1
+# message, the client should send a DISCONNECT message.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("subscribe-qos1-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+# message. If rc!=0, the client should exit with an error.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("01-con-discon-success", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+# message, the client should send a DISCONNECT message.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("subscribe-qos0-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+# The client should then exit with return code==0.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("publish-qos1-test", keepalive=keepalive)
+connack_packet = mosq_test.gen_connack(rc=0)
+=================
+279237
+count:1
+# set, and client id 01-no-clean-session.
+
+import inspect
+import os
+import subprocess
+import socket
+import sys
+import time
+
+# From http://stackoverflow.com/questions/279237/python-import-a-module-from-a-folder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],"..")))
+if cmd_subfolder not in sys.path:
+    sys.path.insert(0, cmd_subfolder)
+
+import mosq_test
+
+rc = 1
+keepalive = 60
+connect_packet = mosq_test.gen_connect("01-no-clean-session", clean_session=False, keepalive=keepalive)
+

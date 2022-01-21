@@ -1,0 +1,873 @@
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+3785294
+2802168
+23889620
+10299807
+2086017
+10085381
+13592219
+5863512
+973473
+10701528
+9920452
+3826918
+196930
+11875770
+5548121
+1551605
+10115126
+=================
+38987
+count:1
+from sakurakit.skstr import unescapehtml
+
+# http://stackoverflow.com/questions/38987/how-can-i-merge-union-two-python-dictionaries-in-a-single-expression
+def _mergedictwith(x, y):
+  """
+  @param[inout]  x  dict
+=================
+842059
+count:1
+  #  import getpass
+  #  HOME = os.path.expanduser('~')
+  #  USER = getpass.getuser() # http://stackoverflow.com/questions/842059/is-there-a-portable-way-to-get-the-current-username-in-python
+  #  APPDATA = os.path.join(os., '.wine/drive_c/users/' + USER + '/Application Data')
+  PWD = os.getcwd()
+  dbpath = os.path.join(PWD, '../../../../../../Caches/Dictionaries/Lingoes')
+=================
+7380629
+count:1
+
+# Only works for right search
+# http://stackoverflow.com/questions/7380629/perform-a-binary-search-for-a-string-prefix-in-python
+class PrefixCompare:
+  def __init__(self, value):
+    self.value = value
+=================
+3785294
+count:1
+# 4/5/2015
+
+# http://stackoverflow.com/questions/3785294/best-way-to-iterate-through-all-rows-in-a-db-table
+def fetchsome(cursor, some):
+  """
+  @param  cursor
+=================
+13934994
+count:1
+  """
+# Forign key is not enabled, which will make sqlite slightly slower
+# http://stackoverflow.com/questions/13934994/sqlite-foreign-key-examples
+#FOREIGN KEY(entry_id) REFERENCES entry(id),
+  cur.execute('''\
+CREATE TABLE surface(
+=================
+3785294
+count:1
+  return cur.fetchall()
+
+# http://stackoverflow.com/questions/3785294/best-way-to-iterate-through-all-rows-in-a-db-table
+def iterentries(cur, select=SELECT_WORD_CONTENT, chunk=100):
+  """
+  @param  cursor
+=================
+10299807
+count:1
+# Helper functions
+
+# http://stackoverflow.com/questions/10299807/mecab-path-parameters-doesnot-accept-whitespace
+def normalizepath(path):
+  """
+  @param  path  unicode
+=================
+444591
+count:1
+#  return ret if ret < 128 else ret - 256
+
+# http://stackoverflow.com/questions/444591/convert-a-string-of-bytes-into-an-int-python
+def unpackuint(s): #
+  """
+  @param  s  str|bytearray|QByteArray
+=================
+3465704
+count:1
+#url = createUrl(text, to=INFOSEEK_LCODE[to], fr=INFOSEEK_LCODE[fr])
+#try:
+#  # See: http://stackoverflow.com/questions/3465704/python-urllib2-urlerror-http-status-code
+#  response = urllib2.urlopen(url)
+#  ret = response.read()
+#except urllib2.HTTPError, e:
+=================
+5253854
+count:1
+# 10/6/2012 jichi
+# Windows only
+# See: http://stackoverflow.com/questions/5253854/python-import-dll
+
+__all__ = 'TextHook',
+
+=================
+10334358
+count:1
+        #'oe':'UTF-8',
+
+        # http://stackoverflow.com/questions/10334358/how-to-get-and-parse-json-answer-from-google-translate
+        #'client': 't', # This will return a Javascript object that can be evaluated using new Function
+        #'client': 'p', # return JSON
+        'client': 'p' if client_json else 't',
+=================
+13128995
+count:1
+#
+# About unloading DLL:
+# - Use FreeLibrary to unload: http://stackoverflow.com/questions/13128995/ctypes-unload-dll
+# - Use GetModuleHandleA to check: http://stackoverflow.com/questions/11939290/how-do-i-find-out-if-my-program-has-a-certain-dll-already-loaded
+
+if __name__ == '__main__': # DEBUG
+=================
+11939290
+count:1
+# About unloading DLL:
+# - Use FreeLibrary to unload: http://stackoverflow.com/questions/13128995/ctypes-unload-dll
+# - Use GetModuleHandleA to check: http://stackoverflow.com/questions/11939290/how-do-i-find-out-if-my-program-has-a-certain-dll-already-loaded
+
+if __name__ == '__main__': # DEBUG
+  import sys
+=================
+2802168
+count:1
+    @return  unicode or None
+    """
+    # http://stackoverflow.com/questions/2802168/find-last-match-with-python-regular-expression
+    m = self._rx_price.search(h)
+    if m:
+      try: return int(m.group(1).replace(',',''))
+=================
+2802168
+count:1
+  #  @return  unicode or None
+  #  """
+  #  # http://stackoverflow.com/questions/2802168/find-last-match-with-python-regular-expression
+  #  m = self._rx_title.search(h)
+  #  if m:
+  #    return unescapehtml(m.group(1).strip())
+=================
+2802168
+count:1
+  #  @return  int not None
+  #  """
+  #  # http://stackoverflow.com/questions/2802168/find-last-match-with-python-regular-expression
+  #  m = None
+  #  for m in self._rx_sample.finditer(h): pass
+  #  return int(m.group(1)) if m else 0
+=================
+2802168
+count:1
+    @yield  str
+    """
+    # http://stackoverflow.com/questions/2802168/find-last-match-with-python-regular-expression
+    for m in self._rx_sampleimage.finditer(h):
+      yield self.HOST + m.group()
+
+=================
+23889620
+count:1
+#   https://hg.python.org/cpython/file/2.7/Lib/colorsys.py
+# - HSI: http://www.had2know.com/technology/hsi-rgb-color-converter-equations.html
+#   http://stackoverflow.com/questions/23889620/is-there-any-other-way-to-convert-rgb-to-hsi
+#
+# Others:
+# - https://github.com/scikit-image/scikit-image/blob/master/skimage/color/colorconv.py
+=================
+23889620
+count:1
+#
+# See: http://www.had2know.com/technology/hsi-rgb-color-converter-equations.html
+# See: http://stackoverflow.com/questions/23889620/is-there-any-other-way-to-convert-rgb-to-hsi
+def rgb2hsi(r, g, b): # int, int, int -> float rad or None, float, float
+  s,i = rgb2hsi_si(r, g, b)
+  h = rgb2hsi_h(r, g, b)
+=================
+10299807
+count:1
+from sakurakit.skdebug import dprint, dwarn
+
+# http://stackoverflow.com/questions/10299807/mecab-path-parameters-doesnot-accept-whitespace
+def normalizepath(path):
+  """
+  @param  path  unicode
+=================
+6187699
+count:1
+    @return  long  addr
+    """
+    # http://stackoverflow.com/questions/6187699/how-to-convert-integer-value-to-array-of-four-bytes-in-python
+    r = xrange(int(math.log(pattern, 2)/8) * 8, -1, -8)
+    s = (pattern >> i & 0xff for i in r)
+    return self.search_memory_list(s, *args, **kwargs)
+=================
+17418108
+count:1
+  """
+  A replacement of numpy.subtract
+  See: http://stackoverflow.com/questions/17418108/elegant-way-to-perform-tuple-arithmetic
+  """
+  return x1 - x2, y1 - y2
+
+=================
+15306866
+count:1
+
+  # TODO: Update QIcon from HICON got from GetWindowLong
+  # http://stackoverflow.com/questions/15306866/hicon-hbitmap-to-qicon-qpixmap-qimage-anything-with-a-q-in-it
+
+  def start(self): self.__d.repaintTimer.start(); self.repaint()
+  def stop(self): self.__d.repaintTimer.stop()
+=================
+1823762
+count:1
+    #QTimer.singleShot(500, partial(f, vk))
+
+    # http://stackoverflow.com/questions/1823762/sendkeys-for-python-3-1-on-windows
+    #win32gui.SetFocus((hwnd)
+    #def f(vk):
+    #  inp = skwinapi.INPUT(
+=================
+2086017
+count:1
+    print x0, y0
+
+    # http://stackoverflow.com/questions/2086017/how-to-simulate-mousemove-event-from-one-window-to-another
+    #pos = event.globalPos()
+    #skwin.post_mouse_move(x0 - pos.x(), y0 - pos.y())
+    #skwin.post_mouse_click()
+=================
+2086017
+count:1
+    print x0, y0
+
+    # http://stackoverflow.com/questions/2086017/how-to-simulate-mousemove-event-from-one-window-to-another
+    import win32api, win32con, win32gui
+    #pos = event.globalPos()
+    #skwin.post_mouse_move(x0 - pos.x(), y0 - pos.y())
+=================
+7259847
+count:1
+    #skwinapi.SendInput(1, inp, sz)
+
+  # http://stackoverflow.com/questions/7259847/forcing-an-aspect-ratio-when-resizing-a-main-window
+  def resizeEvent(self, event) :
+    """@reimp
+    @param  event  QResizeEvent
+=================
+2775864
+count:1
+CURRENT_UNIXTIME = current_unixtime()
+
+# See: http://stackoverflow.com/questions/2775864/python-datetime-to-unix-timestamp
+def datetime2timestamp(date):
+  """Unix time in seconds
+  @param  datetime  datetime.datetime not None
+=================
+11875770
+count:1
+from datetime import datetime
+
+# http://stackoverflow.com/questions/11875770/how-to-overcome-datetime-datetime-not-json-serializable-in-python
+def default_datetime(obj):
+  """
+  @param  obj  any
+=================
+354038
+count:1
+  @return  bool
+  """
+  # http://stackoverflow.com/questions/354038/how-do-i-check-if-a-string-is-a-number-in-python
+  # This method is not slow
+  try: float(v); return True
+  except (TypeError, ValueError): return False
+=================
+16694907
+count:1
+  #except: pass
+
+# Stream with requests: http://stackoverflow.com/questions/16694907/how-to-download-large-file-in-python-with-requests-py
+def itergetdata(url, chunksize=1024, **kwargs):
+  """
+  @param  url  str
+=================
+480214
+count:1
+# 8/27/2013 jichi
+
+# http://stackoverflow.com/questions/480214/how-do-you-remove-duplicates-from-a-list-in-python-whilst-preserving-order
+def uniquelist(seq):
+  """
+  @param[in]  seq  iterable
+=================
+122327
+count:1
+# Get path to Lib/site-packages
+def get_python_site():
+  # http://stackoverflow.com/questions/122327/how-do-i-find-the-location-of-my-python-site-packages-directory
+  #import site
+  #return site.getsitepackages()[-1]
+  from distutils import sysconfig
+=================
+20352794
+count:1
+# skyaml
+# 12/16/2014 jichi
+# See: http://stackoverflow.com/questions/20352794/pyyaml-is-producing-undesired-python-unicode-output
+
+from sakurakit.skdebug import dwarn
+import yaml
+=================
+1131220
+count:1
+## File hashing algorithms ##
+
+# See: http://stackoverflow.com/questions/1131220/get-md5-hash-of-a-files-without-open-it-in-python
+def md5sumpath(path):
+  """Return the MD5 digest of the file
+  @param  path  str  input file path
+=================
+7169845
+count:1
+  """
+  try:
+    # Change to UNC path: http://stackoverflow.com/questions/7169845/using-python-how-can-i-access-a-shared-folder-on-windows-network
+    if path.startswith('/') and not path.startswith('//'):
+      path = '/' + path
+    md5 = hashlib.md5()
+=================
+1551605
+count:1
+
+
+# See: http://stackoverflow.com/questions/1551605/how-to-set-applications-taskbar-icon-in-windows-7
+try:
+  SetCurrentProcessExplicitAppUserModelID = shell32.SetCurrentProcessExplicitAppUserModelID
+  SetCurrentProcessExplicitAppUserModelID.restype = HRESULT
+=================
+7921307
+count:1
+SetClipboardData.argtypes = UINT, HANDLE
+
+# See: http://stackoverflow.com/questions/7921307/temporarily-change-cursor-using-python
+CopyIcon = user32.CopyIcon
+CopyIcon.restype = HICON
+CopyIcon.argtype = HICON
+=================
+1872480
+count:1
+VirtualFreeEx.argtypes = ULONG, LPVOID, SIZE_T, DWORD
+
+# http://stackoverflow.com/questions/1872480/use-python-to-extract-listview-items-from-another-application
+#BOOL WINAPI WriteProcessMemory(
+#  _In_   HANDLE hProcess,
+#  _In_   LPVOID lpBaseAddress,
+=================
+9920452
+count:1
+  def kill_my_process(ret=0):
+    # http://snipplr.com/view/60057/
+    # http://stackoverflow.com/questions/1533200/qt-kill-current-process/9920452#9920452
+    win32api.TerminateProcess(win32api.GetCurrentProcess(), ret)
+
+  def kill_process(pid, ret=0):
+=================
+1100605
+count:1
+    @return  bool
+
+    See: http://stackoverflow.com/questions/1100605/settext-of-textbox-in-external-app-win32-api
+    """
+    #size = win32gui.SendMessage(hwnd, win32con.WM_GETTEXTLENGTH, 0, 0)
+    ##buf = ctypes.create_unicode_buffer(size)
+=================
+6381198
+count:1
+
+  # Not working for inter-thread windows
+  # see: http://stackoverflow.com/questions/6381198/get-window-z-order-with-python-windows-extensions
+  #def get_top_window(hwnd):
+  #  return ?.GetTopWindow(hwnd)
+
+=================
+10085381
+count:1
+  ## Task bar ##
+
+  # See: http://stackoverflow.com/questions/10085381/how-to-detect-if-autohidden-taskbar-is-visible-or-not
+  def get_taskbar_window():
+    """
+    @return  HWND
+=================
+10085381
+count:1
+    return win32gui.FindWindow("Shell_TrayWnd", "")
+
+  # See: http://stackoverflow.com/questions/10085381/how-to-detect-if-autohidden-taskbar-is-visible-or-not
+  # Magic numbers: 4 (vertical) and 2 (horizontal)
+  def is_taskbar_visible(hwnd=None):
+    """
+=================
+19508268
+count:1
+
+  def open_cpl(path): # unicode -> bool
+    # http://stackoverflow.com/questions/19508268/how-to-open-control-panel-in-python-using-win32-extension
+    try:
+      import skproc
+      return bool(skproc.detachgui(['control.exe', path]))
+=================
+397125
+count:1
+      return False
+
+  # http://stackoverflow.com/questions/397125/reading-the-target-of-a-lnk-file-in-python
+  def get_link_target_wsh(path):
+    """
+    @param  path  unicode  shortcut file location
+=================
+196345
+count:1
+  return bool(RE_SPECIAL_CHARS.search(text))
+
+# http://stackoverflow.com/questions/196345/how-to-check-if-a-string-in-python-is-in-ascii
+def isascii(s):
+  try: s.decode('ascii'); return True
+  except UnicodeDecodeError: return False
+=================
+2556108
+count:1
+  return ret if ret < 128 else ret - 256
+
+# http://stackoverflow.com/questions/2556108/how-to-replace-the-last-occurence-of-an-expression-in-a-string
+def rreplace(s, old, new, count):
+  """
+  @param  s  unicode
+=================
+6609895
+count:1
+  return table[match.group(1)]
+
+# http://stackoverflow.com/questions/6609895/efficiently-replace-bad-characters
+def multireplacer(table, flags=0, escape=False, prefix=None, suffix=None):
+  """
+  @param  table  {unicode fr:unicode to}
+=================
+1695183
+count:1
+from cgi import escape as escapehtml
+
+# See: http://stackoverflow.com/questions/1695183/how-to-percent-encode-url-parameters-in-python
+import urllib
+def urlencode(text, safe=''):
+  """
+=================
+6701853
+count:1
+# Validate
+
+# http://stackoverflow.com/questions/6701853/parentheses-pairing-issue
+def checkpair(text, pair=("({[",")}]"), escape='\\'):
+  """
+  @param  text  unicode
+=================
+919056
+count:1
+# EOF
+
+# See: http://stackoverflow.com/questions/919056/python-case-insensitive-replace
+#def remove(source, pattern, flags=0):
+#  """
+#  @param  pattern  str or None
+=================
+5863512
+count:1
+  except Exception: pass
+
+# See: http://stackoverflow.com/questions/5863512/python-how-to-get-the-class-of-a-calling-method-through-inspection
+def dprint(msg, *args):
+  if not DEBUG:
+    return
+=================
+3425512
+count:1
+# EOF
+
+# See: http://stackoverflow.com/questions/3425512/how-do-i-get-the-same-functionality-as-cs-function-in-python
+# See: http://docs.python.org/library/logging.html
+#import logging
+#import sys
+=================
+9937279
+count:1
+## Properties ##
+
+# See: http://stackoverflow.com/questions/9937279/can-modules-have-properties
+class classproperty(property):
+  """Method decorator"""
+  def __init__(self, method):
+=================
+4272196
+count:1
+
+# See: http://doc.qt.digia.com/qt/qlayout.html#takeAt
+# See: http://stackoverflow.com/questions/4272196/qt-remove-all-widgets-from-layout
+def clear_layout(layout, delwidget=False):
+  """
+  @param  layout  QLayout
+=================
+13592219
+count:1
+  """
+  dprint(args)
+  # http://stackoverflow.com/questions/13592219/launch-a-totally-independent-process-from-python
+  #DETACHED_PROCESS = win32con.DETACHED_PROCESS
+  import subprocess
+  try:
+=================
+13592219
+count:1
+  """
+  dprint(args)
+  # http://stackoverflow.com/questions/13592219/launch-a-totally-independent-process-from-python
+  import subprocess
+  try:
+    if skos.WIN:
+=================
+5863512
+count:1
+# skinspect.py
+# 3/26/2013 jichi
+# See: http://stackoverflow.com/questions/5863512/python-how-to-get-the-class-of-a-calling-method-through-inspection
+
+import inspect
+
+=================
+13971787
+count:1
+## Cookies ##
+
+# http://stackoverflow.com/questions/13971787/how-do-i-save-cookies-with-qt
+# http://qt.gitorious.org/qt/qt/trees/4.8/demos/browser
+
+class SkNetworkCookieJar(QNetworkCookieJar):
+=================
+1969232
+count:1
+    super(SkNetworkCookieJar, self).__init__(parent)
+    # Control characters (\x00 to \x1F plus \x7F) aren't allowed,
+    # http://stackoverflow.com/questions/1969232/allowed-characters-in-cookies
+    self.marshalSeparator = '\0' # illegal in cookie
+
+  def marshal(self): # -> str
+=================
+7287996
+count:1
+  return _repl_escape(name).strip() if name else ''
+
+# http://stackoverflow.com/questions/7287996/python-get-relative-path-from-comparing-two-absolute-paths
+def relpaths(paths): # [unicode] -> [unicode]
+  path = map(os.path.abspath, paths)
+  prefix = os.path.commonprefix(paths)
+=================
+973473
+count:1
+# Directory navigation
+
+# http://stackoverflow.com/questions/973473/getting-a-list-of-all-subdirectories-in-the-current-directory
+def getfirstchildfile(path): # unicode -> unicode or None
+  try:
+    parent, dirs, files = os.walk(path).next()
+=================
+973473
+count:1
+    dwarn(e)
+
+# http://stackoverflow.com/questions/973473/getting-a-list-of-all-subdirectories-in-the-current-directory
+def getfirstchilddir(path): # unicode -> unicode or None
+  try:
+    parent, dirs, files = os.walk(path).next()
+=================
+740820
+count:1
+# http://docs.python.org/2/library/tarfile.html
+# mode: r, r:, r:gz, r:bz2
+# http://stackoverflow.com/questions/740820/python-write-string-directly-to-tarfile
+def extracttar(path, location, mode='r'): # unicode, unicode -> bool
+  """
+  @param  path  unicode
+=================
+9431918
+count:1
+extracttbz2 = extracttarbz2
+
+# http://stackoverflow.com/questions/9431918/extracting-zip-file-contents-to-specific-directory-in-python-2-7
+def extractzip(path, location): # unicode, unicode -> bool
+  """
+  @param  path  unicode
+=================
+10701528
+count:1
+# Python 3 is different
+# github.com/fancycode/pylzma/blob/master/doc/usage.txt
+# http://stackoverflow.com/questions/10701528/example-of-how-to-use-pylzma
+def extractxz(infile, outfile): # unicode, unicode -> bool
+  """
+  @param  infile  unicode
+=================
+10701528
+count:1
+
+# Only needed by Python2. tar.xz is supported by Python3 by default.
+# http://stackoverflow.com/questions/10701528/example-of-how-to-use-pylzma
+# http://stackoverflow.com/questions/17217073/how-to-decompress-a-xz-file-which-has-multiple-folders-files-inside-in-a-singl
+def extracttarxz(path, location): # unicode, unicode -> bool
+  """
+=================
+17217073
+count:1
+# Only needed by Python2. tar.xz is supported by Python3 by default.
+# http://stackoverflow.com/questions/10701528/example-of-how-to-use-pylzma
+# http://stackoverflow.com/questions/17217073/how-to-decompress-a-xz-file-which-has-multiple-folders-files-inside-in-a-singl
+def extracttarxz(path, location): # unicode, unicode -> bool
+  """
+  @param  path  unicode
+=================
+10701528
+count:1
+  #return False
+
+# http://stackoverflow.com/questions/10701528/example-of-how-to-use-pylzma
+# http://www.dreamincode.net/forums/topic/296783-how-to-cope-with-the-occasional-administrator-privledge-requirement/
+# Only needed by Python2. 7zip is supported by Python3 by default.
+# Note: This require pylzma to be installed first
+=================
+1405913
+count:1
+LINUX   = POSIX and not MAC
+
+# See: http://stackoverflow.com/questions/1405913/how-do-i-determine-if-my-python-shell-is-executing-in-32bit-or-64bit-mode
+X86_64  = sys.maxsize > 2**32
+X86     = not X86_64
+
+=================
+196930
+count:1
+name = 'mac' if MAC else 'win' if WIN else 'posix'
+
+# http://stackoverflow.com/questions/196930/how-to-check-if-os-is-vista-in-python
+# >>> import platform
+# >>> platform.win32_ver()
+# ('XP', '5.1.2600', 'SP2', 'Multiprocessor Free')
+=================
+9920452
+count:1
+
+def kill_my_process():
+  # http://stackoverflow.com/questions/1533200/qt-kill-current-process/9920452#9920452
+  dwarn("pass")
+  if WIN:
+    import skwin
+=================
+3826918
+count:1
+
+# Some of the kana characters are skipped
+# See: http://stackoverflow.com/questions/3826918/how-to-classify-japanese-characters-as-either-kanji-or-kana
+# Here's the range used by Google Guava
+# - Hiragana: \u3040-\u309f
+# - Katagana: \u30a0-\u30ff
+=================
+3826918
+count:1
+
+# The same range as Google Guava
+# See: http://stackoverflow.com/questions/3826918/how-to-classify-japanese-characters-as-either-kanji-or-kana
+ORD_KANJI_FIRST = 0x4e00 # = u'一'
+ORD_KANJI_LAST = 0x9faf # = u'龯'
+
+=================
+10981258
+count:1
+ORD_UALPHA_LAST = ord('Z')
+
+# http://stackoverflow.com/questions/10981258/how-can-i-specify-cyrillic-character-ranges-in-a-python-3-2-regex
+ORD_CYRIL_FIRST = 0x400
+ORD_CYRIL_LAST = 0x500
+
+=================
+10115126
+count:1
+
+# See: http://docs.python-requests.org/en/latest/user/advanced/#keep-alive
+# See: http://stackoverflow.com/questions/10115126/python-requests-close-http-connection
+#session = requests.Session(config={'keep_alive': False})
+
+# See: http://transer.com/sdk/rest_api_function.html
+=================
+7387276
+count:1
+  return APP_MUTEX.tryLock()
+
+# http://stackoverflow.com/questions/7387276/set-window-name-in-python
+def settitle(title): # str ->
+  import os
+  if os.name == 'nt':
+=================
+196930
+count:2
+  import config
+
+  # http://stackoverflow.com/questions/196930/how-to-check-if-os-is-vista-in-python
+  #import platform
+  #if platform.release() == 'XP':
+  #  map(sys.path.append, config.ENV_PYTHONPATH_XP)
+=================
+8894244
+count:1
+  qmlRegisterType(cls, ns, 1, 0, name)
+
+# See: http://stackoverflow.com/questions/8894244/qml-and-blurring-image
+from Qt5 import QtWidgets
+#reg(QtWidgets.QGraphicsBlurEffect, 'Blur', QML_EFFECT)
+#reg(QtWidgets.QGraphicsColorizeEffect, 'Colorize', QML_EFFECT)
+=================
+1006289
+count:1
+    """
+    # Get number of processors
+    # http://stackoverflow.com/questions/1006289/how-to-find-out-the-number-of-cpus-using-python
+    # See: https://pythonhosted.org/joblib/parallel.html
+    #if not nthreads:
+    #  nthreads = psutil.NUM_CPUS or 1
+=================
+2068344
+count:1
+      for it in self.videos:
+        vid = it['vid']
+        img = host + '/vi/' + vid + '/maxresdefault.jpg' # http://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api
+        yield vid, cacheman.cache_image_url(img) if cache else img
+
+class ScapeReference(Reference):
+=================
+196930
+count:1
+ADMIN = isadmin() # bool
+
+# http://stackoverflow.com/questions/196930/how-to-check-if-os-is-vista-in-python
+def iswinxp():
+  import platform
+  return platform.release() == 'XP'
+=================
+11875770
+count:1
+import i18n
+
+# http://stackoverflow.com/questions/11875770/how-to-overcome-datetime-datetime-not-json-serializable-in-python
+def default_datetime(obj):
+  """
+  @param  obj  any
+=================
+12468613
+count:1
+  return __space_re.sub(' ', text) if text else ''
+
+__repeat_re = re.compile(r'(.+)\1+', re.DOTALL) # http://stackoverflow.com/questions/12468613/regex-to-remove-repeated-character-pattern-in-a-string
+def remove_repeat_text(text):
+  """
+  @param  text  unicode
+=================
+19195935
+count:1
+  #  @return  bool
+  #  """
+  #  # See: http://stackoverflow.com/questions/19195935/how-to-detect-windows-shutdown-or-logoff-in-qt
+  #  if msg.wParam in (WM_QUIT, WM_ENDSESSION, WM_QUERYENDSESSION):
+  #    dprint("quit")
+  #  return super(Application, self).winEventFilter(msg)
+=================
+12015170
+count:1
+
+def timestamp_jst_diff():
+  # http://stackoverflow.com/questions/12015170/how-do-i-automatically-get-the-timezone-offset-for-my-local-time-zone
+  # pytz.timezone('Japan').utcoffset(datetime.datetime.now()).seconds
+  # = 32400 = 9 * 3600
+  from dateutil import tz
+=================
+5548121
+count:1
+    maxdate = info.dates[-1]
+    ax.set_xlim(mindate, maxdate)
+    #ax.set_ylim(ymin=0) # http://stackoverflow.com/questions/5548121/minimum-value-of-y-axis-is-not-being-applied-in-matplotlib-vlines-plot
+
+  @classmethod
+  def _plotUserStackFigure(cls, ax, info):
+=================
+5548121
+count:1
+    # Not sure why it is optional to user count
+    # Force changing ymin to 0
+    # http://stackoverflow.com/questions/5548121/minimum-value-of-y-axis-is-not-being-applied-in-matplotlib-vlines-plot
+    #ymax = sum(it[-1] for it in plots)
+    #ax.set_ylim(0, ymax)
+
+=================
+5548121
+count:1
+
+    # Force changing ymin to 0
+    # http://stackoverflow.com/questions/5548121/minimum-value-of-y-axis-is-not-being-applied-in-matplotlib-vlines-plot
+    ymax = sum(it[-1] for it in plots) + 600 # larger, 600 = 16000 - 15400
+    ax.set_ylim(0, ymax)
+
+=================
+3282328
+count:1
+      #  win32process.AttachThreadInput(that, this, False)
+
+      # http://stackoverflow.com/questions/3282328/updating-the-z-order-of-many-windows-using-win32-api
+      #try:
+      #  import gameman
+      #  hwnd = gameman.manager().currentGame().wid
+=================
+380870
+count:1
+  #   See: http://code.google.com/p/python-windows-tiler/source/browse/singleinstance.py
+  # - Through file
+  #   See: http://stackoverflow.com/questions/380870/python-single-instance-of-program
+  dprint("check single instance")
+
+  from lockfile import lockfile
+=================
+1551605
+count:1
+  from sakurakit import skos
+  # Must be set before any GUI is showing up
+  # http://stackoverflow.com/questions/1551605/how-to-set-applications-taskbar-icon-in-windows-7
+  if skos.WIN:
+    dprint("set app id")
+    from sakurakit import skwin
+=================
+10115126
+count:1
+  # Disable HTTP request session
+  # See: http://docs.python-requests.org/en/latest/user/advanced/#keep-alive
+  # See: http://stackoverflow.com/questions/10115126/python-requests-close-http-connection
+  #import requests
+  #s = requests.session()
+  #s.config['keep_alive'] = False
+=================
+8362506
+count:1
+      return rc.DMM_LOCALIZED_WELCOME_URL
+
+  # http://stackoverflow.com/questions/8362506/qwebview-qt-webkit-wont-open-some-ssl-pages-redirects-not-allowed
+  @staticmethod
+  def onSslErrors(reply, errors): # QNetworkReply, [QSslError] ->
+    reply.ignoreSslErrors()

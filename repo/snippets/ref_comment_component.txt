@@ -1,0 +1,793 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/hello_python2/hello.py
+2557110, 28
+--------down------
+30
+def main():
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/flock_single_app_instance.py
+220525, 26
+--------down------
+29
+import fcntl
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/class_attributes.py
+12409714, 26
+--------down------
+28
+class Foo(object):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/hello_python3/hello.py
+2557110, 28
+--------down------
+32
+import sys, os
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyaudio/list_devices.py
+20760589, 12
+--------down------
+12
+for i in range(p.get_device_count()):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/lambda_arguments_and_scope_mistakes.py
+728356, 39
+--------down------
+42
+def callback(arg):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/lambda_arguments_and_scope_mistakes.py
+938429, 40
+--------down------
+42
+def callback(arg):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/lambda_arguments_and_scope_mistakes.py
+19693782, 41
+--------down------
+42
+def callback(arg):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pygtk/python_gtk3_pygobject/dualscreen.py
+22772968, 8
+--------down------
+10
+from gi.repository import Gtk as gtk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pygtk/python_gtk3_pygobject/application_prevent_multiple_instances.py
+19072161, 8
+--------down------
+15
+from gi.repository import Gtk as gtk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pygtk/python_gtk3_pygobject/poppler_pdf.py
+9682297, 11
+--------down------
+13
+import gi
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pygtk/python_gtk3_pygobject/tree_view_selection_double_click.py
+17109634, 34
+--------down------
+34
+def double_click_cb(tree_view, tree_path, tree_view_column):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyglet/image_resized.py
+24788003, 3
+--------down------
+4
+import pyglet
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/set_user_agent.py
+24226781, 34
+--------down------
+36
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/set_user_agent.py
+802134, 35
+--------down------
+36
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/get_html_setup_http_headers_basic_shutil_version.py
+24226781, 34
+--------down------
+36
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/get_html_setup_http_headers_basic_shutil_version.py
+802134, 35
+--------down------
+36
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/get_html_setup_http_headers_basic_shutil_version.py
+7243750, 63
+---------up-------
+48
+def main():
+--------down------
+64
+    http_request = urllib.request.Request(url, data=None, headers=HTTP_HEADERS)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/get_html_setup_http_headers_basic_version.py
+24226781, 34
+--------down------
+36
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/get_html_setup_http_headers_basic_version.py
+802134, 35
+--------down------
+36
+import argparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/get_absolute_urls_from_relative_urls_on_a_page.py
+9718541, 16
+--------down------
+17
+from urllib.parse import urljoin
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/parse_url.py
+9626535, 16
+--------down------
+17
+from urllib.parse import urlparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/download_binary_file_on_http.py
+7243750, 34
+--------down------
+36
+import urllib.request
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/download_binary_file_on_http.py
+22676, 35
+--------down------
+36
+import urllib.request
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/urllib/parse_domain_name_from_url.py
+9626535, 16
+--------down------
+17
+from urllib.parse import urlparse
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas_with_navigation_toolbar.py
+18675266, 25
+--------down------
+26
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas_using_class_and_toolbar.py
+18675266, 25
+--------down------
+26
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/get_widget_size.py
+4065783, 31
+---------up-------
+30
+def resize_callback(event):
+--------down------
+31
+    widget_current_width = label.winfo_width()      # Current label width (this work for every widgets!)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas.py
+18675266, 25
+--------down------
+26
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas_with_widgets_interactions.py
+18675266, 25
+--------down------
+26
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas_using_class_and_toolbar_and_keyboard_events.py
+18675266, 25
+--------down------
+26
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas_without_navigation_toolbar.py
+18675266, 25
+--------down------
+26
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/image_pil.py
+3177231, 42
+--------down------
+44
+root = tk.Tk()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/image_pil.py
+1236540, 43
+--------down------
+44
+root = tk.Tk()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/cairo_with_pil.py
+25480853, 23
+--------down------
+27
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/cairo_with_pil.py
+3177231, 61
+--------down------
+63
+root = tk.Tk()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/cairo_with_pil.py
+1236540, 62
+--------down------
+63
+root = tk.Tk()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/fullscreen.py
+5886280, 23
+--------down------
+26
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/fullscreen.py
+7966119, 24
+--------down------
+26
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/add_and_remove_widgets.py
+3962247, 33
+---------up-------
+32
+def del_label():
+--------down------
+34
+    try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/add_and_remove_widgets.py
+12364981, 34
+---------up-------
+32
+def del_label():
+--------down------
+34
+    try:
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/callback_with_arguments.py
+728356, 41
+--------down------
+44
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/callback_with_arguments.py
+938429, 42
+--------down------
+44
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/callback_with_arguments.py
+19693782, 43
+--------down------
+44
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/macosx_startup_focus_workaround_v2.py
+8691655, 23
+--------down------
+25
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/macosx_startup_focus_workaround_v2.py
+1892339, 24
+--------down------
+25
+import tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python3/matplotlib_canvas_with_animation.py
+18675266, 25
+--------down------
+26
+import matplotlib
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python2/cairo_with_pil.py
+25480853, 23
+--------down------
+27
+import Tkinter as tk
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python2/cairo_with_pil.py
+3177231, 55
+---------up-------
+34
+def main():
+--------down------
+57
+    root = tk.Tk()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/tkinter/python2/cairo_with_pil.py
+1236540, 56
+---------up-------
+34
+def main():
+--------down------
+57
+    root = tk.Tk()
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/numpy/random/discrete_random_with_distribution.py
+11373192, 3
+--------down------
+4
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/numpy/multiple_type_array.py
+16621351, 3
+--------down------
+4
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/time/process_time.py
+7370801, 6
+--------down------
+7
+import time
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pil/python2_pil/get_exif.py
+4765242, 24
+--------down------
+25
+import Image
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/subprocess/subprocess_production_test.py
+3908063, 14
+--------down------
+19
+def execute(args):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/subprocess/subprocess_production_test.py
+3876886, 18
+--------down------
+19
+def execute(args):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pillow/exif_get_all_tags_values.py
+4765242, 24
+--------down------
+25
+import PIL.Image as pil_img           # PIL.Image is a module not a class...
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/json/write_compressed_json.py
+16311562, 37
+---------up-------
+36
+with lzma.open("test.json.xz", "wt") as fd:
+--------down------
+38
+"end of file"
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/opencv/opencv_2/gui/opencv_with_tkinter.py
+10556479, 14
+---------up-------
+3
+# Copyright (c) 2015 Jérémie DECOCK (http://www.jdhp.org)
+--------down------
+19
+from __future__ import print_function
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/opencv/opencv_2/image_processing/hough_circle_transform_using_color_extraction.py
+28521783, 16
+---------up-------
+3
+# Copyright (c) 2015 Jérémie DECOCK (http://www.jdhp.org)
+--------down------
+20
+from __future__ import print_function
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist2d_scatter_plot.py
+27156381, 30
+--------down------
+31
+xidx = np.clip(np.digitize(x, xedges), 0, hist.shape[0]-1)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_with_stats_summary_text_box.py
+8482588, 8
+--------down------
+10
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/animation_workaround_manual_loop.py
+11874767, 6
+--------down------
+8
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_big_data.py
+33371917, 9
+--------down------
+12
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_big_data.py
+5328556, 10
+--------down------
+12
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist2d_logscale_xy.py
+29175093, 8
+--------down------
+10
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/subplots_full_example.py
+8248467, 87
+--------down------
+87
+plt.subplots_adjust(top=0.9)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/patches.py
+4285103, 31
+---------up-------
+3
+# Copyright (c) 2016 Jérémie DECOCK (http://www.jdhp.org)
+--------down------
+33
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_big_data_log_log.py
+33371917, 9
+--------down------
+12
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_big_data_log_log.py
+5328556, 10
+--------down------
+12
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_logscale_x.py
+6855710, 8
+--------down------
+10
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_logscale_xy.py
+6855710, 8
+--------down------
+10
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist2d_scatter_plot_logscale_xy.py
+27156381, 30
+--------down------
+31
+xidx = np.clip(np.digitize(x, xedges), 0, hist.shape[0]-1)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_big_data_log_log_with_generic_generator.py
+33371917, 10
+--------down------
+13
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/matplotlib/hist_big_data_log_log_with_generic_generator.py
+5328556, 11
+--------down------
+13
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/webbrowser/open_web_page.py
+22445217, 5
+--------down------
+7
+import webbrowser
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/webbrowser/open_web_page.py
+31715119, 6
+--------down------
+7
+import webbrowser
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/poppler/poppler_keyboard_pdf.py
+10562945, 26
+--------down------
+30
+import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/poppler/poppler_pdf.py
+10562945, 26
+--------down------
+30
+import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/scipy/optimize/minimize_2d.py
+13670333, 14
+--------down------
+18
+def f(x):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt4/dual_head.py
+6854947, 24
+--------down------
+27
+import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt4/dual_head_fullscreen.py
+6854947, 24
+--------down------
+27
+import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_dateedit_widget.py
+8480223, 58
+---------up-------
+44
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+--------down------
+58
+            return self._data.get_data(index.row(), index.column())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_proxy_model.py
+11606946, 7
+--------down------
+10
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_spinbox_widget.py
+8480223, 54
+---------up-------
+40
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+--------down------
+54
+            return self._data.get_data(index.row(), index.column())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QDataWidgetMapper_using_selection_signal.py
+8480223, 49
+---------up-------
+35
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+--------down------
+49
+            return self._data.get_data(index.row(), index.column())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QWebEngineView_with_mathjax_offline.py
+29055475, 7
+--------down------
+9
+HTML = r'''<!DOCTYPE html>
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_doublespinbox_widget.py
+8480223, 55
+---------up-------
+41
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+--------down------
+55
+            return self._data.get_data(index.row(), index.column())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/app_skeleton_logger.py
+8480223, 8
+--------down------
+33
+import copy
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/app_skeleton_logger.py
+11606259, 13
+--------down------
+33
+import copy
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/app_skeleton_logger.py
+3448959, 20
+--------down------
+33
+import copy
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/app_skeleton_logger.py
+17535563, 402
+---------up-------
+344
+class MainWindow(QMainWindow):
+    def __init__(self, data):
+--------down------
+401
+        self.table_view.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)    # https://stackoverflow.com/q/17535563
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/app_skeleton_logger.py
+17631703, 411
+---------up-------
+344
+class MainWindow(QMainWindow):
+    def __init__(self, data):
+--------down------
+414
+        add_action = QAction(self.table_view)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QWebView.py
+29055475, 9
+--------down------
+12
+import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_stretch.py
+17535563, 34
+---------up-------
+27
+if __name__ == '__main__':
+--------down------
+33
+    table_view.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)    # <- https://stackoverflow.com/q/17535563
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_filter_columns_using_proxy_model_with_line_edit.py
+11606946, 7
+--------down------
+10
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_filter_columns_using_proxy_model.py
+11606946, 7
+--------down------
+10
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/exit_app.py
+36555153, 4
+--------down------
+5
+import sys
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QWebEngineView_with_google_charts_gantt.py
+50830399, 5
+--------down------
+6
+HTML = r'''<!DOCTYPE html>
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_edit_using_former_value_as_default.py
+8480223, 47
+---------up-------
+33
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:           # <--
+--------down------
+47
+            return self._data.get_data(index.row(), index.column())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/layout_QGridLayout.py
+40580749, 29
+--------down------
+28
+btn4.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)  # http://doc.qt.io/qt-5/qsizepolicy.html ; https://stackoverflow.com/questions/40580749/why-do-some-widgets-not-stretch-to-fill-the-maximum-space-in-a-layout
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_timeedit_widget.py
+8480223, 57
+---------up-------
+43
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+--------down------
+57
+            return self._data.get_data(index.row(), index.column())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_combobox_widget.py
+8480223, 56
+---------up-------
+42
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+--------down------
+56
+            return self._data.get_data(index.row(), index.column())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_edit_using_different_types_in_model.py
+8480223, 49
+---------up-------
+35
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:           # <--
+--------down------
+49
+            return self._data.get_data(index.row(), index.column())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QWebEngineView_with_html_from_string.py
+29055475, 7
+--------down------
+9
+HTML = r'''<!DOCTYPE html>
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_slider_widget.py
+8480223, 55
+---------up-------
+41
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+--------down------
+55
+            return self._data.get_data(index.row(), index.column())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QDataWidgetMapper.py
+8480223, 49
+---------up-------
+35
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+--------down------
+49
+            return self._data.get_data(index.row(), index.column())
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/fullscreen_window_toggle_with_keyboard_event.py
+17631703, 16
+---------up-------
+11
+class MainWindow(QWidget):
+    def __init__(self):
+--------down------
+17
+        action = QAction(self)
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/fullscreen_window_toggle_with_keyboard_event.py
+17834835, 26
+---------up-------
+11
+class MainWindow(QWidget):
+    def fullscreen_toggle_key_callback(self):
+--------down------
+25
+        if self.windowState() & Qt.WindowFullScreen:         # https://stackoverflow.com/questions/17834835/test-if-qquickview-qwindow-is-full-screen-in-qt-5-0-x
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_for_pandas_dataframes.py
+28660287, 3
+--------down------
+4
+import numpy as np
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/keyboard_event.py
+17631703, 52
+--------down------
+53
+action = QAction(window)                   # <-
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QWebEngineView_with_mathjax_online.py
+29055475, 7
+--------down------
+9
+HTML = r'''<!DOCTYPE html>
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_using_spinbox_widget.py
+8480223, 41
+---------up-------
+27
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+--------down------
+41
+            return self._data[index.row()]
+==================
+/Users/jacob.caulfield/Documents/GitHub4/snippets/python/pyqt/pyqt5/widget_QTableView_delegate_on_edit_using_dial_widget.py
+8480223, 55
+---------up-------
+41
+class MyModel(QAbstractTableModel):
+    def data(self, index, role):
+        if role == Qt.DisplayRole or role == Qt.EditRole:
+--------down------
+55
+            return self._data.get_data(index.row(), index.column())

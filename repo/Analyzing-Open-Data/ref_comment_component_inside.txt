@@ -1,0 +1,15 @@
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_05_C_Displaying_Census_URLs.py
+10233141, 57
+------------------
+def add_census_key(url, api_key=settings.CENSUS_KEY):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_05_C_Displaying_Census_URLs.py
+15074386, 135
+------------------
+def parse_urls_col(col):
+==================
+/Users/jacob.caulfield/Documents/GitHub4/Analyzing-Open-Data/notebooks/Day_19_A_leaflet.py
+4724676, 30
+------------------
+<script type="text/javascript">
